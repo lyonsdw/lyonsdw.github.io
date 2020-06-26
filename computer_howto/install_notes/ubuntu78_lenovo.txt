@@ -1,0 +1,244 @@
+		  Ubuntu 7 on IBM Lenovo ThinkPad T60p
+			     Install Notes
+
+		       David Lyons lyons@lvc.edu
+
+6/2/2007
+
+Had trouble with fedora 7, installed but then hung on first boot.
+Decided to try ubuntu, which we had tried on live cd.
+
+Booted live cd, installed from there.
+
+Used built-in Add/Remove and 
+% sudo apt-get install packagename
+to install a bunch of things, here are some
+  emacs
+  tetex
+    7/24 discovered beamer package and related packages were missing,
+    could not process talk slides I made with beamer in the spring.  I
+    downloaded beamer, pgf and xcolor from sourceforge, I got the link
+    to them from the beamer home page, installed it.  Run 
+      % sudo texhash
+    after putting the files in the tex directory tree.
+  xfig
+  gnuplot
+  fvwm
+  java
+
+Things work well, interface is nice, speed is good.  Wireless at home
+and at open connections is easy using network manager tool on toolbar.
+So far cannot get wireless to work on LVC network.  Will continue to
+try.
+
+New firefox works fine with google spreadsheets, resolving old speed and
+system bog down problem with fedora core 5.  Fedora 7 and its firefox
+also work.
+
+migrated personal directory stuff
+  .emacs
+  .fvwm2rc
+  .gnupg
+  .bashrc
+  ~/a and subdirectories
+  mkdir downloads
+  mkdir tmp
+  ~/.scripts
+  ~/.gaim
+
+6/4/2007
+
+printing
+  problem!  there's some global setting to a4
+  /etc/papersize ???
+  can't get settings to letter size to take effect
+ 
+  ok, finally got it, but I don't know why
+  it might have to do with having edited /etc/papersize
+    changed the single entry from a4 to letter
+  then intalled some printers, letter size works
+
+  emacs M-x print-buffer doesn't work well, margin problems?
+
+  can't unset/reset the "tray 1" setting for psych_color printer, should
+  be tray 2 but the setting won't take effect.  seems this printer
+  config tool is buggy.
+
+			 ======================
+			 wireless configuration
+			 ======================
+
+6/5/2007 
+
+wireless at LVC, success!
+
+  1. install wpasupplicant
+     sudo apt-get install wpasupplicant
+
+  2. edit /etc/wpa_supplicant.conf
+
+network={
+	ssid="wpublic"
+	scan_ssid=1
+	key_mgmt=IEEE8021X
+	eap=PEAP
+	identity="usernamehere"
+	password="passwdhere"
+}
+
+  3. do this to connect, yee ha!
+     sudo wpa_supplicant -iath0 -c/etc/wpa_supplicant.conf -Dmadwifi -w
+     sudo dhclient ath0
+
+  4. don't click on network manager icon, it'll mess you up!
+
+Comment: even though the connection is working, it cuts in and out a lot.  This
+  is the way it has always been, I think.
+
+  another useful command, a command line to scan for networks
+    sudo iwlist scanning
+
+6/6/2007
+
+  5. automate startup
+
+wrote script ~/.scripts/lvcwirelessstart
+
+#!/bin/sh
+
+# 6/6/2007 works!
+#  can we set up a clickable launcher?
+
+sudo -b wpa_supplicant -iath0 -c/etc/wpa_supplicant.conf -Dmadwifi -w
+sudo -b dhclient ath0
+
+		     =============================
+		     end of wireless configuration
+		     =============================
+
+control startup programs on login
+
+    * System -> Preferences -> Sessions
+        Startup Programs Tab -> Add/Edit/Delete
+
+    I unchecked firefox.  It was listed under "No Name".  Sinister?
+
+disable the touchpad
+
+  a. edit /etc/X11/xorg.conf, find the section for synaptics, add the
+  line that turns on option SHMConfig
+
+Section "InputDevice"
+	Identifier	"Synaptics Touchpad"
+	Driver	         "synaptics"
+        Option          "SHMConfig"             "on"
+	Option		"SendCoreEvents"	"true"
+	Option		"Device"		"/dev/psaux"
+	Option		"Protocol"		"auto-dev"
+	Option		"HorizScrollDelta"	"0"
+EndSection
+
+restart the X server, then
+
+  b. execute this command
+$ synclient TouchpadOff=1
+
+  b'. automated version, System > Preferences > Sessions > (Startup
+  Programs tab) New
+synclient TouchpadOff=1
+
+java under firefox
+    somehowe installed java, then
+    sudo ln -s /usr/lib/jre1.6.0_01/plugin/i386/ns7/libjavaplugin_oji.so /usr/lib/mozilla-firefox/plugins/libjavaplugin_oji.so  
+    go figure
+
+fix emacs M-x print-buffer
+  found a decent fix, use Postscript print buffer 
+  M-x ps-print-buffer
+
+General comments: some configuring has been a pain, but overall,
+installs are easy and there's documentation out there.  I like the
+distro so far after a week of fussing and experimenting.
+
+installed google toolbar, this let me choose to have gmail be my default
+mail client, so when you click on a mailto link, you go straight to a
+compose message window in gmail.  There's a lot more there that I'll
+have to experiment with.
+
+6/8/2007
+
+just discovered a problem with dvips for tex files.  Somehow the file
+just does not go to the printer.  A workaround is
+
+% dvips -t letter -o filename.ps filename.dvi
+% lpr filename.ps
+
+but I need to figure out how to configure dvips properly.
+
+another problem: function buttons (F1 F2 etc) for which I have defined
+keyboard shortcuts for emacs have been taken over by the terminal.  Need
+to unset the terminal behavior and give the control back to emacs.
+
+
+
+25 January 2008
+
+upgraded to ubuntu 7.10
+tried to install gap, would not compile, c compiler is bolluxed
+found fix on web page
+  sudo apt-get update
+  sudo apt-get install build-essential
+
+9 May 2008
+
+upgraded to ubuntu 8.04
+so far everything works okay
+
+30 June 2008
+
+Just discovered beamer was broken, probably by last upgrade, looks like
+path problem only.  Here'e a fix.
+
+   1. sudo emacs /etc/texmf/texmf.d/05TeXMF.cnf
+   2. set : TEXMFMAIN = /usr/share/texmf-tetex
+   3. sudo update-texmf
+   4. sudo texhash 
+
+25 August 2008
+
+Just solved a longstanding problem with the video signal (to a
+projector, say) not working.  Found this fix on a web page.  Yee ha!
+The only change I needed to make, of those listed below, was the 
+  Driver "fglrx" 
+line.
+
+http://www.linlap.com/wiki/Configuring+an+ATI+graphics+chip+for+Linux
+
+Configuring Xorg to use the ATI driver
+We now need to tell Xorg to use the proprietary driver. First, create a
+backup of your current configuration file. On most systems it will be
+like this:
+cp -a /etc/X11/xorg.conf /etc/X11/xorg.conf.old
+
+Now, as root, edit the /etc/X11/xorg.conf file with your favourite
+editor. In the example below we will use nano.
+nano -w /etc/X11/xorg.conf
+
+In this file find the section labeled 'Module' and add the following
+lines to it (if they don't already exist):
+Load "glx"
+Load "dri"
+
+Next, find the section labeled 'Device' and in this section find the
+line which starts with 'Driver'. Change this line to read as follows (it
+will likely currently say either 'radeon' or 'vesa'):
+Driver "fglrx"
+
+And finally add the following to the bottom of the file if it doesn't
+exist:
+Section "DRI"
+Mode 0666
+EndSection
+
+Now save the file and that's it. Reboot your system and the ati driver
+should begin to function.

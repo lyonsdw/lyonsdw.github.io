@@ -1,0 +1,127 @@
+% MAS 322 Abstract Algebra Spring 2013
+%   Writing Assignment 1
+
+\documentclass[11pt]{article}
+
+% this is needed so that pdflatex does not confuse the printer with a
+% demand for A4 paper
+\usepackage[letterpaper]{geometry}
+
+\usepackage{epsf}
+\usepackage{epsfig}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%% title parameters %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursenumber}{MAS 322}
+\newcommand{\coursename}  {Abstract Algebra}
+\newcommand{\semester}    {Spring 2013}
+\newcommand{\exam}        {Writing Assignment 1}
+
+%%%%%%%%%%%%%%%% end title parameters %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% page setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %this sets paragraph indentation to zero
+    \setlength{\parindent}{0in}
+  %this sets the width of the text
+    \setlength{\textwidth}{6.5in}
+%    \setlength{\textwidth}{6.0in}
+  %this sets the left margin; zero is one inch from left edge
+%    \setlength{\oddsidemargin}{-.25in}
+    \setlength{\oddsidemargin}{0in}
+  %this sets text height
+    \setlength{\textheight}{9.5in}
+  %this sets top margin; zero is one inch from top edge + headheight
+    \setlength{\topmargin}{-.5in}
+%\addtolength{\topmargin}{-.5in}
+  %this produces 1.5-spaced lines
+    \renewcommand{\baselinestretch}{1.2} 
+  %headings
+    \pagestyle{myheadings}
+    \markright{\coursenumber{ }\coursename{ }\semester{ }\exam}
+%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%% end page setup %%%%%%%%%%%%%%%%%%%%%%%%%
+
+% invisible text ``spacer''
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+
+% capital D derivative symbol
+\def\D{\mbox{D}}
+% SD for standard deviation
+\def\SD{\mbox{\rm SD}}
+% space for dx in integrands
+\def\d{\; d}
+% -1 exponent for inverse
+\def\inv{^{-1}}
+% composition of functions circle
+\def\of{\, \mbox{\small{$\circ$}} \:}
+% shortcut for displaystyle
+\def\dis{\displaystyle}
+% shortcut for displaystyle in math mode
+\def\mb{$\begin{displaystyle}}
+\def\me{\end{displaystyle}$\ }
+% L'Hopital's rule
+\def\LHop{L'H\^{o}pital's Rule }
+
+%bold face caps
+\newcommand{\R}{{\rm \bf R}}
+\newcommand{\Aff}{{\rm \bf A}}
+\newcommand{\Proj}{{\rm \bf P}}
+\newcommand{\C}{{\rm \bf C}}
+\newcommand{\F}{{\rm \bf F}}
+\newcommand{\A}{{\rm \bf A}}
+\newcommand{\Q}{{\rm \bf Q}}
+\newcommand{\Z}{{\rm \bf Z}}
+\newcommand{\N}{{\rm \bf N}}
+
+%%%%%%%%%%%%%%%% test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+%statements are numbered on the left (use leqno option in documentstyle)
+%equations and statements share a consistent numbering scheme
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\theequation}{\thesection .\arabic{equation}}
+
+\newcounter{probsection}
+%\renewcommand{\theenumi}{\theprobsection .\arabic{enumi}}
+
+%testitem environment
+\newenvironment{ti}{\refstepcounter{equation} \par \medskip \noindent
+(\theequation)}{\par}
+
+%%%%%%%%%%%%%%%% end of test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\subsection*{Instructions}
+%  \begin{center}
+%\framebox{
+%\begin{minipage}{6in}
+\begin{itemize}
+\item Due at the beginning of class Friday 25 January.
+\end{itemize}
+%\end{minipage}
+%}   % end framebox
+%\end{center}
+
+\begin{enumerate}
+\item Give proofs of the following facts that establish that the
+  set $U(n)$, defined in Example~11 on p.46, is a group. Let $n>1$ be a
+  natural number.
+  \begin{enumerate}
+  \item Show that $U(n)$ is closed under multiplication modulo $n$.
+\item Show that the positive integer $a$ has a multiplicative inverse
+  modulo $n$ if and only if $a$ and $n$ are relatively prime.
+  \end{enumerate}
+\item Let $G$ be a group with the property that for any $x,y,z$ in the
+  group, $xy=zx$ implies $y=z$. Show that $G$ is Abelian.
+\item Prove that in a group, $(ab)^2 = a^2b^2$ if and only if $ab=ba$.
+\end{enumerate}
+
+
+\end{document}
+
+
+

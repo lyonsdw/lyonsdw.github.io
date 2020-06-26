@@ -1,0 +1,36 @@
+# make fraction homework
+# invoke with maple command
+# > read(`fracs2.mtxt`);
+# access answers with maple command
+# > answer[i];
+# for the i-th problem answer
+
+for i from 1 to 20 do
+  
+  # sign for problem (add or subtract)
+  s:=rand(0..1)():
+  if (s=0) then s:=-1: fi:
+
+  denominator:=rand(2..20)():
+  Awhole:=rand(1..20)():
+  Anumerator:=rand(1..(denominator-1))():
+  if (Awhole > 2) then 
+    Bwhole:=rand(1..(Awhole-1))():
+  else
+    Bwhole:=0:
+  fi:
+  Bnumerator:=rand(1..denominator-1)():
+  
+  A:=Awhole + Anumerator/denominator:
+  B:=Bwhole + Bnumerator/denominator:
+
+  if (s=1) then
+    printf(`%d.  %a %a/%a + %a %a/%a\n`,i,Awhole,Anumerator,denominator,Bwhole,Bnumerator,denominator);
+  else 
+    printf(`%d.  %a %a/%a - %a %a/%a\n`,i,Awhole,Anumerator,denominator,Bwhole,Bnumerator,denominator);
+  fi:
+
+  ans[i]:=A+s*B:
+  answer[i]:=[floor(ans[i]), frac(ans[i])]:
+
+od:

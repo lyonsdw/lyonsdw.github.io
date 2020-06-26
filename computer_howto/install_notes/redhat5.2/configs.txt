@@ -1,0 +1,105 @@
+			Linux Installation Notes
+			     Configurations
+
+David Lyons
+July 1999
+new IBM ThinkPad model 390E laptop computer
+redhat version 5.2 CD set
+
+/etc/hosts
+
+127.0.0.1	localhost	localhost.localdomain
+152.17.140.2	piedmont.mthcsc.wfu.edu	piedmont
+152.17.140.3	pilot.mthcsc.wfu.edu	pilot
+152.17.140.225	orville.mthcsc.wfu.edu	orville
+
+/etc/HOSTMAME
+
+orville
+
+/etc/resolv.conf
+
+search mthcsc.wfu.edu 
+nameserver 152.17.140.4
+
+/etc/sysconfig/network-scripts/network
+
+NETWORKING=yes
+HOSTNAME=orville.mthcsc.wfu.edu
+GATEWAYDEV=eth0
+GATEWAY=152.17.140.254
+
+/etc/sysconfig/network-scripts/ifcfg-eth0
+
+DEVICE=eth0
+USERCTL=no
+ONBOOT=no
+BOOTPROTO=none
+BROADCAST=152.17.140.255
+NETWORK=152.17.140.0
+NETMASK=255.255.255.0
+IPADDR=152.17.140.225
+
+/etc/ppp/options
+
+38400
+name Internet.wake.wfu1299
+noauth
+defaultroute
+noipdefault
+
+/etc/ppp/pap-secrets
+
+"Internet.wake.wfu1299"   *   "wfu1299"
+
+/usr/sbin/ppp-on
+
+pppd /dev/modem connect 'chat -v "" atdt7335971 "CONNECT"'
+
+/usr/sbin/ppp-off
+
+DEVICE=ppp0
+if [ -r /var/run/$DEVICE.pid ]; then
+ kill -INT `cat /var/run/$DEVICE.pid`
+fi
+
+printer(s)
+
+ use the printtool under the control panel (as root)
+ click add button
+ put pilot.mthcsc.wfu.edu in Remote Host box
+ put suite340 in Remote Queue box
+ selet HP LaserJet for Input Filter
+ click OK
+ restart lpd (under lpd pulldown menu)
+ do test pages under Tests pulldown menu
+
+ alternatively, copy the file 
+
+/etc/printcap
+
+#
+# This printcap is being created with printtool v.3.27
+# Any changes made here manually will be lost if printtool
+# is run later on.
+# The presence of this header means that no printcap
+# existed when printtool was run.
+#
+##PRINTTOOL3## REMOTE laserjet 300x300 letter {} LaserJet Default {}
+lp|lp0:\
+        :sd=/var/spool/lpd/lp:\
+        :mx#0:\
+        :sh:\
+        :rm=pilot.mthcsc.wfu.edu:\
+        :rp=suite340:\
+        :if=/var/spool/lpd/lp/filter:
+##PRINTTOOL3## REMOTE laserjet 300x300 letter {} LaserJet Default {}
+lp1|suite317:\
+        :sd=/var/spool/lpd/lp1:\
+        :mx#0:\
+        :sh:\
+        :rm=pilot.mthcsc.wfu.edu:\
+        :rp=suite317:\
+        :if=/var/spool/lpd/lp1/filter:
+
+/etc/X11/XF86Config

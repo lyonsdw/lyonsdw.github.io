@@ -1,0 +1,93 @@
+			     GBK Grade Book Program
+			       Grade Calculation
+
+Groups of Assignments
+---------------------
+Assignments are collected into groups, such as Homework, Quiz, Exam, and so
+forth.  These are specified by the user in the input data file between the
+\begin{assignments} and \end{assignments} delimiters.  Each assignment group has
+a group weight which is a positive integer, followed by a percent sign.  You
+may think of the weights as percentages, but any positive integers are allowed.
+For example,
+
+\begin{assignments}
+Homework    1%
+Test        1%
+Final Exam  1%
+\end{assignments}
+
+specifies that the Homework, Test, and Final Exam groups will all have equal
+weight 1/3 in the cumulative average.  
+
+As the term progresses, you will enter grades for each assignment.  Total point
+values appear as a list following the weight for the assignment group.  For
+example, at the end of the semester, the {assignments} section of the input data
+file may look like this.
+
+\begin{assignments}
+Homework    1%        10  15  25  15  20
+Test        1%        40  50  45  
+Final Exam  1%        75
+\end{assignments}
+
+Student Scores 
+-------------- 
+Student scores are recorded in the input data file as lists of whole numbers in
+the range -1, 0, 2, 3, ... .  The score -1 indicates an excused missed
+assignment.  The order of the scores corresponds to the order of the
+corresponding assingments in the {assignments} section.
+
+A weight is calculated by gbk for each score as follows:  a score of -1 receives
+a weight of zero; a nonnegative score receives a weight equal to the group
+weight divided by the group size (where "group" is the group of assignments to
+which that score belongs).
+
+Let's call the list of scores (for one particular student) s_1, s_2, ..., s_n,
+and let p_1, p_2, ..., p_n be the list of total possible points for the
+corresponding assignments, and let w_1, w_2, ..., w_n be the corresponding
+weights (note that the weights will not necessarily be the same for each
+student).
+
+A cumulative average is then calculated for each student as follows:
+
+              sum of [ s_i/p_i * w_i ]  
+cum. avg. =   ------------------------
+                    sum of [w_i]
+
+Dropping the worst score
+------------------------
+After the final exam grade has been entered (gbk detects the final exam as the
+first entry in the last group of assignments) gbk recalculates each student's
+cumulative average, one time for each score s_i for which s_i/p_i <= s_f/p_f
+(where s_f stands for the final exam score) by setting w_i equal to zero.  Gbk
+then chooses the largest of these cumulative averages.
+
+NOTE (12/2005): You may suppress the low grade drop feature by using a
+dummy last assignment with zero weight.  After your last assingment
+group, put a dummy assignment line like this.
+
+\begin{assignments}
+Homework    1%
+Test        1%
+Final Exam  1%
+DoNotDropLowest 0%
+\end{assignments}
+
+The dummy assignment will not appear on the public posted grade reports,
+but will appear on the instructor's reports.
+
+If wish to permanently disable the "drop worst" feature, edit the file
+GradeBook.java by changing the line
+
+  private static boolean DROP_LOWEST = true;
+
+to
+
+  private static boolean DROP_LOWEST = false;
+
+then recompile the class file with the following command.
+
+  javac GradeBook.java
+
+
+

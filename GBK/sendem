@@ -1,0 +1,11 @@
+#!/bin/sh
+# send individual grade report to student by email
+#  this is called in a loop in GradeBook.java
+
+rm -f gbk.indiv_report_email.txt
+cat gbk.indiv_report_top.txt >> gbk.indiv_report_email.txt
+cat gbk.indiv_report.txt >> gbk.indiv_report_email.txt
+cat gbk.indiv_report_bottom.txt >> gbk.indiv_report_email.txt
+
+mail -s 'Grade Report' $1 < gbk.indiv_report_email.txt
+

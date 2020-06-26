@@ -1,0 +1,135 @@
+			  Typing and Printing
+			    Korean in Emacs
+		     David W. Lyons, lyons@lvc.edu
+			   updated: 7/1/2005
+
+1. Add these lines to your .emacs file.
+
+;; Korean character typing and printing
+(load "ps-print")
+(load "ps-mule")
+(load "ps-bdf")
+(load "/usr/share/emacs/21.3/leim/quail/hangul.el")
+(setq ps-multibyte-buffer 'bdf-font-except-latin)
+
+;; unicode character insertion
+;;  (needed for diacritical mark called "breve" used in
+;;   McCune-Reischauer romanization)
+(defun unicode-insert (char)
+  "Read a unicode code point and insert said character.
+Input uses `read-quoted-char-radix'.  If you want to copy
+the values from the Unicode charts, you should set it to 16."
+  (interactive (list (read-quoted-char "Char: ")))
+  (ucs-insert char))
+(setq read-quoted-char-radix 16)
+
+2. Install intlfonts package
+
+a. Download intlfonts-1.2.1.tar.gz from this URL
+
+ftp://ftp.gnu.org/pub/gnu/intlfonts/
+
+then do 
+% gunzip intlfonts-1.2.1.tar.gz
+% tar xf intlfonts-1.2.1.tar
+% cd intlfonts-1.2.1
+
+and then follow instructions for installing in README file.
+
+
+3. Install etl*-unicode.bdf fonts
+
+[Note: you can skip steps 3 and 4 if you are not interested in typing
+and printing McCune-Reischauer diacritical symbols.]
+
+a. Download etl-unicode.tar.gz from this URL.
+
+ftp://ftp.x.org/contrib/fonts/
+
+then do
+% gunzip etl-unicode.tar.gz
+% tar xf etl-unicode.tar
+
+then, as root,
+# mv etl*.bdf /usr/local/share/emacs/fonts/bdf
+
+4. Edit ps-mule.el
+
+Add these lines to the file ps-mule.el in /usr/share/emacs/21.3/lisp/
+(as root).
+
+a. Search for this string
+
+(defconst ps-mule-font-info-database-bdf
+
+Add these lines to the list of fonts in the database.
+
+;; added to get McCune-Reischauer diacritical symbols 
+    (mule-unicode-0100-24ff
+     (normal bdf "etl24-unicode.bdf" ps-mule-encode-ucs2 2))
+
+b. Add these lines at the end of the above database.
+
+;; Special encoding for mule-unicode-* characters.
+(defun ps-mule-encode-ucs2 (string)
+  (let* ((len (ps-mule-chars-in-string string))
+       (str (make-string (* 2 len) 0))
+       (i 0)
+       (j 0)
+       ch hi lo)
+    (while (< i len)
+      (setq ch (encode-char (ps-mule-string-char string i) 'ucs)
+          hi (lsh ch -8)
+          lo (logand ch 255))
+      (aset str j hi)
+      (aset str (1+ j) lo)
+      (setq i (1+ i)
+          j (+ j 2)))
+    str))
+
+
+c. disable ps-mule.elc
+
+As root, rename ps-mule.elc
+# mv ps-mule.elc ps-mule.elc_orig
+
+5. How to use it 
+
+==============
+Typing hangeul
+==============
+
+The command M-x toggle-korean-input-method toggles the keyboard between
+qwerty and hangul input.  Here is a URL for the standard hangul keyboard
+layout that emacs uses.
+
+http://en.wikipedia.org/wiki/Keyboard_layout#Dubeolsik_Hangul_.28for_Korean.29
+
+====================================
+McCune-Reischauer special characters
+====================================
+
+To type lower case letters o and u with diacritical mark "breve" (cup
+shaped hat over the letter) do this.
+M-x unicode-insert <RET>
+014F <RET>
+The above two commands type the unicode character "latin small letter o
+with breve", unicode character number 335 or 014F in hexadecimal.  Small
+u with breve is character 365 or 016D in hex.  Small o with diaeresis
+(two dots, or umlaut) is character 246 or 00F6 in hex.
+
+========
+Printing
+========
+
+You can print your emacs buffer with M-x ps-print-buffer.
+
+To make nice pdf output, cut and paste the hangul text from the emacs
+buffer into an OpenOffice doc.  Save and then export to pdf format.
+
+
+==================================
+Viewing in Firefox and Thunderbird
+==================================
+
+ View >> Character Encoding >> Unicode (UTF-8) or Korean (ENC-KR)

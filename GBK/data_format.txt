@@ -1,0 +1,32 @@
+			     GBK Grade book program
+				  Data Format
+
+Each input file must have a title, assignment, and student records section.
+Grade scale, notes, and public notes are optional.  The title should fit on one
+line.  Assignments are listed in groups, beginning with a group name (Homework,
+Quiz, Exam, etc) followed by a weight for the group, with a percent sign,
+followed by the total point value for the assignments within that group listed
+in order.  The size of the group is determined by how many point values are
+listed.  Group names may contain no digits or the minus sign.  Only white space
+characters should separate the group names, weights, and point values.
+
+Grade scale input consists of a letter grade followed by its minimum cutoff
+score (in percent), then the next letter grade, etc.  See the example below.
+Exceptions to letter grade assignments may be made by listing the ID strings for
+each exception followed by a replacement grade.
+
+Student records are delimited within the student section by blank lines.  Each
+student record consists of an ID string, which terminates with a space, followed
+by a name which terminates with a newline character.  If the last four
+characters in an ID string are "PRIV", then that student's record will not be
+written to the public posting output files.  Raw assignment scores follow,
+listed in order, separated by spaces.  Text may occur between scores to make
+input more readable.  Finally you may include individual comments for a student.
+
+New feature 3/2009 in version 2.9: Put students' email addresses as
+the first line of their comments section.  This is used to send
+individual student grade reports by email.  If you do not use this
+feature, you may omit email addresses.
+
+It is suggested that you use the grade entering facility (from the menu) to
+enter your grades.

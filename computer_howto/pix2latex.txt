@@ -1,0 +1,86 @@
+			 Pictures into LaTeX documents
+				updated: 1/2003
+
+This section is about inserting diagrams into TeX (really LaTeX)
+documents.  This is not an exhaustive treatment of the subject; it is
+simply a method that works.
+
+The general procedure:
+
+1. Create a diagram using the xfig utility.  Put mathematical text in your
+   diagram using dollar signs, etc, as you would in a tex or latex document.
+
+2. Still in xfig, use the Export button to turn your drawing into file(s) that
+   latex can include and process in your main document.
+ 
+3. Process the main document using latex.
+
+Now the details.  
+
+1.  To start xfig, use the command 
+xfig &
+
+I run xfig on a laptop with a small screen.  By default xfig takes up
+more than one screen, so I use the following startup options (in my
+.cshrc file).
+
+# xfig options
+#   -spec puts special flag on text elements
+#   -ph is canvas height
+#   -pw is canvas width
+#   -but_ is number of toolbar buttons per row
+alias xfig 'xfig -but_ 3 -spec -ph 6 -pw 8 -geometry 776x561'
+
+Note: In order for LaTeX to recognize that text in your diagrams is to processed
+as text, and not as graphic elements, you must use the option -spec when you start
+xfig.  Alternatively, you can flag text elements individually while running
+xfig, as follows.  Click on the Edit button in the xfig toolbar.  Click on the
+text you want.  A dialog box will pop up.  One of the settings you can control
+in the box is "Special flag".  Set it to "special" (default may be "normal").
+Click the "Apply" button in the dialog box, then "Done".
+
+2. In the export dialog box, you have many choices.  Choose portrait
+orientation (the default is landscape).  For language, I recommend using
+the "Combined PS/LaTeX (both parts)" option.  Click the export button.
+This puts two files in your directory: one has the extension .pstex and
+the other has the extension .pstex_t . Those are the postscript and
+latex parts, respectively.  What xfig has done is to separate the text
+and graphics in the figure you have drawn.  The non-text part has been
+translated to postscript in the .pstex file.  The .pstex_t part is a
+latex file, which has two latex picture environments.  One incorporates
+the .pstex file, and the other places all the text elements.  This is an
+"overlay" of two latex pictures, with the text part layered over the
+non-text part.
+
+3. Here is some sample latex code to show how it all fits together.
+
+sample latex code for main document
+
+%--------------------------------------------------------
+\documentclass{article}
+
+% preamble material
+	\usepackage{graphicx}    % imports graphics files
+        \usepackage{color}       % seems to be necessary
+
+\begin{document}
+
+% a typical graphic will be inside the figure environment
+
+\begin{figure}[h]
+
+\begin{center}
+% the filename in the \input command below is the file
+%  you exported from xfig
+\input{filename.pstex_t}
+\end{center}
+
+% caption and label your figure
+\caption{Caption for your figure}
+\label{labelname}
+
+\end{figure}
+
+\end{document}
+%--------------------------------------------------------
+

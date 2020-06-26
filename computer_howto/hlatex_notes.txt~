@@ -1,0 +1,163 @@
+*** README.en ***
+
+Overview:
+---------
+
+This is a \LaTeX package for Korean language support.  With this
+package, you can run latex on Korean \LaTeX document written in KS X
+1001 encoding system or run lambda on Korean \LaTeX written in UTF-8
+encoding system.
+
+
+Installation:
+-------------
+
+Below, `TEXMF' indicates the root of TDS (TeX Directory Standard
+version 1.1).
+
+1. Install \LaTeXe.
+   You can get \LaTeXe package in the CTAN site thru anonymous ftp.
+   Most TeX distributions should have already \LaTeXe installed.
+
+2. Get \HLaTeX-1.0 from
+	ftp://ftp.dante.de/tex-archive/language/Korean/HLaTeX.tar.gz
+   or
+	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/HLaTeX-1.0.tar.gz
+   if you are in Korea.
+
+    and unpack it.
+   	tar xzvf HLaTeX-1.0.tar.gz
+
+   Veryfy that you have a file named VERSION-1.0 in the subdirectory of
+   "HLaTeX".
+
+3. Copy files as follows:
+
+   - hangul.sty, hfont.tex, euc-kr.tex hfont.sty, josa.tab, hfont.cfg,
+     hsw*.fd, hww*.fd, hhw*.fd in the directory "latex" to
+	TEXMF/tex/latex/hlatex/
+
+   - u8hangul.tex, uhc-test.tex, uhc*.fd in the directory "lambda" to
+	TEXMF/tex/lambda/hlatex/
+
+   - hlatex.otp, hlatex.ocp in the directory "lambda" to
+	TEXMF/omega/{otp,ocp}/hlatex/
+
+   - hbibname-k.tex, khyper.sty, showhkeys.sty, showhtags.sty in the
+     directory "contrib" to
+	TEXMF/tex/latex/hlatex/
+
+   - hbibname-u.tex in the directory "contrib" to
+	TEXMF/tex/lambda/hlatex/
+
+   - halpha.bst in the directory "contrib" to
+	TEXMF/bibtex/bst/hlatex/
+
+   - hind.ist, hglo.ist in the directory "contrib" to
+	TEXMF/makeindex/
+
+   - For UNIX/Linux OS goto "contrib" directory and compile
+     hmakeindex.c, hbibtex.c
+	gcc -o hmakeindex hmakeindex.c
+	gcc -o hbibtex hbibtex.c
+     and install hmakeindex and hbibtex to one of the system directory
+     to which the environment variable PATH point.
+
+     For Windows OS copy hmakeindex.ex and hbibtex.exe in the
+     directory "contrib" to one of the system directory
+     to which the environment variable PATH point.
+
+4. Get Korean fonts from
+	ftp://ftp.dante.de/tex-archive/fonts/Korean/HLaTeX/
+   or
+	ftp://ftp.ktug.or.kr/pub/ktug/hlatex/fonts/
+   if you are in Korea.
+
+   - uhc-base.map and uhc-extra.map in the file uhc-fonts-1.0.tar.gz
+     should go to the directory TEXMF/fonts/map/hlatex/
+     and run texhash.
+
+   - uhc-base.map consists of the following font files
+ 	uhc-myoungjo-1.0.tar.gz
+	uhc-gothic-1.0.tar.gz
+	uhc-taza-1.0.tar.gz
+     unpack each file in the directory of TEXMF/fonts/ as follows
+	tar xzvf uhc-myoungjo-1.0.tar.gz
+	...
+
+   - uhc-extra.map consists of the following font files
+	uhc-shinmun-1.0.tar.gz
+	uhc-graphic-1.0.tar.gz
+	uhc-gungseo-1.0.tar.gz
+	uhc-bom-1.0.tar.gz
+	uhc-pen-1.0.tar.gz
+	uhc-pilgi-1.0.tar.gz
+	uhc-yetgul-1.0.tar.gz
+	uhc-jamo-1.0.tar.gz
+	uhc-vada-1.0.tar.gz
+	uhc-dinaru-1.0.tar.gz
+	uhc-pilgia-1.0.tar.gz
+     unpack each file in the directory of TEXMF/fonts/ as follows
+	tar xzvf uhc-shinmun-1.0.tar.gz
+	...
+
+   - run following commands
+	texhash
+	updmap-sys --enable Map=uhc-base.map
+	updmap-sys --enable Map=uhc-extra.map
+- correction 7/7/2005 by dwl
+updmap --enable Map uhc-base.map
+updmap --enable Map uhc-extra.map
+
+- even simpler, add this two lines to /usr/share/texmf/web2c/updmap.cfg
+Map uhc-base.map
+Map uhc-extra.map
+
+- then run updmap with no arguments
+
+
+5. Update file database.
+   If using teTeX run
+	texhash
+   as system super user.
+
+
+For Linux OS (Fedora Core 3) only
+---------------------------------
+
+  Get RPM files from
+
+	ftp://ktug.or.kr/pub/ktug/hlatex/RPM/hlatex-1.0-4.i386.rpm
+	ftp://ktug.or.kr/pub/ktug/hlatex/RPM/hlatex-fonts-base-1.0-1.noarch.rpm
+	ftp://ktug.or.kr/pub/ktug/hlatex/RPM/hlatex-fonts-extra-1.0-1.noarch.rpm
+  and install with rpm as system super user.  This simplifies the
+  installation procedures above.
+
+
+Usage:
+------
+  You begin your document with
+
+    \documentclass{article}
+    \usepackage{hangul}
+    \begin{document}
+
+  and write your document.
+  After closing your document with
+
+    \end{document}
+
+  you can process it with latex or lambda depending on the coding
+  system used.
+
+
+Problem:
+--------
+
+I appreciate if you report problems in or suggestions for \HLaTeX.
+
+My E-mail address reads
+
+        koaunghi@kornet.net
+
+*** End of README.en ***

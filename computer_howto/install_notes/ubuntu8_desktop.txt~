@@ -1,0 +1,82 @@
+		      Ubuntu 8.04 on Dell Desktop
+			     Install Notes
+			     David W. Lyons
+			     lyons@lvc.edu
+
+
+8/18/2008
+
+downloaded and burned live cd from gramps genealogy site
+installed from live cd
+numerous packages added 
+  tex
+  enscript       sudo apt-get install enscript
+  gv
+  other stuff
+
+8/20/2008
+
+tex distribution seems to have changed.  packages such as beamer and
+xypic do not seem to be included in the install package anymore.  the
+base package seems to be now called texlive.  here's how to fix beamer.
+
+get beamer, pgf and xcolor from sourceforge
+
+tar xvzf latex-beamer-3.07.tar.gz
+tar xzvf xcolor-2.00.tar.gz
+tar xvzf pgf-1.01.tar.gz
+
+sudo mkdir -p /etc/texmf/tex/latex/{beamer,pgf,xcolor}
+
+sudo mv latex-beamer-3.07/* /etc/texmf/tex/latex/beamer/
+sudo mv pgf-1.01/* /etc/texmf/tex/latex/pgf/
+sudo mv xcolor/* /etc/texmf/tex/latex/xcolor/
+
+sudo texhash
+
+8/21/2008
+
+fixed xy-pic problem, found solution at this URL
+https://launchpad.net/ubuntu/+source/texlive-base/2007.dfsg.1-2
+
+sudo apt-get install texlive-pictures
+
+also did this, may fix epsf problem
+
+ sudo apt-get install texlive-generic-recommended
+
+finally did this, maybe this will nuke all the problems
+
+ sudo apt-get install texlive-full
+
+9/3/2008
+
+discovered print and export problem with xfig again.  googled and found
+the solution is to install transfig
+
+sudo apt-get install transfig
+
+now exporting works
+
+9/25/2008
+
+installed mathematica 6.0 from cd.  first there was an install problem,
+had to install libstdc++5.  then mathematica installed, but doesn't run
+right.  fonts don't show up, get lots of error messages.  workaround is
+
+% mathematica -defaultvisual
+
+11/20/2008
+
+had to do this to install c compiler
+jeez, you'd think this would be set up by default!
+  sudo apt-get update
+  sudo apt-get install build-essential
+
+=====
+TO DO
+=====
+
+gap
+
+

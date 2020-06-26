@@ -1,0 +1,95 @@
+<html>
+<head>
+
+<title>Secant Applet</title>
+
+</head>
+<body>
+
+<h2> Secant Lines Approximate a Tangent Line </h2>
+
+<b>David W. Lyons</b><br>
+<a href="mailto:lyons@lvc.edu"> lyons@lvc.edu </a>
+
+<p>
+
+Click in the picture box below to begin.
+
+<p>
+
+<table border=2>
+<tr>
+<td align="center">
+<applet code = "Secant.class" width=500 height=300 border=4>
+Your browser does not support Java, or Java is not enabled.  Sorry!
+</applet>
+</td>
+</tr>
+</table>
+
+<h3>Motivating Problem</h3>
+
+An equation for a function <i>y = f(x)</i>
+expresses a relationship between two variable quantities <i>x</i> and
+<i>y</i>.  A picture of the graph gives a visual representation of that
+relationship.  To analyze a function or its graph, it can be useful to
+replace the difficulties of a complicated equation and a complicated
+graph with a simpler equation and a simpler graph.  One might hope that
+the simpler object would be easier to understand, yet also be a
+reasonable approximation to the more complicated curve.  But how do you
+find such a simplification?
+
+<h3>Observation</h3>
+
+A <i>tangent line</i> to a curve can be thought of as a close
+approximation to the curve in the vicinity of the point of tangency.
+Equations and graphs of lines are easy to use.  It will turn out that
+approximating a curve using its tangent line (near the point of
+tangency) is a very fruitful strategy.  This leads to a geometric
+problem.
+
+<h3>Problem (refinement of the motivating problem above)</h3>
+
+<i>Given a curve which is a piece of the graph of a function, and given
+a point on the curve, how can you find the line tangent to the curve at
+the given point?</i>
+
+<h3>Illustration of a Solution</h3>
+
+The picture in the box above illustrates a method for solving the
+problem of finding a tangent line.  
+
+<p>
+
+The blue curve is part of the graph of a function <i>f</i>, and point
+<i>P</i> is the point at which we wish to find a tangent line.
+
+<p>
+
+The idea is to choose another point <i>Q</i> on the graph.  It is then a
+simple matter to connect <i>P</i> and <i>Q</i> with a <i>secant</i>
+line.  When <i>Q</i> is close to <i>P</i>, the secant line should be
+close to the tangent line.  By allowing <i>Q</i> to approach <i>P</i>
+and "taking a limit," we obtain the desired tangent line.  The procedure
+of "taking a limit" is at the heart of calculus.  You can get a visual
+idea of the process by moving the point <i>Q</i> closer and closer to
+the point <i>P</i>.
+
+<p>
+
+The green numbers "x coord" and "y coord" give the location for
+<i>Q</i>.  The blue numbers "dx" and "dy" give the horizontal and
+vertical distances from <i>P</i> to <i>Q</i>, repsectively.  The magenta
+number "dy/dx" is the slope of the secant line through <i>P</i> and
+<i>Q</i>. 
+
+<p>
+
+By moving the mouse (click or click and drag), you can reposition the
+vertical green line.  By moving the vertical green line closer to the
+red line, the point <i>Q</i> moves closer to the basepoint <i>P</i>, and
+the slope dy/dx of the secant line becomes a better approximation of the
+slope of the line tangent to the blue curve at <i>P</i>.
+
+</body>
+</html>

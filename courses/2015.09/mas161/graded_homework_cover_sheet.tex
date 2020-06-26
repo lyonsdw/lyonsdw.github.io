@@ -1,0 +1,157 @@
+% MAS 161 Multivariate Calculus Fall 2015
+%   graded homework assignment cover sheet
+
+\documentclass[11pt]{article}
+
+% this is needed so that pdflatex does not confuse the printer with a
+% demand for A4 paper
+\usepackage[letterpaper]{geometry}
+
+\usepackage{epsf}
+\usepackage{epsfig}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%% title parameters %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursenumber}{MAS 161}
+\newcommand{\coursename}  {Calculus 1}
+\newcommand{\semester}    {Fall 2015}
+\newcommand{\exam}        {Graded Homework Assignment}
+
+%%%%%%%%%%%%%%%% end title parameters %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% page setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %this sets paragraph indentation to zero
+    \setlength{\parindent}{0in}
+  %this sets the width of the text
+    \setlength{\textwidth}{6.5in}
+%    \setlength{\textwidth}{6.0in}
+  %this sets the left margin; zero is one inch from left edge
+%    \setlength{\oddsidemargin}{-.25in}
+    \setlength{\oddsidemargin}{0in}
+  %this sets text height
+    \setlength{\textheight}{9.5in}
+  %this sets top margin; zero is one inch from top edge + headheight
+    \setlength{\topmargin}{-.5in}
+%\addtolength{\topmargin}{-.5in}
+  %this produces 1.5-spaced lines
+    \renewcommand{\baselinestretch}{1.2} 
+  %headings
+    \pagestyle{myheadings}
+    \markright{\coursenumber{ }\coursename{ }\semester{ }\exam}
+%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%% end page setup %%%%%%%%%%%%%%%%%%%%%%%%%
+
+% invisible text ``spacer''
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+
+% capital D derivative symbol
+\def\D{\mbox{D}}
+% SD for standard deviation
+\def\SD{\mbox{\rm SD}}
+% space for dx in integrands
+\def\d{\; d}
+% -1 exponent for inverse
+\def\inv{^{-1}}
+% composition of functions circle
+\def\of{\, \mbox{\small{$\circ$}} \:}
+% shortcut for displaystyle
+\def\dis{\displaystyle}
+% shortcut for displaystyle in math mode
+\def\mb{$\begin{displaystyle}}
+\def\me{\end{displaystyle}$\ }
+% L'Hopital's rule
+\def\LHop{L'H\^{o}pital's Rule }
+
+%bold face caps
+\newcommand{\R}{{\rm \bf R}}
+\newcommand{\Aff}{{\rm \bf A}}
+\newcommand{\Proj}{{\rm \bf P}}
+\newcommand{\C}{{\rm \bf C}}
+\newcommand{\F}{{\rm \bf F}}
+\newcommand{\A}{{\rm \bf A}}
+\newcommand{\Q}{{\rm \bf Q}}
+\newcommand{\Z}{{\rm \bf Z}}
+\newcommand{\N}{{\rm \bf N}}
+
+%%%%%%%%%%%%%%%% test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+%statements are numbered on the left (use leqno option in documentstyle)
+%equations and statements share a consistent numbering scheme
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+%\renewcommand{\theequation}{\thesection .\arabic{equation}}
+
+%\newcounter{probsection}
+%\renewcommand{\theenumi}{\theprobsection .\arabic{enumi}}
+
+%testitem environment
+\newenvironment{ti}{\refstepcounter{equation} \par \medskip \noindent
+(\theequation)}{\par}
+
+%%%%%%%%%%%%%%%% end of test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{gobble}
+\begin{document}
+
+%%%%%%%%%%%%%%% cover page %%%%%%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+
+\spacer
+\begin{center}
+\begin{tabular}{rl}
+{\large Name} & \makebox[3.5in]{\hrulefill}\\
+{\rule{0in}{.5in}} & \\
+{\large Date} & \makebox[2in]{\hrulefill}%\\
+%{\large Text Section Number} & \makebox[1in]{\hrulefill}
+\end{tabular}
+\end{center}
+
+
+%% \begin{center}
+%% {\Large Check one:}\\
+%%   \begin{tabular}{|c|l|} \hline
+%%     \rule{.25in}{0in} & Definitions, Facts, and Examples\\ \hline
+%%  & Solutions Round 1\\ \hline
+%%  & Solutions Round 2\\ \hline
+%%   \end{tabular}
+%% \end{center}
+
+%\vfill
+%% \medskip
+
+%% \begin{center}
+%% {\Large \bf 
+%% \coursenumber\\
+%% \coursename\\
+%% \semester\\
+%% \medskip
+%% \exam}
+%% \end{center}
+
+%% \vfill
+
+% instructions
+% instructions
+%%   \begin{center}
+%% \begin{minipage}{6in}
+%% \subsection*{Instructions}
+%% \begin{itemize}
+%% \item Write solutions using one or more complete sentences.
+%% \vspace*{-2ex}
+%% \item All problems are worth the same amount.
+%% \end{itemize}
+%% \end{minipage}
+%% \end{center}
+
+%% \vfill
+
+%% \setcounter{page}{0}
+
+%%%%%%%%%%%%% end of cover page %%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+

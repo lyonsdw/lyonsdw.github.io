@@ -1,0 +1,152 @@
+<chapter>
+  <title>
+	Basics
+  </title>
+  <introduction>This chapter is about some basics.</introduction>
+    
+<section>
+  <title>Complex Numbers</title>
+  <introduction>
+
+    <!--
+    <p>
+    It is common to introduce the complex numbers as the set of elements
+    of the form <m>a+bi</m>, where <m>a,b</m> are real, and <m>i</m> is a quantity
+    whose square is <m>-1</m>. The advantage of this approach is the familiar
+    look of addition and multiplication operations. In these notes, we
+    adopt a different approach, where the definitions of complex
+    operations come from a geometric viewpoint. This approach is neither
+    more nor less rigorous that the standard one mentioned
+    above. Rather, it is tailored to establish the basic properties of
+    complex numbers needed most for introductory courses in mathematics
+    and physics, where geometric properties play an important
+    role. Rigorous construction of the real and complex numbers appears
+    in upper level mathematics courses.
+    </p>
+    -->
+    
+    <p>
+    The set of complex numbers, denoted <m>\C</m>, is in one-to-one
+correspondence with the 2-dimensional real plane <m>\R^2</m>. We will write
+<m>z\leftrightarrow (x,y)</m> to denote that the complex number <m>z</m>
+    corresponds to the ordered pair <m>(x,y)</m> of real numbers.
+    </p>
+    </introduction>
+  
+  <subsection>
+    <title>Real and imaginary parts</title>
+
+    <p>
+Given a complex number <m>z</m> corresponding to the point <m>(x,y)</m>
+in <m>\R^2</m>, we say that <m>x</m> is the <term>real part</term>
+of <m>z</m> and that <m>y</m> is the <term>imaginary part</term> of
+<m>z</m>, denoted <m>\re(z)=x</m> and
+<m>\im(z)=y</m>. The complex numbers contain the real numbers <m>\R</m> as a
+subset. The real number <m>x</m>, which is also the complex number <m>x</m>,
+corresponds to the ordered pair <m>(x,0)</m>, The complex number <m>i</m>
+corresponds to the ordered pair <m>(0,1)</m>. Here is a summary so far.
+</p>
+
+    <md>
+    <mrow>z \amp \leftrightarrow (\re(z),\im(z))
+    </mrow>  
+    <mrow>  x\in \R \amp \leftrightarrow (x,0)</mrow>
+    <mrow>  i \amp \leftrightarrow (0,1)</mrow>
+    </md>
+    
+  </subsection>
+
+
+
+  <subsection>
+    <title>Modulus and argument</title>
+
+    <p>
+    Given a complex number <m>z\leftrightarrow (x,y)</m>, let <m>(r,\theta)</m> be
+polar coordinates for the point <m>(x,y)</m> such that <m>r\geq 0</m> and <m>\theta</m>
+    is measured in radians. The <term>modulus</term> or
+    <term>norm</term> of <m>z</m>, denoted <m>|z|</m>, is defined to be the polar
+    coordinate <m>r=\sqrt{x^2+y^2}</m> and the <term>argument</term> of <m>z</m>, denoted
+<m>\arg{z}</m>, is the polar coordinate <m>\theta</m>, that is, the oriented
+angle made by the 
+real vector <m>(x,y)</m> with the positive real axis. In other words,
+<m>(|z|,\arg{z})</m> are polar coordinates for the point <m>(x,y)</m>. Here is a summary.
+    <men xml:id="normargdef">
+      z\leftrightarrow (x,y) = \left(|z|\cos( \arg{z}),|z|\sin(\arg{z})\right) </men>
+    </p>
+  </subsection>
+
+
+
+  <subsection>
+    <title>Addition and multiplication of complex numbers</title>
+
+    <p>
+    Given complex numbers <m>z\leftrightarrow (x,y)</m> and <m>z'\leftrightarrow
+(x',y')</m>, the sum <m>z+z'</m> is defined by
+    <men xml:id="complexadddef">
+        z+z' \leftrightarrow (x+x',y+y').
+    </men>
+In other words, complex addition corresponds to real vector
+addition. See Figure <xref ref="parallelogramlawfig"/>.
+    <figure xml:id="parallelogramlawfig">
+      <caption>Complex addition is vector addition
+      </caption>
+            <image width="60%" source="images/parallelogramlaw_clip.jpg"></image>
+</figure>
+The product <m>zz'</m> is defined by
+<mdn>
+  <mrow xml:id="complexmultdefnorm">|zz'| \amp = |z||z'|</mrow>  
+  <mrow xml:id="complexmultdefarg">  \arg(zz') \amp = \arg{z}+\arg{z'}</mrow>  
+  </mdn>
+    </p>
+    
+    <p>
+    The interaction between complex addition and multiplication is expressed
+    by the <term>distributive law</term>, which says that the following holds for
+any complex <m>z,u,v</m>. See Figure <xref ref="distlawfig"/>. 
+<men xml:id="distributivelaw">
+  z(u+v) = zu+zv <!-- \hspace*{.2in}\mbox{({\bfit distributive law})}-->
+</men>
+<figure xml:id="distlawfig">
+  <caption>The distributive law: multiplication by <m>z</m>
+rotates the vectors <m>u</m>, <m>v</m>, and <m>u+v</m> by angle <m>\arg z</m> and scales by the
+factor <m>|z|</m>. The sum of the rotated vectors <m>u,v</m> is the rotated sum vector.
+  </caption>
+  <image source="images/distlaw_clip.jpg"></image>
+</figure>
+</p>
+
+    <p>
+Below are a number of relationships arising from the definitions of
+complex addition and multiplication.
+Let
+<m>a,b,c,d</m> be real numbers and let <m>z,u,v</m> be complex
+numbers. The following relationships
+hold.
+<fn>Equations <xref ref="addextends"/>, <xref ref="multextends"/>, and
+  <xref ref="normextends"/> say
+  that complex addition, multiplication, and norm <em>extend</em> the corresponding
+operations on the reals. Equation <xref ref="multidentity"/> is expressed by saying 1 is the 
+  <em>multiplicative identity</em>.</fn>
+<mdn>
+  <mrow xml:id="addextends">  a+ib \amp \leftrightarrow (a,b)</mrow>
+  <mrow xml:id="multextends">a+b \;\;\text{(complex sum)} \amp= a+b \;\;\text{(real sum)}</mrow>
+<mrow>ab \;\;\text{(complex product)} \amp = ab \;\;\text{(real product)}</mrow>
+<mrow xml:id="normextends">
+|a| \;\;\text{(complex norm)} \amp = |a| \;\;\text{(real absolute value)}</mrow>
+<mrow xml:id="multidentity">
+  1z \amp = z1 = z </mrow>
+<mrow xml:id="i2isminus1">
+  i^2 \amp = -1</mrow>
+<mrow>  (a+ib)+ (c+id) \amp = (a+c) + i(b+d)</mrow>
+<mrow xml:id="complexmultrectangular">
+  (a+ib)(c+id) \amp = (ac-bd) + i(ad+bc)</mrow>
+</mdn>
+    </p>
+
+
+</subsection>
+
+</section>
+</chapter>

@@ -1,0 +1,213 @@
+% MAS 270 Intermediate Statistics Spring 2015
+%   Exam 1 Unit 1
+
+\documentclass[11pt]{article}
+
+% this is needed so that pdflatex does not confuse the printer with a
+% demand for A4 paper
+\usepackage[letterpaper]{geometry}
+
+\usepackage{epsf}
+\usepackage{epsfig}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%% title parameters %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursenumber}{MAS 270}
+\newcommand{\coursename}  {Intermediate Statistics}
+\newcommand{\semester}    {Spring 2015}
+\newcommand{\exam}        {Exam 1}
+
+%%%%%%%%%%%%%%%% end title parameters %%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% page setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %this sets paragraph indentation to zero
+    \setlength{\parindent}{0in}
+  %this sets the width of the text
+    \setlength{\textwidth}{6.5in}
+%    \setlength{\textwidth}{6.0in}
+  %this sets the left margin; zero is one inch from left edge
+%    \setlength{\oddsidemargin}{-.25in}
+    \setlength{\oddsidemargin}{0in}
+  %this sets text height
+    \setlength{\textheight}{9.5in}
+  %this sets top margin; zero is one inch from top edge + headheight
+    \setlength{\topmargin}{-.5in}
+%\addtolength{\topmargin}{-.5in}
+  %this produces 1.5-spaced lines
+    \renewcommand{\baselinestretch}{1.2} 
+  %headings
+    \pagestyle{myheadings}
+    \markright{\coursenumber{ }\coursename{ }\semester{ }\exam}
+%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%% end page setup %%%%%%%%%%%%%%%%%%%%%%%%%
+
+% invisible text ``spacer''
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+
+% capital D derivative symbol
+\def\D{\mbox{D}}
+% SD for standard deviation
+\def\SD{\mbox{\rm SD}}
+% space for dx in integrands
+\def\d{\; d}
+% -1 exponent for inverse
+\def\inv{^{-1}}
+% composition of functions circle
+\def\of{\, \mbox{\small{$\circ$}} \:}
+% shortcut for displaystyle
+\def\dis{\displaystyle}
+% shortcut for displaystyle in math mode
+\def\mb{$\begin{displaystyle}}
+\def\me{\end{displaystyle}$\ }
+% L'Hopital's rule
+\def\LHop{L'H\^{o}pital's Rule }
+
+%bold face caps
+\newcommand{\R}{{\rm \bf R}}
+\newcommand{\Aff}{{\rm \bf A}}
+\newcommand{\Proj}{{\rm \bf P}}
+\newcommand{\C}{{\rm \bf C}}
+\newcommand{\F}{{\rm \bf F}}
+\newcommand{\A}{{\rm \bf A}}
+\newcommand{\Q}{{\rm \bf Q}}
+\newcommand{\Z}{{\rm \bf Z}}
+\newcommand{\N}{{\rm \bf N}}
+
+%%%%%%%%%%%%%%%% test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+%statements are numbered on the left (use leqno option in documentstyle)
+%equations and statements share a consistent numbering scheme
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+%\renewcommand{\theequation}{\thesection .\arabic{equation}}
+
+%\newcounter{probsection}
+%\renewcommand{\theenumi}{\theprobsection .\arabic{enumi}}
+
+%testitem environment
+\newenvironment{ti}{\refstepcounter{equation} \par \medskip \noindent
+(\theequation)}{\par}
+
+%%%%%%%%%%%%%%%% end of test item environment %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%% cover page %%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\spacer
+\begin{center}
+\begin{tabular}{rl}
+{\large Name} & \makebox[3.5in]{\hrulefill}\\
+{\rule{0in}{.5in}} & \\
+{\large Date} & \makebox[2in]{\hrulefill}
+\end{tabular}
+\end{center}
+
+\vfill
+
+\begin{center}
+{\Large \bf 
+\coursenumber\\
+\coursename\\
+\semester\\
+\medskip
+\exam}
+\end{center}
+
+\vfill
+
+% instructions
+% instructions
+  \begin{center}
+\begin{minipage}{6in}
+\subsection*{Instructions}
+\begin{itemize}
+\item Write solutions using one or more complete sentences.
+\vspace*{-2ex}
+\item All problems are worth the same amount.
+\end{itemize}
+\end{minipage}
+\end{center}
+
+\vfill
+
+\setcounter{page}{0}
+
+%%%%%%%%%%%%% end of cover page %%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+\begin{enumerate}
+
+\item The answers to two counting questions are given below.  Give two
+  questions, 1 to match each answer. Comment briefly.
+  \begin{enumerate}
+  \item  ${12 \choose 4}$
+\vfill
+  \item  ${12 \choose 4}\cdot P(6,3)={12 \choose 4}\cdot 6\cdot 5\cdot 4$
+\vfill
+  \end{enumerate}
+
+\item Let $\Omega=\{a,b,c\}$ be a 3-element probability space with
+  probability function $P$.
+  Is it possible to have two events that are independent and
+    mutually exclusive? If so, give an example, and say what the
+    probability function $P$ is. If not, explain why not.
+\vfill
+
+
+
+
+\item A box contains 3 red and 4 blue marbles, all equally likely to be
+  selected on a random draw.  A game of chance consists of 5 consecutive
+  draws, replacing the marble after each draw and shaking the box so
+  that each marble has the same chance to be drawn on the next draw.
+  The questions below refer to the following probability problem about
+  this game.
+  \begin{quote}
+    Problem: Find the chance that exactly 3 of the 5 draws are red marbles.
+  \end{quote}
+
+  \begin{enumerate}
+  \item Describe a sample space of outcomes for this game.  Say whether
+    you use lists or sets, and what objects are elements in your lists
+    and sets. 
+
+\vfill
+\newpage
+
+\item Count your sample space given in the previous part.  Briefly
+  comment on what principle(s) of counting you use.
+
+\vfill
+
+\item Is the probability function on your sample space uniform?  If not,
+  choose two outcomes with different probabilities and give those probabilities.  Briefly comment on what
+  principle(s) of probability you use.
+
+\vfill
+
+\item Describe the event in your sample space specified by the phrase
+  ``get exactly 3 reds in 5 draws''.  Count the size of this event.
+  Briefly comment on what principle(s) of counting you use.
+
+\vfill
+
+\item Solve the problem, that is, find the chance that exactly 3 of the
+  5 draws are red.  Briefly comment on what principle(s) of probability you use.
+
+\vfill
+
+  \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
+
+
+

@@ -1,0 +1,518 @@
+package GBK2_8;
+import GBK2_8.*;
+import java.io.*;
+
+/***************************************************************
+ * ClassStats object holds class average scores for individual
+ * assignments, groups of assignments, and overall cumulative
+ * averages.  It also calculates a histogram and median.
+ ***************************************************************/
+public class ClassStats {
+
+  private double[][]     classAverage;
+  private int[][][]      histogram;
+  private int[][]        median;
+
+  // methods to set instance variables
+
+  // accessor methods
+
+  // calculations
+  // ask students to calculate own grades
+  // then do class averages, histograms and medians for each assignment
+
+
+  //constructor
+  public ClassStats(AssignmentList a, GradeScale gs, Student[] student){
+    // make local copies of assignment info data
+
+    int studentCount = GradeBook.getStudentCount();
+    String[] groupName = a.getGroupName();
+    int groupCount = a.getGroupCount();
+    int[] groupSize = a.getGroupSize();
+    String[] letterGradeName = gs.getLetterGradeName();
+    int[] cutOff = gs.getCutOff();
+
+    // initialize instance variable arrays
+    classAverage = new double[groupCount + 1][];
+    histogram = new int[groupCount + 1][][];
+    median = new int[groupCount + 1][];
+    groupSize[0] = 1;
+    for (int i=0; i <= groupCount; i++){
+      classAverage[i] = new double[groupSize[i] + 1];
+      histogram[i] = new int[groupSize[i] + 1][201];
+      median[i] = new int[groupSize[i] + 1];
+    }
+
+    // compute class averages
+    double currentAverage = 0;
+    int posCount = 0;
+
+    for (int j=0; j <= groupCount; j++){
+      for (int k=0; k <= groupSize[j]; k++){
+
+	classAverage[j][k] = 0;
+	posCount = 0;
+
+	// initialize histogram array values to zero
+	for (int v=0; v<=200; v++){
+	  histogram[j][k][v] = 0;
+	}
+	
+	for (int i=1; i <=studentCount; i++){
+	  if((currentAverage = student[i].getOutOfOne(j,k)) >= 0){
+	    classAverage[j][k] += currentAverage;
+	    histogram[j][k][round(100*student[i].getOutOfOne(j,k))]++;
+	    posCount++;
+	  }
+	  // store number students for whom this item is dropped
+	  // in histogram[][][200]
+	  else {histogram[j][k][200]++;}
+	}
+	if (posCount > 0){
+	  classAverage[j][k] = classAverage[j][k]/posCount;
+	}
+	else {classAverage[j][k] = -1;}
+
+	// calculate median for assignment group i, item j
+
+	median[j][k] = 0;
+	int currentSum = 0;
+	// half of the number of nonnegative values
+	int halfWay = (GradeBook.getStudentCount() - histogram[j][k][200])/2;
+	for(int v=0; v <= 100; v++){
+	  if((currentSum += histogram[j][k][v]) >= halfWay){
+	    median[j][k] = v;
+	    break;
+	  }
+	}
+      }
+    }
+  }
+
+  // write string for grade report output
+  public String writeGradeReport(AssignmentList a){
+
+    String csString = "";
+    String line = "";
+    int splitLoc = 0;
+    int mark = 0;
+
+    // make local copies of data needed
+    int studentCount = GradeBook.getStudentCount();
+    String[] groupName = a.getGroupName();
+    int groupCount = a.getGroupCount();
+    int[] groupSize = a.getGroupSize();
+    
+    // class averages
+    line = "Class Averages";
+    splitLoc = line.length();
+    line += "Class Cumulative Ave: ";
+    mark = line.lastIndexOf(":");
+    if (classAverage[0][0] < 1.0){
+      line += " ";
+    }
+    if (classAverage[0][0] < 0.1){
+      line += " ";
+    }
+    line += Integer.toString(round(classAverage[0][0]*100))+"\n";
+    line = TextUtil.justify(line, splitLoc, mark,
+			     GradeBook.getOutputCols() - 4);
+    csString += line;
+
+    for (int i=1; i<=groupCount; i++){
+      if (groupSize[i] > 0){
+	line = "";
+	line += groupName[i] + "(%): ";
+	for (int j=1; j<=groupSize[i]; j++){
+	  line += Integer.toString(round(classAverage[i][j]*100)) + " ";
+	}
+	splitLoc = line.length();
+	line += groupName[i] + " Ave: ";
+	if (classAverage[i][0] < 1.0){
+	  line += " ";
+	}
+	if (classAverage[i][0] < 0.1){
+	  line += " ";
+	}
+	line += Integer.toString(round(classAverage[i][0]*100)) + "\n";
+	mark = line.lastIndexOf(":");
+	line = TextUtil.justify(line, splitLoc, mark,
+				 GradeBook.getOutputCols() - 4);
+	csString += line;
+      }
+    }
+    csString += "\n";
+
+    // class medians
+    line = "";
+    line += "Class Medians";
+    splitLoc = line.length();
+    line += "Median Cumulative Ave: ";
+    mark = line.lastIndexOf(":");
+    if (median[0][0] < 100){
+      line += " ";
+    }
+    if (median[0][0] < 10){
+      line += " ";
+    }
+    line += median[0][0]+"\n";
+    line = TextUtil.justify(line, splitLoc, mark,
+			     GradeBook.getOutputCols() - 4);
+    csString += line;
+
+    for (int i=1; i<=groupCount; i++){
+      if (groupSize[i] > 0){
+	line = "";
+	line += groupName[i] + "(%): ";
+	for (int j=1; j<=groupSize[i]; j++){
+	  line += median[i][j] + " ";
+	}
+	splitLoc = line.length();
+	line += "Median " + groupName[i] + " Ave: ";
+	if (median[i][0] < 100){
+	  line += " ";
+	}
+	if (median[i][0] < 10){
+	  line += " ";
+	}
+	line += median[i][0] + "\n";
+	mark = line.lastIndexOf(":");
+	line = TextUtil.justify(line, splitLoc, mark,
+				 GradeBook.getOutputCols() - 4);
+	csString += line;
+      }
+    }
+    csString = csString.trim();
+    return csString;
+  }
+
+  public String writePostHist(){
+    String hString = "";
+    String line = "";
+    int splitLoc = 0;
+    int mark = 0;
+    
+    int highScoreCount = 0;
+    for (int i=101; i<=199; i++){
+      highScoreCount += histogram[0][0][i];
+    }
+    hString += "Number of scores above 100: " + highScoreCount + "\n";
+    for (int i=100; i>=0; i--){
+      if (i%10 == 0){
+	line = Integer.toString(i) + " +";
+	mark = line.lastIndexOf("+");
+	hString += TextUtil.justify(line,0,mark,4);
+      }
+      else if (i%5 == 0){
+	hString += "    +";
+      }
+      else {hString += "    -";}
+      for (int j=1; j<=histogram[0][0][i]; j++){
+	hString += "X";
+      }
+      hString += "\n";
+    }
+    return hString;
+  }
+
+  // write horizontal histogram
+  public String writeHorizHist(int histGroupChoice, int histItemChoice,
+			       AssignmentList a){
+    String hString = "";
+    String line = "";
+    int splitLoc = 0;
+    int mark = 0;
+
+    if(histGroupChoice ==0){
+      line += "Cumulative histogram including";
+
+      for (int i=1; i<=a.getGroupCount(); i++){
+	line += " " + Integer.toString(a.getGroupSize()[i])
+	    + (a.getGroupName()[i]).charAt(0);
+      }
+
+      line += ",";
+    }
+
+    else {
+      line += "Histogram for " + a.getGroupName()[histGroupChoice] + " "
+	+ histItemChoice + ".";
+    }
+    line += "  Average: " +
+      round(100*classAverage[histGroupChoice][histItemChoice]) +",";
+    line += "  Median:  " +
+      median[histGroupChoice][histItemChoice] +".";
+    hString += line + "\n";
+
+    int highScoreCount = 0;
+    for (int i=101; i<=199; i++){
+      highScoreCount += histogram[histGroupChoice][histItemChoice][i];
+    }
+
+    int lowScoreCount = 0;
+    for (int i=0; i<=29; i++){
+      lowScoreCount += histogram[histGroupChoice][histItemChoice][i];
+    }
+    hString += "Scores below 30: " + lowScoreCount + ", ";
+    hString += "Scores above 100: " + highScoreCount + ", ";
+    hString += "Excused scores: " +
+      histogram[histGroupChoice][histItemChoice][200] + ".\n";
+
+    // find maximum value among h[i]
+    int max = histogram[histGroupChoice][histItemChoice][0];
+    for (int i=1; i <= 100; i++){
+      if (histogram[histGroupChoice][histItemChoice][i] > max){
+	max = histogram[histGroupChoice][histItemChoice][i];
+      }
+    }
+
+    String[] horizHistLine = new String[max + 1];
+    for(int i=1; i<= max; i++){
+      horizHistLine[i] = "";
+      for (int j=30; j<=100; j++){
+	if (histogram[histGroupChoice][histItemChoice][j] >= i){
+	  horizHistLine[i] += "*";
+	}
+	else {horizHistLine[i] += " ";}
+      }
+    }
+
+    hString += "\n";
+
+    for (int i=max; i>=1; i--){
+      hString += horizHistLine[i] + "\n";
+    }
+
+    // score axis with + at 5 point intervals
+    line = "";
+    for (int i=30; i<=100; i++){
+      if (i%5 == 0){
+	line += "+";
+      }
+      else {line += "-";}
+    }
+    hString += line + "\n";
+
+    line = "";
+    // numbers marking score axis every 10 points
+    for (int i=30; i<=90; i+=10){
+      line += Integer.toString(i) + "        ";
+    }
+    line += "100";
+    hString += line + "\n";
+
+    return hString;
+  }
+
+  public String[] writeGradeDist(Student[] student){
+
+    String line = "";
+    String gdString = "";
+    String ltString = "";
+    String[] returnString = new String[2];
+    
+    int aCount = 0;
+    int bCount = 0;
+    int cCount = 0;
+    int dCount = 0;
+    int fCount = 0;
+    int total = 0;
+
+    int aPercent = 0;
+    int bPercent = 0;
+    int cPercent = 0;
+    int dPercent = 0;
+    int fPercent = 0;
+
+    int abPercent = 0;
+    int abcPercent = 0;
+    int cdfPercent = 0;
+    int dfPercent = 0;
+
+    for(int i=1; i<=GradeBook.getStudentCount(); i++){
+      //debug
+      //      System.out.println("i " + i);
+      if (student[i].getLetterGrade().charAt(0) == 'A'){
+	total++;
+	aCount++;
+      }
+      else if (student[i].getLetterGrade().charAt(0) == 'B'){
+	total++;
+	bCount++;
+      }
+      else if (student[i].getLetterGrade().charAt(0) == 'C'){
+	total++;
+	cCount++;
+      }
+      else if (student[i].getLetterGrade().charAt(0) == 'D'){
+	total++;
+	dCount++;
+      }
+      else if (student[i].getLetterGrade().charAt(0) == 'F'){
+	total++;
+	fCount++;
+      }
+    }
+
+    if (total > 0){
+
+      line = "Letter Grade Distribution";
+      gdString += line + "\n\n";
+      
+      aPercent = round(100*((double) aCount)/total);
+      bPercent = round(100*((double) bCount)/total);
+      cPercent = round(100*((double) cCount)/total);
+      dPercent = round(100*((double) dCount)/total);
+      fPercent = round(100*((double) fCount)/total);
+
+      abPercent = round(100*((double) aCount + bCount)/total);
+      abcPercent = round(100*((double) aCount + bCount + cCount)/total);
+      cdfPercent = round(100*((double) cCount + dCount + fCount)/total);
+      dfPercent = round(100*((double) dCount + fCount)/total);
+
+      /*
+   A | 12% |     |     | A
+     |-----| 44% |     |
+   B |	   |	 | 65% | B
+     |-----|-----|     |
+   C |	   |	 |     | C
+     |-----|	 |-----|
+   D |	   |	 |     | D
+     |-----|	 |     |
+   F |	   |	 |     | F
+      */
+      
+      line = "  A |";
+      if (aPercent < 100) {line += " ";}
+      if (aPercent < 10)  {line += " ";}
+      line +=  Integer.toString(aPercent) + "% |     |     | A";
+      gdString += line + "\n";
+
+      line = "    |-----|";
+      if (abPercent < 100){line += " ";}
+      if (abPercent < 10){line += " ";}
+      line +=  Integer.toString(abPercent) + "% |     |";
+      gdString += line + "\n";
+      
+      line = "  B |";
+      if (bPercent < 100) {line += " ";}
+      if (bPercent < 10)  {line += " ";}
+      line +=  Integer.toString(bPercent) + "% |     |";
+      if (abcPercent < 100){line += " ";}
+      if (abcPercent < 10){line += " ";}
+      line += Integer.toString(abcPercent) + "% | B";
+      gdString += line + "\n";
+
+      line = "    |-----|-----|     |";
+      gdString += line + "\n";
+
+      line = "  C |";
+      if (cPercent < 100) {line += " ";}
+      if (cPercent < 10)  {line += " ";}
+      line +=  Integer.toString(cPercent) + "% |     |     | C";
+      gdString += line + "\n";      
+
+      line = "    |-----|     |-----|";
+      gdString += line + "\n";
+
+      line = "  D |";
+      if (dPercent < 100) {line += " ";}
+      if (dPercent < 10)  {line += " ";}
+      line +=  Integer.toString(dPercent) + "% |";
+      if (cdfPercent < 100){line += " ";}
+      if (cdfPercent < 10){line += " ";}
+      line += Integer.toString(cdfPercent) + "% |     | D";
+      gdString += line + "\n";
+
+      line = "    |-----|     |";
+      if (dfPercent < 100){line += " ";}
+      if (dfPercent < 10){line += " ";}
+      line +=  Integer.toString(dfPercent) + "% |";
+      gdString += line + "\n";
+
+      line = "  F |";
+      if (fPercent < 100) {line += " ";}
+      if (fPercent < 10)  {line += " ";}
+      line +=  Integer.toString(fPercent) + "% |     |     | F";
+      gdString += line + "\n";      
+    }
+    ltString = Integer.toString(total) + " " + Integer.toString(aCount)
+      + " " + Integer.toString(bCount) + " " + Integer.toString(cCount)
+      + " " + Integer.toString(dCount) + " " + Integer.toString(fCount);
+    returnString[0] = gdString;
+    returnString[1] = ltString;
+    return returnString;
+  }
+  
+  public String writeHist(int histGroupChoice, int histItemChoice,
+			  AssignmentList a){
+    String hString = "";
+    String line = "";
+    int splitLoc = 0;
+    int mark = 0;
+
+    if(histGroupChoice ==0){
+      line += "Cumulative histogram including";
+
+      for (int i=1; i<=a.getGroupCount(); i++){
+	line += " " + Integer.toString(a.getGroupSize()[i])
+	    + (a.getGroupName()[i]).charAt(0);
+      }
+
+      line += ",";
+    }
+
+    else {
+      line += "Histogram for " + a.getGroupName()[histGroupChoice] + " "
+	+ histItemChoice + ".";
+    }
+    line += "  Average: " +
+      round(100*classAverage[histGroupChoice][histItemChoice]) +",";
+    line += "  Median:  " +
+      median[histGroupChoice][histItemChoice] +".";
+    hString += line + "\n";
+
+    int highScoreCount = 0;
+    for (int i=101; i<=199; i++){
+      highScoreCount += histogram[histGroupChoice][histItemChoice][i];
+    }
+
+    int lowScoreCount = 0;
+    for (int i=0; i<=45; i++){
+      lowScoreCount += histogram[histGroupChoice][histItemChoice][i];
+    }
+    hString += "Scores below 0: " + lowScoreCount + ", ";
+    hString += "Scores above 100: " + highScoreCount + ", ";
+    hString += "Excused scores: "
+      + histogram[histGroupChoice][histItemChoice][200] + ".\n";
+    for (int i=45; i<=100; i++){
+      if (i%10 == 0){
+	line = Integer.toString(i) + " +";
+	mark = line.lastIndexOf("+");
+	hString += TextUtil.justify(line,0,mark,4);
+      }
+      else if (i%5 == 0){
+	hString += "    +";
+      }
+      else {hString += "    -";}
+      for (int j=1; j<=histogram[histGroupChoice][histItemChoice][i]; j++){
+	hString += "X";
+      }
+      hString += "\n";
+    }
+    return hString;
+  }
+
+  // round off double to nearest integer
+  public static int round(double x){
+    return (int) Math.floor(x + 0.5);
+  }
+
+}
+
+/* *************************************************************
+   To Do notes
+
+   move more code from GradeBook.writeStats to this class
+   ************************************************************* */

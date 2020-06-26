@@ -1,0 +1,308 @@
+			Linux Installation Notes
+
+David Lyons: lyons@mthcsc.wfu.edu
+July 1999
+
+Computer: new IBM ThinkPad model 390E laptop computer with WFU "standard
+load" of software, including the windows98 operating system
+
+Linux version: RedHat version 5.2 CD set
+Note (7/22/99): After installing Redhat 5.2, I upgraded to RedHat 6.0.
+
+This installation splits the hard disk and keeps some space for the
+win98 system which is already installed on the thinkpad.
+
+I got a modem card and an ethernet card (the IBM Ethernet II credit card
+adapter) from the older thinkpads because I heard the internal modem and
+the ethernet card in the new machines won't run under linux.
+
+See also Allin Cottrell's information on the web at the following URL.
+http://ricardo.ecn.wfu.edu/~cottrell/tp390e/
+
+I. Shrink the win98 partition.
+
+ (a) Preliminaries
+
+   In win98, disable virtual memory (under Start, Settings, Control
+   Panel, System, Performance).  Reboot Windows.
+
+   Run Scandisk than Disk Defragmenter (both under Start, Programs,
+   Accessories, System Tools). Be prepared for a long wait for defrag
+   to reorganize the large hard disk (.5 to 1.5 hours)
+
+ (b) Make a DOS boot disk
+
+   Put a floppy disk in the a drive, get a DOS window
+   (Start, Programs, MS-DOS prompt), do cd .., and type the DOS command
+   format a:/s (yes I got the slash the right way).  I got an error
+   message from the anti-virus software while doing this format, but I
+   hit C for Continue and it seemed to work from there.
+
+   Put linux CD number 1 in the cd drive, open the folder
+   D:\dosutils\fips20 (double click on My Computer, then the icon for
+   the cd drive), then copy (drag and drop) the files fips.exe,
+   restorrb.exe, and errors.txt to the floppy.
+
+   At this point I tested the boot disk by shutting down the machine and
+   restarting with the floppy in the a: drive.  It worked (machine booted
+   dos).
+
+ (c) Run fips to shrink the win98 partition on the hard disk
+
+   Shutdown the machine, then reboot from the floppy you made in the
+   previous step.  At the DOS prompt, type fips.  The fips program will
+   prompt you for how you want to change the current disk partitions.
+   First fips shows the current partition table and asks which partition
+   you want to split.  There is only one partition so reply 1.  Next,
+   use the up/down arrow keys to change the win98 partition size.  fips
+   showed me that the win98 files occupied up to cylinder number 200
+   something.  I used the up arrow to move that number to 301, then type
+   c for continue.  fips showed the new partition table then finished.
+   It actually ended with some kind of error message, but it worked
+   anyway.
+
+II. Install Linux
+ 
+ At this point, you put the linux cd in the cd drive, reboot, linux
+ comes up and prompts you through the installation procedure.  
+
+ (a) Put the linux cd in the cd drive and reboot.  This time linux will
+ boot. 
+
+ (b) When a prompt asks if you need a PCMCIA device for the install,
+ answer no.
+
+ (c) For the "Installation Class" prompt box, check Custom.
+
+ (d) Check No SCSI adapters.
+
+ (e) For Disk Setup, check fdisk.
+
+ (f) When fdisk starts, type m for the help menu.
+     p print the partition table
+     d delete a dos partition
+     n add new partition
+       make linux swap 128M and linux native partitions
+     w write partition table changes and exit
+
+ (g) Current Disk Partitions
+     /win98 for the windows partition
+     blank for the linux swap
+     / for the linux native partition
+
+  
+ (h) Partitions To Format
+    select (spacebar) linux native, then format it
+
+ (i) Components to Install
+      select all but
+       DOS connectivity
+       console games
+       news server, nfs server
+       smb
+       ipx
+       anon ftp server
+       web, dns sql servers
+       network management
+
+ (j) Configure Mouse
+      generic mouse (ps/2), select emulate 3 button 
+
+
+ (k) Network Configuration
+      NO to LAN configuration; do this later
+
+ (i) Choose generic choices for the X windows configuration; we fix this
+ later 
+
+ (l) Install is complete.  I found that I could not eject the CD from
+ the cdrom drive using the door button.  I had to get a paper clip and
+ use the release button right next to the door button.  Push gently.
+ Reboot and linux runs.
+
+III. Configure Networking and X windows
+
+Suggested Method: put all the files listed in (a) and (c) below on a
+floppy disk, also a script that writes them to their appropriate
+locations, mount the floppy (use the command mount -t msdos /dev/fd0
+/mnt/floppy) and execute the script as root.
+
+ (a) You will need to edit (as root) the following files to configure
+ networking.  This can be done by editing the files directly, or by
+ running netconfig after you have X window running.  The contents of the
+ files will be specific to your local network.  Get the information from
+ your sysadmin.  I can mail the information to anyone on the WFU MathCS
+ department. 
+
+/etc/hosts
+
+/etc/HOSTMAME
+
+/etc/resolv.conf
+
+/etc/sysconfig/network-scripts/network
+
+/etc/sysconfig/network-scripts/ifcfg-eth0
+
+ (b) Start networking (as root)
+
+     Run netconf, click on Basic Host Information, and select a kernel
+     module (other boxes should be filled in OK).  For the IBM ethernet
+     credit card adapter, the kernel module is ne.  For the Linksys
+     combination ethernet/modem card, the kernel module is tulip.  Click
+     on Accept, then Activate Changes (then netconf quits).
+
+     The following command brings up the network connection.  You may
+     have to reboot first.
+
+ifconfig eth0 up
+
+     I find that the eth0 interface comes up automatically at boot time,
+     whether I set it to do that using netconf (or linuxconf) or not.
+     If you want to start a PPP connection with the modem you need to
+     stop the eth0 interface with 
+
+ifconfig eth0 down
+
+ (c) Get the X windows configuration file
+
+     Get the file XF86Config (thanks to Allin Cottrell) 
+     http://www.mthcsc.wfu.edu/~lyons/computer_howto/linux_install99/XF86Config
+     Put this in /etc/X11 (maybe rename the existing file first) Now you
+     can startx.
+
+IV. Fix Win98 back to normal
+
+ (a) Reboot win98 (type dos at the lilo prompt)
+
+ (b) run scandisk
+
+ (c) re-enable virtual memory
+
+V. PPP connection: modem and IGN configuration
+
+ as root, run control-panel, click on the phone icon, select ttys1
+ (COM2) (ttys1 replaces cua1 under redhat 5.x versions)
+ Note (7/23/99): it seems linux autodetects the right com port, so this
+ step may not be necessary.  I have gotten the old ThinkPad modem and a
+ new ethernet/modem combo card to both work, the first in the lower of
+ the two card slots, and the second in the upper.  Linux seemed to find
+ which slot without my help.
+
+ Note: if you have your ethernet connection set to come up at boot, you
+ have to deactivate before you bring up your modem connection.  Use the
+ command
+
+ifconfig eth0 down
+
+ If you do not already have kppp, install the kde* packages from the
+ linux cd.  Run kppp, enter a name for your connection (e.g., ign),
+ login ID Internet.wake.wfuXXXX, and password.  Click on Setup, click on
+ ign, click the edit button.  Type the phone number, use PAP
+ authentication (the default), check store password.  Take the default
+ settings in all the other tabs in this dialog box except DNS, check
+ disable existing DNS servers.  Check OK and quit.
+
+ Edit the file /etc/pcmcia/config by adding the following entry (put it
+ near the other card "Linksys entries).
+
+card "Linksys EtherFast LANmodem 56K"
+  version "Linksys", "EtherFast 10&100 + 56K PC Card (PCMLM56)"
+  bind "pcnet_cs", "serial_cs"
+
+ This fix was obtained at the linksys website.
+http://www.linksys.com/support/solution/nos/linux_others.htm
+
+ Now you can get your ign connection by running kppp.  A command line
+ invocation is kppp -c ign.  Do NOT try to run the modem using linuxconf
+ or netcfg.  Either of these messes up the card, and you have to reboot.
+
+VI. printer(s)
+
+ use the printtool under the control panel (as root)
+ click add button
+ fill in the boxes appropriately (I can give directions to WFU MathCS people)
+ restart lpd (under lpd pulldown menu)
+ do test pages under Tests pulldown menu
+
+VII. Other Packages or Software
+
+general
+
+ To install software that came with the RedHat Linux distribution but
+ was not installed while installing linux, put the linux cd in the cdrom
+ drive and mount the filesystem with the command
+ mount -t iso9660 -r /dev/cdrom /mnt/cdrom
+ now run gnorpm (this replaces the glint utility from earlier redhat
+ linuxes), click on install, click on add, use the gui to navigate to
+ /mnt/cdrom/RedHat/RPMS to see a list of packages.  Click on the ones
+ you want, then use buttons to install them.  You can do this without
+ the gnorpm tool with the commands
+
+cd /mnt/cdrom/RedHat/RPMS
+ls | more (to find the packages you want)
+rpm -i <packagename.rpm>  # to install a package
+
+ when done, cd out of the /mnt directory, then umount /mnt/cdrom.
+
+xfig
+
+ this was not installed during the linux installation, so I had to
+ follow the procedure described above to get it.
+
+maple
+
+ get the CD and license information from your sysadmin
+
+kermit
+ 
+ download latest version from http://www.columbia.edu/kermit/ , follow
+ installation instructions
+
+acrobat reader
+ 
+ Download latest version from www.adobe.com, follow installation instructions.
+
+netscape
+
+ After I installed acrobat reader, I could not get it to work as a
+ helper under netscape.  I finally downloaded the latest version of
+ netscape (v 4.6) from www.replay.com and installed it, and now acroread
+ runs fine when you click on a link to a pdf doc.
+
+ssh (secure shell and secure login)
+
+ get the packages ssh*.rpm from www.replay.com and install them with
+ rpm -i ssh*.rpm
+ now you can slogin instead of rlogin to remote hosts (this provides a
+ more secure connection)
+
+star office
+ 
+ www.stardivision.de
+
+VIII.  Notes after upgrading to RedHat 6.0
+
+Mostly everything seemed to work fine, but the tex upgrade did not work
+right (latex could not find its own style files).  I reinstalled the
+tetex* packages (even though they were already installed-- use rpm -i
+--force packagename.rpm) and now tex (latex) works for me.
+
+IX.  Still to be done  ********Problems**********
+
+sound card driver
+
+netscape sound file helper
+
+When I close and then reopen the lid after a few minutes, the network
+connection has slowed down by a factor of about 1000.  This fixes
+itself, but sometimes takes as much as a couple of minutes.  Also, the
+xwindows display sometimes goes into a goofy unreadable mode, and I have
+to kill xwindows and restart it.
+
+gnumeric spreadsheet
+ the version (0.23) that comes on the linux cd is not fully functional
+ (no print capability, for one thing).  I have tried installing updated
+ rpms, but have found the dependencies overwhelming.  It seems to need
+ dozens of other packages installed first, and I haven't the patience to
+ track them down.

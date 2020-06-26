@@ -1,0 +1,183 @@
+<section>
+  <title>Equivalence Relations</title>
+  
+  <subsection>
+    <title>Definitions</title>
+
+    <p>A relation on a set <m>X</m> is a subset
+      of <m>X\times X</m>. Given a relation <m>R\subseteq X\times X</m>,
+      we write <m>x\sim_R y</m>, or just <m>x\sim y</m> if <m>R</m> is
+      understood by context, to denote that <m>(x,y)\in R</m>. A
+      relation is <term>reflexive</term> if <m>x\sim x</m> for
+      every <m>x</m> in <m>X</m>. A
+      relation is <term>symmetric</term> if <m>x\sim y</m>
+      implies <m>y\sim x</m>. A
+      relation is <term>transitive</term> if <m>x\sim y</m> and
+      <m>y\sim z </m> together imply that <m>x\sim z</m>. A relation is
+      called an <term>equivalence relation</term> if it is reflexive,
+      symmetric, and transitive. Given an equivalence relation
+      on <m>X</m> and an element <m>x\in X</m>, we write <m>[x]</m> to
+      denote the set
+      <men xml:id="equivalenceclass"><idx><h>equivalence class</h></idx>
+	<notation><usage>[x]</usage><description>the equivalence class
+	    of an element <m>x</m></description></notation>
+	[x] = \{y\in X\colon x\sim y\},
+      </men>
+      called the <term>equivalence class</term> of the
+      element <m>x</m>. The set of equivalence classes is
+      denoted <m>X/\!\!\sim</m>, that is,
+      <men xml:id="setofequivclasses">     
+	<notation><usage>X/\!\!\sim</usage><description>the set of equivalence classes
+	    for an equivalence relation <m>\sim</m></description></notation> X/\!\!\sim \; = \{[x]\colon x\in X\}.</men>
+    </p>
+
+    <p>A <term>partition</term> of a set <m>X</m> is a
+      collection of nonempty disjoint sets whose union is <m>X</m>.
+    </p>
+  </subsection>
+
+  <subsection>
+        <title>Facts</title>
+
+	<p>
+      <fact xml:id="equivrelpart"><title>Equivalence relations and partitions</title>
+	<statement>
+	  <p> Let <m>X</m> be a set. Equivalence
+      relations on <m>X</m> and partitions of <m>X</m> are in one-to-one
+      correspondence, as follows.
+	     Given an equivalence
+	    relation <m>\sim</m> on <m>X</m>, the collection
+	    <me>X/\!\!\sim \; = \{[x]\colon x\in X\}</me>
+	    is a partition of <m>X</m>. Conversely, given a
+	    partition <m>{\mathcal P}</m>
+	    of <m>X</m>, the relation <m>\sim_{\mathcal P}</m> defined by
+	    <me>
+x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\mathcal P}
+	    </me> is an equivalence relation. These
+	    correspondences are inverse to one another. That is,
+	    <m>\sim = \sim_{(X/\sim)}</m>
+	    and <m>X/(\sim_{\mathcal P}) = {\mathcal P}</m>.
+	  </p>
+	</statement>
+      </fact>
+    </p>
+
+
+    
+<p> <fact xml:id="constructequivrelpart"><title>Construction of
+      equivalence relations and partitions from
+      functions</title><statement> <p> Given a function <m>f\colon X\to
+      Y</m>, there is a natural equivalence relation <m>\sim_f</m>
+      on <m>X</m> given by <m>x\sim_f y</m> if and only
+      if <m>f(x)=f(y)</m>. The corresponding set of equivalence classes
+      is <m>X/\!\!\sim_f \; = \{f^{-1}(y)\colon y\in
+      f(X)\}</m>. Furthermore, the function <m>X/\!\!\sim_f \; \to f(X)</m> given
+      by <m>[x]\to f(x)</m> is a one-to-one correspondence.
+</p></statement></fact></p>
+
+<!--
+<p> <fact xml:id="welldefinedness"><title>Construction of
+      functions on sets of equivalence classes</title><statement> <p>
+	Let <m>\sim</m> be an equivalence relation on a set <m>X</m>,
+	let <m>\pi\colon X\to X/\!\!\sim</m> denote the map given
+      by <m>x\to [x]</m>, and let <m>f\colon X\to Y</m> be a
+	function. There exists a map <m>\overline{f}\colon X/\!\!\sim
+	  \to Y</m> such that <m>\overline{f}([x])=f(x)</m> for
+	all <m>x\in X</m> if and only if <m>f</m> is constant on
+      equivalence classes.
+</p></statement></fact></p>
+-->
+
+  </subsection>
+
+  <subsection><title>Important example: the integers modulo an
+      integer <m>n</m>
+    </title>
+
+    Let <m>n</m> be a positive integer. Let <m>\sim_n</m> be the relation on
+    the integers <m>\Z</m> given by
+    <me>x\sim_n y \Leftrightarrow n|(x-y)</me>
+    (recall that the symbols "<m>a|b</m>" for integers <m>a,b</m>,
+    pronounced "<m>a</m> divides <m>b</m>", means <m>b=ka</m> for some
+    integer <m>k</m>). It is easy to show that <m>\sim_n</m> is an
+    equivalence relation, and that the equivalence classes are precisely
+    the set
+    <me>Z/\!\!\sim_n = \{[0],[1],[2],\ldots,[n-1]\}.</me>
+    This set of equivalence classes is fundamental and pervasive in
+    mathematics. Instead of writing <m>Z/\!\!\sim_n</m>, the universally
+    used 
+    notation is <m>\Z_n</m>. Instead of writing <m>x\sim_n y</m>,
+    the universally used notation is <m>x=y\pmod{n}</m> (or
+    sometimes <m>x\equiv y\pmod{n}</m>).
+    
+  </subsection>
+
+  <exercises>
+
+        <exercisegroup xml:id="zmodn">
+  <title>
+    The integers modulo <m>n</m>.
+  </title><introduction>Let <m>n</m> be a positive integer.
+  </introduction>
+
+    <exercise>
+      <statement>
+	<p>Verify that the relation <m>\sim_n</m> is indeed an
+	eqivalence relation.
+	</p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+	<p>Verify that the equivalence classes of the equivalence relation <m>\sim_n</m> 
+	  are indeed <m>\{[0],[1],[2],\ldots,[n-1]\}</m>.
+	</p>
+      </statement>
+    </exercise>    
+
+
+    <exercise>
+      <statement>
+	<p>Let <m>\omega</m> be the complex number
+	  <m>\omega=e^{2\pi i/n}</m>, and let 
+	  <m>f\colon \Z\to \C</m> be given by <m>m\to \omega^m</m>. Show
+	  that the equivalence relation <m>\sim_f</m> given by
+	  <xref ref="constructequivrelpart"/> is the same
+	  as <m>\sim_n</m>.
+	</p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+	<p>Show that the operation of addition on <m>\Z_n</m> given by
+	  <me>[x]+[y] := [x+y]</me> is <term>well-defined</term>. This
+	  means showing that if <m>[x]=[x']</m> and <m>[y]=[y']</m>,
+	  then <m>[x+y]=[x'+y']</m>.
+	</p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+	<p>Show that the operation of multiplication on <m>\Z_n</m> given by
+	  <me>[x]\cdot [y] := [xy]</me> is well-defined.
+	</p>
+      </statement>
+    </exercise>    
+    
+	</exercisegroup>
+
+	<exercise><statement><p>Prove <xref ref="equivrelpart" />.</p>
+	  </statement>
+	</exercise>
+
+		<exercise><statement><p>Prove <xref ref="constructequivrelpart" />.</p>
+	  </statement>
+	</exercise>
+  
+  </exercises>
+  
+</section>
+

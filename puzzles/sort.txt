@@ -1,0 +1,59 @@
+*******************************************
+************* Sorting Game ****************
+*******************************************
+
+Suppose you have buckets labeled 1, 2, 3, 4, 5, and 6.  (Any number will do,
+so let's choose six to start with.)  Take six balls, also labeled 1, 2,
+3, 4, 5, and 6, and mix them up in some order (any order) and place one
+ball in each bucket.  The game is now to sort the balls so the number on
+the ball matches the number on the bucket.  The moves you are allowed
+are to switch (transpose) any two balls in any pair of buckets which sit
+side by side (buckets that are adjacent).  Each switch (transposition)
+counts as one move.  Write down the starting order of the balls, and see
+how few moves you can take to sort them into "home" position, that is,
+where every ball is in the bucket with the matching number.  
+
+Example:
+
+Say the buckets are laid out 1, 2, 3, 4, 5, 6, left to right, and the
+order of the balls in them is
+
+ 2  3  5  1  6  4.
+
+Your first move might be to switch ball number 2 with ball number 3.
+Then you would have
+
+ 3  2  5  1  6  4.
+
+Then you might continue with more moves like this:
+
+ 3  2  1  5  6  4     	(by switching 5 and 1)
+
+ 3  1  2  5  6  4       (by switching 1 and 2)
+
+ 1  3  2  5  6  4	(by switching 1 and 3)
+
+and so on.  Remember, only one switch for each move, and only switch
+balls next to each other.
+
+See if you can solve these puzzles about this game.
+
+1.  Can you find the fewest number of moves to sort the balls in the
+sample game?
+
+2.  Mix the balls up again and play with new starting layout.  Play with
+a friend and see who can find a shorter way to sort the balls.
+
+3.  Is there only one way to sort the balls that is shortest, or are
+there more ways?  How many ways are there?
+
+4.  Can you tell by looking at the original layout of the balls the
+smallest number of switches it will take to sort them?
+
+Here are some ideas for solving the puzzles.
+
+1.  Try the game with only 2 or 3 balls.  Try to solve the puzzles for
+those games.
+
+2.  Can you make up a layout that will take more switches to sort than
+any other layout?  Again, try to solve this question for 2 or 3 balls.
