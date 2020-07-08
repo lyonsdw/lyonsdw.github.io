@@ -1,0 +1,481 @@
+<section>
+  <title>Complex Numbers</title>
+  <introduction>
+
+    <p>
+      Elements in the set of complex
+      numbers  <m>\C</m><notation><usage>\C</usage><description>the set
+      of complex numbers</description></notation> are in one-to-one
+      correspondence with points in the 2-dimensional real plane <m>\R^2</m> (where
+      <m>\R</m>
+	<notation><usage>\R</usage><description>the set of real numbers</description></notation>
+     denotes the set of real numbers). We will write
+<m>z\leftrightarrow (x,y)</m> to denote that the complex number <m>z</m>
+    corresponds to the ordered pair <m>(x,y)</m> of real numbers.
+    </p>
+    </introduction>
+  
+  <subsection>
+    <title>Real and imaginary parts</title>
+
+    <p>
+Given a complex number <m>z</m> corresponding to the point <m>(x,y)</m>
+in <m>\R^2</m>, we say that <m>x</m> is the <term>real part</term>
+of <m>z</m> and that <m>y</m> is the <term>imaginary part</term> of
+<m>z</m>, denoted <m>\re(z)=x</m> and
+<m>\im(z)=y</m>. The set <m>\C</m>
+contains the set <m>\R</m>
+as a
+subset. The real number <m>x</m>, which is also the complex number <m>x</m>,
+corresponds to the ordered pair <m>(x,0)</m>, The complex number <m>i</m>
+corresponds to the ordered pair <m>(0,1)</m>. Here is a summary so far.
+</p>
+
+    <md>
+    <mrow>z \amp \leftrightarrow (\re(z),\im(z))
+    </mrow>  
+    <mrow>  x\in \R \amp \leftrightarrow (x,0)</mrow>
+    <mrow>  i \amp \leftrightarrow (0,1)</mrow>
+    </md>
+    
+  </subsection>
+
+
+
+  <subsection>
+    <title>Modulus and argument</title>
+
+    <p>
+    Given a complex number <m>z\leftrightarrow (x,y)</m>, let <m>(r,\theta)</m> be
+polar coordinates for the point <m>(x,y)</m> such that <m>r\geq 0</m> and <m>\theta</m>
+    is measured in radians. The <term>modulus</term> or
+    <term>norm</term> of <m>z</m>, denoted <m>|z|</m>, is defined to be the polar
+    coordinate <m>r=\sqrt{x^2+y^2}</m> and the <term>argument</term> of <m>z</m>, denoted
+<m>\arg{z}</m>, is the polar coordinate <m>\theta</m>, that is, the oriented
+angle made by the 
+real vector <m>(x,y)</m> with the positive real axis. In other words,
+<m>(|z|,\arg{z})</m> are polar coordinates for the
+point <m>(x,y)</m>. Here is a summary.    </p>
+    
+    <assemblage> <title>Norm and argument</title> <p>  <men xml:id="normargdef">
+	  z\leftrightarrow (x,y) = \left(|z|\cos( \arg{z}),|z|\sin(\arg{z})\right) </men></p></assemblage>
+
+  </subsection>
+
+
+
+  <subsection>
+    <title>Addition and multiplication of complex numbers</title>
+
+    <p>
+    Given complex numbers <m>z\leftrightarrow (x,y)</m> and <m>z'\leftrightarrow
+	(x',y')</m>, the sum <m>z+z'</m> is defined by the following.
+    </p>
+    <assemblage><title>Complex addition</title> <p>   <men xml:id="complexadddef">
+          z+z' \leftrightarrow (x+x',y+y')
+    </men></p></assemblage>
+    <p>
+In other words, complex addition corresponds to real vector
+addition. See <xref ref="parallelogramlawfig"/>.
+   <figure xml:id="parallelogramlawfig">
+      <caption>Complex addition is vector addition
+      </caption>
+            <image width="60%" source="images/parallelogramlaw_clip.jpg"></image>
+           </figure>
+    </p>
+
+    <!-- 
+drawn using tikz, clipped via file.pdf > Preview > crop > export to file.jpg 
+       <figure xml:id="parallelogramlawfig2">
+      <caption>Complex addition is vector addition
+      </caption>
+            <image width="60%" source="images/check_clip.jpg"></image>
+           </figure>
+       -->
+    
+    <p>
+      The product <m>zz'</m> is defined as follows.
+      </p>
+    <assemblage><title>Complex multiplication</title><p><mdn>
+  <mrow xml:id="complexmultdefnorm">|zz'| \amp = |z||z'|</mrow>  
+  <mrow xml:id="complexmultdefarg">  \arg(zz') \amp = \arg{z}+\arg{z'}</mrow>  
+</mdn></p></assemblage>
+
+    
+    <p>
+    The interaction between complex addition and multiplication is expressed
+    by the following relationship, which holds for
+    any complex <m>z,u,v</m>. See <xref ref="distlawfig"/>.
+    </p>
+    <assemblage><title>Distributive law</title><p><men xml:id="distributivelaw">
+  z(u+v) = zu+zv <!-- \hspace*{.2in}\mbox{({\bfit distributive law})}-->
+</men></p></assemblage>
+
+<figure xml:id="distlawfig">
+  <caption>The distributive law: multiplication by <m>z</m>
+rotates the vectors <m>u</m>, <m>v</m>, and <m>u+v</m> by angle <m>\arg z</m> and scales by the
+factor <m>|z|</m>. 
+  </caption>
+  <image source="images/distlaw_clip.jpg"></image>
+</figure>
+
+
+    <p>
+Below are a number of relationships arising from the definitions of
+complex addition and multiplication.
+Let
+<m>a,b,c,d</m> be real numbers and let <m>z,u,v</m> be complex
+numbers. The following relationships
+hold.
+<fn>Equations <xref ref="addextends"/>, <xref ref="multextends"/>, and
+  <xref ref="normextends"/> say
+  that complex addition, multiplication, and norm <em>extend</em> the corresponding
+operations on the reals. Equation <xref ref="multidentity"/> is expressed by saying 1 is the 
+  <em>multiplicative identity</em>.</fn>
+<mdn>
+  <mrow>  a+ib \amp \leftrightarrow (a,b)</mrow>
+  <mrow xml:id="addextends">a+b \;\;\text{(complex sum)} \amp= a+b \;\;\text{(real sum)}</mrow>
+<mrow  xml:id="multextends">ab \;\;\text{(complex product)} \amp = ab \;\;\text{(real product)}</mrow>
+<mrow xml:id="normextends">
+|a| \;\;\text{(complex norm)} \amp = |a| \;\;\text{(real absolute value)}</mrow>
+<mrow xml:id="multidentity">
+  1z \amp = z1 = z </mrow>
+<mrow xml:id="i2isminus1">
+  i^2 \amp = -1</mrow>
+<mrow>  (a+ib)+ (c+id) \amp = (a+c) + i(b+d)</mrow>
+<mrow xml:id="complexmultrectangular">
+  (a+ib)(c+id) \amp = (ac-bd) + i(ad+bc)</mrow>
+</mdn>
+    </p>
+</subsection>
+
+  <subsection>
+    <title>The complex exponential function</title>
+
+    <p>
+The Taylor series for the real function <m>y=e^x</m> is
+<me> e^x = 1 +x +\frac{x^2}{2} +\frac{x^3}{3!} + \cdots .
+</me>
+Convergence for sequences and series of complex numbers can be defined
+in a way that naturally extends the definitions for real numbers. It
+turns out that the complex power series
+<me>  1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots 
+</me>
+converges for every <em>complex</em> number <m>z</m>, so we define the <em>complex</em> exponential function by 
+<me> e^z= 1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots .
+</me>
+The complex exponential obeys familiar laws of the real exponential. For
+<m>z,w</m> in <m>\C</m>, we have
+<md>
+  <mrow>e^ze^w \amp = e^{z+w}</mrow>
+  <mrow>e^0 \amp =1</mrow>
+</md>
+A key property of the complex exponential is the following,
+called <term>Euler's formula</term>.
+</p>
+<assemblage><title>Euler's formula</title><p><men xml:id="eulersformula">
+   e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}
+</men></p></assemblage>
+
+    
+<p>For <m>z</m> with <m>r=|z|</m> and <m>t=\arg(z)</m>, the
+  expression <m>z=re^{it}</m> is called the <term>polar form</term> for <m>z</m>.
+  By contrast, we call <m>z=x+iy</m> the <term>rectangular form</term> (or the
+  <term>Cartesian form</term>) for <m>z</m>.
+<xref ref="zxyrthetafig"/> shows a summary of the geometric content of
+the rectangular and polar forms for a complex number <m>z</m>.
+</p>
+
+<p>Here is
+how complex multiplication looks in polar form. For <m>z=re^{i\theta},
+w=se^{i\phi}</m>, we have
+<men xml:id="complexmultpolar">
+ zw = (re^{i\theta})(se^{i\phi}) = rse^{i(\theta + \phi)}.
+</men>
+From this it is easy to see that for <m>r\neq 0</m>, we
+have
+<me> \left(re^{i\theta}\right)\; \left(\frac{1}{r}e^{-i\theta}\right) = 1.
+</me>
+For <m>z=re^{i\theta}</m> with <m>r\neq 0</m>, we call <m>\frac{1}{r}e^{-i\theta}</m>
+the <term>multiplicative inverse</term> of <m>z</m>, denoted <m>{1}/{z}</m> or <m>z^{-1}</m>.
+</p>
+
+
+<figure xml:id="zxyrthetafig">
+  <caption>Rectangular and polar forms for a complex number  <m>z</m></caption>
+<image source="images/zxyrtheta_clip.jpg"></image>
+</figure>
+
+  </subsection>
+
+  <subsection>  
+    <title>Conjugation</title>
+
+    <p>
+      The <term>conjugate</term> of the complex number <m>z=x+iy=re^{i\theta}</m>,
+denoted <m>\overline{z}</m> or <m>z^\ast</m>, is defined to be <m>z^\ast = x-iy =
+re^{-i\theta}</m>. Geometrically, <m>z^\ast</m> is the reflection of <m>z</m> across
+the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
+involving conjugates.
+<mdn>
+
+<mrow xml:id="realpartformula">\re(z) \amp = \frac{z + z^\ast}{2}</mrow>
+<mrow xml:id="imagpartformula">
+  \im(z) \amp = \frac{z - z^\ast}{2i}</mrow>
+<mrow xml:id="zzbarisnormsq">
+  |z|^2 \amp = zz^\ast</mrow>
+<mrow>  2\arg z \amp = \frac{z}{z^\ast} \;\;\text{(for $z\neq 0$)}</mrow>
+<mrow>  \frac{1}{z}
+  \amp = \frac{z^\ast}{zz^\ast}= \frac{z^\ast}{|z|^2} \;\;\text{(for $z\neq 0$)}</mrow>
+<mrow>  (zw)^\ast \amp = z^\ast w^\ast</mrow>
+</mdn>
+</p>
+
+  </subsection>
+
+  <exercises>
+<!--    <title>Exercises</title>-->
+
+    <exercise>
+
+      <statement>What is the difference between polar coordinates and polar form?
+What is the difference between rectangular coordinates and rectangular
+form?  Write formulas for converting from polar to rectangular
+	coordinates and vice-versa.</statement>
+
+      <solution>
+
+<p>Let <m>z</m> be a complex number, let <m>x=\re(z)</m>,
+<m>y=\im(z)</m>, <m>r=|z|</m>
+and <m>\theta = \arg(z)</m>.  The pair <m>(r,\theta)</m> is called the polar
+coordinates for <m>z</m>, while the expression <m>re^{i\theta}</m> is called the
+polar form for <m>z</m>.  The pair <m>(x,y)</m> is called the rectangular
+coordinates for <m>z</m>, while the expression <m>x+iy</m> is called the
+rectangular form for <m>z</m>.
+</p>
+
+<p>To convert from polar to rectangular, use the equations <m>x=r\cos \theta,
+y=r\sin \theta</m> (show sketches to explain these formulas).  To convert
+from rectangular to polar, use <m>r=\sqrt{x^2+y^2}</m> and <m>\tan \theta =
+y/x</m>.  For the last equation, you must use judgment when <m>x=0</m> to decide
+whether <m>\theta</m> should be <m>\pi/2</m> or <m>-\pi/2</m>.  You must also use
+judgment when calculating <m>\theta = \arctan (y/x)</m>. The standard
+codomain for <m>\arctan</m> is the interval <m>(\pi/2,\pi/2)</m>, so you need to use
+  <m>\theta = \arctan (y/x) + \pi</m> for <m>x\lt 0</m>.</p>
+		    </solution>
+    </exercise>
+
+
+    <exercise>
+      <statement>Express each of the following in rectangular and
+	polar form.
+
+      <ol>
+	<li><m>3(2-i) + 6(1+i)</m>
+
+<answer>
+<m>12+3i=\sqrt{153}\;e^{i\arctan(1/4)}</m>
+</answer></li>
+
+
+<li><m>\left(2e^{i\pi/6}\right)\left(3e^{-i\pi/3}\right)</m>
+	
+
+<answer>
+<m>6e^{-i\pi/6}=3\sqrt{3}-3i</m>
+</answer></li>
+
+<li><m>(2+3i)(4-i)</m>
+
+<answer>
+<m>11+10i=\sqrt{221}\;e^{i\arctan(10/11)}</m>
+</answer></li>
+
+ <li><m>(1+i)^3</m>
+
+<answer>
+<m>-2+2i=2\sqrt{2}\;e^{i3\pi/4}</m>
+</answer></li>
+
+      </ol>
+      </statement>
+      
+</exercise>
+
+
+    <exercise>
+      <statement>Prove the following property of norm.
+	<assemblage>
+
+	<title>The triangle
+	  inequality</title>.  <p>For any two complex numbers <m>z,w</m>, we have
+	  <me>|z+w|\leq |z|+|w|.</me></p>	</assemblage>
+	
+      </statement>
+
+      <solution>
+	<p>
+The simplest approach is geometric:
+Sketch the parallelogram for vector addition and use the fact
+that the length of any side of a triangle is less than the sum of the
+lengths of the other two sides.
+</p>
+<p>
+  Here is one route to an algebraic proof: Let <m>z=a+bi</m>, <m>w=c+di</m>.
+  Manipulate the triangle
+  inequality (start by squaring both sides) to obtain 
+  <me>2abcd \leq b^2c^2 + a^2d^2.</me>
+This is the same as the clearly true statement
+  <me>0\leq  b^2c^2 + a^2d^2 - 2abcd = (bc-ad)^2.</me> Conclude by
+  observing that all steps of the derivation are reversible.
+  </p>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>Prove <xref ref="zzbarisnormsq" />.</statement>
+
+<solution>
+Let <m>z=re^{i\theta}</m>.  Then <m>\overline{z}=re^{-i\theta}</m>, and we
+have
+<md>
+  <mrow>z\overline{z} \amp = re^{i\theta}re^{-i\theta}</mrow>
+  <mrow>\amp = r^2 e^0</mrow>
+  <mrow>\amp = r^2 = |z|^2.</mrow>
+</md>
+</solution>
+</exercise>
+
+<exercise><statement>Let <m>p</m> and <m>q</m> be complex numbers.  Prove that the distance
+(ordinary distance between points in the plane) between <m>p</m> and <m>q</m> is
+    <m>|p-q|</m>.</statement>
+  <hint>Hint: Use rectangular form.</hint>
+
+<solution>
+Let <m>p=a+ib</m> and <m>q=c+id</m>.
+We have 
+<md>
+  <mrow>|p-q| \amp = |(a+ib)-(c+id)| </mrow>
+  <mrow>\amp = |(a-c)+i(b-d)|</mrow>
+  <mrow>\amp = \sqrt{(a-c)^2 + (b-d)^2}.</mrow>
+</md>
+The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.
+</solution>
+</exercise>
+
+
+	      <exercise>
+		<statement>Express each of the following in rectangular and polar form.
+
+    <ol><li><m>\displaystyle \frac{2+i}{3-i}</m>
+
+<answer>
+<m>\displaystyle \frac{1}{2} + \frac{1}{2}i=\frac{\sqrt{2}}{2}e^{i\pi/4}</m>
+</answer></li>
+
+<li><m>\displaystyle \frac{1+2i}{1-2i}</m>
+
+<answer>
+<m>\displaystyle -\frac{3}{5} +\frac{4}{5}i=e^{i(\arctan(-4/3)+\pi)}</m>
+</answer></li>
+
+<li><m>\displaystyle \frac{2e^{i\pi/4}}{3e^{-i\pi/2}}</m>
+
+<answer>
+<m>\displaystyle \frac{2}{3}e^{i3\pi/4}=-\frac{\sqrt{2}}{3} + \frac{\sqrt{2}}{3}i</m>
+</answer></li>
+</ol>
+  </statement>
+</exercise>
+
+<exercise>
+<statement>Verify the formulas <xref ref="realpartformula" /> and
+  <xref ref="imagpartformula" />.
+</statement>
+
+
+<solution>
+Let <m>z=x+iy</m>.  Then we have
+<ul>
+<li> <m>\displaystyle \frac{z+\overline{z}}{2}= \frac{2x}{2}=x=\re(z)</m>, and</li>
+<li><m>\displaystyle
+    \frac{z-\overline{z}}{2i}=\frac{2iy}{2i}=y=\im(z)</m>.</li>
+</ul>
+</solution>
+</exercise>
+
+
+<exercise>
+<statement>  Given a nonzero complex number <m>z</m>, explain why <m>z</m> has exactly
+  two square roots, and explain how to find them.</statement>
+
+<solution>
+Since squaring a number squares the norm and doubles the argument,
+a square root can be found by taking the square root of the norm and
+dividing the argument by two.  That is, for <m>z=re^{i\theta}</m>, a square
+root of <m>z</m> is <m>\sqrt{r}e^{i\theta/2}</m>.  Another square root of <m>z</m> is
+the negative of that expression.  Any other square root of <m>z</m> would
+have to have norm <m>\sqrt{|z|}</m> and argument <m>\theta/2</m> plus or minus an
+integer multiple of <m>\pi</m>, so these must be all the square roots of <m>z</m>.
+</solution>
+</exercise>
+
+
+<exercise>
+  <statement>Find all complex solutions of the following
+equations. 
+<ol>
+<li><m>\displaystyle z^2 + 3z + 5 = 0</m>
+
+<answer>
+<m>\displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}</m>
+</answer></li>
+
+<li><m>(z - i)(z + i) = 1</m>
+
+<answer>
+<m>0</m>
+</answer></li>
+
+<li><m>\displaystyle \frac{2z + i}{-z+3i} = z</m>
+
+<answer>
+<m>\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
+281^{1/4}\sin \varphi)]</m>, where <m>\varphi=(\arctan(16/5)+\pi)/2</m>
+</answer></li>
+</ol>
+  </statement>
+</exercise>
+
+
+<exercise>
+
+<statement>Use the fact that <m>e^{ia}e^{ib}=e^{i(a+b)}</m> together with Euler's
+  formula <m>e^{i\theta}=\cos\theta + i\sin\theta</m> to derive the
+  trigonometric angle sum formulas below.
+<md>  
+  <mrow>    \cos(a+b) \amp = \cos a \cos b -\sin a \sin b</mrow>
+  <mrow>    \sin(a+b) \amp = \cos a \sin b + \sin a \cos b</mrow>
+</md>
+</statement>
+
+<solution>
+  Using Euler's formula for the first equality below, and then using
+  complex multiplication for the second equality, we have
+<mdn>  
+<mrow number='no'>    e^{ia}e^{ib} \amp = (\cos a + i\sin a)(\cos b + i\sin b)</mrow>
+<mrow xml:id="localtag1" tag="star">    \amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).</mrow>
+</mdn>
+On the other hand, Euler's formula also gives
+<mdn><mrow xml:id="localtag2" tag="dstar">    e^{i(a+b)}= \cos(a+b) + i\sin
+    (a+b).</mrow></mdn>
+Equating real and and imaginary parts of <xref ref="localtag1" /> and
+  <xref ref="localtag2" /> gives the desired trigonometric identities.
+
+</solution>
+</exercise>
+
+</exercises>
+  
+</section>
+

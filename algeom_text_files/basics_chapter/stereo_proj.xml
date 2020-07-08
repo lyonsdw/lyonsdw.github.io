@@ -1,0 +1,180 @@
+<section>
+  <title>Stereographic projection</title>
+
+  <!--
+  <introduction>
+
+section about stereographic projection and the extended complex plane
+
+    </introduction>
+-->
+  
+  <subsection>
+    <title>Stereographic projection <m>S^1\to \R^+</m></title>
+    <p>
+      Let <m>S^1</m> denote the unit circle in the <m>x,y</m>-plane.
+      <men xml:id="s1defn"><notation><usage>S^1</usage><description>unit
+	    circle in the plane</description></notation>
+	S^1 = \{(x,y)\colon x^2+y^2=1\}
+      </men>
+      Let <m>N=(0,1)</m> denote the "north pole" (that is, the point at
+      the "top" of the unit circle). 
+      Given a point <m>P=(x,y)\neq N</m> on the unit circle,
+      let <m>s(P)</m> denote the intersection of the
+      line <m>\overline{NP}</m> with the <m>x</m>-axis. See <xref ref="stereoprojfig"/>. The map 
+      <m>s\colon S^1\setminus \{N\}\to \R</m> given by this rule
+      is called <term>stereographic projection</term>. Using similar
+      triangles, it is easy to see that <m>s(x,y)=\frac{x}{1-y}</m>. 
+    </p>
+
+   <figure xml:id="stereoprojfig">
+      <caption>Stereographic projection
+      </caption>
+            <image width="60%" source="images/stereoproj.png"></image>
+           </figure>
+
+             <exercise xml:id="stereoproj1formulaexer">
+  <statement>
+    <p>Draw the relevant similar triangles and verify the
+      formula <m>s(x,y) = \frac{x}{1-y}</m>.
+    </p>
+  </statement>
+</exercise>
+
+    <p>We extend stereographic projection to the entire unit circle as
+      follows. We call the set
+      <men xml:id="extendedrealsdefn">\R^+=\R\cup \{\infty\}
+	<idx><h>extended real numbers</h></idx>
+	<notation><usage>\R^+</usage><description>extended real numbers</description></notation>
+      </men>
+      the <term>extended real numbers</term>, where "<m>\infty</m>" is
+      an element that is not a real number. Now we define stereographic
+      projection <m>s\colon S^1 \to \R^+</m> by
+      <men xml:id="stereoproj1defn">
+	s(x,y) = \left\{
+	\begin{array}{cc}
+	\frac{x}{1-y} \amp y\neq 1\\
+	\infty \amp y=1
+	\end{array}
+	\right..
+      </men>
+    </p>
+
+  </subsection>
+
+  <subsection>
+    <idx><h>stereographic projection</h></idx>
+      <title>Stereographic projection <m>S^2\to \C^+</m></title>
+
+      <p>The definitions in the previous subsection extend naturally to higher
+  dimensions. Here are the details for the main case of interest.</p>
+
+      <p>
+      Let <m>S^2</m> denote the unit sphere in <m>\R^3</m>.
+      <men xml:id="s2defn"><notation><usage>S^2</usage><description>unit
+	    sphere in <m>\R^3</m></description></notation>
+	S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}
+      </men>
+      Let <m>N=(0,0,1)</m> denote the "north pole" (that is, the point at
+      the "top" of the sphere, where the postive <m>z</m>-axis is "up"). 
+      Given a point <m>P=(a,b,c)\neq N</m> on the unit sphere,
+      let <m>s(P)</m> denote the intersection of the
+      line <m>\overline{NP}</m> with the <m>x,y</m>-plane, which we
+      identify with the complex plane <m>\C</m>. See See <xref ref="stereoproj2fig"/>. The map 
+      <m>s\colon S^2\setminus \{N\}\to \C</m> given by this rule is
+      called <term>stereographic projection</term>. Using similar
+      triangles, it is easy to see that <m>s(a,b,c)=\frac{a+ib}{1-c}</m>. 
+    </p>
+
+   <figure xml:id="stereoproj2fig">
+      <caption>Stereographic projection
+      </caption>
+            <image width="60%" source="images/stereoproj2.png"></image>
+           </figure>
+      
+      
+    <p>We extend stereographic projection to the entire unit sphere as
+      follows. We call the set
+      <men xml:id="extendedcomplexsdefn">\C^+=\C\cup \{\infty\}
+	<idx><h>extended complex numbers</h></idx>
+	<notation><usage>\C^+</usage><description>extended complex numbers</description></notation>
+      </men>
+      the <term>extended complex numbers</term>, where "<m>\infty</m>" is
+      an element that is not a complex number. Now we define stereographic
+      projection <m>s\colon S^2 \to \C^+</m> by
+      <men xml:id="stereoprojdefn">
+	s(a,b,c) = \left\{
+	\begin{array}{cc}
+	\frac{a+ib}{1-c} \amp c\neq 1\\
+	\infty \amp c=1
+	\end{array}
+	\right..
+      </men>
+    </p>
+
+      </subsection>
+
+  <exercises>
+
+    <exercisegroup xml:id="stereoformulas">
+  <title>
+Formulas for inverse stereographic projection.
+  </title>
+  <introduction>      <p>It is intuitively clear that
+	stereographic projection is a bijection. Make this rigorous by
+      finding a formula for the inverse. </p>
+  </introduction>
+
+      <exercise>
+	<statement><p>
+	    For <m>s\colon S^1\to \R^+</m>, find a formula
+	    for <m>s^{-1}\colon \R^+\to S^1</m>. Find <m>s^{-1}(3)</m>.
+	  </p>
+	</statement>
+      </exercise>
+
+	        <exercise>
+	<statement><p>
+	    For <m>s\colon S^2\to \C^+</m>, find a formula
+	    for <m>s^{-1}\colon \C^+\to S^2</m>. Find <m>s^{-1}(3+i)</m>.
+	  </p>
+	</statement>
+      </exercise>
+	  
+      </exercisegroup>
+      
+    <exercisegroup xml:id="stereolifts">
+  <title>
+Liftings.
+  </title>
+  <introduction>Let <m>\pi \colon X\to Y</m> and <m>f\colon Y\to Y</m> be
+    functions. We say that a function <m>\tilde{f}\colon X\to
+      X</m> <m>\;</m>
+    <term>lifts</term> (or <term>is a lifting of</term>)
+    <idx>lift</idx><idx>lifting</idx> <m>f</m>
+    via <m>\pi</m> if <m>\pi \circ \tilde{f} = f\circ \pi</m>.
+      </introduction>
+
+  <exercise>
+    <statement> <p>Show that the map <m>S^1\to S^1</m> given by 
+	<m>(x,y)\to (x,-y)</m> is a lifting of the map <m>\R^+\to \R^+</m>
+	given by <m>x\to 1/x</m>.</p>
+  </statement>
+  </exercise>
+
+    <exercise>
+      <statement>
+<p>Show that the map <m>S^2\to S^2</m> given by 
+	<m>(a,b,c)\to (a,-b,-c)</m> is a lifting of the map <m>\C^+\to \C^+</m>
+	given by <m>z\to 1/z</m>.
+</p>
+      </statement>
+    </exercise>
+
+    </exercisegroup>
+    
+  </exercises>
+  
+  
+</section>
+
