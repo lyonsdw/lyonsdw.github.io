@@ -2,19 +2,122 @@
     <title>Definition of a <em>geometry</em>
     </title>	       
 
-    <subsection>
+    <introduction>
+
+      <p><em>Geometry</em> is the study of shape and properties of
+	configurations of points. 
+	A central concept is that
+	of <em>congruence</em>. In his 1872 work called
+	the <em>Erlangen Programm</em>, Felix Klein unified various
+	notions of geometry using transormation groups of
+	congruences. Here is a version of Klein's definition.
+
+<definition xref="geometrydefn"><title>Geometry</title><statement><idx>geometry</idx>
+    A <term>geometry model</term><idx><h>geometry</h><h>geometry
+	model</h>
+    </idx>
+    is a pair <m>(G,X)</m>, where <m>G</m> is a group acting
+    on a set <m>X</m>, called the <term>(model) space</term>. Subsets of <m>X</m> are
+    called <term>figures</term>. Figures <m>F,F'</m> are
+    called <term>congruent</term> if there is a transformation <m>g</m>
+    in <m>G</m> such that <m>g(F)=F'</m>.
+</statement></definition>
+		
+	To introduce what this means, we begin
+      with a comparison of properties of line segments and angles in a flat
+	plane versus lines segments and angles on the surface of a
+      sphere. For now, we appeal to the intuition and avoid technical
+	definitions.
+      </p>
+
       <p>
-Sketch the examples of euclidean and spherical geometries, how points,
-lines, triangles, distance, and area make sense in both, but how facts
-differ: parallel lines, sum of angles in a triangle, area! How groups
-come in to the picture.
+	A (straight) "line segment" can be defined, both for the plane and
+	the sphere, as a path of shortest possible length that
+	connects two points. On the sphere, these length minmimizing
+	paths are arcs of great circles (that is, circles made by
+	intersecting the sphere with planes that pass through the center
+	of the sphere). In addition to distance and straight lines,
+	angles between straight line segments make sense both in the
+	plane and on the sphere. Here a some notable differences between
+	the plane and the sphere that illustrate the phrase "properties
+	of configurations of points".
 
+      <ul><li>A (straight) "railroad track" is a pair of straight line
+      segments that are a constant distance apart. It is possible to
+      map out railroad tracks in the plane, but not on the sphere,
+      where it is impossible to have a pair of straight line segments
+	  that are a constant distance apart.</li>
+	<li>In the plane, the sum of the three interior angles of any
+	  triangle is 180 degrees, or <m>\pi</m> radians. On the sphere,
+	  the sum of the interior angles of a triangle
+	  is <em>greater</em> than 180 degrees, and can be as great as
+	  540 degrees.
+	</li>
+      </ul>
+      These differences in properties of parallel lines and angle sums in
+      triangles are expressions of the differences in shape possessed by the
+      flat plane and the sphere. In order to define "shape" and
+      "geometry" more precisely, we blah blah blah
 
-	<definition><title>Geometry</title><statement>A geometry is a group acting on a set.</statement></definition>
-	Examples are Euclidean geometry and Möbius geometry.</p>
+      In order to proceed from these observations do not point
+      to an obvious definition of shape.
+      </p>
+    </introduction>
+    
+    <subsection>
+
+      <p>We begin with a story that introduces the modern concept of
+	a <em>geometry</em>. Imagine an ant civilization in which
+	surveyor ants have the ability to measure distances with tiny
+	ant measuring sticks and to measure angles with tiny ant
+	protractors. Ants call a path
+	between two points "straight" if that path has the shortest
+	length of all possible paths that start at one of the points and
+	end at the other. Now imagine that two of these surveyor ants
+	go out in the world to make maps for
+	possible train tracks (that is, two parallel straight lines at a
+	fixed distance apart). Surveyor ant <m>A</m> ends up on a
+	large flat surface, say, a perfectly smooth and flat table, and
+	surveyor ant <m>B</m> ends up on a large spherical surface, also perfectly
+	smooth. 
+      </p>
+
+      <p>The two surveyors come back with the following reports. (put in a figure here)
+	<ul><li><em>Ant <m>A</m>, from table world
+	</em>: I was able to map many possible railroad tracks. I checked many triangles, and I find that the
+	    three interior angles of all of those triangles sum to a
+	    total of one-half revolution.<fn>That's 180 degrees,
+	      or <m>\pi</m> radians. Ants are not troubled by awkward human
+	    rotation measure conventions.
+	    </fn>
+	  </li>
+<li><em>Ant <m>B</m>, from sphere world
+	</em>: I was not able to map out a single railroad track: for
+	every pair of straight paths I checked, those paths either
+	became further apart or closer together. I found a triangle whose
+	three interior angles sum to a total of one and one-half
+  revolutions. </li>
+	</ul>
+	From their experiences with small flat surfaces (like flat
+	rocks) and small round surfaces (like round fruit), the ants
+	were able to hypothesize that the differences in their empirical
+	evidence was due to differing <em>shape</em> of the worlds they
+	were measuring.
+      </p>
+
+      <p>
+The point of this parable is that the situation for the ants is not so
+different for humans. We also live in a big world with limited tools and
+experience.  Driven by practical concerns of engineering and navigation,
+the subject of geometry began with experiments and empirical data to
+achieve better understanding.  The term "geometry" comes from the Greek
+roots meaning "measurement of the earth".
+
+</p>
+
       
     </subsection>
-    
+
   <subsection>
     <p>
       Two geometries are equivalent if there are the right kind of
