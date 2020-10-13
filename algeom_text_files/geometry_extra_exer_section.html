@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-13T19:21:05-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Additional exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\newcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\newcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+                        #3 \amp #4 \end{array} \right]}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-15.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-15.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="active">Additional exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="geometry_extra_exer_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Additional exercises</span>
+</h2>
+<section class="exercises" id="exercises-16"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-169"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">The Euclidean group as a semidirect product.</span>
+</h6>
+<p id="p-361">Show that the transformation group of planar Euclidean geometry defined in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a> is isomorphic to the semidirect product \(\R^2\rtimes O(2)\) as described in <a class="xref" data-knowl="./knowl/semidirect_product_exer.html" title="Exercise 2.6.6: Semidirect product">Exercise 2.6.6</a>.</p></article><article class="exercise exercise-like" id="exercise-170"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Euclidean subgroup of the Möbius group.</span>
+</h6>
+<p id="p-362">Let \(\E\) denote the subgroup of the Möbius group \(\M\) generated by rotations and translations, that is, transformations of the type \(z\to e^{it}z\) for \(t\in \R\) and \(z\to z+b\) for \(b\in
+C\text{.}\) The geometry \((\C,\E)\) is sometimes called "Euclidean geometry". Is \((\C,\E)\) equivalent to the Euclidean geometry defined in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>? Why or why not?</p></article><article class="exercise exercise-like" id="exercise-171"><h6 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Elliptic geometry and spherical geometry.</span>
+</h6>
+<p id="p-363">Is elliptic geometry \((\extC,\S)\) equivalent to spherical geometry defined in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>? Why or why not?</p></article><article class="exercise exercise-like" id="exercise-172"><h6 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Parallel displacements in hyperbolic geometry.</span>
+</h6>
+<p id="p-364">Let \(T\) be an element of the hyperbolic group \(\H\text{,}\) with a single fixed point \(p\) and normal form</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{Tz-p} = \frac{1}{1-p}+\beta.
+\end{equation*}
+</div>
+<p data-braille="continuation">Show that \(p\beta\) must be a pure imaginary number, that is, there must be a real number \(k\) such that \(p\beta=ki\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-173"><h6 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative derivation of the formula for elliptic group elements.</span>
+</h6>
+<p id="p-365">To obtain an explicit formula for elements of the elliptic group, we begin with a necessary condition. Let \(R=s^{-1}\circ
+T\circ s\) be the rotation of \(S^2\) that lifts \(T\) via stereographic projection. If \(P,Q\) are a pair of endpoints of a diameter of \(S^2\text{,}\) then \(R(P),R(Q)\) must also be a pair of endpoints of a diameter. <a class="xref" data-knowl="./knowl/stereoprojdiamends.html" title="Exercise 1.3.3.7: Projections of endpoints of diameters">Exercise 1.3.3.7</a> establishes the condition that two complex numbers \(p,q\) are stereographic projections of endpoints of a diameter if and only if \(pq^\ast = -1\text{.}\) Thus we have the following necessary condition for \(T\text{.}\)</p>
+<div class="displaymath">
+\begin{equation}
+pq^\ast = -1 \;\;\text{ implies }\;\; Tp(Tq)^\ast =
+-1\label{diamendpreservecond}\tag{3.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">Now suppose that \(Tz=\frac{az+b}{cz+d}\) with \(ad-bc=1\text{.}\) Solving the equation \(Tp =
+\frac{-1}{T(\frac{-1}{p^\ast})}\) leads to \(c=-b^\ast\) and \(d=a^\ast\text{.}\) Thus we conclude that \(T\) has the following form.</p>
+<div class="displaymath">
+\begin{equation}
+Tz=\frac{az+b}{-b^\ast z+a^\ast},\;\;|a|^2+|b|^2=1\label{elliptictranssu2form}\tag{3.6.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Carry out the computation to derive <a class="xref" data-knowl="./knowl/elliptictranssu2form.html" title="Equation 3.6.2">(3.6.2)</a>. Explain why there is no loss of generality by assuming \(ad-bc=1\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-174"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Identifications of \(U(\Quat)\) and \(\S\) with \(\Rot(S^2)\).</span>
+</h6>
+<p id="p-366">The discussion of elliptic geometry (<a href="elliptic_geometry_section.html" class="internal" title="Section 3.4: Elliptic geometry">Section 3.4</a>) establishes two ways to construct rotations from matrices. The purpose of this exercise is to reconcile these identifications. Given \(a,b\in \C\) with \(|a|^2+|b|^2=1\text{,}\) let us define the objects</p>
+<div class="displaymath">
+\begin{equation*}
+M_{a,b}\in SU(2),T_{a,b}\in
+\S,R_{T_{a,b}}\in \Rot(S^2),r_{a,b}\in
+U(\Quat),R_{r_{a,b}}\in \Rot(S_\Quat^2)
+\end{equation*}
+</div>
+<p data-braille="continuation">as follows.</p>
+<div class="displaymath">
+\begin{align*}
+M_{a,b} \amp =\left[\begin{array}{cc}{a}\amp
+{b}\\{-b^\ast}\amp {a^\ast}\end{array}\right]\\
+T_{a,b} \amp = \left[z\to \frac{az+b}{-b^\ast
+z+a^\ast}\right] \;\;\text{for }z\in \extC\\
+R_{T_{a,b}} \amp = s^{-1}\circ T\circ s\\
+r_{a,b}\amp = a+bi+cj+dk \\
+R_{r_{a,b}}\amp = \left[u\to
+r_{a,b}ur_{a,b}^\ast\right]\;\; \text{for }u\in \S^2_\Quat
+\end{align*}
+</div>
+<p data-braille="continuation">Let's call the following sequence of mappings the "Möbius path" from \(SU(2)\) to \(\Rot(S^2)\)</p>
+<div class="displaymath">
+\begin{align}
+SU(2)\amp \to \S  \to \Rot(S^2)\tag{3.6.3}\\
+M_{a,b} \amp
+\to T_{a,b} \to R_{T_{a,b}}\tag{3.6.4}
+\end{align}
+</div>
+<p data-braille="continuation">and let's call this next sequence the "quaternion path".</p>
+<div class="displaymath">
+\begin{align}
+SU(2)\amp \to U(\Quat)  \to \Rot(S^2_\Quat)\tag{3.6.5}\\
+M_{a,b} \amp
+\to r_{a,b} \to R_{r_{a,b}}\tag{3.6.6}
+\end{align}
+</div>
+<ol class="lower-alpha">
+<li id="li-179">Show that \(R_{T_{a,b}} = R_{v,\theta}\) with \(v=(\im(b),-\re(b),\im(a))\) and \(\theta =2\arccos(a)\text{.}\)</li>
+<li id="li-180">Show that \(R_{r_{a,b}} = R_{v,\theta}\) with \(v=(\im(a),\re(b),\im(b))\) and \(\theta =2\arccos(a)\text{.}\)</li>
+<li id="li-181">Here is one way to reconcile the mismatch of the axis vectors in parts (a) and (b). Let<div class="displaymath">
+\begin{equation*}
+M_{a',b'} = (iH)M_{a,b}(iH)^{-1}
+\end{equation*}
+</div>where \(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1\amp 1 \\ 1\amp -1\end{array}\right]\) is the <em class="emphasis">Hadamard</em> matrix. Show that<div class="displaymath">
+\begin{equation*}
+R_{T_{a,b}}= R_{r_{a',b'}}
+\end{equation*}
+</div>that is, the diagram in <a class="xref" data-knowl="./knowl/rot_id_fig.html" title="Figure 3.6.1">Figure 3.6.1</a> commutes.</li>
+</ol>
+<p data-braille="continuation"><figure class="figure figure-like" id="rot_id_fig"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/rot_id_diagram.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>The map \(C_{iH}\) is given by \(C_{iH}(T)=(iH)T(iH)^{-1}\text{.}\) The column of maps on the left is the "Möbius path", and the column of maps on the right is the "quaternion path".</figcaption></figure></p></article></section></section></div></main>
+</div>
+</body>
+</html>

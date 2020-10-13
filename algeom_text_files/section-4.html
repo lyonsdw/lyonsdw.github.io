@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-29T13:15:23-04:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-13T19:21:02-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Examples of groups</title>
+<title>Equivalence Relations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -41,196 +43,254 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
 \DeclareMathOperator{\Stab}{Stab}
 \DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-\newcommand{\C}{{\rm \bf C}}
-	    \newcommand{\R}{{\rm \bf R}}
-	    \newcommand{\Z}{{\rm \bf Z}}
-\newcommand{\Q}{{\rm \bf Q}}
- \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\newcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\newcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+                        #3 \amp #4 \end{array} \right]}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Modern Algebra and Geometry</span></a></h1>
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="algebra_chapter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="algebra_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="groupdefsection.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="stereoprojsect.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="groups_chapter.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="algebra_chapter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="algebra_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="groupdefsection.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="stereoprojsect.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="groups_chapter.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+</ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">0</span> <span class="title">Basics</span></a><ul>
+<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Stereographic projection and the extended complex plane</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Equivalence Relations, Partitions, and Functions</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
+<li><a href="section-4.html" data-scroll="section-4" class="active">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="algebra_chapter.html" data-scroll="algebra_chapter"><span class="codenumber">1</span> <span class="title">Algebra</span></a><ul>
-<li><a href="section-4.html" data-scroll="section-4" class="active">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definitions and properties for groups</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Group homomorphisms</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group actions</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Applications of group theory</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">2</span> <span class="title">Geometry</span></a><ul>
-<li><a href="section-9.html" data-scroll="section-9">Euclidean geometry</a></li>
-<li><a href="section-10.html" data-scroll="section-10">Möbius geometry</a></li>
-<li><a href="section-11.html" data-scroll="section-11">The definition of <em class="emphasis">geometry</em></a></li>
-<li><a href="section-12.html" data-scroll="section-12">Hyperbolic geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Elliptic geometry</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Projective geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">The quaternions</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
 </ul>
-</li>
-<li class="link">
-<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">3</span> <span class="title">Further Topics</span></a><ul><li><a href="section-16.html" data-scroll="section-16">Additional topics</a></li></ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-4"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Examples of groups</span>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-4"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Equivalence Relations</span>
 </h2>
-<section class="introduction" id="introduction-7">A <dfn class="terminology">group</dfn> is a collection of objects, pairs of which interact by some operation to form another element of the group. Before we make the precise defintions of what the conditions are for a group and its binary operation (see <a href="groupdefsection.html" class="internal" title="Section 1.2: Definitions and properties for groups">Section 1.2</a>), we start by giving a number of examples of important and useful groups.</section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Permutations</span>
+<section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Definitions</span>
 </h3>
-<p id="p-49">A <dfn class="terminology">permutation</dfn> of a set \(X\) is a bijection from \(X\) to itself, that is, a function that is both one-to-one and onto. Given two permutations \(\alpha,\beta\) of a set \(X\text{,}\) we write \(\alpha\beta\) to denote the composition of functions \(\alpha\circ\beta\text{.}\) <article class="definition definition-like" id="definition-1"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group of permutations of a set.</span>
+<p id="p-76">A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
+<div class="displaymath">
+\begin{equation}
+[x] = \{y\in X\colon x\sim y\},\label{equivalenceclass}\tag{1.4.1}
+\end{equation}
+</div>
+<p data-braille="continuation">called the <dfn class="terminology">equivalence class</dfn> of the element \(x\text{.}\) The set of equivalence classes is denoted \(X/\!\!\sim\text{,}\) that is,</p>
+<div class="displaymath">
+\begin{equation}
+X/\!\!\sim \; = \{[x]\colon x\in X\}.\label{setofequivclasses}\tag{1.4.2}
+\end{equation}
+</div>
+<p id="p-77">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection of nonempty disjoint sets whose union is \(X\text{.}\)</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Facts</span>
+</h3>
+<p id="p-78"><article class="fact theorem-like" id="equivrelpart"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalence relations and partitions.</span>
 </h6>
-<p id="p-50">Let \(X\) be a set and let \(\Perm(X)\) denote the set of all permutations of \(X\text{.}\) The <em class="emphasis">group of permutations of \(X\)</em> is the set \(\Perm(X)\) together with the operation of function composition. For the special case \(X = \{1,2,\ldots,n\}\) for some integer \(n\geq 1\text{,}\) the group \(\Perm(X)\) is called the <dfn class="terminology">symmetric group</dfn>, and is denoted \(S_n\text{.}\) </p></article></p>
-<article class="exercise exercise-like" id="permutation-reading-exercise"><a data-knowl="" class="id-ref original" data-refid="hk-permutation-reading-exercise"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-permutation-reading-exercise"><article class="exercise exercise-like"><p id="p-51">A permutation \(\sigma\) of \(X=\{1,2,\ldots,n\}\) can be specified by a list of values \([\sigma(1),\sigma(2),\ldots,\sigma(n)]\text{.}\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> For example, the list \([3,1,2]\) specifies the permutation \(\sigma\colon \{1,2,3\}\to\{1,2,3\}\) given by</p>
+<p id="p-79">Let \(X\) be a set. Equivalence relations on \(X\) and partitions of \(X\) are in one-to-one correspondence, as follows. Given an equivalence relation \(\sim\) on \(X\text{,}\) the collection</p>
 <div class="displaymath">
 \begin{equation*}
-\sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.
+X/\!\!\sim \; = \{[x]\colon x\in X\}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(\tau=[2,1,3]\text{.}\) Find \(\sigma\tau\text{,}\) \(\tau\sigma\text{,}\) and \(\sigma^2=\sigma\sigma\text{.}\)</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">There is a reason that we use square brackets, rather than parentheses, for the list of output values of a permutation: Lists written with parentheses are used, by nearly universal convention, for a different representation of permutations called <em class="emphasis">cycle notation</em>. Cycle notation is introduced in <a class="xref" data-knowl="./knowl/cyclenotationexer.html" title="Exercise 1.2.2.5: Cycle notation for permutations">Exercise 1.2.2.5</a>.</div></div>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-52">\(\sigma\tau= [1,3,2]\text{,}\) \(\tau\sigma=[3,2,1]\text{,}\) \(\sigma^2=[2,3,1]\)</p></div></div>
-</div></article></div></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Symmetries of regular polygons</span>
-</h3>
-<p id="p-53">Informally and intuitively, we say that regular polygons have rotational and mirror symmetries. Specifically, the rotational symmetries are rotations about the center \(O\) of the polygon, clockwise or counterclockwise, by some angle \(\angle POP'\text{,}\) where \(P,P'\) are any two vertices. The mirror symmetries of the polygon are reflections across lines of the form \(\overline{OP}\) or \(\overline{OM}\text{,}\) where \(P\) is any vertex and \(M\) is the midpoint of any edge of the polygon.  See <a class="xref" data-knowl="./knowl/ngonsymmfig.html" title="Figure 1.1.3">Figure 1.1.3</a>.</p>
-<figure class="figure figure-like" id="ngonsymmfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/ngonsymm_clip.jpg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span>Symmetries of a regular \(n\)-gon</figcaption></figure><p id="p-54">Here are some standard notations for rotations and reflections in the plane. See <a class="xref" data-knowl="./knowl/rotreflfig.html" title="Figure 1.1.4">Figure 1.1.4</a>. <figure class="figure figure-like" id="rotreflfig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/rotrefl_clip.jpg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>Rotations and reflections in the plane</figcaption></figure> <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">Rotations in the plane.</span></h6>
-<p id="p-55">Fix a center point \(O\text{.}\) We write \(R_\theta\) to denote the rotation by angle \(\theta\) about the point \(O\text{.}\) Angle units can be revolutions or degrees or radians, whatever is most convenient. We observe the usual convention that positive values of \(\theta\) denote counterclockwise rotations and negative values of \(\theta\) denote clockwise rotations.</p></article> <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">Reflections in the plane.</span></h6>
-<p id="p-56">We write \(F_L\) to denote the reflection across the line \(L\text{.}\) This means that \(P'=F_L(P)\) if and only if \(\overline{PP'}\perp L\) and the distance from \(P\) to \(L\) is the same as the distance from \(P'\) to \(L\text{.}\)</p></article></p>
-<p id="p-57"><article class="fact theorem-like" id="ngonsymmetries"><h6 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetries of the regular \(n\)-gon.</span>
-</h6>
-<p id="p-58">The <dfn class="terminology">symmetries of the regular \(n\)-gon</dfn> is the set of all \(R_\theta,F_L\) for the following values of \(\theta,L\text{,}\) where \(O\) is the center of the \(n\)-gon.</p>
-<div class="displaymath">
-\begin{gather}
-\theta = \frac{k}{n}\text{
-revolutions}=k\frac{360}{n} \text{ degrees} =
-k\frac{2\pi}{n} \text{ radians}, k\in \Z\label{ngonrotations}\tag{1.1.1}\\
-L=\overline{OP}, \; P
-\text{ any vertex}\label{ngonmirrorsymmsvert}\tag{1.1.2}\\
-L=\overline{OM}, \; M
-\text{ the midpoint of any edge}\label{ngonmirrorsymmsmid}\tag{1.1.3}
-\end{gather}
-</div></article> This description is redundant. For example, one of the rotational symmetries of the square is by an angle of \(3/4\) revolutions or 270 degrees. This is the same as \(-1/4\) revolutions or \(-90\) degrees. In general, we have \(R_{\frac{k}{n}} = R_{-\frac{n-k}{n}}\text{.}\) There is also redundancy among the mirror symmetries. If \(n\) is even, then each vertex \(P\) has an <em class="emphasis">opposite</em> vertex <em class="emphasis">P'</em> such that \(\overline{OP}=\overline{OP'}\text{,}\) i.e., we have \(F_{\overline{OP}}=F_{\overline{OP'}}\text{.}\) If \(n\) is odd, then each vertex \(P\) has an <em class="emphasis">opposite</em> midpoint <em class="emphasis">M</em> such that \(\overline{OP}=\overline{OM}\text{,}\)  i.e., we have \(F_{\overline{OP}}=F_{\overline{OM}}\text{.}\)</p>
-<p id="p-59">Given symmetries \(A,B\text{,}\) we write \(AB\) to denote the composition \(A\circ B\text{.}\) For example, for the symmetries of the equilateral triangle, with angles in degrees, and with \(L=\overline{OP}\) for some vertex \(P\text{,}\) we have \(R_{240}R_{120}=R_{0}\) and \(F_LR_{120}=R_{-120}F_L\text{.}\) <article class="definition definition-like" id="definition-2"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Dihedral group.</span>
-</h6>
-<p id="p-60">The <dfn class="terminology">dihedral group</dfn>, denoted \(D_n\text{,}\) is the set of symmetries of the regular \(n\)-gon (see <a class="xref" data-knowl="./knowl/ngonsymmetries.html" title="Fact 1.1.5: Symmetries of the regular \(n\)-gon">Fact 1.1.5</a> above) together with the operation of function composition.</p></article></p>
-<article class="exercise exercise-like" id="dihedral-reading-exercise"><a data-knowl="" class="id-ref original" data-refid="hk-dihedral-reading-exercise"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral-reading-exercise"><article class="exercise exercise-like"><p id="p-61">Let \(X\) be the square centered at the origin in the \(x,y\)-plane with vertices at \((\pm 1,\pm 1)\text{.}\) The square \(X\) has lines of symmetry \(H,V,D,D'\) (horizontal, vertical, diagonal, and another diagonal) where \(H,V\) denote the \(x,y\) axes, respectively, and \(D,D'\) denote the lines \(y=-x,y=x\text{,}\) respectively. See Figure blah. The symmetries of the square \(X\) are</p>
+<p data-braille="continuation">is a partition of \(X\text{.}\) Conversely, given a partition \({\mathcal P}\) of \(X\text{,}\) the relation \(\sim_{\mathcal P}\) defined by</p>
 <div class="displaymath">
 \begin{equation*}
-D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
+x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\mathcal P}
 \end{equation*}
 </div>
-<p data-braille="continuation">where the rotation angles units are revolutions. Find the following.</p>
+<p data-braille="continuation">is an equivalence relation. These correspondences are inverse to one another. That is, \(\sim = \sim_{(X/\sim)}\) and \(X/(\sim_{\mathcal P}) = {\mathcal P}\text{.}\)</p></article></p>
+<p id="p-80"><article class="fact theorem-like" id="constructequivrelpart"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of equivalence relations and partitions from functions.</span>
+</h6>
+<p id="p-81">Given a function \(f\colon X\to
+Y\text{,}\) there is a natural equivalence relation \(\sim_f\) on \(X\) given by \(x\sim_f y\) if and only if \(f(x)=f(y)\text{.}\) The corresponding set of equivalence classes is \(X/\!\!\sim_f \; = \{f^{-1}(y)\colon y\in
+f(X)\}\text{.}\) Furthermore, the function \(X/\!\!\sim_f \; \to f(X)\) given by \([x]\to f(x)\) is a one-to-one correspondence.</p></article></p>
+<p id="p-82"><article class="fact theorem-like" id="welldefinedness"><h6 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of functions on sets of equivalence classes.</span>
+</h6>
+<p id="p-83">Let \(\sim\) be an equivalence relation on a set \(X\text{,}\) let \(\pi\colon X\to X/\!\!\sim\) denote the map given by \(x\to [x]\text{,}\) and let \(f\colon X\to Y\) be a function. There exists a map \(\overline{f}\colon X/\!\!\sim
+\to Y\) such that \((\overline{f}\circ \pi)(x)=f(x)\) for all \(x\in X\) if and only if \(f\) is constant on equivalence classes (that is, if and only if \([x\sim
+y\Rightarrow f(x)=f(y)]\text{.}\))</p></article></p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer \(n\)</span>
+</h3> Let \(n\) be a positive integer. Let \(\sim_n\) be the relation on the integers \(\Z\) given by<div class="displaymath">
+\begin{equation*}
+x\sim_n y \Leftrightarrow n|(x-y)
+\end{equation*}
+</div>(recall that the symbols "\(a|b\)" for integers \(a,b\text{,}\) pronounced "\(a\) divides \(b\)", means \(b=ka\) for some integer \(k\)). It is easy to show that \(\sim_n\) is an equivalence relation, and that the equivalence classes are precisely the set<div class="displaymath">
+\begin{equation*}
+Z/\!\!\sim_n = \{[0],[1],[2],\ldots,[n-1]\}.
+\end{equation*}
+</div>This set of equivalence classes is fundamental and pervasive in mathematics. Instead of writing \(Z/\!\!\sim_n\text{,}\) the universally used notation is \(\Z_n\text{.}\) Instead of writing \(x\sim_n y\text{,}\) the universally used notation is \(x=y\pmod{n}\) (or sometimes \(x\equiv y\pmod{n}\)).</section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span>
+</h3>
+<p id="p-84">A <dfn class="terminology">directed graph</dfn> (or <em class="emphasis">digraph</em>) is a set \(V\) of <em class="emphasis">vertices</em> and a set \(E\subset V\times V\) of <em class="emphasis">directed edges</em>. We draw pictures of digraphs by drawing an arrow pointing from a vertex \(v\) to a vertex \(w\) whenever \((v,w)\in E\text{.}\) See <a class="xref" data-knowl="./knowl/digraphegfig.html" title="Figure 1.4.4">Figure 1.4.4</a>.</p>
+<p id="p-85">A <dfn class="terminology">path</dfn> in a directed graph is a sequence of vertices \(v_0,v_2,\ldots,v_{n}\) such that \((v_{i-1},v_i)\in E\) for \(1\leq i\leq n\text{.}\) The vertex \(v_0\) is called the <dfn class="terminology">initial vertex</dfn> and \(v_n\) is called the <dfn class="terminology">final vertex</dfn> of the path \(v_0,v_2,\ldots,v_{n}\text{.}\)</p>
+<figure class="figure figure-like" id="digraphegfig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/digraphegfig.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span>Example of a directed graph with vertex set \(V=\{a,b,c,d\}\) and edge set \(E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\text{.}\) The vertex sequences \(c,b\) and \(c,a,b\) are both paths from \(c\) to \(b\text{.}\)</figcaption></figure><p id="p-86">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
 <ol class="decimal">
-<li id="li-13">\(R_{1/4}R_{1/2}\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like">\(R_{3/4}\)</div></div>
+<li id="li-21">Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge \(f=(X,Y)\) denotes a function \(f\colon
+X\to Y\text{.}\)</li>
+<li id="li-22">Whenever there are two paths from an initial vertex \(X\) to a final vertex \(Y\text{,}\) the composition of functions along one path is equal to the composition of functions along the other path. That is, if \(X_0,X_1,\ldots,X_n\) is a path with edges \(f_i\colon X_{i-1}\to X_{i}\) for \(1\leq i\leq n\) and \(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\) is a path with edges \(g_i\colon Y_{i-1}\to Y_{i}\) for \(1\leq i\leq
+m\text{,}\) then<div class="displaymath">
+\begin{equation*}
+f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
+g_{m-1}\circ\cdots\circ g_1.
+\end{equation*}
+</div>
 </li>
-<li id="li-14">\(R_{1/4}F_H\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like">\(F_{D'}\)</div></div>
-</li>
-<li id="li-15">\(F_HR_{1/4}\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like">\(F_D\)</div></div>
-</li>
-<li id="li-16">\(F_HF_D\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like">\(R_{1/4}\)</div></div>
-</li>
-<li id="li-17">\(F_DF_H\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like">\(R_{3/4}\)</div></div>
-</li>
-<li id="li-18">\((F_DR_{1/2})^2= F_DR_{1/2}F_DR_{1/2}\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like">\(R_0\)</div></div>
-</li>
-<li id="li-19">\((F_DR_{1/2})^3\) <a data-knowl="" class="id-ref original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like">\(F_{D'}\)</div></div>
-</li>
-</ol></article></div></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Integers, integers modulo \(n\)</span>
+</ol>
+<p id="p-87"><a class="xref" data-knowl="./knowl/welldefinednessfig.html" title="Figure 1.4.5">Figure 1.4.5</a> shows a commutative diagram that goes with <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>. <a class="xref" data-knowl="./knowl/conjtransdeffig.html" title="Figure 1.4.6">Figure 1.4.6</a> shows a commutative diagram that illustrates the definition of conjugate transformations.</p>
+<figure class="figure figure-like" id="welldefinednessfig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/commutediagramtestfig.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.5<span class="period">.</span></span><span class="space"> </span>A commutative diagram showing the relationship \(\overline{f}\circ \pi = f\) in <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>.</figcaption></figure><figure class="figure figure-like" id="conjtransdeffig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/conjtransdefdiagram.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.6<span class="period">.</span></span><span class="space"> </span>A commutative diagram illustrating the definition of conjugate transformations \(f,g\) given in <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.3.3.3–6: Conjugate transformations.">Exercise Group 1.3.3.3–6</a>.</figcaption></figure></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.4.5</span> <span class="title">Exercises</span>
 </h3>
-<p id="p-62"><article class="definition definition-like" id="definition-3"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">The group of integers, the group of integers mod \(n\).</span>
-</h6>The set \(\Z\) of integers, together with the operation of addition, is called the <dfn class="terminology">group of integers</dfn>. The set \(\Z_n\) of integers modulo \(n\) (where \(n\) is some integer \(n\geq
-1\)), together with the operation of addition modulo \(n\text{,}\) is called the <dfn class="terminology">group of integers mod \(n\)</dfn>.</article> </p></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Invertible matrices</span>
-</h3>
-<p id="p-63">Let \(n\geq 1\) be an integer. We write \(GL(n,\R)\) to denote the set of \(n\times n\) invertible matrices with real entries. <article class="definition definition-like" id="definition-4"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">The group of invertible matrices .</span>
+<div class="exercisegroup" id="zmodn">
+<h6 class="heading"><span class="title">The integers modulo \(n\text{.}\)</span></h6>
+<div class="introduction" id="introduction-5">Let \(n\) be a positive integer.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-88">Verify that the relation \(\sim_n\) is indeed an eqivalence relation.</p></article><article class="exercise exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-89">Verify that the equivalence classes of the equivalence relation \(\sim_n\) are indeed \(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-90">Let \(\omega\) be the complex number \(\omega=e^{2\pi i/n}\text{,}\) and let \(f\colon \Z\to \C\) be given by \(m\to \omega^m\text{.}\) Show that the equivalence relation \(\sim_f\) given by <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a> is the same as \(\sim_n\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnadd"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-91">Show that the operation of addition on \(\Z_n\) given by</p>
+<div class="displaymath">
+\begin{equation*}
+[x]+[y] := [x+y]
+\end{equation*}
+</div>
+<p data-braille="continuation">is <dfn class="terminology">well-defined</dfn>. This means showing that if \([x]=[x']\) and \([y]=[y']\text{,}\) then \([x+y]=[x'+y']\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnmult"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-92">Show that the operation of multiplication on \(\Z_n\) given by</p>
+<div class="displaymath">
+\begin{equation*}
+[x]\cdot [y] := [xy]
+\end{equation*}
+</div>
+<p data-braille="continuation">is well-defined.</p></article><article class="exercise exercise-like" id="exercise-37"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-93">Draw a commutative diagram that illustrates the distributive law for \(\Z_n\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+[x]\left([y]+[z]\right) = [x][y] + [x][z]
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-38"><h6 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of \(\Z_n\).</span>
 </h6>
-<p id="p-64">The set \(GL(n,\R)\text{,}\) together with the operation of matrix multiplication, is called the <dfn class="terminology">group of \(n\times n\) invertible matrices</dfn>, or also the <dfn class="terminology">general linear group</dfn>.</p></article></p>
-<article class="exercise exercise-like" id="matrices-reading-exercise"><a data-knowl="" class="id-ref original" data-refid="hk-matrices-reading-exercise"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-matrices-reading-exercise"><article class="exercise exercise-like"><p id="p-65">The reading exercises <a class="xref" data-knowl="./knowl/permutation-reading-exercise.html" title="Checkpoint 1.1.2">Checkpoint 1.1.2</a> and <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 1.1.7">Checkpoint 1.1.7</a> demonstrate that the group operations for \(S_3\) and \(D_4\) are <em class="emphasis">not</em> commutative. Is the group operation for \(GL(2,\R)\) commutative? Prove or give a counterexample.</p></article></div></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Nonzero elements in a field</span>
-</h3>
-<p id="p-66">Let \(k\) be a field, such as the rational numbers \(\Q\text{,}\) the real numbers \(\R\text{,}\) or the complex numbers \(\C\text{.}\) We write \(k^\ast\) to denote the set of nonzero elements in \(k\text{.}\) <article class="definition definition-like" id="definition-5"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Group of nonzero elements in a field.</span>
-</h6>Let \(k\) be a field. The set \(k^\ast\text{,}\) together with the operation of multiplication, is called the <dfn class="terminology">group of nonzero elements</dfn> in the field \(k\text{.}\)</article></p></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">1.1.6</span> <span class="title">Exercises</span>
-</h3>
-<section class="introduction" id="introduction-8"></section><article class="exercise exercise-like" id="exercise-26"><h6 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Matrices for the dihedral group \(D_4\).</span>
-</h6>Let \(H\) denote the \(x\)-axis in the \(x,y\)-plane. The map \(F_H\colon \R^2\to \R^2\) is a linear map whose matrix is \(\displaystyle \left[\begin{array}{cc}1 \amp 0\\ 0 \amp
--1\end{array}\right]\text{.}\) The map \(R_{1/4}\colon \R^2\to \R^2\) is a linear map whose matrix is \(\displaystyle \left[\begin{array}{cc}0 \amp -1\\ 1 \amp
-0\end{array}\right]\text{.}\) Find the matrices for the remaining elements of the dihedral group \(D_4\) as specified in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 1.1.7">Checkpoint 1.1.7</a>.</article><article class="exercise exercise-like" id="exercise-27"><h6 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Complex number operations for the dihedral group \(D_4\).</span>
-</h6>
-<p id="p-67">Let \(H\) denote the real line \(\R\) in the complex plane \(\C\text{.}\) The map \(F_H\colon \C\to \C\) is complex conjugation \(z\to \overline{z}\text{.}\) The map \(R_{1/4}\colon \C\to \C\) is the map \(z\to e^{i\pi/4}z\text{.}\) Find the maps \(\C\to \C\)  for the remaining elements of the dihedral group \(D_4\) as specified in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 1.1.7">Checkpoint 1.1.7</a>.</p></article></section></section></div></main>
+<p id="p-94">Another standard definition of the set \(\Z_n\text{,}\) together with its operations of addition and multiplication, is the following. Given an integer \(a\text{,}\) let \(a \MOD n\) be the unique integer \(r\) in the range \(0\leq r\leq n-1\) such that \(a=qn+r\) for some integer \(q\) (that is, \(r\) is the remainder obtained when dividing \(a\) by \(n\)). Now define \(\Z_n\) to be the set</p>
+<div class="displaymath">
+\begin{equation*}
+\Z_n=\{0,1,2,\ldots,n-1\},
+\end{equation*}
+</div>
+<p data-braille="continuation">define the addition operation \(+_n\) on \(\Z_n\) by</p>
+<div class="displaymath">
+\begin{equation*}
+x+_n y= (x+y)\MOD n 
+\end{equation*}
+</div>
+<p data-braille="continuation">and define the multiplication operation \(\cdot_n\) on \(\Z_n\) by</p>
+<div class="displaymath">
+\begin{equation*}
+x\cdot_n y = (xy) \MOD n.
+\end{equation*}
+</div>
+<p data-braille="continuation">Show that this version of \(\Z_n\) is equivalent to the version developed in <a class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.5.4">Exercise 1.4.5.4</a> and <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.5">Exercise 1.4.5.5</a>.</p></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-39"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-95">Prove <a class="xref" data-knowl="./knowl/equivrelpart.html" title="Fact 1.4.1: Equivalence relations and partitions">Fact 1.4.1</a>.</p></article><article class="exercise exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-96">Prove <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a>.</p></article><article class="exercise exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-97">Prove <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

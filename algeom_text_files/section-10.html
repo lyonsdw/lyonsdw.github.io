@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-08-06T16:11:23-04:00       *-->
-<!--*   A recent stable commit (2020-07-07):   *-->
-<!--* 1771dacf84bfb1789139598d8379414b560b8f17 *-->
+<!--*       on 2020-08-22T19:09:56-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -11,8 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Definition of a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">geometry</em>
-</title>
+<title>Möbius geometry</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -67,7 +66,8 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{{\rm \bf C}}
 	    \newcommand{\R}{{\rm \bf R}}
-	    \newcommand{\Z}{{\rm \bf Z}}
+\newcommand{\Z}{{\rm \bf Z}}
+	    \newcommand{\Proj}{{\rm \bf P}}
 \newcommand{\Q}{{\rm \bf Q}}
 \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
 \newcommand{\MOD}{\mathbin{\text{MOD}}}
@@ -99,33 +99,31 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">0</span> <span class="title">Basics</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Stereographic projection</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
 <li><a href="section-3.html" data-scroll="section-3">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">1</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Basic properties</a></li>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
 <li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Homomorphisms</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Actions</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Group homomorphisms</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Group actions</a></li>
 <li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">2</span> <span class="title">Geometries</span></a><ul>
-<li><a href="section-10.html" data-scroll="section-10" class="active">Definition of a <em class="emphasis">geometry</em></a></li>
-<li><a href="section-11.html" data-scroll="section-11">Euclidean geometry</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The quaternions</a></li>
+<li><a href="section-10.html" data-scroll="section-10" class="active">Möbius geometry</a></li>
+<li><a href="section-11.html" data-scroll="section-11">Hyperbolic geometry</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Elliptic geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">3</span> <span class="title">More Algebra and Geometry</span></a><ul><li><a href="section-17.html" data-scroll="section-17">Further topics</a></li></ul>
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">3</span> <span class="title">More Algebra and Geometry</span></a><ul><li><a href="section-15.html" data-scroll="section-15">Further topics</a></li></ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
@@ -133,34 +131,197 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-10"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Definition of a <em class="emphasis">geometry</em></span>
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Möbius geometry</span>
 </h2>
-<section class="introduction" id="introduction-12"><p id="p-155"><em class="emphasis">Geometry</em> is the study of shape and properties of configurations of points. A central concept is that of <em class="emphasis">congruence</em>. In his 1872 work called the <em class="emphasis">Erlangen Programm</em>, Felix Klein unified various notions of geometry using transormation groups of congruences. Here is a version of Klein's definition. <article class="definition definition-like" id="definition-17"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Geometry.</span>
-</h6> A <dfn class="terminology">geometry model</dfn> is a pair \((G,X)\text{,}\) where \(G\) is a group acting on a set \(X\text{,}\) called the <dfn class="terminology">(model) space</dfn>. Subsets of \(X\) are called <dfn class="terminology">figures</dfn>. Figures \(F,F'\) are called <dfn class="terminology">congruent</dfn> if there is a transformation \(g\) in \(G\) such that \(g(F)=F'\text{.}\)</article> To introduce what this means, we begin with a comparison of properties of line segments and angles in a flat plane versus lines segments and angles on the surface of a sphere. For now, we appeal to the intuition and avoid technical definitions.</p>
-<p id="p-156">A (straight) "line segment" can be defined, both for the plane and the sphere, as a path of shortest possible length that connects two points. On the sphere, these length minmimizing paths are arcs of great circles (that is, circles made by intersecting the sphere with planes that pass through the center of the sphere). In addition to distance and straight lines, angles between straight line segments make sense both in the plane and on the sphere. Here a some notable differences between the plane and the sphere that illustrate the phrase "properties of configurations of points".</p>
-<ul class="disc">
-<li id="li-94">A (straight) "railroad track" is a pair of straight line segments that are a constant distance apart. It is possible to map out railroad tracks in the plane, but not on the sphere, where it is impossible to have a pair of straight line segments that are a constant distance apart.</li>
-<li id="li-95">In the plane, the sum of the three interior angles of any triangle is 180 degrees, or \(\pi\) radians. On the sphere, the sum of the interior angles of a triangle is <em class="emphasis">greater</em> than 180 degrees, and can be as great as 540 degrees.</li>
-</ul>
-<p data-braille="continuation">These differences in properties of parallel lines and angle sums in triangles are expressions of the differences in shape possessed by the flat plane and the sphere. In order to define "shape" and "geometry" more precisely, we blah blah blah In order to proceed from these observations do not point to an obvious definition of shape.</p></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title"></span>
+<p id="p-159">A <dfn class="terminology">Möbius transformation</dfn> (also called a <dfn class="terminology">linear fractional transformation</dfn>) of the of the extended complex plane \(\C^+\) is a function of the form</p>
+<div class="displaymath">
+\begin{equation}
+f(z)= \frac{az+b}{cz+d}\label{stdlinfractransf}\tag{2.1.1}
+\end{equation}
+</div>
+<p data-braille="continuation">where \(z\) is a complex variable, \(a,b,c,d\) are complex constants, and \(ad-bc\neq 0\text{.}\) To complete the definition, we make the assignments \(f(-d/c)=\infty\) and \(f(\infty)=a/c\) if \(c\neq 0\text{.}\) If \(c=0\text{,}\) we assign \(f(\infty)=\infty\text{.}\)</p>
+<article class="exercise exercise-like" id="mobiustranslimitexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustranslimitexer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranslimitexer"><article class="exercise exercise-like"><p id="p-160">Let \(f(x)=(ax+b)/(cx+d)\) be a function of a <em class="emphasis">real</em> variable \(x\) with real constants \(a,b,c,d\) with \(ad-bc\neq 0\) and \(c\neq 0\text{.}\)</p>
+<ol class="decimal">
+<li id="li-94">Show that \(\displaystyle \lim_{x\to
+-d/c}|f(x)|=\infty\text{.}\)</li>
+<li id="li-95">Show that \(\displaystyle \lim_{x\to \infty}f(x)=a/c\text{.}\)</li>
+</ol></article></div>
+<article class="exercise exercise-like" id="mobiustranscomposeexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustranscomposeexer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranscomposeexer"><article class="exercise exercise-like"><p id="p-161">Show that the composition of two Möbius transformations is a Möbius transformation. blah blah blah this needs at least a hint, maybe make it an exercise</p></article></div>
+<article class="exercise exercise-like" id="mobiustransinvertcriterionexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustransinvertcriterionexer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustransinvertcriterionexer"><article class="exercise exercise-like"><p id="p-162">Show that the condition \(ad-bc\neq 0\) is necessary and sufficient for invertibility. Find a formula for the inverse of \(z\to (az+b)/(cz+d)\text{.}\)</p></article></div>
+<p id="p-163"><article class="definition definition-like" id="mobiusgeomdef"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-164">The set of all Möbius transformations forms a group, called the <dfn class="terminology">Möbius group</dfn>, under the operation of function composition. <dfn class="terminology">Möbius geometry</dfn> is the model space \(\C^+\) with the group of Möbius transformations.</p></article></p>
+<article class="exercise exercise-like" id="mobiusgpaspgl2exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiusgpaspgl2exer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiusgpaspgl2exer"><article class="exercise exercise-like"><p id="p-165">Show that the map</p>
+<div class="displaymath">
+\begin{equation*}
+\left[
+\begin{array}{cc}a\amp b\\ c\amp d\end{array}\right]\to
+\left[z\to \frac{az+b}{cz+d}\right]
+\end{equation*}
+</div>
+<p data-braille="continuation">is a homomorphism of groups from \(GL(2,\C)\) to the Möbius group. Show that the kernel of the homomorphism is the set</p>
+<div class="displaymath">
+\begin{equation*}
+K=\left\{\left[
+\begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
+k\neq 0\right\}\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-166">The four basic types of transformations (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "basicplanartrans" missing]</code> in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "geomdefsect" missing]</code>) are special cases of Möbius transformations. The basic transformations can be viewed as building blocks for general Möbius transformations, as follows. <article class="proposition theorem-like" id="mobiusdecompbasic"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-167">Every Möbius transformation is a composition of homotheties, rotations, translations, and inversions.</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobiusdecompexer.html" title="Exercise 2.1.1.1: Decomposition of Möbius transformations into four basic types.">Exercise 2.1.1.1</a></article></div></p>
+<article class="exercise exercise-like" id="exercise-93"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-93"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-93"><article class="exercise exercise-like"><ol id="p-168" class="decimal">
+<li id="li-96">Identify the values of the coefficients \(a,b,c,d\) in a Möbius transformation \(z\to \frac{az+b}{cz+d}\) that is a homothety, rotation, translation, and inversion, respectively.</li>
+<li id="li-97">Write a Möbius transformation that does "rotation about the point \(2-i\)".</li>
+</ol></article></div>
+<article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
+</h6>
+<p id="p-169">Möbius transformations are conformal.</p></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof">Apply <a class="xref" data-knowl="./knowl/mobiusdecompbasic.html" title="Proposition 2.1.6">Proposition 2.1.6</a> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "basictransconformalexer" missing]</code>.</article></div>
+<p id="p-170">Next, a simple observation, in the form of the following Lemma, leads to a result called the Fundamental Theorem of Möbius Geometry.</p>
+<p id="p-171"><article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span>
+</h6>
+<p id="p-172">If a Möbius transformation has more than two fixed points, then it is the identity transformation.</p></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof">Hint: just solve \(z=\frac{az+b}{cz+d}\text{.}\) You will need to consider cases.</article></div></p>
+<p id="p-173"><article class="proposition theorem-like" id="proposition-10"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius Geometry.</span>
+</h6>
+<p id="p-174">A Möbius transformation is completely determined by any three input-output pairs. This means that for any triple of distinct input values \(z_1,z_2,z_3\) in \(\C^+\) and any triple of distinct output values \(w_1,w_2,w_3\) in \(\C^+\text{,}\) there is a unique Möbius transformation such that \(T(z_i)=w_i\) for \(i=1,2,3\text{.}\)</p></article><article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof">Outline: Suppose there are two such transformations, \(S\) and \(T\text{.}\) Show that \(S\circ
+T^{-1}\) fixes three points. Now apply the previous Lemma.</article></div></p>
+<p id="p-175">In what follows, we consider the special case of the output triple \(w_1=1\text{,}\) \(w_2=0\text{,}\) \(w_3=\infty\text{.}\) Given three distinct points \(z_1,z_2,z_3\) in \(\C^+\text{,}\) we write \((\cdot,z_1,z_2,z_3)\) to denote the unique Möbius transformation that satisfies \(z_1\to
+1\text{,}\) \(z_2\to 0\text{,}\) and \(z_3\to \infty\text{.}\) We write \((z_0,z_1,z_2,z_3)\) to denote the image of \(z_0\) under \((\cdot,z_1,z_2,z_3)\text{.}\) The expression \((z_0,z_1,z_2,z_3)\) is called the <dfn class="terminology">cross ratio</dfn> of the 4-tuple \(z_0,z_1,z_2,z_3\text{.}\) The next two propositions give important properties of cross ratio.</p>
+<article class="proposition theorem-like" id="crossratioinvariant"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Cross ratio is invariant.</span>
+</h6>
+<p id="p-176">Let \(z_1,z_2,z_3\) be distinct points in \(\C^+\text{,}\) let \(z_0\in \C^+\text{,}\) and let \(T\) be any Möbius transformation. Then we have</p>
+<div class="displaymath">
+\begin{equation*}
+(z_0,z_1,z_2,z_3)= (T(z_0),T(z_1),T(z_2),T(z_3)).
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof">The transformations \((\cdot,z_1,z_2,z_3)\) and \((\cdot,T(z_1),T(z_2),T(z_3))\circ T\) both send \(z_1\to 1\text{,}\) \(z_2\to 0\text{,}\) and \(z_3\to \infty\text{,}\) so they must be equal, by the Fundamental Theorem. Now apply both transformations to \(z_0\text{.}\)</article></div>
+<article class="proposition theorem-like" id="mobinvrealisclineprop"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
+</h6>
+<p id="p-177">Let \(z_1,z_2,z_3\) be distinct points in \(\C^+\text{,}\) let \(T=(\cdot,z_1,z_2,z_3)\text{,}\) and let \(C_T=T^{-1}\left(\R^+\right)\) be he inverse image of the extended real line \(\R^+=\R\cup \{\infty\}\) under \(T\text{.}\) Then \(C_T\) is a Euclidean circle or straight line. Furthermore, \(C_T\) is the unique Euclidean circle or straight line that contains the points \(z_1,z_2,z_3\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobinvrealisclineexer.html" title="Exercise 2.1.1.4: Proof of Proposition 2.1.12">Exercise 2.1.1.4</a></article></div>
+<article class="corollary theorem-like" id="crossratiorealcriterion"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-178">The cross ratio \((z_0,z_1,z_2,z_3)\) is real if and only if \(z_0,z_1,z_2,z_3\) lie on a Euclidean circle or straight line.</p></article><article class="corollary theorem-like" id="clinesinvariant"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.1.14</span><span class="period">.</span>
+</h6>
+<p id="p-179">Let \(C\) be a Euclidean circle or straight line in \(\C^+\) and let \(T\) be any Möbius transformation. Then \(T(C)\) is a Euclidean circle or straight line.</p></article><p id="p-180">A Euclidean circles or straight lines is called a <dfn class="terminology">cline</dfn> (pronounced "kline") or <dfn class="terminology">generalized circle</dfn>. The propositions and corollaries above show that the set of all clines is a single congruence class of figures in Möbius geometry.</p>
+<p id="p-181">We conclude this section on Möbius geometry with a discussion of the <dfn class="terminology">normal form</dfn> of a Möbius transformation. We begin with a Lemma.</p>
+<article class="lemma theorem-like" id="normalformlemma"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.1.15</span><span class="period">.</span>
+</h6>
+<p id="p-182">If a Möbius transformation has exactly two fixed points \(0\) and \(\infty\text{,}\) then it has the form \(z\to \alpha z\) for some nonzero \(\alpha\in
+\C\text{.}\) If a Möbius transformation has a single fixed point at \(\infty\text{,}\) then it has the form \(z\to z+\beta\) for some nonzero \(\beta\in \C\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/normalformlemmaexer.html" title="Exercise 2.1.1.5: Proof of Lemma 2.1.15">Exercise 2.1.1.5</a>.</article></div>
+<p id="p-183">Now suppose that a Möbius transformation \(T\) has two fixed points, \(p\) and \(q\text{.}\) Let \(S\) be given by \(S(z) = \frac{z-p}{z-q}\text{.}\) Let \(w=S(z)\) and let \(U=S\circ T\circ S^{-1}\) be the lifting (see <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 0.2.3.3–4: Liftings.">Exercise Group 0.2.3.3–4</a>) of \(T\) to the \(w\)-plane. It is easy to check that \(U\) has exactly two fixed points \(0\) and \(\infty\text{.}\) Applying the previous Lemma, we have \(U(w)=\alpha w\) for some nonzero \(\alpha\in
+\C\text{.}\) Applying both sides of \(S\circ T=U\circ S\) to \(z\text{,}\) we have the following <em class="emphasis">normal form</em> for \(T\text{.}\)</p>
+<div class="displaymath">
+\begin{equation}
+\frac{T(z)-p}{T(z)-q}= \alpha
+\frac{z-p}{z-q}\label{normalform2fixedpts}\tag{2.1.2}
+\end{equation}
+</div>
+<p data-braille="continuation">The transformation \(T\) is called <dfn class="terminology">elliptic</dfn>, <dfn class="terminology">hyperbolic</dfn>, or <dfn class="terminology">loxodromic</dfn> if \(U\) is a rotation, homothety, or neither, respectively.</p>
+<p id="p-184">Finally, suppose that a Möbius transformation \(T\) has exaclty one fixed point at \(p\text{.}\) Let \(S\) be given by \(S(z) = \frac{1}{z-p}\text{.}\) Again, let \(w=S(z)\) and let \(U=S\circ T\circ S^{-1}\text{.}\) This time, \(U\) has exactly one fixed point at \(\infty\text{.}\) Applying the Lemma, we have \(U(w)=w+\beta\) for some nonzero \(\beta\in
+\C\text{.}\) Applying both sides of \(S\circ T=U\circ S\) to \(z\text{,}\) we have the following <em class="emphasis">normal form</em> for \(T\text{.}\)</p>
+<div class="displaymath">
+\begin{equation}
+\frac{1}{T(z)-p}=
+\frac{1}{z-p}+\beta\label{normalformfixedpt}\tag{2.1.3}
+\end{equation}
+</div>
+<p data-braille="continuation">A Möbius transformations of this type is called <dfn class="terminology">parabolic</dfn>. Here is a summary of the classification terminology associated with normal forms.</p>
+<p id="p-185"><figure class="table table-like" id="normalformtable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.16<span class="period">.</span></span><span class="space"> </span>Summary of normal forms</figcaption><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">normal form type</td>
+<td class="c m b1 r1 l0 t1 lines">normal form</td>
+<td class="c m b1 r1 l0 t1 lines" data-braille="last-cell">form of the lifting</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><dfn class="terminology">elliptic</dfn></td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{T(z)-p}{T(z)-q}= \alpha \frac{z-p}{z-q}, |\alpha|=1\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">rotation</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><dfn class="terminology">hyperbolic</dfn></td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{T(z)-p}{T(z)-q}= \alpha \frac{z-p}{z-q}, \alpha&gt;0\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">homothety</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><dfn class="terminology">loxodromic</dfn></td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{T(z)-p}{T(z)-q}= \alpha \frac{z-p}{z-q},
+\alpha\neq 0\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><dfn class="terminology">parabolic</dfn></td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{1}{T(z)-p}= \frac{1}{z-p} + \beta,
+\beta\neq 0\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">translation</td>
+</tr>
+</table></figure></p>
+<section class="exercises" id="exercises-10"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.1.1</span> <span class="title">Exercises</span>
 </h3>
-<p id="p-157">We begin with a story that introduces the modern concept of a <em class="emphasis">geometry</em>. Imagine an ant civilization in which surveyor ants have the ability to measure distances with tiny ant measuring sticks and to measure angles with tiny ant protractors. Ants call a path between two points "straight" if that path has the shortest length of all possible paths that start at one of the points and end at the other. Now imagine that two of these surveyor ants go out in the world to make maps for possible train tracks (that is, two parallel straight lines at a fixed distance apart). Surveyor ant \(A\) ends up on a large flat surface, say, a perfectly smooth and flat table, and surveyor ant \(B\) ends up on a large spherical surface, also perfectly smooth.</p>
-<p id="p-158">The two surveyors come back with the following reports. (put in a figure here)</p>
-<ul class="disc">
-<li id="li-96">
-<em class="emphasis">Ant \(A\text{,}\) from table world</em>: I was able to map many possible railroad tracks. I checked many triangles, and I find that the three interior angles of all of those triangles sum to a total of one-half revolution.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 1 </sup></a>
+<article class="exercise exercise-like" id="mobiusdecompexer"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Decomposition of Möbius transformations into four basic types..</span>
+</h6>
+<ol id="p-186" class="lower-alpha">
+<li id="li-98">Use polar form \(a=|a|e^{i\arg a}\) to explain why a transformation of the form \(z\to az\text{,}\) with \(a\) any nonzero complex constant, is a composition of a homothety and a rotation.</li>
+<li id="li-99">Explicitly identify each homothety, rotation, translation, and inversion in <a class="xref" data-knowl="./knowl/mobiusdecompfirst.html" title="Equation 2.1.4">(2.1.4)</a> to <a class="xref" data-knowl="./knowl/mobiusdecomplast.html" title="Equation 2.1.7">(2.1.7)</a> in the derivation below for the case \(c\neq 0\text{.}\)<div class="displaymath">
+\begin{align}
+z \amp \to cz+d\label{mobiusdecompfirst}\tag{2.1.4}\\
+\amp\to \frac{1}{cz+d}\tag{2.1.5}\\
+\amp\to \frac{bc-ad}{cz+d} + a\tag{2.1.6}\\
+\amp\to
+\frac{1}{c}\left(\frac{bc-ad}{cz+d} + a\right)\label{mobiusdecomplast}\tag{2.1.7}\\
+\amp = \frac{az+b}{cz+d}\tag{2.1.8}
+\end{align}
+</div>
 </li>
-<li id="li-97">
-<em class="emphasis">Ant \(B\text{,}\) from sphere world</em>: I was not able to map out a single railroad track: for every pair of straight paths I checked, those paths either became further apart or closer together. I found a triangle whose three interior angles sum to a total of one and one-half revolutions.</li>
-</ul>
-<p data-braille="continuation">From their experiences with small flat surfaces (like flat rocks) and small round surfaces (like round fruit), the ants were able to hypothesize that the differences in their empirical evidence was due to differing <em class="emphasis">shape</em> of the worlds they were measuring.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">That's 180 degrees, or \(\pi\) radians. Ants are not troubled by awkward human rotation measure conventions.</div></div>
-<p id="p-159">The point of this parable is that the situation for the ants is not so different for humans. We also live in a big world with limited tools and experience.  Driven by practical concerns of engineering and navigation, the subject of geometry began with experiments and empirical data to achieve better understanding.  The term "geometry" comes from the Greek roots meaning "measurement of the earth".</p></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title"></span>
-</h3>
-<p id="p-160">Two geometries are equivalent if there are the right kind of equivariant maps between them. Example: Möbius geometry as projective geometry of the projective space of \(\C^2\text{,}\) introduce stereographic projection as a tool.</p></section></section></div></main>
+<li id="li-100">Write your own decomposition for the case \(c=0\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-95"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Explicit form for the transformation \((\cdot,z_1,z_2,z_3)\).</span>
+</h6>
+<ol id="p-187" class="lower-alpha">
+<li id="li-101">Show that, for the special case when \(z_1,z_2,z_3\) are complex (that is, none of the three points is \(\infty\)), we have the following.<div class="displaymath">
+\begin{align}
+(\cdot,z_1,z_2,z_3) \amp=
+\left[z\to \frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\right]\label{mob10inftyform}\tag{2.1.9}\\
+(z_0,z_1,z_2,z_3) \amp= \frac{z_0-z_2}{z_0-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{2.1.10}
+\end{align}
+</div>
+</li>
+<li id="li-102">Find explicit formulas for \((\cdot,z_1,z_2,z_3)\) when \(z_1=\infty\text{,}\) then do the same for \(z_2=\infty\) and \(z_3=\infty\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-188">blah blah multipart exercise to write explicit formulas for Möbius transformations with specified input-output triples, or given by other verbal descriptions (e.g. "rotation about a point blah")</p></article><article class="exercise exercise-like" id="mobinvrealisclineexer"><h6 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Proof of Proposition 2.1.12.</span>
+</h6>
+<p id="p-189">outline here</p></article><article class="exercise exercise-like" id="normalformlemmaexer"><h6 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Proof of Lemma 2.1.15.</span>
+</h6>
+<p id="p-190">blah blah outline here</p></article><article class="exercise exercise-like" id="exercise-99"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Symmetry with respect to a cline.</span>
+</h6>
+<p id="p-191">blah blah blah</p></article><article class="exercise exercise-like" id="exercise-100"><h6 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Steiner circles.</span>
+</h6>
+<p id="p-192">exercise group here on Steiner circles and visualizing normal forms</p></article></section></section></div></main>
 </div>
 </body>
 </html>
