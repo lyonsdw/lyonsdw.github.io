@@ -5,6 +5,9 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\input xy
+\xyoption{all}
 
 
 %this sets up gill (blackboard) letters for reals, complexes, ets.
@@ -48,6 +51,11 @@ Figure~\ref{#2}\\ #7
 \spacer}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% definitions for algeom text
+\newcommand{\Quat}{\mathbb{H}} % <!-- quaternions -->
+\newcommand{\Sgroup}{{\rm \bf S}}  % <!-- group of elliptic geometry transformations -->
+\DeclareMathOperator{\Rot}{Rot}
+
 %Aut, End, etc. commands
 \newcommand{\Aut}{\makebox{Aut}}
 \newcommand{\End}{\makebox{End}}
@@ -83,11 +91,44 @@ Figure~\ref{#2}\\ #7
 
 %\input{ngonsymm.pspdftex}
 %\input{stereoproj.pspdftex}
-\input{stereoproj2.pspdftex}
+%\input{stereoproj2.pspdftex}
+%\spacer\hspace*{-1.5in}\input{rotrefl.pspdftex}
 
 \medskip
 
-%\spacer\hspace*{-1.5in}\input{rotrefl.pspdftex}
+%%%% commutative diagram for "welldefinedness" proposition
+%% \hfill
+%% \xymatrix{
+%% X \ar[r]^{f} \ar[d]_{\pi} & Y \\
+%% X/\!\!\sim \ar@{-->}[ur]_{\overline{f}}
+%% }
+%% \hfill\spacer
+
+%%%% directed graph example
+%% \hfill
+%% \xymatrix{
+%%   & b & \\
+%% a \ar[ur] \ar[dr]  & & c \ar[ul]\ar[ll]\\  
+%%   & d \ar[ur] & 
+%% }
+%% \hfill\spacer
+
+%%%% commutative diagram for conjugate transformation definition
+%% \hfill
+%% \xymatrix{
+%% X \ar[r]^{f} \ar[d]_{\mu} & X \ar[d]^{\mu}\\
+%% Y \ar[r]^{g} & Y
+%% }
+%% \hfill\spacer
+
+%%%% commutative diagram for conjugate transformation definition
+\hfill
+\xymatrix{
+  SU(2) \ar[r]^{C_{iH}} \ar[d] & SU(2)\ar[d]\\
+  \Sgroup \ar[d] & U(\Quat) \ar[d]\\
+\Rot(S^2) \ar@{<->}[r] & \Rot(S^2_\Quat)
+}
+\hfill\spacer
 
 \end{document}
 
