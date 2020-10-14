@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:35-04:00       *-->
+<!--*       on 2020-10-14T19:29:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -79,9 +79,9 @@ MathJax.Hub.Config({
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
 \newcommand{\E}{{\rm \bf E}} 
-\newcommand{\H}{{\rm \bf H}} 
+\renewcommand{\H}{{\rm \bf H}} 
 \newcommand{\HU}{\H_{\U}} 
-\newcommand{\S}{{\rm \bf S}} 
+\renewcommand{\S}{{\rm \bf S}} 
 \newcommand{\D}{\mathbb{D}} 
 \newcommand{\closedD}{\hat{\D}} 
 \newcommand{\U}{\mathbb{U}} 
@@ -156,19 +156,19 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-13"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span>
 </h2>
-<section class="introduction" id="introduction-16"><p id="p-260">Before the discovery of hyperbolic geometry, it was believed that Euclidean geometry was the only possible geometry of the plane. In fact, hyperbolic geometry arose as a byproduct of efforts to prove that there was no alternative to Euclidean geometry. In this section, we present a Kleinian version of hyperbolic geometry using two models.</p>
-<article class="definition definition-like" id="definition-21"><h6 class="heading">
+<section class="introduction" id="introduction-15"><p id="p-300">Before the discovery of hyperbolic geometry, it was believed that Euclidean geometry was the only possible geometry of the plane. In fact, hyperbolic geometry arose as a byproduct of efforts to prove that there was no alternative to Euclidean geometry. In this section, we present a Kleinian version of hyperbolic geometry using two models.</p>
+<article class="definition definition-like" id="definition-23"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-261">Let \(\D=\{z\colon |z|\lt 1\}\) denote the open unit disk in the complex plane, and let \(\H\) denote the subgroup of the Möbius group \(\M\) of transformations that map \(\D\) onto itself. The pair \((\D,\H)\) is the <dfn class="terminology">(Poincaré) disk model</dfn> of hyperbolic geometry.</p></article><p id="p-262">Comments on terminology: Beware of the two different meanings of the adjective "hyperbolic". To say that a Möbius transformation is hyperbolic means that it is conjugate to a homothety (see <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a>). That is not the same thing as an element of the group of hyperbolic transformations. For this reason, we will avoid the ambiguous term "hyperbolic transformation".</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<p id="p-301">Let \(\D=\{z\colon |z|\lt 1\}\) denote the open unit disk in the complex plane, and let \(\H\) denote the subgroup of the Möbius group \(\M\) of transformations that map \(\D\) onto itself. The pair \((\D,\H)\) is the <dfn class="terminology">(Poincaré) disk model</dfn> of hyperbolic geometry.</p></article><p id="p-302"><em class="alert">Comments on terminology:</em> Beware of the two different meanings of the adjective "hyperbolic". To say that a Möbius transformation is hyperbolic means that it is conjugate to a homothety (see <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a>). That is not the same thing as an element of the group of hyperbolic transformations. For this reason, we will avoid the ambiguous term "hyperbolic transformation".</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span>
 </h3>
-<p id="p-263">We begin with an observation about Möbius transformations that map open disks onto themselves.  Let \(C=\{z\colon |z-a|=r\}\) be a circle with center \(a\) and radius \(r \gt
+<p id="p-303">We begin with an observation about Möbius transformations that map open disks onto themselves.  Let \(C=\{z\colon |z-a|=r\}\) be a circle with center \(a\) and radius \(r \gt
 0\text{.}\) Let \(D=\{z\colon |z-a|\lt r\}\) denote the open disk bounded by \(C\text{,}\) and let \(E=\{z\colon |z-a|\gt r\}\) denote the complement of the closed disk bounded by \(C\text{.}\) Now suppose that a Möbius transformation \(T\) maps \(D\) onto itself. Every point \(z\in D\) has a symmetric point \(z^{\ast C}\in E\text{,}\) and because \(T\) takes symmetric points to symmetric points, it must be that \(T\) maps \(E\) onto itself. By process of elimination, it must be that \(T\) maps \(C\) onto itself.  Thus we have proved the following Lemma as a special case.</p>
 <article class="lemma theorem-like" id="hyperbolictransfixunitcirc"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-264">If \(T\in \H\text{,}\) then \(T\) maps the unit circle onto itself. </p></article><p id="p-265">Given \(T\in \H\text{,}\) let \(z_0\in\D\) be the point that \(T\) maps to \(0\text{.}\) It must be that \(T\) maps the symmetric point \(\frac{1}{z^\ast}\) to \(\infty\text{,}\) so \(T\) has the form</p>
+<p id="p-304">If \(T\in \H\text{,}\) then \(T\) maps the unit circle onto itself. </p></article><p id="p-305">Given \(T\in \H\text{,}\) let \(z_0\in\D\) be the point that \(T\) maps to \(0\text{.}\) It must be that \(T\) maps the symmetric point \(\frac{1}{z^\ast}\) to \(\infty\text{,}\) so \(T\) has the form</p>
 <div class="displaymath">
 \begin{equation*}
 Tz = \alpha \frac{z-z_0}{z-\frac{1}{z_0^\ast}}=
@@ -179,7 +179,7 @@ Tz = \alpha \frac{z-z_0}{z-\frac{1}{z_0^\ast}}=
 <article class="proposition theorem-like" id="hyperbolictransformulaprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-266">A Möbius transformation \(T\) is in \(\H\) if an only if \(T\) can be written in the form</p>
+<p id="p-306">A Möbius transformation \(T\) is in \(\H\) if an only if \(T\) can be written in the form</p>
 <div class="displaymath">
 \begin{equation}
 Tz=e^{it}\frac{z-z_0}{1-z_0^\ast z}\label{diskhypgptrans0inftyform}\tag{3.3.1}
@@ -192,10 +192,10 @@ Tz=\frac{az+b}{b^\ast
 z+a^\ast}\label{diskhypgptranssu11form}\tag{3.3.2}
 \end{equation}
 </div>
-<p data-braille="continuation">for some \(a,b\in \C\) such that \(|a|^2-|b|^2=1\text{.}\)</p></article></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<p data-braille="continuation">for some \(a,b\in \C\) such that \(|a|^2-|b|^2=1\text{.}\)</p></article></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span>
 </h3>
-<p id="p-267">The clines of Möbius geometry are classified into several types in hyperbolic geometry, as summarized in <a class="xref" data-knowl="./knowl/hyperbolicclinesummary.html" title="Table 3.3.4: Clines in hyperbolic geometry">Table 3.3.4</a>.</p>
+<p id="p-307">The clines of Möbius geometry are classified into several types in hyperbolic geometry, as summarized in <a class="xref" data-knowl="./knowl/hyperbolicclinesummary.html" title="Table 3.3.4: Clines in hyperbolic geometry">Table 3.3.4</a>.</p>
 <figure class="table table-like" id="hyperbolicclinesummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.4<span class="period">.</span></span><span class="space"> </span>Clines in hyperbolic geometry</figcaption><table>
 <tr>
 <td class="c m b3 r1 l1 t1 lines">hyperbolic curve type</td>
@@ -217,28 +217,28 @@ z+a^\ast}\label{diskhypgptranssu11form}\tag{3.3.2}
 <td class="c m b1 r1 l1 t0 lines"><dfn class="terminology">hypercycle</dfn></td>
 <td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">a cline that intersects the unit circle at a non-right angle</td>
 </tr>
-</table></figure></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+</table></figure></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span>
 </h3>
-<p id="p-268">In this subsection, we follow the development of normal forms for general Möbius transformations given in <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a> to derive normal forms and graphical interpretations for transformations in the hyperbolic group. We begin with an observation about fixed points of a Möbius transformation that maps a cline to itself.</p>
+<p id="p-308">In this subsection, we follow the development of normal forms for general Möbius transformations given in <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a> to derive normal forms and graphical interpretations for transformations in the hyperbolic group. We begin with an observation about fixed points of a Möbius transformation that maps a cline to itself.</p>
 <article class="lemma theorem-like" id="lemma-4"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h6>Let \(T\in \M\) and let \(C\) be a cline. If \(Tz=z\text{,}\) then \(T(z^{\ast C})=z^{\ast C}\text{.}\)</article><article class="hiddenproof" id="proof-16"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof">Apply <a class="xref" data-knowl="./knowl/symmptsgotosymmpts.html" title="Item 3.2.6.6.g">Item 3.2.6.6.g</a> of <a class="xref" data-knowl="./knowl/symmetricpointexer.html" title="Exercise 3.2.6.6: Symmetry with respect to a cline">Exercise 3.2.6.6</a>.</article></div>
-<p id="p-269">Now let \(T\) be a non-identity element of \(\H\text{.}\) The fact that \(T\) maps the unit circle to itself implies that there are exactly three possible cases for fixed points of \(T\text{.}\)</p>
+<p id="p-309">Now let \(T\) be a non-identity element of \(\H\text{.}\) The fact that \(T\) maps the unit circle to itself implies that there are exactly three possible cases for fixed points of \(T\text{.}\)</p>
 <ol class="decimal">
-<li id="li-144">There is a pair of fixed points \(p,q\)  with \(|p|\lt 1\text{,}\) \(|q|\gt 1\text{,}\) and \(q=\frac{1}{p^\ast}\text{,}\) that is, \(p,q\) are a pair of symmetric points (with respect to the unit circle) that do not lie on the unit circle.</li>
-<li id="li-145">There is a pair of fixed points that lie on the unit circle.</li>
-<li id="li-146">There is a single fixed point that lies on the unit circle.</li>
+<li id="li-151">There is a pair of fixed points \(p,q\)  with \(|p|\lt 1\text{,}\) \(|q|\gt 1\text{,}\) and \(q=\frac{1}{p^\ast}\text{,}\) that is, \(p,q\) are a pair of symmetric points (with respect to the unit circle) that do not lie on the unit circle.</li>
+<li id="li-152">There is a pair of fixed points that lie on the unit circle.</li>
+<li id="li-153">There is a single fixed point that lies on the unit circle.</li>
 </ol>
-<article class="exercise exercise-like" id="exercise-128"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-128"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-131"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-131"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-128"><article class="exercise exercise-like">Give an argument to justify the three cases above.</article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-131"><article class="exercise exercise-like">Give an argument to justify the three cases above.</article></div>
 <figure class="figure figure-like" id="hyp_transf_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/hyperbolic_transformations.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.7<span class="period">.</span></span><span class="space"> </span>Three types of hyperbolic transformations</figcaption></figure><p id="p-270">For cases 1 and 2 above, the map \(T\) acting on the \(z\)-plane is conjugate to the map \(U=S\circ T\circ
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.7<span class="period">.</span></span><span class="space"> </span>Three types of hyperbolic transformations</figcaption></figure><p id="p-310">For cases 1 and 2 above, the map \(T\) acting on the \(z\)-plane is conjugate to the map \(U=S\circ T\circ
 S^{-1}\) acting on the \(w\)-plane by \(Uw=\lambda w\text{,}\) for some nonzero \(\lambda\in\C\text{,}\) via the map \(w=Sz=\frac{z-p}{z-q}\text{.}\) In case 1, the map \(S\) takes the unit circle to some polar circle, say \(C\text{,}\) so \(U\) must map \(C\) to itself. It follows that \(|\lambda|=1\text{,}\) so the Möbius normal form type for \(T\) is elliptic.  The action of \(T\) is a rotation about Steiner circles of the second kind (hyperbolic circles) with respect to the fixed points \(p,q\text{.}\) A transformation \(T\in \H\) of this type is called a <dfn class="terminology">hyperbolic rotation</dfn>.  See <a class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.7">Figure 3.3.7</a>.</p>
-<p id="p-271">For case 2, the map \(w=Sz=\frac{z-p}{z-q}\) takes the unit circle to a straight line, say \(L\text{,}\) through the origin, so \(U=S\circ T\circ S^{-1}\) must map \(L\) to itself. It follows that \(\lambda\) is real. Since \(S\) maps \(\D\) one of the two half planes on either side of \(L\text{,}\) the map \(U\) must take this half plane to itself. If follows that \(\lambda\) must be a <em class="emphasis">postive</em> real number, so the Möbius normal form type for \(T\) is hyperbolic.  The action of \(T\) is a flow about Steiner circles of the first kind (hypercycles and one hyperbolic straight line) with respect to the fixed points \(p,q\text{.}\) A transformation \(T\in \H\) of this type is called a <dfn class="terminology">hyperbolic translation</dfn>. See <a class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.7">Figure 3.3.7</a>.</p>
-<p id="p-272">For case 3, the conjugating map \(w=Sz=\frac{1}{z-p}\) takes \(T\) to   \(U=S\circ T\circ S^{-1}\) of the form \(Uw=w+\beta\) for some \(\beta\neq 0\text{.}\) The Möbius normal for type for \(T\) is parabolic. The action of \(T\) is a flow along degenerate Steiner circles (horocycles) tangent to the unit circle at \(p\text{.}\) A transformation \(T\in \H\) of this type is called a <dfn class="terminology">parallel displacement</dfn>. See <a class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.7">Figure 3.3.7</a>.</p>
-<p id="p-273">This completes the list of transformation types for the hyperbolic group. See <a class="xref" data-knowl="./knowl/hyperbolictransfsummary.html" title="Table 3.3.8: Normal forms for the hyperbolic group">Table 3.3.8</a> for a summary.</p>
+<p id="p-311">For case 2, the map \(w=Sz=\frac{z-p}{z-q}\) takes the unit circle to a straight line, say \(L\text{,}\) through the origin, so \(U=S\circ T\circ S^{-1}\) must map \(L\) to itself. It follows that \(\lambda\) is real. Since \(S\) maps \(\D\) one of the two half planes on either side of \(L\text{,}\) the map \(U\) must take this half plane to itself. If follows that \(\lambda\) must be a <em class="emphasis">postive</em> real number, so the Möbius normal form type for \(T\) is hyperbolic.  The action of \(T\) is a flow about Steiner circles of the first kind (hypercycles and one hyperbolic straight line) with respect to the fixed points \(p,q\text{.}\) A transformation \(T\in \H\) of this type is called a <dfn class="terminology">hyperbolic translation</dfn>. See <a class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.7">Figure 3.3.7</a>.</p>
+<p id="p-312">For case 3, the conjugating map \(w=Sz=\frac{1}{z-p}\) takes \(T\) to   \(U=S\circ T\circ S^{-1}\) of the form \(Uw=w+\beta\) for some \(\beta\neq 0\text{.}\) The Möbius normal for type for \(T\) is parabolic. The action of \(T\) is a flow along degenerate Steiner circles (horocycles) tangent to the unit circle at \(p\text{.}\) A transformation \(T\in \H\) of this type is called a <dfn class="terminology">parallel displacement</dfn>. See <a class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.7">Figure 3.3.7</a>.</p>
+<p id="p-313">This completes the list of transformation types for the hyperbolic group. See <a class="xref" data-knowl="./knowl/hyperbolictransfsummary.html" title="Table 3.3.8: Normal forms for the hyperbolic group">Table 3.3.8</a> for a summary.</p>
 <figure class="table table-like" id="hyperbolictransfsummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.8<span class="period">.</span></span><span class="space"> </span>Normal forms for the hyperbolic group</figcaption><table>
 <tr>
 <td class="c m b3 r1 l1 t1 lines">hyperbolic transformation type</td>
@@ -265,15 +265,15 @@ S^{-1}\) acting on the \(w\)-plane by \(Uw=\lambda w\text{,}\) for some nonzero 
 <td class="c m b1 r1 l0 t0 lines">loxodromic</td>
 <td class="c m b1 r1 l0 t0 lines" data-braille="last-cell"></td>
 </tr>
-</table></figure></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+</table></figure></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span>
 </h3>
 <figure class="figure figure-like" id="hyperbolic_distance_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_distance2.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.9<span class="period">.</span></span><span class="space"> </span>Constructing the hyperbolic straight line containing two points \(z_1,z_2\)</figcaption></figure><p id="p-274">Let \(z_1,z_2\) be distinct points in \(\D\text{.}\) Let \(T\in\H\) be the transformation that sends \(z_1\to 0\) and \(z_2\to  u\gt 0\text{.}\) Then \(T^{-1}(\R)\) is a hyperbolic straight line that contains \(z_1,z_2\text{.}\) Let \(q_1=T^{-1}(-1)\) and \(q_2=T^{-1}(1)\text{.}\) See <a class="xref" data-knowl="./knowl/hyperbolic_distance_fig.html" title="Figure 3.3.9">Figure 3.3.9</a>.</p>
-<article class="exercise exercise-like" id="exercise-129"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-129"><h6 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.9<span class="period">.</span></span><span class="space"> </span>Constructing the hyperbolic straight line containing two points \(z_1,z_2\)</figcaption></figure><p id="p-314">Let \(z_1,z_2\) be distinct points in \(\D\text{.}\) Let \(T\in\H\) be the transformation that sends \(z_1\to 0\) and \(z_2\to  u\gt 0\text{.}\) Then \(T^{-1}(\R)\) is a hyperbolic straight line that contains \(z_1,z_2\text{.}\) Let \(q_1=T^{-1}(-1)\) and \(q_2=T^{-1}(1)\text{.}\) See <a class="xref" data-knowl="./knowl/hyperbolic_distance_fig.html" title="Figure 3.3.9">Figure 3.3.9</a>.</p>
+<article class="exercise exercise-like" id="exercise-132"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-132"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-129"><article class="exercise exercise-like"><p id="p-275">Write a formula for the transformation \(T\) in the previous paragraph.</p></article></div>
-<p id="p-276">A simple calculation verifies that \((0,u,-1,1)=\frac{1+u}{1-u}\text{.}\) By invariance of the cross ratio, we have \((z_1,z_2,q_2,q_1)=\frac{1+u}{1-u}\text{.}\) For \(0\leq u\lt
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-132"><article class="exercise exercise-like"><p id="p-315">Write a formula for the transformation \(T\) in the previous paragraph.</p></article></div>
+<p id="p-316">A simple calculation verifies that \((0,u,-1,1)=\frac{1+u}{1-u}\text{.}\) By invariance of the cross ratio, we have \((z_1,z_2,q_2,q_1)=\frac{1+u}{1-u}\text{.}\) For \(0\leq u\lt
 1\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
@@ -281,10 +281,10 @@ S^{-1}\) acting on the \(w\)-plane by \(Uw=\lambda w\text{,}\) for some nonzero 
 \end{equation*}
 </div>
 <p data-braille="continuation">with equality on the left if and only if \(u=0\text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-130"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-130"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-133"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-133"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-130"><article class="exercise exercise-like"><p id="p-277">Do the simple calculation mentioned above.</p></article></div>
-<p id="p-278">Now, given any points \(z_1,z_2\) in \(\D\text{,}\) not necessarily distinct, define the quantity \(d(z_1,z_2)\) by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><p id="p-317">Do the simple calculation mentioned above.</p></article></div>
+<p id="p-318">Now, given any points \(z_1,z_2\) in \(\D\text{,}\) not necessarily distinct, define the quantity \(d(z_1,z_2)\) by</p>
 <div class="displaymath">
 \begin{equation}
 d(z_1,z_2)=
@@ -299,33 +299,33 @@ d(z_1,z_2) = \ln\left(\frac{1+u}{1-u}\right)\label{disthyperbolicfrac}\tag{3.3.4
 \end{equation}
 </div>
 <p data-braille="continuation">where \(u=\left|\frac{z_2-z_1}{1-z_1^\ast z_2}\right|\text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-131"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-131"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-134"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-134"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-131"><article class="exercise exercise-like"><p id="p-279">Justify <a class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-134"><article class="exercise exercise-like"><p id="p-319">Justify <a class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>.</p></article></div>
 <article class="proposition theorem-like" id="hyperbolic_metric_is_invariant"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
 </h6>
-<p id="p-280">The function \(d\) given by <a class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> is invariant under the action of the hyperbolic group. That is, we have</p>
+<p id="p-320">The function \(d\) given by <a class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> is invariant under the action of the hyperbolic group. That is, we have</p>
 <div class="displaymath">
 \begin{equation}
 d(z_1,z_2) = d(Tz_1,Tz_2)\tag{3.3.5}
 \end{equation}
 </div>
-<p data-braille="continuation">for all \(z_1,z_2\in \D\) and for all \(T\in\H\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-132"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-132"><h6 class="heading">
+<p data-braille="continuation">for all \(z_1,z_2\in \D\) and for all \(T\in\H\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-135"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-135"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.14</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-132"><article class="exercise exercise-like"><p id="p-281">Prove <a class="xref" data-knowl="./knowl/hyperbolic_metric_is_invariant.html" title="Proposition 3.3.13">Proposition 3.3.13</a>.</p></article></div>
-<p id="p-282">The following Proposition shows that \(d\) is a <em class="emphasis">metric</em> on hyperbolic space, and justifies referring to \(d(z_1,z_2)\) as the <dfn class="terminology">(hyperbolic) distance</dfn> between the points \(z_1,z_2.\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-135"><article class="exercise exercise-like"><p id="p-321">Prove <a class="xref" data-knowl="./knowl/hyperbolic_metric_is_invariant.html" title="Proposition 3.3.13">Proposition 3.3.13</a>.</p></article></div>
+<p id="p-322">The following Proposition shows that \(d\) is a <em class="emphasis">metric</em> on hyperbolic space, and justifies referring to \(d(z_1,z_2)\) as the <dfn class="terminology">(hyperbolic) distance</dfn> between the points \(z_1,z_2.\)</p>
 <article class="proposition theorem-like" id="hyperbolicmetricprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.15</span><span class="period">.</span>
 </h6>
-<p id="p-283">The function \(d\) given by <a class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> defines a metric on \(\D\text{.}\) That is, \(d\) satisfies</p>
+<p id="p-323">The function \(d\) given by <a class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> defines a metric on \(\D\text{.}\) That is, \(d\) satisfies</p>
 <ol class="decimal">
-<li id="li-147">\(d(z_1,z_2)\geq 0\text{,}\) and \(d(z_1,z_2)=0\) if and only if \(z_1=z_2\)</li>
-<li id="li-148">\(\displaystyle d(z_1,z_2)=d(z_2,z_1)\)</li>
-<li id="li-149">\(d(z_1,z_3)\leq d(z_1,z_2)+d(z_2,z_3)\) (the triangle inequality)</li>
+<li id="li-154">\(d(z_1,z_2)\geq 0\text{,}\) and \(d(z_1,z_2)=0\) if and only if \(z_1=z_2\)</li>
+<li id="li-155">\(\displaystyle d(z_1,z_2)=d(z_2,z_1)\)</li>
+<li id="li-156">\(d(z_1,z_3)\leq d(z_1,z_2)+d(z_2,z_3)\) (the triangle inequality)</li>
 </ol>
 <p data-braille="continuation">for all \(z_1,z_2,z_3\) in \(\D\text{.}\)</p></article><article class="hiddenproof" id="proof-17"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof">Property 1 follows immediately from <a class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>. Property 2 is a simple calculation: just write down the cross ratio expressions for \(d(z_1,z_2)\) and \(d(z_2,z_1)\) and compare. The proof of Property 3 is outlined in exercise <a class="xref" data-knowl="./knowl/hyperbolictriangleineqexer.html" title="Exercise 3.3.6.4: The triangle inequality for the hyperbolic metric">Exercise 3.3.6.4</a>.</article></div>
-<p id="p-284">Now let \(\gamma\) be a curve parameterized by \(t\to z(t)=x(t)
+<p id="p-324">Now let \(\gamma\) be a curve parameterized by \(t\to z(t)=x(t)
 + iy(t)\text{,}\) where \(x(t),y(t)\) are differentiable real-valued functions of the real parameter \(t\) on an interval \(a\lt t\lt b\text{.}\) Consider a short segment of \(\gamma\text{,}\) say, on an interval \(t_0\leq t\leq
 t_1\text{.}\) Let \(z_0=z(t_0)\) and \(z_1=z(t_1)\text{.}\) Then we have \(d(z(t_0),z(t_1))=\ln\left(\frac{1+u}{1-u}\right)\) where \(u=\left|\frac{z_1-z_0}{1-z_0^\ast(z_1)}\right|\text{.}\) The quantity \(|z_1-z_0|\) is well-approximated by \(|z'(t_0)|dt\text{,}\) where \(z'(t)=x'(t)+iy'(t)\) and \(dt=t_1-t_0\text{.}\) Thus, \(u\) is well-approximated by \(\frac{|z'(t_0)|}{1-|z(t_0)|^2}\;dt\text{.}\) The first order Taylor approximation for \(\ln((1+u)/(1-u))\) is \(2u\text{.}\) Putting this all together, we have the following.</p>
 <div class="displaymath">
@@ -333,13 +333,13 @@ t_1\text{.}\) Let \(z_0=z(t_0)\) and \(z_1=z(t_1)\text{.}\) Then we have \(d(z(t
 \text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1-|z(t)|^2}\;dt\label{hyperboliclengthformula}\tag{3.3.6}
 \end{equation}
 </div>
-<article class="exercise exercise-like" id="exercise-133"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-133"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-136"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-136"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.16</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><p id="p-285">Show that the first order Taylor approximation of \(\ln((1+u)/(1-u))\) is \(2u\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="exercise-134"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-134"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-136"><article class="exercise exercise-like"><p id="p-325">Show that the first order Taylor approximation of \(\ln((1+u)/(1-u))\) is \(2u\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="exercise-137"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-137"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.17</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-134"><article class="exercise exercise-like"><p id="p-286">Find the length of the hyperbolic circle parametrized by \(z(t) = \alpha e^{it}\) for \(0\leq t\leq 2\pi\text{,}\) where \(0\lt \alpha\lt 1\) .</p></article></div>
-<p id="p-287">We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region \(R\) in \(\D\text{,}\) following the development in (cite Henle, p110).  As a function of the two real variables \(r\) and \(\theta\text{,}\) the polar form expression \(z=re^{i\theta}\) gives rise to the two parameterized curves \(r\to z_1(r)=re^{i\theta}\) (where \(\theta\) is constant) and \(\theta \to z_2(\theta) = re^{i\theta}\) (where \(r\) is constant). Using \(z_1'(r) =
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-137"><article class="exercise exercise-like"><p id="p-326">Find the length of the hyperbolic circle parametrized by \(z(t) = \alpha e^{it}\) for \(0\leq t\leq 2\pi\text{,}\) where \(0\lt \alpha\lt 1\) .</p></article></div>
+<p id="p-327">We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region \(R\) in \(\D\text{,}\) following the development in (cite Henle, p110).  As a function of the two real variables \(r\) and \(\theta\text{,}\) the polar form expression \(z=re^{i\theta}\) gives rise to the two parameterized curves \(r\to z_1(r)=re^{i\theta}\) (where \(\theta\) is constant) and \(\theta \to z_2(\theta) = re^{i\theta}\) (where \(r\) is constant). Using \(z_1'(r) =
 e^{i\theta}\) and \(z_2'(\theta)=ire^{i\theta}\text{,}\) the arc length differential \(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\) for the two curves are the following.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -360,28 +360,28 @@ e^{i\theta}\) and \(z_2'(\theta)=ire^{i\theta}\text{,}\) the arc length differen
 dA = \iint_R \frac{4r\;dr\;d\theta}{(1-r^2)^2}.\label{hyperbolicareaintformula}\tag{3.3.7}
 \end{equation}
 </div>
-<article class="exercise exercise-like" id="exercise-135"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-135"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-138"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-138"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.18</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-135"><article class="exercise exercise-like"><p id="p-288">Find the area of the hyperbolic disk \(\{|z|\leq
-\alpha\}\text{,}\) for \(0\lt \alpha\lt 1\text{.}\)</p></article></div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-138"><article class="exercise exercise-like"><p id="p-328">Find the area of the hyperbolic disk \(\{|z|\leq
+\alpha\}\text{,}\) for \(0\lt \alpha\lt 1\text{.}\)</p></article></div></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span>
 </h3>
-<p id="p-289"><article class="definition definition-like" id="definition-22"><h6 class="heading">
+<p id="p-329"><article class="definition definition-like" id="definition-24"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.19</span><span class="period">.</span><span class="space"> </span><span class="title">The upper half-plane model of hyperbolic geometry.</span>
 </h6>
-<p id="p-290">Let \(\U=\{z\colon \im(z)\gt
+<p id="p-330">Let \(\U=\{z\colon \im(z)\gt
 0\}\) denote the upper half of complex plane above the real axis, and let \(\HU\) denote the subgroup of the Möbius group \(\M\) of transformations that map \(\U\) onto itself. The pair \((\U,\HU)\) is the <dfn class="terminology">upper half-plane model</dfn> of hyperbolic geometry.</p></article></p>
 <article class="proposition theorem-like" id="upperhalfplanetransfprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.20</span><span class="period">.</span>
 </h6>
-<p id="p-291">A Möbius transformation \(T\) is in \(\HU\) if and only if \(T\) can be written in the form</p>
+<p id="p-331">A Möbius transformation \(T\) is in \(\HU\) if and only if \(T\) can be written in the form</p>
 <div class="displaymath">
 \begin{equation}
 Tz=\frac{az+b}{cz+d}\label{halfplanehypgptrans}\tag{3.3.8}
 \end{equation}
 </div>
 <p data-braille="continuation">such that \(a,b,c,d\) are real and \(ad-bc\gt
-0\text{.}\)</p></article><p id="p-292">Hyperbolic straight lines in the upper half-plane model are clines that intersect the real line at right angles. The hyperbolic distance between two points \(z_1,z_2\) in the upper half-plane is</p>
+0\text{.}\)</p></article><p id="p-332">Hyperbolic straight lines in the upper half-plane model are clines that intersect the real line at right angles. The hyperbolic distance between two points \(z_1,z_2\) in the upper half-plane is</p>
 <div class="displaymath">
 \begin{equation}
 d(z_1,z_2)=\ln((z_1,z_2,q_2,q_1))\tag{3.3.9}
@@ -407,44 +407,44 @@ dA = \iint_R \frac{dx\;dy}{y^2}.\label{upperhalfplaneareaintformula}\tag{3.3.11}
 <article class="exercise exercise-like" id="hyperbolictransformulaexer"><h6 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Proof of Proposition 3.3.3.</span>
 </h6>
-<ol id="p-293" class="lower-alpha">
-<li id="li-150">Complete the proof of <a class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> using this outline: Let \(|z|=1\) and apply <a class="xref" data-knowl="./knowl/hyperbolictransfixunitcirc.html" title="Lemma 3.3.2">Lemma 3.3.2</a>. We have<div class="displaymath">
+<ol id="p-333" class="lower-alpha">
+<li id="li-157">Complete the proof of <a class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> using this outline: Let \(|z|=1\) and apply <a class="xref" data-knowl="./knowl/hyperbolictransfixunitcirc.html" title="Lemma 3.3.2">Lemma 3.3.2</a>. We have<div class="displaymath">
 \begin{equation*}
 1=|Tz|=|\alpha z_0^\ast|\left| \frac{z-z_0}{1-z_0^\ast
 z}\right|.
 \end{equation*}
 </div>Continue this derivation to show that \(|\alpha z_0^\ast|=1\text{.}\)</li>
-<li id="li-151">Prove <a class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> verifying the following. Starting with a transformation of the form <a class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a>, show that the substitution \(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
+<li id="li-158">Prove <a class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> verifying the following. Starting with a transformation of the form <a class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a>, show that the substitution \(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
 b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}\) leads to a transformation of the form <a class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a>. Conversely, starting with <a class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a>, setting \(t=2\arg a, z_0=-\frac{b}{a}\) leads to <a class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a>.</li>
 </ol></article><article class="exercise exercise-like" id="twopts2lineexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Two points determine a line.</span>
 </h6>
-<p id="p-294">Let \(p,q\) be distinct points in \(\D\text{.}\) Show that there is a unique hyperbolic straight line that contains \(p\) and \(q\text{.}\)</p>
+<p id="p-334">Let \(p,q\) be distinct points in \(\D\text{.}\) Show that there is a unique hyperbolic straight line that contains \(p\) and \(q\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like">Start by choosing a transformation that sends \(p\to 0\text{.}\)</div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-335">Start by choosing a transformation that sends \(p\to 0\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="dropperpexer"><h6 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Dropping a perpendicular from a point to a line.</span>
 </h6>
-<p id="p-295">Let \(L\) be a hyperbolic straight line and let \(p\in\D\) be a point not on \(L\text{.}\) Show that there is a unique hyperbolic straight line \(M\) that contains \(p\) and is orthogonal to \(L\text{.}\)</p>
+<p id="p-336">Let \(L\) be a hyperbolic straight line and let \(p\in\D\) be a point not on \(L\text{.}\) Show that there is a unique hyperbolic straight line \(M\) that contains \(p\) and is orthogonal to \(L\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like">Start by choosing a transformation that sends \(p\to 0\text{.}\)</div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-337">Start by choosing a transformation that sends \(p\to 0\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="hyperbolictriangleineqexer"><h6 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The triangle inequality for the hyperbolic metric.</span>
 </h6>
-<p id="p-296">Show that \(d(a,b)\leq d(a,c)+d(c,b)\) for all \(a,b,c\) in \(\D\) using the outline below.</p>
+<p id="p-338">Show that \(d(a,b)\leq d(a,c)+d(c,b)\) for all \(a,b,c\) in \(\D\) using the outline below.</p>
 <ol class="lower-alpha">
-<li id="li-152">Show that the triangle inequality holds with strict equality when \(a,b,c\) are collinear and \(c\) is between \(a\) and \(b\text{.}\) <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like">This is a straightforward computation using the cross ratio expressions for the values of \(d\text{.}\)</div></div>
+<li id="li-159">Show that the triangle inequality holds with strict equality when \(a,b,c\) are collinear and \(c\) is between \(a\) and \(b\text{.}\) <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-339">This is a straightforward computation using the cross ratio expressions for the values of \(d\text{.}\)</p></div></div>
 </li>
-<li id="li-153">Show that the triangle inequality holds with strict inequality when \(a,b,c\) are collinear and \(c\) is not between \(a\) and \(b\text{.}\)</li>
-<li id="li-154">Let \(p\in \D\text{.}\) Let \(L\) be the line that contains \(p\) and intersects the real line orthogonally at a point \(p'\) (this is possible by <a class="xref" data-knowl="./knowl/dropperpexer.html" title="Exercise 3.3.6.3: Dropping a perpendicular from a point to a line">Exercise 3.3.6.3</a>). Show that \(d(0,p)\geq d(0,p')\text{,}\) with equality if and only if \(p\) is real. <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like">A rotation by \(-\arg p\text{,}\) if \(\re(p)\geq
-0\text{,}\) or by \(\pi-\arg p\text{,}\) if \(\re(p)\lt 0\text{,}\) transforms \(p\) to a real point, say \(p''\text{,}\) and preserves distance, that is, \(d(0,p)=d(0,p'')\text{.}\) Show that \(p'\) is between \(0\) and \(p''\text{.}\)</div></div>
+<li id="li-160">Show that the triangle inequality holds with strict inequality when \(a,b,c\) are collinear and \(c\) is not between \(a\) and \(b\text{.}\)</li>
+<li id="li-161">Let \(p\in \D\text{.}\) Let \(L\) be the line that contains \(p\) and intersects the real line orthogonally at a point \(p'\) (this is possible by <a class="xref" data-knowl="./knowl/dropperpexer.html" title="Exercise 3.3.6.3: Dropping a perpendicular from a point to a line">Exercise 3.3.6.3</a>). Show that \(d(0,p)\geq d(0,p')\text{,}\) with equality if and only if \(p\) is real. <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-340">A rotation by \(-\arg p\text{,}\) if \(\re(p)\geq
+0\text{,}\) or by \(\pi-\arg p\text{,}\) if \(\re(p)\lt 0\text{,}\) transforms \(p\) to a real point, say \(p''\text{,}\) and preserves distance, that is, \(d(0,p)=d(0,p'')\text{.}\) Show that \(p'\) is between \(0\) and \(p''\text{.}\)</p></div></div>
 </li>
-<li id="li-155">Given arbitrary \(a,b,c\text{,}\) apply a transformation \(T\) to send \(a\to 0\) and \(b\) to a nonnegative real point. Drop a perpendicular from \(Tc\) to the real line, say, to \(c'\text{.}\) Apply results from the previous steps of this outline.</li>
-</ol></article><article class="exercise exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-297">Prove <a class="xref" data-knowl="./knowl/upperhalfplanetransfprop.html" title="Proposition 3.3.20">Proposition 3.3.20</a>.</p></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading">
+<li id="li-162">Given arbitrary \(a,b,c\text{,}\) apply a transformation \(T\) to send \(a\to 0\) and \(b\) to a nonnegative real point. Drop a perpendicular from \(Tc\) to the real line, say, to \(c'\text{.}\) Apply results from the previous steps of this outline.</li>
+</ol></article><article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-341">Prove <a class="xref" data-knowl="./knowl/upperhalfplanetransfprop.html" title="Proposition 3.3.20">Proposition 3.3.20</a>.</p></article><article class="exercise exercise-like" id="exercise-144"><h6 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Length integral in the upper half-plane model.</span>
 </h6>
-<p id="p-298">This exercise is to establish <a class="xref" data-knowl="./knowl/halfplanelengthformula.html" title="Equation 3.3.10">(3.3.10)</a>. The strategy is to obtain the differential expression</p>
+<p id="p-342">This exercise is to establish <a class="xref" data-knowl="./knowl/halfplanelengthformula.html" title="Equation 3.3.10">(3.3.10)</a>. The strategy is to obtain the differential expression</p>
 <div class="displaymath">
 \begin{equation*}
 d(z(t_0),z(t_1))\approx \frac{|z'(t)|dt}{y(t)}
@@ -452,57 +452,57 @@ d(z(t_0),z(t_1))\approx \frac{|z'(t)|dt}{y(t)}
 </div>
 <p data-braille="continuation">for a curve \(z(t)=x(t)+iy(t)\) with \(z(t_0)=z_0\text{,}\) \(z(t_1)=z_1\text{,}\) and \(dt=t_1=t_0\) using the following sequence of steps.</p>
 <ul class="disc">
-<li id="li-156">First, map \(z_0,z_1\) in \(\U\) to \(z_0',z_1'\) in \(\D\) using a transformation \(\mu\) that preserves distance.</li>
-<li id="li-157">Using the analysis we used to get the disk model length integral formula <a class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, we have<div class="displaymath">
+<li id="li-163">First, map \(z_0,z_1\) in \(\U\) to \(z_0',z_1'\) in \(\D\) using a transformation \(\mu\) that preserves distance.</li>
+<li id="li-164">Using the analysis we used to get the disk model length integral formula <a class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, we have<div class="displaymath">
 \begin{equation*}
 d(z_0',z_1')=\ln\left(\frac{1+u}{1-u}\right)
 \end{equation*}
 </div>where \(u=\left|\frac{z_1'-z_0'}{1-(z_1')^\ast
 z_0'}\right|\text{.}\)</li>
-<li id="li-158">Translate the above expression in terms of \(z_0,z_1\text{,}\) and show that the differential approximation is \(\frac{|z'(t)|dt}{y(t)}\text{.}\)</li>
+<li id="li-165">Translate the above expression in terms of \(z_0,z_1\text{,}\) and show that the differential approximation is \(\frac{|z'(t)|dt}{y(t)}\text{.}\)</li>
 </ul>
 <p data-braille="continuation">Complete the exercise parts below to carry out the strategy just outlined.</p>
 <ol class="lower-alpha">
-<li id="li-159">Show that \(\mu z=\frac{z-i}{z+i}\) takes \(\U\) to \(\D\text{.}\)</li>
-<li id="li-160">Let \(z_0'=\mu z_0\) and \(z_1'=\mu z_1\text{.}\) Show that<div class="displaymath">
+<li id="li-166">Show that \(\mu z=\frac{z-i}{z+i}\) takes \(\U\) to \(\D\text{.}\)</li>
+<li id="li-167">Let \(z_0'=\mu z_0\) and \(z_1'=\mu z_1\text{.}\) Show that<div class="displaymath">
 \begin{equation*}
 \frac{z_1'-z_0'}{1-(z_0')^\ast
 z_1}=\frac{z_1-z_0}{z_0^\ast - z_1}.
 \end{equation*}
 </div>
 </li>
-<li id="li-161">Let \(u=\left|\frac{z_1-z_0}{z_0^\ast -
+<li id="li-168">Let \(u=\left|\frac{z_1-z_0}{z_0^\ast -
 z_1}\right|\text{.}\) Show that<div class="displaymath">
 \begin{equation*}
 \ln\left(\frac{1+u}{1-u}\right)\approx \frac{|z(t)|dt}{y(t)}.
 \end{equation*}
 </div>
 </li>
-</ol></article><article class="exercise exercise-like" id="exercise-142"><h6 class="heading">
+</ol></article><article class="exercise exercise-like" id="exercise-145"><h6 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Area integral in the upper half-plane model.</span>
 </h6>
-<p id="p-299">Adapt the argument in the paragraph preceding the disk model area integral <a class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.7">(3.3.7)</a> to establish the upper half-plane area integral  <a class="xref" data-knowl="./knowl/upperhalfplaneareaintformula.html" title="Equation 3.3.11">(3.3.11)</a>.</p></article><figure class="figure figure-like" id="hyperbolic_triangle_area_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_triangle_area.png" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-343">Adapt the argument in the paragraph preceding the disk model area integral <a class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.7">(3.3.7)</a> to establish the upper half-plane area integral  <a class="xref" data-knowl="./knowl/upperhalfplaneareaintformula.html" title="Equation 3.3.11">(3.3.11)</a>.</p></article><figure class="figure figure-like" id="hyperbolic_triangle_area_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_triangle_area.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.21<span class="period">.</span></span><span class="space"> </span>Hyperbolic triangle \(\triangle ABC\)</figcaption></figure><div class="exercisegroup" id="exercisegroup-11">
 <h6 class="heading"><span class="title">Area of a hyperbolic triangle.</span></h6>
-<div class="introduction" id="introduction-17">The following sequence of exercises establishes the area formula for hyperbolic triangles.</div>
+<div class="introduction" id="introduction-16">The following sequence of exercises establishes the area formula for hyperbolic triangles.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="doubasymptriareaexer"><h6 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Area of a doubly-asymptotic triangle.</span>
 </h6>
-<p id="p-300">A triangle with one vertex in \(\D\) and two vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called a <dfn class="terminology">doubly-asymptotic</dfn> hyperbolic triangle. Examples are \(\triangle AA_1A_2\text{,}\) \(\triangle
+<p id="p-344">A triangle with one vertex in \(\D\) and two vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called a <dfn class="terminology">doubly-asymptotic</dfn> hyperbolic triangle. Examples are \(\triangle AA_1A_2\text{,}\) \(\triangle
 BB_1B_2\text{,}\) and \(\triangle CC_1C_2\) in <a class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.21">Figure 3.3.21</a>. </p>
 <ol class="lower-alpha">
-<li id="li-162">Explain why any doubly-asymptotic triangle in the upper half-plane is congruent to the one shown in <a class="xref" data-knowl="./knowl/doubleasymp_tri_upperhalfplane_fig.html" title="Figure 3.3.22">Figure 3.3.22</a>for some angle \(\alpha\text{.}\)</li>
-<li id="li-163">Now use the integration formula for the upper half-plane model to show that the area of the doubly-asymptotic triangle with angle \(\alpha\) (at the vertex interior to \(\U\)) is \(\pi-\alpha\text{.}\)</li>
+<li id="li-169">Explain why any doubly-asymptotic triangle in the upper half-plane is congruent to the one shown in <a class="xref" data-knowl="./knowl/doubleasymp_tri_upperhalfplane_fig.html" title="Figure 3.3.22">Figure 3.3.22</a>for some angle \(\alpha\text{.}\)</li>
+<li id="li-170">Now use the integration formula for the upper half-plane model to show that the area of the doubly-asymptotic triangle with angle \(\alpha\) (at the vertex interior to \(\U\)) is \(\pi-\alpha\text{.}\)</li>
 </ol>
 <p data-braille="continuation"><figure class="figure figure-like" id="doubleasymp_tri_upperhalfplane_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/2asymp_tri_upperhalfplane.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.22<span class="period">.</span></span><span class="space"> </span>Doubly-asymptotic hyperbolic triangle in the upper half-plane with vertices \(1,p,\infty\) with \(p\) on the upper half of the unit circle</figcaption></figure></p></article><article class="exercise exercise-like" id="asympngonareaexer"><h6 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an asymptotic \(n\)-gon.</span>
 </h6>
-<p id="p-301">A polygon with \(n\geq 3\) vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called an <dfn class="terminology">asymptotic</dfn> \(n\)-gon. An example of an asymptotic hexagon is the figure with vertices \(A_1,A_2,B_1,B_2,C_2,C_2\) connected by the colored hyperbolic lines in <a class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.21">Figure 3.3.21</a>. Show that the area of an asymptotic \(n\)-gon is \(\pi(n-2)\text{.}\) <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like">Partition the asymptotic \(n\)-gon into \(n\) doubly-asymptotic triangles.</div></div></p></article><article class="exercise exercise-like" id="hyperbolic_triangle_area_exer"><h6 class="heading">
+<p id="p-345">A polygon with \(n\geq 3\) vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called an <dfn class="terminology">asymptotic</dfn> \(n\)-gon. An example of an asymptotic hexagon is the figure with vertices \(A_1,A_2,B_1,B_2,C_2,C_2\) connected by the colored hyperbolic lines in <a class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.21">Figure 3.3.21</a>. Show that the area of an asymptotic \(n\)-gon is \(\pi(n-2)\text{.}\) <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-346">Partition the asymptotic \(n\)-gon into \(n\) doubly-asymptotic triangles.</p></div></div></p></article><article class="exercise exercise-like" id="hyperbolic_triangle_area_exer"><h6 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Area of a hyperbolic triangle.</span>
 </h6>
-<p id="p-302">Let \(\triangle
+<p id="p-347">Let \(\triangle
 ABC\) be a hyperbolic triangle. Extend the three sides \(AB\text{,}\) \(BC\text{,}\) \(AC\) to six points on the unit circle. See <a class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.21">Figure 3.3.21</a>. Use a partition of the asymptotic hexagon whose vertices are these six points to show that the area of \(\triangle ABC\) is</p>
 <div class="displaymath">
 \begin{equation}
@@ -511,8 +511,8 @@ ABC)= \pi-(\angle A +\angle B + \angle C).\label{hyperbolictrianglearea}\tag{3.3
 \end{equation}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like">Partition the asymptotic hexagon with vertices \(A_1,A_2,B_1,B_2,C_1,C_2\text{.}\) Start with the six overlapping doubly-asymptotic triangles whose bases are colored arcs and whose vertex in \(\D\) is whichever of \(A,B,C\) matches the color of the base. For example, the two red doubly-asymptotic triangles are \(\triangle AA_1A_2\) and \(\triangle
-AC_1B_2\text{.}\)</div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-348">Partition the asymptotic hexagon with vertices \(A_1,A_2,B_1,B_2,C_1,C_2\text{.}\) Start with the six overlapping doubly-asymptotic triangles whose bases are colored arcs and whose vertex in \(\D\) is whichever of \(A,B,C\) matches the color of the base. For example, the two red doubly-asymptotic triangles are \(\triangle AA_1A_2\) and \(\triangle
+AC_1B_2\text{.}\)</p></div></div>
 </div></article>
 </div>
 </div></section></section></div></main>

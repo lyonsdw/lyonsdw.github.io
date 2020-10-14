@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:42-04:00       *-->
+<!--*       on 2020-10-14T19:29:54-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geomentry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
+<p>Recall that the map \(M\colon \Quat \to
+{\mathcal M}_{\Quat}\) sends \(r=a+bi+cj+dk\) to the matrix</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
+\left[\begin{array}{cc} a+bi \amp c+di\\ -c+di \amp
+a-bi\end{array}\right]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">in \(\Proj_1\) to the points \(1,0,\infty\) in \(\extF\text{,}\) respectively. Let \((\cdot,P_1,P_2,P_3)\) denote the unique projective transformation \([T]\) that takes \(P_1,P_2,P_3\) to \([e_0],[e_2],[e_1]\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cross ratio</dfn> \((P_0,P_1,P_2,P_3)\) is defined to be \(\mu([T](P_0))\text{.}\)</p>
-<ol class="lower-alpha">
-<li>Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{.}\)</li>
-<li>Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p data-braille="continuation">The image of \(U(\Quat)\) under \(M\) is the matrix group \(SU(2)\text{,}\) called the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">special unitary</em> group.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+SU(2)= \left\{\left[\begin{array}{cc} a \amp b\\ -b^\ast \amp
+a^\ast\end{array}\right]\colon a,b\in \C, |a|^2+|b|^2=1\right\}\tag{3.4.1}
+\end{equation}
+</div>
+<p data-braille="continuation">Restricting the domain of \(M\) to \(U(\Quat)\) and restricting the codomain of \(M\) to \(M(U(\Quat))=SU(2)\) is an isomorphism of groups</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
+U(\Quat)\approx SU(2).
 \end{equation*}
-</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) <a class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 3.5.5.4.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a>
-</li>
-</ol>
-<span class="incontext"><a href="section-15.html#p-354">in-context</a></span>
+</div>
+<span class="incontext"><a href="elliptic_geometry_section.html#p-354">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:40-04:00       *-->
+<!--*       on 2020-10-14T19:29:52-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,39 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(z_1,z_2,z_3\) be distinct points in \(\extC\text{,}\) let \(z_0\in \extC\text{,}\) and let \(T\) be any Möbius transformation. Then we have</p>
+<p>A sequence of groups and homomorphisms</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).
+\cdots \underset{f_{i-2}}{\longrightarrow} G_{i-1}
+\underset{f_{i-1}}{\longrightarrow} G_{i}
+\underset{f_{i}}{\longrightarrow} G_{i+1}
+\underset{f_{i+1}}{\longrightarrow}\cdots
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-12.html#p-238">in-context</a></span>
+<p data-braille="continuation">is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">exact</dfn> if \(\ker(f_{i})=\im(f_{i-1})\) for all \(i\text{.}\) A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">short exact sequence</dfn> of groups and homomorphisms is an exact sequence of the form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1\to K\to G\to H\to 1
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(1\) denotes the trivial group. A short exact sequence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+1{\to} K \underset{i}{\longrightarrow} G \underset{\pi}{\longrightarrow} H\to 1\tag{2.6.1}
+\end{equation}
+</div>
+<p data-braille="continuation">is said to \(split\) if there is a group homomorphism \(s\colon H\to G\) such that \(\pi\circ
+s\) is the identity homomorphism on \(H\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Show that for a short exact sequence of the form <a class="xref" data-knowl="./knowl/SES.html" title="Equation 2.6.1">(2.6.1)</a>, that the homomorphism \(i\) is one-to-one, the homomorphism \(\pi\) is onto, and \(G/K\approx H\text{.}\)</li>
+<li>Suppose that <a class="xref" data-knowl="./knowl/SES.html" title="Equation 2.6.1">(2.6.1)</a> splits, with splitting \(s\colon H\to G\text{.}\) Show that \(\phi\colon H\to \Aut(K)\) given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\phi(h)(k) =
+i^{-1}\left(f(h)i(k)f(h)^{-1}\right)
+\end{equation*}
+</div>is defined<a class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 2.6.2"><sup> 2 </sup></a> and is a homomorphism.</li>
+<li>Show that the short exact sequence <a class="xref" data-knowl="./knowl/SES.html" title="Equation 2.6.1">(2.6.1)</a> splits, with splitting \(s\text{,}\) if and only if \(G\approx K\times_{\phi} H\text{,}\) where \(\phi\) is described in the previous part above.</li>
+</ol>
+<span class="incontext"><a href="groups_extra_exer_section.html#p-238">in-context</a></span>
 </body>
 </html>

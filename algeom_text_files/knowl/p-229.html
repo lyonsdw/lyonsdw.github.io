@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:40-04:00       *-->
+<!--*       on 2020-10-14T19:29:52-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Every Möbius transformation is a composition of homotheties, rotations, translations, and inversions.</p>
-<span class="incontext"><a href="section-12.html#p-229">in-context</a></span>
+<p>Let \(V\) be a vector space over a field \(\F\) (in this course, the base field \(\F\) is either the real numbers \(\R\) or the complex numbers \(\C\)), and let \(V^\ast := V\setminus\{0\}\) denote the set of nonzero vectors in \(V\text{.}\) The group \(\F^\ast\) of nonzero elements in \(\F\) acts on \(V^\ast\) by scalar multiplication. The set of orbits</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V^{\ast}/\F^\ast
+\end{equation*}
+</div>
+<p data-braille="continuation">is called the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">projectivization</em> of \(V\text{,}\) or simply <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective space</dfn>, and is denoted \(\Proj(V).\)</p>
+<ol class="lower-alpha">
+<li>Let \(\sim_{\text{proj}}\) denote the equivalence relation that defines the orbits \(V^{\ast}/\F^\ast\) of the group action \(\F^\ast \to
+\Perm(V^{\ast})\) given by \(\alpha\cdot v=\alpha v\text{.}\) Verify that \(\sim_{\text{proj}}\) is given by \(x\sim_{\text{proj}} y\) if and only if \(x=\alpha y\) for some \(\alpha\in\F^\ast\text{.}\)</li>
+<li>Verify that the group of \(GL(V)\) (the group of invertible linear transformations of \(V\)) acts on \(\Proj(V)\) by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+g\cdot [{v}] = [g({v})]\tag{2.5.1}
+\end{equation}
+</div>for \(g\in GL(V)\) and \({v}\in V\setminus \{0\}\text{.}\)</li>
+<li>Show that the kernel of the map \(GL(V)\to
+\Perm(\Proj(V))\) given by  <a class="xref" data-knowl="./knowl/glnprojaction.html" title="Equation 2.5.1">(2.5.1)</a> is the subgroup \(K=\{\alpha\Id\colon \alpha\in \F^\ast\}\text{.}\)</li>
+<li>Conclude that the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective linear group</dfn> \(PGL(V):=GL(V)/K\) acts on \(\Proj(V)\text{.}\)</li>
+<li>Show that \(\F^\ast\) acts on \(GL(V)\) by \(\alpha\cdot T=\alpha T\text{,}\) and that \(PGL(V)\approx GL(V)/\F^\ast\text{.}\)</li>
+<li>Show that the map \(\Proj(\R^2)\to S^1\) given by \([(x,y)]\to \frac{(x+iy)^2}{x^2+y^2}\) is well-defined and is a bijection.</li>
+<li>Show that the map \(\Proj(\C^2)\to S^2\) given by \([(\alpha,\beta)]\to s^{-1}(\alpha/\beta)\) if \(\beta\neq 0\) and given by \([(\alpha,\beta)]\to (0,0,1)\) if \(\beta=0\) is  well-defined and is a bijection.</li>
+</ol>
+<span class="incontext"><a href="section-9.html#p-229">in-context</a></span>
 </body>
 </html>

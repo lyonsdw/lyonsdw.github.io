@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:41-04:00       *-->
+<!--*       on 2020-10-14T19:29:54-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In order to obtain a formula for computing \(d(p,q)\text{,}\) we follow the same procedure for hyperbolic distance. First, we find the distance \(d(0,u)\text{,}\) where \(0\leq u\leq
-1\text{.}\) Let \(S=(0,0,-1)=s^{-1}(0)\) and let \(U=s^{-1}(u)\text{.}\) Let \(0=(0,0,0)\text{,}\) let \(N=(0,0,1)\text{,}\) let \(\alpha =
-\angle SNU\) and let \(\theta = \angle SOU\) (see <a class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that \(\alpha = \theta/2\text{,}\) so that we have</p>
+<p>We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region \(R\) in \(\D\text{,}\) following the development in (cite Henle, p110).  As a function of the two real variables \(r\) and \(\theta\text{,}\) the polar form expression \(z=re^{i\theta}\) gives rise to the two parameterized curves \(r\to z_1(r)=re^{i\theta}\) (where \(\theta\) is constant) and \(\theta \to z_2(\theta) = re^{i\theta}\) (where \(r\) is constant). Using \(z_1'(r) =
+e^{i\theta}\) and \(z_2'(\theta)=ire^{i\theta}\text{,}\) the arc length differential \(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\) for the two curves are the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{2|e^{i\theta}|\;dr}{1-r^2}=\frac{2\;dr}{1-r^2}
+\;(\text{for curve } z_1)
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{2|ire^{i\theta}|\;dr}{1-r^2}=\frac{2r\;dr}{1-r^2}
+\;(\text{for curve } z_2)
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus we have \(dA=\frac{4r\;dr\;d\theta}{(1-r^2)^2}\text{,}\) so that the area of a region \(R\) is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-d(0,u)=d(S,U)=\theta = 2\alpha=2\arctan u. \tag{3.4.9}
+\text{Area}(R)=\iint_R
+dA = \iint_R \frac{4r\;dr\;d\theta}{(1-r^2)^2}.\tag{3.3.7}
 \end{equation}
 </div>
-<span class="incontext"><a href="elliptic_geometry_section.html#p-327">in-context</a></span>
+<span class="incontext"><a href="section-13.html#p-327">in-context</a></span>
 </body>
 </html>

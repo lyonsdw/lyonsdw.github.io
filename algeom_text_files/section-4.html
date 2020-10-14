@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T10:19:33-04:00       *-->
+<!--*       on 2020-10-14T19:29:45-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -79,9 +79,9 @@ MathJax.Hub.Config({
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
 \newcommand{\E}{{\rm \bf E}} 
-\newcommand{\H}{{\rm \bf H}} 
+\renewcommand{\H}{{\rm \bf H}} 
 \newcommand{\HU}{\H_{\U}} 
-\newcommand{\S}{{\rm \bf S}} 
+\renewcommand{\S}{{\rm \bf S}} 
 \newcommand{\D}{\mathbb{D}} 
 \newcommand{\closedD}{\hat{\D}} 
 \newcommand{\U}{\mathbb{U}} 
@@ -159,7 +159,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Definitions</span>
 </h3>
-<p id="p-76">A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
+<p id="p-93">A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
 <div class="displaymath">
 \begin{equation}
 [x] = \{y\in X\colon x\sim y\},\label{equivalenceclass}\tag{1.4.1}
@@ -171,13 +171,13 @@ MathJax.Hub.Config({
 X/\!\!\sim \; = \{[x]\colon x\in X\}.\label{setofequivclasses}\tag{1.4.2}
 \end{equation}
 </div>
-<p id="p-77">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection of nonempty disjoint sets whose union is \(X\text{.}\)</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<p id="p-94">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection of nonempty disjoint sets whose union is \(X\text{.}\)</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Facts</span>
 </h3>
-<p id="p-78"><article class="fact theorem-like" id="equivrelpart"><h6 class="heading">
+<p id="p-95"><article class="fact theorem-like" id="equivrelpart"><h6 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalence relations and partitions.</span>
 </h6>
-<p id="p-79">Let \(X\) be a set. Equivalence relations on \(X\) and partitions of \(X\) are in one-to-one correspondence, as follows. Given an equivalence relation \(\sim\) on \(X\text{,}\) the collection</p>
+<p id="p-96">Let \(X\) be a set. Equivalence relations on \(X\) and partitions of \(X\) are in one-to-one correspondence, as follows. Given an equivalence relation \(\sim\) on \(X\text{,}\) the collection</p>
 <div class="displaymath">
 \begin{equation*}
 X/\!\!\sim \; = \{[x]\colon x\in X\}
@@ -190,16 +190,16 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 \end{equation*}
 </div>
 <p data-braille="continuation">is an equivalence relation. These correspondences are inverse to one another. That is, \(\sim = \sim_{(X/\sim)}\) and \(X/(\sim_{\mathcal P}) = {\mathcal P}\text{.}\)</p></article></p>
-<p id="p-80"><article class="fact theorem-like" id="constructequivrelpart"><h6 class="heading">
+<p id="p-97"><article class="fact theorem-like" id="constructequivrelpart"><h6 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of equivalence relations and partitions from functions.</span>
 </h6>
-<p id="p-81">Given a function \(f\colon X\to
+<p id="p-98">Given a function \(f\colon X\to
 Y\text{,}\) there is a natural equivalence relation \(\sim_f\) on \(X\) given by \(x\sim_f y\) if and only if \(f(x)=f(y)\text{.}\) The corresponding set of equivalence classes is \(X/\!\!\sim_f \; = \{f^{-1}(y)\colon y\in
 f(X)\}\text{.}\) Furthermore, the function \(X/\!\!\sim_f \; \to f(X)\) given by \([x]\to f(x)\) is a one-to-one correspondence.</p></article></p>
-<p id="p-82"><article class="fact theorem-like" id="welldefinedness"><h6 class="heading">
+<p id="p-99"><article class="fact theorem-like" id="welldefinedness"><h6 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of functions on sets of equivalence classes.</span>
 </h6>
-<p id="p-83">Let \(\sim\) be an equivalence relation on a set \(X\text{,}\) let \(\pi\colon X\to X/\!\!\sim\) denote the map given by \(x\to [x]\text{,}\) and let \(f\colon X\to Y\) be a function. There exists a map \(\overline{f}\colon X/\!\!\sim
+<p id="p-100">Let \(\sim\) be an equivalence relation on a set \(X\text{,}\) let \(\pi\colon X\to X/\!\!\sim\) denote the map given by \(x\to [x]\text{,}\) and let \(f\colon X\to Y\) be a function. There exists a map \(\overline{f}\colon X/\!\!\sim
 \to Y\) such that \((\overline{f}\circ \pi)(x)=f(x)\) for all \(x\in X\) if and only if \(f\) is constant on equivalence classes (that is, if and only if \([x\sim
 y\Rightarrow f(x)=f(y)]\text{.}\))</p></article></p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer \(n\)</span>
@@ -214,10 +214,10 @@ Z/\!\!\sim_n = \{[0],[1],[2],\ldots,[n-1]\}.
 </div>This set of equivalence classes is fundamental and pervasive in mathematics. Instead of writing \(Z/\!\!\sim_n\text{,}\) the universally used notation is \(\Z_n\text{.}\) Instead of writing \(x\sim_n y\text{,}\) the universally used notation is \(x=y\pmod{n}\) (or sometimes \(x\equiv y\pmod{n}\)).</section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span>
 </h3>
-<p id="p-84">A <dfn class="terminology">directed graph</dfn> (or <em class="emphasis">digraph</em>) is a set \(V\) of <em class="emphasis">vertices</em> and a set \(E\subset V\times V\) of <em class="emphasis">directed edges</em>. We draw pictures of digraphs by drawing an arrow pointing from a vertex \(v\) to a vertex \(w\) whenever \((v,w)\in E\text{.}\) See <a class="xref" data-knowl="./knowl/digraphegfig.html" title="Figure 1.4.4">Figure 1.4.4</a>.</p>
-<p id="p-85">A <dfn class="terminology">path</dfn> in a directed graph is a sequence of vertices \(v_0,v_2,\ldots,v_{n}\) such that \((v_{i-1},v_i)\in E\) for \(1\leq i\leq n\text{.}\) The vertex \(v_0\) is called the <dfn class="terminology">initial vertex</dfn> and \(v_n\) is called the <dfn class="terminology">final vertex</dfn> of the path \(v_0,v_2,\ldots,v_{n}\text{.}\)</p>
+<p id="p-101">A <dfn class="terminology">directed graph</dfn> (or <em class="emphasis">digraph</em>) is a set \(V\) of <em class="emphasis">vertices</em> and a set \(E\subset V\times V\) of <em class="emphasis">directed edges</em>. We draw pictures of digraphs by drawing an arrow pointing from a vertex \(v\) to a vertex \(w\) whenever \((v,w)\in E\text{.}\) See <a class="xref" data-knowl="./knowl/digraphegfig.html" title="Figure 1.4.4">Figure 1.4.4</a>.</p>
+<p id="p-102">A <dfn class="terminology">path</dfn> in a directed graph is a sequence of vertices \(v_0,v_2,\ldots,v_{n}\) such that \((v_{i-1},v_i)\in E\) for \(1\leq i\leq n\text{.}\) The vertex \(v_0\) is called the <dfn class="terminology">initial vertex</dfn> and \(v_n\) is called the <dfn class="terminology">final vertex</dfn> of the path \(v_0,v_2,\ldots,v_{n}\text{.}\)</p>
 <figure class="figure figure-like" id="digraphegfig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/digraphegfig.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span>Example of a directed graph with vertex set \(V=\{a,b,c,d\}\) and edge set \(E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\text{.}\) The vertex sequences \(c,b\) and \(c,a,b\) are both paths from \(c\) to \(b\text{.}\)</figcaption></figure><p id="p-86">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.4<span class="period">.</span></span><span class="space"> </span>Example of a directed graph with vertex set \(V=\{a,b,c,d\}\) and edge set \(E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\text{.}\) The vertex sequences \(c,b\) and \(c,a,b\) are both paths from \(c\) to \(b\text{.}\)</figcaption></figure><p id="p-103">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
 <ol class="decimal">
 <li id="li-21">Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge \(f=(X,Y)\) denotes a function \(f\colon
 X\to Y\text{.}\)</li>
@@ -230,7 +230,7 @@ g_{m-1}\circ\cdots\circ g_1.
 </div>
 </li>
 </ol>
-<p id="p-87"><a class="xref" data-knowl="./knowl/welldefinednessfig.html" title="Figure 1.4.5">Figure 1.4.5</a> shows a commutative diagram that goes with <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>. <a class="xref" data-knowl="./knowl/conjtransdeffig.html" title="Figure 1.4.6">Figure 1.4.6</a> shows a commutative diagram that illustrates the definition of conjugate transformations.</p>
+<p id="p-104"><a class="xref" data-knowl="./knowl/welldefinednessfig.html" title="Figure 1.4.5">Figure 1.4.5</a> shows a commutative diagram that goes with <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>. <a class="xref" data-knowl="./knowl/conjtransdeffig.html" title="Figure 1.4.6">Figure 1.4.6</a> shows a commutative diagram that illustrates the definition of conjugate transformations.</p>
 <figure class="figure figure-like" id="welldefinednessfig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/commutediagramtestfig.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.5<span class="period">.</span></span><span class="space"> </span>A commutative diagram showing the relationship \(\overline{f}\circ \pi = f\) in <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>.</figcaption></figure><figure class="figure figure-like" id="conjtransdeffig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/conjtransdefdiagram.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.6<span class="period">.</span></span><span class="space"> </span>A commutative diagram illustrating the definition of conjugate transformations \(f,g\) given in <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.3.3.3–6: Conjugate transformations.">Exercise Group 1.3.3.3–6</a>.</figcaption></figure></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
@@ -241,24 +241,24 @@ g_{m-1}\circ\cdots\circ g_1.
 <div class="introduction" id="introduction-5">Let \(n\) be a positive integer.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-88">Verify that the relation \(\sim_n\) is indeed an eqivalence relation.</p></article><article class="exercise exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-89">Verify that the equivalence classes of the equivalence relation \(\sim_n\) are indeed \(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-90">Let \(\omega\) be the complex number \(\omega=e^{2\pi i/n}\text{,}\) and let \(f\colon \Z\to \C\) be given by \(m\to \omega^m\text{.}\) Show that the equivalence relation \(\sim_f\) given by <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a> is the same as \(\sim_n\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnadd"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-91">Show that the operation of addition on \(\Z_n\) given by</p>
+<p id="p-105">Verify that the relation \(\sim_n\) is indeed an eqivalence relation.</p></article><article class="exercise exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-106">Verify that the equivalence classes of the equivalence relation \(\sim_n\) are indeed \(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-107">Let \(\omega\) be the complex number \(\omega=e^{2\pi i/n}\text{,}\) and let \(f\colon \Z\to \C\) be given by \(m\to \omega^m\text{.}\) Show that the equivalence relation \(\sim_f\) given by <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a> is the same as \(\sim_n\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnadd"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-108">Show that the operation of addition on \(\Z_n\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 [x]+[y] := [x+y]
 \end{equation*}
 </div>
 <p data-braille="continuation">is <dfn class="terminology">well-defined</dfn>. This means showing that if \([x]=[x']\) and \([y]=[y']\text{,}\) then \([x+y]=[x'+y']\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnmult"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-92">Show that the operation of multiplication on \(\Z_n\) given by</p>
+<p id="p-109">Show that the operation of multiplication on \(\Z_n\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 [x]\cdot [y] := [xy]
 \end{equation*}
 </div>
 <p data-braille="continuation">is well-defined.</p></article><article class="exercise exercise-like" id="exercise-37"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-93">Draw a commutative diagram that illustrates the distributive law for \(\Z_n\text{.}\)</p>
+<p id="p-110">Draw a commutative diagram that illustrates the distributive law for \(\Z_n\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 [x]\left([y]+[z]\right) = [x][y] + [x][z]
@@ -266,7 +266,7 @@ g_{m-1}\circ\cdots\circ g_1.
 </div></article><article class="exercise exercise-like" id="exercise-38"><h6 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of \(\Z_n\).</span>
 </h6>
-<p id="p-94">Another standard definition of the set \(\Z_n\text{,}\) together with its operations of addition and multiplication, is the following. Given an integer \(a\text{,}\) let \(a \MOD n\) be the unique integer \(r\) in the range \(0\leq r\leq n-1\) such that \(a=qn+r\) for some integer \(q\) (that is, \(r\) is the remainder obtained when dividing \(a\) by \(n\)). Now define \(\Z_n\) to be the set</p>
+<p id="p-111">Another standard definition of the set \(\Z_n\text{,}\) together with its operations of addition and multiplication, is the following. Given an integer \(a\text{,}\) let \(a \MOD n\) be the unique integer \(r\) in the range \(0\leq r\leq n-1\) such that \(a=qn+r\) for some integer \(q\) (that is, \(r\) is the remainder obtained when dividing \(a\) by \(n\)). Now define \(\Z_n\) to be the set</p>
 <div class="displaymath">
 \begin{equation*}
 \Z_n=\{0,1,2,\ldots,n-1\},
@@ -288,9 +288,9 @@ x\cdot_n y = (xy) \MOD n.
 </div>
 </div>
 <article class="exercise exercise-like" id="exercise-39"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-95">Prove <a class="xref" data-knowl="./knowl/equivrelpart.html" title="Fact 1.4.1: Equivalence relations and partitions">Fact 1.4.1</a>.</p></article><article class="exercise exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-96">Prove <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a>.</p></article><article class="exercise exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-97">Prove <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>.</p></article></section></section></div></main>
+<p id="p-112">Prove <a class="xref" data-knowl="./knowl/equivrelpart.html" title="Fact 1.4.1: Equivalence relations and partitions">Fact 1.4.1</a>.</p></article><article class="exercise exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-113">Prove <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.2: Construction of equivalence relations and partitions from functions">Fact 1.4.2</a>.</p></article><article class="exercise exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-114">Prove <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.3: Construction of functions on sets of equivalence classes">Fact 1.4.3</a>.</p></article></section></section></div></main>
 </div>
 </body>
 </html>
