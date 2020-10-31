@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:51-04:00       *-->
+<!--*       on 2020-10-31T14:00:17-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
-<ol class="decimal">
-<li>Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge \(f=(X,Y)\) denotes a function \(f\colon
-X\to Y\text{.}\)</li>
-<li>Whenever there are two paths from an initial vertex \(X\) to a final vertex \(Y\text{,}\) the composition of functions along one path is equal to the composition of functions along the other path. That is, if \(X_0,X_1,\ldots,X_n\) is a path with edges \(f_i\colon X_{i-1}\to X_{i}\) for \(1\leq i\leq n\) and \(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\) is a path with edges \(g_i\colon Y_{i-1}\to Y_{i}\) for \(1\leq i\leq
-m\text{,}\) then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
-g_{m-1}\circ\cdots\circ g_1.
-\end{equation*}
+<p>A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+[x] = \{y\in X\colon x\sim y\},\tag{1.4.1}
+\end{equation}
 </div>
-</li>
-</ol>
+<p data-braille="continuation">called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">equivalence class</dfn> of the element \(x\text{.}\) The set of equivalence classes is denoted \(X/\!\!\sim\text{,}\) that is,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+X/\!\!\sim \; = \{[x]\colon x\in X\}.\tag{1.4.2}
+\end{equation}
+</div>
 <span class="incontext"><a href="section-4.html#p-103">in-context</a></span>
 </body>
 </html>

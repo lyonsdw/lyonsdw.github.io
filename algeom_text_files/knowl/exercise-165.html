@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T13:23:29-04:00       *-->
+<!--*       on 2020-10-29T15:55:31-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,23 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Cross ratio.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative derivation of the formula for elliptic group elements.</span>
 </h6>
-<p>The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geomentry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
+<p>To obtain an explicit formula for elements of the elliptic group, we begin with a necessary condition. Let \(R=s^{-1}\circ
+T\circ s\) be the rotation of \(S^2\) that lifts \(T\) via stereographic projection. If \(P,Q\) are a pair of endpoints of a diameter of \(S^2\text{,}\) then \(R(P),R(Q)\) must also be a pair of endpoints of a diameter. <a class="xref" data-knowl="./knowl/stereoprojdiamends.html" title="Exercise 1.3.3.7: Projections of endpoints of diameters">Exercise 1.3.3.7</a> establishes the condition that two complex numbers \(p,q\) are stereographic projections of endpoints of a diameter if and only if \(pq^\ast = -1\text{.}\) Thus we have the following necessary condition for \(T\text{.}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
-\end{equation*}
+\begin{equation}
+pq^\ast = -1 \;\;\text{ implies }\;\; Tp(Tq)^\ast =
+-1\tag{3.5.1}
+\end{equation}
 </div>
-<p data-braille="continuation">in \(\Proj_1\) to the points \(1,0,\infty\) in \(\extF\text{,}\) respectively. Let \((\cdot,P_1,P_2,P_3)\) denote the unique projective transformation \([T]\) that takes \(P_1,P_2,P_3\) to \([e_0],[e_2],[e_1]\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cross ratio</dfn> \((P_0,P_1,P_2,P_3)\) is defined to be \(\mu([T](P_0))\text{.}\)</p>
-<ol class="lower-alpha">
-<li>Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{.}\)</li>
-<li>Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
-\end{equation*}
-</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) <a class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 3.5.5.4.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a>
-</li>
-</ol></article><span class="incontext"><a href="section-15.html#exercise-165">in-context</a></span>
+<p data-braille="continuation">Now suppose that \(Tz=\frac{az+b}{cz+d}\) with \(ad-bc=1\text{.}\) Solving the equation \(Tp =
+\frac{-1}{T(\frac{-1}{p^\ast})}\) leads to \(c=-b^\ast\) and \(d=a^\ast\text{.}\) Thus we conclude that \(T\) has the following form.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+Tz=\frac{az+b}{-b^\ast z+a^\ast},\;\;|a|^2+|b|^2=1\tag{3.5.2}
+\end{equation}
+</div>
+<p data-braille="continuation">Carry out the computation to derive <a class="xref" data-knowl="./knowl/elliptictranssu2form.html" title="Equation 3.5.2">(3.5.2)</a>. Explain why there is no loss of generality by assuming \(ad-bc=1\text{.}\)</p></article><span class="incontext"><a href="geometry_extra_exer_section.html#exercise-165">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-31T14:00:23-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Identifications of \(U(\Quat)\) and \(\S\) with \(\Rot(S^2)\).</span>
+</h6>
+<p>The discussion of elliptic geometry (<a href="elliptic_geometry_section.html" class="internal" title="Section 3.4: Elliptic geometry">Section 3.4</a>) establishes two ways to construct rotations from matrices. The purpose of this exercise is to reconcile these identifications. Given \(a,b\in \C\) with \(|a|^2+|b|^2=1\text{,}\) let us define the following objects, all parameterized by \(a,b\text{.}\) </p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+M_{a,b} \amp =\left[\begin{array}{cc}{a}\amp
+{b}\\{-b^\ast}\amp {a^\ast}\end{array}\right]\\
+r_{a,b}\amp = \re(a)+\im(a)i+\re(b)j+\im(b)k \\
+R_{r_{a,b}}\amp = \left[u\to
+r_{a,b}ur_{a,b}^\ast\right]\;\; \text{for }u\in S^2_\Quat\\
+T_{a,b} \amp = \left[z\to \frac{az+b}{-b^\ast
+z+a^\ast}\right] \;\;\text{for }z\in \extC\\
+R_{T_{a,b}} \amp = s^{-1}\circ T_{a,b}\circ s
+\end{align*}
+</div>
+<p data-braille="continuation">The above objects are organized along two sequences of mappings. The rotation \(R_{r_{a,b}}\) is at the end of the  "quaternion path"</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+SU(2)\amp \to U(\Quat)  \to \Rot(S^2_\Quat)\tag{3.6.3}\\
+M_{a,b} \amp
+\to r_{a,b} \to R_{r_{a,b}}\notag
+\end{align}
+</div>
+<p data-braille="continuation">and the rotation \(R_{T_{a,b}}\) is at the end of the  "Möbius path"</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+SU(2)\amp \to \S  \to \Rot(S^2)\tag{3.6.4}\\
+M_{a,b} \amp
+\to T_{a,b} \to R_{T_{a,b}}.\notag
+\end{align}
+</div>
+<p data-braille="continuation">This problem is about comparing the rotations \(R_{r_{a,b}}\) and \(R_{T_{a,b}}\) (see <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>) and reconciling the difference. The angles of rotation are the same, but the axes are different, but only by a reordering of coordinates and a minus sign.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>Axis and angle of rotation for quaternion and Möbius rotation constructions</figcaption><table>
+<tr>
+<td class="c m b3 r1 l1 t1 lines"><dfn class="terminology">\(R_{v,\theta}\)</dfn></td>
+<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">axis of rotation \(v\)</dfn></td>
+<td class="c m b3 r1 l0 t1 lines" data-braille="last-cell"><dfn class="terminology">angle of rotation \(\theta\)</dfn></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(R_{r_{a,b}}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\arccos(\re(a))\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(R_{T_{a,b}}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\)</td>
+<td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">\(2\arccos(\re(a))\)</td>
+</tr>
+</table></figure></p>
+<p>The exercises outlined below verify the values for \(v,\theta\) in <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</p>
+<ol class="lower-alpha">
+<li>Use <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a> to justify the values for \(v\) and \(\theta\) for \(R_{r_{a,b}}\) in <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</li>
+<li>Solve \(T_{a,b}z=z\) to show that one of the fixed points of \(T_{a,b}\) is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p=-ib\left( \frac{\sqrt{1-(\re(a))^2} + \im(a)}{|b|^2}\right).
+\end{equation*}
+</div>
+</li>
+<li>Show that \(s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)=p\text{.}\)</li>
+<li>Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \tag{3.6.5}
+\end{equation}
+</div>where \(h\colon \R^3\to \R^3\) is given by \((x,y,z)\to (z,-y,z)\text{.}\) Here's one way to do this: evaluate both sides of <a class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> on the three points \(p,0,\infty\text{.}\) Explain why this is sufficient! Use quaternion multiplication to evaluate \(R_{r_{a,b}}\text{.}\) For example, \(R_{r_{a,b}}(1,0,0)=r_{a,b}ir_{a,b}^\ast\) under the natural identification \(\R^3\leftrightarrow \R^3_\Quat\text{.}\)</li>
+<li>Here is one way to reconcile the quaternion path <a class="xref" data-knowl="./knowl/quatpath.html" title="Equation 3.6.3">(3.6.3)</a> with the Möbius path <a class="xref" data-knowl="./knowl/mobiuspath.html" title="Equation 3.6.4">(3.6.4)</a>.  Let \(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1\amp 1 \\ 1\amp -1\end{array}\right]\) (the matrix \(H\) is sometimes called the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Hadamard</em> matrix) and let \(C_{iH}\) denote the map \(M\to (iH)M(iH)^{-1}\text{.}\) Show that the diagram in <a class="xref" data-knowl="./knowl/rot_id_fig.html" title="Figure 3.6.2">Figure 3.6.2</a> commutes. Hint: Notice that \(iH\in SU(2)\) and that \(Q(iH)=\frac{1}{\sqrt{2}}(i+k)\text{,}\) and that \(R_{Q(iH)}=h\text{.}\)</li>
+</ol>
+<p data-braille="continuation"><figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/rot_id_diagram.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.2<span class="period">.</span></span><span class="space"> </span>The map \(C_{iH}\) is given by \(C_{iH}(T)=(iH)T(iH)^{-1}\text{.}\) The column of maps on the left is the "Möbius path", and the column of maps on the right is the "quaternion path".</figcaption></figure></p></article><span class="incontext"><a href="geometry_extra_exer_section.html#rotreconcileexer">in-context</a></span>
+</body>
+</html>

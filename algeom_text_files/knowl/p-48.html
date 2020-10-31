@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:50-04:00       *-->
+<!--*       on 2020-10-31T14:00:16-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,26 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle \frac{2}{3}e^{i3\pi/4}=-\frac{\sqrt{2}}{3} +
-\frac{\sqrt{2}}{3}i\)</p>
+<ol class="lower-alpha">
+<li>Starting with the right hand side of <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast\\
+\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
+-aa^\ast\\
+\amp = |z|^2 -2\re(za^\ast)
+\end{align*}
+</div>as desired. Applying this to the equation given at the end of the part a, we set \(a=-i\) and complete the square by adding \(|-i|^2=1\) to both sides. Rearranging, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|z-(-i)|^2 = (\sqrt{6})^2.
+\end{equation*}
+</div>This is a circle centered at \(a=-i\text{,}\) with radius \(r=\sqrt{6}\text{.}\)</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)\\
+\amp = \im( (ux-vy+r) + i(vx+uy+s)
+\end{align*}
+</div>so the equation \(\im(az+b)=0\) is equivalent to \(vx+uy+s=0\text{.}\) This is the general form for the equation for a line in \(\R^2\text{,}\) as long as \((u,v)\) is not the zero vector (if \(0=u=v\text{,}\) then the solutions to \(s=0\) is either the empty set or the whole plane).</li>
+</ol>
 <span class="incontext"><a href="section-1.html#p-48">in-context</a></span>
 </body>
 </html>

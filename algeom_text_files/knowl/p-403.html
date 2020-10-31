@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:55-04:00       *-->
+<!--*       on 2020-10-31T14:00:21-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,31 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>First find \([T]^{-1}\text{.}\) Solve</p>
+<p>Starting with \(Tz=(Tz)^\ast\text{,}\) we get</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(a_1,b_1) = x(a_3,b_3) + y(a_2,b_2)
+|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast.
 \end{equation*}
 </div>
-<p data-braille="continuation">to get \(x=\det(P_1P_2)\text{,}\)  \(y=\det(P_3P_1)\text{.}\) From this, show the following.</p>
+<p data-braille="continuation">If \(ac^\ast -a^\ast c\neq
+0\text{,}\) let \(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
+c}\text{,}\) then complete the square to get</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-[T]^{-1}\amp=\twotwo{xa_3}{ya_2}{xb_3}{yb_2}\\
-[T] \amp= \twotwo{yb_2}{-ya_2}{-xb_3}{xa_3}
-\end{align*}
+\begin{equation*}
+|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
+|\alpha|^2.
+\end{equation*}
 </div>
-<p data-braille="continuation">Now just calculate \(\mu(T(a_0,b_0))\text{.}\)</p>
-<span class="incontext"><a href="section-15.html#p-403">in-context</a></span>
+<p data-braille="continuation">Manipulate the right hand side to \(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\) For the case \(ac^\ast -a^\ast c=0\text{,}\) let \(\gamma=ad^\ast
+-b^\ast c\) and  \(\delta=bd^\ast\text{.}\) Then the equation</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast
+\end{equation*}
+</div>
+<p data-braille="continuation">becomes \(\im(\gamma z+\delta)=0\text{,}\) which is the equation for a line.</p>
+<span class="incontext"><a href="section-12.html#p-403">in-context</a></span>
 </body>
 </html>

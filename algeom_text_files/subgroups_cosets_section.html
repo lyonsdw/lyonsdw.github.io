@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:46-04:00       *-->
+<!--*       on 2020-10-31T14:00:11-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,8 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
 \DeclareMathOperator{\Stab}{Stab}
@@ -65,6 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
+
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -112,7 +114,7 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul>
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 <li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
@@ -156,10 +158,13 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="subgroups_cosets_section"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span>
 </h2>
-<p id="p-168"><article class="definition definition-like" id="subgroupdefn"><h6 class="heading">
+<section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title"></span>
+</h3>
+<p id="p-201"><article class="definition definition-like" id="subgroupdefn"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups and cosets.</span>
 </h6>
-<p id="p-169">A subset \(H\) of a group \(G\) is called a <dfn class="terminology">subgroup</dfn> of \(G\) if \(H\) is itself a group under the group operation of \(G\text{.}\) We write \(H\leq
+<p id="p-202">A subset \(H\) of a group \(G\) is called a <dfn class="terminology">subgroup</dfn> of \(G\) if \(H\) is itself a group under the group operation of \(G\text{.}\) We write \(H\leq
 G\) to indicate that \(H\) is a subgroup of \(G\text{.}\) A <dfn class="terminology">(left) coset</dfn> of a subgroup \(H\) of \(G\) is a set of the form</p>
 <div class="displaymath">
 \begin{equation*}
@@ -174,67 +179,106 @@ G/H := \{gH\colon g\in G\}
 </div></article></p>
 <article class="exercise exercise-like" id="dihedral_subgroup_reading_exercise"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-dihedral_subgroup_reading_exercise"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral_subgroup_reading_exercise"><article class="exercise exercise-like"><p id="p-170">Consider \(D_4\) as described in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral_subgroup_reading_exercise"><article class="exercise exercise-like"><p id="p-203">Consider \(D_4\) as described in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p>
 <div class="displaymath">
 \begin{equation*}
 D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-56">Is the subset \(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\) of rotations a subgroup of \(D_4\text{?}\) Why or why not? <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like"><p id="p-171">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</p></div></div>
-</li>
-<li id="li-57">Is the subset \(\{F_H,F_V,F_D,F_{D'}\}\) of reflections a subgroup of \(D_4\text{?}\) Why or why not? <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like"><p id="p-172">No. Just observe that \(F_H^2=R_0\) is not a reflection. The group operation on \(D_4\) does not restrict properly to the subset of reflections.</p></div></div>
-</li>
-</ol></article></div>
-<article class="exercise exercise-like" id="exercise-64"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-64"><h6 class="heading">
+<li id="li-125">Is the subset \(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\) of rotations a subgroup of \(D_4\text{?}\) Why or why not?</li>
+<li id="li-126">Is the subset \(\{F_H,F_V,F_D,F_{D'}\}\) of reflections a subgroup of \(D_4\text{?}\) Why or why not?</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><ol class="decimal">
+<li id="li-127">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</li>
+<li id="li-128">No. Just observe that \(F_H^2=R_0\) is not a reflection. The group operation on \(D_4\) does not restrict properly to the subset of reflections.</li>
+</ol></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-61"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-64"><article class="exercise exercise-like"><p id="p-173">Find \(G/H\) for \(G=S_3\text{,}\) \(H=\{e,(12)\}\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><p id="p-204">Find \(G/H\) for \(G=S_3\text{,}\) \(H=\{e,(12)\}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="displaymath">
+\begin{align*}
+G/H \amp =\{eH, (12)H, (13)H, (23)H, (123)H, (132)H\}\\
+\amp =
+\{\{e,(12)\},\{(12),e\},\{(13),(123)\},\{(23),(132)\},\{(13),(123)\},\{(132),(23)\}\\
+\amp = \{H,\{(13),(123)\},\{(23),(132)\}
+\end{align*}
+</div></div></div>
+</div></article></div>
 <article class="proposition theorem-like" id="subgrouptests"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup tests.</span>
 </h6>
-<p id="p-174">Let \(H\) be a subset of a group \(G\text{.}\) The following are equivalent.</p>
+<p id="p-205">Let \(H\) be a subset of a group \(G\text{.}\) The following are equivalent.</p>
 <ol class="lower-roman">
-<li id="li-58">\(H\) is a subgroup of \(G\)</li>
-<li id="li-59">
-<dfn class="terminology">(2-step subgroup test)</dfn> \(ab\) is in \(H\) for every \(a,b\) in \(H\) (\(H\) is closed under the group operation) and \(a^{-1}\) is in \(H\) for every \(a\) in \(H\) (\(H\) is closed under group inversion)</li>
-<li id="li-60">
-<dfn class="terminology">(1-step subgroup test)</dfn> \(ab^{-1}\) is in \(H\) for every \(a,b\) in \(H\)</li>
-</ol></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-175">See <a class="xref" data-knowl="./knowl/subgrouptestsexer.html" title="Exercise 2.3.1">Exercise 2.3.1</a>.</p></article></div>
-<article class="definition definition-like" id="definition-14"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups generated by a set of elements.</span>
+<li id="li-129">\(H\) is a subgroup of \(G\)</li>
+<li id="li-130">
+<dfn class="terminology">(2-step subgroup test)</dfn>\(H\) is nonempty, \(ab\) is in \(H\) for every \(a,b\) in \(H\) (\(H\) is closed under the group operation), and \(a^{-1}\) is in \(H\) for every \(a\) in \(H\) (\(H\) is closed under group inversion)</li>
+<li id="li-131">
+<dfn class="terminology">(1-step subgroup test)</dfn>\(H\) is nonempty and \(ab^{-1}\) is in \(H\) for every \(a,b\) in \(H\)</li>
+</ol></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-206">See <a class="xref" data-knowl="./knowl/subgrouptestsexer.html" title="Exercise 2.3.2.1">Exercise 2.3.2.1</a>.</p></article></div>
+<article class="proposition theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup generated by a set of elements.</span>
 </h6>
-<p id="p-176">Let \(S\) be a subset of a group \(G\text{.}\) We write \(\langle S\rangle\) to denote the smallest subgroup of \(G\) that contains \(S\text{,}\) where <em class="emphasis">smallest</em> means that if \(H\) is a subgroup of \(G\) that contains \(S\text{,}\) then \(H\) contains \(\langle S\rangle\text{.}\) We call \(\langle S\rangle\) the subgroup of \(G\) <dfn class="terminology">generated</dfn> by \(S\text{,}\) and we call the elements of \(S\) the <dfn class="terminology">generators</dfn> of \(\langle S\rangle\text{.}\) [Comment on notational convention: If \(S=\{s_1,s_2,\ldots,s_k\}\) is finite, we write \(\langle
-s_1,s_2,\ldots,s_k\rangle\) for \(\langle S\rangle\text{,}\) instead of the more cumbersome \(\langle \{s_1,s_2,\ldots,s_k\}\rangle\text{.}\)]</p></article><article class="proposition theorem-like" id="subgpgenbysetprop"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of subgroups generated by a set of elements.</span>
-</h6>
-<p id="p-177">Given a set \(A\text{,}\) a <dfn class="terminology">word of length \(k\)</dfn> written with the elements of \(A\) is a formal string of the form</p>
+<p id="p-207">Let \(S\) be a nonempty subset of a group \(G\text{,}\) and let \(S^{-1}\) denote the set \(S^{-1}=\{s^{-1}\colon s\in S\}\) of inverses of elements in \(S\text{.}\) We write \(\langle S\rangle\) to denote the set of all elements of \(G\) of the form</p>
 <div class="displaymath">
 \begin{equation*}
-w=a_1a_2a_3\cdots a_k
+s_1s_2\cdots s_k
 \end{equation*}
 </div>
-<p data-braille="continuation">where each \(a_i\in A\) for \(1\leq i\leq k\text{.}\) For example, the strings \(aab\text{,}\) \(bab\text{,}\) and \(bbb\) are words of length 3 written with the elements of \(A=\{a,b\}\text{.}\) Let \(S\) be a subset of a group \(G\text{,}\) and let \(T=\{s^{-1}\colon s\in S\}\text{.}\)       Prove the following.</p>
-<div class="displaymath">
-\begin{equation*}
-\langle S\rangle = \bigcap_{H\colon S\subseteq H\leq G}H =
-\{\text{words written with the elements of} S\cup T\}
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/subgpgenbysetexer.html" title="Exercise 2.3.5">Exercise 2.3.5</a></article></div>
-<p id="p-178"><article class="proposition theorem-like" id="cosetspartition"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as equivalence classes.</span>
+<p data-braille="continuation">where \(k\) is a positive integer and each \(s_i\) is in \(S\cup S^{-1}\) for \(1\leq i\leq k\text{.}\) The set \(\langle S\rangle\) is a subgroup of \(G\text{,}\) called the <dfn class="terminology">subgroup generated by the set \(S\)</dfn>, and the elements of \(S\) are called the <dfn class="terminology">generators</dfn> of \(\langle S\rangle\text{.}\)</p></article><p id="p-208"><em class="alert">Comment on notational convention:</em> If \(S=\{s_1,s_2,\ldots,s_k\}\) is finite, we write \(\langle
+s_1,s_2,\ldots,s_k\rangle\) for \(\langle S\rangle\text{,}\) instead of the more cumbersome \(\langle \{s_1,s_2,\ldots,s_k\}\rangle\text{.}\)</p>
+<article class="observation remark-like" id="observation-1"><h6 class="heading">
+<span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-179">Let \(G\) be a group and let \(H\) be a subgroup of \(G\text{.}\) Let \(\sim_H\) be the relation on \(G\) defined by \(x\sim_H y\) if and only if \(x^{-1}y \in
-H\text{.}\) The relation \(\sim_H\) is an equivalence relation on \(G\text{,}\) and the equivalence classes are the cosests of \(H\text{,}\) that is, we have \(G/\!\!\sim_H= G/H\text{.}\)</p></article><article class="hiddenproof" id="proof-5"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/cosetspartitionexer.html" title="Exercise 2.3.8: Cosets of a subgroup partition the group, Lagrange's Theorem">Exercise 2.3.8</a></article></div></p>
-<section class="exercises" id="exercises-7"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+<p id="p-209">If \(G\) is a cyclic group with generator \(g\text{,}\) then \(G=\langle g\rangle\text{.}\)</p></article><article class="exercise exercise-like" id="subgpgenbysetexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-subgpgenbysetexer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-subgpgenbysetexer"><article class="exercise exercise-like"><p id="p-210">Show that \(\langle S\rangle\) is indeed a subgroup of \(G\text{.}\) How would this fail if \(S\) were empty?</p></article></div>
+<article class="exercise exercise-like" id="generators-reading-exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-generators-reading-exer"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-generators-reading-exer"><article class="exercise exercise-like"><ol id="p-212" class="decimal">
+<li id="li-132">Find \(\langle F_H,F_V\rangle\subseteq D_4\text{.}\)</li>
+<li id="li-133">Find \(\langle 6,8\rangle \subseteq \Z\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
+<li id="li-134">\(\displaystyle \langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}\)</li>
+<li id="li-135">\(\displaystyle \langle 6,8\rangle =\langle 2\rangle = 2\Z\)</li>
+</ol></div></div>
+</div></article></div>
+<p id="p-214"><article class="proposition theorem-like" id="cosetspartition"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as equivalence classes.</span>
+</h6>
+<p id="p-215">Let \(G\) be a group and let \(H\) be a subgroup of \(G\text{.}\) Let \(\sim_H\) be the relation on \(G\) defined by \(x\sim_H y\) if and only if \(x^{-1}y \in
+H\text{.}\) The relation \(\sim_H\) is an equivalence relation on \(G\text{,}\) and the equivalence classes are the cosets of \(H\text{,}\) that is, we have \(G/\!\!\sim_H= G/H\text{.}\)</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/cosetspartitionexer.html" title="Exercise 2.3.2.7: Cosets of a subgroup partition the group, Lagrange's Theorem">Exercise 2.3.2.7</a></article></div></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.3.2</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="subgrouptestsexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-180">Prove <a class="xref" data-knowl="./knowl/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</p></article><article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-181">Find all the subgroups of \(S_3\text{.}\) <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like"><p id="p-182">\(\{[1,2,3]\}\text{,}\) \(\{[1,2,3],[2,1,3]\}\text{,}\) \(\{[1,2,3],[1,3,2]\}\text{,}\) \(\{[1,2,3],[3,1,2]\}\text{,}\) \(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\) \(S_3\)</p></div></div></p></article><article class="exercise exercise-like" id="exercise-67"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-183">Find all the cosets of the subgroup \(\{R_0,R_{1/2}\}\) of  \(D_4\text{.}\)</p></article><article class="exercise exercise-like" id="center"><h6 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Centralizers, Center of a group.</span>
+<p id="p-216">Prove <a class="xref" data-knowl="./knowl/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</p></article><article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-218">Find all the subgroups of \(S_3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-219">In the "list of values" permutation notation of <a class="xref" data-knowl="./knowl/permutation-reading-exercise.html" title="Checkpoint 2.1.2">Checkpoint 2.1.2</a>, the subgroups of \(S_3\) are \(\{[1,2,3]\}\text{,}\) \(\{[1,2,3],[2,1,3]\}\text{,}\) \(\{[1,2,3],[1,3,2]\}\text{,}\) \(\{[1,2,3],[3,2,1]\}\text{,}\) \(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\) and \(S_3\text{.}\) In cycle notation, the subgroups of \(S_3\) (in the same order) are \(\{e\}\text{,}\) \(\{e,(12)\}\text{,}\) \(\{e,(23)\}\text{,}\) \(\{e,(13)\}\text{,}\) \(\{e,(123),(132)\}\text{,}\) \(S_3\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="d4cosetexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-220">Find all the cosets of the subgroup \(\{R_0,R_{1/2}\}\) of  \(D_4\text{.}\)</p></article><article class="exercise exercise-like" id="subgpsofzexer"><h6 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of \(\Z\) and \(\Z_n\).</span>
 </h6>
-<p id="p-184">The <dfn class="terminology">centralizer</dfn> of an element \(a\) in a group \(G\text{,}\) denoted \(C(a)\text{,}\) is the set</p>
+<ol id="p-222" class="lower-alpha">
+<li id="li-136">Let \(H\) be a subgroup of \(\Z\text{.}\) Show that either \(H=\{0\}\) or \(H=\langle d\rangle\text{,}\) where \(d\) is the smallest positive element in \(H\text{.}\)</li>
+<li id="li-137">Let \(H\) be a subgroup of \(\Z_n\text{.}\) Show that either \(H=\{0\}\) or \(H=\langle d\rangle\text{,}\) where \(d\) is the smallest positive element in \(H\text{.}\)</li>
+<li id="li-138">Let \(n_1,n_2,\ldots,n_r\) be positive integers. Show that<div class="displaymath">
+\begin{equation*}
+\langle n_1,n_2,\ldots,n_r
+\rangle = \langle \gcd(n_1,n_2,\ldots,n_r)\rangle
+\end{equation*}
+</div>
+</li>
+</ol>
+<p id="p-223"><em class="alert">Consequence of this exercise:</em> The greatest common divisor \(\gcd(a,b)\) of integers \(a,b\) is the smallest positive integer of the form \(sa+tb\) over all integers \(s,t\text{.}\) Two integers \(a,b\) are relatively prime if and only if there exist integers \(s,t\) such that \(sa+tb=1\text{.}\)</p></article><article class="exercise exercise-like" id="center"><h6 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Centralizers, Center of a group.</span>
+</h6>
+<p id="p-225">The <dfn class="terminology">centralizer</dfn> of an element \(a\) in a group \(G\text{,}\) denoted \(C(a)\text{,}\) is the set</p>
 <div class="displaymath">
 \begin{equation*}
 C(a) = \{g\in G\colon ag=ga\}.
@@ -243,47 +287,42 @@ C(a) = \{g\in G\colon ag=ga\}.
 <p data-braille="continuation">The <dfn class="terminology">center</dfn> of a group \(G\text{,}\) denoted \(Z(G)\text{,}\) is the set</p>
 <div class="displaymath">
 \begin{equation*}
-Z(G) = \{a\in G\colon ag=ga \;\; \forall g\in G\}.
+Z(G) = \{g\in G\colon ag=ga \;\; \forall a\in G\}.
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-61">Show that the centralizer \(C(a)\) of any element \(a\) in a group \(G\) is a subgroup of \(G\text{.}\)</li>
-<li id="li-62">Show that the center \(Z(G)\) of a group \(G\) is a subgroup of \(G\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="subgpgenbysetexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Prove <a class="xref" data-knowl="./knowl/subgpgenbysetprop.html" title="Proposition 2.3.6: Characterization of subgroups generated by a set of elements">Proposition 2.3.6</a>. It will be useful to prove a Lemma that the intersection of subgroups is a subgroup.</article><article class="exercise exercise-like" id="exercise-70"><h6 class="heading">
-<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic groups, reconciling two uses of the term "generator".</span>
+<li id="li-142">Show that the centralizer \(C(a)\) of any element \(a\) in a group \(G\) is a subgroup of \(G\text{.}\)</li>
+<li id="li-143">Show that the center \(Z(G)\) of a group \(G\) is a subgroup of \(G\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="orderofaneltexer"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a group element.</span>
 </h6>
-<ol class="lower-alpha">
-<li id="li-63">Show that if a group \(G\) is cyclic with generator \(g\text{,}\) then \(G=\langle g\rangle\text{.}\)</li>
-<li id="li-64">Show that if a finite group \(G\) is cyclic with generator \(g\text{,}\) then<div class="displaymath">
+<p id="p-227">Let \(g\) be an element of a group \(G\text{.}\) The <dfn class="terminology">order</dfn> of \(g\text{,}\) denoted \(|g|\text{,}\) is the smallest positive integer \(n\) such that \(g^n=e\text{,}\) if such an integer exists. If there is no positive integer \(n\) such that \(g^n=e\text{,}\) then \(g\) is said to have <em class="emphasis">infinite</em> order. Show that, if the order of \(g\) is finite, say \(|g|=n\text{,}\) then</p>
+<div class="displaymath">
 \begin{equation*}
-G=\langle g \rangle = \{g^0,g^1,g^2,\ldots,g^{|G|-1}\}\text{.}
+\langle g \rangle =
+\{g^0,g^1,g^2,\ldots,g^{n-1}\}\text{.}
 \end{equation*}
 </div>
-</li>
-</ol></article><article class="exercise exercise-like" id="exercise-71"><h6 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a group element.</span>
-</h6>Let \(g\) be an element of a group \(G\text{.}\) The <dfn class="terminology">order</dfn> of \(g\text{,}\) denoted \(|g|\text{,}\) is the smallest positive integer \(n\) such that \(g^n=e\text{,}\) if such an integer exists. If there is no positive integer \(n\) such that \(g^n=e\text{,}\) then \(g\) is said to have <em class="emphasis">infinite</em> order. Show that<div class="displaymath">
-\begin{equation*}
-|g|=|\langle g\rangle|\text{.}
-\end{equation*}
-</div></article><article class="exercise exercise-like" id="cosetspartitionexer"><h6 class="heading">
-<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets of a subgroup partition the group, Lagrange's Theorem.</span>
+<p id="p-228"><em class="alert">Consequence of this exercise:</em> If \(G\) is cyclic with generator \(g\text{,}\) then \(|G|=|g|\text{.}\)</p></article><article class="exercise exercise-like" id="cosetspartitionexer"><h6 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets of a subgroup partition the group, Lagrange's Theorem.</span>
 </h6>
-<ol id="p-185" class="lower-alpha">
-<li id="li-65">Prove <a class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.7: Cosets as equivalence classes">Proposition 2.3.7</a>.</li>
-<li id="li-66">Now suppose that a group \(G\) is finite. Show that all of the cosets of a subgroup \(H\) have the same size. <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-186">Hint: Let \(aH,bH\) be cosets. Show that the function \(aH\to bH\) given by \(x\to a^{-1}bx\) is a bijection.</p></div></div>
+<ol id="p-230" class="lower-alpha">
+<li id="li-146">Prove <a class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>.</li>
+<li id="li-147">Now suppose that a group \(G\) is finite. Show that all of the cosets of a subgroup \(H\) have the same size.</li>
+<li id="li-148">Prove the following. <article class="assemblage assemblage-like" id="assemblage-9"><h6 class="heading"><span class="title"><dfn class="terminology">Lagrange's Theorem</dfn>.</span></h6>
+<p id="p-231">If \(G\) is a finite group and \(H\) is a subgroup, then the order of \(H\) divides the order of \(G\text{.}\)</p></article>
 </li>
-<li id="li-67">Prove the following. <article class="assemblage assemblage-like" id="assemblage-9"><h6 class="heading"><span class="title"><dfn class="terminology">Lagrange's Theorem</dfn>.</span></h6>
-<p id="p-187">If \(G\) is a finite group and \(H\) is a subgroup, then the order of \(H\) divides the order of \(G\text{.}\)</p></article>
-</li>
-</ol></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h6 class="heading">
-<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Consequences of Langrange's Theorem.</span>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-232">Let \(aH,bH\) be cosets. Show that the function \(aH\to bH\) given by \(x\to ba^{-1}x\) is a bijection.</p></div></div>
+</div></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h6 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Consequences of Lagrange's Theorem.</span>
 </h6>
-<ol id="p-188" class="lower-alpha">
-<li id="li-68">Show that the order of any element of a finite group divides the order of the group.</li>
-<li id="li-69">Let \(G\) be a finite group, and let \(g\in
+<ol id="p-234" class="lower-alpha">
+<li id="li-152">Show that the order of any element of a finite group divides the order of the group.</li>
+<li id="li-153">Let \(G\) be a finite group, and let \(g\in
 G\text{.}\) Show that \(g^{|G|}=e\text{.}\)</li>
-<li id="li-70">Show that a group of prime order is cyclic.</li>
+<li id="li-154">Show that a group of prime order is cyclic.</li>
 </ol></article></section></section></div></main>
 </div>
 </body>

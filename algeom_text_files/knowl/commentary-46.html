@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-31T13:57:40-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.10.</span></h5>
+<ol class="lower-alpha">
+<li>Clearly, \(r\) cannot be 1, and the statement is true for \(r=2\text{.}\) Now suppose the statement holds for \(k\lt
+r\) and let \(e=\tau_1\cdot \tau_r\) be given. The four possibilities for \(\tau_{r-1}\tau_r\) are the following, where \(a,b,c,d\) are distinct.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
+\end{equation*}
+</div>These products can be rewritten, respectively, as<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+e, (ab)(bc), (ac)(cb), (ab)(cd)
+\end{equation*}
+</div>In the first case, we have \(e=\tau_1\cdots \tau_{r-2}\text{,}\) so \(r-2\) must be even by the inductive hypothesis, so we are done. In the other three cases, we have an expression where the rightmost occurrence of the symbol \(a\) is in position \(r-1\text{.}\) Continuing this process, we continue to rewrite the product of transpositions until the number of transpositions drops by 2. This must happen, because otherwise the rightmost occurrence of the symbol \(a\) would be in the first transposition, but then the product would not be the identity because it would not fix \(a\text{.}\)</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+e=\sigma\sigma^{-1}  =
+(c_1d_1)(c_2d_2)\cdots (c_td_t)(a_sb_s)\cdots(a_1b_1)
+\end{equation*}
+</div>so \(s+t\) is even by the previous part.</li>
+<li>A \(k\)-cycle is a product of \(k-1\) transpositions.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a_1a_2\ldots a_k) = (a_1a_2)(a_2a_3)\ldots (a_{k-1}a_k)
+\end{equation*}
+</div>
+</li>
+</ol></article><span class="incontext"><a href="groupdefsection.html#commentary-46">in-context</a></span>
+</body>
+</html>

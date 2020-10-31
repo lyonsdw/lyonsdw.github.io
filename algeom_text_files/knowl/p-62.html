@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:50-04:00       *-->
+<!--*       on 2020-10-31T14:00:16-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,33 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Prove <a class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: \({\mathcal M}_\Quat\) is closed under addition and multiplication">Proposition 1.2.1</a></p>
+<p>For \(r=a+bi+cj+dk\) and \(r'=a'+b'i+c'j+d'k\text{,}\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.\tag{1.2.10}
+\end{equation}
+</div>
+<p data-braille="continuation">Multiplication looks like this.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+rr'\amp = (a+bi+cj+dk)(a'+b'i+c'j+d'k) \notag\\
+\amp = aa'+bb'i^2+cc'j^2+dd'k^2\notag\\
+\amp + ab'i+ba'i+cd'jk+dc'kj\notag\\
+\amp + ac'j+ca'j+bd'ik+db'ki\notag\\
+\amp + ad'k+da'k+bc'ij+cb'ji\notag\\
+\amp = (aa'-bb'-cc'-dd')\tag{1.2.11}\\
+\amp + (ab'+ba'+cd'-dc')i\notag\\
+\amp + (ac'+ca'-bd'+db')j\notag\\
+\amp + (ad'+da'+bc'-cb')k\notag
+\end{align}
+</div>
+<p data-braille="continuation">If \(u,v\) are pure quaternions, <a class="xref" data-knowl="./knowl/quatmultcartesian.html" title="Equation 1.2.11">(1.2.11)</a> can be written more compactly in terms of the dot and cross products for vectors in \(\R^3\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
+}u,v)\tag{1.2.12}
+\end{equation}
+</div>
 <span class="incontext"><a href="quaternionsection.html#p-62">in-context</a></span>
 </body>
 </html>

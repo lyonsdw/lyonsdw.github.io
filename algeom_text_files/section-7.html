@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-12T21:26:15-04:00       *-->
+<!--*       on 2020-10-20T14:31:08-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -79,9 +79,9 @@ MathJax.Hub.Config({
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
 \newcommand{\E}{{\rm \bf E}} 
-\newcommand{\H}{{\rm \bf H}} 
+\renewcommand{\H}{{\rm \bf H}} 
 \newcommand{\HU}{\H_{\U}} 
-\newcommand{\S}{{\rm \bf S}} 
+\renewcommand{\S}{{\rm \bf S}} 
 \newcommand{\D}{\mathbb{D}} 
 \newcommand{\closedD}{\hat{\D}} 
 \newcommand{\U}{\mathbb{U}} 
@@ -102,30 +102,34 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subgroups_cosets_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groups_chapter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subgroups_cosets_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groups_chapter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
 <li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Equivalence Relations</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
 <li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
 <li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
 <li><a href="section-7.html" data-scroll="section-7" class="active">Group homomorphisms</a></li>
 <li><a href="section-8.html" data-scroll="section-8">Group actions</a></li>
 <li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
@@ -149,55 +153,55 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-7"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span>
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Group homomorphisms</span>
 </h2>
-<p id="p-124"><article class="definition definition-like" id="definition-13"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group homomorphism.</span>
-</h6>Let \(G,H\) be groups. <p id="p-125">A map \(\phi\colon G\to H\) is called a <dfn class="terminology">homomorphism</dfn> if</p>
+<p id="p-200"><article class="definition definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group homomorphism.</span>
+</h6>Let \(G,H\) be groups. <p id="p-201">A map \(\phi\colon G\to H\) is called a <dfn class="terminology">homomorphism</dfn> if</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(xy) = \phi(x)\phi(y)
 \end{equation*}
 </div>
 <p data-braille="continuation">for all \(x,y\) in \(G\text{.}\) A homomorphism that is both injective (one-to-one) and surjective (onto) is called an <dfn class="terminology">isomorphism</dfn> of groups. \(\phi\colon G\to H\) is an isomorphism, we say that \(G\) is <dfn class="terminology">isomorphic</dfn> to \(H\text{,}\) and we write \(G\approx H\text{.}\)</p></article></p>
-<article class="exercise exercise-like" id="exercise-62"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-62"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-62"><article class="exercise exercise-like"><p id="p-126">Show that each of the following are homomorphisms.</p>
+<article class="exercise exercise-like" id="exercise-60"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-60"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-60"><article class="exercise exercise-like"><p id="p-202">Show that each of the following are homomorphisms.</p>
 <ul class="disc">
-<li id="li-63">\(GL(n,\R)\to \R^\ast\) given by \(M\to \det M\)</li>
-<li id="li-64">\(\Z\to \Z\) given by \(x\to mx\text{,}\) some fixed \(m\in \Z\)</li>
-<li id="li-65">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
+<li id="li-125">\(GL(n,\R)\to \R^\ast\) given by \(M\to \det M\)</li>
+<li id="li-126">\(\Z\to \Z\) given by \(x\to mx\text{,}\) some fixed \(m\in \Z\)</li>
+<li id="li-127">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
 axa^{-1}\text{,}\) some fixed \(a\in G\)</li>
-<li id="li-66">\(\C^\ast\to\C^\ast\) given by \(z\to z^2\)</li>
+<li id="li-128">\(\C^\ast\to\C^\ast\) given by \(z\to z^2\)</li>
 </ul>
 <p data-braille="continuation">Show that each of the following are not homomorphisms. In each case, demonstrate what fails.</p>
 <ul class="disc">
-<li id="li-67">\(\Z\to \Z\) given by \(x\to x+3\)</li>
-<li id="li-68">\(\Z\to \Z\) given by \(x\to x^2\)</li>
-<li id="li-69">\(D_4\to D_4\) given by \(g\to g^2\)</li>
+<li id="li-129">\(\Z\to \Z\) given by \(x\to x+3\)</li>
+<li id="li-130">\(\Z\to \Z\) given by \(x\to x^2\)</li>
+<li id="li-131">\(D_4\to D_4\) given by \(g\to g^2\)</li>
 </ul></article></div>
 <article class="definition definition-like" id="definition-14"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel of a group homomorphism.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel of a group homomorphism.</span>
 </h6>
-<p id="p-127">Let \(\phi\colon G\to H\) be a group homomorphism, and let \(e_H\) be the identity element for \(H\text{.}\) We write \(\ker(\phi)\) to denote the set</p>
+<p id="p-203">Let \(\phi\colon G\to H\) be a group homomorphism, and let \(e_H\) be the identity element for \(H\text{.}\) We write \(\ker(\phi)\) to denote the set</p>
 <div class="displaymath">
 \begin{equation*}
 \ker(\phi) :=\phi^{-1}(e_H) = \{g\in G\colon \phi(g)=e_H\},
 \end{equation*}
 </div>
-<p data-braille="continuation">called the <dfn class="terminology">kernel</dfn> of \(\phi\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-63"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-63"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><p id="p-128">Find the kernel of each of the following homomorphisms.</p>
+<p data-braille="continuation">called the <dfn class="terminology">kernel</dfn> of \(\phi\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-61"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><p id="p-204">Find the kernel of each of the following homomorphisms.</p>
 <ul class="disc">
-<li id="li-70">\(GL(n,\R)\to \R^\ast\) given by \(M\to \det M\)</li>
-<li id="li-71">\(\Z_n\to \Z_n\) (some integer \(n\geq 1\)) given by \(x\to mx \pmod{n}\text{,}\) some fixed \(m\in \Z\)</li>
-<li id="li-72">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
+<li id="li-132">\(GL(n,\R)\to \R^\ast\) given by \(M\to \det M\)</li>
+<li id="li-133">\(\Z_n\to \Z_n\) (some integer \(n\geq 1\)) given by \(x\to mx \pmod{n}\text{,}\) some fixed \(m\in \Z\)</li>
+<li id="li-134">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
 axa^{-1}\text{,}\) some fixed \(a\in G\)</li>
 </ul></article></div>
 <article class="proposition theorem-like" id="homismbasicproperties"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of homomorphisms.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of homomorphisms.</span>
 </h6>
-<p id="p-129">Let \(\phi\colon G\to H\) be a homomorphism of groups. Let \(e_G,e_H\) denote the identity elements of \(G,H\text{,}\) respectively. We have the following.</p>
+<p id="p-205">Let \(\phi\colon G\to H\) be a homomorphism of groups. Let \(e_G,e_H\) denote the identity elements of \(G,H\text{,}\) respectively. We have the following.</p>
 <ol class="decimal">
 <li id="idtoid">(identity goes to identity) \(\phi(e_G) = e_H\)</li>
 <li id="invtoinv">(inverses go to inverses) \(\phi\left(g^{-1}\right)  = \left(\phi(g)\right)^{-1}\) for all \(g\in G\)</li>
@@ -207,31 +211,31 @@ axa^{-1}\text{,}\) some fixed \(a\in G\)</li>
 x\ker(\phi)\)</li>
 <li id="imagesameiffkernelcosetsame">\(\phi(x)=\phi(y)\) if and only if \(x\ker(\phi)=y\ker(\phi)\)</li>
 <li id="injiffkertriv">\(\phi\) is one-to-one if and only if \(\ker(\phi)=\{e_G\}\)</li>
-</ol></article><article class="hiddenproof" id="proof-5"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/homismbasicpropertiesexer.html" title="Exercise Group 2.4.1–3: Basic properties of homomorphisms">Exercise Group 2.4.1–3</a>.</article></div>
+</ol></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/homismbasicpropertiesexer.html" title="Exercise Group 2.3.1–3: Basic properties of homomorphisms">Exercise Group 2.3.1–3</a>.</article></div>
 <article class="proposition theorem-like" id="gmodkisgroup"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">\(G/K\) is a group if and only if \(K\) is a kernel.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">\(G/K\) is a group if and only if \(K\) is a kernel.</span>
 </h6>
-<p id="p-130">Let \(K\) be a subgroup of a group \(G\text{.}\) The set \(G/K\) of cosets of \(K\) forms a group, called a <dfn class="terminology">quotient group</dfn> (or <dfn class="terminology">factor group</dfn>), under the operation</p>
+<p id="p-206">Let \(K\) be a subgroup of a group \(G\text{.}\) The set \(G/K\) of cosets of \(K\) forms a group, called a <dfn class="terminology">quotient group</dfn> (or <dfn class="terminology">factor group</dfn>), under the operation</p>
 <div class="displaymath">
 \begin{equation}
-(xK)(yK) = xyK\label{multkernelcosets}\tag{2.4.1}
+(xK)(yK) = xyK\label{multkernelcosets}\tag{2.3.1}
 \end{equation}
 </div>
-<p data-braille="continuation">if and only if \(K\) is the kernel of a homomorphism \(G\to G'\) for some group \(G'\text{.}\)</p></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-131">See <a class="xref" data-knowl="./knowl/gmodkisgroupexer.html" title="Exercise 2.4.4">Exercise 2.4.4</a>.</p></article></div>
-<p id="p-132">Here is a corollary of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a> and its proof.</p>
+<p data-braille="continuation">if and only if \(K\) is the kernel of a homomorphism \(G\to G'\) for some group \(G'\text{.}\)</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-207">See <a class="xref" data-knowl="./knowl/gmodkisgroupexer.html" title="Exercise 2.3.4">Exercise 2.3.4</a>.</p></article></div>
+<p id="p-208">Here is a corollary of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a> and its proof.</p>
 <article class="corollary theorem-like" id="firstisothm"><h6 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
 </h6>
-<p id="p-133">Let \(\phi\colon G\to H\) be a homomorphism of groups. Then \(G/\ker(\phi)\) is isomorphic to \(\phi(G)\) via the map \(g\ker(\phi) \to \phi(g)\text{.}\)</p></article><article class="definition definition-like" id="normalsubgroupdefn"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Normal subgroup.</span>
+<p id="p-209">Let \(\phi\colon G\to H\) be a homomorphism of groups. Then \(G/\ker(\phi)\) is isomorphic to \(\phi(G)\) via the map \(g\ker(\phi) \to \phi(g)\text{.}\)</p></article><article class="definition definition-like" id="normalsubgroupdefn"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Normal subgroup.</span>
 </h6>
-<p id="p-134">A subgroup \(H\) of a group \(G\) is called <dfn class="terminology">normal</dfn> if \(ghg^{-1}\in H\) for every \(g\in G\text{,}\) \(h\in H\text{.}\) We write \(H\trianglelefteq G\) to indicate that \(H\) is a normal subgroup of \(G\text{.}\)</p></article><article class="proposition theorem-like" id="normalsubgroupcharacterization"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of normal subgroups.</span>
+<p id="p-210">A subgroup \(H\) of a group \(G\) is called <dfn class="terminology">normal</dfn> if \(ghg^{-1}\in H\) for every \(g\in G\text{,}\) \(h\in H\text{.}\) We write \(H\trianglelefteq G\) to indicate that \(H\) is a normal subgroup of \(G\text{.}\)</p></article><article class="proposition theorem-like" id="normalsubgroupcharacterization"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of normal subgroups.</span>
 </h6>
-<p id="p-135">Let \(K\) be a subgroup of a group \(G\text{.}\) The following are equivalent.</p>
+<p id="p-211">Let \(K\) be a subgroup of a group \(G\text{.}\) The following are equivalent.</p>
 <ol class="decimal">
 <li id="kernelprop">\(K\) is the kernel of some group homomorphism \(\phi\colon G\to H\)</li>
-<li id="quotientgpprop">\(G/K\) is a group with multiplication given by <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a>
+<li id="quotientgpprop">\(G/K\) is a group with multiplication given by <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a>
 </li>
 <li id="normalprop">\(K\) is a normal subgroup of \(G\)</li>
 </ol></article><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
@@ -239,64 +243,80 @@ x\ker(\phi)\)</li>
 </h3>
 <div class="exercisegroup" id="homismbasicpropertiesexer">
 <h6 class="heading"><span class="title">Basic properties of homomorphisms</span></h6>
-<div class="introduction" id="introduction-7">Prove <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>.</div>
+<div class="introduction" id="introduction-7">Prove <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.3.5: Basic properties of homomorphisms">Proposition 2.3.5</a>.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-64"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-136">Prove <a class="xref" data-knowl="./knowl/idtoid.html" title="Item 1">Item 1</a> and <a class="xref" data-knowl="./knowl/invtoinv.html" title="Item 2">Item 2</a>.</p></article><article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-137">Prove <a class="xref" data-knowl="./knowl/kerissubgp.html" title="Item 3">Item 3</a> and <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>.</p></article><article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-138">Prove <a class="xref" data-knowl="./knowl/preimiskercoset.html" title="Item 5">Item 5</a> (<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like">Use <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.3.2: Construction of equivalence relations and partitions from functions">Fact 1.3.2</a>.</div></div>), <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a>  and <a class="xref" data-knowl="./knowl/injiffkertriv.html" title="Item 7">Item 7</a> .</p></article>
+<article class="exercise exercise-like" id="exercise-62"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-212">Prove <a class="xref" data-knowl="./knowl/idtoid.html" title="Item 1">Item 1</a> and <a class="xref" data-knowl="./knowl/invtoinv.html" title="Item 2">Item 2</a>.</p></article><article class="exercise exercise-like" id="exercise-63"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-213">Prove <a class="xref" data-knowl="./knowl/kerissubgp.html" title="Item 3">Item 3</a> and <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>.</p></article><article class="exercise exercise-like" id="exercise-64"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-214">Prove <a class="xref" data-knowl="./knowl/preimiskercoset.html" title="Item 5">Item 5</a> <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a>  and <a class="xref" data-knowl="./knowl/injiffkertriv.html" title="Item 7">Item 7</a> .</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-215">Use <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a>.</p></div></div>
+</div></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="gmodkisgroupexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-8">Prove <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a>.</div>
-<p id="p-139">For the "if" direction, let \(K=\ker(\phi)\) for some homomorphism \(\phi \colon G\to G'\) for some group \(G'\text{.}\) By  <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a> of <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>, we have a one-to-one correspondence \(G/K\leftrightarrow \phi(G)\text{.}\) The group structure of \(\phi(G)\) (see <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>) induces the group multiplication <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> on \(G/K\text{.}\) For the "only if" direction, suppose \(G/K\) is a group under the operation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a>. Let \(\phi\colon G\to G/K\) be given by \(g\to gK\text{,}\) and show that \(K=\ker(\phi)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-140">Let \(n,a\) be positive integers. Show that the map \(\Z_n\to \Z_n\) given by \(x\to ax\) is an isomorphism if and only if \(n,a\) are relatively prime.</p></article><div class="exercisegroup" id="conjugation">
+<p id="p-216">Prove <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a>.</p></article><article class="commentary" id="commentary-48"><h5 class="heading"><span class="title">Solution to Proposition 2.3.6..</span></h5>
+<p id="p-217">For the "if" direction, let \(K=\ker(\phi)\) for some homomorphism \(\phi \colon G\to G'\) for some group \(G'\text{.}\) By  <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a> of <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.3.5: Basic properties of homomorphisms">Proposition 2.3.5</a>, we have a one-to-one correspondence \(G/K\leftrightarrow \phi(G)\text{.}\) The group structure of \(\phi(G)\) (see <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>) induces the group multiplication <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a> on \(G/K\text{.}\) For the "only if" direction, suppose \(G/K\) is a group under the operation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a>. Let \(\phi\colon G\to G/K\) be given by \(g\to gK\text{.}\) Then it is easy to check that \(K=\ker(\phi)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-218">Let \(n,a\) be positive integers. Show that the map \(\Z_n\to \Z_n\) given by \(x\to ax\) is an isomorphism if and only if \(n,a\) are relatively prime.</p></article><article class="exercise exercise-like" id="exercise-67"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The integers modulo \(n\).</span>
+</h6>
+<p id="p-219">Let \(n\geq 1\) be an integer and let \(\omega=e^{i2\pi/n}\text{.}\) Let \(\phi\colon
+\Z\to S^1\) be given by \(k\to \omega^k\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-145">Show the the image of \(\phi\) is the group of \(n\)th roots of unity.</li>
+<li id="li-146">Show that the kernel of \(\phi\) is the set \(n\Z=\{nk\colon k\in \Z\}\text{.}\)</li>
+<li id="li-147">Conclude that \(\Z/\!(n\Z)\) is isomorphic to the group of \(n\)-th roots of unity.</li>
+</ol></article><article class="exercise exercise-like" id="exercise-68"><h6 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Isomorphic images of generators are generators.</span>
+</h6>
+<p id="p-220">Suppose that a group \(G\) is generated by a set \(S\text{,}\) so that \(G=\langle S\rangle\text{.}\) Let \(\phi\colon
+G\to H\) be an isomorphism of groups, and let \(\phi(S)=\{\phi(s)\colon s\in S\}\text{.}\) Show that \(H=\langle \phi(S)\rangle\text{.}\)</p></article><div class="exercisegroup" id="conjugation">
 <h6 class="heading"><span class="title">Conjugation</span></h6>
-<div class="introduction" id="introduction-9">Let \(G\) be a group, let \(a\) be an element of \(G\text{,}\) and let \(C_a\colon G\to G\) be given by \(C_a(g)=aga^{-1}\text{.}\) The map \(C_a\) is called <dfn class="terminology">conjugation</dfn> by the element \(a\text{.}\) </div>
+<div class="introduction" id="introduction-8">Let \(G\) be a group, let \(a\) be an element of \(G\text{,}\) and let \(C_a\colon G\to G\) be given by \(C_a(g)=aga^{-1}\text{.}\) The map \(C_a\) is called <dfn class="terminology">conjugation</dfn> by the element \(a\text{.}\) </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="conjisiso"><h6 class="heading">
-<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Conjugation by an element is an isomorphism.</span>
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Conjugation by an element is an isomorphism.</span>
 </h6>
-<p id="p-141">Show that \(C_a\) is an isomorphism of \(G\) with itself.</p></article><article class="exercise exercise-like" id="conjequivrel"><h6 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Conjugation induces an equivalence relation.</span>
+<p id="p-221">Show that \(C_a\) is an isomorphism of \(G\) with itself.</p></article><article class="exercise exercise-like" id="conjequivrel"><h6 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Conjugation induces an equivalence relation.</span>
 </h6>
-<p id="p-142">Show that ``is conjugate to'' is an equivalence relation. That is, consider the relation on \(G\) given by \(x\sim y\) if \(y=C_a(x)\) for some \(a\text{.}\) Show that this is an equivalence relation.</p></article>
+<p id="p-222">Show that ``is conjugate to'' is an equivalence relation. That is, consider the relation on \(G\) given by \(x\sim y\) if \(y=C_a(x)\) for some \(a\text{.}\) Show that this is an equivalence relation.</p></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="isoisequivrel"><h6 class="heading">
-<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Isomorphism induces an equivalence relation.</span>
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Isomorphism induces an equivalence relation.</span>
 </h6>
-<p id="p-143">Prove that ``is isomorphic to'' is an equivalence relation on groups. That is, consider the relation \(\approx\) on the set of all groups, given by \(G\approx H\) if there exists a group isomorphism \(\phi\colon G\to H\text{.}\) Show that this is an equivalence relation.</p></article><div class="exercisegroup" id="normalsubgroupcharacterizationexer">
+<p id="p-223">Prove that ``is isomorphic to'' is an equivalence relation on groups. That is, consider the relation \(\approx\) on the set of all groups, given by \(G\approx H\) if there exists a group isomorphism \(\phi\colon G\to H\text{.}\) Show that this is an equivalence relation.</p></article><div class="exercisegroup" id="normalsubgroupcharacterizationexer">
 <h6 class="heading"><span class="title">Characterizaton of normal subgroups</span></h6>
-<div class="introduction" id="introduction-10">Prove <a class="xref" data-knowl="./knowl/normalsubgroupcharacterization.html" title="Proposition 2.4.9: Characterization of normal subgroups">Proposition 2.4.9</a>. That <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> is equivalent to <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a> is established by <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a>.</div>
+<div class="introduction" id="introduction-9">Prove <a class="xref" data-knowl="./knowl/normalsubgroupcharacterization.html" title="Proposition 2.3.9: Characterization of normal subgroups">Proposition 2.3.9</a>. That <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> is equivalent to <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a> is established by <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a>.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-144">Show that <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a>.</p></article><article class="exercise exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-145">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a>. The messy part of this proof is to show that multiplication of cosets is well-defined. This means you start by supposing that \(xK=x'K\) and \(yK=y'K\text{,}\) then show that \(xyK=x'y'K\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-74"><h6 class="heading">
-<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Further characterizations of normal subgroups.</span>
+<article class="exercise exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-224">Show that <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a>.</p></article><article class="exercise exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-225">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a>. The messy part of this proof is to show that multiplication of cosets is well-defined. This means you start by supposing that \(xK=x'K\) and \(yK=y'K\text{,}\) then show that \(xyK=x'y'K\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-74"><h6 class="heading">
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Further characterizations of normal subgroups.</span>
 </h6>
-<p id="p-146">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> is equivalent to the following conditions.</p>
+<p id="p-226">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> is equivalent to the following conditions.</p>
 <ol class="lower-alpha">
-<li id="li-83">\(gKg^{-1}= K\) for all \(g\in G\)</li>
-<li id="li-84">gK = Kg for all \(g\in G\)</li>
+<li id="li-148">\(gKg^{-1}= K\) for all \(g\in G\)</li>
+<li id="li-149">gK = Kg for all \(g\in G\)</li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="automorphismexer">
 <h6 class="heading"><span class="title">Automorphisms</span></h6>
-<div class="introduction" id="introduction-11">Let \(G\) be a group. An <dfn class="terminology">automorphism</dfn> of \(G\) is an isomorphism from \(G\) to itself. The set of all automorphisms of \(G\) is denoted \(\Aut(G)\text{.}\)</div>
+<div class="introduction" id="introduction-10">Let \(G\) be a group. An <dfn class="terminology">automorphism</dfn> of \(G\) is an isomorphism from \(G\) to itself. The set of all automorphisms of \(G\) is denoted \(\Aut(G)\text{.}\)</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-75"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-147">Let \(g\) be an element of a group \(G\text{.}\) Show that the map \(C_g\colon G\to G\) is an automorphism of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-76"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-148">Show that \(\Aut(G)\) is a group under the operation of function composition.</p></article><article class="exercise exercise-like" id="exercise-77"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-149">Show that</p>
+<article class="exercise exercise-like" id="exercise-75"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-227">Let \(g\) be an element of a group \(G\text{.}\) Show that the map \(C_g\colon G\to G\) is an automorphism of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-76"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-228">Show that \(\Aut(G)\) is a group under the operation of function composition.</p></article><article class="exercise exercise-like" id="exercise-77"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-229">Show that</p>
 <div class="displaymath">
 \begin{equation*}
 \Inn(G) := \{C_g\colon g\in G\}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a subgroup of  \(\Aut(G)\text{.}\) (The group \(\Inn(G)\) is called the group of <dfn class="terminology">inner automorphisms</dfn> of \(G\text{.}\))</p></article><article class="exercise exercise-like" id="exercise-78"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-150">Find an example of an automorphism of a group that is not an inner automorphism.</p></article>
+<p data-braille="continuation">is a subgroup of  \(\Aut(G)\text{.}\) (The group \(\Inn(G)\) is called the group of <dfn class="terminology">inner automorphisms</dfn> of \(G\text{.}\))</p></article><article class="exercise exercise-like" id="exercise-78"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-230">Find an example of an automorphism of a group that is not an inner automorphism.</p></article>
 </div>
 </div></section></section></div></main>
 </div>

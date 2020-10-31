@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:51-04:00       *-->
+<!--*       on 2020-10-31T14:00:17-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>A permutation \(\sigma\) of \(X=\{1,2,\ldots,n\}\) can be specified by a list of values \([\sigma(1),\sigma(2),\ldots,\sigma(n)]\text{.}\)<a class="fn-knowl original" data-knowl="./knowl/fn-2-hidden.html" title="Footnote 2.1.1"><sup> 1 </sup></a> For example, the list \([3,1,2]\) specifies the permutation \(\sigma\colon \{1,2,3\}\to\{1,2,3\}\) given by</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
+<ol class="decimal">
+<li>Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge \(f=(X,Y)\) denotes a function \(f\colon
+X\to Y\text{.}\)</li>
+<li>Whenever there are two paths from an initial vertex \(X\) to a final vertex \(Y\text{,}\) the composition of functions along one path is equal to the composition of functions along the other path. That is, if \(X_0,X_1,\ldots,X_n\) is a path with edges \(f_i\colon X_{i-1}\to X_{i}\) for \(1\leq i\leq n\) and \(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\) is a path with edges \(g_i\colon Y_{i-1}\to Y_{i}\) for \(1\leq i\leq
+m\text{,}\) then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.
+f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
+g_{m-1}\circ\cdots\circ g_1.
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(\tau=[2,1,3]\text{.}\) Find \(\sigma\tau\text{,}\) \(\tau\sigma\text{,}\) and \(\sigma^2=\sigma\sigma\text{.}\)</p>
-<span class="incontext"><a href="groupintrosection.html#p-118">in-context</a></span>
+</li>
+</ol>
+<span class="incontext"><a href="section-4.html#p-118">in-context</a></span>
 </body>
 </html>

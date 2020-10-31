@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T13:32:21-04:00       *-->
+<!--*       on 2020-10-29T15:55:31-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,60 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Cross ratio.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Identifications of \(U(\Quat)\) and \(\S\) with \(\Rot(S^2)\).</span>
 </h6>
-<p>The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geomentry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
+<p>The discussion of elliptic geometry (<a href="elliptic_geometry_section.html" class="internal" title="Section 3.4: Elliptic geometry">Section 3.4</a>) establishes two ways to construct rotations from matrices. The purpose of this exercise is to reconcile these identifications. Given \(a,b\in \C\) with \(|a|^2+|b|^2=1\text{,}\) let us define the objects</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
+M_{a,b}\in SU(2),T_{a,b}\in
+\S,R_{T_{a,b}}\in \Rot(S^2),r_{a,b}\in
+U(\Quat),R_{r_{a,b}}\in \Rot(S_\Quat^2)
 \end{equation*}
 </div>
-<p data-braille="continuation">in \(\Proj_1\) to the points \(1,0,\infty\) in \(\extF\text{,}\) respectively. Let \((\cdot,P_1,P_2,P_3)\) denote the unique projective transformation \([T]\) that takes \(P_1,P_2,P_3\) to \([e_0],[e_2],[e_1]\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cross ratio</dfn> \((P_0,P_1,P_2,P_3)\) is defined to be \(\mu([T](P_0))\text{.}\)</p>
+<p data-braille="continuation">as follows.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+M_{a,b} \amp =\left[\begin{array}{cc}{a}\amp
+{b}\\{-b^\ast}\amp {a^\ast}\end{array}\right]\\
+T_{a,b} \amp = \left[z\to \frac{az+b}{-b^\ast
+z+a^\ast}\right] \;\;\text{for }z\in \extC\\
+R_{T_{a,b}} \amp = s^{-1}\circ T\circ s\\
+r_{a,b}\amp = a+bi+cj+dk \\
+R_{r_{a,b}}\amp = \left[u\to
+r_{a,b}ur_{a,b}^\ast\right]\;\; \text{for }u\in \S^2_\Quat
+\end{align*}
+</div>
+<p data-braille="continuation">Let's call the following sequence of mappings the "Möbius path" from \(SU(2)\) to \(\Rot(S^2)\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+SU(2)\amp \to \S  \to \Rot(S^2)\tag{3.5.3}\\
+M_{a,b} \amp
+\to T_{a,b} \to R_{T_{a,b}}\tag{3.5.4}
+\end{align}
+</div>
+<p data-braille="continuation">and let's call this next sequence the "quaternion path".</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+SU(2)\amp \to U(\Quat)  \to \Rot(S^2_\Quat)\tag{3.5.5}\\
+M_{a,b} \amp
+\to r_{a,b} \to R_{r_{a,b}}\tag{3.5.6}
+\end{align}
+</div>
 <ol class="lower-alpha">
-<li>Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{.}\)</li>
-<li>Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>Show that \(R_{T_{a,b}} = R_{v,\theta}\) with \(v=(\im(b),-\re(b),\im(a))\) and \(\theta =2\arccos(a)\text{.}\)</li>
+<li>Show that \(R_{r_{a,b}} = R_{v,\theta}\) with \(v=(\im(a),\re(b),\im(b))\) and \(\theta =2\arccos(a)\text{.}\)</li>
+<li>Here is one way to reconcile the mismatch of the axis vectors in parts (a) and (b). Let<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
+M_{a',b'} = (iH)M_{a,b}(iH)^{-1}
 \end{equation*}
-</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) <a class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 3.5.5.4.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a>
-</li>
-</ol></article><span class="incontext"><a href="section-15.html#exercise-166">in-context</a></span>
+</div>where \(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1\amp 1 \\ 1\amp -1\end{array}\right]\) is the <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Hadamard</em> matrix. Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+R_{T_{a,b}}= R_{r_{a',b'}}
+\end{equation*}
+</div>that is, the diagram in <a class="xref" data-knowl="./knowl/rot_id_fig.html" title="Figure 3.5.1">Figure 3.5.1</a> commutes.</li>
+</ol>
+<p data-braille="continuation"><figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/rot_id_diagram.png" style="width: 100%; height: auto;" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.1<span class="period">.</span></span><span class="space"> </span>The map \(C_{iH}\) is given by \(C_{iH}(T)=(iH)T(iH)^{-1}\text{.}\) The column of maps on the left is the "Möbius path", and the column of maps on the right is the "quaternion path".</figcaption></figure></p></article><span class="incontext"><a href="geometry_extra_exer_section.html#exercise-166">in-context</a></span>
 </body>
 </html>

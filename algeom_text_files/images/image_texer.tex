@@ -121,12 +121,21 @@ Figure~\ref{#2}\\ #7
 %% }
 %% \hfill\spacer
 
-%%%% commutative diagram for conjugate transformation definition
+%% %%%% commutative diagram for conjugate transformation definition
+%% \hfill
+%% \xymatrix{
+%%   SU(2) \ar[r]^{C_{iH}} \ar[d] & SU(2)\ar[d]\\
+%%   \Sgroup \ar[d] & U(\Quat) \ar[d]\\
+%% \Rot(S^2) \ar@{<->}[r] & \Rot(S^2_\Quat)
+%% }
+%% \hfill\spacer
+
+%%%% commutative diagram for integers mod n distributive law
 \hfill
 \xymatrix{
-  SU(2) \ar[r]^{C_{iH}} \ar[d] & SU(2)\ar[d]\\
-  \Sgroup \ar[d] & U(\Quat) \ar[d]\\
-\Rot(S^2) \ar@{<->}[r] & \Rot(S^2_\Quat)
+  \Z_n\times \Z_n \ar[r]^{\text{add}} \ar[d]_{(\text{times }[x]) \times
+    (\text{ times }[x])} & \Z_n\ar[d]^{\text{times }[x]}\\
+  \Z_n\times \Z_n \ar[r]_{\text{add}} & \Z_n 
 }
 \hfill\spacer
 

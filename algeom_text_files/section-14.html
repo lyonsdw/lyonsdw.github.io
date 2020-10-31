@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-12T21:26:17-04:00       *-->
+<!--*       on 2020-10-28T11:15:04-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,8 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
 \DeclareMathOperator{\Stab}{Stab}
@@ -65,6 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\image}{image}      
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -79,9 +81,9 @@ MathJax.Hub.Config({
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
 \newcommand{\E}{{\rm \bf E}} 
-\newcommand{\H}{{\rm \bf H}} 
+\renewcommand{\H}{{\rm \bf H}} 
 \newcommand{\HU}{\H_{\U}} 
-\newcommand{\S}{{\rm \bf S}} 
+\renewcommand{\S}{{\rm \bf S}} 
 \newcommand{\D}{\mathbb{D}} 
 \newcommand{\closedD}{\hat{\D}} 
 \newcommand{\U}{\mathbb{U}} 
@@ -112,13 +114,18 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+</ul>
 </li>
 <li class="link">
 <a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
 <li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Equivalence Relations</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
@@ -126,16 +133,15 @@ MathJax.Hub.Config({
 <li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
 <li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
 <li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group homomorphisms</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group actions</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
 <li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
 <li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Möbius geometry</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Hyperbolic geometry</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
 <li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
 <li><a href="section-14.html" data-scroll="section-14" class="active">Projective geometry</a></li>
 <li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
@@ -149,20 +155,20 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-14"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Projective geometry</span>
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Projective geometry</span>
 </h2>
-<section class="introduction" id="introduction-19"><p id="p-303">Early motivation for the development of projective geometry came from renaissance artists trying to solve practical problems in perspective drawing and painting. In this section, we present a modern Kleinian version of projective geometry.</p>
-<p id="p-304">Throughout this section, \(\F\) is a field, \(V\) is a vector space over \(\F\text{,}\) \(\Proj(V)=V^\ast/\F^\ast\) is the projective space, and \(PGL(V)=GL(V)/\F^\ast\) is the projective transformation group. See <a class="xref" data-knowl="./knowl/projspaceandgroupexer.html" title="Exercise 2.5.2.4: The projective linear group action on projective space">Exercise 2.5.2.4</a> for definitions and details. We will write \([T]\) for the projective transformation that is the equivalence class of the linear transformation \(T\) of \(V\text{.}\)</p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span>
+<section class="introduction" id="introduction-16"><p id="p-443">Early motivation for the development of projective geometry came from renaissance artists trying to solve practical problems in perspective drawing and painting. In this section, we present a modern Kleinian version of projective geometry.</p>
+<p id="p-444">Throughout this section, \(\F\) is a field, \(V\) is a vector space over \(\F\text{,}\) \(\Proj(V)=V^\ast/\F^\ast\) is the projective space, and \(PGL(V)=GL(V)/\F^\ast\) is the projective transformation group. See <a class="xref" data-knowl="./knowl/projspaceandgroupexer.html" title="Exercise 2.5.3.6: The projective linear group action on projective space">Exercise 2.5.3.6</a> for definitions and details. We will write \([T]\) for the projective transformation that is the equivalence class of the linear transformation \(T\) of \(V\text{.}\)</p></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Projective points, lines, and flats</span>
 </h3>
-<p id="p-305">Points in projective space correspond bijectively to 1-dimensional subspaces of \(V\) via</p>
+<p id="p-445">Points in projective space correspond bijectively to 1-dimensional subspaces of \(V\) via</p>
 <div class="displaymath">
 \begin{equation*}
 [v] \leftrightarrow \{\alpha v\colon \alpha\in\F\}.
 \end{equation*}
 </div>
 <p data-braille="continuation">The set of 1-dimensional subspaces in \(V\text{,}\) denoted \(G(1,V)\text{,}\) is an alternative model space for projective geometry. We will usually denote points in projective space using capital letters, such as \(P\text{,}\) \(Q\text{,}\) etc.</p>
-<p id="p-306">A <dfn class="terminology">line</dfn> in projective space is a set of the form</p>
+<p id="p-446">A <dfn class="terminology">line</dfn> in projective space is a set of the form</p>
 <div class="displaymath">
 \begin{equation*}
 \ell_\Pi=\{[v]\colon v\in \Pi\}
@@ -175,24 +181,24 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p data-braille="continuation">The set of 2-dimensional subspaces in \(V\) is denoted \(G(2,V)\text{.}\) We will usually denote projective lines using lower case letters, such as \(\ell\text{,}\) \(m\text{,}\) etc.</p>
-<p id="p-307">There is an offset by 1 in the use of the word "dimension" in regards to subsets of \(\Proj(V)\) and the corresponding subspace in \(V\text{.}\) In general, a <dfn class="terminology">\(k\)-dimensional flat</dfn> in \(\Proj(V)\) is a set of the form \(\{[v]\colon v\in G(k+1,V)\}\text{,}\) where \(G(d,V)\) denotes the set of \(d\)-dimensional subspaces of \(V\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a> Flats are also called <em class="emphasis">subspaces</em> in projective space, even though projective space is not a vector space.</p>
+<p id="p-447">There is an offset by 1 in the use of the word "dimension" in regards to subsets of \(\Proj(V)\) and the corresponding subspace in \(V\text{.}\) In general, a <dfn class="terminology">\(k\)-dimensional flat</dfn> in \(\Proj(V)\) is a set of the form \(\{[v]\colon v\in G(k+1,V)\}\text{,}\) where \(G(d,V)\) denotes the set of \(d\)-dimensional subspaces of \(V\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a> Flats are also called <em class="emphasis">subspaces</em> in projective space, even though projective space is not a vector space.</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">The set \(G(d,V)\) is called the <dfn class="terminology">Grassmannian</dfn> of \(d\)-dimensional subspaces of \(V\text{,}\) named in honor of Hermann Grassmann.</div></div>
-<p id="p-308">Points \(P_1=[v_1],P_2=[v_2],\ldots,P_k=[v_k]\) are said to be in <dfn class="terminology">general position</dfn> if the vectors \(v_1,v_2,\ldots,v_k\) are independent in \(V\text{.}\)</p></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Coordinates</span>
+<p id="p-448">Points \(P_1=[v_1],P_2=[v_2],\ldots,P_k=[v_k]\) are said to be in <dfn class="terminology">general position</dfn> if the vectors \(v_1,v_2,\ldots,v_k\) are independent in \(V\text{.}\)</p></section><section class="subsection" id="subsection-46"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">Coordinates</span>
 </h3>
-<p id="p-309">For the remainder of this section, we consider \(V=\F^{n+1}\text{.}\) For readability, we will write \(P=[v]=[x_0,x_1,x_2,\ldots,x_{n}]\) (rather than the more cumbersome \([(x_0,x_1,x_2,\ldots,x_n)]\)) to denote the point in projective space that is the projective equivalence class of the point \(v=(x_0,x_1,x_2,\ldots,x_{n})\) in \(\F^{n+1}\text{.}\) The entries \(x_i\) are called <dfn class="terminology">homogeneous coordinates</dfn> of \(P\text{.}\) If \(x_0\neq 0\text{,}\) then</p>
+<p id="p-449">For the remainder of this section, we consider \(V=\F^{n+1}\text{.}\) For readability, we will write \(P=[v]=[x_0,x_1,x_2,\ldots,x_{n}]\) (rather than the more cumbersome \([(x_0,x_1,x_2,\ldots,x_n)]\)) to denote the point in projective space that is the projective equivalence class of the point \(v=(x_0,x_1,x_2,\ldots,x_{n})\) in \(\F^{n+1}\text{.}\) The entries \(x_i\) are called <dfn class="terminology">homogeneous coordinates</dfn> of \(P\text{.}\) If \(x_0\neq 0\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 P=[x_0,x_1,x_2,\ldots,x_n]=\left[1,\frac{x_1}{x_0},\frac{x_2}{x_0},\ldots,\frac{x_n}{x_0}\right].
 \end{equation*}
 </div>
-<p data-braille="continuation">The numbers \(x_i/x_0\) for \(1\leq i\leq n\) are called <dfn class="terminology">inhomogeneous coordinates</dfn> for \(P\text{.}\) The \(n\) degrees of freedom that are apparent in inhomgeneous coordinates explain why \(\Proj(\F^{n+1})\) is called \(n\)-dimensional. Many texts write \(\F\Proj(n)\text{,}\) \(\F\Proj_n\text{,}\) or simply \(\Proj_n\) when \(\F\) is understood, to denote \(\Proj(\F^{n+1})\text{.}\)</p></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span>
+<p data-braille="continuation">The numbers \(x_i/x_0\) for \(1\leq i\leq n\) are called <dfn class="terminology">inhomogeneous coordinates</dfn> for \(P\text{.}\) The \(n\) degrees of freedom that are apparent in inhomgeneous coordinates explain why \(\Proj(\F^{n+1})\) is called \(n\)-dimensional. Many texts write \(\F\Proj(n)\text{,}\) \(\F\Proj_n\text{,}\) or simply \(\Proj_n\) when \(\F\) is understood, to denote \(\Proj(\F^{n+1})\text{.}\)</p></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">Freedom in projective transformations</span>
 </h3>
-<p id="p-310">In an \(n\)-dimensional vector space, any \(n\) independent vectors can be mapped to any other set of \(n\) independent vectors by a linear transformation. Therefore it seems a little surprising that in \(n\)-dimensional projective space \(\F\Proj_n=\Proj(\F^{n+1})\text{,}\) it is possible to map any set of \(n+2\) points to any other set of \(n+2\) points, provided both sets of points meet sufficient "independence" conditions.  This subsection gives the details of this result, called the Fundamental Theorem of Projective Geometry.</p>
-<p id="p-311">Let \(e_1,e_2,\ldots, e_n,e_{n+1}\) denote the standard basis vectors for \(\F^{n+1}\) and let \(e_0=\sum_{i=1}^{n+1}e_i\text{.}\) Let \(v_1,v_2,\ldots,v_n\) be another basis for \(\F^{n+1}\) and let \(c_1,c_2,\ldots,c_{n+1}\) be nonzero scalars. Let \(T\) be the linear transformation \(T\) of \(\F^{n+1}\) given by \(e_i\to c_iv_i\) for \(1\leq i\leq
+<p id="p-450">In an \(n\)-dimensional vector space, any \(n\) independent vectors can be mapped to any other set of \(n\) independent vectors by a linear transformation. Therefore it seems a little surprising that in \(n\)-dimensional projective space \(\F\Proj_n=\Proj(\F^{n+1})\text{,}\) it is possible to map any set of \(n+2\) points to any other set of \(n+2\) points, provided both sets of points meet sufficient "independence" conditions.  This subsection gives the details of this result, called the Fundamental Theorem of Projective Geometry.</p>
+<p id="p-451">Let \(e_1,e_2,\ldots, e_n,e_{n+1}\) denote the standard basis vectors for \(\F^{n+1}\) and let \(e_0=\sum_{i=1}^{n+1}e_i\text{.}\) Let \(v_1,v_2,\ldots,v_n\) be another basis for \(\F^{n+1}\) and let \(c_1,c_2,\ldots,c_{n+1}\) be nonzero scalars. Let \(T\) be the linear transformation \(T\) of \(\F^{n+1}\) given by \(e_i\to c_iv_i\) for \(1\leq i\leq
 n+1\text{.}\) Projectively, \([T]\) sends \([e_i]\to [v_i]\) and \([e_0]\to [\sum_i c_iv_i]\text{.}\)</p>
-<p id="p-312">Now suppose there is another map \([S]\) that agrees with \([T]\) on the \(n+2\) points \([e_0],[e_1],[e_2],\ldots,[e_{n+1}]\text{.}\) Then \([U]:=[S]^{-1}\circ
+<p id="p-452">Now suppose there is another map \([S]\) that agrees with \([T]\) on the \(n+2\) points \([e_0],[e_1],[e_2],\ldots,[e_{n+1}]\text{.}\) Then \([U]:=[S]^{-1}\circ
 [T]\) fixes all the points \([e_0],[e_1],[e_2],\ldots,[e_{n+1}]\text{.}\) This means that \(Ue_i=k_ie_i\) for some nonzero scalars \(k_1,k_2,\ldots,k_{n+1}\) and that \(Ue_0=k'e_0\) for some \(k'\neq 0\text{.}\) This implies</p>
 <div class="displaymath">
 \begin{equation*}
@@ -201,47 +207,47 @@ n+1\text{.}\) Projectively, \([T]\) sends \([e_i]\to [v_i]\) and \([e_0]\to [\su
 </div>
 <p data-braille="continuation">so we have \(k'=k_1=k+2=\cdots k_{n+1}\text{.}\) Therefore \([U]\) is the identity transformation, so \([S]=[T]\text{.}\) We have just proved the following existence and uniqueness lemma.</p>
 <article class="lemma theorem-like" id="fundthmprojgeomlemma"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-313">Let \(v_1,v_2,\ldots,v_{n+1}\) be an independent set of vectors in \(\F^{n+1}\) and let \(v_0=\sum_{i=1}^{n+1}c_iv_i\) for some nonzero scalars \(c_1,c_2,\ldots,c_{n+1}\text{.}\) There exists a unique projective transformation that maps \([e_i]\to [v_i]\) for \(0\leq i\leq n+1\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Projective Geometry.</span>
+<p id="p-453">Let \(v_1,v_2,\ldots,v_{n+1}\) be an independent set of vectors in \(\F^{n+1}\) and let \(v_0=\sum_{i=1}^{n+1}c_iv_i\) for some nonzero scalars \(c_1,c_2,\ldots,c_{n+1}\text{.}\) There exists a unique projective transformation that maps \([e_i]\to [v_i]\) for \(0\leq i\leq n+1\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Projective Geometry.</span>
 </h6>
-<p id="p-314">Let \(P_0,P_1,P_2,\ldots,P_{n+1}\) be a set of \(n+2\) points in \(\Proj(\F^{n+1})\) such that all subsets of size \(n+1\) are in general position. Let \(Q_0,Q_1,Q_2,\ldots,Q_{n+1}\) be another such set. There exists a unique projective transformation that maps \(P_i\to Q_i\text{,}\) \(0\leq i\leq n+1\text{.}\)</p></article></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span>
+<p id="p-454">Let \(P_0,P_1,P_2,\ldots,P_{n+1}\) be a set of \(n+2\) points in \(\Proj(\F^{n+1})\) such that all subsets of size \(n+1\) are in general position. Let \(Q_0,Q_1,Q_2,\ldots,Q_{n+1}\) be another such set. There exists a unique projective transformation that maps \(P_i\to Q_i\text{,}\) \(0\leq i\leq n+1\text{.}\)</p></article></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.4</span> <span class="title">The real projective plane</span>
 </h3>
-<p id="p-315">The remainder of this section is devoted to the planar geometry \(\Proj(\R^3)=\R\Proj_2\) called the <dfn class="terminology">real projective plane</dfn>. It is of historical interest because of its early practical use by artists. Lines through the origin in \(\R^3\) model sight lines in the real world as seen from an eye placed at the origin. A plane that does not pass through the origin models the "picture plane" of the artist's canvas. <a class="xref" data-knowl="./knowl/durerpicture.html" title="Figure 3.5.3">Figure 3.5.3</a> shows a woodcut by Albrecht Dürer that illustrates a "perspective machine" gadget used by 16th century artists to put the projective model into practice for image making.</p>
+<p id="p-455">The remainder of this section is devoted to the planar geometry \(\Proj(\R^3)=\R\Proj_2\) called the <dfn class="terminology">real projective plane</dfn>. It is of historical interest because of its early practical use by artists. Lines through the origin in \(\R^3\) model sight lines in the real world as seen from an eye placed at the origin. A plane that does not pass through the origin models the "picture plane" of the artist's canvas. <a class="xref" data-knowl="./knowl/durerpicture.html" title="Figure 3.4.3">Figure 3.4.3</a> shows a woodcut by Albrecht Dürer that illustrates a "perspective machine" gadget used by 16th century artists to put the projective model into practice for image making.</p>
 <figure class="figure figure-like" id="durerpicture"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/durerperspective.jpg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.3<span class="period">.</span></span><span class="space"> </span><em class="emphasis">Man drawing a lute</em>, Albrecht Dürer, 1525.</figcaption></figure><p id="p-316">A two dimensional subspace \(\Pi\) in \(\R^3\) is specified by a normal vector \(n=(n_1,n_2,n_3)\) via the equation \(n\cdot v=0\text{,}\) that is, a point \(v=(x,y,z)\) lies on \(\Pi\) with normal vector \(n\) if and only if \(n\cdot
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span><em class="emphasis">Man drawing a lute</em>, Albrecht Dürer, 1525.</figcaption></figure><p id="p-456">A two dimensional subspace \(\Pi\) in \(\R^3\) is specified by a normal vector \(n=(n_1,n_2,n_3)\) via the equation \(n\cdot v=0\text{,}\) that is, a point \(v=(x,y,z)\) lies on \(\Pi\) with normal vector \(n\) if and only if \(n\cdot
 v=n_1x+n_2y+n_3z=0\text{.}\) Any nonzero multiple of \(n\) is also a normal vector for \(\Pi\text{,}\) so the set \(G(2,\R)\) of 2-dimensional subspaces in \(\R^3\) is in one-to-one correspondence \(\R^3/\R^\ast\text{.}\) We will write \(\ell=[n]=[n_1,n_2,n_3]\) to denote the projective line \(\ell\) whose corresponding 2-dimensional subspace in \(\R^3\) has normal vectors proportional to \((n_1,n_2,n_3)\text{.}\) Beware the overloaded notation! Whether the equivalence class \([v]\) of a vector \(v\) in \(\R^3\) denotes a projective point or a projective line has to be specified.</p>
-<p id="p-317">The equation \(n\cdot v=0\) makes sense <em class="emphasis">projectively</em>. This means that if \(n\cdot
+<p id="p-457">The equation \(n\cdot v=0\) makes sense <em class="emphasis">projectively</em>. This means that if \(n\cdot
 v=0\) for vectors \(n,v\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation}
 (\alpha
 n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
-\F^\ast\text{,}\label{projdotprodzero}\tag{3.5.1}
+\F^\ast\text{,}\label{projdotprodzero}\tag{3.4.1}
 \end{equation}
 </div>
-<p data-braille="continuation">even though the value of the dot product is <em class="emphasis">not</em> well-defined for projective equivalence classes! Thus we will write \(\ell\cdot P=[n_1,n_2,n_3]\cdot [x,y,z]=0\) for a projective line \(\ell=[n_1,n_2,n_3]\) and a projective point \(P=[x,y,z]\text{,}\) to mean <a class="xref" data-knowl="./knowl/projdotprodzero.html" title="Equation 3.5.1">(3.5.1)</a>, and we make the following interpretation of the dot product as an <em class="emphasis">incidence relation</em> in \(\R\Proj_2\text{.}\)</p>
+<p data-braille="continuation">even though the value of the dot product is <em class="emphasis">not</em> well-defined for projective equivalence classes! Thus we will write \(\ell\cdot P=[n_1,n_2,n_3]\cdot [x,y,z]=0\) for a projective line \(\ell=[n_1,n_2,n_3]\) and a projective point \(P=[x,y,z]\text{,}\) to mean <a class="xref" data-knowl="./knowl/projdotprodzero.html" title="Equation 3.4.1">(3.4.1)</a>, and we make the following interpretation of the dot product as an <em class="emphasis">incidence relation</em> in \(\R\Proj_2\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 \ell \cdot P = 0 \;\; \Leftrightarrow
 \;\;P\;\;\text{lies on}\;\;\ell\;\;\Leftrightarrow
-\;\;\ell\;\;\text{contains}\;\;P. \tag{3.5.2}
+\;\;\ell\;\;\text{contains}\;\;P. \tag{3.4.2}
 \end{equation}
 </div>
 <p data-braille="continuation">Given two independent vectors \(v,w\) in \(\R^3\text{,}\) their cross product \(v\times w\) is a normal vector for the 2-dimensional space spanned by \(v,w\text{.}\) Given two 2-dimensional subspaces \(\Pi,\Sigma\) in \(\R^3\) with normal vectors \(n,m\text{,}\) the cross product \(n\times m\) is a vector that lies along the 1-dimensional subspace \(\Pi\cap\Sigma\text{.}\) The bilinearity of cross product implies that cross product is well-defined on projective classes, i.e., we can write \([u]\times [v]:=[u\times v]\text{.}\) Thus we have the following.</p>
-<article class="proposition theorem-like" id="proposition-21"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
+<article class="proposition theorem-like" id="proposition-20"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-318">Given two points \(P=[u],P'=[u']\) in \(\R\Proj_2\text{,}\) there is a unique projective line \(\overline{PP'}=[u\times u']\) that contains them. Given two lines \(\ell=[n],\ell'=[n']\) in \(\R\Proj_2\text{,}\) there is a unique projective point \([n\times n']\) in their intersection \(\ell\cap \ell'\text{.}\)</p></article></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">3.5.5</span> <span class="title">Exercises</span>
+<p id="p-458">Given two points \(P=[u],P'=[u']\) in \(\R\Proj_2\text{,}\) there is a unique projective line \(\overline{PP'}=[u\times u']\) that contains them. Given two lines \(\ell=[n],\ell'=[n']\) in \(\R\Proj_2\text{,}\) there is a unique projective point \([n\times n']\) in their intersection \(\ell\cap \ell'\text{.}\)</p></article></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.4.5</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-319">Use <a class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</p></article><article class="exercise exercise-like" id="chartexer"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-459">Use <a class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.4.1">Lemma 3.4.1</a> to prove the Fundamental Theorem of Projective Geometry.</p></article><article class="exercise exercise-like" id="chartexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Coordinate charts and inhomogeneous coordinates.</span>
 </h6>
-<p id="p-320">To facilitate thinking about the interplay between the projective geometry \(\Proj(\F^{n+1})=\F\Proj_n\) and the geometry of \(\F^{n}\) (rather than \(\F^{n+1}\text{!}\)) it is useful to have a careful definition for "taking inhomogeneous coordinates in position \(i\)". Here it is: Let \(U_i\) be the subset of \(\F\Proj_n\) of points whose homogeneous coordinate \(x_i\) is nonzero. Let \(\pi_i\colon U_i\to
+<p id="p-460">To facilitate thinking about the interplay between the projective geometry \(\Proj(\F^{n+1})=\F\Proj_n\) and the geometry of \(\F^{n}\) (rather than \(\F^{n+1}\text{!}\)) it is useful to have a careful definition for "taking inhomogeneous coordinates in position \(i\)". Here it is: Let \(U_i\) be the subset of \(\F\Proj_n\) of points whose homogeneous coordinate \(x_i\) is nonzero. Let \(\pi_i\colon U_i\to
 \F^n\) be given by</p>
 <div class="displaymath">
 \begin{equation*}
@@ -260,7 +266,7 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 <p data-braille="continuation">(where the circumflex hat indicates a deleted item from a sequence) is called the \(i\)-th <dfn class="terminology">coordinate chart</dfn> for \(\F\Proj_n\text{.}\) What is the map \(\C\to\C\) that results from applying the \(0\)-th coordinate chart \(\C\to \C\Proj_2\) followed by taking homogeneous coordinates in position 1?</p></article><article class="exercise exercise-like" id="mobiusgeomisprojectivegeom"><h6 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Möbius geometry is projective geomentry.</span>
 </h6>
-<p id="p-321">Show that Möbius geometry \((\extC,\M)\) and the projective geometry \((\Proj(\C^2),PGL(2))\) are equivalent via the map \(\mu\colon \C^2 \to \extC\) given by</p>
+<p id="p-461">Show that Möbius geometry \((\extC,\M)\) and the projective geometry \((\Proj(\C^2),PGL(2))\) are equivalent via the map \(\mu\colon \C^2 \to \extC\) given by</p>
 <div class="displaymath">
 \begin{equation}
 \mu(\alpha,\beta) = \left\{
@@ -268,14 +274,14 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 \alpha/\beta \amp \beta\neq 0\\
 \infty \amp \beta=0
 \end{array}
-\right..\label{mobiusmodelequivmap}\tag{3.5.3}
+\right..\label{mobiusmodelequivmap}\tag{3.4.3}
 \end{equation}
 </div>
 <p data-braille="continuation">Comment: Observe that \(\mu\) is an extension of \(\pi_0\colon
-U_0\to \C\) given by \(\pi_0([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>). </p></article><article class="exercise exercise-like" id="exercise-153"><h6 class="heading">
+U_0\to \C\) given by \(\pi_0([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.4.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.4.5.2</a>). </p></article><article class="exercise exercise-like" id="exercise-146"><h6 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Cross ratio.</span>
 </h6>
-<p id="p-322">The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geomentry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
+<p id="p-462">The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.4.5.3: Möbius geometry is projective geomentry">Exercise 3.4.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
 <div class="displaymath">
 \begin{equation*}
 [e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
@@ -283,12 +289,12 @@ U_0\to \C\) given by \(\pi_0([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="
 </div>
 <p data-braille="continuation">in \(\Proj_1\) to the points \(1,0,\infty\) in \(\extF\text{,}\) respectively. Let \((\cdot,P_1,P_2,P_3)\) denote the unique projective transformation \([T]\) that takes \(P_1,P_2,P_3\) to \([e_0],[e_2],[e_1]\text{.}\) The <dfn class="terminology">cross ratio</dfn> \((P_0,P_1,P_2,P_3)\) is defined to be \(\mu([T](P_0))\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-165">Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{.}\)</li>
-<li id="li-166">Show that<div class="displaymath">
+<li id="li-302">Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{.}\)</li>
+<li id="li-303">Show that<div class="displaymath">
 \begin{equation*}
 (P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
 \end{equation*}
-</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like">First find \([T]^{-1}\text{.}\) Solve<div class="displaymath">
+</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) Suggestion: First find \([T]^{-1}\text{.}\) Solve<div class="displaymath">
 \begin{equation*}
 (a_1,b_1) = x(a_3,b_3) + y(a_2,b_2)
 \end{equation*}
@@ -297,45 +303,44 @@ U_0\to \C\) given by \(\pi_0([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="
 [T]^{-1}\amp=\twotwo{xa_3}{ya_2}{xb_3}{yb_2}\\
 [T] \amp= \twotwo{yb_2}{-ya_2}{-xb_3}{xa_3}
 \end{align*}
-</div>Now just calculate \(\mu(T(a_0,b_0))\text{.}\)</div></div>
-</li>
-</ol></article><article class="exercise exercise-like" id="exercise-154"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-323">Show that every projective transformation of \(\R\Proj_2=\Proj(\R^3)\) has a fixed point. Is the same statement true for \(\Proj(\R^4)\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-155"><h6 class="heading">
+</div>Now just calculate \(\mu(T(a_0,b_0))\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="exercise-147"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-463">Show that every projective transformation of \(\R\Proj_2=\Proj(\R^3)\) has a fixed point. Is the same statement true for \(\Proj(\R^4)\text{?}\)</p></article><article class="exercise exercise-like" id="exercise-148"><h6 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Condition for collinearity in \(\R\Proj_2\).</span>
 </h6>
-<p id="p-324">Let \(u=(u_1,u_2,u_3),v=(v_1,v_2,v_3),w=(w_1,w_2,w_3)\) be vectors in \(\R^3\text{,}\) and let \(M\) be the matrix \(M=\left[\begin{array}{ccc}
+<p id="p-464">Let \(u=(u_1,u_2,u_3),v=(v_1,v_2,v_3),w=(w_1,w_2,w_3)\) be vectors in \(\R^3\text{,}\) and let \(M\) be the matrix \(M=\left[\begin{array}{ccc}
 u_1 \amp v_1 \amp w_1\\
 u_2 \amp v_2 \amp w_2\\
 u_3 \amp v_3 \amp w_3\\\end{array}\right]\) Show that \([u],[v],[w]\) are collinear in \(\R\Proj_2\) if and only if \(\det M=0\text{.}\)</p></article><figure class="figure figure-like" id="pappus_theorem_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/pappus_theorem.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>Pappus' Theorem</figcaption></figure><article class="exercise exercise-like" id="pappusthmexer"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-325">Prove the following theorem, following the multi-part outline below.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>Pappus' Theorem</figcaption></figure><article class="exercise exercise-like" id="pappusthmexer"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-465">Prove the following theorem, following the multi-part outline below.</p>
 <article class="assemblage assemblage-like" id="assemblage-10"><h6 class="heading"><span class="title">Pappus' Theorem.</span></h6>
-<p id="p-326">Let \(A,B,C\) be three distinct collinear points in \(\R\Proj_2\text{.}\) Let \(A',B',C'\) be another three distinct collinear points on a different line. Let \(P,Q,R\) be the intersection points \(P=BC'\cap B'C\text{,}\) \(Q=AC'\cap
-A'C\text{,}\) \(R=AB'\cap A'B\text{.}\) Then  points \(P,Q,R\) are collinear. See <a class="xref" data-knowl="./knowl/pappus_theorem_fig.html" title="Figure 3.5.5">Figure 3.5.5</a>.</p></article><p id="p-327">First consider the case where no three of \(A,A',P,R\) are collinear. Applying the Fundamental Theorem of Projective Geometry, we may assume \(A=[e_1]\text{,}\) \(A'=[e_2]\text{,}\) \(P=[e_3]\text{,}\) and \(R=[e_0]\text{.}\)</p>
+<p id="p-466">Let \(A,B,C\) be three distinct collinear points in \(\R\Proj_2\text{.}\) Let \(A',B',C'\) be another three distinct collinear points on a different line. Let \(P,Q,R\) be the intersection points \(P=BC'\cap B'C\text{,}\) \(Q=AC'\cap
+A'C\text{,}\) \(R=AB'\cap A'B\text{.}\) Then  points \(P,Q,R\) are collinear. See <a class="xref" data-knowl="./knowl/pappus_theorem_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</p></article><p id="p-467">First consider the case where no three of \(A,A',P,R\) are collinear. Applying the Fundamental Theorem of Projective Geometry, we may assume \(A=[e_1]\text{,}\) \(A'=[e_2]\text{,}\) \(P=[e_3]\text{,}\) and \(R=[e_0]\text{.}\)</p>
 <ul class="disc">
-<li id="li-167">Check that \(AR=[0,-1,1]\) and \(A'R=[-1,0,1]\text{.}\)</li>
-<li id="li-168">Explain why it follows that \(B'=[r,1,1]\) and \(B=[1,s,1]\) for some \(r,s\text{.}\)</li>
-<li id="li-169">Explain why \(C=[rs,s,1]\) and \(C'=[r,rs,1]\text{.}\)</li>
-<li id="li-170">Explain why \(Q=[rs,rs,1]\text{.}\)</li>
-<li id="li-171">Observe that \(P,Q,R\) all lie on \([1,-1,0]\text{.}\)</li>
-<li id="li-172">Finally, address the degenerate case(s) where \(A,A',P,R\) are not in general position.</li>
-</ul></article><article class="exercise exercise-like" id="exercise-157"><h6 class="heading">
+<li id="li-304">Check that \(AR=[0,-1,1]\) and \(A'R=[-1,0,1]\text{.}\)</li>
+<li id="li-305">Explain why it follows that \(B'=[r,1,1]\) and \(B=[1,s,1]\) for some \(r,s\text{.}\)</li>
+<li id="li-306">Explain why \(C=[rs,s,1]\) and \(C'=[r,rs,1]\text{.}\)</li>
+<li id="li-307">Explain why \(Q=[rs,rs,1]\text{.}\)</li>
+<li id="li-308">Observe that \(P,Q,R\) all lie on \([1,-1,0]\text{.}\)</li>
+<li id="li-309">Finally, address the degenerate case(s) where \(A,A',P,R\) are not in general position.</li>
+</ul></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Quadrics.</span>
 </h6>
-<p id="p-328">A <dfn class="terminology">quadric</dfn> in \(\Proj(\F^{n+1})\) is a set of points whose homogeneous coordinates satisfy an equation of the form</p>
+<p id="p-468">A <dfn class="terminology">quadric</dfn> in \(\Proj(\F^{n+1})\) is a set of points whose homogeneous coordinates satisfy an equation of the form</p>
 <div class="displaymath">
 \begin{equation}
-\sum_{0\leq i\leq j\leq n}c_{ij}x_ix_j=0.\label{quadriceqn}\tag{3.5.4}
+\sum_{0\leq i\leq j\leq n}c_{ij}x_ix_j=0.\label{quadriceqn}\tag{3.4.4}
 \end{equation}
 </div>
 <p data-braille="continuation">A quadric in \(\R\Proj_2\) is called a <dfn class="terminology">conic</dfn>.</p>
 <ol class="lower-alpha">
-<li id="li-173">Explain why <a class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a> is a legitimate definition of set points in \(\Proj(\F^{n+1})\text{.}\)</li>
-<li id="li-174">Consider the conic \(C\) given by<div class="displaymath">
+<li id="li-310">Explain why <a class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.4.4">(3.4.4)</a> is a legitimate definition of set points in \(\Proj(\F^{n+1})\text{.}\)</li>
+<li id="li-311">Consider the conic \(C\) given by<div class="displaymath">
 \begin{equation*}
 x_0^2+x_1^2 -x_2^2=0.
 \end{equation*}
-</div>What are the figures in \(\R^2\) that result from taking inhomogeneous coordinates (see <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>) on \(C\) in positions \(0,1,2\text{?}\)</li>
+</div>What are the figures in \(\R^2\) that result from taking inhomogeneous coordinates (see <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.4.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.4.5.2</a>) on \(C\) in positions \(0,1,2\text{?}\)</li>
 </ol></article></section></section></div></main>
 </div>
 </body>

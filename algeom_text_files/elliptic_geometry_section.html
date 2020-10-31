@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:48-04:00       *-->
+<!--*       on 2020-10-31T14:00:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,8 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
 \DeclareMathOperator{\Stab}{Stab}
@@ -65,6 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
+
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -112,7 +114,7 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul>
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 <li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
@@ -156,21 +158,21 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="elliptic_geometry_section"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span>
 </h2>
-<section class="introduction" id="introduction-17"><p id="p-351">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</p>
-<p id="p-352">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification \(xi+yj+zk\leftrightarrow (x,y,z)\) of the pure quaternions \(\R^3_\Quat\) with \(\R^3\text{,}\) we will write \(S_\Quat^2\) to denote the set of unit pure quaternions.</p>
+<section class="introduction" id="introduction-16"><p id="p-478">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</p>
+<p id="p-479">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification \(xi+yj+zk\leftrightarrow (x,y,z)\) of the pure quaternions \(\R^3_\Quat\) with \(\R^3\text{,}\) we will write \(S_\Quat^2\) to denote the set of unit pure quaternions.</p>
 <div class="displaymath">
 \begin{equation*}
 S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}
 \end{equation*}
 </div>
-<p data-braille="continuation">We begin by establishing some basic facts about the relevant transformation groups.</p></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<p data-braille="continuation">We begin by establishing some basic facts about the relevant transformation groups.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span>
 </h3>
-<p id="p-353">Recall from <a href="quaternionsection.html" class="internal" title="Section 1.2: Quaternions">Section 1.2</a> that \(U(\Quat)\) is the set of quaternions of modulus 1. In fact, \(U(\Quat)\) is a group.</p>
-<article class="exercise exercise-like" id="exercise-149"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-149"><h6 class="heading">
+<p id="p-480">Recall from <a href="quaternionsection.html" class="internal" title="Section 1.2: Quaternions">Section 1.2</a> that \(U(\Quat)\) is the set of quaternions of modulus 1. In fact, \(U(\Quat)\) is a group.</p>
+<article class="exercise exercise-like" id="unitquatisgpexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-unitquatisgpexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-149"><article class="exercise exercise-like">Show that \(U(\Quat)\) is a group.</article></div>
-<p id="p-354">Recall that the map \(M\colon \Quat \to
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-unitquatisgpexer"><article class="exercise exercise-like">Show that \(U(\Quat)\) is a group.</article></div>
+<p id="p-482">Recall that the map \(M\colon \Quat \to
 {\mathcal M}_{\Quat}\) sends \(r=a+bi+cj+dk\) to the matrix</p>
 <div class="displaymath">
 \begin{equation*}
@@ -191,15 +193,15 @@ a^\ast\end{array}\right]\colon a,b\in \C, |a|^2+|b|^2=1\right\}\label{su2def}\ta
 U(\Quat)\approx SU(2).
 \end{equation*}
 </div>
-<article class="exercise exercise-like" id="exercise-150"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-150"><h6 class="heading">
+<article class="exercise exercise-like" id="su2isgpisounitquitexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-su2isgpisounitquitexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-150"><article class="exercise exercise-like">Show that \(SU(2)\) is a group. Show that \(U(\Quat)\) is isomorphic to \(SU(2)\) via \(M\text{.}\)</article></div>
-<p id="p-355">The action of a unit quaternion as a rotation on \(\R^3_\Quat\) (see <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.10: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.10</a>) takes the sphere \(S^2_\Quat\) to itself. The action of the group \(U(\H)\) on \(S^2_\Quat\) defines a model of elliptic geometry.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-su2isgpisounitquitexer"><article class="exercise exercise-like">Show that \(SU(2)\) is a group. Show that \(U(\Quat)\) is isomorphic to \(SU(2)\) via \(M\text{.}\)</article></div>
+<p id="p-484">The action of a unit quaternion as a rotation on \(\R^3_\Quat\) (see <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>) takes the sphere \(S^2_\Quat\) to itself. The action of the group \(U(\H)\) on \(S^2_\Quat\) defines a model of elliptic geometry.</p>
 <article class="definition definition-like" id="definition-25"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
-</h6>The <dfn class="terminology">quaternion model</dfn> of elliptic geometry is \((S^2_\Quat,U(\Quat))\text{.}\)</article><article class="exercise exercise-like" id="exercise-151"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-151"><h6 class="heading">
+</h6>The <dfn class="terminology">quaternion model</dfn> of elliptic geometry is \((S^2_\Quat,U(\Quat))\text{.}\)</article><article class="exercise exercise-like" id="unitquatactionons2exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-unitquatactionons2exer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-151"><article class="exercise exercise-like">Show that the map \(U(\Quat)\to
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-unitquatactionons2exer"><article class="exercise exercise-like">Show that the map \(U(\Quat)\to
 \Perm(S^2_\Quat)\) given by<div class="displaymath">
 \begin{equation*}
 r \to \left[ v\to rvr^\ast \right]
@@ -207,37 +209,37 @@ r \to \left[ v\to rvr^\ast \right]
 </div>is a group action.</article></div></section><section class="subsection" id="rotgp"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span>
 </h3>
-<p id="p-356">Let \(R_{{v},\theta}\) denote the rotation of \(\R^3\) about the axis given by a unit vector \({v}\) by an angle \(\theta\text{.}\) We use the standard orientation, so that a positive value of \(\theta\) is a counterclockwise rotation of the plane orthogonal to \({v}\text{,}\) as viewed from "above" where \({v}\) points in the "up" direction. See <a class="xref" data-knowl="./knowl/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</p>
+<p id="p-486">Let \(R_{{v},\theta}\) denote the rotation of \(\R^3\) about the axis given by a unit vector \({v}\) by an angle \(\theta\text{.}\) We use the standard orientation, so that a positive value of \(\theta\) is a counterclockwise rotation of the plane orthogonal to \({v}\text{,}\) as viewed from "above" where \({v}\) points in the "up" direction. See <a class="xref" data-knowl="./knowl/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</p>
 <figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vectangrot.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation \(R_{v,\theta}\) about the vector \(v\) by the angle \(\theta\)</figcaption></figure><p id="p-357"><em class="alert">Notation convention:</em> For readability and convenience, we write \(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\) to denote rotations by \(\theta\) radians about the standard basis vectors \((1,0,0), (0,1,0), (0,0,1)\text{,}\) respectively.</p>
-<p id="p-358">We will write \(\Rot(S^2)\) to denote the set of all rotations.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation \(R_{v,\theta}\) about the vector \(v\) by the angle \(\theta\)</figcaption></figure><p id="p-487"><em class="alert">Notation convention:</em> For readability and convenience, we write \(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\) to denote rotations by \(\theta\) radians about the standard basis vectors \((1,0,0), (0,1,0), (0,0,1)\text{,}\) respectively.</p>
+<p id="p-488">We will write \(\Rot(S^2)\) to denote the set of all rotations.</p>
 <div class="displaymath">
 \begin{equation*}
 \Rot(S^2)=\{R_{{v},\theta}\colon
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<p data-braille="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.10: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.10</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to \R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
+<p data-braille="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
 <div class="displaymath">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
 </div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that \(\Rot(S^2)\) is the group \(SO(3)\) of orthogonal transformations of \(\R^3\) with determinant 1.</div></div>
-<article class="exercise exercise-like" id="exercise-152"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-152"><h6 class="heading">
+<article class="exercise exercise-like" id="s2rotisgpexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-s2rotisgpexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-152"><article class="exercise exercise-like">Complete the details to show that \(\Rot(S^2)\) is a group. Show that the kernel of the homomorphism \(U(\Quat)\to \Rot(S^2)\) given by \(r\to
-\R_r\) is \(\{\pm 1\}\text{.}\)</article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-s2rotisgpexer"><article class="exercise exercise-like">Complete the details to show that \(\Rot(S^2)\) is a group. Show that the kernel of the homomorphism \(U(\Quat)\to \Rot(S^2)\) given by \(r\to
+R_r\) is \(\{\pm 1\}\text{.}\)</article></div>
 <article class="definition definition-like" id="definition-26"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
-</h6>The <dfn class="terminology">spherical model</dfn> of elliptic geometry is \((S^2,\Rot(S^2))\text{.}\)</article><p id="p-359">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the \(z\)-axis by arbitrary angles, and rotations about the \(x\)-axis by \(\pi/2\) radians. We start with a Lemma that shows how to do this for \(y\)-axis rotations.</p>
+</h6>The <dfn class="terminology">spherical model</dfn> of elliptic geometry is \((S^2,\Rot(S^2))\text{.}\)</article><p id="p-490">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the \(z\)-axis by arbitrary angles, and rotations about the \(x\)-axis by \(\pi/2\) radians. We start with a Lemma that shows how to do this for \(y\)-axis rotations.</p>
 <article class="lemma theorem-like" id="lemma-5"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Rotations about the \(y\)-axis.</span>
 </h6>An arbitrary rotation about the \(y\)-axis is a composition of a rotations about the \(x\)-axis by \(\pi/2\) radians with a rotation about the \(z\)-axis. Specifically, we have the following.<div class="displaymath">
 \begin{equation}
 R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\label{yrotdecomp}\tag{3.4.2}
 \end{equation}
-</div></article><article class="hiddenproof" id="proof-18"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof">Visualize! You can also verify by checking that both sides of <a class="xref" data-knowl="./knowl/yrotdecomp.html" title="Equation 3.4.2">(3.4.2)</a> yield the same result when evaluated on the three standard basis vectors. Yet another proof is to do a quaternion computation.</article></div>
+</div></article><article class="hiddenproof" id="proof-19"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof">Visualize! You can also verify by checking that both sides of <a class="xref" data-knowl="./knowl/yrotdecomp.html" title="Equation 3.4.2">(3.4.2)</a> yield the same result when evaluated on the three standard basis vectors. Yet another proof is to do a quaternion computation.</article></div>
 <article class="proposition theorem-like" id="rotgenprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Generators for \(\Rot(S^2)\).</span>
 </h6>The set<div class="displaymath">
@@ -245,7 +247,7 @@ R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\label{yrotdeco
 \{R_{Z,\theta}\colon \theta\in
 \R\}\cup \{R_{X,\pi/2}\}
 \end{equation*}
-</div>is a generating set for \(\Rot(S^2)\text{.}\) This means that any rotation may be written as a composition of rotations about the \(z\)-axis and rotations about the \(x\)-axis by \(\pi/2\) radians.</article><article class="hiddenproof" id="proof-19"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the \(x,z\)-plane. The sphere in the upper left of <a class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole \(N\text{,}\) Greenwich \(G\text{,}\) and the great circle \(C\) that is the intersection of the sphere with the \(x,z\)-plane (\(C\) is shown in red in all four spheres for reference). Now let \(R\) be an arbitrary rotation. The sphere in the upper right of <a class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how \(\)\(N\text{,}\) \(G\text{,}\) and \(C\) are transformed by \(R\text{.}\) The rest of the diagram shows how we can write \(R^{-1}\) as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation \(R_{Z,\theta_1}\) about the \(z\)-axis that brings the north pole into the \(x,z\)-plane. Next, we perform the rotation \(R_{Y,\theta_2}\) about the \(y\)-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation \(R_{Z,\theta_3}\) to bring Greenwich back home in the \(x,z\)-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath">
+</div>is a generating set for \(\Rot(S^2)\text{.}\) This means that any rotation may be written as a composition of rotations about the \(z\)-axis and rotations about the \(x\)-axis by \(\pi/2\) radians.</article><article class="hiddenproof" id="proof-20"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the \(x,z\)-plane. The sphere in the upper left of <a class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole \(N\text{,}\) Greenwich \(G\text{,}\) and the great circle \(C\) that is the intersection of the sphere with the \(x,z\)-plane (\(C\) is shown in red in all four spheres for reference). Now let \(R\) be an arbitrary rotation. The sphere in the upper right of <a class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how \(\)\(N\text{,}\) \(G\text{,}\) and \(C\) are transformed by \(R\text{.}\) The rest of the diagram shows how we can write \(R^{-1}\) as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation \(R_{Z,\theta_1}\) about the \(z\)-axis that brings the north pole into the \(x,z\)-plane. Next, we perform the rotation \(R_{Y,\theta_2}\) about the \(y\)-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation \(R_{Z,\theta_3}\) to bring Greenwich back home in the \(x,z\)-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath">
 \begin{equation*}
 R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}
 \end{equation*}
@@ -263,11 +265,11 @@ G'\to G''\to G
 C\to R(C) \to C' \to C''\to C.
 \end{equation*}
 </div>This leads to the decomposition \(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\) <figure class="figure figure-like" id="rotation_decomposition_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/rot_decomp2.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotatation \(R\)</figcaption></figure></article></div></section><section class="subsection" id="subsection-42"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotation \(R\)</figcaption></figure></article></div></section><section class="subsection" id="ellipticsubgpssubsec"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span>
 </h3>
-<p id="p-360"></p>
-<p id="p-361">Let \(\S\) denote the group of transformations of \(\extC\) that are conjugate to rotations of \(S^2\) via the stereographic projection.</p>
+<p id="p-491"></p>
+<p id="p-492">Let \(\S\) denote the group of transformations of \(\extC\) that are conjugate to rotations of \(S^2\) via the stereographic projection.</p>
 <div class="displaymath">
 \begin{equation*}
 \S=\{s\circ R\circ s^{-1} \;\;\colon \;\;R\in
@@ -280,15 +282,15 @@ C\to R(C) \to C' \to C''\to C.
 \S\approx \Rot(S^2).
 \end{equation*}
 </div>
-<article class="exercise exercise-like" id="exercise-153"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-153"><h6 class="heading">
+<article class="exercise exercise-like" id="ellipticgpisgpexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticgpisgpexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-153"><article class="exercise exercise-like">Show that \(\S\) is indeed a group. Show that \(R\to s\circ R\circ s^{-1}\) is a group isomorphism \(\Rot(S^2)\to \S\text{.}\)</article></div>
-<p id="p-362">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that \(s\circ
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticgpisgpexer"><article class="exercise exercise-like">Show that \(\S\) is indeed a group. Show that \(R\to s\circ R\circ s^{-1}\) is a group isomorphism \(\Rot(S^2)\to \S\text{.}\)</article></div>
+<p id="p-494">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that \(s\circ
 R_{Z,\theta}\circ s^{-1}\) the Möbius transformation \(T_{Z,\theta}\) given by \(z\to e^{i\theta}z\) (see <a class="xref" data-knowl="./knowl/mobiuszrotations.html" title="Exercise 1.3.3.4">Exercise 1.3.3.4</a>) and that \(s\circ
 R_{X,\pi/2}\circ s^{-1}\) is the Möbius transformation \(T_{X,\pi/2}\) given by \(z\to \frac{z+i}{iz+1}\) (see <a class="xref" data-knowl="./knowl/mobiusxpiby2rotations.html" title="Exercise 1.3.3.6">Exercise 1.3.3.6</a>). The fact (<a class="xref" data-knowl="./knowl/rotgenprop.html" title="Proposition 3.4.9: Generators for \(\Rot(S^2)\)">Proposition 3.4.9</a>) that rotations of the form \(R_{Z,\theta},R_{X,\pi/2}\) generate \(\Rot(S^2)\)  implies that the Möbius transformations \(T_{Z,\theta}\) and \(T_{X,\pi/2}\) generate \(\S\text{.}\) Therefore \(\S\) is in fact a subgroup of the Möbius group.</p>
 <article class="definition definition-like" id="definition-27"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span>
-</h6>The <dfn class="terminology">Möbius subgeometry model</dfn> of elliptic geometry is \((\extC,\S)\text{.}\)</article><p id="p-363">We can say more about the specific form of elements in \(\S\) in terms of the group homomorphism \({\mathcal
+</h6>The <dfn class="terminology">Möbius subgeometry model</dfn> of elliptic geometry is \((\extC,\S)\text{.}\)</article><p id="p-495">We can say more about the specific form of elements in \(\S\) in terms of the group homomorphism \({\mathcal
 T}\colon GL(2,\C)\to \M\) that sends the matrix \(\left[\begin{array}{cc} a\amp b\\ c\amp
 d\end{array}\right]\) to the Möbius transformation \(z\to \frac{az+b}{cz+d}\) (see <a class="xref" data-knowl="./knowl/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</p>
 <div class="displaymath">
@@ -302,39 +304,40 @@ T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
 \end{align}
 </div>
 <p data-braille="continuation">are images of elements of the group \(SU(2)\) (see <a class="xref" data-knowl="./knowl/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because \(T_{Z,\theta},T_{X,\pi/2}\) generate \(\S\text{,}\) it follows that every element of \(\S\) is the image under \({\mathcal T}\) of an element of \(SU(2)\text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-154"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-154"><h6 class="heading">
+<article class="exercise exercise-like" id="ellipticgpgenexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticgpgenexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-154"><article class="exercise exercise-like">Verify <a class="xref" data-knowl="./knowl/tzthetaassu2image.html" title="Equation 3.4.3">(3.4.3)</a> and <a class="xref" data-knowl="./knowl/txpiby2assu2image.html" title="Equation 3.4.4">(3.4.4)</a>. Verify that the matrices in the expressions on the right side of each equation are indeed elements of \(SU(2)\text{.}\) Explain the final comment in the paragraph above. Why does it follow that every element of \(\S\) is the image of an element of \(SU(2)\text{?}\)</article></div>
-<p id="p-364">Thus we have proved the following explicit formula for elements of \(\S\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticgpgenexer"><article class="exercise exercise-like">Let \(M_{Z,\theta},M_{X,\pi/2}\) denote the matrices \(\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
+\twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}\text{,}\) respectively.  Verify that \(M_{Z,\theta},M_{X,\pi/2}\) are indeed elements of \(SU(2)\text{.}\) Verify <a class="xref" data-knowl="./knowl/tzthetaassu2image.html" title="Equation 3.4.3">(3.4.3)</a> and <a class="xref" data-knowl="./knowl/txpiby2assu2image.html" title="Equation 3.4.4">(3.4.4)</a>.  Explain the final comment in the paragraph above. Why does it follow that every element of \(\S\) is the image of an element of \(SU(2)\text{?}\)</article></div>
+<p id="p-497">Thus we have proved the following explicit formula for elements of \(\S\text{.}\)</p>
 <article class="proposition theorem-like" id="ellipticgpissu2imageprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Formula for transformations in the elliptic group.</span>
 </h6>
-<p id="p-365">A map \(T\) is an element of \(\S\) if and only if \(T\) may be written in the form \(Tz=\frac{az+b}{-b^\ast z+a^\ast}\) for some \(a,b\in \C\) with \(|a|^2+|b|^2=1\text{.}\)</p></article><p id="p-366">Setting \(e^{i\theta}=\frac{a}{a^\ast}\) and \(z_0=\frac{-b}{a}\text{,}\) we have the following alternative form for \(T\in \S\text{.}\)</p>
+<p id="p-498">A map \(T\) is an element of \(\S\) if and only if \(T\) may be written in the form \(Tz=\frac{az+b}{-b^\ast z+a^\ast}\) for some \(a,b\in \C\) with \(|a|^2+|b|^2=1\text{.}\)</p></article><p id="p-499">Setting \(e^{i\theta}=\frac{a}{a^\ast}\) and \(z_0=\frac{-b}{a}\text{,}\) we have the following alternative form for \(T\in \S\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 Tz=e^{i\theta}\frac{z-z_0}{z_0^\ast z+1}\label{ellipticgp0inftyform}\tag{3.4.5}
 \end{equation}
-</div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.4</span> <span class="title">Circles in \(S^2\) and clines in \(\extC\)</span>
 </h3>
-<p id="p-367">A <em class="emphasis">circle</em> in \(S^2\) is a circle in a plane intersecting \(S^2\text{.}\) A <dfn class="terminology">great circle</dfn> is the intersection of \(S^2\) with a plane through the origin. In elliptic geometry, a great circle is called an <dfn class="terminology">elliptic straight line</dfn> because the path of shortest length connecting two given points in \(S^2\) is an arc of a great circle. Circles in \(S^2\) that are not great circles are called <dfn class="terminology">elliptic cycles</dfn>. Elliptic straight lines and elliptic cycles in the Möbius subgeometry model \((\extC,\S)\) are stereographic projections of elliptic straight lines and elliptic cycles in the spherical model. It turns out that elliptic straight lines and elliptic cycles in \(\extC\) are in fact clines. Here is the statement and proof.</p>
-<article class="proposition theorem-like" id="proposition-21"><h6 class="heading">
+<p id="p-500">A <em class="emphasis">circle</em> in \(S^2\) is a circle in a plane intersecting \(S^2\text{.}\) A <dfn class="terminology">great circle</dfn> is the intersection of \(S^2\) with a plane through the origin. In elliptic geometry, a great circle is called an <dfn class="terminology">elliptic straight line</dfn> because the path of shortest length connecting two given points in \(S^2\) is an arc of a great circle. Circles in \(S^2\) that are not great circles are called <dfn class="terminology">elliptic cycles</dfn>. Elliptic straight lines and elliptic cycles in the Möbius subgeometry model \((\extC,\S)\) are stereographic projections of elliptic straight lines and elliptic cycles in the spherical model. It turns out that elliptic straight lines and elliptic cycles in \(\extC\) are in fact clines. Here is the statement and proof.</p>
+<article class="proposition theorem-like" id="proposition-22"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection takes circles to clines.</span>
-</h6>Let \(C\) be a circle that is the intersection of \(S^2\) with a plane in \(\R^3\text{.}\) If \(C\) contains the north pole \((0,0,1)\) of \(S^2\text{,}\) then \(s(C\setminus\{(0,0,1)\})\) is a Euclidean straight line in \(\C\text{.}\) Otherwise, \(s(C)\) is a circle in \(\C\text{.}\)</article><article class="hiddenproof" id="proof-20"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof">Proof sketch: The statement about the case when \(C\) contains the north pole is geometrically clear. For the case when \(C\) does not contain \((0,0,1)\text{,}\) choose a rotation \(R\) of \(S^2\) that takes some point on \(C\) to the north pole. Again, let \(T=s\circ R\circ s^{-1}\) be the conjugate element in \(\S\text{.}\) It is clear that \(R\) takes \(C\) to a circle, that \(s\) takes \(R(C)\) to a Euclidean straight line, and that \(T^{-1}\) takes \(s(R(C))\) to a cline (because \(T^{-1}\) is a Möbius transformation!). Thus \(s(C)=(T^{-1}\circ s\circ R)(C)\) is a cline. Because \((0,0,1)\) is not on \(C\text{,}\) it must be that \(\infty\) is not on \(s(C)\text{,}\) so \(s(C)\) is a circle in \(\C\text{.}\)</article></div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+</h6>Let \(C\) be a circle that is the intersection of \(S^2\) with a plane in \(\R^3\text{.}\) If \(C\) contains the north pole \((0,0,1)\) of \(S^2\text{,}\) then \(s(C\setminus\{(0,0,1)\})\) is a Euclidean straight line in \(\C\text{.}\) Otherwise, \(s(C)\) is a circle in \(\C\text{.}\)</article><article class="hiddenproof" id="proof-21"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof">Proof sketch: The statement about the case when \(C\) contains the north pole is geometrically clear. For the case when \(C\) does not contain \((0,0,1)\text{,}\) choose a rotation \(R\) of \(S^2\) that takes some point on \(C\) to the north pole. Again, let \(T=s\circ R\circ s^{-1}\) be the conjugate element in \(\S\text{.}\) It is clear that \(R\) takes \(C\) to a circle, that \(s\) takes \(R(C)\) to a Euclidean straight line, and that \(T^{-1}\) takes \(s(R(C))\) to a cline (because \(T^{-1}\) is a Möbius transformation!). Thus \(s(C)=(T^{-1}\circ s\circ R)(C)\) is a cline. Because \((0,0,1)\) is not on \(C\text{,}\) it must be that \(\infty\) is not on \(s(C)\text{,}\) so \(s(C)\) is a circle in \(\C\text{.}\)</article></div></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on \(S^2\)</span>
 </h3>
-<p id="p-368">The standard orientation for angles on \(S^2\) (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a class="xref" data-knowl="./knowl/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</p>
+<p id="p-501">The standard orientation for angles on \(S^2\) (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a class="xref" data-knowl="./knowl/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</p>
 <figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/2orientations.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.16<span class="period">.</span></span><span class="space"> </span>Two orientations on the sphere: oriented angle \(\angle
-PQR\) is positive viewed from the outward-pointing normal vector \(v\text{,}\) but is negative viewed from the inward-pointing vector \(-v\text{.}\)</figcaption></figure><article class="corollary theorem-like" id="corollary-5"><h6 class="heading">
+PQR\) is positive viewed from the outward-pointing normal vector \(v\text{,}\) but is negative viewed from the inward-pointing vector \(-v\text{.}\)</figcaption></figure><article class="corollary theorem-like" id="corollary-6"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection is conformal.</span>
 </h6>
-<p id="p-369">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</p></article><article class="hiddenproof" id="proof-21"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof">Proof sketch: Begin with the special case of curves \(C_1,C_2\) that intersect at the south pole \(S=(0,0,-1)\text{.}\) The lines \(L_1,L_2\) that are tangent to \(C_1,C_2\) at \(S\) lie in planes \(\Pi_1,\Pi_2\) that contain the south pole and the origin. The tangents \(L_1,L_2\) also lie in the plane \(z=-1\) tangent to the sphere at the south pole. It is clear that the lines \(L_1',L_2'\) tangent to \(s(C_1),s(C_2)\) at \(s(S)=0\) are straight lines that intersect at the origin. The angle made by \(L_1,L_2\) is the same as the angle made by the planes \(\Pi_1,\Pi_2\text{,}\) but with inward-normal orientation! See <a class="xref" data-knowl="./knowl/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at \(P\text{.}\) Choose a rotation \(R\) of \(S^2\) that takes \(P\) to the south pole, and let \(T=s\circ R\circ s^{-1}\) be the conjugate element in \(\S\text{.}\) It is clear that \(R\) and \(T\) are conformal (because \(T\) is a Möbius transformation!). Now the fact that \(s\) is conformal at \((0,0,-1)\) implies that \(s=T^{-1}\circ s\circ
+<p id="p-502">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</p></article><article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof">Proof sketch: Begin with the special case of curves \(C_1,C_2\) that intersect at the south pole \(S=(0,0,-1)\text{.}\) The lines \(L_1,L_2\) that are tangent to \(C_1,C_2\) at \(S\) lie in planes \(\Pi_1,\Pi_2\) that contain the south pole and the origin. The tangents \(L_1,L_2\) also lie in the plane \(z=-1\) tangent to the sphere at the south pole. It is clear that the lines \(L_1',L_2'\) tangent to \(s(C_1),s(C_2)\) at \(s(S)=0\) are straight lines that intersect at the origin. The angle made by \(L_1,L_2\) is the same as the angle made by the planes \(\Pi_1,\Pi_2\text{,}\) but with inward-normal orientation! See <a class="xref" data-knowl="./knowl/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at \(P\text{.}\) Choose a rotation \(R\) of \(S^2\) that takes \(P\) to the south pole, and let \(T=s\circ R\circ s^{-1}\) be the conjugate element in \(\S\text{.}\) It is clear that \(R\) and \(T\) are conformal (because \(T\) is a Möbius transformation!). Now the fact that \(s\) is conformal at \((0,0,-1)\) implies that \(s=T^{-1}\circ s\circ
 R\) is conformal at \(P\text{.}\) <figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereo_conformal.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>Stereographic projection is conformal at \(S=(0,0,-1)\text{.}\)</figcaption></figure></article></div></section><section class="subsection" id="subsection-45"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>Stereographic projection is conformal at \(S=(0,0,-1)\text{.}\)</figcaption></figure></article></div></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span>
 </h3>
-<p id="p-370">The distance between points \(P,Q\) on \(S^2\) is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle \(\angle
+<p id="p-503">The distance between points \(P,Q\) on \(S^2\) is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle \(\angle
 POQ\text{,}\) where \(O\) is the origin. From vector calculus, we have the following dot product formula.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -342,44 +345,44 @@ POQ\text{,}\) where \(O\) is the origin. From vector calculus, we have the follo
 POQ)
 \end{equation*}
 </div>
-<p data-braille="continuation">Solving for \(\cos(\angle POQ)\text{,}\) we obtain the formula for the distance \(d(P,Q)\text{.}\)</p>
+<p data-braille="continuation">Solving for \(\cos(\angle POQ)\text{,}\) we obtain the formula for the distance \(d_{S^2}(P,Q)\) between points \(P,Q\) in \(S^2\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
-d(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)\label{s2metric}\tag{3.4.6}
+d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)\label{s2metric}\tag{3.4.6}
 \end{equation}
 </div>
-<p id="p-371">To "transfer" the metric <a class="xref" data-knowl="./knowl/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to \(\extC\) by stereographic projection means that we define the elliptic metric on \(\extC\) by the following.</p>
+<p id="p-504">To "transfer" the metric <a class="xref" data-knowl="./knowl/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to \(\extC\) by stereographic projection means that we define the elliptic metric \(d_{\extC}\) on \(\extC\) by the following.</p>
 <div class="displaymath">
 \begin{equation}
-d(p,q):=d(s^{-1}(p),s^{-1}(q))\label{elliptic_metric_def}\tag{3.4.7}
+d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))\label{elliptic_metric_def}\tag{3.4.7}
 \end{equation}
 </div>
 <article class="proposition theorem-like" id="elliptic_metric_is_invariant"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.19</span><span class="period">.</span>
 </h6>
-<p id="p-372">The elliptic metric <a class="xref" data-knowl="./knowl/elliptic_metric_def.html" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</p>
+<p id="p-505">The elliptic metric <a class="xref" data-knowl="./knowl/elliptic_metric_def.html" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</p>
 <div class="displaymath">
 \begin{equation}
-d(p,q) = d(Tp,Tq)\tag{3.4.8}
+d_{\extC}(p,q) = d_{\extC}(Tp,Tq)\tag{3.4.8}
 \end{equation}
 </div>
-<p data-braille="continuation">for all \(p,q\in \extC\) and for all \(T\in\S\text{.}\)</p></article><article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/ellipticmetinvexer.html" title="Exercise 3.4.7.3">Exercise 3.4.7.3</a>.</article></div>
-<p id="p-373">In order to obtain a formula for computing \(d(p,q)\text{,}\) we follow the same procedure for hyperbolic distance. First, we find the distance \(d(0,u)\text{,}\) where \(0\leq u\leq
+<p data-braille="continuation">for all \(p,q\in \extC\) and for all \(T\in\S\text{.}\)</p></article><article class="hiddenproof" id="proof-23"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/ellipticmetinvexer.html" title="Exercise 3.4.7.2">Exercise 3.4.7.2</a>.</article></div>
+<p id="p-506">In order to obtain a formula for computing \(d_{\extC}(p,q)\text{,}\) we follow the same procedure for hyperbolic distance. First, we find the distance \(d_{\extC}(0,u)\text{,}\) where \(0\leq u\leq
 1\text{.}\) Let \(S=(0,0,-1)=s^{-1}(0)\) and let \(U=s^{-1}(u)\text{.}\) Let \(0=(0,0,0)\text{,}\) let \(N=(0,0,1)\text{,}\) let \(\alpha =
 \angle SNU\) and let \(\theta = \angle SOU\) (see <a class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that \(\alpha = \theta/2\text{,}\) so that we have</p>
 <div class="displaymath">
 \begin{equation}
-d(0,u)=d(S,U)=\theta = 2\alpha=2\arctan u. \label{ellipticdist0u}\tag{3.4.9}
+d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. \label{ellipticdist0u}\tag{3.4.9}
 \end{equation}
 </div>
 <figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/elliptic_distance.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on \(S^2\) to \(\extC\) via stereographic projection.</figcaption></figure><article class="exercise exercise-like" id="exercise-155"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-155"><h6 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on \(S^2\) to \(\extC\) via stereographic projection.</figcaption></figure><article class="exercise exercise-like" id="ellipticdistlemmaexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdistlemmaexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.21</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-155"><article class="exercise exercise-like">Show that \(\theta/2=\alpha=\arctan u\) in <a class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>.</article></div>
-<p id="p-374">For the general case, let \(z_1,z_2\in \extC\text{.}\) Because and let \(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\) be the transformation in \(\S\) (using the form <a class="xref" data-knowl="./knowl/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends \(z_1\to 0\) and \(z_2\to u\geq 0\text{.}\) Applying <a class="xref" data-knowl="./knowl/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in \(\extC\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdistlemmaexer"><article class="exercise exercise-like">Show that \(\theta/2=\alpha=\arctan u\) in <a class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>.</article></div>
+<p id="p-508">For the general case, let \(z_1,z_2\in \extC\text{.}\) Because and let \(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\) be the transformation in \(\S\) (using the form <a class="xref" data-knowl="./knowl/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends \(z_1\to 0\) and \(z_2\to u\geq 0\text{.}\) Applying <a class="xref" data-knowl="./knowl/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in \(\extC\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
-d(z_1,z_2)=2\arctan
+d_{\extC}(z_1,z_2)=2\arctan
 \left|\frac{z_2-z_1}{z_1^\ast z_2 + 1}\right|\label{ellipticdist}\tag{3.4.10}
 \end{equation}
 </div>
@@ -389,63 +392,57 @@ d(z_1,z_2)=2\arctan
 \text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt\label{ellipticlengthformula}\tag{3.4.11}
 \end{equation}
 </div>
-<article class="exercise exercise-like" id="exercise-156"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-156"><h6 class="heading">
+<article class="exercise exercise-like" id="ellipticdsexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdsexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.22</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-156"><article class="exercise exercise-like">Show that the first order Taylor approximation for \(\arctan u\) is \(u\text{.}\) Complete the details of modifying the derivation of the hyperbolic length integral formula to obtain the elliptic length integral formula.</article></div>
-<article class="exercise exercise-like" id="exercise-157"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-157"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdsexer"><article class="exercise exercise-like">Show that the first order Taylor approximation for \(\arctan u\) is \(u\text{.}\) Complete the details of modifying the derivation of the hyperbolic length integral formula to obtain the elliptic length integral formula.</article></div>
+<article class="exercise exercise-like" id="ellipticcircumexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticcircumexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.23</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-157"><article class="exercise exercise-like"><p id="p-375">Find the length of the elliptic cycle parametrized by \(z(t) = \alpha e^{it}\) for \(0\leq t\leq 2\pi\text{,}\) where \(0\lt \alpha\leq 1\) .</p></article></div>
-<p id="p-376">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.7">(3.3.7)</a>, using the elliptic length differential \(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\) in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticcircumexer"><article class="exercise exercise-like"><p id="p-510">Find the length of the elliptic cycle parameterized by \(z(t) = \alpha e^{it}\) for \(0\leq t\leq 2\pi\text{,}\) where \(0\lt \alpha\leq 1\) .</p></article></div>
+<p id="p-512">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential \(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\) in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</p>
 <div class="displaymath">
 \begin{equation}
 \text{Area}(R)=\iint_R
 dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\label{ellipticareaintformula}\tag{3.4.12}
 \end{equation}
 </div>
-<article class="exercise exercise-like" id="exercise-158"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-158"><h6 class="heading">
+<article class="exercise exercise-like" id="ellipticdiskareaexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdiskareaexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.24</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-158"><article class="exercise exercise-like"><p id="p-377">Find the area of the elliptic disk \(\{|z|\leq
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdiskareaexer"><article class="exercise exercise-like"><p id="p-513">Find the area of the elliptic disk \(\{|z|\leq
 \alpha\}\text{,}\) for \(0\lt \alpha\lt 1\text{.}\)</p></article></div></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.4.7</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Show that the three models of elliptic geometry are equivalent.</article><article class="exercise exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Prove that all elements of \(\S\) are elliptic in the normal form sense.</article><article class="exercise exercise-like" id="ellipticmetinvexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-378">Prove <a class="xref" data-knowl="./knowl/elliptic_metric_is_invariant.html" title="Proposition 3.4.19">Proposition 3.4.19</a>.</p></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
+<article class="exercise exercise-like" id="threeellipticmodelssameexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Show that the three models of elliptic geometry are equivalent.</article><article class="exercise exercise-like" id="ellipticmetinvexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-516">Prove <a class="xref" data-knowl="./knowl/elliptic_metric_is_invariant.html" title="Proposition 3.4.19">Proposition 3.4.19</a>.</p></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
 <h6 class="heading"><span class="title">Area of an elliptic triangle</span></h6>
-<div class="introduction" id="introduction-18">The following sequence of exercises establishes the area formula for elliptic triangles.</div>
+<div class="introduction" id="introduction-17">The following sequence of exercises establishes the area formula for elliptic triangles.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="twogonareaexer"><h6 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic 2-gon.</span>
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic 2-gon.</span>
 </h6>
-<p id="p-379">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In \(\extC\text{,}\) any 2-gon is congruent to a set of the form \(R_{\alpha} :=\{z\in \C\colon
+<p id="p-518">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In \(\extC\text{,}\) any 2-gon is congruent to a set of the form \(R_{\alpha} :=\{z\in \C\colon
 0\leq \arg z \leq \alpha\}\cup \{\infty\}\) for some \(\alpha\) in the range \(0\leq \alpha\lt
 2\pi\text{.}\) See <a class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in \(\extC\) to show that the area of \(R_{\alpha}\) is \(2\alpha\text{.}\) Verify that this is the right answer using a picture of \(S^2\text{.}\) <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in \(\extC\) and \(S^2\text{.}\)</figcaption></figure></p></article><article class="exercise exercise-like" id="elliptic_triangle_area_exer"><h6 class="heading">
-<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic triangle.</span>
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic triangle.</span>
 </h6>
-<p id="p-380">Let \(\triangle ABC\) be an elliptic triangle. Let \({\mathcal C}_{AB},{\mathcal
+<p id="p-519">Let \(\triangle ABC\) be an elliptic triangle. Let \({\mathcal C}_{AB},{\mathcal
 C}_{AC},{\mathcal C}_{BC}\) denote the great circles that extend the sides \(AB,AC,BC\) of the triangle. See <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>.</p>
 <ol class="lower-alpha">
-<li id="li-171">Explain why \(A,A'\) are endpoints of the same diameter, that is, endpoints of a diameter of \(S^2\) or their stereographic projections in \(\extC\)).</li>
-<li id="li-172">Explain why \(\triangle A'B'C'\) has the same area as \(\triangle ABC\text{,}\) even though the two triangles are not necessarily congruent! (Note that the interior of \(\triangle A'B'C'\) is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point \(\infty\text{.}\))</li>
-<li id="li-173">Let \(R\) denote the interior of the region shown in the figure on the right in <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of \(R\) is<div class="displaymath">
+<li id="li-328">Explain why \(A,A'\) are endpoints of the same diameter, that is, endpoints of a diameter of \(S^2\) or their stereographic projections in \(\extC\text{.}\)</li>
+<li id="li-329">Explain why \(\triangle A'B'C'\) has the same area as \(\triangle ABC\text{,}\) even though the two triangles are not necessarily congruent! (Note that the interior of \(\triangle A'B'C'\) is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point \(\infty\text{.}\)) Hint: What does part (a) of this problem imply about the relationship between points \(X\) and \(X'\) on \(S^2\) for \(X=A,B,C\text{?}\)</li>
+<li id="li-330">Let \(R\) denote the interior of the region shown in the figure on the right in <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of \(R\) is<div class="displaymath">
 \begin{equation*}
-2\angle A + 2\angle B + 2\angle C - \text{ Area}(\triangle
+2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 ABC).
 \end{equation*}
-</div>
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-381">View \(R\) as three 2-gons \(AA',BB',CC'\) that overlap in triangle \(\triangle
-ABC\)</p></div></div>
-</li>
-<li id="li-174">Let \(R'\) denote the exterior of the region \(R\text{,}\) that is, \(R'=\extC\setminus R\text{.}\) Explain why the area of \(R'\) is<div class="displaymath">
+</div>Suggestion: Decompose \(R\) using overlapping 2-gons.</li>
+<li id="li-331">Let \(R'\) denote the exterior of the region \(R\text{,}\) that is, \(R'=\extC\setminus R\text{.}\) Explain why the area of \(R'\) is<div class="displaymath">
 \begin{equation*}
-2\angle A + 2\angle B + 2\angle C - \text{ Area}(\triangle
+2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 A'B'C').
 \end{equation*}
-</div>
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-382">View \(R'\) as three 2-gons \(AA',BB',CC'\) (this time we are looking at 2-gons on the <em class="emphasis">outside</em> of \(R\)) that overlap in triangle \(\triangle
-A'B'C'\) (again, this triangle is on the <em class="emphasis">outside</em> of \(R\)).</p></div></div>
-</li>
-<li id="li-175">Explain why the area of elliptic triangle \(\triangle ABC\) is<div class="displaymath">
+</div>Suggestion: Decompose \(R'\) into overlapping 2-gons.</li>
+<li id="li-332">Explain why the area of elliptic triangle \(\triangle ABC\) is<div class="displaymath">
 \begin{equation}
 \text{Area}(\triangle
 ABC)= (\angle A +\angle B + \angle

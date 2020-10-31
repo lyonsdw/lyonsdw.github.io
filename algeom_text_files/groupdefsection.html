@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:46-04:00       *-->
+<!--*       on 2020-10-31T14:00:11-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,8 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}\DeclareMathOperator{\Inn}{Inn}            
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
 \DeclareMathOperator{\Stab}{Stab}
@@ -65,6 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
+
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -112,7 +114,7 @@ MathJax.Hub.Config({
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="aaa.html" data-scroll="aaa"><span class="title">Front Matter</span></a><ul>
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 <li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
@@ -156,66 +158,69 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="groupdefsection"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Definition of a group</span>
 </h2>
-<p id="p-148">We will use the notation \(\ast \colon S\times S\to S\) to denote a binary operation on a set \(S\) that sends the pair \((x,y)\) to \(x\ast y\text{.}\) Recall that a binary operation \(\ast\) is <em class="emphasis">associative</em> means that \(x\ast(y\ast z)= (x\ast y)\ast z\) for all \(x,y,z\in
+<section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title"></span>
+</h3>
+<p id="p-169">We will use the notation \(\ast \colon S\times S\to S\) to denote a binary operation on a set \(S\) that sends the pair \((x,y)\) to \(x\ast y\text{.}\) Recall that a binary operation \(\ast\) is <em class="emphasis">associative</em> means that \(x\ast(y\ast z)= (x\ast y)\ast z\) for all \(x,y,z\in
 S\text{.}\)  <article class="definition definition-like" id="groupdefn"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group.</span>
 </h6>
-<p id="p-149">A <dfn class="terminology">group</dfn> is a set \(G\text{,}\) together with a binary operation \(\ast\colon G\times G \to G\) with the following properties.</p>
+<p id="p-170">A <dfn class="terminology">group</dfn> is a set \(G\text{,}\) together with a binary operation \(\ast\colon G\times G \to G\) with the following properties.</p>
 <ul class="disc">
-<li id="li-42">The operation \(\ast\) is associative.</li>
-<li id="li-43">There exists an element \(e\) in \(G\text{,}\) called an <dfn class="terminology">identity</dfn> element, such that \(e\ast g=g\ast e=g\) for all \(g\in
+<li id="li-99">The operation \(\ast\) is associative.</li>
+<li id="li-100">There exists an element \(e\) in \(G\text{,}\) called an <dfn class="terminology">identity</dfn> element, such that \(e\ast g=g\ast e=g\) for all \(g\in
 G\text{.}\)</li>
-<li id="li-44">For every \(g\in G\text{,}\) there exists an element \(h\in G\text{,}\) called an <dfn class="terminology">inverse</dfn> element for \(g\text{,}\) such that \(g\ast h=h \ast g=e\text{.}\)</li>
+<li id="li-101">For every \(g\in G\text{,}\) there exists an element \(h\in G\text{,}\) called an <dfn class="terminology">inverse</dfn> element for \(g\text{,}\) such that \(g\ast h=h \ast g=e\text{.}\)</li>
 </ul></article> <article class="proposition theorem-like" id="groupdefnprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Immediate consequences of the definition of group.</span>
 </h6>
-<p id="p-150">Let \(G\) be a group. The element \(e\) in the second property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique. Given \(g\in G\text{,}\) the element \(h\) in the third property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-151">See <a class="xref" data-knowl="./knowl/idunique.html" title="Exercise 2.2.1: Uniqueness of the identity element">Exercise 2.2.1</a> and <a class="xref" data-knowl="./knowl/invunique.html" title="Exercise 2.2.2: Uniqueness of inverse elements">Exercise 2.2.2</a>.</p></article></div> <article class="definition definition-like" id="definition-10"><h6 class="heading">
+<p id="p-171">Let \(G\) be a group. The element \(e\) in the second property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique. Given \(g\in G\text{,}\) the element \(h\) in the third property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-172">See <a class="xref" data-knowl="./knowl/idunique.html" title="Exercise 2.2.2.1: Uniqueness of the identity element">Exercise 2.2.2.1</a> and <a class="xref" data-knowl="./knowl/invunique.html" title="Exercise 2.2.2.2: Uniqueness of inverse elements">Exercise 2.2.2.2</a>.</p></article></div> <article class="definition definition-like" id="definition-10"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplicative notation.</span>
 </h6>
-<p id="p-152">Let \(G\) be a group. By <a class="xref" data-knowl="./knowl/groupdefnprop.html" title="Proposition 2.2.2: Immediate consequences of the definition of group">Proposition 2.2.2</a>, we may speak of an identity element as <em class="emphasis">the</em> identity element for \(G\text{.}\)  Given \(g\in G\text{,}\) we may refer to an inverse element for \(g\) as <em class="emphasis">the</em> inverse of \(g\text{,}\) and we write \(g^{-1}\) to denote this element.  In practice, we usually suppress the operator \(\ast\text{,}\) and simply write \(gh\) to denote \(g\ast h\text{.}\) We adopt the convention that \(g^0\) is the identity element. For \(k\geq
+<p id="p-173">Let \(G\) be a group. By <a class="xref" data-knowl="./knowl/groupdefnprop.html" title="Proposition 2.2.2: Immediate consequences of the definition of group">Proposition 2.2.2</a>, we may speak of an identity element as <em class="emphasis">the</em> identity element for \(G\text{.}\)  Given \(g\in G\text{,}\) we may refer to an inverse element for \(g\) as <em class="emphasis">the</em> inverse of \(g\text{,}\) and we write \(g^{-1}\) to denote this element.  In practice, we usually suppress the operator \(\ast\text{,}\) and simply write \(gh\) to denote \(g\ast h\text{.}\) We adopt the convention that \(g^0\) is the identity element. For \(k\geq
 1\text{,}\) we write \(g^k\) to denote \(\underbrace{g\ast g\ast \cdots \ast g}_{k \text{
 factors}}\) and we write \(g^{-k}\) to denote \(\left(g^{k}\right)^{-1}\text{.}\) This set of notational conventions is called <dfn class="terminology">multiplicative notation</dfn> .</p></article> <article class="definition definition-like" id="definition-11"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian group, additive notation.</span>
 </h6>
-<p id="p-153">In general, group operations are not commutative.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>	     A group with a commutative operation is called <dfn class="terminology">Abelian</dfn>.</p> For some Abelian groups, such as the group of integers, the group operation is called <em class="emphasis">addition</em>, and we write \(a+b\) instead of using the multiplicative notation \(a\ast b\text{.}\) We write \(0\) to denote the identity element, we write \(-a\) to denote the inverse of \(a\text{,}\) and we write \(ka\) to denote \(\underbrace{a+ a+ \cdots +a}_{k
+<p id="p-174">In general, group operations are not commutative.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a>	     A group with a commutative operation is called <dfn class="terminology">Abelian</dfn>.</p> For some Abelian groups, such as the group of integers, the group operation is called <em class="emphasis">addition</em>, and we write \(a+b\) instead of using the multiplicative notation \(a\ast b\text{.}\) We write \(0\) to denote the identity element, we write \(-a\) to denote the inverse of \(a\text{,}\) and we write \(ka\) to denote \(\underbrace{a+ a+ \cdots +a}_{k
 \text{ summands}}\) for positive integers \(k\text{.}\) This set of notational conventions is called <dfn class="terminology">additive notation</dfn> .</article></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Recall that a binary operation \(\ast\) on a set \(S\) is called <em class="emphasis">commutative</em> if \(x \ast y = y\ast
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Recall that a binary operation \(\ast\) on a set \(S\) is called <em class="emphasis">commutative</em> if \(x \ast y = y\ast
 x\) for all \(x,y\in S\text{.}\)</div></div>
-<article class="exercise exercise-like" id="abelianexample_reading_exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-abelianexample_reading_exer"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-abelianexample_reading_exer"><article class="exercise exercise-like"><p id="p-154">Which of the groups in <a href="groupintrosection.html" class="internal" title="Section 2.1: Examples of groups">Section 2.1</a> are Abelian? Which are not?</p></article></div>
 <article class="definition definition-like" id="definition-12"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Order of a group.</span>
-</h6> The number of elements in a finite group is called the <dfn class="terminology">order</dfn> of the group. A group with infinitely many elements is said to be of <em class="emphasis">infinite order</em>. We write \(|G|\) to denote the order of the group \(G\text{.}\)</article><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Order of a group.</span>
+</h6> The number of elements in a finite group is called the <dfn class="terminology">order</dfn> of the group. A group with infinitely many elements is said to be of <em class="emphasis">infinite order</em>. We write \(|G|\) to denote the order of the group \(G\text{.}\)</article><article class="definition definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The trivial group.</span>
+</h6>
+<p id="p-175">A group with a single element (which is necessarily the identity element) is called a <dfn class="terminology">trivial group</dfn>. In multiplicative notation, one might write \(\{1\}\text{,}\) and in additive notation, one might write \(\{0\}\text{,}\) to denote a trivial group.</p></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.2.2</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="idunique"><h6 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Uniqueness of the identity element.</span>
 </h6>
-<p id="p-155">Let \(G\) be a group. Suppose that \(e,e'\) both satisfy the second property of the <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>, that is, suppose \(e\ast x=x\ast e = e'\ast x=x\ast e'=x\) for all \(x\in G\text{.}\) Show that \(e=e'\text{.}\)</p></article><article class="exercise exercise-like" id="invunique"><h6 class="heading">
+<p id="p-176">Let \(G\) be a group. Suppose that \(e,e'\) both satisfy the second property of the <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>, that is, suppose \(e\ast x=x\ast e = e'\ast x=x\ast e'=x\) for all \(x\in G\text{.}\) Show that \(e=e'\text{.}\)</p></article><article class="exercise exercise-like" id="invunique"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Uniqueness of inverse elements.</span>
 </h6>
-<p id="p-156">Let \(G\) be a group with identity element \(e\text{.}\) Let \(g\in G\) and suppose that \(g\ast h = h\ast g = g\ast h' = h'\ast g =
+<p id="p-178">Let \(G\) be a group with identity element \(e\text{.}\) Let \(g\in G\) and suppose that \(g\ast h = h\ast g = g\ast h' = h'\ast g =
 e\text{.}\) Show that \(h=h'\text{.}\)</p></article><article class="exercise exercise-like" id="cancellation"><h6 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The cancellation law.</span>
 </h6>
-<p id="p-157">Suppose that \(gx=hx\) for some elements \(g,h,x\) in a group \(G\text{.}\) Show that \(g=h\text{.}\) [Note that the same proof, mutatis mutandis, shows that if \(xg=xh\text{,}\) then \(g=h\text{.}\)]</p></article><article class="exercise exercise-like" id="socksandshoes"><h6 class="heading">
+<p id="p-180">Suppose that \(gx=hx\) for some elements \(g,h,x\) in a group \(G\text{.}\) Show that \(g=h\text{.}\) [Note that the same proof, mutatis mutandis, shows that if \(xg=xh\text{,}\) then \(g=h\text{.}\)]</p></article><article class="exercise exercise-like" id="socksandshoes"><h6 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The "socks and shoes" property.</span>
 </h6>
-<p id="p-158">Let \(g,h\) be elements of a group \(G\text{.}\) Show that \((gh)^{-1} = h^{-1}g^{-1}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-56"><h6 class="heading">
+<p id="p-182">Let \(g,h\) be elements of a group \(G\text{.}\) Show that \((gh)^{-1} = h^{-1}g^{-1}\text{.}\)</p></article><article class="exercise exercise-like" id="productgroupexer"><h6 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Product Groups.</span>
 </h6>
-<p id="p-159">Given two groups \(G,H\) with group operations \(\ast_G,\ast_H\text{,}\) the Cartesian product \(G\times H\) is a group with the operation \(\ast_{G\times H}\) given by</p>
+<p id="p-184">Given two groups \(G,H\) with group operations \(\ast_G,\ast_H\text{,}\) the Cartesian product \(G\times H\) is a group with the operation \(\ast_{G\times H}\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 (g,h)\ast_{G\times H} (g',h')= (g\ast_G g',h\ast_H
 h').
 \end{equation*}
 </div>
-<p data-braille="continuation">Show that this peration satisfies the definition of a group.</p></article><article class="exercise exercise-like" id="cyclicgroups"><h6 class="heading">
+<p data-braille="continuation">Show that this operation satisfies the definition of a group.</p></article><article class="exercise exercise-like" id="cyclicgroups"><h6 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic groups.</span>
 </h6>
-<p id="p-160">A group \(G\) is called <dfn class="terminology">cyclic</dfn> if there exists an element \(g\) in \(G\text{,}\) called a <dfn class="terminology">generator</dfn>, such that the sequence</p>
+<p id="p-186">A group \(G\) is called <dfn class="terminology">cyclic</dfn> if there exists an element \(g\) in \(G\text{,}\) called a <dfn class="terminology">generator</dfn>, such that the sequence</p>
 <div class="displaymath">
 \begin{equation*}
 \left(g^k\right)_{k\in
@@ -224,15 +229,23 @@ h').
 </div>
 <p data-braille="continuation">contains all of the elements in \(G\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-45">The group of integers is cyclic. Find all of the generators.</li>
-<li id="li-46">The group \(\Z_8\) is cyclic. Find all of the generators.</li>
-<li id="li-47">The group \(\Z_2\times \Z_3\) is cyclic. Find all of the generators.</li>
-<li id="li-48">Show that the group \(\Z_2\times \Z_2\) is <em class="emphasis">not</em> cyclic.</li>
-<li id="li-49">Find necessary and sufficient conditions on positive integers \(n,m\) such that the group \(\Z_n\times \Z_m\) is cyclic, and prove your statement.</li>
-</ol></article><article class="exercise exercise-like" id="cyclicpermutations"><h6 class="heading">
+<li id="li-102">The group of integers is cyclic. Find all of the generators.</li>
+<li id="li-103">The group \(\Z_8\) is cyclic. Find all of the generators.</li>
+<li id="li-104">The group \(\Z_2\times \Z_3\) is cyclic. Find all of the generators.</li>
+<li id="li-105">Show that the group \(\Z_2\times \Z_2\) is <em class="emphasis">not</em> cyclic.</li>
+<li id="li-106">Find necessary and sufficient conditions on positive integers \(n,m\) such that the group \(\Z_n\times \Z_m\) is cyclic, and prove your statement.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">For the last part, observe that \((a,b)\in \Z_n\times
+\Z_m\) is a generator if and only if every entry in the sequence<div class="displaymath">
+\begin{equation*}
+(a,b),(2a,2b),(3a,3b),\ldots,(nma,nmb)
+\end{equation*}
+</div>is distinct. Consider \((La,Lb)\text{,}\) where \(L\) is the least common multiple of \(n,m\text{.}\)</div></div>
+</div></article><article class="exercise exercise-like" id="cyclicpermutations"><h6 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic permutations.</span>
 </h6>
-<p id="p-161">A permutation \(\pi\) of a set \(X\) is called a <dfn class="terminology">full cycle</dfn> if the sequence</p>
+<p id="p-188">A permutation \(\pi\) of a set \(X\) is called a <dfn class="terminology">full cycle</dfn> if the sequence</p>
 <div class="displaymath">
 \begin{equation*}
 \left(\pi^{k}(x)\right)_{k\in \Z} = (\ldots,\pi^{-3}(x),\pi^{-2}(x),\pi^{-1}(x),\pi^0(x),\pi^1(x),\pi^2(x),\pi^3(x),\ldots)
@@ -252,25 +265,41 @@ a_1\to a_2\to a_3 \to \cdots \to a_k \to a_1
 </div>
 <p data-braille="continuation">on the set \(A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}\text{,}\) where \(a_1,a_2,\ldots,a_k\) are distinct integers. For example, we have \([1,4,2,3]=(2,4,3)\) in \(S_4\text{.}\) Note that this <dfn class="terminology">cycle notation</dfn> is not unique. For example, we have \((2,4,3)=(4,3,2)=(3,2,4)\) in \(S_4.\) Cycles of any length (any positive integer) are called <dfn class="terminology">cyclic</dfn> permutations. A 2-cycle is called a <dfn class="terminology">transposition</dfn>.</p>
 <ol class="lower-alpha">
-<li id="li-50">Find all of the cyclic permutations in \(S_3\text{.}\) Find their inverses.</li>
-<li id="li-51">Find all of the cyclic permutations in \(S_4\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="exercise-59"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-162">Cycles \((a_1a_2\cdots a_k)\) and \((b_1b_2\cdots b_\ell)\) are called <dfn class="terminology">disjoint</dfn> if the \(a_i\)'s and \(b_j\)'s are distinct, that is, if \(a_i\neq b_j\) for all \(i,j\text{.}\) Show that every permutation in \(S_n\) is a product of disjoint cycles.</p></article><article class="exercise exercise-like" id="exercise-60"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-163">Show that every permutation in \(S_n\) can be written as a product of transpositions.</p></article><article class="exercise exercise-like" id="exercise-61"><h6 class="heading">
+<li id="li-112">Find all of the cyclic permutations in \(S_3\text{.}\) Find their inverses.</li>
+<li id="li-113">Find all of the cyclic permutations in \(S_4\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="disjointcycleproductexer"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-190">Cycles \((a_1a_2\cdots a_k)\) and \((b_1b_2\cdots b_\ell)\) are called <dfn class="terminology">disjoint</dfn> if the \(a_i\)'s and \(b_j\)'s are distinct, that is, if \(a_i\neq b_j\) for all \(i,j\text{.}\) Show that every permutation in \(S_n\) is a product of disjoint cycles.</p></article><article class="exercise exercise-like" id="permtransprodexer"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-192">Show that every permutation in \(S_n\) can be written as a product of transpositions.</p></article><article class="exercise exercise-like" id="permparityexer"><h6 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Parity of a permutation.</span>
 </h6>
-<ol id="p-164" class="lower-alpha">
-<li id="li-52">Suppose that \(\sigma\) in \(S_n\) is written in two ways as a product of transpositions.<div class="displaymath">
+<ol id="p-194" class="lower-alpha">
+<li id="li-116">Suppose that the identity permutation \(e\) in \(S_n\) is written as a product of transpositions<div class="displaymath">
+\begin{equation*}
+e=\tau_1\tau_2\cdots \tau_r.
+\end{equation*}
+</div>Show that \(r\) is even.</li>
+<li id="li-117">Suppose that \(\sigma\) in \(S_n\) is written in two ways as a product of transpositions.<div class="displaymath">
 \begin{equation*}
 \sigma = (a_1b_1)(a_2b_2)\cdots (a_sb_s) =
 (c_1d_1)(c_2d_2)\cdots (c_td_t)
 \end{equation*}
 </div>Show that \(s,t\) are either both even or both odd. The common evenness or oddness of \(s,t\) is called the <dfn class="terminology">parity</dfn> of the permutation \(\sigma\text{.}\)</li>
-<li id="li-53">Show that the parity of a \(k\)-cycle is even if \(k\) is odd, and the parity of a \(k\)-cycle is odd if \(k\) is even.</li>
-</ol></article><article class="exercise exercise-like" id="cayleytable"><h6 class="heading">
+<li id="li-118">Show that the parity of a \(k\)-cycle is even if \(k\) is odd, and the parity of a \(k\)-cycle is odd if \(k\) is even.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><ol id="p-195" class="lower-alpha"><li id="li-119">Consider the two rightmost transpositions \(\tau_{r-1}\tau_{r}\text{.}\) They have one of the following forms, where \(a,b,c,d\) are distinct.<div class="displaymath">
+\begin{equation*}
+(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
+\end{equation*}
+</div>The first allows you to reduce the transposition count by two by cancelling. The remaining three can be rewritten.<div class="displaymath">
+\begin{equation*}
+(ab)(bc), (ac)(cb), (ab)(cd)
+\end{equation*}
+</div>Notice that the index of the rightmost transposition in which the symbol \(a\) occurs has been reduced by 1 (from \(r\) to \(r-1\)). Finish this reasoning with an inductive argument.</li></ol></div></div>
+</div></article><article class="exercise exercise-like" id="cayleytable"><h6 class="heading">
 <span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Cayley tables.</span>
 </h6>
-<p id="p-165">The <dfn class="terminology">Cayley table</dfn> for a finite group \(G\) is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry \(gh\) in position with row label \(g\) and column label \(h\text{.}\) Partial Cayley tables for \(S_3\) (<a class="xref" data-knowl="./knowl/s3cayleytablefig.html" title="Figure 2.2.7">Figure 2.2.7</a>) and \(D_4\) (<a class="xref" data-knowl="./knowl/d4cayleytablefig.html" title="Figure 2.2.8">Figure 2.2.8</a>) are given below. <figure class="figure figure-like" id="s3cayleytablefig"><div class="displaymath">
+<p id="p-197">The <dfn class="terminology">Cayley table</dfn> for a finite group \(G\) is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry \(gh\) in position with row label \(g\) and column label \(h\text{.}\) Partial Cayley tables for \(S_3\) (<a class="xref" data-knowl="./knowl/s3cayleytablefig.html" title="Figure 2.2.7">Figure 2.2.7</a>) and \(D_4\) (<a class="xref" data-knowl="./knowl/d4cayleytablefig.html" title="Figure 2.2.8">Figure 2.2.8</a>) are given below. <figure class="figure figure-like" id="s3cayleytablefig"><div class="displaymath">
 \begin{equation*}
 \begin{array}
 {c|cccccc}
@@ -304,7 +333,11 @@ R_0\amp  \amp  \amp  \amp  \amp  \amp    \amp   \amp
 </div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.8<span class="period">.</span></span><span class="space"> </span>(Partial) Cayley table for \(D_4\text{.}\) (See <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a> for notation for the elements of \(D_4\text{.}\))</figcaption></figure></p>
 <ol class="lower-alpha">
-<li id="li-54">Fill in the remaining entries in the Cayley tables for \(S_3\) <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><div class="displaymath" id="p-166">
+<li id="li-123">Fill in the remaining entries in the Cayley tables for \(S_3\) and \(D_4\text{.}\)</li>
+<li id="li-124">Prove that the Cayley table for any group is a <dfn class="terminology">Latin square</dfn>. This means that every element of the group appears exactly once in each row and in each column.</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="displaymath" id="p-198">
 \begin{equation*}
 \begin{array}
 {c|cccccc}
@@ -318,7 +351,8 @@ e \amp e \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
 (132) \amp (132) \amp (13) \amp (12) \amp (23) \amp e \amp (123)
 \end{array}
 \end{equation*}
-</div></div></div> and \(D_4\) <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like"><div class="displaymath" id="p-167">
+</div></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="displaymath" id="p-199">
 \begin{equation*}
 \begin{array}
 {c|cccccccc}
@@ -334,9 +368,8 @@ R_{3/4} \amp	      F_{D'}  \amp   F_D  \amp   F_V  \amp   F_H  \amp     R_0   \a
 R_0 \amp     F_V   \amp   F_H  \amp   F_D  \amp   F_{D'} \amp    R_{1/4}  \amp    R_{1/2} \amp    R_{3/4} \amp    R_0         
 \end{array}
 \end{equation*}
-</div></div></div>.</li>
-<li id="li-55">Prove that the Cayley table for any group is a <dfn class="terminology">Latin square</dfn>. This means that every element of the group appears exactly once in each row and in each column.</li>
-</ol></article></section></section></div></main>
+</div></div></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

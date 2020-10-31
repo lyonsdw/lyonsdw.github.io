@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-14T19:29:50-04:00       *-->
+<!--*       on 2020-10-31T14:00:17-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,24 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Draw the relevant similar triangles and verify the formula \(s(x,y) = \frac{x}{1-y}\text{.}\)</p>
-<span class="incontext"><a href="stereoprojsect.html#p-80">in-context</a></span>
+<ol class="lower-alpha">
+<li>For all \(u\in \R^3_\Quat\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(R_r\circ R_s)(u) = R_r(sus^\ast)=r(sus^\ast)r^\ast =
+(rs)u(rs)^\ast = R_{rs}(u).
+\end{equation*}
+</div>
+</li>
+<li>Applying the result from the previous part, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+R_{r^\ast}\circ R_r = R_{r^\ast r} = R_{|r|^2}=R_1 = \Id
+\end{equation*}
+</div>and similarly,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+R_r\circ R_{r^\ast}=\Id.
+\end{equation*}
+</div>We conclude that \((R_r)^{-1}=R_{r^\ast}\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="quaternionsection.html#p-80">in-context</a></span>
 </body>
 </html>
