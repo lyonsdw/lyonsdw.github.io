@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-31T14:00:24-04:00       *-->
+<!--*       on 2020-10-31T20:52:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,52 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(\triangle ABC\) be a right triangle with right angle \(\angle C\) with side lengths \(a=d(B,C)\text{,}\) \(b=d(A,C)\text{,}\) and \(c=d(A,B)\) so that the length of the hypotenuse is \(c\text{.}\) See <a class="xref" data-knowl="./knowl/right_triangle_fig.html" title="Figure 3.6.3">Figure 3.6.3</a>.</p>
-<ol class="lower-alpha">
-<li>Prove the following identities.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-\cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right) \amp =
-\frac{1+u^2}{1-u^2}\;\;(0\lt u\lt 1)\tag{3.6.6}\\
-\cos(2\arctan u) \amp = \frac{1-u^2}{1+u^2}\tag{3.6.7}
-\end{align}
+<p>Next, we check the input value \(p\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
+p\amp \stackrel{s^{-1}}{\longrightarrow}
+\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
+\amp \stackrel{h}{\longrightarrow}
+\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp
+\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{s}{\longrightarrow} p
+\end{align*}
 </div>
-</li>
-<li>
-<dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">The Hyperbolic Pythagorean Theorem</dfn>. Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\cosh(c)=\cosh(a)\cosh(b)\tag{3.6.8}
-\end{equation}
-</div>if \(T\) is a hyperbolic triangle.</li>
-<li>
-<dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">The Elliptic Pythagorean Theorem</dfn>. Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\cos(c)=\cos(a)\cos(b)\tag{3.6.9}
-\end{equation}
-</div>if \(T\) is an elliptic triangle.</li>
-</ol>
+<p data-braille="continuation">Next, we check the input value \(0\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+0\amp \stackrel{T_{a,b}}{\longrightarrow}
+\frac{b}{a^\ast}\\
+0\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,-1)\\
+\amp \stackrel{h}{\longrightarrow}
+(-1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
+\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
+\end{align*}
+</div>
+<p data-braille="continuation">Finally, we check the input value \(\infty\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
+-\frac{a}{b^\ast}\\
+\infty\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,1)\\
+\amp \stackrel{h}{\longrightarrow}
+(1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
+\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
+\end{align*}
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-570">in-context</a></span>
 </body>
 </html>
