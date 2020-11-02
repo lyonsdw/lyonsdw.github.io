@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T12:36:53-05:00       *-->
+<!--*       on 2020-11-02T14:54:35-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,10 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.7.</span></h5>
-<ol class="lower-alpha">
-<li>Given a vector \(x=(x_0,x_1,\ldots,x_{n+1})\in\F^{n+1}\text{,}\) let \(c(x)\) denote the expression on the left side of <a class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a>. We have \(c(kx) = k^2c(x)\) for any scalar \(k\text{,}\) so \(c(x)=0\) if and only if \(c(kx)=0\text{.}\)</li>
-<li>Taking inhomogeneous coordinates in position 0, let \(u=x_1/x_0,v=x_2/x_0\text{.}\) The points \((1,u,v)\) satisfy \(1+u^2-v^2=0\text{,}\) which is the equation for a hyperbola in the \(u,v\)-plane. Taking inhomogeneous coordinates in position 1 is also a hyperbola. Taking inhomogeneous coordinates in position 2, with \(u=x_0/x_2,v=x_1/x_2\text{,}\) we have \(u^2+v^2-1=0\text{,}\) which is the equation for the unit circle in the \(u,v\)-plane.</li>
-</ol></article><span class="incontext"><a href="section-15.html#commentary-144">in-context</a></span>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.6 (proof of Pappus' Theorem).</span></h5>
+<p>Following the outline, we have the following.</p>
+<ul class="disc">
+<li>We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+AR\amp = [e_1]\times [e_0] = [1,0,0]\times [1,1,1] = [0,-1,1]\\
+A'R\amp = [e_2]\times [e_0] = [0,1,0]\times [1,1,1] = [1,0,-1]
+\end{align*}
+</div>
+</li>
+<li>Since \(B'\) lies on \(AR\text{,}\) we have \(B'\cdot
+AR=0\text{,}\) so \(B=[r,x,x]\) for some \(r,x\text{.}\) It must be that \(x\neq 0\text{,}\) for otherwise, we would have \(B=A\text{.}\) So we can take \(B\) to be \([r,1,1]\text{.}\) Similar reasoning yields \(B' = [1,s,1]\) for some \(s\text{.}\)</li>
+<li>Next we have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+AB\amp = [e_1]\times [1,s,1]  = [0,-1,s]\\
+PB'\amp = [e_3]\times [r,1,1] = [-1,r,0]
+\end{align*}
+</div>Since \(C\) lies on \(AB\text{,}\) we must have \(C\cdot
+AB=0\text{,}\) so \(C\) has the form \([x,s,1]\) for some \(x\text{.}\) Since \(C\) lies on \(PB'\text{,}\) we must have \(C\cdot PB'=0\text{,}\) so \(C=[r,1,x]\) for some \(x\text{.}\) Putting these two together, we have \(C=[rs,s,1]\text{.}\) Similar reasoning applies to \(C'\text{,}\) which lies on \(A'B'\) and also on \(BP\) and yields \(C'=[r,rs,1]\text{.}\)</li>
+<li>Point \(Q\) lies on \(AC'=[0,-1,rs]\) and also on \(A'C=[1,0,-rs]\text{,}\) so must have the form \([rs,rs,1]\text{.}\)</li>
+<li>We have \(X\cdot [1,-1,0]=0\) for \(X=P,Q,R\text{,}\) so we conclude that \(P,Q,R\) are collinear.</li>
+</ul></article><span class="incontext"><a href="section-15.html#commentary-144">in-context</a></span>
 </body>
 </html>
