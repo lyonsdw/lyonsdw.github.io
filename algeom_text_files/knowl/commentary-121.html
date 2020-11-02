@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:46:56-05:00       *-->
+<!--*       on 2020-11-02T12:36:51-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,19 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.5 (proof of Proposition 3.3.20).</span></h5>
-<p>Because \(T\in \HU\) must send the real line to itself, so the preimages \(z_1=T^{-1}(1),z_2=T^{-1}(0),z_3=T^{-1}(\infty)\) must be real. Thus we have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-Tz=(z,z_1,z_2,z_3)=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_2-z_3}=\frac{az+b}{cz+d}
-\end{equation*}
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.8.</span></h5>
+<ol class="lower-alpha">
+<li>Let \(\triangle ABC\) be a doubly-asymptotic triangle in the upper half-plane, and suppose \(B,C\in
+\extR\text{.}\) Any hyperbolic line intersects \(\extR\) in two points (this is easy to see in the disk model, so must also be true in the upper half-plane). Let \(B'\in
+\extR\) be the intersection of side \(AB\) with \(\extR\) that is not \(B\text{,}\) and let \(C'\) be the intersection of side \(AC\) with \(\extR\) that is not \(C\text{.}\) Let \(T\) be the Möbius transformation that takes \(B\to 1, B'\to -1, C\to \infty\text{,}\) and let \(T'\) be the Möbius transformation that takes \(C\to 1, C'\to -1, B\to
+\infty\text{.}\) One of \(T,T'\) takes \(A\) to the upper half-plane, and hence is an element of \(\HU\) that make the doubly-asymptotic triangle given in the Figure.</li>
+<li>The area of the triangle with vertices at \(1,p,\infty\) is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\int_{\cos(\pi-\alpha)}^1
+\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
+dy\;dx
+\amp = \int_{\cos(\pi-\alpha)}^1
+\left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}\\
+\amp =
+\int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx\\
+\amp = \left[-\arccos
+x\right]_{\cos(\pi-\alpha)}^1\\
+\amp = \pi-\alpha.
+\end{align*}
 </div>
-<p data-braille="continuation">for some real \(a,b,c,d\text{.}\) We have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-Ti = \frac{ai+b}{ci+d}= \frac{ac+bd + i(ad-bc)}{c^2+d^2}
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(ad-bc\) must be positive because \(T(\U)=\U\text{.}\)</p></article><span class="incontext"><a href="section-13.html#commentary-121">in-context</a></span>
+</li>
+</ol></article><span class="incontext"><a href="section-13.html#commentary-121">in-context</a></span>
 </body>
 </html>

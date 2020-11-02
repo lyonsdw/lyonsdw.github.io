@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:50:07-05:00       *-->
+<!--*       on 2020-11-02T12:37:49-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">A line in projective space \(\R\Proj_2\) the set of equivalence classes of all vectors in a 2-dimensional subspace of \(\R^3\text{.}\) The three vectors \(u,v,w\) lie in a 2-dimensional subspace together if and only if the three vectors are linearly dependent. This holds if and only if the determinant of the given \(3\times 3\) matrix is zero.</p>
+<p>The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
+\end{equation*}
+</div>
+<p data-braille="continuation">in \(\Proj_1\) to the points \(1,0,\infty\) in \(\extF\text{,}\) respectively. Let \((\cdot,P_1,P_2,P_3)\) denote the unique projective transformation \([T]\) that takes \(P_1,P_2,P_3\) to \([e_0],[e_2],[e_1]\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cross ratio</dfn> \((P_0,P_1,P_2,P_3)\) is defined to be \(\mu([T](P_0))\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case \(\F=\C\text{,}\) via the map \(\mu\text{,}\) that is, show that the following holds.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mu(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))
+\end{equation*}
+</div>
+</li>
+<li>Show that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
+\end{equation*}
+</div>where \(\det(P_iP_j)\) is the determinant of the matrix \(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\) where \(P_i=[a_i,b_i]\text{.}\) Suggestion: First find \([T]^{-1}\text{.}\) Solve<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a_1,b_1) = x(a_3,b_3) + y(a_2,b_2)
+\end{equation*}
+</div>to get \(x=\det(P_1P_2)\text{,}\)  \(y=\det(P_3P_1)\text{.}\) From this, show the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[T]^{-1}\amp=\twotwo{xa_3}{ya_2}{xb_3}{yb_2}\\
+[T] \amp= \twotwo{yb_2}{-ya_2}{-xb_3}{xa_3}
+\end{align*}
+</div>Now just calculate \(\mu(T(a_0,b_0))\text{.}\)</li>
+</ol>
 <span class="incontext"><a href="section-15.html#p-548">in-context</a></span>
 </body>
 </html>

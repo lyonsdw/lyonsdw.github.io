@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:50:06-05:00       *-->
+<!--*       on 2020-11-02T12:37:48-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(T\in \S\) so that \(T=s\circ R\circ s^{-1}\) for some \(R\in \Rot(S^2)\text{.}\) We have</p>
+<p>We have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)\\
-\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
-\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}})\\
-\amp = d_{S^2}(s^{-1}p,s^{-1}q)
-\;\;(d_{S^2}\text{ is invariant under rotation }R)\\
-\amp = d_{\extC}(p,q)
-\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}}).
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      \\
+\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
+\frac{du}{u}\right] d\theta \;\;(\text{for }u=1+r^2)\\
+\amp =
+2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta\\
+\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.
 \end{align*}
+</div>
+<p data-braille="continuation">In terms of \(r=2\arctan \alpha\text{,}\) we have \(\alpha=\tan\frac{r}{2}\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
+\tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.
+\end{equation*}
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-518">in-context</a></span>
 </body>

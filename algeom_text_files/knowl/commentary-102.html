@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:46:55-05:00       *-->
+<!--*       on 2020-11-02T12:36:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.1.</span></h5>
-<ol class="lower-alpha">
-<li>Use polar form \(a=|a|e^{i\arg a}\text{.}\)</li>
-<li><ol class="lower-roman">
-<li>homothety and a rotation (multiplying by \(c\)), followed by translation (adding \(d\))</li>
-<li>inversion</li>
-<li>homothety and rotation (multiplying by \(bc-ad\)), followed by translation (adding \(a\))</li>
-<li>homothety and rotation (multiplying by \(1/c\))</li>
-</ol></li>
-<li>If \(c=0\text{,}\) then \(ad-bc=ad\neq 0\text{,}\) so \(d\neq 0\text{,}\) and we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.4 (proof of Proposition 3.2.12).</span></h5>
+<p>Starting with \(Tz=(Tz)^\ast\text{,}\) we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-z = \frac{az+b}{d} = \frac{a}{d}z+\frac{b}{d}
+|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast.
 \end{equation*}
-</div>a homothety and rotation (multiplying by \(a/d\) followed by a translation (adding \(b/d\)).</li>
-</ol></article><span class="incontext"><a href="section-12.html#commentary-102">in-context</a></span>
+</div>
+<p data-braille="continuation">If \(ac^\ast -a^\ast c\neq
+0\text{,}\) let \(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
+c}\text{,}\) then complete the square to get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
+|\alpha|^2.
+\end{equation*}
+</div>
+<p data-braille="continuation">Manipulate the right hand side to \(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\) For the case \(ac^\ast -a^\ast c=0\text{,}\) let \(\gamma=ad^\ast
+-b^\ast c\) and  \(\delta=bd^\ast\text{.}\) Then the equation</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast
+\end{equation*}
+</div>
+<p data-braille="continuation">becomes \(\im(\gamma z+\delta)=0\text{,}\) which is the equation for a line.</p></article><span class="incontext"><a href="section-12.html#commentary-102">in-context</a></span>
 </body>
 </html>

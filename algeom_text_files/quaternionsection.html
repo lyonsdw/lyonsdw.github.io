@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:49:53-05:00       *-->
+<!--*       on 2020-11-02T12:37:36-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -171,7 +171,7 @@ k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
 \end{align}
 </div>
 <p data-braille="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) The <dfn class="terminology">pure</dfn> quaternions  are those that can be written in the form \(xi+yj+zk\leftrightarrow
-(0,x,y,z)\) for some real \(x,y,z\text{.}\) To reflect the natural correpsondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+(0,x,y,z)\) for some real \(x,y,z\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span>
 </h3>
 <p id="p-54">Analogous to the way that the complex numbers \(\C\) can be realized as the set \({\mathcal M}_\C\) of \(2\times 2\) real matrices  (see <a class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as \(2\times 2\) real matrices">Exercise 1.1.7.12</a>), the quaternions can be realized by a set of \(2\times 2\) complex matrices, as follows.  Let \({\mathcal M}_\Quat\) denote the set of \(2\times 2\) complex matrices of the form \(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
@@ -249,8 +249,8 @@ uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like">Verify <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.12">(1.2.12)</a>.</article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span>
 </h3>
-<p id="p-64">The <dfn class="terminology">conjugate</dfn> \(r=a+bi+cj+dk\) is \(r^\ast =
-a-bi-cj-dk\text{,}\) and the <dfn class="terminology">modulus</dfn> of \(r\) is \(|r|=\sqrt{a^2+b^2+c^2+d^2}\text{.}\)         The <dfn class="terminology">unit quaternions</dfn>, denoted \(U(\Quat)\), is the set of quaternions with modulus 1.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a></p>
+<p id="p-64">The <dfn class="terminology">conjugate</dfn> of a quaternion \(r=a+bi+cj+dk\) is \(r^\ast =
+a-bi-cj-dk\text{,}\) and the <dfn class="terminology">modulus</dfn> of \(r\) is \(|r|=\sqrt{a^2+b^2+c^2+d^2}\text{.}\)         The <dfn class="terminology">unit quaternions</dfn> , denoted \(U(\Quat)\), is the set of quaternions with modulus 1.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a></p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">The set of unit quaternions \(U(\H)\) is in one-to-one correspondence with the 3-sphere \(S^3=\{(t,x,y,z)\in \R^4\colon
 t^2+x^2+y^2+z^2=1\}\text{.}\) This is analogous to the set of norm 1 complex numbers that is in one-to-one correspondence with the 1-sphere \(S^2\text{.}\)</div></div>
 <p id="p-65">Analogous to complex numbers, quaternions can be expressed in <em class="emphasis">polar form</em>. Given a nonzero quaternion \(r\text{,}\) the quaternion \(r'=\frac{r}{|r|}\) is a unit quaternion, say \(r'=a+bi+cj+dk\text{.}\) If \(|a|\lt 1\text{,}\) let \(u=\frac{1}{\sqrt{1-a^2}}(bi+cj+dk)\) be the unit pure quaternion obtained by normalizing the pure quaternion \(bi+cj+dk\text{.}\) Let \(\theta=\arccos a\text{.}\) The expression</p>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-01T20:50:03-05:00       *-->
+<!--*       on 2020-11-02T12:37:46-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(C_1,C_2\) be two curves, parameterized by \(p(t),q(s)\text{,}\) respectively, intersecting at \(v=p(0)=q(0)\text{,}\) and with</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\theta=\lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{q(s)-v}{p(t)-v}\right)
-\end{equation*}
-</div>
-<p data-braille="continuation">one of the four oriented angles made by lines tangent to \(C_1,C_2\) at \(v\text{.}\) After transforming the curves by inversion, the corresponding angle is</p>
+<p>Let \(T\) be the transformation \(T(z)=e^{-i\arg(u-v)}(z-v)\text{.}\) \(T\) is conformal because \(T\) is a composition of a rotation and a translation, so we have \(\angle uvw= \angle T(u)T(v)T(w)\text{.}\) Since \(T(u)\) is on the positive real axis and \(T(u)=0\text{,}\) we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{\frac{1}{q(s)}-\frac{1}{v}}{\frac{1}{p(t)}-\frac{1}{v}}\right)
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{\frac{v-q(s)}{vq(s)v}}{\frac{v-p(t)}{vp(t)}}\right)\\
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{p(t)}{q(s)}\frac{v-q(s)}{v-p(t)}\right)\\
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{q(s)-v}{p(t)-v}\right)\\
-\amp = \theta
+\angle T(u)T(v)T(w)\amp =\arg(T(w))\\
+\amp =\arg(e^{-i\arg(u-v)}(w-v))\\
+\amp =\arg(w-v)-\arg(u-v)\\
+\amp =\arg\left(\frac{w-v}{u-v}\right)
 \end{align*}
 </div>
-<p data-braille="continuation">(\(q(s)/p(t)\to 1\)  because \(q(s), p(t)\to v\) as \(s,t\to 0\)).</p>
+<p data-braille="continuation">as desired.</p>
 <span class="incontext"><a href="geomdefsect.html#p-346">in-context</a></span>
 </body>
 </html>
