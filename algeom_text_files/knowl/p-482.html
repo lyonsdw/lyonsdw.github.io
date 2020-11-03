@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T20:27:03-05:00       *-->
+<!--*       on 2020-11-03T09:05:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Making the hint more explicit, draw a radius from 0 to each of the vertices of the asymptotic \(n\)-gon. This partitions the asymptotic \(n\)-gon into \(n\) doubly-asymptotic triangles. The \(n\) angles \(\alpha_i\) made be consecutive radii at 0 sum to \(2\pi\text{,}\) so the areas of the doubly-asymptotic triangles sum to \(\sum_i (\pi-\alpha_i) = n\pi -2\pi = (n-2)\pi\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Let \(\triangle ABC\) be a doubly-asymptotic triangle in the upper half-plane, and suppose \(B,C\in
+\extR\text{.}\) Any hyperbolic line intersects \(\extR\) in two points (this is easy to see in the disk model, so must also be true in the upper half-plane). Let \(B'\in
+\extR\) be the intersection of side \(AB\) with \(\extR\) that is not \(B\text{,}\) and let \(C'\) be the intersection of side \(AC\) with \(\extR\) that is not \(C\text{.}\) Let \(T\) be the Möbius transformation that takes \(B\to 1, B'\to -1, C\to \infty\text{,}\) and let \(T'\) be the Möbius transformation that takes \(C\to 1, C'\to -1, B\to
+\infty\text{.}\) One of \(T,T'\) takes \(A\) to the upper half-plane, and hence is an element of \(\HU\) that make the doubly-asymptotic triangle given in the Figure.</li>
+<li>The area of the triangle with vertices at \(1,p,\infty\) is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\int_{\cos(\pi-\alpha)}^1
+\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
+dy\;dx
+\amp = \int_{\cos(\pi-\alpha)}^1
+\left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}\\
+\amp =
+\int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx\\
+\amp = \left[-\arccos
+x\right]_{\cos(\pi-\alpha)}^1\\
+\amp = \pi-\alpha.
+\end{align*}
+</div>
+</li>
+</ol>
 <span class="incontext"><a href="section-13.html#p-482">in-context</a></span>
 </body>
 </html>

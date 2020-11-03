@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T20:26:59-05:00       *-->
+<!--*       on 2020-11-03T09:05:45-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(g\) be an element of a group \(G\text{.}\) The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">order</dfn> of \(g\text{,}\) denoted \(|g|\text{,}\) is the smallest positive integer \(n\) such that \(g^n=e\text{,}\) if such an integer exists. If there is no positive integer \(n\) such that \(g^n=e\text{,}\) then \(g\) is said to have <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">infinite</em> order. Show that, if the order of \(g\) is finite, say \(|g|=n\text{,}\) then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ol class="lower-alpha">
+<li>First, observe that \(C(a)\) is not empty because \(e\in C(a)\text{.}\) Let \(g,h\) be elements of \(C(a)\text{.}\) We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\langle g \rangle =
-\{g^0,g^1,g^2,\ldots,g^{n-1}\}\text{.}
+(gh)(a)=g(ha)=g(ah)=(ga)h=(ag)h=a(gh)
+\end{equation*}
+</div>so \(gh\) is in \(C(a)\text{.}\) Multiplying \(ag=ga\) on the right and left by \(g^{-1}\text{,}\) we have \(g^{-1}a=ag^{-1}\text{,}\) so \(g^{-1}\) is in \(C(a)\text{.}\) We conclude that \(C(a)\) is a subgroup of \(G\) by the 2-step subgroup test.</li>
+<li>You can give an argument just like for the previous part, with with the quantifier "for all \(a\)". Alternatively, you can prove that the intersection of subgroups is a subgroup (this is "obvious"). Then simply note that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+Z(G) = \bigcap_{a\in G}C(a).
 \end{equation*}
 </div>
+</li>
+</ol>
 <span class="incontext"><a href="subgroups_cosets_section.html#p-227">in-context</a></span>
 </body>
 </html>

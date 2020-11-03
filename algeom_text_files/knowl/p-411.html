@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T20:27:01-05:00       *-->
+<!--*       on 2020-11-03T09:05:48-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,44 +16,10 @@
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
 <ol class="lower-alpha">
-<li>Apply <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to a Möbius transformation that takes three points on a cline \(C\) to three other points on \(C\text{.}\)</li>
-<li>Let \(\omega = e^{i2\pi/3}\) and let \(Tz=(z,\omega,\omega^2,\omega^3=1)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-Tz\amp
-=\frac{z-\omega^2}{z-\omega^3}\frac{\omega-\omega^3}{\omega-\omega^2}\\
-\amp =
-(1+\omega)\left(\frac{z-\omega^2}{z-1}\right)\\
-T \amp \leftrightarrow
-\twotwo{1+\omega}{-\omega^2-1}{1}{-1}\\
-T^{-1} \amp \leftrightarrow \twotwo{-1}{\omega^2+1}{-1}{1+\omega}
-\end{align*}
-</div>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-z^{\ast C} \amp = T^{-1}((Tz)^\ast)\\
-\amp = T^{-1} \left(\frac{(1+\omega^2)z^\ast
--\omega-1}{z^\ast-1}\right)\\
-\amp = \frac{-[(1+\omega^2)z^\ast -\omega-1]
-+(z-1)(\omega^2+1)}{-[(1+\omega^2)z^\ast -\omega-1]
-+(1+\omega)(z^\ast-1)}\\
-\amp = \cdots = \frac{1}{z^\ast} 
-\end{align*}
-</div>
-</li>
-<li>Let \(Sz=\frac{z-a}{r}\) so that \(S\) takes \(C\) to the unit circle. Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(Sz)^{\ast S(C)} = \frac{1}{(Sz)^\ast} =
-\frac{r}{(z-a)^\ast}.
-\end{equation*}
-</div>Setting this last expression equal to \(S(z^{\ast C})\) and applying \(S^{-1}\) to both sides, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z^{\ast C} = \frac{r^2}{(z-a)^\ast} + a
-\end{equation*}
-</div>as desired.</li>
-<li>Let \(C\) make an angle \(t\) with the positive real axis, and let \(a\) be a point on \(C\text{.}\) Let \(Sz=e^{-it}(z-a)\text{,}\) so that \(S(C)=\R\text{.}\) Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have \((Sz)^{\ast S(C)} = (Sz)^\ast = e^{it}(z-a)^\ast\text{.}\) Setting this last expression equal to \(S(z^{\ast C}\) and applying \(S^{-1}\) to both sides, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z^{\ast C} = e^{i2t}(z-a)^\ast + a.
-\end{equation*}
-</div>We know that \(Sz,(Sz)^\ast\) are reflections of one another across the real axis. Because \(S^{-1}\) is a rigid motion (rotation followed by a translation, so distances and angles are preserved), the pair \(z,z^{\ast C}\) must be reflections of each other across the line \(C\text{.}\)</li>
+<li>Prove <a class="xref" data-knowl="./knowl/symmptindeppts.html" title="Corollary 3.2.17">Corollary 3.2.17</a>.</li>
+<li>Let \(C\) be the unit circle. Show that \(z^{\ast C} = 1/z^\ast\text{.}\) Suggestion: This is just a computation, but the choice of \(z_1,z_2,z_3\) might make it more or less tedious. You might try \(\omega,\omega^2,\omega^3=1\text{,}\) where \(\omega=e^{2\pi i/3}\text{.}\)</li>
+<li>Now let \(C\) be a circle with center \(a\) and radius \(r\gt 0\text{.}\) Use <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to show that \(z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a\text{.}\)</li>
+<li>Let \(C\) be a straight line. Show that \(z^{\ast C}\) is the reflection of \(z\) across \(C\text{.}\)</li>
 </ol>
 <span class="incontext"><a href="section-12.html#p-411">in-context</a></span>
 </body>

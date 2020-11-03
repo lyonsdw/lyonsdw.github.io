@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-02T20:26:59-05:00       *-->
+<!--*       on 2020-11-03T09:05:46-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,11 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now we prove the Claim. Let \(b=\langle \lcm(a,n)/a\rangle\text{.}\) We have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mu_a(b)=ab = \lcm(a,n) = 0 \pmod{n}
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(b\in \ker(\mu_a)\text{.}\) If \(c\in \ker(\mu_a)\text{,}\) then \(\mu_a(c)=ac=kn\) for some integer \(k\text{.}\) Since \(kn\) is divisible by \(a\text{,}\) we have \(kn\geq \lcm(a,n)\text{,}\) so \(c\geq
-b\text{.}\) This shows \(b\) is the smallest positive element in \(\ker(\mu_a)\) (or \(b=0\)). Applying <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like"><h6 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
+</h6>\(\ker(\mu_a)=\left\langle
+\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</article> Here is how result follows from the Claim. If \(n,a\) are relatively prime, then \(\lcm(n,a)=na\text{,}\) so \(\lcm(n,a)/a=n\text{,}\) so \(\ker(\mu_a)=\{0\}\text{.}\) Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If \(n,a\) are not relatively prime, then \(\lcm(n,a)\lt
+na\text{,}\) and \(\lcm(n,a)/a\leq n\text{.}\) Then \(\ker(\mu_a)\) is not trivial. Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a> to conclude that \(\mu_a\) is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</p>
 <span class="incontext"><a href="section-8.html#p-263">in-context</a></span>
 </body>
 </html>
