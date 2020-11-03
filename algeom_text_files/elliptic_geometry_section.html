@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T09:05:40-05:00       *-->
+<!--*       on 2020-11-03T14:25:49-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -66,7 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-
+\DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -220,13 +220,13 @@ r \to \left[ v\to rvr^\ast \right]
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<p data-braille="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
+<p data-braille="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
 <div class="displaymath">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
 </div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that \(\Rot(S^2)\) is the group \(SO(3)\) of orthogonal transformations of \(\R^3\) with determinant 1.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that \(\Rot(S^2)\) is the group \(SO(3)\) of orthogonal transformations of \(\R^3\) with determinant 1.</div></div>
 <article class="exercise exercise-like" id="s2rotisgpexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-s2rotisgpexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-s2rotisgpexer"><article class="exercise exercise-like">Complete the details to show that \(\Rot(S^2)\) is a group. Show that the kernel of the homomorphism \(U(\Quat)\to \Rot(S^2)\) given by \(r\to
@@ -430,21 +430,21 @@ dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\label{ellipticareaintformula}\ta
 <p id="p-526">Let \(\triangle ABC\) be an elliptic triangle. Let \({\mathcal C}_{AB},{\mathcal
 C}_{AC},{\mathcal C}_{BC}\) denote the great circles that extend the sides \(AB,AC,BC\) of the triangle. See <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>.</p>
 <ol class="lower-alpha">
-<li id="li-338">Explain why \(A,A'\) are endpoints of the same diameter, that is, endpoints of a diameter of \(S^2\) or their stereographic projections in \(\extC\text{.}\)</li>
-<li id="li-339">Explain why \(\triangle A'B'C'\) has the same area as \(\triangle ABC\text{,}\) even though the two triangles are not necessarily congruent! (Note that the interior of \(\triangle A'B'C'\) is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point \(\infty\text{.}\)) Hint: What does part (a) of this problem imply about the relationship between points \(X\) and \(X'\) on \(S^2\) for \(X=A,B,C\text{?}\)</li>
-<li id="li-340">Let \(R\) denote the interior of the region shown in the figure on the right in <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of \(R\) is<div class="displaymath">
+<li id="li-341">Explain why \(A,A'\) are endpoints of the same diameter, that is, endpoints of a diameter of \(S^2\) or their stereographic projections in \(\extC\text{.}\)</li>
+<li id="li-342">Explain why \(\triangle A'B'C'\) has the same area as \(\triangle ABC\text{,}\) even though the two triangles are not necessarily congruent! (Note that the interior of \(\triangle A'B'C'\) is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point \(\infty\text{.}\)) Hint: What does part (a) of this problem imply about the relationship between points \(X\) and \(X'\) on \(S^2\) for \(X=A,B,C\text{?}\)</li>
+<li id="li-343">Let \(R\) denote the interior of the region shown in the figure on the right in <a class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of \(R\) is<div class="displaymath">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 ABC).
 \end{equation*}
 </div>Suggestion: Decompose \(R\) using overlapping 2-gons.</li>
-<li id="li-341">Let \(R'\) denote the exterior of the region \(R\text{,}\) that is, \(R'=\extC\setminus R\text{.}\) Explain why the area of \(R'\) is<div class="displaymath">
+<li id="li-344">Let \(R'\) denote the exterior of the region \(R\text{,}\) that is, \(R'=\extC\setminus R\text{.}\) Explain why the area of \(R'\) is<div class="displaymath">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 A'B'C').
 \end{equation*}
 </div>Suggestion: Decompose \(R'\) into overlapping 2-gons.</li>
-<li id="li-342">Explain why the area of elliptic triangle \(\triangle ABC\) is<div class="displaymath">
+<li id="li-345">Explain why the area of elliptic triangle \(\triangle ABC\) is<div class="displaymath">
 \begin{equation}
 \text{Area}(\triangle
 ABC)= (\angle A +\angle B + \angle
