@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-07T13:32:17-05:00       *-->
+<!--*       on 2020-11-08T16:58:24-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,31 +15,23 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<ol class="lower-alpha">
-<li>The points \(A,A'\) are the intersections of great circles \(AC,AB\text{,}\) so they are endpoints of a diameter.</li>
-<li>On \(S^2\text{,}\) points \(p,q\) are antipodal if and only if \(q=-p\text{.}\) So we have \(X'=-X\) for \(X=A,B,C\text{.}\) The antipodal map \(x\to -x\) is not an element of \(\Rot(S^2)\text{,}\) but it is clear that it is distance and area preserving. Triangles \(\triangle ABC\) and \(\triangle A'B'C'\) are antipodal images of each other, so they have the same area.</li>
-<li>View \(R\) as three 2-gons \(AA',BB',CC'\) that overlap in triangle \(\triangle
-ABC\text{.}\)</li>
-<li>View \(R'\) as three 2-gons \(AA',BB',CC'\) that overlap in triangle \(\triangle
-A'B'C'\text{.}\)</li>
-<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p>We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-4\pi \amp =\text{ Area}(S^2)\\
-\amp = \text{ Area}(R)+\text{ Area}(R')\\
-\amp = 4(\angle A+\angle B+\angle C) -
-2\left(\text{Area}(\triangle ABC)+\text{Area}(\triangle
-A'B'C')\right).\\
-\amp = 4(\angle A+\angle B+\angle C) -
-4\left(\text{Area}(\triangle ABC)\right)
+\text{Area}(R_{\alpha}) \amp = \int_0^\alpha \int_0^\infty
+\frac{4r\;dr\;d\theta}{(1+r^2)^2}\\
+\amp = 2\int_0^\alpha \left[\frac{du}{u}\right]_1^\infty
+d\theta \;\;(u=1+r^2)\\
+\amp = 2\int_0^\alpha 1 \; d\theta\\
+\amp = 2\alpha.
 \end{align*}
-</div>Rearranging, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+<p data-braille="continuation">You can see this is the right answer on \(S^2\text{.}\) The area of \(R_\alpha\) is the fraction \(\frac{\alpha}{2\pi}\) of the total area \(4\pi\) of \(S^2\text{,}\) so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{Area}(\triangle ABC)= (\angle A +\angle B + \angle
-C)-\pi.
+\text{Area}(R_\alpha) = \frac{\alpha}{2\pi}4\pi=2\alpha.
 \end{equation*}
 </div>
-</li>
-</ol>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-528">in-context</a></span>
 </body>
 </html>
