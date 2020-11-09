@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:49-05:00       *-->
+<!--*       on 2020-11-09T15:23:00-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.1.4.6.</span></h5>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \((X,G)\text{,}\) \((Y,H)\text{,}\) and \((Z,K)\) be geometries. Clearly \((X,G)\) is equivalent to itself via the identity map on \(X\text{.}\) It is also easy to see that if \(\mu\colon X\to Y\) is a geometry equivalence map, then \(\mu^{-1}\colon Y\to X\) is also a geometry equivalence. It is also easy to see that if \(\mu\colon X\to Y\) and \(\nu\colon Y\to Z\) are geometry equivalence maps, then \(\nu\circ \mu\colon X\to Z\) is also a geometry equivalence map.</p></article><span class="incontext"><a href="geomdefsect.html#commentary-91">in-context</a></span>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.1.4.5.</span></h5>
+<p>Let \(C_1,C_2\) be two curves, parameterized by \(p(t),q(s)\text{,}\) respectively, intersecting at \(v=p(0)=q(0)\text{,}\) and with</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\theta=\lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{q(s)-v}{p(t)-v}\right)
+\end{equation*}
+</div>
+<p data-braille="continuation">one of the four oriented angles made by lines tangent to \(C_1,C_2\) at \(v\text{.}\) After transforming the curves by inversion, the corresponding angle is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{\frac{1}{q(s)}-\frac{1}{v}}{\frac{1}{p(t)}-\frac{1}{v}}\right)
+\amp = \lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{\frac{v-q(s)}{vq(s)v}}{\frac{v-p(t)}{vp(t)}}\right)\\
+\amp = \lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{p(t)}{q(s)}\frac{v-q(s)}{v-p(t)}\right)\\
+\amp = \lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{q(s)-v}{p(t)-v}\right)\\
+\amp = \theta
+\end{align*}
+</div>
+<p data-braille="continuation">(\(q(s)/p(t)\to 1\)  because \(q(s), p(t)\to v\) as \(s,t\to 0\)).</p></article><span class="incontext"><a href="geomdefsect.html#commentary-91">in-context</a></span>
 </body>
 </html>

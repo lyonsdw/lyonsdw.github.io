@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T09:03:46-05:00       *-->
+<!--*       on 2020-11-09T12:24:07-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -66,7 +66,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-
+\DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \newcommand{\C}{\mathbb{C}} 
@@ -123,15 +123,15 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
 <li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
 <a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
 <li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
 <li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
 <li><a href="section-7.html" data-scroll="section-7">Group homomorphisms</a></li>
 <li><a href="section-8.html" data-scroll="section-8">Group actions</a></li>
 <li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
@@ -157,36 +157,54 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-11"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Möbius geometry</span>
 </h2>
-<section class="introduction" id="introduction-11"><p id="p-321">Möbius geometry provides a unifying framework for studying planar geometries. In particular, the transformation groups of hyperbolic and elliptic geometries in the sections that follow are subgroups of the group of Möbius transformations.</p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-10"><p id="p-329">Möbius geometry provides a unifying framework for studying planar geometries. In particular, the transformation groups of hyperbolic and elliptic geometries in the sections that follow are subgroups of the group of Möbius transformations.</p></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span>
 </h3>
-<p id="p-322">A <dfn class="terminology">Möbius transformation</dfn> (also called a <dfn class="terminology">linear fractional transformation</dfn>) of the extended complex plane \(\extC\) is a function of the form</p>
+<p id="p-330">A <dfn class="terminology">Möbius transformation</dfn> (also called a <dfn class="terminology">linear fractional transformation</dfn>) of the extended complex plane \(\extC\) is a function of the form</p>
 <div class="displaymath">
 \begin{equation}
 f(z)= \frac{az+b}{cz+d}\label{stdlinfractransf}\tag{3.2.1}
 \end{equation}
 </div>
 <p data-braille="continuation">where \(z\) is a complex variable, \(a,b,c,d\) are complex constants, and \(ad-bc\neq 0\text{.}\) To complete the definition, we make the assignments \(f(-d/c)=\infty\) and \(f(\infty)=a/c\) if \(c\neq 0\text{.}\) If \(c=0\text{,}\) we assign \(f(\infty)=\infty\text{.}\)</p>
-<p id="p-323"><em class="alert">Note on notational convention:</em> It is customary to use capital letters such as \(S,T,U\) to denote Möbius transformations. It is also customary to omit the parentheses, and to write \(Tz\) instead of \(T(z)\) to denote the value of a Möbius transformation.</p>
+<p id="p-331"><em class="alert">Note on notational convention:</em> It is customary to use capital letters such as \(S,T,U\) to denote Möbius transformations. It is also customary to omit the parentheses, and to write \(Tz\) instead of \(T(z)\) to denote the value of a Möbius transformation.</p>
 <article class="exercise exercise-like" id="mobiustranslimitexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustranslimitexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranslimitexer"><article class="exercise exercise-like"><p id="p-324">Let \(f(x)=(ax+b)/(cx+d)\) be a function of a <em class="emphasis">real</em> variable \(x\) with real constants \(a,b,c,d\) with \(ad-bc\neq 0\) and \(c\neq 0\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranslimitexer"><article class="exercise exercise-like"><p id="p-332">Let \(f(x)=(ax+b)/(cx+d)\) be a function of a <em class="emphasis">real</em> variable \(x\) with real constants \(a,b,c,d\) with \(ad-bc\neq 0\) and \(c\neq 0\text{.}\)</p>
 <ol class="decimal">
-<li id="li-232">Show that \(\displaystyle \lim_{x\to
+<li id="li-264">Show that \(\displaystyle \lim_{x\to
 -d/c}|f(x)|=\infty\text{.}\)</li>
-<li id="li-233">Show that \(\displaystyle \lim_{x\to \infty}f(x)=a/c\text{.}\)</li>
+<li id="li-265">Show that \(\displaystyle \lim_{x\to \infty}f(x)=a/c\text{.}\)</li>
 </ol></article></div>
-<article class="exercise exercise-like" id="mobiustransinvertcriterionexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustransinvertcriterionexer"><h6 class="heading">
+<article class="commentary" id="commentary-85"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.1.</span></h5>
+<ol id="p-333" class="decimal">
+<li id="li-266">We have \(a(-d/c)+b = -\frac{ad-bc}{c}\neq 0\) (by assumption), so \(ax+b\to -\frac{ad-bc}{c}\neq 0\) and \(cx+d \to 0\) as \(x\to -d/c\text{,}\) so \(|f(x)|\to \infty\) as \(x\to
+-d/c\text{.}\)</li>
+<li id="li-267">We have<div class="displaymath">
+\begin{equation*}
+\frac{ax+b}{cx+d}=\frac{a}{c}\left(\frac{1+\frac{b}{ax}}{1+\frac{d}{cx}}\right).
+\end{equation*}
+</div>It is clear that the latter expression tends to \(a/c\) as \(x\to \infty\text{.}\)</li>
+</ol></article><article class="exercise exercise-like" id="mobiustransinvertcriterionexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustransinvertcriterionexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustransinvertcriterionexer"><article class="exercise exercise-like"><p id="p-326">Show that the condition \(ad-bc\neq 0\) is necessary and sufficient for invertibility. Find a formula for the inverse of \(z\to (az+b)/(cz+d)\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="mobiustranscomposeexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustranscomposeexer"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustransinvertcriterionexer"><article class="exercise exercise-like"><p id="p-334">Show that the condition \(ad-bc\neq 0\) is necessary and sufficient for invertibility. Find a formula for the inverse of \(z\to (az+b)/(cz+d)\text{.}\)</p></article></div>
+<article class="commentary" id="commentary-86"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.2.</span></h5>
+<p id="p-335">It is straightforward to solve \(w=\frac{az+b}{cz+d}\) for \(z\text{.}\) We get \(z=\frac{dw-b}{-cw+a}\text{.}\) When we <em class="emphasis">check</em> the composition, we see that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{a\left(\frac{dw-b}{-cw+a}\right)+b}{c\left(\frac{dw-b}{-cw+a}\right)+d}
+= \cdots = w\frac{ad-bc}{ad-bc}.
+\end{equation*}
+</div>
+<p data-braille="continuation">Thus it is clear that the condition \(ad-bc\) is necessary and sufficient for invertibility.</p></article><article class="exercise exercise-like" id="mobiustranscomposeexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiustranscomposeexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranscomposeexer"><article class="exercise exercise-like"><p id="p-328">Show that the composition of two Möbius transformations is a Möbius transformation. Suggestion: First show that the composition has the form \(z\to \frac{rz+s}{tz+u}\text{.}\) Next, instead of a brute force calculation to check that \(ru-ts\neq 0\text{,}\) use <a class="xref" data-knowl="./knowl/mobiustransinvertcriterionexer.html" title="Checkpoint 3.2.2">Checkpoint 3.2.2</a>.</p></article></div>
-<p id="p-330"><article class="definition definition-like" id="mobiusgeomdef"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiustranscomposeexer"><article class="exercise exercise-like"><p id="p-336">Show that the composition of two Möbius transformations is a Möbius transformation. Suggestion: First show that the composition has the form \(z\to \frac{rz+s}{tz+u}\text{.}\) Next, instead of a brute force calculation to check that \(ru-ts\neq 0\text{,}\) use <a class="xref" data-knowl="./knowl/mobiustransinvertcriterionexer.html" title="Checkpoint 3.2.2">Checkpoint 3.2.2</a>.</p></article></div>
+<article class="commentary" id="commentary-87"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.3.</span></h5>
+<p id="p-337">It is straightforward to show that the composition of two Möbius transformations has the correct form. The composition is invertible because both of its factors are invertible. It follows from the previous exercise that \(ru-ts\neq 0\text{.}\)</p></article><p id="p-338"><article class="definition definition-like" id="mobiusgeomdef"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-331">The set of all Möbius transformations forms a group \(\M\text{,}\) called the <dfn class="terminology">Möbius group</dfn> , under the operation of function composition. <dfn class="terminology">Möbius geometry</dfn> is the pair \((\extC,\M)\text{.}\)</p></article></p>
-<p id="p-332">There is a natural relationship between Möbius group operations and matrix group operations. The map \({\mathcal T}\colon
+<p id="p-339">The set of all Möbius transformations forms a group \(\M\text{,}\) called the <dfn class="terminology">Möbius group</dfn> , under the operation of function composition. <dfn class="terminology">Möbius geometry</dfn> is the pair \((\extC,\M)\text{.}\)</p></article></p>
+<p id="p-340">There is a natural relationship between Möbius group operations and matrix group operations. The map \({\mathcal T}\colon
 GL(2,\C)\to \M\) be given by</p>
 <div class="displaymath">
 \begin{equation}
@@ -211,7 +229,7 @@ PGL(2,\C)\approx \M\text{.}
 </div>
 <article class="exercise exercise-like" id="mobiusgpaspgl2exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-mobiusgpaspgl2exer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiusgpaspgl2exer"><article class="exercise exercise-like"><p id="p-333">Show that the map \({\mathcal T}\) is a group homomorphism. Show that the kernel of the \({\mathcal T}\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mobiusgpaspgl2exer"><article class="exercise exercise-like"><p id="p-341">Show that the map \({\mathcal T}\) is a group homomorphism. Show that the kernel of the \({\mathcal T}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \ker{\mathcal T}=\left\{\left[
@@ -219,57 +237,68 @@ PGL(2,\C)\approx \M\text{.}
 k\neq 0\right\}\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-335">Homotheties, rotations, translations, and inversions (see <a class="xref" data-knowl="./knowl/basicplanartrans.html" title="Table 3.1.4: Basic planar geometric transformations">Table 3.1.4</a> in <a href="geomdefsect.html" class="internal" title="Section 3.1: Geometries and models">Section 3.1</a>) are special cases of Möbius transformations. These basic transformations can be viewed as building blocks for general Möbius transformations, as follows. <article class="proposition theorem-like" id="mobiusdecompbasic"><h6 class="heading">
+<article class="commentary" id="commentary-88"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.5.</span></h5>
+<p id="p-342">It is straightforward to check that \({\mathcal T}\) is a homomorphism; half the work is already done in the solution to <a class="xref" data-knowl="./knowl/mobiustranscomposeexer.html" title="Checkpoint 3.2.3">Checkpoint 3.2.3</a>. It is easy to see that the scalar matrices are contained in \(\ker{\mathcal T}\text{.}\) To see that \(\ker{\mathcal T}\) is contained in the scalar matrices, observe the Möbius transformation \(\left[z\to
+\frac{az+b}{cz+d}\right]\) is the identity if and only if \(a=d\neq 0\) and \(b=c=0\text{.}\)</p></article><p id="p-343">Homotheties, rotations, translations, and inversions (see <a class="xref" data-knowl="./knowl/basicplanartrans.html" title="Table 3.1.4: Basic planar geometric transformations">Table 3.1.4</a> in <a href="geomdefsect.html" class="internal" title="Section 3.1: Geometries and models">Section 3.1</a>) are special cases of Möbius transformations. These basic transformations can be viewed as building blocks for general Möbius transformations, as follows. <article class="proposition theorem-like" id="mobiusdecompbasic"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
 </h6>
-<p id="p-336">Every Möbius transformation is a composition of homotheties, rotations, translations, and inversions.</p></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobiusdecompexer.html" title="Exercise 3.2.6.1: Decomposition of Möbius transformations into four basic types.">Exercise 3.2.6.1</a></article></div></p>
+<p id="p-344">Every Möbius transformation is a composition of homotheties, rotations, translations, and inversions.</p></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobiusdecompexer.html" title="Exercise 3.2.6.1: Decomposition of Möbius transformations into four basic types.">Exercise 3.2.6.1</a></article></div></p>
 <article class="exercise exercise-like" id="littlemobiusexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-littlemobiusexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-littlemobiusexer"><article class="exercise exercise-like"><ol id="p-337" class="decimal">
-<li id="li-236">Identify the values of the coefficients \(a,b,c,d\) in a Möbius transformation \(z\to \frac{az+b}{cz+d}\) that is a homothety, rotation, translation, and inversion, respectively.</li>
-<li id="li-237">Write a Möbius transformation that does "clockwise rotation by one-quarter rotation about the point \(2-i\)".</li>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-littlemobiusexer"><article class="exercise exercise-like"><ol id="p-345" class="decimal">
+<li id="li-268">Identify the values of the coefficients \(a,b,c,d\) in a Möbius transformation \(z\to \frac{az+b}{cz+d}\) that is a homothety, rotation, translation, and inversion, respectively.</li>
+<li id="li-269">Write a Möbius transformation that does "clockwise rotation by one-quarter rotation about the point \(2-i\)".</li>
 </ol></article></div>
-<article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
+<article class="commentary" id="commentary-89"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.7.</span></h5>
+<ol id="p-346" class="decimal">
+<li id="li-270"><ul id="p-347" class="disc">
+<li id="li-271">A homothety must have \(b=c=0\) and \(a/d\gt 0\text{.}\)</li>
+<li id="li-272">A rotation must have \(b=c=0\) and \(|a|=|d|\text{.}\)</li>
+<li id="li-273">A translation must have \(c=0\text{,}\) \(b\neq 0\text{,}\) and \(a=d\neq 0\text{.}\)</li>
+<li id="li-274">An inversion must have \(a=d=0\) and \(c=b\neq 0\text{.}\)</li>
+</ul></li>
+<li id="li-275">\(\displaystyle z \to e^{-i\pi/2}(z-(2-i)) + 2-i\)</li>
+</ol></article><article class="corollary theorem-like" id="corollary-3"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
 </h6>
-<p id="p-340">Möbius transformations are conformal.</p></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof">Apply <a class="xref" data-knowl="./knowl/mobiusdecompbasic.html" title="Proposition 3.2.6">Proposition 3.2.6</a> and <a class="xref" data-knowl="./knowl/basictransconformalexer.html" title="Exercise Group 3.1.4.2–5: Angles and conformal transformations.">Exercise Group 3.1.4.2–5</a>.</article></div>
-<p id="p-341">Next, a simple observation, in the form of the following Lemma, leads to a result called the Fundamental Theorem of Möbius Geometry.</p>
-<p id="p-342"><article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
+<p id="p-348">Möbius transformations are conformal.</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof">Apply <a class="xref" data-knowl="./knowl/mobiusdecompbasic.html" title="Proposition 3.2.6">Proposition 3.2.6</a> and <a class="xref" data-knowl="./knowl/basictransconformalexer.html" title="Exercise Group 3.1.4.2–5: Angles and conformal transformations.">Exercise Group 3.1.4.2–5</a>.</article></div>
+<p id="p-349">Next, a simple observation, in the form of the following Lemma, leads to a result called the Fundamental Theorem of Möbius Geometry.</p>
+<p id="p-350"><article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
 </h6>
-<p id="p-343">If a Möbius transformation has more than two fixed points, then it is the identity transformation.</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof">Hint: just solve \(z=\frac{az+b}{cz+d}\text{.}\) You will need to consider cases.</article></div></p>
-<p id="p-344"><article class="proposition theorem-like" id="proposition-9"><h6 class="heading">
+<p id="p-351">If a Möbius transformation has more than two fixed points, then it is the identity transformation.</p></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof">Hint: just solve \(z=\frac{az+b}{cz+d}\text{.}\) You will need to consider cases.</article></div></p>
+<p id="p-352"><article class="proposition theorem-like" id="proposition-10"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius Geometry.</span>
 </h6>
-<p id="p-345">A Möbius transformation is completely determined by any three input-output pairs. This means that for any triple of distinct input values \(z_1,z_2,z_3\) in \(\extC\) and any triple of distinct output values \(w_1,w_2,w_3\) in \(\extC\text{,}\) there is a unique \(T\in \M\) such that \(Tz_i=w_i\) for \(i=1,2,3\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof">Outline: Suppose there are two such transformations, \(S\) and \(T\text{.}\) Show that \(S\circ
-T^{-1}\) fixes three points. Now apply the previous Lemma.</article></div></p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<p id="p-353">A Möbius transformation is completely determined by any three input-output pairs. This means that for any triple of distinct input values \(z_1,z_2,z_3\) in \(\extC\) and any triple of distinct output values \(w_1,w_2,w_3\) in \(\extC\text{,}\) there is a unique \(T\in \M\) such that \(Tz_i=w_i\) for \(i=1,2,3\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof">Outline: Suppose there are two such transformations, \(S\) and \(T\text{.}\) Show that \(S\circ
+T^{-1}\) fixes three points. Now apply the previous Lemma.</article></div></p></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Cross ratio</span>
 </h3>
-<p id="p-346">In what follows, we consider the special case of the output triple \(w_1=1\text{,}\) \(w_2=0\text{,}\) \(w_3=\infty\text{.}\) Given three distinct points \(z_1,z_2,z_3\) in \(\extC\text{,}\) we write \((\cdot,z_1,z_2,z_3)\) to denote the unique Möbius transformation that satisfies \(z_1\to
+<p id="p-354">In what follows, we consider the special case of the output triple \(w_1=1\text{,}\) \(w_2=0\text{,}\) \(w_3=\infty\text{.}\) Given three distinct points \(z_1,z_2,z_3\) in \(\extC\text{,}\) we write \((\cdot,z_1,z_2,z_3)\) to denote the unique Möbius transformation that satisfies \(z_1\to
 1\text{,}\) \(z_2\to 0\text{,}\) and \(z_3\to \infty\text{.}\) We write \((z_0,z_1,z_2,z_3)\) to denote the image of \(z_0\) under \((\cdot,z_1,z_2,z_3)\text{.}\) The expression \((z_0,z_1,z_2,z_3)\) is called the <dfn class="terminology">cross ratio</dfn> of the 4-tuple \(z_0,z_1,z_2,z_3\text{.}\) The next two propositions give important properties of cross ratio.</p>
 <article class="proposition theorem-like" id="crossratioinvariant"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Cross ratio is invariant.</span>
 </h6>
-<p id="p-347">Let \(z_1,z_2,z_3\) be distinct points in \(\extC\text{,}\) let \(z_0\in \extC\text{,}\) and let \(T\) be any Möbius transformation. Then we have</p>
+<p id="p-355">Let \(z_1,z_2,z_3\) be distinct points in \(\extC\text{,}\) let \(z_0\in \extC\text{,}\) and let \(T\) be any Möbius transformation. Then we have</p>
 <div class="displaymath">
 \begin{equation*}
 (z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof">The transformations \((\cdot,z_1,z_2,z_3)\) and \((\cdot,Tz_1,Tz_2,Tz_3)\circ T\) both send \(z_1\to 1\text{,}\) \(z_2\to 0\text{,}\) and \(z_3\to \infty\text{,}\) so they must be equal, by the Fundamental Theorem. Now apply both transformations to \(z_0\text{.}\)</article></div>
+</div></article><article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof">The transformations \((\cdot,z_1,z_2,z_3)\) and \((\cdot,Tz_1,Tz_2,Tz_3)\circ T\) both send \(z_1\to 1\text{,}\) \(z_2\to 0\text{,}\) and \(z_3\to \infty\text{,}\) so they must be equal, by the Fundamental Theorem. Now apply both transformations to \(z_0\text{.}\)</article></div>
 <article class="proposition theorem-like" id="mobinvrealisclineprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span>
 </h6>
-<p id="p-348">Let \(z_1,z_2,z_3\) be distinct points in \(\extC\text{,}\) let \(T=(\cdot,z_1,z_2,z_3)\text{,}\) and let \(C_T=T^{-1}\left(\extR\right)\) be the inverse image of the extended real line \(\extR=\R\cup \{\infty\}\) under \(T\text{.}\) Then \(C_T\) is a Euclidean circle or straight line. Furthermore, \(C_T\) is the unique Euclidean circle or straight line that contains the points \(z_1,z_2,z_3\text{.}\)</p></article><article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobinvrealisclineexer.html" title="Exercise 3.2.6.4">Exercise 3.2.6.4</a></article></div>
+<p id="p-356">Let \(z_1,z_2,z_3\) be distinct points in \(\extC\text{,}\) let \(T=(\cdot,z_1,z_2,z_3)\text{,}\) and let \(C_T=T^{-1}\left(\extR\right)\) be the inverse image of the extended real line \(\extR=\R\cup \{\infty\}\) under \(T\text{.}\) Then \(C_T\) is a Euclidean circle or straight line. Furthermore, \(C_T\) is the unique Euclidean circle or straight line that contains the points \(z_1,z_2,z_3\text{.}\)</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/mobinvrealisclineexer.html" title="Exercise 3.2.6.4">Exercise 3.2.6.4</a></article></div>
 <article class="corollary theorem-like" id="crossratiorealcriterion"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span>
 </h6>
-<p id="p-349">The cross ratio \((z_0,z_1,z_2,z_3)\) is real if and only if \(z_0,z_1,z_2,z_3\) lie on a Euclidean circle or straight line.</p></article><article class="corollary theorem-like" id="clinesinvariant"><h6 class="heading">
+<p id="p-357">The cross ratio \((z_0,z_1,z_2,z_3)\) is real if and only if \(z_0,z_1,z_2,z_3\) lie on a Euclidean circle or straight line.</p></article><article class="corollary theorem-like" id="clinesinvariant"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.14</span><span class="period">.</span>
 </h6>
-<p id="p-350">Let \(C\) be a Euclidean circle or straight line in \(\extC\) and let \(T\) be any Möbius transformation. Then \(T(C)\) is a Euclidean circle or straight line.</p></article><p id="p-351">A Euclidean circle or straight line is called a <dfn class="terminology">cline</dfn> (pronounced "kline") or <dfn class="terminology">generalized circle</dfn>. The propositions and corollaries above show that the set of all clines is a single congruence class of figures in Möbius geometry.</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+<p id="p-358">Let \(C\) be a Euclidean circle or straight line in \(\extC\) and let \(T\) be any Möbius transformation. Then \(T(C)\) is a Euclidean circle or straight line.</p></article><p id="p-359">A Euclidean circle or straight line is called a <dfn class="terminology">cline</dfn> (pronounced "kline") or <dfn class="terminology">generalized circle</dfn>. The propositions and corollaries above show that the set of all clines is a single congruence class of figures in Möbius geometry.</p></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Symmetry with respect to a cline</span>
 </h3>
-<p id="p-352">Geometrically, the conjugation map \(z\to z^{\ast}\) in the complex plane is <em class="emphasis">reflection</em> across the real line. This "mirror" symmetry generalizes to symmetry with respect to any cline, as follows. Given a cline \(C\) that contains \(z_1,z_2,z_3\) in \(\extC\text{,}\) let \(T=(\cdot,z_1,z_2,z_3)\text{.}\) Given any point \(z\text{,}\) the <dfn class="terminology">symmetric point with respect to \(C\)</dfn> is</p>
+<p id="p-360">Geometrically, the conjugation map \(z\to z^{\ast}\) in the complex plane is <em class="emphasis">reflection</em> across the real line. This "mirror" symmetry generalizes to symmetry with respect to any cline, as follows. Given a cline \(C\) that contains \(z_1,z_2,z_3\) in \(\extC\text{,}\) let \(T=(\cdot,z_1,z_2,z_3)\text{.}\) Given any point \(z\text{,}\) the <dfn class="terminology">symmetric point with respect to \(C\)</dfn> is</p>
 <div class="displaymath">
 \begin{equation}
 z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\label{symmptdef}\tag{3.2.3}
@@ -277,16 +306,16 @@ z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\label{symmptdef}\tag{3.2.3}
 </div>
 <p data-braille="continuation">where \(\conj\colon \extC\to \extC\) is the extension of the conjugation map to the extended complex plane that sends \(\infty\to \infty^\ast=\infty\text{.}\) The idea is to map \(C\) to the real line via \(T\text{,}\) then conjugate, then map the real line back to \(C\text{.}\) See <a class="xref" data-knowl="./knowl/symmetric_pt_fig.html" title="Figure 3.2.15">Figure 3.2.15</a>.</p>
 <figure class="figure figure-like" id="symmetric_pt_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/symmetric_pt2.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.15<span class="period">.</span></span><span class="space"> </span>Symmetric points \(z,z^{\ast C}\) with respect to the circle \(C\)</figcaption></figure><p id="p-353">The definition of symmetric point depends only on the circle \(C\text{,}\) and not on the three points \(z_1,z_2,z_3\text{.}\) This fact is a corollary of the following Proposition.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.15<span class="period">.</span></span><span class="space"> </span>Symmetric points \(z,z^{\ast C}\) with respect to the circle \(C\)</figcaption></figure><p id="p-361">The definition of symmetric point depends only on the circle \(C\text{,}\) and not on the three points \(z_1,z_2,z_3\text{.}\) This fact is a corollary of the following Proposition.</p>
 <article class="proposition theorem-like" id="symmptinvariantprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.16</span><span class="period">.</span>
 </h6>
-<p id="p-354">Let \(C\) be a cline and let \(S\) be a Möbius transformation. If \(z,z'\) are a pair of points that are symmetric with respect to \(C\text{,}\) then \(Sz,Sz'\) are symmetric with respect to the cline \(S(C)\text{.}\) That is, we have</p>
+<p id="p-362">Let \(C\) be a cline and let \(S\) be a Möbius transformation. If \(z,z'\) are a pair of points that are symmetric with respect to \(C\text{,}\) then \(Sz,Sz'\) are symmetric with respect to the cline \(S(C)\text{.}\) That is, we have</p>
 <div class="displaymath">
 \begin{equation*}
 (Sz)^{\ast S(C)} = S(z^{\ast C}).
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof">Let \(z_1,z_2,z_3\) be three points on \(C\text{,}\) so that \(Sz_1,Sz_2,Sz_3\) are three points on \(S(C)\text{.}\) Let \(T=(\cdot,z_1,z_2,z_3)\) and let \(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\) By invariance of the cross ratio, we have<div class="displaymath">
+</div></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof">Let \(z_1,z_2,z_3\) be three points on \(C\text{,}\) so that \(Sz_1,Sz_2,Sz_3\) are three points on \(S(C)\text{.}\) Let \(T=(\cdot,z_1,z_2,z_3)\) and let \(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\) By invariance of the cross ratio, we have<div class="displaymath">
 \begin{equation*}
 (U\circ S)z=Tz\text{.}
 \end{equation*}
@@ -305,16 +334,16 @@ U\circ S)(z)\\
 <article class="corollary theorem-like" id="symmptindeppts"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.17</span><span class="period">.</span>
 </h6>
-<p id="p-355">The definition of \(z^{\ast C}\) depends only on the circle \(C\text{,}\) and not on the three points \(z_1,z_2,z_3\) used in the definition <a class="xref" data-knowl="./knowl/symmptdef.html" title="Equation 3.2.3">(3.2.3)</a>.</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/symmetricpointexer.html" title="Exercise 3.2.6.6: Symmetry with respect to a cline">Exercise 3.2.6.6</a>.</article></div></section><section class="subsection" id="normalformssubsect"><h3 class="heading hide-type">
+<p id="p-363">The definition of \(z^{\ast C}\) depends only on the circle \(C\text{,}\) and not on the three points \(z_1,z_2,z_3\) used in the definition <a class="xref" data-knowl="./knowl/symmptdef.html" title="Equation 3.2.3">(3.2.3)</a>.</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/symmetricpointexer.html" title="Exercise 3.2.6.6: Symmetry with respect to a cline">Exercise 3.2.6.6</a>.</article></div></section><section class="subsection" id="normalformssubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.4</span> <span class="title">Normal forms</span>
 </h3>
-<p id="p-356">We conclude this section on Möbius geometry with a discussion of the <dfn class="terminology">normal form</dfn> of a Möbius transformation. We begin with a Lemma.</p>
+<p id="p-364">We conclude this section on Möbius geometry with a discussion of the <dfn class="terminology">normal form</dfn> of a Möbius transformation. We begin with a Lemma.</p>
 <article class="lemma theorem-like" id="normalformlemma"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.18</span><span class="period">.</span>
 </h6>
-<p id="p-357">If a Möbius transformation has exactly two fixed points \(0\) and \(\infty\text{,}\) then it has the form \(z\to \alpha z\) for some nonzero \(\alpha\in
-\C\text{.}\) If a Möbius transformation has a single fixed point at \(\infty\text{,}\) then it has the form \(z\to z+\beta\) for some nonzero \(\beta\in \C\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/normalformlemmaexer.html" title="Exercise 3.2.6.5">Exercise 3.2.6.5</a>.</article></div>
-<p id="p-358">Now suppose that a Möbius transformation \(T\) has two fixed points, \(p\) and \(q\text{.}\) Let \(S\) be given by \(Sz = \frac{z-p}{z-q}\text{.}\) Let \(w=Sz\) and let \(U=S\circ T\circ S^{-1}\) be the transformation of the \(w\)-plane that is  conjugate to \(T\) via \(S\) (see <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.3.3.3–6: Conjugate transformations.">Exercise Group 1.3.3.3–6</a>). It is easy to check that \(U\) has exactly two fixed points \(0\) and \(\infty\text{.}\) Applying the previous Lemma, we have \(Uw=\alpha w\) for some nonzero \(\alpha\in
+<p id="p-365">If a Möbius transformation has exactly two fixed points \(0\) and \(\infty\text{,}\) then it has the form \(z\to \alpha z\) for some nonzero \(\alpha\in
+\C\text{.}\) If a Möbius transformation has a single fixed point at \(\infty\text{,}\) then it has the form \(z\to z+\beta\) for some nonzero \(\beta\in \C\text{.}\)</p></article><article class="hiddenproof" id="proof-15"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/normalformlemmaexer.html" title="Exercise 3.2.6.5">Exercise 3.2.6.5</a>.</article></div>
+<p id="p-366">Now suppose that a Möbius transformation \(T\) has two fixed points, \(p\) and \(q\text{.}\) Let \(S\) be given by \(Sz = \frac{z-p}{z-q}\text{.}\) Let \(w=Sz\) and let \(U=S\circ T\circ S^{-1}\) be the transformation of the \(w\)-plane that is  conjugate to \(T\) via \(S\) (see <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.2.3.3–6: Conjugate transformations.">Exercise Group 1.2.3.3–6</a>). It is easy to check that \(U\) has exactly two fixed points \(0\) and \(\infty\text{.}\) Applying the previous Lemma, we have \(Uw=\alpha w\) for some nonzero \(\alpha\in
 \C\text{.}\) Applying both sides of \(S\circ T=U\circ S\) to \(z\text{,}\) we have the following <em class="emphasis">normal form</em> for \(T\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
@@ -323,7 +352,7 @@ U\circ S)(z)\\
 \end{equation}
 </div>
 <p data-braille="continuation">The transformation \(T\) is called <dfn class="terminology">elliptic</dfn>, <dfn class="terminology">hyperbolic</dfn>, or <dfn class="terminology">loxodromic</dfn> if \(U\) is a rotation (\(|\alpha|=1\)), a homothety (\(\alpha \gt 0\)), or neither, respectively.</p>
-<p id="p-359">Finally, suppose that a Möbius transformation \(T\) has exactly one fixed point at \(p\text{.}\) Let \(S\) be given by \(Sz = \frac{1}{z-p}\text{.}\) Again, let \(w=Sz\) and let \(U=S\circ T\circ S^{-1}\text{.}\) This time, \(U\) has exactly one fixed point at \(\infty\text{.}\) Applying the Lemma, we have \(Uw=w+\beta\) for some nonzero \(\beta\in
+<p id="p-367">Finally, suppose that a Möbius transformation \(T\) has exactly one fixed point at \(p\text{.}\) Let \(S\) be given by \(Sz = \frac{1}{z-p}\text{.}\) Again, let \(w=Sz\) and let \(U=S\circ T\circ S^{-1}\text{.}\) This time, \(U\) has exactly one fixed point at \(\infty\text{.}\) Applying the Lemma, we have \(Uw=w+\beta\) for some nonzero \(\beta\in
 \C\text{.}\) Applying both sides of \(S\circ T=U\circ S\) to \(z\text{,}\) we have the following <em class="emphasis">normal form</em> for \(T\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
@@ -332,7 +361,7 @@ U\circ S)(z)\\
 \end{equation}
 </div>
 <p data-braille="continuation">A Möbius transformations of this type is called <dfn class="terminology">parabolic</dfn>. Here is a summary of the classification terminology associated with normal forms.</p>
-<p id="p-360"><figure class="table table-like" id="normalformtable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.19<span class="period">.</span></span><span class="space"> </span>Summary of normal forms of \(T\in \M\)</figcaption><table>
+<p id="p-368"><figure class="table table-like" id="normalformtable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.19<span class="period">.</span></span><span class="space"> </span>Summary of normal forms of \(T\in \M\)</figcaption><table>
 <tr>
 <td class="c m b3 r1 l1 t1 lines">normal form type</td>
 <td class="c m b3 r1 l0 t1 lines">normal form</td>
@@ -366,18 +395,18 @@ U\circ S)(z)\\
 \beta\neq 0\)</td>
 <td class="c m b1 r1 l0 t0 lines" data-braille="last-cell">translation</td>
 </tr>
-</table></figure></p></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+</table></figure></p></section><section class="subsection" id="subsection-33"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.5</span> <span class="title">Steiner circles</span>
 </h3>
 <figure class="figure figure-like" id="twofixedptgrid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/2fixedptgrid.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.20<span class="period">.</span></span><span class="space"> </span>The polar coordinate grid and Steiner circle coordinate grid</figcaption></figure><figure class="figure figure-like" id="degenerate_grid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/degenerate_grid_lines.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.21<span class="period">.</span></span><span class="space"> </span>Degenerate coordinate grid lines and degenerate Steiner circles</figcaption></figure><p id="p-361">The discussion of normal forms show that any non-identity Möbius transformation is conjugate to one of two basic forms, \(w\to \alpha w\) or \(w\to w+\beta\text{.}\) The natural coordinate system for depicting the action of \(w\to
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.21<span class="period">.</span></span><span class="space"> </span>Degenerate coordinate grid lines and degenerate Steiner circles</figcaption></figure><p id="p-369">The discussion of normal forms show that any non-identity Möbius transformation is conjugate to one of two basic forms, \(w\to \alpha w\) or \(w\to w+\beta\text{.}\) The natural coordinate system for depicting the action of \(w\to
 \alpha w\) is standard polar coordinates. See <a class="xref" data-knowl="./knowl/twofixedptgrid_fig.html" title="Figure 3.2.20">Figure 3.2.20</a>. A homothety is a flow along radial lines and a rotation is a flow around polar circles. The natural "degenerate" coordinate system for depicting a translation \(w\to
 w+\beta\) is a family of lines parallel to the line that contains the origin and \(\beta\text{.}\) A translation by \(\beta\) is a flow along these parallel lines. See <a class="xref" data-knowl="./knowl/degenerate_grid_fig.html" title="Figure 3.2.21">Figure 3.2.21</a>.</p>
-<p id="p-362">Pulling the polar and degenerate coordinate grids back to the \(z\)-plane by \(S^{-1}\) leads to coordinate grids called <dfn class="terminology">Steiner circles</dfn>.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 1 </sup></a> In the case where \(T\) has two fixed points \(p,q\text{,}\) the conjugating map \(Sz=\frac{z-p}{z-q}\) takes \(p\to 0\text{,}\) \(q\to
+<p id="p-370">Pulling the polar and degenerate coordinate grids back to the \(z\)-plane by \(S^{-1}\) leads to coordinate grids called <dfn class="terminology">Steiner circles</dfn>.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a> In the case where \(T\) has two fixed points \(p,q\text{,}\) the conjugating map \(Sz=\frac{z-p}{z-q}\) takes \(p\to 0\text{,}\) \(q\to
 \infty\text{.}\) Therefore \(S^{-1}\) maps \(0\to p\) and \(\infty \to q\text{.}\) The transformation \(S^{-1}\) maps radial lines in the \(w\)-plane to clines in the \(z\)-plane that contain \(p\) and \(q\) called <dfn class="terminology">Steiner circles of the first kind</dfn>. 	and \(S^{-1}\) maps polar circles in the \(w\)-plane to clines in the \(z\)-plane called <dfn class="terminology">Steiner circles of the second kind</dfn> or <dfn class="terminology">circles of Apollonius</dfn>. See <a class="xref" data-knowl="./knowl/twofixedptgrid_fig.html" title="Figure 3.2.20">Figure 3.2.20</a>.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">The convention for which Steiner circles are considered "first" or "second" kinds is not universal. Here we follow the convention used by Ahlfors (cite reference) and Henle (cite reference).</div></div>
-<p id="p-363">In the case where \(T\) has one fixed point \(p\text{,}\) the conjugating map \(Sz=\frac{1}{z-p}\) maps \(p\to \infty\text{,}\) so \(S^{-1}\) maps \(\infty \to p\text{,}\) and \(S^{-1}\) maps lines in the \(w\)-plane that are parallel to the line through \(0\) and \(\beta\) to clines in the \(z\)-plane that contain \(p\text{.}\) Every cline in this family is tangent to every other cline in this family at exactly the one point \(p\text{.}\) Clines in this family are called <dfn class="terminology">degenerate Steiner circles</dfn>. See <a class="xref" data-knowl="./knowl/degenerate_grid_fig.html" title="Figure 3.2.21">Figure 3.2.21</a>. <a class="xref" data-knowl="./knowl/steinercirclesummary.html" title="Table 3.2.22: Summary of Steiner circle pictures of Möbius transformations">Table 3.2.22</a> summarizes the graphical depiction of Möbius transformations.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">The convention for which Steiner circles are considered "first" or "second" kinds is not universal. Here we follow the convention used by Ahlfors <a class="xref" data-knowl="./knowl/ahlfors_complex_analysis.html" title="Bibliographic Entry 1: Complex Analysis: An Introduction to the Theory of Analytic Functions of One Complex Variable">[1]</a> and Henle <a class="xref" data-knowl="./knowl/henle_modern_geometries.html" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.</div></div>
+<p id="p-371">In the case where \(T\) has one fixed point \(p\text{,}\) the conjugating map \(Sz=\frac{1}{z-p}\) sends \(p\to \infty\text{,}\) so \(S^{-1}\) maps \(\infty \to p\text{,}\) and \(S^{-1}\) maps lines in the \(w\)-plane that are parallel to the line through \(0\) and \(\beta\) to clines in the \(z\)-plane that contain \(p\text{.}\) Every cline in this family is tangent to every other cline in this family at exactly the one point \(p\text{.}\) Clines in this family are called <dfn class="terminology">degenerate Steiner circles</dfn>. See <a class="xref" data-knowl="./knowl/degenerate_grid_fig.html" title="Figure 3.2.21">Figure 3.2.21</a>. <a class="xref" data-knowl="./knowl/steinercirclesummary.html" title="Table 3.2.22: Summary of Steiner circle pictures of Möbius transformations">Table 3.2.22</a> summarizes the graphical depiction of Möbius transformations.</p>
 <figure class="table table-like" id="steinercirclesummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.22<span class="period">.</span></span><span class="space"> </span>Summary of Steiner circle pictures of Möbius transformations</figcaption><table>
 <tr>
 <td class="c m b3 r1 l1 t1 lines">normal form type</td>
@@ -405,9 +434,9 @@ w+\beta\) is a family of lines parallel to the line that contains the origin and
 <article class="exercise exercise-like" id="mobiusdecompexer"><h6 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Decomposition of Möbius transformations into four basic types..</span>
 </h6>
-<ol id="p-364" class="lower-alpha">
-<li id="li-244">Explain why a transformation of the form \(z\to az\text{,}\) with \(a\) any nonzero complex constant, is a composition of a homothety and a rotation.</li>
-<li id="li-245">Explicitly identify each homothety, rotation, translation, and inversion in <a class="xref" data-knowl="./knowl/mobiusdecompfirst.html" title="Equation 3.2.6">(3.2.6)</a> to <a class="xref" data-knowl="./knowl/mobiusdecomplast.html" title="Equation 3.2.9">(3.2.9)</a> in the derivation below for the case \(c\neq 0\text{.}\)<div class="displaymath">
+<ol id="p-372" class="lower-alpha">
+<li id="li-276">Explain why a transformation of the form \(z\to az\text{,}\) with \(a\) any nonzero complex constant, is a composition of a homothety and a rotation.</li>
+<li id="li-277">Explicitly identify each homothety, rotation, translation, and inversion in <a class="xref" data-knowl="./knowl/mobiusdecompfirst.html" title="Equation 3.2.6">(3.2.6)</a> to <a class="xref" data-knowl="./knowl/mobiusdecomplast.html" title="Equation 3.2.9">(3.2.9)</a> in the derivation below for the case \(c\neq 0\text{.}\)<div class="displaymath">
 \begin{align}
 z \amp \to cz+d\label{mobiusdecompfirst}\tag{3.2.6}\\
 \amp\to \frac{1}{cz+d}\tag{3.2.7}\\
@@ -418,12 +447,26 @@ z \amp \to cz+d\label{mobiusdecompfirst}\tag{3.2.6}\\
 \end{align}
 </div>
 </li>
-<li id="li-246">Write your own decomposition for the case \(c=0\text{.}\)</li>
+<li id="li-278">Write your own decomposition for the case \(c=0\text{.}\)</li>
+</ol></article><article class="commentary" id="commentary-90"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.1.</span></h5>
+<ol id="p-373" class="lower-alpha">
+<li id="li-279">Use polar form \(a=|a|e^{i\arg a}\text{.}\)</li>
+<li id="li-280"><ol id="p-374" class="lower-roman">
+<li id="li-281">homothety and a rotation (multiplying by \(c\)), followed by translation (adding \(d\))</li>
+<li id="li-282">inversion</li>
+<li id="li-283">homothety and rotation (multiplying by \(bc-ad\)), followed by translation (adding \(a\))</li>
+<li id="li-284">homothety and rotation (multiplying by \(1/c\))</li>
+</ol></li>
+<li id="li-285">If \(c=0\text{,}\) then \(ad-bc=ad\neq 0\text{,}\) so \(d\neq 0\text{,}\) and we have<div class="displaymath">
+\begin{equation*}
+z = \frac{az+b}{d} = \frac{a}{d}z+\frac{b}{d}
+\end{equation*}
+</div>a homothety and rotation (multiplying by \(a/d\) followed by a translation (adding \(b/d\)).</li>
 </ol></article><article class="exercise exercise-like" id="crossratioformexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Explicit form for the transformation \((\cdot,z_1,z_2,z_3)\).</span>
 </h6>
-<ol id="p-367" class="lower-alpha">
-<li id="li-254">Show that, for the special case when \(z_1,z_2,z_3\) are complex (that is, none of the three points is \(\infty\)), we have the following.<div class="displaymath">
+<ol id="p-375" class="lower-alpha">
+<li id="li-286">Show that, for the special case when \(z_1,z_2,z_3\) are complex (that is, none of the three points is \(\infty\)), we have the following.<div class="displaymath">
 \begin{align}
 (\cdot,z_1,z_2,z_3) \amp=
 \left[z\to \frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\right]\label{mob10inftyform}\tag{3.2.11}\\
@@ -431,41 +474,152 @@ z \amp \to cz+d\label{mobiusdecompfirst}\tag{3.2.6}\\
 \end{align}
 </div>
 </li>
-<li id="li-255">Find explicit formulas for \((\cdot,z_1,z_2,z_3)\) when \(z_1=\infty\text{,}\) then do the same for \(z_2=\infty\) and \(z_3=\infty\text{.}\)</li>
+<li id="li-287">Find explicit formulas for \((\cdot,z_1,z_2,z_3)\) when \(z_1=\infty\text{,}\) then do the same for \(z_2=\infty\) and \(z_3=\infty\text{.}\)</li>
+</ol></article><article class="commentary" id="commentary-91"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.2.</span></h5>
+<ol id="p-376" class="lower-alpha">
+<li id="li-288">It is clear by inspection that <a class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a> sends \(z_1,z_2,z_3\) to \(1,0,\infty\text{,}\) respectively.</li>
+<li id="li-289">It is clear by inspection the following transformations make the correct assignments.<div class="displaymath">
+\begin{align*}
+(\cdot,\infty,z_2,z_3)\amp = \left[z\to
+\frac{z-z_2}{z-z_3}\right]\\
+(\cdot,z_1,\infty,z_3)\amp = \left[z\to
+\frac{z_1-z_3}{z-z_3}\right]\\
+(\cdot,z_1,z_2,\infty)\amp = \left[z\to
+\frac{z-z_2}{z_1-z_2}\right]
+\end{align*}
+</div>
+</li>
 </ol></article><article class="exercise exercise-like" id="mobiustargetpracticeexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-369">Find Möbius transformations that make the following assignments.</p>
+<p id="p-377">Find Möbius transformations that make the following assignments.</p>
 <ol class="lower-alpha">
-<li id="li-258">\(\displaystyle 1\to a, 0\to b, \infty\to c\)</li>
-<li id="li-259">\(\displaystyle a\to d, b\to e, c\to f\)</li>
+<li id="li-290">\(\displaystyle 1\to a, 0\to b, \infty\to c\)</li>
+<li id="li-291">\(\displaystyle a\to d, b\to e, c\to f\)</li>
+</ol></article><article class="commentary" id="commentary-92"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.3.</span></h5>
+<ol id="p-378" class="lower-alpha">
+<li id="li-292">Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
+</div>
+</li>
+<li id="li-293">Put together the pieces from the previous part.<div class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to c,b\to d,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(c-a)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
+</div>
+</li>
 </ol></article><article class="exercise exercise-like" id="mobinvrealisclineexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-371">Prove <a class="xref" data-knowl="./knowl/mobinvrealisclineprop.html" title="Proposition 3.2.12">Proposition 3.2.12</a>. Suggestion: Let \(Tz=\frac{az+b}{cz+d}\text{,}\) then manipulate \(Tz=(Tz)^\ast\) to an equation with \(|z|^2,z,z^\ast\) terms and coefficients involving \(a,b,c,d\) and their conjugates. Then use "complex completing the square" (see <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>). The hint below shows a version of a circle equation; peek if you need to, and use it to work partially forwards from \(Tz=(Tz)^\ast\text{,}\) and partially backwards from the equation in the hint.</p>
+<p id="p-379">Prove <a class="xref" data-knowl="./knowl/mobinvrealisclineprop.html" title="Proposition 3.2.12">Proposition 3.2.12</a>. Suggestion: Let \(Tz=\frac{az+b}{cz+d}\text{,}\) then manipulate \(Tz=(Tz)^\ast\) to an equation with \(|z|^2,z,z^\ast\) terms and coefficients involving \(a,b,c,d\) and their conjugates. Then use "complex completing the square" (see <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>). The hint below shows a version of a circle equation; peek if you need to, and use it to work partially forwards from \(Tz=(Tz)^\ast\text{,}\) and partially backwards from the equation in the hint.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like">\(\left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like">\(\left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
 c}\right)\right|^2 = \left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\)</div></div>
-</div></article><article class="exercise exercise-like" id="normalformlemmaexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-373">Prove <a class="xref" data-knowl="./knowl/normalformlemma.html" title="Lemma 3.2.18">Lemma 3.2.18</a>.</p></article><article class="exercise exercise-like" id="symmetricpointexer"><h6 class="heading">
+</div></article><article class="commentary" id="commentary-93"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.4 (proof of Proposition 3.2.12).</span></h5>
+<p id="p-380">Starting with \(Tz=(Tz)^\ast\text{,}\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast.
+\end{equation*}
+</div>
+<p data-braille="continuation">If \(ac^\ast -a^\ast c\neq
+0\text{,}\) let \(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
+c}\text{,}\) then complete the square to get</p>
+<div class="displaymath">
+\begin{equation*}
+|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
+|\alpha|^2.
+\end{equation*}
+</div>
+<p data-braille="continuation">Manipulate the right hand side to \(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\) For the case \(ac^\ast -a^\ast c=0\text{,}\) let \(\gamma=ad^\ast
+-b^\ast c\) and  \(\delta=bd^\ast\text{.}\) Then the equation</p>
+<div class="displaymath">
+\begin{equation*}
+z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast
+\end{equation*}
+</div>
+<p data-braille="continuation">becomes \(\im(\gamma z+\delta)=0\text{,}\) which is the equation for a line.</p></article><article class="exercise exercise-like" id="normalformlemmaexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-381">Prove <a class="xref" data-knowl="./knowl/normalformlemma.html" title="Lemma 3.2.18">Lemma 3.2.18</a>.</p></article><article class="commentary" id="commentary-94"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.5 (proof of Lemma 3.2.18).</span></h5>
+<p id="p-382">Let \(Tz=\frac{az+b}{cz+d}\text{.}\) Suppose that \(T\) fixes \(0,\infty\text{.}\) We have \(0=T(0)=b/d\text{,}\) so \(b=0\text{.}\) We have \(T\infty = a/c\text{,}\) so \(c=0\text{.}\) Setting \(\alpha = a/d\text{,}\) it must be that \(\alpha\neq 0\) (otherwise \(T\) would be constant) and \(\alpha\neq \infty\) (otherwise \(d=0\text{,}\) which violates the requirement \(ad-bc=0\)). Thus we have \(Tz=az/d = \alpha
+z\) for some \(\alpha\neq 0\text{.}\) Now suppose \(T\) has a single fixed point at \(\infty\text{.}\) Then \(T\infty =
+a/c\text{,}\) so \(c=0\text{.}\) Let \(\alpha=a/d,\beta=b/d\text{,}\) so that \(Tz=\alpha z +\beta\text{.}\) If \(\alpha\neq 1\text{,}\) then \(-\beta/\alpha\) is another fixed point, so it must be that \(\alpha=1\text{.}\) If \(\beta=0\text{,}\) then \(T\) is the identity, but that contradicts our assumption that \(T\) has a single fixed point. Thus \(Tz=z+\beta\) for some \(\beta\neq 0\text{.}\)</p></article><article class="exercise exercise-like" id="symmetricpointexer"><h6 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Symmetry with respect to a cline.</span>
 </h6>
-<ol id="p-375" class="lower-alpha">
-<li id="li-262">Prove <a class="xref" data-knowl="./knowl/symmptindeppts.html" title="Corollary 3.2.17">Corollary 3.2.17</a>.</li>
-<li id="li-263">Let \(C\) be the unit circle. Show that \(z^{\ast C} = 1/z^\ast\text{.}\) Suggestion: This is just a computation, but the choice of \(z_1,z_2,z_3\) might make it more or less tedious. You might try \(\omega,\omega^2,\omega^3=1\text{,}\) where \(\omega=e^{2\pi i/3}\text{.}\)</li>
-<li id="li-264">Now let \(C\) be a circle with center \(a\) and radius \(r\gt 0\text{.}\) Use <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to show that \(z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a\text{.}\)</li>
-<li id="li-265">Let \(C\) be a straight line. Show that \(z^{\ast C}\) is the reflection of \(z\) across \(C\text{.}\)</li>
+<ol id="p-383" class="lower-alpha">
+<li id="li-294">Prove <a class="xref" data-knowl="./knowl/symmptindeppts.html" title="Corollary 3.2.17">Corollary 3.2.17</a>.</li>
+<li id="li-295">Let \(C\) be the unit circle. Show that \(z^{\ast C} = 1/z^\ast\text{.}\) Suggestion: This is just a computation, but the choice of \(z_1,z_2,z_3\) might make it more or less tedious. You might try \(\omega,\omega^2,\omega^3=1\text{,}\) where \(\omega=e^{2\pi i/3}\text{.}\)</li>
+<li id="li-296">Now let \(C\) be a circle with center \(a\) and radius \(r\gt 0\text{.}\) Use <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to show that \(z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a\text{.}\)</li>
+<li id="li-297">Let \(C\) be a straight line. Show that \(z^{\ast C}\) is the reflection of \(z\) across \(C\text{.}\)</li>
+</ol></article><article class="commentary" id="commentary-95"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.6.</span></h5>
+<ol id="p-384" class="lower-alpha">
+<li id="li-298">Apply <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to a Möbius transformation that takes three points on a cline \(C\) to three other points on \(C\text{.}\)</li>
+<li id="li-299">Let \(\omega = e^{i2\pi/3}\) and let \(Tz=(z,\omega,\omega^2,\omega^3=1)\text{.}\) We have the following.<div class="displaymath">
+\begin{align*}
+Tz\amp
+=\frac{z-\omega^2}{z-\omega^3}\frac{\omega-\omega^3}{\omega-\omega^2}\\
+\amp =
+(1+\omega)\left(\frac{z-\omega^2}{z-1}\right)\\
+T \amp \leftrightarrow
+\twotwo{1+\omega}{-\omega^2-1}{1}{-1}\\
+T^{-1} \amp \leftrightarrow \twotwo{-1}{\omega^2+1}{-1}{1+\omega}
+\end{align*}
+</div>We have<div class="displaymath">
+\begin{align*}
+z^{\ast C} \amp = T^{-1}((Tz)^\ast)\\
+\amp = T^{-1} \left(\frac{(1+\omega^2)z^\ast
+-\omega-1}{z^\ast-1}\right)\\
+\amp = \frac{-[(1+\omega^2)z^\ast -\omega-1]
++(z-1)(\omega^2+1)}{-[(1+\omega^2)z^\ast -\omega-1]
++(1+\omega)(z^\ast-1)}\\
+\amp = \cdots = \frac{1}{z^\ast} 
+\end{align*}
+</div>
+</li>
+<li id="li-300">Let \(Sz=\frac{z-a}{r}\) so that \(S\) takes \(C\) to the unit circle. Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have<div class="displaymath">
+\begin{equation*}
+(Sz)^{\ast S(C)} = \frac{1}{(Sz)^\ast} =
+\frac{r}{(z-a)^\ast}.
+\end{equation*}
+</div>Setting this last expression equal to \(S(z^{\ast C})\) and applying \(S^{-1}\) to both sides, we have<div class="displaymath">
+\begin{equation*}
+z^{\ast C} = \frac{r^2}{(z-a)^\ast} + a
+\end{equation*}
+</div>as desired.</li>
+<li id="li-301">Let \(C\) make an angle \(t\) with the positive real axis, and let \(a\) be a point on \(C\text{.}\) Let \(Sz=e^{-it}(z-a)\text{,}\) so that \(S(C)=\R\text{.}\) Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have \((Sz)^{\ast S(C)} = (Sz)^\ast = e^{it}(z-a)^\ast\text{.}\) Setting this last expression equal to \(S(z^{\ast C}\) and applying \(S^{-1}\) to both sides, we have<div class="displaymath">
+\begin{equation*}
+z^{\ast C} = e^{i2t}(z-a)^\ast + a.
+\end{equation*}
+</div>We know that \(Sz,(Sz)^\ast\) are reflections of one another across the real axis. Because \(S^{-1}\) is a rigid motion (rotation followed by a translation, so distances and angles are preserved), the pair \(z,z^{\ast C}\) must be reflections of each other across the line \(C\text{.}\)</li>
 </ol></article><div class="exercisegroup" id="exercisegroup-8">
 <h6 class="heading"><span class="title">Normal forms and Steiner circles.</span></h6>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="normalformegexer"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-377">Find the normal form and sketch a graph using Steiner circles for the following transformations.</p>
+<p id="p-385">Find the normal form and sketch a graph using Steiner circles for the following transformations.</p>
 <ol class="lower-alpha">
-<li id="li-270">\(\displaystyle z\to \frac{1}{z}\)</li>
-<li id="li-271">\(\displaystyle z\to \frac{3z-1}{z+1}\)</li>
+<li id="li-302">\(\displaystyle z\to \frac{1}{z}\)</li>
+<li id="li-303">\(\displaystyle z\to \frac{3z-1}{z+1}\)</li>
 </ol></article><article class="exercise exercise-like" id="degneratenormalformexer"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-378">Let \(p\) be the single fixed point of a Möbius transformation that is conjugate to \(w\to w+\beta\) via \(Sz=\frac{1}{z-p}\text{.}\) Show that the single line in the degenerate Steiner clines through \(p\) is parallel to the direction given by \(\beta^\ast\text{.}\)</p>
+<p id="p-386">Let \(p\) be the single fixed point of a Möbius transformation that is conjugate to \(w\to w+\beta\) via \(Sz=\frac{1}{z-p}\text{.}\) Show that the single line in the degenerate Steiner clines through \(p\) is parallel to the direction given by \(\beta^\ast\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-379">Show that \(S^{-1}w=\frac{pw+1}{w}\text{,}\) so \(S^{-1}\) takes \(0,\beta,\infty\) to \(0,\frac{p\beta+1}{\beta},p\text{.}\) Thus the single degenerate Steiner straight line through \(p\) is in the direction given by  \(\frac{p\beta+1}{\beta}-p
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-387">Show that \(S^{-1}w=\frac{pw+1}{w}\text{,}\) so \(S^{-1}\) takes \(0,\beta,\infty\) to \(0,\frac{p\beta+1}{\beta},p\text{.}\) Thus the single degenerate Steiner straight line through \(p\) is in the direction given by  \(\frac{p\beta+1}{\beta}-p
 =\frac{1}{\beta}\propto \beta^\ast\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="apolloniuscircexer"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-380">Show that a (generalized) circle of Apollonius (a Steiner circle of the second kind) is characterized as the set of points of the form</p>
+<p id="p-388">Show that a (generalized) circle of Apollonius (a Steiner circle of the second kind) is characterized as the set of points of the form</p>
 <div class="displaymath">
 \begin{equation*}
 C=\left\{P\in \C\colon \frac{d(P,A)}{d(P,B)}=k\right\} 
@@ -473,7 +627,29 @@ C=\left\{P\in \C\colon \frac{d(P,A)}{d(P,B)}=k\right\}
 </div>
 <p data-braille="continuation">for some \(A,B\in \C\) and some real constant \(k\gt 0\text{.}\)</p></article>
 </div>
-</div></section></section></div></main>
+</div>
+<article class="commentary" id="commentary-96"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.7.</span></h5>
+<ol id="p-389" class="lower-alpha">
+<li id="li-304">The fixed points of \(T\) are \(\pm 1\text{,}\) so the normal form is<div class="displaymath">
+\begin{equation*}
+\frac{Tz-1}{Tz+1}=\lambda\frac{z-1}{z+1}.
+\end{equation*}
+</div>Putting \(z=2\) and solving for \(\lambda\text{,}\) we get \(\lambda=-1\text{.}\) The Steiner circles of the first kind are circles through \(\pm 1\) (and the real axis), and Steiner circles of the second kind are orthogonal to the first family (including the imaginary axis).</li>
+<li id="li-305">Solving \(Tz=z\text{,}\) we get \((z-1)^2=0\text{,}\) so \(T\) has a single (degenerate) fixed point at \(1\text{.}\) The normal form is<div class="displaymath">
+\begin{equation*}
+\frac{1}{Tz-1} = \frac{1}{z-1}+\beta.
+\end{equation*}
+</div>Putting \(z=0\) and solving for \(\beta\text{,}\) we get \(\beta=1/2\text{.}\) It is clear that \(T\) takes the real axis to itself, so degenerate Steiner circles are tangent to the real axis at \(1\text{.}\)</li>
+</ol></article><article class="commentary" id="commentary-97"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.8.</span></h5>
+<p id="p-390">The hint gives a complete outline. Checking the details is straightforward.</p></article><article class="commentary" id="commentary-98"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.9.</span></h5>
+<p id="p-391">By definition, Steiner circles of the second kind are sets of the form \(S^{-1}(\{w\colon |w|=r\})\) for some \(w=Sz=\frac{z-p}{z-q}\) (some distinct \(p,q\in
+C)\text{.}\) Setting \(P=p\text{,}\) \(Q=q\text{,}\) \(k=r\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+S^{-1}(\{|w|=r\}) = \left\{P\colon
+\frac{d(P,A)}{d(Q,B)}=k\right\}.
+\end{equation*}
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

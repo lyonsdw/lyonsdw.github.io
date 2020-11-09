@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:48-05:00       *-->
+<!--*       on 2020-11-09T15:22:59-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.6.2.</span></h5>
-<p xmlns:svg="http://www.w3.org/2000/svg">First, reduce \(x\) mod \(p\text{,}\) that is, write \(x=qp+r\) with \(0\leq r\leq p-1\text{.}\) Now consider two cases. The case \(r=0\) is trivial. If \(r\neq
-0\text{,}\) apply the fact \(r^{|G|}=e\) (see <a class="xref" data-knowl="./knowl/lagrangeconseqexer.html" title="Exercise 2.3.2.8: Consequences of Lagrange's Theorem">Exercise 2.3.2.8</a>) to the group \(G=U_p\text{.}\) Since \(p\) is prime, we have \(|U_p|=p-1\text{,}\) so \(r^{|G|}=e\) becomes \(r^{p-1}=1 \pmod{p}\text{.}\) Multiplying both sides by \(r\text{,}\) we have \(r^{p}=r \pmod{p}\text{,}\) as desired.</p></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-80">in-context</a></span>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.6.1.</span></h5>
+<ol class="lower-alpha">
+<li>Integers \(x,n\) are relatively prime if and only if \(\gcd(x,n)=1\text{,}\) if and only if there exist integers \(s,t\) such that \(sx+tn=1\) (see <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.3.2.4</a>), if and only if \(sx=1 \pmod{n}\text{.}\)</li>
+<li>Multiplication is a well-defined binary operation on \(\Z_n\) (see <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>) that is clearly commutative and associative. The element \(1\in U_n\) is the identity element, and the existence of inverse elements is part of the definition of \(U_n\text{.}\)</li>
+<li>Let \(f\colon \Z_n\to \Z_n\) be a group homomorphism, and let \(a=f(1)\text{.}\) Then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = f(\underbrace{1+1+\cdots	  +1}_{x \text{ summands}})=xf(1)=ax
+\end{equation*}
+</div>for all \(x\text{.}\) The homomorphism \(\mu_a\colon
+\Z_n\to\Z_n\) given by \(\mu_a(x)=ax\) is invertible if and only if \(a\in U_n\) (if \(a\not\in U_n\text{,}\) then \(1\) is not in the image of \(\mu_a\text{,}\) and conversely if \(a\in U_n\text{,}\) then \(\mu_a\) is invertible with inverse \((\mu_a)^{-1}=\mu_{a^{1}}\)). Thus we have a one-to-one correspondence \(U_n\leftrightarrow \Aut(\Z_n)\) given by \(a\leftrightarrow \mu_a\text{.}\) It is straightforward to check that \(\mu_a\circ \mu_b=\mu_{ab}\text{,}\) so the correspondence \(a\leftrightarrow \mu_a\) is an isomorphism of groups.</li>
+</ol></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-80">in-context</a></span>
 </body>
 </html>

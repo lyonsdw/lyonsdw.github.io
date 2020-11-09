@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-03T09:03:56-05:00       *-->
+<!--*       on 2020-11-09T15:31:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,17 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-S\amp ={\mathcal T}(M_1)\circ {\mathcal T}(M_2) \circ \cdots \circ {\mathcal T}(M_k)\\
-\amp = {\mathcal T}(M_1M_2\cdots M_k)
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to c,b\to d,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(c-a)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
 \end{align*}
 </div>
-<span class="incontext"><a href="elliptic_geometry_section.html#mjx-eqn-mrow-176">in-context</a></span>
+<span class="incontext"><a href="section-12.html#mjx-eqn-mrow-176">in-context</a></span>
 </body>
 </html>

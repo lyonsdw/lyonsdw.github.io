@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:58:17-05:00       *-->
+<!--*       on 2020-11-09T15:31:46-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The basic computation at the heart of the checking procedure is this.</p>
+<p>We have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-e^{i\theta}(a+bi) = (\cos\theta+i\sin\theta)(a+bi) =
-(a\cos\theta-b\sin\theta) + i(a\sin\theta + b\cos\theta)
-\end{equation*}
+\begin{align*}
+T_{Z,\theta}(s(a,b,c)) \amp = (cos\theta +
+i\sin\theta)\frac{a+bi}{1-c}\\
+\amp = \frac{(a\cos\theta -b\sin\theta) +  i(a\sin\theta+b\cos\theta)}{1-c}\\
+\amp = s(a\cos\theta -b\sin\theta,
+a\sin\theta+b\cos\theta,c)\\
+\amp =s(R_{Z_\theta})(a,b,c).
+\end{align*}
 </div>
 <span class="incontext"><a href="stereoprojsect.html#p-98">in-context</a></span>
 </body>

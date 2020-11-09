@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:58:11-05:00       *-->
+<!--*       on 2020-11-09T15:31:38-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -170,8 +170,9 @@ j \amp \leftrightarrow (0,0,1,0)\tag{1.2.2}\\
 k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
 \end{align}
 </div>
-<p data-braille="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) The <dfn class="terminology">pure</dfn> quaternions  are those that can be written in the form \(xi+yj+zk\leftrightarrow
-(0,x,y,z)\) for some real \(x,y,z\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<p data-braille="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) A quaternion of the form \(a=a+0i+0j+0k\leftrightarrow
+(a,0,0,0)\) is called a <dfn class="terminology">scalar</dfn> quaternion or a <dfn class="terminology">real</dfn> quaternion. A quaternion of the form \(xi+yj+zk\leftrightarrow
+(0,x,y,z)\) is called a <dfn class="terminology">pure</dfn> quaternion or an <dfn class="terminology">imaginary</dfn> quaternion. For a quaternion \(r=a+bi+cj+dk\text{,}\) we call the real quaternion \(a\) the <dfn class="terminology">scalar part</dfn> or <dfn class="terminology">real part</dfn> of \(r\text{,}\) and we call the quaternion \(xi+yj+zk\) the <dfn class="terminology">vector part</dfn> or the <dfn class="terminology">imaginary part</dfn> of \(r\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span>
 </h3>
 <p id="p-54">Analogous to the way that the complex numbers \(\C\) can be realized as the set \({\mathcal M}_\C\) of \(2\times 2\) real matrices  (see <a class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as \(2\times 2\) real matrices">Exercise 1.1.7.12</a>), the quaternions can be realized by a set of \(2\times 2\) complex matrices, as follows.  Let \({\mathcal M}_\Quat\) denote the set of \(2\times 2\) complex matrices of the form \(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
@@ -199,28 +200,28 @@ r+s=Q(M(r)+M(s))\tag{1.2.4}\\
 rs=Q(M(r)M(s))\tag{1.2.5}
 \end{gather}
 </div>
-<p data-braille="continuation">Because matrix algebra has associative and distributive laws, these carry over to quaternions. For quaternions \(q,r,s\text{,}\) we have the following.</p>
+<p data-braille="continuation">Because matrix algebra has associative and distributive laws, these carry over to quaternions. Note that quaternion multiplication is not commutative! However, for any real quaternion \(a\text{,}\) we have \(M(a)=a\Id\text{,}\) so \(a\) commutes with all quaternions. To summarize, let \(q,r,s\) be quaternions and let \(a\) be a real quaternion. We have the following.</p>
 <div class="displaymath">
-\begin{gather}
-q(rs) = (qr)s\;\; \text{ (associative law of multiplication)}\tag{1.2.6}\\
-q(r+s)= qr+qs \;\; \text{ (distributive law)}\tag{1.2.7}
-\end{gather}
+\begin{align}
+q(rs) \amp = (qr)s\;\; \text{ (associative law of multiplication)}\tag{1.2.6}\\
+q(r+s)\amp = qr+qs \;\; \text{ (distributive law)}\tag{1.2.7}\\
+ar\amp =ra \;\; \text{ (real quaternions commute with all quaternions)}\tag{1.2.8}
+\end{align}
 </div>
-<p data-braille="continuation"><em class="alert">Note:</em> quaternion multiplication is not commutative!</p>
 <p id="p-59">In practice, it is not necessary to convert quaternions to matrices in order to add and multiply. Quaternion addition and multiplication in Cartesian form is analogous to complex multiplication, using the following basic multiplication rules.</p>
 <div class="displaymath">
 \begin{gather}
-i^2=j^2=k^2=-1 \label{ijksquaretominus1}\tag{1.2.8}\\
-ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j\label{quatmultrules}\tag{1.2.9}
+i^2=j^2=k^2=-1 \label{ijksquaretominus1}\tag{1.2.9}\\
+ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j\label{quatmultrules}\tag{1.2.10}
 \end{gather}
 </div>
 <article class="exercise exercise-like" id="quatmultrulesexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatmultrulesexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmultrulesexer"><article class="exercise exercise-like"><p id="p-60">Verify <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.8">(1.2.8)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.9">(1.2.9)</a>.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmultrulesexer"><article class="exercise exercise-like"><p id="p-60">Verify <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>.</p></article></div>
 <p id="p-62">For \(r=a+bi+cj+dk\) and \(r'=a'+b'i+c'j+d'k\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation}
-r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.\tag{1.2.10}
+r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.\tag{1.2.11}
 \end{equation}
 </div>
 <p data-braille="continuation">Multiplication looks like this.</p>
@@ -231,22 +232,22 @@ rr'\amp = (a+bi+cj+dk)(a'+b'i+c'j+d'k) \notag\\
 \amp + ab'i+ba'i+cd'jk+dc'kj\notag\\
 \amp + ac'j+ca'j+bd'ik+db'ki\notag\\
 \amp + ad'k+da'k+bc'ij+cb'ji\notag\\
-\amp = (aa'-bb'-cc'-dd')\label{quatmultcartesian}\tag{1.2.11}\\
+\amp = (aa'-bb'-cc'-dd')\label{quatmultcartesian}\tag{1.2.12}\\
 \amp + (ab'+ba'+cd'-dc')i\notag\\
 \amp + (ac'+ca'-bd'+db')j\notag\\
 \amp + (ad'+da'+bc'-cb')k\notag
 \end{align}
 </div>
-<p data-braille="continuation">If \(u,v\) are pure quaternions, <a class="xref" data-knowl="./knowl/quatmultcartesian.html" title="Equation 1.2.11">(1.2.11)</a> can be written more compactly in terms of the dot and cross products for vectors in \(\R^3\text{.}\)</p>
+<p data-braille="continuation">If \(u,v\) are pure quaternions, <a class="xref" data-knowl="./knowl/quatmultcartesian.html" title="Equation 1.2.12">(1.2.12)</a> can be written more compactly in terms of the dot and cross products for vectors in \(\R^3\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
-}u,v)\label{purequatproduct}\tag{1.2.12}
+}u,v)\label{purequatproduct}\tag{1.2.13}
 \end{equation}
 </div>
 <article class="exercise exercise-like" id="exercise-15"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-15"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like">Verify <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.12">(1.2.12)</a>.</article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like">Verify <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>.</article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span>
 </h3>
 <p id="p-64">The <dfn class="terminology">conjugate</dfn> of a quaternion \(r=a+bi+cj+dk\) is \(r^\ast =
@@ -256,7 +257,7 @@ t^2+x^2+y^2+z^2=1\}\text{.}\) This is analogous to the set of norm 1 complex num
 <p id="p-65">Analogous to complex numbers, quaternions can be expressed in <em class="emphasis">polar form</em>. Given a nonzero quaternion \(r\text{,}\) the quaternion \(r'=\frac{r}{|r|}\) is a unit quaternion, say \(r'=a+bi+cj+dk\text{.}\) If \(|a|\lt 1\text{,}\) let \(u=\frac{1}{\sqrt{1-a^2}}(bi+cj+dk)\) be the unit pure quaternion obtained by normalizing the pure quaternion \(bi+cj+dk\text{.}\) Let \(\theta=\arccos a\text{.}\) The expression</p>
 <div class="displaymath">
 \begin{equation}
-r=|r|(\cos \theta + u\sin \theta)\tag{1.2.13}
+r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 \end{equation}
 </div>
 <p data-braille="continuation">is called the <dfn class="terminology">polar form</dfn> of \(r\text{.}\)</p>
@@ -266,9 +267,9 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.13}
 <p id="p-67">Continuing the analogy with complex numbers, we have the following, for all quaternions \(r,s\text{.}\)</p>
 <div class="displaymath">
 \begin{gather}
-(rs)^\ast = s^\ast r^\ast\label{quatconjmult}\tag{1.2.14}\\
-|rs|=|r||s|\label{quatnormmult}\tag{1.2.15}\\
-|r|^2 = rr^\ast\text{.}\label{quatnormsquare}\tag{1.2.16}
+(rs)^\ast = s^\ast r^\ast\label{quatconjmult}\tag{1.2.15}\\
+|rs|=|r||s|\label{quatnormmult}\tag{1.2.16}\\
+|r|^2 = rr^\ast\text{.}\label{quatnormsquare}\tag{1.2.17}
 \end{gather}
 </div>
 <article class="exercise exercise-like" id="quatconjnormmultexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatconjnormmultexer"><h6 class="heading">
@@ -280,11 +281,11 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.13}
 <article class="exercise exercise-like" id="rvrastispureexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-rvrastispureexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rvrastispureexer"><article class="exercise exercise-like"><p id="p-70">Explain how "we conclude" that \(R_r(v)\) is pure when \(r\) is a unit quaternion and \(v\) is a pure quaternion.</p></article></div>
-<p id="p-72">It is easy to see that \(R_r\) is a linear map from the vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(k\text{.}\)</p>
+<p id="p-72">It is easy to see that \(R_r\) is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(k\text{.}\)</p>
 <div class="displaymath">
 \begin{gather}
-R_r(v+w) = R_r(v) + R_r(w)\tag{1.2.17}\\
-R_r(kv) = kR_r(v)\tag{1.2.18}
+R_r(v+w) = R_r(v) + R_r(w)\tag{1.2.18}\\
+R_r(kv) = kR_r(v)\tag{1.2.19}
 \end{gather}
 </div>
 <article class="exercise exercise-like" id="quatrotislinearexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatrotislinearexer"><h6 class="heading">
@@ -298,7 +299,7 @@ R_r(kv) = kR_r(v)\tag{1.2.18}
 <article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/quatrotpropexer.html" title="Exercise 1.2.6.2: Proof of Proposition 1.2.9">Exercise 1.2.6.2</a>.</article></div></article></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.6</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="quatreflectionexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Let \(r\) be a pure, unit quaternion. Use <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.12">(1.2.12)</a> to show that the map \(\R^3_\Quat \to \R^3_\Quat\) given by \(u\to rur\) is the reflection across the plane normal to \(r\text{.}\) That is, show that \(rur=u-2(u\cdot r)r\text{.}\) See <a class="xref" data-knowl="./knowl/quat_reflect_fig.html" title="Figure 1.2.10">Figure 1.2.10</a>. <figure class="figure figure-like" id="quat_reflect_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/quaternion_reflection.png" style="width: 100%; height: auto;" alt=""></div>
+<article class="exercise exercise-like" id="quatreflectionexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>Let \(r\) be a pure, unit quaternion. Use <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to show that the map \(\R^3_\Quat \to \R^3_\Quat\) given by \(u\to rur\) is the reflection across the plane normal to \(r\text{.}\) That is, show that \(rur=u-2(u\cdot r)r\text{.}\) See <a class="xref" data-knowl="./knowl/quat_reflect_fig.html" title="Figure 1.2.10">Figure 1.2.10</a>. <figure class="figure figure-like" id="quat_reflect_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/quaternion_reflection.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.10<span class="period">.</span></span><span class="space"> </span>The reflection of \(u\in
 \R^3_\Quat\) across the plane normal to \(r\in \R^3_\Quat\text{.}\)</figcaption></figure></article><article class="exercise exercise-like" id="quatrotpropexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Proof of Proposition 1.2.9.</span>
@@ -310,7 +311,7 @@ R_r(kv) = kR_r(v)\tag{1.2.18}
 \begin{equation*}
 R_r(v) = \cos(2\theta)v + \sin(2\theta)w
 \end{equation*}
-</div>(use equation <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.12">(1.2.12)</a>) and explain how this proves the Proposition.</li>
+</div>(use equation <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and explain how this proves the Proposition.</li>
 </ol></article><article class="exercise exercise-like" id="quatrotcompinvexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Show that the following hold for all \(r,s\in U(\Quat)\text{.}\) <ol class="lower-alpha">
 <li id="li-40">\(R_r\circ R_s = R_{rs}\text{.}\)</li>
 <li id="li-41">\((R_r)^{-1}=R_{r^\ast}\text{.}\)</li>

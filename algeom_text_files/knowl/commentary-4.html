@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:43-05:00       *-->
+<!--*       on 2020-11-09T15:22:55-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,19 @@
 </head>
 <body>
 <article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 1.2.3.</span></h5>
-<p>We have \(M(i)=\twotwo{i}{0}{0}{-i}\text{,}\) \(M(j)=\twotwo{0}{1}{-1}{0}\text{,}\) and \(M(k)=\twotwo{0}{i}{i}{0}\text{.}\) (These are, in order, \(iZ,iY,iX\text{,}\) where \(X,Y,Z\) are the Pauli matrices.) It is straightforward to check all the equations <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.8">(1.2.8)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.9">(1.2.9)</a>. For example, we have</p>
+<p>We have \(M(1) = \Id\text{,}\) \(M(i)=\twotwo{i}{0}{0}{-i}\text{,}\) \(M(j)=\twotwo{0}{1}{-1}{0}\text{,}\) and \(M(k)=\twotwo{0}{i}{i}{0}\text{.}\) (These are, in order, \(\Id,iZ,iY,iX\text{,}\) where \(X,Y,Z\) are the Pauli matrices.) First, we work out the products of \(M(i),M(j),M(k)\text{.}\) Here is a sample.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-ij=Q(M(i)M(j)) = Q(M(k))=k.
-\end{equation*}
+\begin{align*}
+M(i)^2 \amp = \twotwo{i}{0}{0}{-i}\twotwo{i}{0}{0}{-i} = \twotwo{-1}{0}{0}{-1}=-\Id\\
+M(i)M(j) \amp = \twotwo{i}{0}{0}{-i}\twotwo{0}{1}{-1}{0} = \twotwo{0}{i}{i}{0}=M(k)
+\end{align*}
+</div>
+<p data-braille="continuation">Then we work out all the equations <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>. Here is a sample.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+i^2 \amp = Q(M(i)^2) = Q(-\Id) = -1\\
+ij\amp =Q(M(i)M(j)) = Q(M(k))=k
+\end{align*}
 </div></article><span class="incontext"><a href="quaternionsection.html#commentary-4">in-context</a></span>
 </body>
 </html>

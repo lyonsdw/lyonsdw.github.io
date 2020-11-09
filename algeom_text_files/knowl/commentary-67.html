@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:47-05:00       *-->
+<!--*       on 2020-11-09T15:22:58-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,6 +15,16 @@
 </head>
 <body>
 <article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.10.</span></h5>
-<p xmlns:svg="http://www.w3.org/2000/svg">This is straightforward. Notice that we need <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> for reflexivity.</p></article><span class="incontext"><a href="section-8.html#commentary-67">in-context</a></span>
+<p>For reflexivity, notice that \(\Id\colon G\to G\) is an isomorphism for any group \(G\text{.}\) For symmetry, suppose \(\phi\colon G\to H\) is an isomorphism. By <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a>, \(\phi^{-1}\colon
+H\to G\) is also an isomorphism. For transitivity, suppose \(\phi\colon G\to H\text{,}\) \(\psi\colon H\to K\) are isomorphisms. For \(g,g'\in G\text{,}\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\psi\circ \phi)(gg') =
+\psi(\phi(gg'))=\psi(\phi(g)\phi(g')=\psi(\phi(g))\psi(\phi(g'))=(\psi\circ
+\phi)(g)(\psi\circ \phi)(g')
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(\psi\) is a homomorphism. Since \(\phi,\psi\) are bijective, so is \(\psi\circ \phi\text{.}\) Thus we have \(G\approx
+K\) by the isomorphism \(\psi\circ \phi\text{.}\)</p></article><span class="incontext"><a href="section-8.html#commentary-67">in-context</a></span>
 </body>
 </html>

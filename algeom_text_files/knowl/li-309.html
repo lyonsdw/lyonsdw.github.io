@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:58:22-05:00       *-->
+<!--*       on 2020-11-09T15:31:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,27 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">d</span><span class="period">.</span>
-</h6>Let \(C\) make an angle \(t\) with the positive real axis, and let \(a\) be a point on \(C\text{.}\) Let \(Sz=e^{-it}(z-a)\text{,}\) so that \(S(C)=\R\text{.}\) Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have \((Sz)^{\ast S(C)} = (Sz)^\ast = e^{it}(z-a)^\ast\text{.}\) Setting this last expression equal to \(S(z^{\ast C}\) and applying \(S^{-1}\) to both sides, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z^{\ast C} = e^{i2t}(z-a)^\ast + a.
-\end{equation*}
-</div>We know that \(Sz,(Sz)^\ast\) are reflections of one another across the real axis. Because \(S^{-1}\) is a rigid motion (rotation followed by a translation, so distances and angles are preserved), the pair \(z,z^{\ast C}\) must be reflections of each other across the line \(C\text{.}\)</article><span class="incontext"><a href="section-12.html#li-309">in-context</a></span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
+</h6>Let \(\omega = e^{i2\pi/3}\) and let \(Tz=(z,\omega,\omega^2,\omega^3=1)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+Tz\amp
+=\frac{z-\omega^2}{z-\omega^3}\frac{\omega-\omega^3}{\omega-\omega^2}\\
+\amp =
+(1+\omega)\left(\frac{z-\omega^2}{z-1}\right)\\
+T \amp \leftrightarrow
+\twotwo{1+\omega}{-\omega^2-1}{1}{-1}\\
+T^{-1} \amp \leftrightarrow \twotwo{-1}{\omega^2+1}{-1}{1+\omega}
+\end{align*}
+</div>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+z^{\ast C} \amp = T^{-1}((Tz)^\ast)\\
+\amp = T^{-1} \left(\frac{(1+\omega^2)z^\ast
+-\omega-1}{z^\ast-1}\right)\\
+\amp = \frac{-[(1+\omega^2)z^\ast -\omega-1]
++(z-1)(\omega^2+1)}{-[(1+\omega^2)z^\ast -\omega-1]
++(1+\omega)(z^\ast-1)}\\
+\amp = \cdots = \frac{1}{z^\ast} 
+\end{align*}
+</div></article><span class="incontext"><a href="section-12.html#li-309">in-context</a></span>
 </body>
 </html>

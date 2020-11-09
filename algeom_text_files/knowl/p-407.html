@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:58:22-05:00       *-->
+<!--*       on 2020-11-09T15:31:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,30 +16,15 @@
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
 <ol class="lower-alpha">
-<li>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>It is clear by inspection that <a class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a> sends \(z_1,z_2,z_3\) to \(1,0,\infty\text{,}\) respectively.</li>
+<li>It is clear by inspection the following transformations make the correct assignments.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
-\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
-\amp \leftrightarrow
-\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
-\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
-[1\to a, 0\to b,\infty\to c]
-\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
-\end{align*}
-</div>
-</li>
-<li>Put together the pieces from the previous part.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
-\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
-[1\to d, 0\to e,\infty\to f]
-\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
-[a\to c,b\to d,c\to f] \amp = [1\to d, 0\to
-e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
-\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-\amp \leftrightarrow
-\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(c-a)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+(\cdot,\infty,z_2,z_3)\amp = \left[z\to
+\frac{z-z_2}{z-z_3}\right]\\
+(\cdot,z_1,\infty,z_3)\amp = \left[z\to
+\frac{z_1-z_3}{z-z_3}\right]\\
+(\cdot,z_1,z_2,\infty)\amp = \left[z\to
+\frac{z-z_2}{z_1-z_2}\right]
 \end{align*}
 </div>
 </li>

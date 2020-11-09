@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:50-05:00       *-->
+<!--*       on 2020-11-09T15:23:01-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,31 +14,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.4 (proof of Proposition 3.2.12).</span></h5>
-<p>Starting with \(Tz=(Tz)^\ast\text{,}\) we get</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
-d+bc^\ast) = b^\ast d-bd^\ast.
-\end{equation*}
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.3.</span></h5>
+<ol class="lower-alpha">
+<li>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
 </div>
-<p data-braille="continuation">If \(ac^\ast -a^\ast c\neq
-0\text{,}\) let \(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
-c}\text{,}\) then complete the square to get</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
-|\alpha|^2.
-\end{equation*}
+</li>
+<li>Put together the pieces from the previous part.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to c,b\to d,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(c-a)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
 </div>
-<p data-braille="continuation">Manipulate the right hand side to \(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\) For the case \(ac^\ast -a^\ast c=0\text{,}\) let \(\gamma=ad^\ast
--b^\ast c\) and  \(\delta=bd^\ast\text{.}\) Then the equation</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
-d+bc^\ast) = b^\ast d-bd^\ast
-\end{equation*}
-</div>
-<p data-braille="continuation">becomes \(\im(\gamma z+\delta)=0\text{,}\) which is the equation for a line.</p></article><span class="incontext"><a href="section-12.html#commentary-102">in-context</a></span>
+</li>
+</ol></article><span class="incontext"><a href="section-12.html#commentary-102">in-context</a></span>
 </body>
 </html>

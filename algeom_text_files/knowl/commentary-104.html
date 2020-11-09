@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-08T16:57:50-05:00       *-->
+<!--*       on 2020-11-09T15:23:01-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,46 +14,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.6.</span></h5>
-<ol class="lower-alpha">
-<li>Apply <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to a Möbius transformation that takes three points on a cline \(C\) to three other points on \(C\text{.}\)</li>
-<li>Let \(\omega = e^{i2\pi/3}\) and let \(Tz=(z,\omega,\omega^2,\omega^3=1)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-Tz\amp
-=\frac{z-\omega^2}{z-\omega^3}\frac{\omega-\omega^3}{\omega-\omega^2}\\
-\amp =
-(1+\omega)\left(\frac{z-\omega^2}{z-1}\right)\\
-T \amp \leftrightarrow
-\twotwo{1+\omega}{-\omega^2-1}{1}{-1}\\
-T^{-1} \amp \leftrightarrow \twotwo{-1}{\omega^2+1}{-1}{1+\omega}
-\end{align*}
-</div>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-z^{\ast C} \amp = T^{-1}((Tz)^\ast)\\
-\amp = T^{-1} \left(\frac{(1+\omega^2)z^\ast
--\omega-1}{z^\ast-1}\right)\\
-\amp = \frac{-[(1+\omega^2)z^\ast -\omega-1]
-+(z-1)(\omega^2+1)}{-[(1+\omega^2)z^\ast -\omega-1]
-+(1+\omega)(z^\ast-1)}\\
-\amp = \cdots = \frac{1}{z^\ast} 
-\end{align*}
-</div>
-</li>
-<li>Let \(Sz=\frac{z-a}{r}\) so that \(S\) takes \(C\) to the unit circle. Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(Sz)^{\ast S(C)} = \frac{1}{(Sz)^\ast} =
-\frac{r}{(z-a)^\ast}.
-\end{equation*}
-</div>Setting this last expression equal to \(S(z^{\ast C})\) and applying \(S^{-1}\) to both sides, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z^{\ast C} = \frac{r^2}{(z-a)^\ast} + a
-\end{equation*}
-</div>as desired.</li>
-<li>Let \(C\) make an angle \(t\) with the positive real axis, and let \(a\) be a point on \(C\text{.}\) Let \(Sz=e^{-it}(z-a)\text{,}\) so that \(S(C)=\R\text{.}\) Applying <a class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>, we have \((Sz)^{\ast S(C)} = (Sz)^\ast = e^{it}(z-a)^\ast\text{.}\) Setting this last expression equal to \(S(z^{\ast C}\) and applying \(S^{-1}\) to both sides, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-z^{\ast C} = e^{i2t}(z-a)^\ast + a.
-\end{equation*}
-</div>We know that \(Sz,(Sz)^\ast\) are reflections of one another across the real axis. Because \(S^{-1}\) is a rigid motion (rotation followed by a translation, so distances and angles are preserved), the pair \(z,z^{\ast C}\) must be reflections of each other across the line \(C\text{.}\)</li>
-</ol></article><span class="incontext"><a href="section-12.html#commentary-104">in-context</a></span>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.5 (proof of Lemma 3.2.18).</span></h5>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(Tz=\frac{az+b}{cz+d}\text{.}\) Suppose that \(T\) fixes \(0,\infty\text{.}\) We have \(0=T(0)=b/d\text{,}\) so \(b=0\text{.}\) We have \(T\infty = a/c\text{,}\) so \(c=0\text{.}\) Setting \(\alpha = a/d\text{,}\) it must be that \(\alpha\neq 0\) (otherwise \(T\) would be constant) and \(\alpha\neq \infty\) (otherwise \(d=0\text{,}\) which violates the requirement \(ad-bc=0\)). Thus we have \(Tz=az/d = \alpha
+z\) for some \(\alpha\neq 0\text{.}\) Now suppose \(T\) has a single fixed point at \(\infty\text{.}\) Then \(T\infty =
+a/c\text{,}\) so \(c=0\text{.}\) Let \(\alpha=a/d,\beta=b/d\text{,}\) so that \(Tz=\alpha z +\beta\text{.}\) If \(\alpha\neq 1\text{,}\) then \(-\beta/\alpha\) is another fixed point, so it must be that \(\alpha=1\text{.}\) If \(\beta=0\text{,}\) then \(T\) is the identity, but that contradicts our assumption that \(T\) has a single fixed point. Thus \(Tz=z+\beta\) for some \(\beta\neq 0\text{.}\)</p></article><span class="incontext"><a href="section-12.html#commentary-104">in-context</a></span>
 </body>
 </html>
