@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-09T15:35:56-05:00       *-->
+<!--*       on 2020-11-11T11:42:05-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,8 +16,16 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-d(a,b)\amp \leq d(a,c')+d(c',b) \;\;\text{(by parts (a),(b))}\\
-\amp \leq d(a,c)+d(c,b)\;\; \text{(by part (c))}.
+d(a,b) \amp = \ln (a,b,q,p)\\
+\amp = \ln  \left(\frac{a-q}{a-p}\frac{b-p}{b-q}\right)\\
+\amp = \left(\frac{q-a}{a-p}\frac{b-p}{q-b}\right)\\
+\amp = \ln(q-a)-\ln(a-p)+\ln(b-p)-\ln(q-b)\\
+d(a,c)\amp = \ln(a,c,q,p)\\
+\amp = \ln  \left(\frac{q-a}{a-p}\frac{c-p}{q-c}\right)\\
+\amp = \ln(q-a)-\ln(a-p)+\ln(c-p)-\ln(q-c)\\
+d(c,b) \amp = \ln(b,c,q,p)\\
+\amp = \ln  \left(\frac{q-c}{c-p}\frac{b-p}{q-b}\right)\\
+\amp = \ln(q-c)-\ln(c-p)+\ln(b-p)-\ln(q-b)
 \end{align*}
 </div>
 <span class="incontext"><a href="section-13.html#mjx-eqn-mrow-207">in-context</a></span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-09T15:35:47-05:00       *-->
+<!--*       on 2020-11-11T11:41:56-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -252,20 +252,20 @@ M_{a,b} \amp
 </table></figure></p>
 <p id="p-576">The exercises outlined below verify the values for \(v,\theta\) in <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</p>
 <ol class="lower-alpha">
-<li id="li-375">Use <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a> to justify the values for \(v\) and \(\theta\) for \(R_{r_{a,b}}\) in <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</li>
-<li id="li-376">Solve \(T_{a,b}z=z\) to show that one of the fixed points of \(T_{a,b}\) is<div class="displaymath">
+<li id="li-380">Use <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a> to justify the values for \(v\) and \(\theta\) for \(R_{r_{a,b}}\) in <a class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</li>
+<li id="li-381">Solve \(T_{a,b}z=z\) to show that one of the fixed points of \(T_{a,b}\) is<div class="displaymath">
 \begin{equation*}
 p=-ib\left( \frac{\sqrt{1-(\re(a))^2} + \im(a)}{|b|^2}\right).
 \end{equation*}
 </div>
 </li>
-<li id="li-377">Show that \(s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)=p\text{.}\)</li>
-<li id="li-378">Show that<div class="displaymath">
+<li id="li-382">Show that \(s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)=p\text{.}\)</li>
+<li id="li-383">Show that<div class="displaymath">
 \begin{equation}
 T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \label{trhcommute}\tag{3.6.5}
 \end{equation}
 </div>where \(h\colon \R^3\to \R^3\) is given by \((x,y,z)\to (z,-y,z)\text{.}\) Here's one way to do this: evaluate both sides of <a class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> on the three points \(p,0,\infty\text{.}\) Explain why this is sufficient! Use quaternion multiplication to evaluate \(R_{r_{a,b}}\text{.}\) For example, \(R_{r_{a,b}}(1,0,0)=r_{a,b}ir_{a,b}^\ast\) under the natural identification \(\R^3\leftrightarrow \R^3_\Quat\text{.}\)</li>
-<li id="li-379">Here is one way to reconcile the quaternion path <a class="xref" data-knowl="./knowl/quatpath.html" title="Equation 3.6.3">(3.6.3)</a> with the Möbius path <a class="xref" data-knowl="./knowl/mobiuspath.html" title="Equation 3.6.4">(3.6.4)</a>.  Let \(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+<li id="li-384">Here is one way to reconcile the quaternion path <a class="xref" data-knowl="./knowl/quatpath.html" title="Equation 3.6.3">(3.6.3)</a> with the Möbius path <a class="xref" data-knowl="./knowl/mobiuspath.html" title="Equation 3.6.4">(3.6.4)</a>.  Let \(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
 1\amp 1 \\ 1\amp -1\end{array}\right]\) (the matrix \(H\) is sometimes called the <em class="emphasis">Hadamard</em> matrix) and let \(C_{iH}\) denote the map \(M\to (iH)M(iH)^{-1}\text{.}\) Show that the diagram in <a class="xref" data-knowl="./knowl/rot_id_fig.html" title="Figure 3.6.2">Figure 3.6.2</a> commutes. Hint: Notice that \(iH\in SU(2)\) and that \(Q(iH)=\frac{1}{\sqrt{2}}(i+k)\text{,}\) and that \(R_{Q(iH)}=h\text{.}\)</li>
 </ol>
 <p data-braille="continuation"><figure class="figure figure-like" id="rot_id_fig"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/rot_id_diagram.png" style="width: 100%; height: auto;" alt=""></div>
@@ -275,7 +275,7 @@ T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \label{trhcommute}\tag{3
 </h6>
 <p id="p-580">Let \(\triangle ABC\) be a right triangle with right angle \(\angle C\) with side lengths \(a=d(B,C)\text{,}\) \(b=d(A,C)\text{,}\) and \(c=d(A,B)\) so that the length of the hypotenuse is \(c\text{.}\) See <a class="xref" data-knowl="./knowl/right_triangle_fig.html" title="Figure 3.6.3">Figure 3.6.3</a>.</p>
 <ol class="lower-alpha">
-<li id="li-385">Prove the following identities.<div class="displaymath">
+<li id="li-390">Prove the following identities.<div class="displaymath">
 \begin{align}
 \cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right) \amp =
 \frac{1+u^2}{1-u^2}\;\;(0\lt u\lt 1)\label{coshhyperbolicdistidentity}\tag{3.6.6}\\
@@ -283,13 +283,13 @@ T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \label{trhcommute}\tag{3
 \end{align}
 </div>
 </li>
-<li id="li-386">
+<li id="li-391">
 <dfn class="terminology">The Hyperbolic Pythagorean Theorem</dfn>. Show that<div class="displaymath">
 \begin{equation}
 \cosh(c)=\cosh(a)\cosh(b)\label{hyperbolicpythagthm}\tag{3.6.8}
 \end{equation}
 </div>if \(T\) is a hyperbolic triangle.</li>
-<li id="li-387">
+<li id="li-392">
 <dfn class="terminology">The Elliptic Pythagorean Theorem</dfn>. Show that<div class="displaymath">
 \begin{equation}
 \cos(c)=\cos(a)\cos(b)\label{ellipticpythagthm}\tag{3.6.9}

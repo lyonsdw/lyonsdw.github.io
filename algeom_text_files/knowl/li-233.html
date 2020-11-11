@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-09T15:35:53-05:00       *-->
+<!--*       on 2020-11-11T11:42:02-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,23 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
-</h6>Multiplication is a well-defined binary operation on \(\Z_n\) (see <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>) that is clearly commutative and associative. The element \(1\in U_n\) is the identity element, and the existence of inverse elements is part of the definition of \(U_n\text{.}\)</article><span class="incontext"><a href="groups_extra_exer_section.html#li-233">in-context</a></span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">f</span><span class="period">.</span>
+</h6>Factor the given map as \(\Proj(\C^2)\to \extC\to S^2\) given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[(\alpha,\beta)] \to \alpha/\beta \to s^{-1}(\alpha/\beta).
+\end{equation*}
+</div>Let \(\mu\) denote the map \([(\alpha,\beta)] \to \alpha/\beta \text{.}\) That \(\mu\) is well-defined follows from the observation that \((k\alpha)/(k\beta)=\alpha/\beta\) for all \(k\in
+\F^\ast\text{.}\) To see that \(\mu\) is bijective, we will exhibit an inverse map. Let \(\nu\colon \extC\to
+\Proj(\C^2)\) be given by \(\gamma \to [(\gamma,1)]\) for \(\gamma \in \C\) and \(\infty \to [(1,0)]\text{.}\) To check that \(\nu\circ\mu=\Id\text{,}\) for \(\beta\neq 0\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,\beta)])=\nu(\alpha/\beta) =
+[(\alpha/\beta,1)]=[(\alpha,\beta)]
+\end{equation*}
+</div>and for \(\beta=0\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,0)])=\nu(\infty) =
+[(1,0)]=[(\alpha,0)].
+\end{equation*}
+</div>Reading the two displayed equations from right to left establishes that \(\mu\circ \nu=\Id\text{.}\) We conclude that \(\nu=\mu^{-1}\text{.}\) Using the fact that stereographic projection \(s\) is bijective, we have \(s^{-1}\circ \mu\) is bijective, as desired.</article><span class="incontext"><a href="section-9.html#li-233">in-context</a></span>
 </body>
 </html>
