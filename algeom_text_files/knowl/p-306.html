@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:02-05:00       *-->
+<!--*       on 2020-11-25T13:51:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>An orbit of the group action \(H\to \Perm(G)\) is a set of the form</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<ol class="lower-alpha">
+<li>We will show that \(L_g\) is invertible. Similar arguments show that \(R_g,C_g\) are invertible. We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\Orb(g)=\{gh^{-1}\colon h\in H\}
+L_{g^{-1}}(L_g(x))=g^{-1}gx=x
 \end{equation*}
-</div>
-<p data-braille="continuation">for some \(g\in
-G\text{.}\) Consider the map \(x\to gx^{-1}g\text{.}\) For \(x=gh^{-1}\in
-\Orb(g)\text{,}\) we have \(i(gh^{-1})=g(gh^{-1})g=gh\text{,}\) so the image of \(i\) is contained in the coset \(gH\text{.}\) The map \(i\) is its own inverse:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-i(i(x))= i(gxg^{-1})= g(gxg^{-1})g=x\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">so we conclude that \(i\colon \Orb(g)\to gH\) is bijective. Thus we have established that \(\Orb(g)=gH\text{,}\) as desired.</p>
+</div>for all \(x\in G\text{.}\) A similar argument shows that \(L_g(L_{g^{-1}}(x))=x\) for all \(x\text{.}\) We conclude that \(L_g\) is invertible, with inverse \((L_g)^{-1}=L_{g^{-1}}\text{.}\) Thus \(L_g\) is an element of \(\Perm(G)\text{,}\) as desired.</li>
+<li>You just have to check that \(L_{gh}=L_g\circ
+L_h\text{,}\) \(R_{gh}=R_g\circ R_h\) (here you see why the inverse is needed!), and \(C_{gh}=C_g\circ C_h\text{.}\) Here is the argument for \(L\text{.}\) Similar arguments work for \(R,C\text{.}\) Let \(g,h\in G\text{.}\) We have \(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\) for all \(x\in
+G\text{,}\) so we have \(L_g\circ L_h = L_{gh}\text{.}\)</li>
+<li>For injectivity, if \(L_g=L_h\text{,}\) then \(g=L_g(e)=L_h(e)=h\text{.}\) By the First Isomorphism Theorem, we conclude that \(G\approx L(G)\text{,}\) which is subgroup of \(\Perm(G)\text{.}\)</li>
+</ol>
 <span class="incontext"><a href="section-9.html#p-306">in-context</a></span>
 </body>
 </html>

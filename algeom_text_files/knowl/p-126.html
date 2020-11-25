@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:00-05:00       *-->
+<!--*       on 2020-11-25T13:51:18-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that \(x-x'=kn\) and \(y-y'=\ell n\text{.}\) Then</p>
+<p>Another standard definition of the set \(\Z_n\text{,}\) together with its operations of addition and multiplication, is the following. Given an integer \(a\text{,}\) let \(a \MOD n\) be the unique integer \(r\) in the range \(0\leq r\leq n-1\) such that \(a=qn+r\) for some integer \(q\) (that is, \(r\) is the remainder obtained when dividing \(a\) by \(n\)). Now define \(\Z_n\) to be the set</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(x+y)-(x'+y')= (x-x')+(y-y')=(k+\ell)n
+\Z_n=\{0,1,2,\ldots,n-1\},
 \end{equation*}
 </div>
-<p data-braille="continuation">so it is indeed the case that \([x+y]=[x'+y']\text{.}\)</p>
+<p data-braille="continuation">define the addition operation \(+_n\) on \(\Z_n\) by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x+_n y= (x+y)\MOD n 
+\end{equation*}
+</div>
+<p data-braille="continuation">and define the multiplication operation \(\cdot_n\) on \(\Z_n\) by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x\cdot_n y = (xy) \MOD n.
+\end{equation*}
+</div>
+<p data-braille="continuation">Show that this version of \(\Z_n\) is equivalent to the version developed in <a class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.5.2">Exercise 1.4.5.2</a> and <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>.</p>
 <span class="incontext"><a href="section-4.html#p-126">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:34-05:00       *-->
+<!--*       on 2020-11-12T20:20:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.14.</span></h5>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.13.</span></h5>
 <ol class="lower-alpha">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for \(\Aut(G)\text{.}\)</p></li>
-<li>
-<p>We will use the 2-step subgroup test. First, \(\Inn(G)\) contains the identity map \(C_e\colon G\to G\text{,}\) so \(\Inn(G)\) is not empty. Given \(g,h\) in \(G\text{,}\) we have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(C_g\circ C_h)(x) = C_g(C_h(x))=g(hxh^{-1})g^{-1}=
-(gh)x(gh)^{-1}=C_{gh}(x)
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(\Inn(G)\) is closed under composition. We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that \((C_g)^{-1}=C_{g^{-1}}\text{,}\) so \(\Inn(G)\) is closed under inversion. This completes the 2-step subgroup test, and we conclude that \(\Inn(G)\) is a subgroup of \(\Aut(G)\text{.}\)</p>
-</li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">One example is complex conjugation on \(\C^\ast\text{.}\) Any nontrivial automorphism of an Abelian group is an example, because conjugation by any element is the identity. So, for example, \(\mu_2\colon \Z_5\to \Z_5\) given by \(\mu_2(x)=2x\) works.</p></li>
+<li>Let \(g\in G\text{.}\) We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that \(C_g\colon
+G\to G\) is an isomorphism. By the definition of normality, \(C_g\) restricts to a map from \(K\) to itself. This restriction must also be an isomorphism (with inverse \(C_{g^{-1}}\)), so \(C_g(K)=K\text{,}\) or, said another way, \(gKg^{-1}=K\text{.}\)</li>
+<li>Part (a) says that for all \(k\in K\text{,}\) we have \(gkg^{-1}=k'\) for some \(k'\in K\text{.}\) This is the same as \(gk=k'g\text{.}\) That this holds for all \(k\in
+K\) means that \(gK\subseteq Kg\text{.}\) A similar argument shows that \(Kg\subseteq gK\text{.}\) We conclude that \(gK=Kg\text{.}\)</li>
 </ol></article><span class="incontext"><a href="section-8.html#commentary-71">in-context</a></span>
 </body>
 </html>

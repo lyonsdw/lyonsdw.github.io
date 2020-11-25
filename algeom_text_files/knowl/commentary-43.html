@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:32-05:00       *-->
+<!--*       on 2020-11-12T20:20:18-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,34 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.7.</span></h5>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.6.</span></h5>
 <ol class="lower-alpha">
-<li>The cyclic permutations of \(S_3\) are the following. (Every element of \(S_3\) is cyclic.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>The generators of \(\Z\) are \(\pm 1\text{.}\)</li>
+<li>The generators of \(\Z_8\) are \(1,3,5,7\)</li>
+<li>The generators of \(\Z_2\times \Z_3\) are \((1,1)\) and \((1,2)\)</li>
+<li>By direct checking, we find that none of the four elements of \(\Z_2\times \Z_2\) is a generator.</li>
+<li>We claim that \(\Z_n\times \Z_m\) is cyclic if and only if \(n,m\) are relatively prime. Here's the proof. Let \(L\) denote the least common multiple of \(n,m\text{,}\) so that \(L\leq nm\) and \(L=nm\) if and only if \(n,m\) are relatively prime. Next, observe that an element \((a,b)\) of \(\Z_n\times \Z_m\) is a generator if and only if every entry in the sequence<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-e,(12),(13),(23),(123),(132)
+(a,b),(2a,2b),(3a,3b),\ldots,(nma,nmb)
 \end{equation*}
-</div>Their inverses (in order) are the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-e,(12),(13),(23),(132),(123)
-\end{equation*}
-</div>
-</li>
-<li>The cyclic permutations of \(S_4\) are the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-e,(12),(13),(14),(23),(24),(34),
-\end{equation*}
-</div>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(123),(132),(124),(142),(134),(143),(234),(243),
-\end{equation*}
-</div>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-(1234),(1432),(1324),(1423),(1243),(1342) 
-\end{equation*}
-</div>
-</li>
+</div>is distinct. If \(L\lt mn\text{,}\) then \((La,Lb)=(0,0)=(nma,nmb)\text{,}\) so \((a,b)\) is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> a generator. This proves the "only if" direction. Conversely, suppose \(L=nm\) (that is, \(n,m\) are relatively prime). We claim that \((1,1)\) is a generator. If not, then there exist integers \(k,\ell\) in the range \(0\lt
+k,\ell\lt nm\) such that \(k\neq \ell\) and \((k,k)=(\ell,\ell)\text{.}\) Suppose, without loss of generality, that \(k\lt \ell\text{.}\) Then we have \((0,0)=(\ell-k,\ell-k)\text{,}\) so \(\ell-k\) is a integer number that is less than \(nm\text{,}\) and is divisible by both \(n\) and \(m\text{.}\) But this contradicts the assumption that the least common multiple of \(n,m\) is \(nm\text{.}\) This concludes the proof of the "if" direction, and the proof is complete.</li>
 </ol></article><span class="incontext"><a href="groupdefsection.html#commentary-43">in-context</a></span>
 </body>
 </html>

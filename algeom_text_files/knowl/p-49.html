@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:59-05:00       *-->
+<!--*       on 2020-11-25T13:51:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \({\mathcal M}_\C\) denote the set of \(2\times
-2\) matrices of the form \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) with \(a,b\in \R\text{.}\) Given a complex number \(z\) with Cartesian form  \(z=a+bi\text{,}\) let \(M(z)\) denote the matrix in \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) in \({\mathcal
-M}_\C\text{.}\) Conversely, given a matrix \(M\in {\mathcal M}_\C\) with top left entry \(a\) and top right entry \(b\text{,}\) let \(C(M)\) denote the complex number \(a+bi\text{.}\) It is clear that the mappings \(z\to M(z)\) and \(M\to C(M)\) are inverses to one another, and establish a one-to-one correspondence \(\C\leftrightarrow {\mathcal M}_\C\text{.}\)</p>
 <ol class="lower-alpha">
-<li>Show that \({\mathcal M}_\C\) is closed under addition and multiplication. That is, suppose that \(M,N\) are elements of \({\mathcal M}_\C\text{.}\) Show that \(M+N\) and \(MN\) are also elements of \({\mathcal M}_\C\text{.}\)</li>
-<li>Show that complex addition and multiplication are "mirrored" in \({\mathcal M}_\C\text{.}\) That is, show that \(C(M(z)+M(w))=z+w\) and \(C(M(z)M(w))=zw\) for all \(z,w\in \C\text{.}\)</li>
+<li>For a real variable \(x\) and a real constant \(a\text{,}\) <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">completing the square</em> refers to rewriting the expression \(x^2 - 2ax\) as follows.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x^2-2ax = x^2-2ax +a^2 - a^2 = \left(x-a\right)^2
+-a^2.
+\end{equation*}
+</div>A complex version of completing the square for a complex variable \(z\) and a complex constant \(a\) is the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+|z|^2-2\re(za^\ast)=|z-a|^2
+-|a|^2\tag{1.1.24}
+\end{equation}
+</div>Write a derivation to justify this. Then use completing the square to find the center and radius of the circle given by the equation \(|z|^2 -iz +iz^\ast -5=0\text{.}\)</li>
+<li>Write an alternative proof for the general form for the equation of a line <a class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>, as follows. Let \(a=u+iv\text{,}\) \(b=r+is\text{,}\) \(z=x+iy\text{.}\) Find the equation of the line \(\im(az+b)=0\) in terms of the real variables \(x,y\) and real constants \(u,v,r,s\text{.}\) Explain why it is necessary that \(a\neq 0\text{.}\)</li>
 </ol>
 <span class="incontext"><a href="section-1.html#p-49">in-context</a></span>
 </body>

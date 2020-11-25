@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:34-05:00       *-->
+<!--*       on 2020-11-12T20:20:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,21 +14,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 2.5.3.</span></h5>
-<p>We use the 2-step subgroup test. First, note that \(\Stab(x)\) is not empty, because \(\Stab(x)\) contains \(e_G\) (the action \(G\to \Perm(X)\) is a group homomorphism, so \(e_G\) must go to the identity transformation on \(X\) by Property 1 of <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>). Now suppose \(g,h\in
-\Stab(x)\text{.}\) Then we have</p>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.14.</span></h5>
+<ol class="lower-alpha">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for \(\Aut(G)\text{.}\)</p></li>
+<li>
+<p>We will use the 2-step subgroup test. First, \(\Inn(G)\) contains the identity map \(C_e\colon G\to G\text{,}\) so \(\Inn(G)\) is not empty. Given \(g,h\) in \(G\text{,}\) we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(gh)(x)=g(hx)=gx=x
+(C_g\circ C_h)(x) = C_g(C_h(x))=g(hxh^{-1})g^{-1}=
+(gh)x(gh)^{-1}=C_{gh}(x)
 \end{equation*}
 </div>
-<p data-braille="continuation">so \(gh\in \Stab(x)\text{.}\) Also, we have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x=(g^{-1}g)x
-=g^{-1}(gx)=g^{-1}x\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(g^{-1}\in \Stab(x)\text{.}\) This completes the proof.</p></article><span class="incontext"><a href="section-9.html#commentary-72">in-context</a></span>
+<p data-braille="continuation">so \(\Inn(G)\) is closed under composition. We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that \((C_g)^{-1}=C_{g^{-1}}\text{,}\) so \(\Inn(G)\) is closed under inversion. This completes the 2-step subgroup test, and we conclude that \(\Inn(G)\) is a subgroup of \(\Aut(G)\text{.}\)</p>
+</li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">One example is complex conjugation on \(\C^\ast\text{.}\) Any nontrivial automorphism of an Abelian group is an example, because conjugation by any element is the identity. So, for example, \(\mu_2\colon \Z_5\to \Z_5\) given by \(\mu_2(x)=2x\) works.</p></li>
+</ol></article><span class="incontext"><a href="section-8.html#commentary-72">in-context</a></span>
 </body>
 </html>

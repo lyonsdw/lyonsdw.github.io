@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:01-05:00       *-->
+<!--*       on 2020-11-25T13:51:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Elements of \(\phi(\langle S\rangle)\) have the form \(\phi(s_1s_2\cdots s_k)\) for some \(s_i\in S\cup
-S^{-1}\text{.}\) Elements of \(\langle \phi(S) \rangle\) have the form \(\phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\) The result follows from the fact that \(\phi(s_1s_2\cdots s_k) = \phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\)</p>
+<ol class="lower-alpha">
+<li>By <a class="xref" data-knowl="./knowl/rootsofunitygpfacts.html" title="Checkpoint 2.1.10">Checkpoint 2.1.10</a>, we have \(C_n=\{\omega^0,\ldots,\omega^{n-1}\}\text{,}\) so it is clear that \(C_n\subseteq \img(\phi)\text{.}\) Conversely, given \(k\in Z\text{,}\) write \(k=qn+r\) for some \(q\in \Z\) and \(0\leq r\leq n-1\text{.}\) Then we have \(\omega^k=\omega^r\text{.}\) Thus we have \(\img(\phi)\subseteq
+C_n\text{.}\) We conclude that \(\img(\phi)=C_n\text{,}\) as desired.</li>
+<li>That \(\phi\) is a homomorphism is clear: we have \(\phi(a+b) =
+\omega^{a+b}=\omega^a\omega^b=\phi(a)\phi(b)\text{.}\) We have \(\omega^{kn}=\omega^0=1\) for all \(k\in \Z\text{,}\) so \(n\Z\subseteq \ker(\phi)\) Conversely, let \(k\in \Z\) and write \(k=nq+r\) as in the previous part, so that \(\omega^k=\omega^r\text{.}\) Since \(\omega^r=1\) if and only if \(r=0\) for \(0\leq r\leq n-1\text{,}\) we have \(\ker(\phi)\subseteq n\Z\text{.}\) We conclude that \(\ker(\phi)=n\Z\text{,}\) as desired.</li>
+<li>By the First Isomorphism Theorem, we have \(\Z/(n\Z)\approx C_n\text{.}\)</li>
+</ol>
 <span class="incontext"><a href="section-8.html#p-270">in-context</a></span>
 </body>
 </html>

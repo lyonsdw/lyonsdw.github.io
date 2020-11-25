@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:03-05:00       *-->
+<!--*       on 2020-11-25T13:51:21-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(T\) be the transformation \(T(z)=e^{-i\arg(u-v)}(z-v)\text{.}\) \(T\) is conformal because \(T\) is a composition of a rotation and a translation, so we have \(\angle uvw= \angle T(u)T(v)T(w)\text{.}\) Since \(T(u)\) is on the positive real axis and \(T(u)=0\text{,}\) we have</p>
+<p>Now suppose two curves \(C_1,C_2\) intersect at \(v\text{,}\) let \(u\) be a point on \(C_1\) and let \(w\) be a point on \(C_2\text{.}\) If \(u\) and \(w\) are close to \(v\text{,}\) then \(\angle uvw\) is a secant approximation of an angle made by the tangents to \(C_1,C_2\) at \(v\text{.}\) See <a class="xref" data-knowl="./knowl/curve_angle_limit_fig.html" title="Figure 3.1.7">Figure 3.1.7</a>. Now let \(p(t),q(s)\) be parameterizations of \(C_1,C_2\text{,}\) respectively, with \(p(0)=q(0)=v\text{,}\) and \(p(t_1)=u\text{,}\) \(q(s_1)=w\) for some \(t_1,s_2\gt 0\text{.}\)  We can compute an angle made by the tangents to the curves by the following limit.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\angle T(u)T(v)T(w)\amp =\arg(T(w))\\
-\amp =\arg(e^{-i\arg(u-v)}(w-v))\\
-\amp =\arg(w-v)-\arg(u-v)\\
-\amp =\arg\left(\frac{w-v}{u-v}\right)
-\end{align*}
+\begin{equation}
+\lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{q(s)-v}{p(t)-v}\right)\tag{3.1.2}
+\end{equation}
 </div>
-<p data-braille="continuation">as desired.</p>
+<p data-braille="continuation">The value of limit <a class="xref" data-knowl="./knowl/anglemeascurves.html" title="Equation 3.1.2">(3.1.2)</a> is sensitive to the direction of the curve parameterizations and the sided-ness of the limits \(t\to 0^{\pm}\) or \(s\to 0^{\pm}\text{.}\) If the value of the limit <a class="xref" data-knowl="./knowl/anglemeascurves.html" title="Equation 3.1.2">(3.1.2)</a> is \(\theta\) for one set of choices for parameterizations and sided-ness, the limit for the other choices will be \(\theta\) or \(\theta \pm \pi\text{.}\) For a given pair of parameterizations \(p,q\text{,}\) draw a sketch to illustrate the four possible cases \(t\to 0^{\pm},s\to 0^{\pm}\text{.}\)</p>
 <span class="incontext"><a href="geomdefsect.html#p-350">in-context</a></span>
 </body>
 </html>

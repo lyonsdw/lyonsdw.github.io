@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:01-05:00       *-->
+<!--*       on 2020-11-25T13:51:20-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,8 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>An isomorphism is a bijection, so the inverse mapping is a bijection. We need to prove the inverse map is operation preserving. Let \(\phi\colon G\to H\) be an isomorphism of groups. Let \(a,b\) be elements in \(H\text{,}\) and let \(x=\phi^{-1}(a), y=\phi^{-1}(b)\text{.}\) Then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\phi^{-1}(ab)=
-\phi^{-1}(\phi(x)\phi(y))=\phi^{-1}(\phi(xy))=xy=\phi^{-1}(a)\phi^{-1}(b),
-\end{equation*}
-</div>
-<p data-braille="continuation">as required.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For Property 3, let \(a,b\) be elements of \(\ker(\phi)\text{.}\) Then \(\phi(ab)=\phi(a)\phi(b)=e_H\text{,}\) so \(ab\) is in \(\ker(\phi)\text{.}\) We also have \(e_H=(\phi(a))^{-1}=\phi(a^{-1})\) (by Property 2) so \(\ker(\phi)\) is closed under taking inverses. Also, \(\ker(\phi)\) is not empty (\(\ker(\phi)\) contains \(e_G\) by Property 1), so \(\ker(\phi)\) is a subgroup by the 2-step subgroup test. For Property 4, if \(\phi(x_1)=y_1\) and \(\phi(x_2)=y_2\) are in \(\phi(G)\text{,}\) then \(y_1y_2 = \phi(x_1)\phi(x_2)=
+\phi(x_1x_2)\text{,}\) so \(\phi(G)\) is closed under multiplication. Also, \(y_1^{-1}=(\phi(x_1))^{-1}=\phi(x_1^{-1})\) (by Property 2), so \(\phi(G)\) is closed under taking inverses. Finally, \(\phi(G)\) is not empty because it contains \(e_H\) (by Property 1), so \(\phi(G)\) passes the 2-step subgroup test.</p>
 <span class="incontext"><a href="section-8.html#p-258">in-context</a></span>
 </body>
 </html>

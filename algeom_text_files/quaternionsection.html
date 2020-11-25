@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:52-05:00       *-->
+<!--*       on 2020-11-25T13:51:10-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -158,11 +158,11 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="quaternionsection"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Quaternions</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-51">The quaternions, discovered by William Rowan Hamilton in 1843, were invented to capture the algebra of rotations of 3-dimensional real space, extending the way that the complex numbers capture the algebra of rotations of 2-dimensional real space.</p>
-<p id="p-52">Elements in the set of quaternions \(\Quat\) are in one-to-one correspondence with points in 4-dimensional real space \(\R^4\text{.}\) We will write \(r\leftrightarrow (t,x,y,z)\) to denote that the quaternion \(r\) corresponds to the 4-tuple \((t,x,y,z)\) of real numbers.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-2"><p id="p-53">The quaternions, discovered by William Rowan Hamilton in 1843, were invented to capture the algebra of rotations of 3-dimensional real space, extending the way that the complex numbers capture the algebra of rotations of 2-dimensional real space.</p>
+<p id="p-54">Elements in the set of quaternions \(\Quat\) are in one-to-one correspondence with points in 4-dimensional real space \(\R^4\text{.}\) We will write \(r\leftrightarrow (t,x,y,z)\) to denote that the quaternion \(r\) corresponds to the 4-tuple \((t,x,y,z)\) of real numbers.</p></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span>
 </h3>
-<p id="p-53">The quaternions \(i,j,k\) are defined as follows.</p>
+<p id="p-55">The quaternions \(i,j,k\) are defined as follows.</p>
 <div class="displaymath">
 \begin{align}
 i \amp \leftrightarrow (0,1,0,0)\tag{1.2.1}\\
@@ -175,7 +175,7 @@ k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
 (0,x,y,z)\) is called a <dfn class="terminology">pure</dfn> quaternion or an <dfn class="terminology">imaginary</dfn> quaternion. For a quaternion \(r=a+bi+cj+dk\text{,}\) we call the real quaternion \(a\) the <dfn class="terminology">scalar part</dfn> or <dfn class="terminology">real part</dfn> of \(r\text{,}\) and we call the quaternion \(xi+yj+zk\) the <dfn class="terminology">vector part</dfn> or the <dfn class="terminology">imaginary part</dfn> of \(r\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span>
 </h3>
-<p id="p-54">Analogous to the way that the complex numbers \(\C\) can be realized as the set \({\mathcal M}_\C\) of \(2\times 2\) real matrices  (see <a class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as \(2\times 2\) real matrices">Exercise 1.1.7.12</a>), the quaternions can be realized by a set of \(2\times 2\) complex matrices, as follows.  Let \({\mathcal M}_\Quat\) denote the set of \(2\times 2\) complex matrices of the form \(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
+<p id="p-56">Analogous to the way that the complex numbers \(\C\) can be realized as the set \({\mathcal M}_\C\) of \(2\times 2\) real matrices  (see <a class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as \(2\times 2\) real matrices">Exercise 1.1.7.12</a>), the quaternions can be realized by a set of \(2\times 2\) complex matrices, as follows.  Let \({\mathcal M}_\Quat\) denote the set of \(2\times 2\) complex matrices of the form \(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
 u^\ast\end{array}\right]\text{.}\) Given a quaternion \(r=a+bi+cj+dk\text{,}\) let \(u,v\) be the complex numbers \(u=a+bi\) and \(v=c+di\text{,}\) and let \({M}(r)\) denote the \(2\times 2\) matrix in \({\mathcal M}_\Quat\) given by</p>
 <div class="displaymath">
 \begin{equation*}
@@ -187,13 +187,13 @@ u^\ast\end{array}\right].
 <article class="proposition theorem-like" id="quatmatalgprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">\({\mathcal M}_\Quat\) is closed under addition and multiplication.</span>
 </h6>
-<p id="p-55">Let \(M,N\) be elements of \({\mathcal
+<p id="p-57">Let \(M,N\) be elements of \({\mathcal
 M}_\Quat\text{.}\) Then the sum \(M+N\) and the product \(MN\) are also elements of \({\mathcal M}_\Quat\text{.}\)</p></article><article class="exercise exercise-like" id="quatmatalgpropexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatmatalgpropexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmatalgpropexer"><article class="exercise exercise-like"><p id="p-56">Prove <a class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: \({\mathcal M}_\Quat\) is closed under addition and multiplication">Proposition 1.2.1</a></p></article></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmatalgpropexer"><article class="exercise exercise-like"><p id="p-58">Prove <a class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: \({\mathcal M}_\Quat\) is closed under addition and multiplication">Proposition 1.2.1</a></p></article></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span>
 </h3>
-<p id="p-58">By virtue of <a class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: \({\mathcal M}_\Quat\) is closed under addition and multiplication">Proposition 1.2.1</a>, we can define addition and multiplication of quaternions \(r,s\) as follows.</p>
+<p id="p-60">By virtue of <a class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: \({\mathcal M}_\Quat\) is closed under addition and multiplication">Proposition 1.2.1</a>, we can define addition and multiplication of quaternions \(r,s\) as follows.</p>
 <div class="displaymath">
 \begin{gather}
 r+s=Q(M(r)+M(s))\tag{1.2.4}\\
@@ -208,7 +208,7 @@ q(r+s)\amp = qr+qs \;\; \text{ (distributive law)}\tag{1.2.7}\\
 ar\amp =ra \;\; \text{ (real quaternions commute with all quaternions)}\tag{1.2.8}
 \end{align}
 </div>
-<p id="p-59">In practice, it is not necessary to convert quaternions to matrices in order to add and multiply. Quaternion addition and multiplication in Cartesian form is analogous to complex multiplication, using the following basic multiplication rules.</p>
+<p id="p-61">In practice, it is not necessary to convert quaternions to matrices in order to add and multiply. Quaternion addition and multiplication in Cartesian form is analogous to complex multiplication, using the following basic multiplication rules.</p>
 <div class="displaymath">
 \begin{gather}
 i^2=j^2=k^2=-1 \label{ijksquaretominus1}\tag{1.2.9}\\
@@ -217,8 +217,8 @@ ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j\label{quatmultrules}\tag{1.2.10}
 </div>
 <article class="exercise exercise-like" id="quatmultrulesexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatmultrulesexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmultrulesexer"><article class="exercise exercise-like"><p id="p-60">Verify <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>.</p></article></div>
-<p id="p-62">For \(r=a+bi+cj+dk\) and \(r'=a'+b'i+c'j+d'k\text{,}\) we have</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatmultrulesexer"><article class="exercise exercise-like"><p id="p-62">Verify <a class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>.</p></article></div>
+<p id="p-64">For \(r=a+bi+cj+dk\) and \(r'=a'+b'i+c'j+d'k\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation}
 r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.\tag{1.2.11}
@@ -250,11 +250,11 @@ uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like">Verify <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>.</article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span>
 </h3>
-<p id="p-64">The <dfn class="terminology">conjugate</dfn> of a quaternion \(r=a+bi+cj+dk\) is \(r^\ast =
+<p id="p-66">The <dfn class="terminology">conjugate</dfn> of a quaternion \(r=a+bi+cj+dk\) is \(r^\ast =
 a-bi-cj-dk\text{,}\) and the <dfn class="terminology">modulus</dfn> of \(r\) is \(|r|=\sqrt{a^2+b^2+c^2+d^2}\text{.}\)         The <dfn class="terminology">unit quaternions</dfn> , denoted \(U(\Quat)\), is the set of quaternions with modulus 1.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a></p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">The set of unit quaternions \(U(\H)\) is in one-to-one correspondence with the 3-sphere \(S^3=\{(t,x,y,z)\in \R^4\colon
 t^2+x^2+y^2+z^2=1\}\text{.}\) This is analogous to the set of norm 1 complex numbers that is in one-to-one correspondence with the 1-sphere \(S^2\text{.}\)</div></div>
-<p id="p-65">Analogous to complex numbers, quaternions can be expressed in <em class="emphasis">polar form</em>. Given a nonzero quaternion \(r\text{,}\) the quaternion \(r'=\frac{r}{|r|}\) is a unit quaternion, say \(r'=a+bi+cj+dk\text{.}\) If \(|a|\lt 1\text{,}\) let \(u=\frac{1}{\sqrt{1-a^2}}(bi+cj+dk)\) be the unit pure quaternion obtained by normalizing the pure quaternion \(bi+cj+dk\text{.}\) Let \(\theta=\arccos a\text{.}\) The expression</p>
+<p id="p-67">Analogous to complex numbers, quaternions can be expressed in <em class="emphasis">polar form</em>. Given a nonzero quaternion \(r\text{,}\) the quaternion \(r'=\frac{r}{|r|}\) is a unit quaternion, say \(r'=a+bi+cj+dk\text{.}\) If \(|a|\lt 1\text{,}\) let \(u=\frac{1}{\sqrt{1-a^2}}(bi+cj+dk)\) be the unit pure quaternion obtained by normalizing the pure quaternion \(bi+cj+dk\text{.}\) Let \(\theta=\arccos a\text{.}\) The expression</p>
 <div class="displaymath">
 \begin{equation}
 r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
@@ -264,7 +264,7 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 <article class="exercise exercise-like" id="quatpolarformdetailsexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatpolarformdetailsexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatpolarformdetailsexer"><article class="exercise exercise-like">Fill in the remaining details on polar form for quaternions. What happens if \(r=0\text{?}\) What happens if \(|a|=1\text{?}\)</article></div>
-<p id="p-67">Continuing the analogy with complex numbers, we have the following, for all quaternions \(r,s\text{.}\)</p>
+<p id="p-69">Continuing the analogy with complex numbers, we have the following, for all quaternions \(r,s\text{.}\)</p>
 <div class="displaymath">
 \begin{gather}
 (rs)^\ast = s^\ast r^\ast\label{quatconjmult}\tag{1.2.15}\\
@@ -277,11 +277,11 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatconjnormmultexer"><article class="exercise exercise-like">Verify the three equations above.</article></div></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of \(\R^3_\Quat\)</span>
 </h3>
-<p id="p-69">Let \(r\) be a unit quaternion and let \(v\) be a pure quaternion. Let \(R_r(v)\) denote the quaternion \(R_r(v)=rvr^\ast\text{.}\) It is easy to check that \((R_r(v))^\ast = -R_r(v)\text{.}\) From this we conclude that \(rvr^\ast\) is a pure quaternion.</p>
+<p id="p-71">Let \(r\) be a unit quaternion and let \(v\) be a pure quaternion. Let \(R_r(v)\) denote the quaternion \(R_r(v)=rvr^\ast\text{.}\) It is easy to check that \((R_r(v))^\ast = -R_r(v)\text{.}\) From this we conclude that \(rvr^\ast\) is a pure quaternion.</p>
 <article class="exercise exercise-like" id="rvrastispureexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-rvrastispureexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rvrastispureexer"><article class="exercise exercise-like"><p id="p-70">Explain how "we conclude" that \(R_r(v)\) is pure when \(r\) is a unit quaternion and \(v\) is a pure quaternion.</p></article></div>
-<p id="p-72">It is easy to see that \(R_r\) is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(k\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rvrastispureexer"><article class="exercise exercise-like"><p id="p-72">Explain how "we conclude" that \(R_r(v)\) is pure when \(r\) is a unit quaternion and \(v\) is a pure quaternion.</p></article></div>
+<p id="p-74">It is easy to see that \(R_r\) is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(k\text{.}\)</p>
 <div class="displaymath">
 \begin{gather}
 R_r(v+w) = R_r(v) + R_r(w)\tag{1.2.18}\\
@@ -290,12 +290,12 @@ R_r(kv) = kR_r(v)\tag{1.2.19}
 </div>
 <article class="exercise exercise-like" id="quatrotislinearexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatrotislinearexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatrotislinearexer"><article class="exercise exercise-like"><p id="p-73">Show the details to prove that \(R_r\) is linear.</p></article></div>
-<p id="p-75">We conclude with the main result of this section that shows how rotations of 3-dimensional real space are encoded in the algebra of quaternions.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatrotislinearexer"><article class="exercise exercise-like"><p id="p-75">Show the details to prove that \(R_r\) is linear.</p></article></div>
+<p id="p-77">We conclude with the main result of this section that shows how rotations of 3-dimensional real space are encoded in the algebra of quaternions.</p>
 <article class="proposition theorem-like" id="quatrotprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Quaternions and rotations of \(\R^3_\Quat\).</span>
 </h6>
-<p id="p-76">Let \(r=\cos\theta + u\sin\theta\) be a unit quaternion in polar form, and let \(R_r\) be the linear transformation of the space of pure quaternions given by \(v\to rvr^\ast\text{.}\) The action of \(R_r\) is a rotation by \(2\theta\) radians about the axis given by the unit vector \(u\text{.}\)</p>
+<p id="p-78">Let \(r=\cos\theta + u\sin\theta\) be a unit quaternion in polar form, and let \(R_r\) be the linear transformation of the space of pure quaternions given by \(v\to rvr^\ast\text{.}\) The action of \(R_r\) is a rotation by \(2\theta\) radians about the axis given by the unit vector \(u\text{.}\)</p>
 <article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/quatrotpropexer.html" title="Exercise 1.2.6.2: Proof of Proposition 1.2.9">Exercise 1.2.6.2</a>.</article></div></article></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.6</span> <span class="title">Exercises</span>
 </h3>
@@ -304,7 +304,7 @@ R_r(kv) = kR_r(v)\tag{1.2.19}
 \R^3_\Quat\) across the plane normal to \(r\in \R^3_\Quat\text{.}\)</figcaption></figure></article><article class="exercise exercise-like" id="quatrotpropexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Proof of Proposition 1.2.9.</span>
 </h6>
-<p id="p-78">Let \(r=\cos\theta + u\sin\theta\) be the polar form for a unit quaternion \(r\text{.}\)</p>
+<p id="p-80">Let \(r=\cos\theta + u\sin\theta\) be the polar form for a unit quaternion \(r\text{.}\)</p>
 <ol class="lower-alpha">
 <li id="li-36">Show that \(R_r(u)=u\text{.}\)</li>
 <li id="li-37">Let \(v\) be any pure unit quaternion orthogonal to \(u\text{,}\) and let \(w=u\times v\text{,}\) so that the triple \(u,v,w\) forms a right-handed coordinate system for \(\R^3\text{.}\) Show that<div class="displaymath">

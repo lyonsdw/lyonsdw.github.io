@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:35-05:00       *-->
+<!--*       on 2020-11-12T20:20:21-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,63 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.6.6.</span></h5>
-<p>We wish to show that the map \(G\to \Perm({\mathcal F}(X,Y))\) given by \(g\to [\alpha\to \alpha\circ g^{-1}]\) is a homomorphism. Indeed, for \(g,h\in G\) and \(\alpha\in {\mathcal F}(X,Y)\text{,}\) we have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.6.5.</span></h5>
+<ol class="lower-alpha">
+<li>
+<p>Check the following.</p>
+<ul class="disc">
+<li>the identity element is \((e_K,e_H)\)</li>
+<li>\(\displaystyle (k,h)^{-1}=(\phi(h^{-1})(k^{-1}),h^{-1})\)</li>
+<li>associativity holds: either order of multiplication gives<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(gh)\alpha = \alpha\circ (gh)^{-1}= \alpha\circ (h^{-1}g^{-1})
-= (\alpha\circ h^{-1})\circ g^{-1}=g(h(\alpha)).
+(k_1,h_1)(k_2,h_2)(k_3,h_3)=(k_1[\phi(h_1)(k_2)][\phi(h_1h_2)(k_3)],h_1h_2h_3)
 \end{equation*}
-</div></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-85">in-context</a></span>
+</div>
+</li>
+</ul>
+</li>
+<li>First, note that \(\phi(h)=C_h\) does indeed map \(K\) to itself because \(K\) is normal, that \(C_h\) is indeed an automorphism because \((C_h)^{-1}=C_{h^{-1}}\text{,}\) and that \(\phi\) is indeed a homomorphism because \(C_{hh'}=C_hC_{h'}\text{.}\) To see that \(\psi\) is a homomorphism, we have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\psi((k,h),(k',h')) \amp = \psi (khk'h^{-1},hh')\\
+\amp = khk'h^{-1}hh'\\
+\amp = khk'h'\\
+\amp = \psi((k,h))\psi((k',h'))
+\end{align*}
+</div>The assumption that \(G=KH\) implies that \(\psi\) is onto. If \(e=\psi((k,h))=kh\text{,}\) then \(k=h^{-1}\text{,}\) so \(k\in
+H\) and \(h\in K\text{.}\) The assumption \(K\cap H=\{e\}\) implies \(k=h=e\text{.}\) We conclude that \(\psi\) is one-to-one.</li>
+<li>
+<p>We apply the previous part to \(K=\langle R_{1/n}\rangle\approx C_n, H=\langle
+F_L\rangle\approx C_2\text{,}\) where \(L\) is any one of the lines of symmetry of the \(n\)-gon. Because \(K\) is Abelian, the rotation group \(K\) is normal in \(D_n\text{.}\) To see that \(D_n=KH\text{,}\) first, we confirm that \(D_n=\langle R_{1/n},F_L\rangle\text{.}\) To see why, verify the relations</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+R^{-1}=FRF\\
+F_{R(L)}=RF_LR^{-1}
+\end{gather*}
+</div>
+<p data-braille="continuation">which hold for any rotation \(R\) and any reflection \(F\text{.}\) Now, given any string of \(R\)'s (for various angles) and \(F\)'s, first rewrite all the \(F\)'s in the form \(RF_LR^{-1}\text{,}\) then apply \(F_LR=R^{-1}F_L\) to shift all the \(R\)'s to the left and all the \(F_L\)'s to the right. This shows that any element in \(D_n\) can be written in the form \(R_\theta F_L^a\) for some \(\theta\) and \(a=0,1\text{.}\) Finally, it is clear that we have \(K\cap H=\{R_0\}\text{.}\) The hypothesis of the result in the previous part are met, so we conclude that \(D_n
+\approx K\rtimes H \approx C_n\rtimes C_2\text{.}\)</p>
+<p>We can also see the semidirect product structure directly, without using the result from the previous part. From what we have shown, multiplication in \(D_n\) looks like this.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(R_\theta F_L^a)(R_\phi F_L^b)
+\amp = R_\theta F_L^aR_\phi (F_L^a F_L^a) F_L^b\\
+\amp = R_\theta (F_L^aR_\phi F_L^a) F_L^a F_L^b\\
+\amp = R_\theta R_{(-1)^a\phi}F_L^{a+b}\\
+\amp = R_{\theta+(-1)^a\phi}F_L^{a+b}
+\end{align*}
+</div>
+<p data-braille="continuation">This last expression is the same as the multiplication given by the semidirect product.</p>
+</li>
+<li>We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[(v_1,g_1)(v_2,g_2)]x \amp = [(v_1+g_1v_2,g_1g_2)]x   \\
+\amp = g_1g_2x + v_1+g_1v_2\\
+\amp = g_1(g_2x+v_2) + v_1\\
+\amp = (v_1,g_1)[(v_2,g_2)x]
+\end{align*}
+</div>
+</li>
+<li>This is clear by inspection.</li>
+</ol></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-85">in-context</a></span>
 </body>
 </html>

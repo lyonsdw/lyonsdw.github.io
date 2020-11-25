@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:07-05:00       *-->
+<!--*       on 2020-11-25T13:51:26-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,29 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We have</p>
+<p>Let</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\frac{-1}{\left(T\left(\frac{-1}{z^\ast}\right)\right)^\ast}
-\amp =
--\left(\frac{c\left(\frac{-1}{z^\ast}\right)+d}{a\left(\frac{-1}{z^\ast}\right)+b}\right)\\
-\amp = -\left(\frac{-dz^\ast
-+c}{-bz^\ast+a}\right)^\ast\\
-\amp = \frac{d^\ast z-c^\ast}{-b^\ast z+a^\ast}.
-\end{align*}
+\begin{equation*}
+Tz = \frac{az+b}{-\overline{b}z+\overline{a}}
+\end{equation*}
 </div>
-<p data-braille="continuation">Thus we have equality of the two maps \(z\to \frac{az+b}{cz+d}\text{,}\) \(z\to \frac{d^\ast z-c^\ast}{-b^\ast z+a^\ast}\) By <a class="xref" data-knowl="./knowl/mobiusgpaspgl2exer.html" title="Checkpoint 3.2.5">Checkpoint 3.2.5</a>, there is some real \(k\neq
-0\) such that \(a=kd^\ast\text{,}\) \(b=-kc^\ast\text{.}\) The condition \(ad-bc=0\) implies that \(k=\pm
-1\text{.}\) Choosing \(k=1\text{,}\) we have the desired result.</p>
+<p data-braille="continuation">with \(|a|^2+|b|^2=1\text{.}\) The fixed points of \(T\) are given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p,q
+= \frac{a-\overline{a} \pm \sqrt{(a-\overline{a})^2
+-4|b|^2}}{-2\overline{b}}
+= \frac{a-\overline{a} \pm \sqrt{(a+\overline{a})^2 -4}}{-2\overline{b}} .
+\end{equation*}
+</div>
+<p data-braille="continuation">Putting \(z=\infty\text{,}\) \(Tz=T(\infty) = a/(-\overline{b})\) in the normal form equation <a class="xref" data-knowl="./knowl/normalform2fixedpts.html" title="Equation 3.2.4">(3.2.4)</a>, we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lambda = \frac{a+p\overline{b}}{a+q\overline{b}}
+= \frac{a+\overline{a}+\sqrt{(a+\overline{a})^2 -4}}{a+\overline{a}-\sqrt{(a+\overline{a})^2 -4}}.
+\end{equation*}
+</div>
+<p data-braille="continuation">The last expression has the form \((c+di)/(c-di)\) for \(c,d\) real, so we conclude \(|\alpha|=1\text{.}\)</p>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-573">in-context</a></span>
 </body>
 </html>

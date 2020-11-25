@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:53-05:00       *-->
+<!--*       on 2020-11-25T13:51:11-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -158,18 +158,18 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="groupintrosection"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Examples of groups</span>
 </h2>
-<section class="introduction" id="introduction-6"><p id="p-136">Groups are one of the most basic algebraic objects, yet have structure rich enough to be widely useful in all branches of mathematics and its applications. A group is a set \(G\) with a binary operation \(G\times G \to G\) that has a short list of specific properties. Before we give the complete definition of a group to the next section (see <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>), this section introduces examples of some important and useful groups.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-6"><p id="p-138">Groups are one of the most basic algebraic objects, yet have structure rich enough to be widely useful in all branches of mathematics and its applications. A group is a set \(G\) with a binary operation \(G\times G \to G\) that has a short list of specific properties. Before we give the complete definition of a group to the next section (see <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>), this section introduces examples of some important and useful groups.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Permutations</span>
 </h3>
-<p id="p-137">A <dfn class="terminology">permutation</dfn> of a set \(X\) is a bijection from \(X\) to itself, that is, a function that is both one-to-one and onto. Given two permutations \(\alpha,\beta\) of a set \(X\text{,}\) we write \(\alpha\beta\) to denote the composition of functions \(\alpha\circ\beta\text{.}\) <article class="definition definition-like" id="definition-1"><h6 class="heading">
+<p id="p-139">A <dfn class="terminology">permutation</dfn> of a set \(X\) is a bijection from \(X\) to itself, that is, a function that is both one-to-one and onto. Given two permutations \(\alpha,\beta\) of a set \(X\text{,}\) we write \(\alpha\beta\) to denote the composition of functions \(\alpha\circ\beta\text{.}\) <article class="definition definition-like" id="definition-1"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-138">Let \(X\) be a set and let \(\Perm(X)\) denote the set of all permutations of \(X\text{.}\)  The <em class="emphasis">group of permutations of \(X\)</em> is the set \(G=\Perm(X)\)        together with the binary operation \(G\times G\to G\) given by function composition, that is, \((\alpha,\beta) \to
+<p id="p-140">Let \(X\) be a set and let \(\Perm(X)\) denote the set of all permutations of \(X\text{.}\)  The <em class="emphasis">group of permutations of \(X\)</em> is the set \(G=\Perm(X)\)        together with the binary operation \(G\times G\to G\) given by function composition, that is, \((\alpha,\beta) \to
 \alpha\circ\beta\text{.}\) For the special case \(X =
 \{1,2,\ldots,n\}\) for some integer \(n\geq 1\text{,}\) the group \(\Perm(X)\) is called the <dfn class="terminology">symmetric group</dfn>, and is denoted \(S_n\text{.}\) </p></article></p>
 <article class="exercise exercise-like" id="permutation-reading-exercise"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-permutation-reading-exercise"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-permutation-reading-exercise"><article class="exercise exercise-like"><p id="p-139">A permutation \(\sigma\) of \(X=\{1,2,\ldots,n\}\) can be specified by a list of values \([\sigma(1),\sigma(2),\ldots,\sigma(n)]\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a> For example, the list \([3,1,2]\) specifies the permutation \(\sigma\colon \{1,2,3\}\to\{1,2,3\}\) given by</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-permutation-reading-exercise"><article class="exercise exercise-like"><p id="p-141">A permutation \(\sigma\) of \(X=\{1,2,\ldots,n\}\) can be specified by a list of values \([\sigma(1),\sigma(2),\ldots,\sigma(n)]\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a> For example, the list \([3,1,2]\) specifies the permutation \(\sigma\colon \{1,2,3\}\to\{1,2,3\}\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.
@@ -178,25 +178,25 @@ MathJax.Hub.Config({
 <p data-braille="continuation">Let \(\tau=[2,1,3]\text{.}\) Find \(\sigma\tau\text{,}\) \(\tau\sigma\text{,}\) and \(\sigma^2=\sigma\sigma\text{.}\)</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">There is a reason that we use square brackets, rather than parentheses, for the list of output values of a permutation: Lists written with parentheses are used, by nearly universal convention, for a different representation of permutations called <em class="emphasis">cycle notation</em>. Cycle notation is introduced in <a class="xref" data-knowl="./knowl/cyclicpermutations.html" title="Exercise 2.2.2.7: Cyclic permutations">Exercise 2.2.2.7</a>.</div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-140">\(\sigma\tau= [1,3,2]\text{,}\) \(\tau\sigma=[3,2,1]\text{,}\) \(\sigma^2=[2,3,1]\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-142">\(\sigma\tau= [1,3,2]\text{,}\) \(\tau\sigma=[3,2,1]\text{,}\) \(\sigma^2=[2,3,1]\)</p></div></div>
 </div></article></div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span>
 </h3>
-<p id="p-141">Informally and intuitively, we say that regular polygons have rotational and mirror symmetries. Specifically, the rotational symmetries are rotations about the center \(O\) of the polygon, clockwise or counterclockwise, by some angle \(\angle POP'\text{,}\) where \(P,P'\) are any two vertices. The mirror symmetries of the polygon are reflections across lines of the form \(\overline{OP}\) or \(\overline{OM}\text{,}\) where \(P\) is any vertex and \(M\) is the midpoint of any edge of the polygon.  See <a class="xref" data-knowl="./knowl/ngonsymmfig.html" title="Figure 2.1.3">Figure 2.1.3</a>.</p>
+<p id="p-143">Informally and intuitively, we say that regular polygons have rotational and mirror symmetries. Specifically, the rotational symmetries are rotations about the center \(O\) of the polygon, clockwise or counterclockwise, by some angle \(\angle POP'\text{,}\) where \(P,P'\) are any two vertices. The mirror symmetries of the polygon are reflections across lines of the form \(\overline{OP}\) or \(\overline{OM}\text{,}\) where \(P\) is any vertex and \(M\) is the midpoint of any edge of the polygon.  See <a class="xref" data-knowl="./knowl/ngonsymmfig.html" title="Figure 2.1.3">Figure 2.1.3</a>.</p>
 <figure class="figure figure-like" id="ngonsymmfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/ngonsymm_clip.jpg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span>Symmetries of a regular \(n\)-gon</figcaption></figure><p id="p-142">Here are some standard notations for rotations and reflections in the plane. See <a class="xref" data-knowl="./knowl/rotreflfig.html" title="Figure 2.1.4">Figure 2.1.4</a>. <figure class="figure figure-like" id="rotreflfig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/rotrefl_clip.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span>Symmetries of a regular \(n\)-gon</figcaption></figure><p id="p-144">Here are some standard notations for rotations and reflections in the plane. See <a class="xref" data-knowl="./knowl/rotreflfig.html" title="Figure 2.1.4">Figure 2.1.4</a>. <figure class="figure figure-like" id="rotreflfig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/rotrefl_clip.jpg" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.4<span class="period">.</span></span><span class="space"> </span>Rotations and reflections in the plane</figcaption></figure> <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">Rotations in the plane.</span></h6>
-<p id="p-143">Fix a center point \(O\text{.}\) We write \(R_\theta\) to denote the rotation by angle \(\theta\) about the point \(O\text{.}\) Angle units can be revolutions or degrees or radians, whatever is most convenient. We observe the usual convention that positive values of \(\theta\) denote counterclockwise rotations and negative values of \(\theta\) denote clockwise rotations.</p></article> <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">Reflections in the plane.</span></h6>
-<p id="p-144">We write \(F_L\) to denote the reflection across the line \(L\text{.}\) This means that \(P'=F_L(P)\) if and only if \(\overline{PP'}\perp L\) and the distance from \(P\) to \(L\) is the same as the distance from \(P'\) to \(L\text{.}\)</p></article></p>
-<p id="p-145">Given symmetries \(A,B\text{,}\) we write \(AB\) to denote the composition \(A\circ B\text{.}\) For example, for the symmetries of the equilateral triangle, with angles in degrees, and with \(L=\overline{OP}\) for some vertex \(P\text{,}\) we have \(R_{240}R_{120}=R_{0}\) and \(F_LR_{120}=R_{-120}F_L\text{.}\) <article class="definition definition-like" id="definition-2"><h6 class="heading">
+<p id="p-145">Fix a center point \(O\text{.}\) We write \(R_\theta\) to denote the rotation by angle \(\theta\) about the point \(O\text{.}\) Angle units can be revolutions or degrees or radians, whatever is most convenient. We observe the usual convention that positive values of \(\theta\) denote counterclockwise rotations and negative values of \(\theta\) denote clockwise rotations.</p></article> <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">Reflections in the plane.</span></h6>
+<p id="p-146">We write \(F_L\) to denote the reflection across the line \(L\text{.}\) This means that \(P'=F_L(P)\) if and only if \(\overline{PP'}\perp L\) and the distance from \(P\) to \(L\) is the same as the distance from \(P'\) to \(L\text{.}\)</p></article></p>
+<p id="p-147">Given symmetries \(A,B\text{,}\) we write \(AB\) to denote the composition \(A\circ B\text{.}\) For example, for the symmetries of the equilateral triangle, with angles in degrees, and with \(L=\overline{OP}\) for some vertex \(P\text{,}\) we have \(R_{240}R_{120}=R_{0}\) and \(F_LR_{120}=R_{-120}F_L\text{.}\) <article class="definition definition-like" id="definition-2"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-146">The <dfn class="terminology">dihedral group</dfn>, denoted \(D_n\) , is the set of rotation and reflection symmetries of the regular \(n\)-gon together with the binary operation of function composition.</p></article></p>
+<p id="p-148">The <dfn class="terminology">dihedral group</dfn>, denoted \(D_n\) , is the set of rotation and reflection symmetries of the regular \(n\)-gon together with the binary operation of function composition.</p></article></p>
 <article class="exercise exercise-like" id="dihedral-reading-exercise"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-dihedral-reading-exercise"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral-reading-exercise"><article class="exercise exercise-like"><p id="p-147">Let \(X\) be the square centered at the origin in the \(x,y\)-plane with vertices at \((\pm 1,\pm 1)\text{.}\) The square \(X\) has lines of symmetry \(H,V,D,D'\) (horizontal, vertical, diagonal, and another diagonal) where \(H,V\) denote the \(x,y\) axes, respectively, and \(D,D'\) denote the lines \(y=-x,y=x\text{,}\) respectively. See <a class="xref" data-knowl="./knowl/d4labeling_fig.html" title="Figure 2.1.7">Figure 2.1.7</a>.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral-reading-exercise"><article class="exercise exercise-like"><p id="p-149">Let \(X\) be the square centered at the origin in the \(x,y\)-plane with vertices at \((\pm 1,\pm 1)\text{.}\) The square \(X\) has lines of symmetry \(H,V,D,D'\) (horizontal, vertical, diagonal, and another diagonal) where \(H,V\) denote the \(x,y\) axes, respectively, and \(D,D'\) denote the lines \(y=-x,y=x\text{,}\) respectively. See <a class="xref" data-knowl="./knowl/d4labeling_fig.html" title="Figure 2.1.7">Figure 2.1.7</a>.</p>
 <figure class="figure figure-like" id="d4labeling_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/d4labeling.png" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.7<span class="period">.</span></span><span class="space"> </span>Lines of symmetry for the square.</figcaption></figure><p id="p-148">The symmetries of the square \(X\) are</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.7<span class="period">.</span></span><span class="space"> </span>Lines of symmetry for the square.</figcaption></figure><p id="p-150">The symmetries of the square \(X\) are</p>
 <div class="displaymath">
 \begin{equation*}
 D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
@@ -225,10 +225,10 @@ D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
 </div></article></div></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span>
 </h3>
-<p id="p-149"><article class="definition definition-like" id="definition-3"><h6 class="heading">
+<p id="p-151"><article class="definition definition-like" id="definition-3"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
 </h6>
-<p id="p-150">The <dfn class="terminology">circle group</dfn>, denoted \(S^1\text{,}\) is the set</p>
+<p id="p-152">The <dfn class="terminology">circle group</dfn>, denoted \(S^1\text{,}\) is the set</p>
 <div class="displaymath">
 \begin{equation*}
 S^1=\{z\in \C\colon |z|=1\}
@@ -240,7 +240,7 @@ S^1=\{z\in \C\colon |z|=1\}
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-s1closedgpexer"><article class="exercise exercise-like">Show that if \(z,w\) are elements of \(S^1\text{,}\) then their product \(zw\) is also in \(S^1\text{.}\)</article></div></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.4</span> <span class="title">The \(n\)-th roots of unity</span>
 </h3>
-<p id="p-152">Let \(n\geq 1\) be an integer. The set</p>
+<p id="p-154">Let \(n\geq 1\) be an integer. The set</p>
 <div class="displaymath">
 \begin{equation*}
 C_n=\{z\in \C\colon
@@ -250,7 +250,7 @@ z^n=1\}
 <p data-braille="continuation"> is called the set of <dfn class="terminology">(complex) \(n\)-th roots of unity</dfn>.</p>
 <article class="exercise exercise-like" id="rootsofunitygpfacts"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-rootsofunitygpfacts"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rootsofunitygpfacts"><article class="exercise exercise-like"><ol id="p-153" class="decimal">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rootsofunitygpfacts"><article class="exercise exercise-like"><ol id="p-155" class="decimal">
 <li id="li-67">Let  \(\omega=e^{i2\pi/n}\text{.}\) Show that \(\omega^k\) is in \(C_n\) for all integers \(k\text{.}\)</li>
 <li id="li-68">Show that, if \(z\) is an element of \(C_n\text{,}\) then \(z=\omega^k\) for some integer \(k\text{.}\)</li>
 <li id="li-69">Show that the set \(C_n\) consists of precisely the \(n\) elements<div class="displaymath">
@@ -263,22 +263,22 @@ z^n=1\}
 <article class="definition definition-like" id="definition-4"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.11</span><span class="period">.</span>
 </h6>
-<p id="p-155">The set \(C_n=\{\omega^0,\omega^1,\omega^2,\ldots,\omega^{n-1}\}\) , together with the operation of complex multiplication, is called the <dfn class="terminology">group of \(n\)-th roots of unity</dfn>.</p></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<p id="p-157">The set \(C_n=\{\omega^0,\omega^1,\omega^2,\ldots,\omega^{n-1}\}\) , together with the operation of complex multiplication, is called the <dfn class="terminology">group of \(n\)-th roots of unity</dfn>.</p></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.5</span> <span class="title">Integers</span>
 </h3>
-<p id="p-156"><article class="definition definition-like" id="definition-5"><h6 class="heading">
+<p id="p-158"><article class="definition definition-like" id="definition-5"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
 </h6>The set \(\Z\) of integers, together with the operation of addition, is called the <dfn class="terminology">group of integers</dfn>. Similarly, the set \(\Z_n\) of integers modulo \(n\) (where \(n\) is some integer \(n\geq
 1\)), together with the operation of addition modulo \(n\text{,}\) is called the <dfn class="terminology">group of integers mod \(n\)</dfn>.</article></p></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span>
 </h3>
-<p id="p-157">Let \(n\geq 1\) be an integer. We write \(GL(n,\R)\) to denote the set of \(n\times n\) invertible matrices with real entries. We write \(GL(n,\C)\) to denote the set of \(n\times n\) invertible matrices with complex entries. <article class="definition definition-like" id="definition-6"><h6 class="heading">
+<p id="p-159">Let \(n\geq 1\) be an integer. We write \(GL(n,\R)\) to denote the set of \(n\times n\) invertible matrices with real entries. We write \(GL(n,\C)\) to denote the set of \(n\times n\) invertible matrices with complex entries. <article class="definition definition-like" id="definition-6"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.13</span><span class="period">.</span>
 </h6>
-<p id="p-158">The set \(GL(n,\R)\) (respectively, \(GL(n,\C)\)), together with the binary operation of matrix multiplication, is called the <dfn class="terminology">group of \(n\times n\) real (respectively, complex) invertible matrices</dfn>, or also the <dfn class="terminology">general linear group</dfn>.	    </p></article></p></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<p id="p-160">The set \(GL(n,\R)\) (respectively, \(GL(n,\C)\)), together with the binary operation of matrix multiplication, is called the <dfn class="terminology">group of \(n\times n\) real (respectively, complex) invertible matrices</dfn>, or also the <dfn class="terminology">general linear group</dfn>.	    </p></article></p></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span>
 </h3>
-<p id="p-159">Let \(\F\) be a field, such as the rational numbers \(\Q\text{,}\) the real numbers \(\R\text{,}\) or the complex numbers \(\C\text{.}\) We write \(\F^\ast\) to denote the set of nonzero elements in \(\F\text{.}\) <article class="definition definition-like" id="definition-7"><h6 class="heading">
+<p id="p-161">Let \(\F\) be a field, such as the rational numbers \(\Q\text{,}\) the real numbers \(\R\text{,}\) or the complex numbers \(\C\text{.}\) We write \(\F^\ast\) to denote the set of nonzero elements in \(\F\text{.}\) <article class="definition definition-like" id="definition-7"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.14</span><span class="period">.</span>
 </h6>Let \(\F\) be a field. The set \(\F^\ast\), together with the binary operation of multiplication, is called the <dfn class="terminology">group of nonzero elements</dfn> in the field \(\F\text{.}\)</article></p></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span>
@@ -295,16 +295,16 @@ z^n=1\}
 0\end{array}\right]\text{.}\) Find the matrices for the remaining elements of the dihedral group \(D_4\) as specified in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</article><article class="exercise exercise-like" id="d4complexopexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Complex number operations for the dihedral group \(D_4\).</span>
 </h6>
-<p id="p-161">Let \(H\) denote the real line \(\R\) in the complex plane \(\C\text{.}\) The map \(F_H\colon \C\to \C\) is complex conjugation \(z\to {z}^\ast\text{.}\) The map \(R_{1/4}\colon \C\to \C\) is the map \(z\to e^{i\pi/2}z=iz\text{.}\) Find the maps \(\C\to \C\)  for the remaining elements of the dihedral group \(D_4\) as specified in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p></article><article class="exercise exercise-like" id="commutativeornotexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-163">Recall that a binary operation \((x,y)
+<p id="p-163">Let \(H\) denote the real line \(\R\) in the complex plane \(\C\text{.}\) The map \(F_H\colon \C\to \C\) is complex conjugation \(z\to {z}^\ast\text{.}\) The map \(R_{1/4}\colon \C\to \C\) is the map \(z\to e^{i\pi/2}z=iz\text{.}\) Find the maps \(\C\to \C\)  for the remaining elements of the dihedral group \(D_4\) as specified in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p></article><article class="exercise exercise-like" id="commutativeornotexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-165">Recall that a binary operation \((x,y)
 \to x\ast y\) is <em class="emphasis">commutative</em> if \(x\ast
 y=y\ast x\) for all possible values of \(x,y\text{.}\)</p>
 <ol class="lower-alpha">
 <li id="li-73">Which of the group operations in the examples in this section are commutative? Which are not?</li>
 <li id="li-74">Show that \(S_n\) is <em class="emphasis">not</em> commutative for \(n\gt 2\text{.}\)</li>
 </ol></article><article class="exercise exercise-like" id="identityexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-165">One of the properties of a group is the existence of an <em class="emphasis">identity</em> element. This is a group element \(e\) with the property that \(eg=ge=g\) for every \(g\) in \(G\text{.}\) Find an identity element for each of the groups in the examples in this section.</p></article><article class="exercise exercise-like" id="inverseeltexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-167">One of the properties of a group is the existence of an <em class="emphasis">inverse</em> element for every element in the group. This means that for every \(g\) in a group \(G\text{,}\) there is an element \(h\) with the property that \(gh=hg=e\text{,}\) where \(e\) is the identity element of the group. Find inverses for the following list of group elements.</p>
+<p id="p-167">One of the properties of a group is the existence of an <em class="emphasis">identity</em> element. This is a group element \(e\) with the property that \(eg=ge=g\) for every \(g\) in \(G\text{.}\) Find an identity element for each of the groups in the examples in this section.</p></article><article class="exercise exercise-like" id="inverseeltexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-169">One of the properties of a group is the existence of an <em class="emphasis">inverse</em> element for every element in the group. This means that for every \(g\) in a group \(G\text{,}\) there is an element \(h\) with the property that \(gh=hg=e\text{,}\) where \(e\) is the identity element of the group. Find inverses for the following list of group elements.</p>
 <ol class="lower-alpha">
 <li id="li-85">\([4,2,1,3]\) in \(S_4\)</li>
 <li id="li-86">\(R_{120}\) in \(D_6\) (where \(120\) is in degrees)</li>

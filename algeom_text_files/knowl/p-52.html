@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:59-05:00       *-->
+<!--*       on 2020-11-25T13:51:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,34 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Elements in the set of quaternions \(\Quat\) are in one-to-one correspondence with points in 4-dimensional real space \(\R^4\text{.}\) We will write \(r\leftrightarrow (t,x,y,z)\) to denote that the quaternion \(r\) corresponds to the 4-tuple \((t,x,y,z)\) of real numbers.</p>
-<span class="incontext"><a href="quaternionsection.html#p-52">in-context</a></span>
+<ol class="lower-alpha">
+<li>Let \(T(a,b)\) denote the matrix \(\twotwo{a}{b}{-b}{a}\) in \({\mathcal M}_\C\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} \\
+\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}\\
+\amp = T(a+c,b+d)\\
+T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} \\
+\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}\\
+\amp = T(ac-bd,ad+bc)
+\end{align*}
+</div>
+</li>
+<li>Let \(z=a+bi\) and \(w=c+di\) so that \(M(z)=T(a,b)\) and \(M(w)=T(c,d)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+C(M(z)+M(w)) \amp = C(T(a,b)+T(c,d))\\
+\amp = C(T(a+c,b+d)) \;\;(\text{by part (a)})\\
+\amp = (a+c)+i(b+d)\\
+\amp = (a+ib)+(c+id)\\
+\amp =z+w\\
+C(M(z)M(w)) \amp = C(T(a,b)T(c,d))\\
+\amp = C(T(ac-bd,ad+bc)) \;\;(\text{by part (a)})\\
+\amp = (ac-bd)+i(ad+bc)\\
+\amp = (a+ib)(c+id)\\
+\amp =z+w
+\end{align*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="section-1.html#p-52">in-context</a></span>
 </body>
 </html>

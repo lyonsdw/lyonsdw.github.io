@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:33-05:00       *-->
+<!--*       on 2020-11-12T20:20:19-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,28 +14,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.6.</span></h5>
-<p>Suppose \(\gcd(a,n)=1\text{.}\) Then there exist integers \(s,t\) such that \(sa+tn=1\text{.}\) Then we have \(as = 1-tn = 1\pmod{n}\text{,}\) so \(x=s \pmod{n}\) is a solution to \(ax=1 \pmod{n}\text{.}\) This give us an inverse mapping.</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mu_a^{-1}=\mu_s
-\end{equation*}
-</div>
-<p data-braille="continuation">We conclude that \(\mu_a\) is an isomorphism.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">More comprehensive version of the problem:</em> Show that \(\mu_a\colon \Z_n\to \Z_n\) given by \(\mu_a(x)=ax\) is an isomorphism if and only if \(n,a\) are relatively prime.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like"><h6 class="heading">
-<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
-</h6>\(\ker(\mu_a)=\left\langle
-\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</article> Here is how result follows from the Claim. If \(n,a\) are relatively prime, then \(\lcm(n,a)=na\text{,}\) so \(\lcm(n,a)/a=n\text{,}\) so \(\ker(\mu_a)=\{0\}\text{.}\) Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If \(n,a\) are not relatively prime, then \(\lcm(n,a)\lt
-na\text{,}\) and \(\lcm(n,a)/a\leq n\text{.}\) Then \(\ker(\mu_a)\) is not trivial. Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a> to conclude that \(\mu_a\) is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</p>
-<p>Now we prove the Claim. Let \(b=\langle \lcm(a,n)/a\rangle\text{.}\) We have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mu_a(b)=ab = \lcm(a,n) = 0 \pmod{n}
-\end{equation*}
-</div>
-<p data-braille="continuation">so \(b\in \ker(\mu_a)\text{.}\) If \(c\in \ker(\mu_a)\text{,}\) then \(\mu_a(c)=ac=kn\) for some integer \(k\text{.}\) Since \(kn\) is divisible by \(a\text{,}\) we have \(kn\geq \lcm(a,n)\text{,}\) so \(c\geq
-b\text{.}\) This shows \(b\) is the smallest positive element in \(\ker(\mu_a)\) (or \(b=0\)). Applying <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that \(b\in \ker(\mu_a)\text{.}\)</p></article><span class="incontext"><a href="section-8.html#commentary-63">in-context</a></span>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.5 (proof of Proposition 2.4.6).</span></h5>
+<p xmlns:svg="http://www.w3.org/2000/svg">For the "if" direction, let \(K=\ker(\phi)\) for some homomorphism \(\phi \colon G\to G'\) for some group \(G'\text{.}\) By  <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a> of <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>, we have a one-to-one correspondence \(G/K\leftrightarrow \phi(G)\text{.}\) The group structure of \(\phi(G)\) (see <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>) induces the group multiplication <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> on \(G/K\text{.}\) For the "only if" direction, suppose \(G/K\) is a group under the operation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a>. Let \(\phi\colon G\to G/K\) be given by \(g\to gK\text{.}\) Then it is easy to check that \(K=\ker(\phi)\text{.}\)</p></article><span class="incontext"><a href="section-8.html#commentary-63">in-context</a></span>
 </body>
 </html>

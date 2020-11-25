@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:37-05:00       *-->
+<!--*       on 2020-11-12T20:20:24-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,33 +14,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.1 (proof of Proposition 3.3.3).</span></h5>
-<ol class="lower-alpha">
-<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.18.</span></h5>
+<p>We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
+\frac{4r\;dr\;d\theta}{(1-r^2)^2}\\
+\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
+\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)\\
+\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
+\right]d\theta\\
+\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
+d\theta\\
+\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.
+\end{align*}
+</div>
+<p data-braille="continuation">As was the case for <a class="xref" data-knowl="./knowl/hyperboliccirclecircumexer.html" title="Checkpoint 3.3.17">Checkpoint 3.3.17</a>, this solution is correct, but we want an expression in terms of the hyperbolic radius \(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\) Again, solve for \(\alpha\) in terms of \(r\text{,}\) then simplify. We get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\left|\frac{z-z_0}{1-z_0^\ast z}\right|^2 =
-\frac{(z-z_0)(z^\ast-z_0^\ast)}{(1-z_0^\ast z)(1-z_0z^\ast)} =
-\frac{|z|^2+|z_0|^2-z_0z^\ast -z_0^\ast z}{1+|z_0|^2-z_0z^\ast
--z_0^\ast z} = 1
+\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).
 \end{equation*}
-</div>(because \(|z|=1\) by assumption). It follows that \(|\alpha z_0|=1\text{.}\)</li>
-<li>Let \(|z_0|\in \D\) and \(t\in \R\) be given and let \(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
-b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-|a|^2-|b|^2 \amp= \frac{1 - |z_0|^2}{1-|z_0|^2}
-=1\\
-\frac{az+b}{b^\ast  z+a^\ast} \amp= \frac{e^{it/2}z-e^{it/2}z_0}{-e^{-it/2}z_0^\ast  z+e^{-it/2}}
-= e^{it}\frac{z-z_0}{1-z_0^\ast z}
-\end{align*}
-</div>Conversely, let \(a,b\in \C\) be given with \(|a|^2-|b|^2=1\) and let \(t=2\arg a,
-z_0=-\frac{b}{a}\text{.}\) The assumption \(|a|^2-|b|^2=1\) implies that \(|a|\gt |b|\text{,}\) so \(|z_0|=|b|/|a|\lt 1\text{,}\) as required. We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\frac{az+b}{b^\ast  z+a^\ast} \amp =
-\frac{az - az_0}{-a^\ast z_0^\ast z + a^\ast}\\
-\amp = \frac{a}{a^\ast}\frac{z-z_0}{1-z_0^\ast z}\\
-\amp  = e^{it}\frac{z-z_0}{1-z_0^\ast z},
-\end{align*}
-</div>as desired.</li>
-</ol></article><span class="incontext"><a href="section-13.html#commentary-116">in-context</a></span>
+</div></article><span class="incontext"><a href="section-13.html#commentary-116">in-context</a></span>
 </body>
 </html>

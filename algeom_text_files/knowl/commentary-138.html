@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:39-05:00       *-->
+<!--*       on 2020-11-12T20:20:26-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,23 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.4.7.3.</span></h5>
-<p>We have</p>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.4.7.2 (proof of Proposition 3.4.19).</span></h5>
+<p>Let \(T\in \S\) so that \(T=s\circ R\circ s^{-1}\) for some \(R\in \Rot(S^2)\text{.}\) We have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\text{Area}(R_{\alpha}) \amp = \int_0^\alpha \int_0^\infty
-\frac{4r\;dr\;d\theta}{(1+r^2)^2}\\
-\amp = 2\int_0^\alpha \left[\frac{du}{u}\right]_1^\infty
-d\theta \;\;(u=1+r^2)\\
-\amp = 2\int_0^\alpha 1 \; d\theta\\
-\amp = 2\alpha.
+d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)\\
+\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}})\\
+\amp = d_{S^2}(s^{-1}p,s^{-1}q)
+\;\;(d_{S^2}\text{ is invariant under rotation }R)\\
+\amp = d_{\extC}(p,q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}}).
 \end{align*}
-</div>
-<p data-braille="continuation">You can see this is the right answer on \(S^2\text{.}\) The area of \(R_\alpha\) is the fraction \(\frac{\alpha}{2\pi}\) of the total area \(4\pi\) of \(S^2\text{,}\) so</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\text{Area}(R_\alpha) = \frac{\alpha}{2\pi}4\pi=2\alpha.
-\end{equation*}
 </div></article><span class="incontext"><a href="elliptic_geometry_section.html#commentary-138">in-context</a></span>
 </body>
 </html>

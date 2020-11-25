@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:36-05:00       *-->
+<!--*       on 2020-11-12T20:20:22-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.5.</span></h5>
-<p>Using the same letters as in the solution to <a class="xref" data-knowl="./knowl/mobiustranscomposeexer.html" title="Checkpoint 3.2.3">Checkpoint 3.2.3</a>, the computation</p>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.3.</span></h5>
+<p>Let \(Tz=\frac{az+b}{cz+d}\) and \(Sz=\frac{ez+f}{gz+h}\text{.}\) Then we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\twotwo{e}{f}{g}{h}\twotwo{a}{b}{c}{c}=\twotwo{r}{s}{t}{u}
-\end{equation*}
+\begin{align*}
+S(Tz)\amp = \frac{e\frac{az+b}{cz+d} +f}{g\frac{az+b}{cz+d}+h}\\
+\amp = \frac{e(az+b)+f(cz+d)}{g(az+b)+h(cz+d)}\\
+\amp = \frac{(ea+fc)z + (eb+fd)}{(ga+hc)z+(gb+hd)}\\
+\amp = \frac{rz+s}{tz+u}
+\end{align*}
 </div>
-<p data-braille="continuation">verifies that \({\mathcal T}\) is a homomorphism. It is clear that the scalar matrices are contained in \(\ker{\mathcal T}\text{.}\) To see that \(\ker{\mathcal T}\) is contained in the scalar matrices, observe the Möbius transformation \(\left[z\to
-\frac{az+b}{cz+d}\right]\) is the identity if and only if \(a=d\neq 0\) and \(b=c=0\text{.}\)</p></article><span class="incontext"><a href="section-12.html#commentary-98">in-context</a></span>
+<p data-braille="continuation">for \(r=ea+fc\text{,}\) \(s=eb+fd\text{,}\) \(t=ga+hc\text{,}\) \(u=gb+hd\text{.}\) The composition is invertible because both of its factors are invertible. It follows from the previous exercise that \(ru-ts\neq 0\text{.}\)</p></article><span class="incontext"><a href="section-12.html#commentary-98">in-context</a></span>
 </body>
 </html>

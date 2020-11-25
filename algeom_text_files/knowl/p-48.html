@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:59-05:00       *-->
+<!--*       on 2020-11-25T13:51:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,26 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<ol class="lower-alpha">
-<li>Starting with the right hand side of <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast\\
-\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
--aa^\ast\\
-\amp = |z|^2 -2\re(za^\ast)
-\end{align*}
-</div>as desired. Applying this to the equation given at the end of the part a, we set \(a=-i\) and complete the square by adding \(|-i|^2=1\) to both sides. Rearranging, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|z-(-i)|^2 = (\sqrt{6})^2.
-\end{equation*}
-</div>This is a circle centered at \(a=-i\text{,}\) with radius \(r=\sqrt{6}\text{.}\)</li>
-<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)\\
-\amp = \im( (ux-vy+r) + i(vx+uy+s)
-\end{align*}
-</div>so the equation \(\im(az+b)=0\) is equivalent to \(vx+uy+s=0\text{.}\) This is the general form for the equation for a line in \(\R^2\text{,}\) as long as \((u,v)\) is not the zero vector (if \(0=u=v\text{,}\) then the solutions to \(s=0\) is either the empty set or the whole plane).</li>
-</ol>
+<p>Using Euler's formula for the first equality below, and then using complex multiplication for the second equality, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+e^{ia}e^{ib} \amp = (\cos a + i\sin a)(\cos b + i\sin b)\notag\\
+\amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).\tag{\(\star\)}
+\end{align}
+</div>
+<p data-braille="continuation">On the other hand, Euler's formula also gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather}
+e^{i(a+b)}= \cos(a+b) + i\sin
+(a+b).\tag{\(\star\star\)}
+\end{gather}
+</div>
+<p data-braille="continuation">Equating real and and imaginary parts of <a class="xref" data-knowl="./knowl/localtag1.html" title="Equation">(\(\star\))</a> and <a class="xref" data-knowl="./knowl/localtag2.html" title="Equation">(\(\star\star\))</a> gives the desired trigonometric identities.</p>
 <span class="incontext"><a href="section-1.html#p-48">in-context</a></span>
 </body>
 </html>

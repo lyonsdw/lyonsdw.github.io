@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:06-05:00       *-->
+<!--*       on 2020-11-25T13:51:25-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We have</p>
+<p>Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential \(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\) in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      \\
-\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
-\frac{du}{u}\right] d\theta \;\;(\text{for }u=1+r^2)\\
-\amp =
-2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta\\
-\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.
-\end{align*}
-</div>
-<p data-braille="continuation">In terms of \(r=2\arctan \alpha\text{,}\) we have \(\alpha=\tan\frac{r}{2}\) and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
-\tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.
-\end{equation*}
+\begin{equation}
+\text{Area}(R)=\iint_R
+dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\tag{3.4.12}
+\end{equation}
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-524">in-context</a></span>
 </body>

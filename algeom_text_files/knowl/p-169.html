@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:42:00-05:00       *-->
+<!--*       on 2020-11-25T13:51:18-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will use the notation \(\ast \colon S\times S\to S\) to denote a binary operation on a set \(S\) that sends the pair \((x,y)\) to \(x\ast y\text{.}\) Recall that a binary operation \(\ast\) is <em class="emphasis">associative</em> means that \(x\ast(y\ast z)= (x\ast y)\ast z\) for all \(x,y,z\in
-S\text{.}\)  <article class="definition definition-like"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group.</span>
-</h6>
-<p>A <dfn class="terminology">group</dfn> is a set \(G\text{,}\) together with a binary operation \(\ast\colon G\times G \to G\) with the following properties.</p>
-<ul class="disc">
-<li>The operation \(\ast\) is associative.</li>
-<li>There exists an element \(e\) in \(G\text{,}\) called an <dfn class="terminology">identity</dfn> element, such that \(e\ast g=g\ast e=g\) for all \(g\in
-G\text{.}\)</li>
-<li>For every \(g\in G\text{,}\) there exists an element \(h\in G\text{,}\) called an <dfn class="terminology">inverse</dfn> element for \(g\text{,}\) such that \(g\ast h=h \ast g=e\text{.}\)</li>
-</ul></article> <article class="proposition theorem-like"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Immediate consequences of the definition of group.</span>
-</h6>
-<p>Let \(G\) be a group. The element \(e\) in the second property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique. Given \(g\in G\text{,}\) the element \(h\) in the third property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique.</p></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-2-hidden.html" title="Proof 2.2.2.1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article> <article class="definition definition-like"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplicative notation.</span>
-</h6>
-<p>Let \(G\) be a group. By <a class="xref" data-knowl="./knowl/groupdefnprop.html" title="Proposition 2.2.2: Immediate consequences of the definition of group">Proposition 2.2.2</a>, we may speak of an identity element as <em class="emphasis">the</em> identity element for \(G\text{.}\)  Given \(g\in G\text{,}\) we may refer to an inverse element for \(g\) as <em class="emphasis">the</em> inverse of \(g\text{,}\) and we write \(g^{-1}\) to denote this element.  In practice, we often omit the operator \(\ast\text{,}\) and simply write \(gh\) to denote \(g\ast h\text{.}\) We adopt the convention that \(g^0\) is the identity element. For \(k\geq
-1\text{,}\) we write \(g^k\) to denote \(\underbrace{g\ast g\ast \cdots \ast g}_{k \text{
-factors}}\) and we write \(g^{-k}\) to denote \(\left(g^{k}\right)^{-1}\text{.}\) This set of notational conventions is called <dfn class="terminology">multiplicative notation</dfn> .</p></article> <article class="definition definition-like"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian group, additive notation.</span>
-</h6>
-<p>In general, group operations are not commutative.<a class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Footnote 2.2.1"><sup> 1 </sup></a>	     A group with a commutative operation is called <dfn class="terminology">Abelian</dfn>.</p> For some Abelian groups, such as the group of integers, the group operation is called <em class="emphasis">addition</em>, and we write \(a+b\) instead of using the multiplicative notation \(a\ast b\text{.}\) We write \(0\) to denote the identity element, we write \(-a\) to denote the inverse of \(a\text{,}\) and we write \(ka\) to denote \(\underbrace{a+ a+ \cdots +a}_{k
-\text{ summands}}\) for positive integers \(k\text{.}\) This set of notational conventions is called <dfn class="terminology">additive notation</dfn> .</article></p>
-<span class="incontext"><a href="groupdefsection.html#p-169">in-context</a></span>
+<p>One of the properties of a group is the existence of an <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">inverse</em> element for every element in the group. This means that for every \(g\) in a group \(G\text{,}\) there is an element \(h\) with the property that \(gh=hg=e\text{,}\) where \(e\) is the identity element of the group. Find inverses for the following list of group elements.</p>
+<ol class="lower-alpha">
+<li>\([4,2,1,3]\) in \(S_4\)</li>
+<li>\(R_{120}\) in \(D_6\) (where \(120\) is in degrees)</li>
+<li>\(\frac{1}{\sqrt{2}}(-1+i)\) in \(S^1\)</li>
+<li>\(7\) in \(\Z\)</li>
+<li>\(7\) in \(\Z_9\)</li>
+<li>\(\displaystyle \left[\begin{array}{cc}1 \amp 2\\ 2 \amp
+1\end{array}\right]\) in \(GL(2,\R)\)</li>
+<li>\(r=a+bi+cj+dk\) in \(U(\Quat)\)</li>
+</ol>
+<span class="incontext"><a href="groupintrosection.html#p-169">in-context</a></span>
 </body>
 </html>

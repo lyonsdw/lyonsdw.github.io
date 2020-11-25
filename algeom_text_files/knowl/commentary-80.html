@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-11T11:41:34-05:00       *-->
+<!--*       on 2020-11-12T20:20:21-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,16 +14,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.6.1.</span></h5>
+<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.6.</span></h5>
 <ol class="lower-alpha">
-<li>Integers \(x,n\) are relatively prime if and only if \(\gcd(x,n)=1\text{,}\) if and only if there exist integers \(s,t\) such that \(sx+tn=1\) (see <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.3.2.4</a>), if and only if \(sx=1 \pmod{n}\text{.}\)</li>
-<li>Multiplication is a well-defined binary operation on \(\Z_n\) (see <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>) that is clearly commutative and associative. The element \(1\in U_n\) is the identity element, and the existence of inverse elements is part of the definition of \(U_n\text{.}\)</li>
-<li>Let \(f\colon \Z_n\to \Z_n\) be a group homomorphism, and let \(a=f(1)\text{.}\) Then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>Apply <a class="xref" data-knowl="./knowl/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</li>
+<li>Apply <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a> (check that the action of \(g\) is constant on projective equivalence classes of vectors).</li>
+<li>Let \(\phi\colon GL(V)\to \Perm(\Proj(V))\) be the action defined by Equation <a class="xref" data-knowl="./knowl/glnprojaction.html" title="Equation 2.5.1">(2.5.1)</a>. It is easy to check that \(K\subseteq \ker(\phi)\text{.}\) Containment in the other direction requires a short linear algebra argument. Suppose \(g\in
+\ker(\phi)\text{.}\) This means that for every \(v\in V\text{,}\) there is a nonzero scalar \(\lambda_v\) such that \(gv=\lambda_v
+v\) (that is, every vector in \(V\) is an eigenvector of the operator \(g\)). If \(\dim(V)=1\text{,}\) we are done. If \(\dim(V)\gt 1\text{,}\) choose independent vectors \(v,w\in V\text{.}\) We have \(\lambda_{v+w}(v+w)=g(v+w)=\lambda_v v+\lambda_w
+w\text{.}\) Because \(v,w\) are independent, it follows that \(\lambda_v=\lambda_w=\lambda_{v+w}\text{.}\) Thus it must be that there is a single \(\lambda\in \F^\ast\) such that \(gv=\lambda v\) for all \(v\in V\text{,}\) that is, \(g\) is an element of \(K\text{.}\)</li>
+<li>Apply the First Isomorphism Theorem (<a class="xref" data-knowl="./knowl/firstisothm.html" title="Corollary 2.4.7: (First Isomorphism Theorem)">Corollary 2.4.7</a>) to \(\phi\colon GL(V)\to \Perm(\Proj(V))\) to obtain<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f(x) = f(\underbrace{1+1+\cdots	  +1}_{x \text{ summands}})=xf(1)=ax
+GL(V)/K \approx \phi(G) \stackrel{\text{inclusion}}{\longrightarrow} \Perm(\Proj(V)).
 \end{equation*}
-</div>for all \(x\text{.}\) The homomorphism \(\mu_a\colon
-\Z_n\to\Z_n\) given by \(\mu_a(x)=ax\) is invertible if and only if \(a\in U_n\) (if \(a\not\in U_n\text{,}\) then \(1\) is not in the image of \(\mu_a\text{,}\) and conversely if \(a\in U_n\text{,}\) then \(\mu_a\) is invertible with inverse \((\mu_a)^{-1}=\mu_{a^{1}}\)). Thus we have a one-to-one correspondence \(U_n\leftrightarrow \Aut(\Z_n)\) given by \(a\leftrightarrow \mu_a\text{.}\) The fact that \((ab)x = a(bx)\) verifies that \(\mu_a\circ \mu_b=\mu_{ab}\text{,}\) so the correspondence \(a\leftrightarrow \mu_a\) is an isomorphism of groups.</li>
-</ol></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-80">in-context</a></span>
+</div>
+</li>
+<li>Given \(\alpha,\beta\) in \(\F^\ast\) and \(T\) in \(GL(V)\text{,}\) the fact that \((\alpha \beta)T=\alpha(\beta
+T)\) verifies that the map \(\F^\ast \to \Perm(GL(V))\) given by \(\alpha\to [T\to \alpha T]\) is a homomorphism. The equivalence relation that corresponds to this action is given by \(T\sim_{\F^\ast} S\) if and only if \(S=\alpha T\) for some \(\alpha\in \F^\ast\text{.}\) Because \(S=\alpha T\) if and only if \(S=(\alpha \Id)T\text{,}\) the equivalence classes that define \(PGL(V)\) in the previous part of this problem are the same as the equivalence classes \(GL(V)/\F^\ast\text{.}\)</li>
+<li>Factor the given map as \(\Proj(\C^2)\to \extC\to S^2\) given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[(\alpha,\beta)] \to \alpha/\beta \to s^{-1}(\alpha/\beta).
+\end{equation*}
+</div>Let \(\mu\) denote the map \([(\alpha,\beta)] \to \alpha/\beta \text{.}\) That \(\mu\) is well-defined follows from the observation that \((k\alpha)/(k\beta)=\alpha/\beta\) for all \(k\in
+\F^\ast\text{.}\) To see that \(\mu\) is bijective, we will exhibit an inverse map. Let \(\nu\colon \extC\to
+\Proj(\C^2)\) be given by \(\gamma \to [(\gamma,1)]\) for \(\gamma \in \C\) and \(\infty \to [(1,0)]\text{.}\) To check that \(\nu\circ\mu=\Id\text{,}\) for \(\beta\neq 0\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,\beta)])=\nu(\alpha/\beta) =
+[(\alpha/\beta,1)]=[(\alpha,\beta)]
+\end{equation*}
+</div>and for \(\beta=0\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,0)])=\nu(\infty) =
+[(1,0)]=[(\alpha,0)].
+\end{equation*}
+</div>Reading the two displayed equations from right to left establishes that \(\mu\circ \nu=\Id\text{.}\) We conclude that \(\nu=\mu^{-1}\text{.}\) Using the fact that stereographic projection \(s\) is bijective, we have \(s^{-1}\circ \mu\) is bijective, as desired.</li>
+</ol></article><span class="incontext"><a href="section-9.html#commentary-80">in-context</a></span>
 </body>
 </html>
