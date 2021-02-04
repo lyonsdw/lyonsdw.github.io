@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-25T13:51:10-05:00       *-->
+<!--*       on 2021-02-04T11:16:05-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -170,7 +170,7 @@ j \amp \leftrightarrow (0,0,1,0)\tag{1.2.2}\\
 k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
 \end{align}
 </div>
-<p data-braille="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) A quaternion of the form \(a=a+0i+0j+0k\leftrightarrow
+<p class="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) A quaternion of the form \(a=a+0i+0j+0k\leftrightarrow
 (a,0,0,0)\) is called a <dfn class="terminology">scalar</dfn> quaternion or a <dfn class="terminology">real</dfn> quaternion. A quaternion of the form \(xi+yj+zk\leftrightarrow
 (0,x,y,z)\) is called a <dfn class="terminology">pure</dfn> quaternion or an <dfn class="terminology">imaginary</dfn> quaternion. For a quaternion \(r=a+bi+cj+dk\text{,}\) we call the real quaternion \(a\) the <dfn class="terminology">scalar part</dfn> or <dfn class="terminology">real part</dfn> of \(r\text{,}\) and we call the quaternion \(xi+yj+zk\) the <dfn class="terminology">vector part</dfn> or the <dfn class="terminology">imaginary part</dfn> of \(r\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span>
@@ -183,7 +183,7 @@ u^\ast\end{array}\right]\text{.}\) Given a quaternion \(r=a+bi+cj+dk\text{,}\) l
 u^\ast\end{array}\right].
 \end{equation*}
 </div>
-<p data-braille="continuation">Conversely, given a matrix \(M\in {\mathcal M}_\Quat\text{,}\) with top left entry \(a+bi\) and top right entry \(c+di\text{,}\) let \(Q(M)\) denote the quaternion \(r=a+bi+cj+dk\text{.}\) It is clear that the mappings \(r\to M(r)\) and \(M\to Q(M)\) are inverses to one another, and establish a one-to-one correspondence \(\Quat\leftrightarrow {\mathcal M}_\Quat\text{.}\)</p>
+<p class="continuation">Conversely, given a matrix \(M\in {\mathcal M}_\Quat\text{,}\) with top left entry \(a+bi\) and top right entry \(c+di\text{,}\) let \(Q(M)\) denote the quaternion \(r=a+bi+cj+dk\text{.}\) It is clear that the mappings \(r\to M(r)\) and \(M\to Q(M)\) are inverses to one another, and establish a one-to-one correspondence \(\Quat\leftrightarrow {\mathcal M}_\Quat\text{.}\)</p>
 <article class="proposition theorem-like" id="quatmatalgprop"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">\({\mathcal M}_\Quat\) is closed under addition and multiplication.</span>
 </h6>
@@ -200,7 +200,7 @@ r+s=Q(M(r)+M(s))\tag{1.2.4}\\
 rs=Q(M(r)M(s))\label{quatmultdef}\tag{1.2.5}
 \end{gather}
 </div>
-<p data-braille="continuation">Because matrix algebra has associative and distributive laws, these carry over to quaternions. Note that quaternion multiplication is not commutative! However, for any real quaternion \(a\text{,}\) we have \(M(a)=a\Id\text{,}\) so \(M(a)\) commutes with all matrices, and therefore \(a\) commutes with all quaternions. To summarize, let \(q,r,s\) be quaternions and let \(a\) be a real quaternion. We have the following.</p>
+<p class="continuation">Because matrix algebra has associative and distributive laws, these carry over to quaternions. Note that quaternion multiplication is not commutative! However, for any real quaternion \(a\text{,}\) we have \(M(a)=a\Id\text{,}\) so \(M(a)\) commutes with all matrices, and therefore \(a\) commutes with all quaternions. To summarize, let \(q,r,s\) be quaternions and let \(a\) be a real quaternion. We have the following.</p>
 <div class="displaymath">
 \begin{align}
 q(rs) \amp = (qr)s\;\; \text{ (associative law of multiplication)}\tag{1.2.6}\\
@@ -224,7 +224,7 @@ ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j\label{quatmultrules}\tag{1.2.10}
 r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.\tag{1.2.11}
 \end{equation}
 </div>
-<p data-braille="continuation">Multiplication looks like this.</p>
+<p class="continuation">Multiplication looks like this.</p>
 <div class="displaymath">
 \begin{align}
 rr'\amp = (a+bi+cj+dk)(a'+b'i+c'j+d'k) \notag\\
@@ -238,7 +238,7 @@ rr'\amp = (a+bi+cj+dk)(a'+b'i+c'j+d'k) \notag\\
 \amp + (ad'+da'+bc'-cb')k\notag
 \end{align}
 </div>
-<p data-braille="continuation">If \(u,v\) are pure quaternions, <a class="xref" data-knowl="./knowl/quatmultcartesian.html" title="Equation 1.2.12">(1.2.12)</a> can be written more compactly in terms of the dot and cross products for vectors in \(\R^3\text{.}\)</p>
+<p class="continuation">If \(u,v\) are pure quaternions, <a class="xref" data-knowl="./knowl/quatmultcartesian.html" title="Equation 1.2.12">(1.2.12)</a> can be written more compactly in terms of the dot and cross products for vectors in \(\R^3\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
@@ -260,7 +260,7 @@ t^2+x^2+y^2+z^2=1\}\text{.}\) This is analogous to the set of norm 1 complex num
 r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 \end{equation}
 </div>
-<p data-braille="continuation">is called the <dfn class="terminology">polar form</dfn> of \(r\text{.}\)</p>
+<p class="continuation">is called the <dfn class="terminology">polar form</dfn> of \(r\text{.}\)</p>
 <article class="exercise exercise-like" id="quatpolarformdetailsexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatpolarformdetailsexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatpolarformdetailsexer"><article class="exercise exercise-like">Fill in the remaining details on polar form for quaternions. What happens if \(r=0\text{?}\) What happens if \(|a|=1\text{?}\)</article></div>
@@ -281,11 +281,11 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 <article class="exercise exercise-like" id="rvrastispureexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-rvrastispureexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rvrastispureexer"><article class="exercise exercise-like"><p id="p-72">Explain how "we conclude" that \(R_r(v)\) is pure when \(r\) is a unit quaternion and \(v\) is a pure quaternion.</p></article></div>
-<p id="p-74">It is easy to see that \(R_r\) is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(k\text{.}\)</p>
+<p id="p-74">It is easy to see that \(R_r\) is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions \(v,w\) and all real scalars \(\alpha\text{.}\)</p>
 <div class="displaymath">
 \begin{gather}
 R_r(v+w) = R_r(v) + R_r(w)\tag{1.2.18}\\
-R_r(kv) = kR_r(v)\tag{1.2.19}
+R_r(\alpha v) = \alpha R_r(v)\tag{1.2.19}
 \end{gather}
 </div>
 <article class="exercise exercise-like" id="quatrotislinearexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatrotislinearexer"><h6 class="heading">
