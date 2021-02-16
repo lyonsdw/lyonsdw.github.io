@@ -67,6 +67,7 @@ Figure~\ref{#2}\\ #7
 % mapping arrow and isomorphism arrow
 \newcommand{\map}{\longrightarrow}
 \newcommand{\isomap}{\hspace{1ex}\widetilde{\map}\hspace{1ex}}
+\newcommand{\extC}{\hat{\C}}
 
 % ivisible text ``spacer''
 \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
@@ -130,14 +131,38 @@ Figure~\ref{#2}\\ #7
 %% }
 %% \hfill\spacer
 
-%%%% commutative diagram for integers mod n distributive law
+%% %%%% no maps labeled, commutative diagram for integers mod n distributive law
+%% \hfill
+%% \xymatrix{
+%%   \Z_n\times \Z_n \ar[r] \ar[d] & \Z_n\ar[d]\\
+%%   \Z_n\times \Z_n \ar[r] & \Z_n 
+%% }
+%% \hfill\spacer
+
+%% %%%% commutative diagram for integers mod n distributive law
+%% \hfill
+%% \xymatrix{
+%%   \Z_n\times \Z_n \ar[r]^{\text{  add}} \ar[d]_{(\text{times }[x]) \times
+%%     (\text{times }[x])} & \Z_n\ar[d]^{\text{times }[x]}\\
+%%   \Z_n\times \Z_n \ar[r]_{\text{  add}} & \Z_n 
+%% }
+%% \hfill\spacer
+
+%%%% lift of complex inversion via stereographic projection
 \hfill
 \xymatrix{
-  \Z_n\times \Z_n \ar[r]^{\text{  add}} \ar[d]_{(\text{times }[x]) \times
-    (\text{times }[x])} & \Z_n\ar[d]^{\text{times }[x]}\\
-  \Z_n\times \Z_n \ar[r]_{\text{  add}} & \Z_n 
+  S^2 \ar[r]^{R_{X,\pi}} \ar[d]_{s} & S^2 \ar[d]^{s}\\
+  \extC \ar[r]_{\text{ inversion }} & \extC
 }
 \hfill\spacer
+
+\hfill
+\xymatrix{
+  (a,b,c) \ar[r]^{R_{X,\pi}} \ar[d]_{s} & (a,-b,-c) \ar[d]^{s}\\
+  \frac{a+bi}{1-c} \ar[r]_{\text{ inversion }} & \frac{a-bi}{1+c}
+}
+\hfill\spacer
+
 
 \end{document}
 
