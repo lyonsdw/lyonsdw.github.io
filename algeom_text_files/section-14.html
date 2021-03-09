@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-02T12:46:01-05:00       *-->
+<!--*       on 2021-03-02T13:36:21-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -244,7 +244,9 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 <span class="type">Exercises</span> <span class="codenumber">3.5.5</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="fundthmprojgeompfexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-517">Use <a class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</p></article><article class="exercise exercise-like" id="chartexer"><h6 class="heading">
+<p id="p-517">Use <a class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</p></article><article class="commentary" id="commentary-134"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.1 (proof of the Fundamental Theorem of Projective Geometry).</span></h5>
+<p id="p-518">Let \(P_0,P_1,P_2,\ldots,P_{n+1}\) be a set of \(n+2\) points in \(\Proj(\F^{n+1})\) such that all subsets of size \(n+1\) are in general position. Let \(v_0,v_1,v_2,\ldots,v_{n+1}\) be vectors in \(\F^{n+1}\) such that \(P_i=[v_i]\text{.}\) By assumption, the points \(P_1,P_2,\ldots,P_{n+1}\) are in general position, so the vectors \(v_1,v_2,\ldots,v_{n+1}\) are independent and form a basis of \(\F^{n+1}\text{.}\) Let \(c_1,c_2,\ldots,c_{n+1}\) be scalars such that \(v_0=\sum_{i=1}^{n+1}c_iv_i\text{.}\) By <a class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, there is a unique projective transformation \(T\) that maps \([e_i]\to
+P_i\text{,}\) \(0\leq i\leq n+1\text{.}\) By the same argument, there is a unique projective transformation \(S\) that maps \([e_i]\to Q_i\text{,}\) \(0\leq i\leq n+1\text{.}\) It follows that the map \(S\circ T^{-1}\) is the unique projective transformation that maps \(P_i\to Q_i\text{,}\) \(0\leq i\leq n+1\text{.}\)</p></article><article class="exercise exercise-like" id="chartexer"><h6 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Coordinate charts and inhomogeneous coordinates.</span>
 </h6>
 <p id="p-519">To facilitate thinking about the interplay between the projective geometry \(\Proj(\F^{n+1})=\F\Proj_n\) and the geometry of \(\F^{n}\) (rather than \(\F^{n+1}\text{!}\)) it is useful to have a careful definition for "taking inhomogeneous coordinates in position \(i\)". Here it is: Let \(U_i\) be the subset of \(\F\Proj_n\) of points whose homogeneous coordinate \(x_i\) is nonzero. Let \(\pi_i\colon U_i\to
@@ -263,7 +265,13 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 \to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]
 \end{equation*}
 </div>
-<p class="continuation">(where the circumflex hat indicates a deleted item from a sequence) is called the \(i\)-th <dfn class="terminology">coordinate chart</dfn> for \(\F\Proj_n\text{.}\) What is the map that results from applying the \(0\)-th coordinate chart \(\C\to \C\Proj_2\) followed by taking homogeneous coordinates in position 1?</p></article><article class="exercise exercise-like" id="mobiusgeomisprojectivegeom"><h6 class="heading">
+<p class="continuation">(where the circumflex hat indicates a deleted item from a sequence) is called the \(i\)-th <dfn class="terminology">coordinate chart</dfn> for \(\F\Proj_n\text{.}\) What is the map that results from applying the \(0\)-th coordinate chart \(\C\to \C\Proj_2\) followed by taking homogeneous coordinates in position 1?</p></article><article class="commentary" id="commentary-135"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.2.</span></h5>
+<p id="p-520">The map \(\pi_1\circ \text{chart}_0\) is inversion, as follows.</p>
+<div class="displaymath">
+\begin{equation*}
+z\stackrel{\text{chart}_0}{\to} [1,z] \stackrel{\pi_1}{\to} 1/z
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="mobiusgeomisprojectivegeom"><h6 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Möbius geometry is projective geometry.</span>
 </h6>
 <p id="p-521">Show that Möbius geometry \((\extC,\M)\) and the projective geometry \((\Proj(\C^2),PGL(2))\) are equivalent via the map \(\mu\colon \Proj(\C^2) \to \extC\) given by</p>
@@ -278,7 +286,29 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 \end{equation}
 </div>
 <p class="continuation">Comment: Observe that \(\mu\) is an extension of \(\pi_1\colon
-U_0\to \C\) given by \(\pi_1([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>).</p></article><article class="exercise exercise-like" id="projcrossratioexer"><h6 class="heading">
+U_0\to \C\) given by \(\pi_1([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>).</p></article><article class="commentary" id="commentary-136"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.3.</span></h5>
+<p id="p-522">It is clear that \(\mu\) is a bijection. Let \(T\in
+\M\) be given by \(Tz=\frac{az+b}{cz+d}\text{.}\) Let \(M\in
+GL(2,C)\) be given by \(M=\twotwo{a}{b}{c}{d}\text{.}\) If \(\beta\neq 0\text{,}\) we have</p>
+<div class="displaymath">
+\begin{align*}
+\mu([M][\alpha,\beta])\amp
+=\mu\left([a\alpha+b\beta,c\alpha+d\beta]\right)\\
+\amp = \frac{a\alpha+b\beta}{c\alpha+d\beta}\\
+\amp =
+\frac{a\frac{\alpha}{\beta}+b}{c\frac{\alpha}{\beta}+d}\\
+\amp = T(\alpha/\beta)\\
+\amp = T(\mu([\alpha,\beta]).
+\end{align*}
+</div>
+<p class="continuation">If \(\beta=0\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\mu([M][\alpha,0])= \mu([a\alpha,c\alpha])=a/c=T(\infty) =
+T(\mu([\alpha,0]).
+\end{equation*}
+</div>
+<p class="continuation">Thus we have \(\mu\circ T\circ \mu{-1} = [M]\in PGL(2,\C)\) and \(\mu^{-1}\circ [M]\circ \mu = T\in \M\text{.}\)</p></article><article class="exercise exercise-like" id="projcrossratioexer"><h6 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Cross ratio.</span>
 </h6>
 <p id="p-523">The projective space \(\Proj_1=\Proj(\F^2)\) is called the <dfn class="terminology">projective line</dfn>). The map \(\mu\colon \Proj_1\to \extF\text{,}\) given by \(\mu([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, but where \(\F\) may be any field, with \(\extF=\F\cup \{\infty\}\)) takes the points</p>
@@ -309,13 +339,23 @@ U_0\to \C\) given by \(\pi_1([x_0,x_1])=\frac{x_0}{x_1}\) (defined in <a class="
 [T] \amp= \twotwo{yb_2}{-ya_2}{-xb_3}{xa_3}
 \end{align*}
 </div>Now just calculate \(\mu(T(a_0,b_0))\text{.}\)</li>
+</ol></article><article class="commentary" id="commentary-137"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.4.</span></h5>
+<ol id="p-524" class="lower-alpha">
+<li id="li-322">Let \(S=(\cdot,\mu(P_1),\mu(P_2),\mu(P_3))\text{.}\) By <a class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, the map \(\mu^{-1}\circ S\circ \mu\) is a projective transformation, and it is easy to see that \(\mu^{-1}\circ S\circ \mu\) takes \(P_1,P_2,P_3\) to \([e_0], [e_2],[e_1]\text{,}\) so by the Fundamental Theorem of Projective Geometry, we must have \(\mu^{-1}\circ S\circ \mu = [T]\text{.}\) Evaluating both sides of this equation at \(P_0\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+\mu(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3)).
+\end{equation*}
+</div>
+</li>
+<li id="li-323">The outline is complete. Just calculate and do the details.</li>
 </ol></article><article class="exercise exercise-like" id="rp2collinearconditionexer"><h6 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Condition for collinearity in \(\R\Proj_2\).</span>
 </h6>
 <p id="p-525">Let \(u=(u_1,u_2,u_3),v=(v_1,v_2,v_3),w=(w_1,w_2,w_3)\) be vectors in \(\R^3\text{,}\) and let \(M\) be the matrix \(M=\left[\begin{array}{ccc}
 u_1 \amp v_1 \amp w_1\\
 u_2 \amp v_2 \amp w_2\\
-u_3 \amp v_3 \amp w_3\\\end{array}\right]\) Show that \([u],[v],[w]\) are collinear in \(\R\Proj_2\) if and only if \(\det M=0\text{.}\)</p></article><figure class="figure figure-like" id="pappus_theorem_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/pappus_theorem.png" style="width: 100%; height: auto;" alt=""></div>
+u_3 \amp v_3 \amp w_3\\\end{array}\right]\) Show that \([u],[v],[w]\) are collinear in \(\R\Proj_2\) if and only if \(\det M=0\text{.}\)</p></article><article class="commentary" id="commentary-138"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.5.</span></h5>
+<p id="p-526">A line in projective space \(\R\Proj_2\) the set of equivalence classes of all vectors in a 2-dimensional subspace of \(\R^3\text{.}\) The three vectors \(u,v,w\) lie in a 2-dimensional subspace together if and only if the three vectors are linearly dependent. This holds if and only if the determinant of the given \(3\times 3\) matrix is zero.</p></article><figure class="figure figure-like" id="pappus_theorem_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/pappus_theorem.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>Pappus' Theorem</figcaption></figure><article class="exercise exercise-like" id="pappusthmexer"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="p-527">The following is a famous theorem of classical geometry.</p>
 <article class="assemblage assemblage-like" id="assemblage-8"><h6 class="heading"><span class="title">Pappus' Theorem.</span></h6>
@@ -327,6 +367,27 @@ A'C\text{,}\) \(R=AB'\cap A'B\text{.}\) Then  points \(P,Q,R\) are collinear. Se
 <li id="li-326">Explain why \(C=[rs,s,1]\) and \(C'=[r,rs,1]\text{.}\)</li>
 <li id="li-327">Explain why \(Q=[rs,rs,1]\text{.}\)</li>
 <li id="li-328">Observe that \(P,Q,R\) all lie on \([1,-1,0]\text{.}\)</li>
+</ul></article><article class="commentary" id="commentary-139"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.6 (proof of Pappus' Theorem).</span></h5>
+<p id="p-530">Following the outline, we have the following.</p>
+<ul class="disc">
+<li id="li-329">We have the following.<div class="displaymath">
+\begin{align*}
+AR\amp = [e_1]\times [e_0] = [1,0,0]\times [1,1,1] = [0,-1,1]\\
+A'R\amp = [e_2]\times [e_0] = [0,1,0]\times [1,1,1] = [1,0,-1]
+\end{align*}
+</div>
+</li>
+<li id="li-330">Since \(B'\) lies on \(AR\text{,}\) we have \(B'\cdot
+AR=0\text{,}\) so \(B=[r,x,x]\) for some \(r,x\text{.}\) It must be that \(x\neq 0\text{,}\) for otherwise, we would have \(B=A\text{.}\) So we can take \(B\) to be \([r,1,1]\text{.}\) Similar reasoning yields \(B' = [1,s,1]\) for some \(s\text{.}\)</li>
+<li id="li-331">Next we have the following.<div class="displaymath">
+\begin{align*}
+AB\amp = [e_1]\times [1,s,1]  = [0,-1,s]\\
+PB'\amp = [e_3]\times [r,1,1] = [-1,r,0]
+\end{align*}
+</div>Since \(C\) lies on \(AB\text{,}\) we must have \(C\cdot
+AB=0\text{,}\) so \(C\) has the form \([x,s,1]\) for some \(x\text{.}\) Since \(C\) lies on \(PB'\text{,}\) we must have \(C\cdot PB'=0\text{,}\) so \(C=[r,1,x]\) for some \(x\text{.}\) Putting these two together, we have \(C=[rs,s,1]\text{.}\) Similar reasoning applies to \(C'\text{,}\) which lies on \(A'B'\) and also on \(BP\) and yields \(C'=[r,rs,1]\text{.}\)</li>
+<li id="li-332">Point \(Q\) lies on \(AC'=[0,-1,rs]\) and also on \(A'C=[1,0,-rs]\text{,}\) so must have the form \([rs,rs,1]\text{.}\)</li>
+<li id="li-333">We have \(X\cdot [1,-1,0]=0\) for \(X=P,Q,R\text{,}\) so we conclude that \(P,Q,R\) are collinear.</li>
 </ul></article><article class="exercise exercise-like" id="quadricsexer"><h6 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Quadrics.</span>
 </h6>
@@ -344,6 +405,10 @@ A'C\text{,}\) \(R=AB'\cap A'B\text{.}\) Then  points \(P,Q,R\) are collinear. Se
 x_0^2+x_1^2 -x_2^2=0.
 \end{equation*}
 </div>What are the figures in \(\R^2\) that result from taking inhomogeneous coordinates (see <a class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>) on \(C\) in positions \(0,1,2\text{?}\)</li>
+</ol></article><article class="commentary" id="commentary-140"><h5 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.7.</span></h5>
+<ol id="p-532" class="lower-alpha">
+<li id="li-336">Given a vector \(x=(x_0,x_1,\ldots,x_{n+1})\in\F^{n+1}\text{,}\) let \(c(x)\) denote the expression on the left side of <a class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a>. We have \(c(kx) = k^2c(x)\) for any scalar \(k\text{,}\) so \(c(x)=0\) if and only if \(c(kx)=0\text{.}\)</li>
+<li id="li-337">Taking inhomogeneous coordinates in position 0, let \(u=x_1/x_0,v=x_2/x_0\text{.}\) The points \((1,u,v)\) satisfy \(1+u^2-v^2=0\text{,}\) which is the equation for a hyperbola in the \(u,v\)-plane. Taking inhomogeneous coordinates in position 1 is also a hyperbola. Taking inhomogeneous coordinates in position 2, with \(u=x_0/x_2,v=x_1/x_2\text{,}\) we have \(u^2+v^2-1=0\text{,}\) which is the equation for the unit circle in the \(u,v\)-plane.</li>
 </ol></article></section></section></div></main>
 </div>
 </body>
