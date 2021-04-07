@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-07T12:12:00-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The vector space \(\R^n\)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+                        #3 \amp #4 \end{array} \right]}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="lin_maps_section.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="lin_maps_section.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+</li>
+<li class="link active">
+<a href="rnvects_section.html" data-scroll="rnvects_section"><span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span></a><ul>
+<li><a href="rnvects_section.html#subsection-1" data-scroll="subsection-1">Vectors and vector operations</a></li>
+<li><a href="rnvects_section.html#subsection-2" data-scroll="subsection-2">Standard basis vectors</a></li>
+<li><a href="rnvects_section.html#subsection-3" data-scroll="subsection-3">Inner product</a></li>
+<li><a href="rnvects_section.html#exercises-1" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="lin_maps_section.html" data-scroll="lin_maps_section"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a><ul>
+<li><a href="lin_maps_section.html#linmapdefsubsect" data-scroll="linmapdefsubsect">Definition of a linear transformation</a></li>
+<li><a href="lin_maps_section.html#subsection-5" data-scroll="subsection-5">Why linear maps are easy to compute</a></li>
+<li><a href="lin_maps_section.html#subsection-6" data-scroll="subsection-6">Operations on linear transformations</a></li>
+<li><a href="lin_maps_section.html#exercises-2" data-scroll="exercises-2">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrices_section.html" data-scroll="matrices_section"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a><ul>
+<li><a href="matrices_section.html#subsection-7" data-scroll="subsection-7">Matrix notation</a></li>
+<li><a href="matrices_section.html#subsection-8" data-scroll="subsection-8">Matrices and vectors</a></li>
+<li><a href="matrices_section.html#subsection-9" data-scroll="subsection-9">Matrices and linear transformations</a></li>
+<li><a href="matrices_section.html#subsection-10" data-scroll="subsection-10">Matrix algebra</a></li>
+<li><a href="matrices_section.html#exercises-3" data-scroll="exercises-3">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="linalgincalc3_section.html" data-scroll="linalgincalc3_section"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a><ul>
+<li><a href="linalgincalc3_section.html#diffdefsubsect" data-scroll="diffdefsubsect">Differentiability</a></li>
+<li><a href="linalgincalc3_section.html#subsection-12" data-scroll="subsection-12">The Chain Rule</a></li>
+<li><a href="linalgincalc3_section.html#exercises-4" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="colophon-1.html" data-scroll="colophon-1"><span class="title">Colophon</span></a></li>
+<li class="link"><a href="biography-1.html" data-scroll="biography-1"><span class="title">About the author</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="rnvects_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span>
+</h2>
+<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Vectors and vector operations</span>
+</h3>
+<p id="p-6">A list \((x_1,x_2,\ldots,x_n)\) of real numbers, separated by commas and delimited by parentheses, denotes an <dfn class="terminology">\(n\)-tuple of real numbers</dfn>. The set of all \(n\)-tuples of real numbers, denoted \(\R^n\), is called <dfn class="terminology">\(n\)-dimensional (real) space</dfn>.</p>
+<div class="displaymath">
+\begin{equation*}
+\R^n=\{(x_1,x_2,\ldots,x_n)\colon x_i\in \R, 1\leq i\leq n\}
+\end{equation*}
+</div>
+<p id="p-7">The operation of <dfn class="terminology">vector addition</dfn>  of two \(n\)-tuples is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+(x_1,x_2,\ldots,x_n) + (y_1,y_2,\ldots,y_n) = (x_1+y_1,x_2+y_2,\ldots,x_n+y_n)
+\end{equation*}
+</div>
+<p class="continuation">and <dfn class="terminology">scalar multiplication</dfn>  of an \(n\)-tuple \((x_1,x_2,\ldots,x_n)\) by a real number (or <dfn class="terminology">scalar</dfn>) \(\alpha\) is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha(x_1,x_2,\ldots,x_n) = (\alpha x_1,\alpha x_2,\ldots,\alpha x_n).
+\end{equation*}
+</div>
+<p class="continuation">With the operations of addition and scalar multiplication, called <dfn class="terminology">vector operations</dfn>, the set \(\R^n\) is a <dfn class="terminology">vector space</dfn> and \(n\)-tuples are <dfn class="terminology">vectors</dfn>.</p>
+<p id="p-8">Vectors are often denoted by lowercase letters in bold Roman font (better for typing), and sometimes italic font decorated with arrows (better for handwriting). Here are examples.</p>
+<div class="displaymath">
+\begin{align*}
+\mathbf{x} \amp= (x_1,x_2,\ldots,x_n)\\
+\vec{x} \amp = (x_1,x_2,\ldots,x_n)
+\end{align*}
+</div>
+<p class="continuation">The vector \((0,0,\ldots,0)\) with all entries equal to 0 is called the <dfn class="terminology">zero vector</dfn> and is denoted \(\mathbf{0}\) or \(\vec{0}\).</p>
+<p id="p-9">A sum of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^r c_i \mathbf{u}_i = c_1\mathbf{u}_1 + c_2\mathbf{u}_2
++ \cdots + c_r\mathbf{u}_r
+\end{equation*}
+</div>
+<p class="continuation">where \(c_1,c_2,\ldots,c_r\) are scalars and \(\mathbf{u}_1,\mathbf{u}_2,\ldots,\mathbf{u}_r\) are vectors is called a <dfn class="terminology">linear combination</dfn> of the vectors \(\mathbf{u}_i\text{.}\)</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Standard basis vectors</span>
+</h3>
+<p id="p-10">The vector \(\mathbf{e}_i=(0,\ldots,0,1,0,\ldots,0)\) with a single 1 in the \(i\)th position and zeroes in all other positions is called the <dfn class="terminology">\(i\)th  standard basis vector</dfn> in \(\R^n\text{.}\) In \(\R^2\text{,}\) the standard basis vectors \(\mathbf{e}_1=(1,0)\) and \(\mathbf{e}_2=(0,1)\) are also called \({\mathbf i}\) and \(\mathbf{j}\text{,}\) respectively. In \(\R^3\text{,}\) the standard basis vectors \(\mathbf{e}_1=(1,0,0)\text{,}\) \(\mathbf{e}_2=(0,1,0)\) and \(\mathbf{e}_3=(0,0,1)\) are also called \({\mathbf
+i}\text{,}\) \(\mathbf{j}\text{,}\) and \(\mathbf{k}\text{,}\) respectively.  Given a vector \(\mathbf{x}=(x_1,\ldots,x_n)\text{,}\) we have the following representation of \(\mathbf{x}\) as a sum of scalar multiples of the standard basis vectors (note that the summation sign indicates vector addition).</p>
+<div class="displaymath">
+\begin{equation}
+\mathbf{x} = \sum_{i=1}^n x_i\mathbf{e}_i\label{sumofcomps}\tag{1.1}
+\end{equation}
+</div>
+<p class="continuation">Equation <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a> says that every vector is a linear combination of standard basis vectors.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Inner product</span>
+</h3>
+<p id="p-11">The <dfn class="terminology">inner product</dfn> or <dfn class="terminology">dot product</dfn> of two vectors \(\mathbf{x}=(x_1,\ldots,x_n)\) and \(\mathbf{y}=(y_1,\ldots,y_n)\) is defined to be the real number</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbf{x}\cdot \mathbf{y} = x_1y_1+x_2y_2 + \cdots +x_ny_n.      
+\end{equation*}
+</div>
+<p class="continuation">In terms of inner product, the \(i\)th coordinate \(x_i\) of the vector \(\mathbf{x}=(x_1,\ldots,x_n)\) is given by</p>
+<div class="displaymath">
+\begin{equation}
+x_i = \mathbf{e}_i\cdot \mathbf{x}      \label{ithentry}\tag{1.2}
+\end{equation}
+</div>
+<p class="continuation">and <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a> becomes</p>
+<div class="displaymath">
+\begin{equation}
+\mathbf{x} = \sum_{i=1}^n \left(\mathbf{e}_i\cdot \mathbf{x}\right)\mathbf{e}_i.      \label{sumofstandprojs}\tag{1.3}
+\end{equation}
+</div></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.4</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="vectnotationexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-12">Write each of the following vectors \(\mathbf{x}\) in the form \((x_1,x_2,\ldots,x_n)\) and \(\sum_i x_i\mathbf{e}_i\text{.}\)  For \(n=2,3\text{,}\) also write \(\mathbf{x}\) using \(\mathbf{i},\mathbf{j},\mathbf{k}\) notation. Example: Given \(\mathbf{x}=3(2,4,-1)\text{,}\) write \(x=(6,12,-3)=6\mathbf{e}_1+12\mathbf{e}_2-3\mathbf{e}_3=6{\mathbf
+i}+12{\mathbf j}-3{\mathbf k}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1">\(\displaystyle \mathbf{x}=(3,2)-(5,-2)\)</li>
+<li id="li-2">\(\displaystyle \mathbf{x}=2(-1,2,1) + 3(2,-2,0)\)</li>
+<li id="li-3">\(\displaystyle \mathbf{x}=2\mathbf{e}_1-3\mathbf{e}_2+4\mathbf{e}_4 -(\mathbf{e}_1-\mathbf{e}_2 +\mathbf{e}_3)\)</li>
+</ol>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol id="p-13" class="lower-alpha">
+<li id="li-4">\(\displaystyle \mathbf{x}=(-2,4)=-2\mathbf{e}_1 + 4\mathbf{e}_2 = -2\mathbf{i} + 4\mathbf{j}\)</li>
+<li id="li-5">\(\displaystyle \mathbf{x}=(4,-2,2)= 4\mathbf{e}_1 - 2\mathbf{e}_2 +
+2\mathbf{e}_3 = 4\mathbf{i} - 2\mathbf{j} +2 \mathbf{k}\)</li>
+<li id="li-6">\(\displaystyle \mathbf{x}=(1, -2, -1, 4) = \mathbf{e}_1 - 2\mathbf{e}_2- \mathbf{e}_3 + 4\mathbf{e}_4\)</li>
+</ol></div></div></article><article class="exercise exercise-like" id="sumofcompsexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-14">Verify equation <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a>.</p></article><article class="exercise exercise-like" id="ithentryexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-16">Verify equation <a class="xref" data-knowl="./knowl/ithentry.html" title="Equation 1.2">(1.2)</a>.</p></article><article class="exercise exercise-like" id="eidotejexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-18">Show that</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbf{e}_i\cdot \mathbf{e}_j = \delta_{ij}
+\end{equation*}
+</div>
+<p class="continuation">where \(\delta_{ij}\), called the <dfn class="terminology">Kronecker delta</dfn>, is given by</p>
+<div class="displaymath">
+\begin{equation}
+\delta_{ij}=\left\{ \begin{array}{cc}
+1 \amp \mbox{if $i=j$}\\
+0 \amp \mbox{if $i\neq j$}
+\end{array}
+\right.\tag{1.4}
+\end{equation}
+</div></article><article class="exercise exercise-like" id="vectnormexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-20">The <dfn class="terminology">length</dfn> or <dfn class="terminology">norm</dfn> of vector \(\mathbf{x}=(x_1,x_2,\ldots,x_n)\text{,}\) denoted \(|\mathbf{x}|\) (or often \(\|\mathbf{x}\|\)), is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+|\mathbf{x}|^2 = \mathbf{x}\cdot \mathbf{x} = x_1^2 + x_2^2 + \cdots
++ x_n^2.
+\end{equation*}
+</div>
+<p class="continuation">A vector \(\mathbf{x}\) is said be be <dfn class="terminology">normalized</dfn> or <dfn class="terminology">have norm 1</dfn> if \(|\mathbf{x}|=1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-7">Show that, for any vector \(\mathbf{x}\) and any \(\alpha&gt;0\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+|\alpha\mathbf{x}|=\alpha|\mathbf{x}|.
+\end{equation*}
+</div>
+</li>
+<li id="li-8">Show that, for any nonzero vector \(\mathbf{x}\text{,}\) the vector \(\frac{\mathbf{x}}{|\mathbf{x}|}\) has norm 1.</li>
+</ol></article></section></section></div></main>
+</div>
+</body>
+</html>

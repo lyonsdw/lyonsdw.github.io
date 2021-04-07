@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-07T12:12:00-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear transformations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+                        #3 \amp #4 \end{array} \right]}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="rnvects_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="matrices_section.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="rnvects_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="matrices_section.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+</li>
+<li class="link">
+<a href="rnvects_section.html" data-scroll="rnvects_section"><span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span></a><ul>
+<li><a href="rnvects_section.html#subsection-1" data-scroll="subsection-1">Vectors and vector operations</a></li>
+<li><a href="rnvects_section.html#subsection-2" data-scroll="subsection-2">Standard basis vectors</a></li>
+<li><a href="rnvects_section.html#subsection-3" data-scroll="subsection-3">Inner product</a></li>
+<li><a href="rnvects_section.html#exercises-1" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="lin_maps_section.html" data-scroll="lin_maps_section"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a><ul>
+<li><a href="lin_maps_section.html#linmapdefsubsect" data-scroll="linmapdefsubsect">Definition of a linear transformation</a></li>
+<li><a href="lin_maps_section.html#subsection-5" data-scroll="subsection-5">Why linear maps are easy to compute</a></li>
+<li><a href="lin_maps_section.html#subsection-6" data-scroll="subsection-6">Operations on linear transformations</a></li>
+<li><a href="lin_maps_section.html#exercises-2" data-scroll="exercises-2">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrices_section.html" data-scroll="matrices_section"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a><ul>
+<li><a href="matrices_section.html#subsection-7" data-scroll="subsection-7">Matrix notation</a></li>
+<li><a href="matrices_section.html#subsection-8" data-scroll="subsection-8">Matrices and vectors</a></li>
+<li><a href="matrices_section.html#subsection-9" data-scroll="subsection-9">Matrices and linear transformations</a></li>
+<li><a href="matrices_section.html#subsection-10" data-scroll="subsection-10">Matrix algebra</a></li>
+<li><a href="matrices_section.html#exercises-3" data-scroll="exercises-3">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="linalgincalc3_section.html" data-scroll="linalgincalc3_section"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a><ul>
+<li><a href="linalgincalc3_section.html#diffdefsubsect" data-scroll="diffdefsubsect">Differentiability</a></li>
+<li><a href="linalgincalc3_section.html#subsection-12" data-scroll="subsection-12">The Chain Rule</a></li>
+<li><a href="linalgincalc3_section.html#exercises-4" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="colophon-1.html" data-scroll="colophon-1"><span class="title">Colophon</span></a></li>
+<li class="link"><a href="biography-1.html" data-scroll="biography-1"><span class="title">About the author</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="lin_maps_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Linear transformations</span>
+</h2>
+<section class="subsection" id="linmapdefsubsect"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Definition of a linear transformation</span>
+</h3>
+<p id="p-22">A function \(L\colon \R^n\to \R^m\) is called a <dfn class="terminology">linear transformation</dfn> (or a <dfn class="terminology">linear mapping</dfn>, or simply a <dfn class="terminology">linear map</dfn>) if</p>
+<ol class="lower-roman">
+<li id="li-11">\(L(\mathbf{x}+\mathbf{y}) = L(\mathbf{x}) +
+L(\mathbf{y})\text{,}\) and</li>
+<li id="li-12">\(\displaystyle L(\alpha\mathbf{x}) = \alpha L(\mathbf{x})\)</li>
+</ol>
+<p class="continuation">for all vectors \(\mathbf{x},\mathbf{y}\) in \(\R^n\) and real numbers \(\alpha\text{.}\) Properties (i) and (ii) are called <dfn class="terminology">linearity</dfn> properties. We say that \(L\) <dfn class="terminology">preserves</dfn> or <dfn class="terminology">respects</dfn> vector operations of addition and scaling. Instead of \(L(\mathbf{x})\text{,}\) it is common practice to omit the parentheses and write \(L\mathbf{x}\) when \(L\) is a linear transformation. For the case when \(m=n\text{,}\) a linear transformation \(L\colon \R^n\to \R^n\) is also called a <dfn class="terminology">linear operator</dfn> on \(\R^n\text{.}\)</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Why linear maps are easy to compute</span>
+</h3>
+<p id="p-23">Given a vector \(\mathbf{x}=(x_1,\ldots,x_n)\) and a linear map \(L\colon \R^n\to\R^m\text{,}\) we have</p>
+<div class="displaymath">
+\begin{align}
+L\mathbf{x} \amp = L\left(\sum_{j=1}^n x_j\mathbf{e}_j\right)\label{linmapsumstd1}\tag{2.1}\\
+\amp = \sum_{j=1}^n L(x_j\mathbf{e}_j)\label{linmapsumstd2}\tag{2.2}\\
+\amp = \sum_{j=1}^n x_j L\mathbf{e}_j\label{linmapsumstd3}\tag{2.3}
+\end{align}
+</div>
+<p class="continuation">A consequence of equation</p>
+<div class="displaymath">
+\begin{equation}
+L\mathbf{x} = \sum_j x_j L\mathbf{e}_j\label{linmapsumstdfact}\tag{2.4}
+\end{equation}
+</div>
+<p class="continuation">is that a linear map is determined by its values on the standard basis vectors \(\mathbf{e}_1, \mathbf{e}_2,\ldots,\mathbf{e}_n\text{.}\) In words, the value of \(L\) on the vector \(\mathbf{x}\) is a linear combination of the vectors \(L\mathbf{e}_j\text{,}\) with the coefficient \(x_j\) for the vector \(L\mathbf{e}_j\text{.}\) Given the vectors \(L\mathbf{e}_j\text{,}\) computing the value of a linear map requires only scalar multiplication and vector addition.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3</span> <span class="title">Operations on linear transformations</span>
+</h3>
+<p id="p-24">Let \(L, L'\colon \R^n\to \R^m\text{,}\) let \(M\colon \R^p\to \R^n\text{,}\) and let \(\alpha\) be a real number. Linear transformations \(\alpha L\colon \R^n\to
+\R^m\text{,}\) \(L+L'\colon \R^n \to \R^m\text{,}\) and \(LM\colon \R^p\to
+\R^m\) are defined as follows.</p>
+<div class="displaymath">
+\begin{align}
+(\alpha L)\mathbf{x} \amp = \alpha
+(L\mathbf{x})\amp \text{(scalar multiplication)}\label{linmapscale}\tag{2.5}\\
+(L+L')\mathbf{x} \amp = L\mathbf{x} +
+L'\mathbf{x}\amp \text{(addition)}\label{linmapadd}\tag{2.6}\\
+(LM)\mathbf{x} \amp =
+L(M\mathbf{x})\amp \text{(composition)}\label{linmapcompose}\tag{2.7}
+\end{align}
+</div>
+<p class="continuation">Note that \(LM\) is the same thing as \(L\circ M\text{,}\) the ordinary composition of functions. It is conventional to omit the composition symbol in the context of linear transformations.</p></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.4</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-25">Let \(L\colon \R^2\to\R^2\) be a linear map such that \(L\mathbf{e}_1=(2,3)\) and \(L\mathbf{e}_2=(-1,-2)\text{.}\)  Find \(L(1,2)\text{.}\)</p>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-26">\(L(1,2)=(0,-1)\)</p></div></div></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-27">Let \(L\colon \R^3\to\R\) be a linear map.  Find \(L{\mathbf k}\) if \(L{\mathbf i}=2\text{,}\) \(L{\mathbf j}=-1\text{,}\) and \(L(1,2,3)=0\text{.}\)</p>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-28">\(L{\mathbf k} = 0\)</p></div></div></article><article class="exercise exercise-like" id="linpropexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-29">Show that the two linearity properties in the definition of linear transformation given in <a href="lin_maps_section.html#linmapdefsubsect" class="internal" title="Subsection 2.1: Definition of a linear transformation">Subsection 2.1</a> are equivalent to the single property</p>
+<div class="displaymath">
+\begin{equation}
+L(a\mathbf{x}+b\mathbf{y}) = a
+L\mathbf{x} + bL\mathbf{y}\label{linearityprop1eqn}\tag{2.8}
+\end{equation}
+</div>
+<p class="continuation">for all vectors \(\mathbf{x},\mathbf{y}\) and scalars \(a,b\text{.}\)</p></article><article class="exercise exercise-like" id="linmapsumstdexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-31">Justify each of the equalities <a class="xref" data-knowl="./knowl/linmapsumstd1.html" title="Equation 2.1">(2.1)</a>, <a class="xref" data-knowl="./knowl/linmapsumstd2.html" title="Equation 2.2">(2.2)</a>, and <a class="xref" data-knowl="./knowl/linmapsumstd3.html" title="Equation 2.3">(2.3)</a>.</p></article><article class="exercise exercise-like" id="dotprodpropexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-33">The dot product has the following properties that look like the properties in the definition of linear map.</p>
+<div class="displaymath">
+\begin{align}
+\mathbf{u}\cdot (\mathbf{v}+\mathbf{w}) \amp = \mathbf{u}\cdot
+\mathbf{v} + \mathbf{u}\cdot \mathbf{w}\label{dotprodlinprop1}\tag{2.9}\\
+\mathbf{u}\cdot (\alpha \mathbf{v})
+\amp = (\alpha \mathbf{u})\cdot \mathbf{v}= \alpha
+(\mathbf{u}\cdot\mathbf{v})\label{dotprodlinprop2}\tag{2.10}
+\end{align}
+</div>
+<p class="continuation">for all \(\mathbf{u},\mathbf{v},\mathbf{w}\) in \(\R^n\) and scalars \(\alpha\text{.}\) Show that these properties hold.</p></article><article class="exercise exercise-like" id="lincompislinexer"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-35">Prove that the composition of two linear maps is a linear map.</p></article></section></section></div></main>
+</div>
+</body>
+</html>

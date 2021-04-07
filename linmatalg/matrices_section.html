@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Matrix algebra</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+                        #3 \amp #4 \end{array} \right]}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="lin_maps_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="linalgincalc3_section.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="lin_maps_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="linalgincalc3_section.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+</li>
+<li class="link">
+<a href="rnvects_section.html" data-scroll="rnvects_section"><span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span></a><ul>
+<li><a href="rnvects_section.html#subsection-1" data-scroll="subsection-1">Vectors and vector operations</a></li>
+<li><a href="rnvects_section.html#subsection-2" data-scroll="subsection-2">Standard basis vectors</a></li>
+<li><a href="rnvects_section.html#subsection-3" data-scroll="subsection-3">Inner product</a></li>
+<li><a href="rnvects_section.html#exercises-1" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="lin_maps_section.html" data-scroll="lin_maps_section"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a><ul>
+<li><a href="lin_maps_section.html#linmapdefsubsect" data-scroll="linmapdefsubsect">Definition of a linear transformation</a></li>
+<li><a href="lin_maps_section.html#subsection-5" data-scroll="subsection-5">Why linear maps are easy to compute</a></li>
+<li><a href="lin_maps_section.html#subsection-6" data-scroll="subsection-6">Operations on linear transformations</a></li>
+<li><a href="lin_maps_section.html#exercises-2" data-scroll="exercises-2">Exercises</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="matrices_section.html" data-scroll="matrices_section"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a><ul>
+<li><a href="matrices_section.html#subsection-7" data-scroll="subsection-7">Matrix notation</a></li>
+<li><a href="matrices_section.html#subsection-8" data-scroll="subsection-8">Matrices and vectors</a></li>
+<li><a href="matrices_section.html#subsection-9" data-scroll="subsection-9">Matrices and linear transformations</a></li>
+<li><a href="matrices_section.html#subsection-10" data-scroll="subsection-10">Matrix algebra</a></li>
+<li><a href="matrices_section.html#exercises-3" data-scroll="exercises-3">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="linalgincalc3_section.html" data-scroll="linalgincalc3_section"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a><ul>
+<li><a href="linalgincalc3_section.html#diffdefsubsect" data-scroll="diffdefsubsect">Differentiability</a></li>
+<li><a href="linalgincalc3_section.html#subsection-12" data-scroll="subsection-12">The Chain Rule</a></li>
+<li><a href="linalgincalc3_section.html#exercises-4" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="colophon-1.html" data-scroll="colophon-1"><span class="title">Colophon</span></a></li>
+<li class="link"><a href="biography-1.html" data-scroll="biography-1"><span class="title">About the author</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="matrices_section"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Matrix algebra</span>
+</h2>
+<section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">Matrix notation</span>
+</h3>
+<p id="p-37">A <dfn class="terminology">real matrix</dfn> is a rectangular array of real numbers, called the <dfn class="terminology">entries</dfn> or <dfn class="terminology">elements</dfn> in the matrix.  Matrix entries are indexed by a pair of integers \(i,j\) that indicate the row and column, respectively, of the entry. Rows are counted from top to bottom and columns are counted from left to right. A matrix with \(m\) rows and \(n\) columns is called an <dfn class="terminology">\(m\) by \(n\) matrix</dfn>, written "\(m\times n\) matrix". We write \([a_{ij}]\) to denote a matrix with entries \(a_{ij}\) (here, we adopt the common practice of omitting the comma between the subscripted indices \(i,j\)).</p>
+<div class="displaymath">
+\begin{equation}
+[a_{ij}] =
+\left[\begin{array}{cccccc}
+a_{11} \amp a_{12} \amp \cdots \amp a_{1j}\amp \cdots \amp a_{1n}\\
+a_{21} \amp a_{22} \amp \cdots \amp a_{2j} \amp \cdots \amp a_{2n}\\
+\vdots \amp \vdots \amp  \amp \vdots \amp \amp \vdots\\
+a_{i1} \amp a_{i2} \amp \cdots \amp a_{ij}\amp\cdots \amp a_{in}\\
+\vdots \amp \vdots \amp  \amp\vdots \amp \amp \vdots\\
+a_{m1} \amp a_{m2} \amp \cdots \amp a_{mj} \amp \cdots\amp a_{mn}
+\end{array}\right]\label{aijdisplayed}\tag{3.1}
+\end{equation}
+</div>
+<p id="p-38">A matrix with only 1 row is called a <dfn class="terminology">row matrix</dfn> and a matrix with only 1 column is a <dfn class="terminology">column matrix</dfn>. Entries of row and column matrices (the plural of "matrix" is "matrices") are usually given with just one index.</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{a row matrix } \left[
+\begin{array}{cccc}
+a_1 \amp a_2 \amp \cdots \amp a_m
+\end{array}\right],     \rule{.5in}{0in}\mbox{ a column matrix }
+\left[ \begin{array}{c}
+b_1\\ b_2\\ \vdots \\ b_n
+\end{array}\right]
+\end{equation*}
+</div>
+<p id="p-39">In the matrix <a class="xref" data-knowl="./knowl/aijdisplayed.html" title="Equation 3.1">(3.1)</a>, it is sometimes useful to write</p>
+<div class="displaymath">
+\begin{equation}
+[a_{ij}]= \left[ \mathbf{c}_1 \; \mathbf{c}_2 \; \cdots \; \mathbf{c}_n\right]\label{colsandrowsmat}\tag{3.2}
+\end{equation}
+</div>
+<p class="continuation">where \(\mathbf{c}_j = \left[\begin{array}{c}a_{1j}\\ a_{2j}\\ \vdots\\
+a_{mj}\end{array}\right]\) is the \(j\)th column of the matrix \([a_{ij}]\text{.}\)</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2</span> <span class="title">Matrices and vectors</span>
+</h3>
+<p id="p-40">In matrix algebra, vectors are identified with column matrices.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+<div class="displaymath">
+\begin{equation*}
+\mathbf{x}= (x_1,x_2,\ldots,x_n) = \left[\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{array}\right]
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">In some texts, \(n\)-tuples denoted by comma-separated lists are considered to be different types of objects from \(n\)-tuples written as column matrices. In these notes, we consider the comma-separated list and the column matrix to simply be two notations for the same thing. Users should make an effort to adapt to whatever convention is in effect.</div></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3</span> <span class="title">Matrices and linear transformations</span>
+</h3>
+<p id="p-41">Next, we establish a one-to-one correspondence between linear transformations \(\R^n\to \R^m\) and \(m\times n\) matrices.</p>
+<p id="p-42">Given a linear transformation \(L\colon \R^n\to \R^m\text{,}\) let \([L]\) denote the \(m\times n\) matrix whose columns are the vectors \(L\mathbf{e}_1,L\mathbf{e}_2,\ldots,L\mathbf{e}_n\text{.}\)</p>
+<div class="displaymath">
+\begin{equation}
+[L]=
+\begin{bmatrix} L\mathbf{e}_1 \amp L\mathbf{e}_2 \amp \cdots \amp L\mathbf{e}_n
+\end{bmatrix}.\label{matentrydef}\tag{3.3}
+\end{equation}
+</div>
+<p class="continuation">Conversely, given an \(m\times n\) matrix \(A\text{,}\) let \(L_A\) denote the linear transformation \(\R^n\to \R^m\) given by</p>
+<div class="displaymath">
+\begin{equation*}
+L_A(x_1,x_2,\ldots,x_n) = \sum_{j=1}^n x_j(\mbox{$j$th column of $A$}).
+\end{equation*}
+</div>
+<p class="continuation">It is clear that</p>
+<div class="displaymath">
+\begin{equation*}
+L_A\mathbf{e}_j = (\mbox{$j$th column of $A$})
+\end{equation*}
+</div>
+<p class="continuation">and therefore, that \([L_A] = A\text{.}\) We conclude that the correspondence \(L\leftrightarrow [L]\) is a one-to-one correspondence between the set of linear transformations \(\R^n\to \R^m\) and the set of \(m\times n\) matrices.</p>
+<div class="displaymath">
+\begin{equation}
+\begin{array}{ccc}
+\{\mbox{linear maps }\R^n\to \R^m\} \amp\longleftrightarrow \amp \{m\times
+n\mbox{ matrices}\}\\
+L \amp\longleftrightarrow \amp [L] 
+\end{array}\label{lintransmatonetoone}\tag{3.4}
+\end{equation}
+</div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4</span> <span class="title">Matrix algebra</span>
+</h3>
+<p id="p-43">Using the one-to-one correspondence \(L\leftrightarrow [L]\text{,}\) we can define the following matrix operations. Let \(A\) be an \(m\times n\) matrix, and let \(\mathbf{x}\) be an \(n\times 1\) column matrix. By <a class="xref" data-knowl="./knowl/lintransmatonetoone.html" title="Equation 3.4">(3.4)</a>, there is a linear transformation \(L\colon \R^n\to \R^m\) such that \([L]=A\text{.}\) We define \(A\mathbf{x}\) to be equal to \(L\mathbf{x}\text{.}\) Given a scalar \(\alpha\text{,}\) we define \(\alpha A\) to be equal to \([\alpha L]\text{.}\) If \(A'\) is another \(m\times n\) matrix with \(A'=[L']\text{,}\) we define \(A+A'\) to be equal to \([L+L']\text{.}\) Finally, if \(B\) is an \(n\times p\) matrix such that \(B=[M]\text{,}\) we define \(AB\) to be equal to \([LM]\text{.}\)</p>
+<p id="p-44">Here is a summary of the operations of matrix algebra.</p>
+<div class="displaymath">
+\begin{align}
+[L]\mathbf{x}\amp=L\mathbf{x}\amp \text{(matrix times a vector)}\label{evalmatmult}\tag{3.5}\\
+\alpha [L] \amp= [\alpha L]\amp \text{(matrix scalar multiplication)}\label{scalematdef}\tag{3.6}\\
+[L]+[L'] \amp= [ L+L'] \amp \text{(matrix addition)}\label{addmatdef}\tag{3.7}\\
+[L][M] \amp= [LM]\amp \text{(matrix multiplication)}\label{multmatdef}\tag{3.8}
+\end{align}
+</div>
+<p id="p-45">Here are formulas for matrix operations in terms of matrix entries.</p>
+<div class="displaymath">
+\begin{align}
+\mbox{$i,j$ entry of $\alpha A$} \amp= \alpha \mbox{($i,j$ entry of $A$)} \label{scalemateqn}\tag{3.9}\\
+\mbox{$i,j$ entry of $A+A'$} \amp=\mbox{($i,j$ entry of $A$)} + \mbox{($i,j$ entry of $A'$)}\label{addmateqn}\tag{3.10}\\
+\mbox{$i,j$ entry of $AB$} \amp=  \mbox{($i$th row of $A$)} \cdot \mbox{($j$th column of $B$)}\label{multmateqn}\tag{3.11}
+\end{align}
+</div>
+<p class="continuation">In most texts, the above formulas are given as definitions.  In these notes, these formulas are consequences of the definitions <a class="xref" data-knowl="./knowl/scalematdef.html" title="Equation 3.6">(3.6)</a>, <a class="xref" data-knowl="./knowl/addmatdef.html" title="Equation 3.7">(3.7)</a>, and <a class="xref" data-knowl="./knowl/multmatdef.html" title="Equation 3.8">(3.8)</a>.  We make this choice to emphasize that matrix algebra operations are natural because they come from the corresponding natural operations on linear maps.  There is a fourth basic operation, called <dfn class="terminology">transposition</dfn> , whose corresponding operation on linear maps is less easy to describe.  We define the <dfn class="terminology">transpose</dfn> of matrix \(A\text{,}\) denoted \(A^T\), by</p>
+<div class="displaymath">
+\begin{equation}
+\mbox{$i,j$ entry of $A^T$}  = \mbox{$j,i$ entry of $A$}.\label{transposdefn}\tag{3.12}
+\end{equation}
+</div>
+<p class="continuation">Here is how the inner product can be written in terms matrix algebra using transposition.</p>
+<div class="displaymath">
+\begin{equation}
+\mathbf{x}\cdot \mathbf{y}=\mathbf{x}^T\mathbf{y}\\\label{dotprodmatversion}\tag{3.13}
+\end{equation}
+</div></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.5</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-46">Perform the matrix multiplications below.</p>
+<ol class="lower-alpha">
+<li id="li-13"><div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{cc}
+1 \amp -2\\
+-1 \amp 3
+\end{array}\right]
+\left[\begin{array}{cc}
+0 \amp 2\\
+1 \amp -1
+\end{array}\right]
+\end{equation*}
+</div></li>
+<li id="li-14"><div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{ccc}
+1 \amp -2 \amp 0\\
+-1 \amp 3 \amp 1
+\end{array}\right]
+\left[\begin{array}{cc}
+0 \amp 2\\
+1 \amp -1\\
+2 \amp 0
+\end{array}\right]
+\end{equation*}
+</div></li>
+</ol>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><ol id="p-47" class="lower-alpha">
+<li id="li-15">\(\displaystyle \left[\begin{array}{cc}
+-2 \amp
+4\\
+3 \amp
+-5
+\end{array}\right]\)</li>
+<li id="li-16">\(\displaystyle \left[\begin{array}{cc}
+-2 \amp
+4\\
+5 \amp
+-5
+\end{array}\right]\)</li>
+</ol></div></div></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-48">Let \(L\colon \R^3\to\R^2\) be a linear map with \(L\mathbf{e}_1=(1,2)\text{,}\) \(L\mathbf{e}_2=(-1,1)\text{,}\) and \(L\mathbf{e}_3=(0,1)\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-17">Write the matrix for L.</li>
+<li id="li-19">Evaluate \(L(2,1,3)\text{.}\)</li>
+<li id="li-20">Evaluate \(L(0,1,1)\text{.}\)</li>
+</ol>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><ol id="p-49" class="lower-alpha">
+<li id="li-21">\(\displaystyle \left[\begin{array}{ccc}
+1 \amp  -1 \amp
+0\\
+2 \amp  1  \amp
+1
+\end{array}\right]\)</li>
+<li id="li-22">\(\displaystyle (1,8)\)</li>
+<li id="li-23">\(\displaystyle (-1,2)\)</li>
+</ol></div></div></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-50">Let \(L\colon\R^2\to\R^3\) be a linear map with the following matrix.</p>
+<div class="displaymath">
+\begin{equation*}
+\left[\begin{array}{cc}
+1 \amp 2\\
+3 \amp -1\\
+0 \amp 1
+\end{array}\right]
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-24">Evaluate \(L(1,2)\text{.}\)</li>
+<li id="li-25">Evaluate \(L(-2,1)\text{.}\)</li>
+</ol>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><ol id="p-51" class="lower-alpha">
+<li id="li-26">\(\displaystyle (5,1,2)\)</li>
+<li id="li-27">\(\displaystyle (0,-7,1)\)</li>
+</ol></div></div></article><article class="exercise exercise-like" id="matmultexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-52">Equation <a class="xref" data-knowl="./knowl/multmateqn.html" title="Equation 3.11">(3.11)</a> is a fundamental formula for matrix calculations. This exercise outlines a proof. Let \(L,M\) be linear transformations</p>
+<div class="displaymath">
+\begin{equation*}
+\R^p \stackrel{M}{\to} \R^n \stackrel{L}{\to} \R^m.
+\end{equation*}
+</div>
+<p class="continuation">Let \(a_{ij}\) be the element in the \(i\)th row and \(j\)th column of \([L]\text{,}\) and let \(\mathbf{r}_i,\mathbf{c}_j\) denote the \(i\)th row and \(j\)th column of \([L]\text{,}\) respectively.</p>
+<div class="displaymath">
+\begin{align*}
+\mathbf{r}_i \amp = (a_{i1},a_{i2},\ldots,a_{in})\\
+\mathbf{c}_j \amp = (a_{1j},a_{2j},\ldots, a_{mj})
+\end{align*}
+</div>
+<p class="continuation">Justify each step in the derivation below.</p>
+<ol class="lower-alpha">
+<li id="li-28">For \(\mathbf{x}\) in \(\R^n\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
+= 
+\begin{bmatrix} 
+\mathbf{r}_1 \cdot \mathbf{x}\\
+\mathbf{r}_2 \cdot \mathbf{x}\\
+\vdots\\
+\mathbf{r}_m \cdot \mathbf{x}\\
+\end{bmatrix}.
+\end{equation*}
+</div>
+</li>
+<li id="li-29">Now let \(\mathbf{x}=M(\mbox{$j$th standard basis vector})\) so that (say why!)<div class="displaymath">
+\begin{equation*}
+\mathbf{x}= (\mbox{$j$th column of $[M]$}).
+\end{equation*}
+</div>We have<div class="displaymath">
+\begin{align*}
+(\mbox{$j$th column of $[LM]$}) \amp= LM(\mbox{$j$th standard basis vector})\\
+\amp= L(M((\mbox{$j$th standard basis vector})))
+\end{align*}
+</div>
+</li>
+<li id="li-30">From this we conclude (say how!) that the \(i,j\) entry in \([LM]\) is<div class="displaymath">
+\begin{equation*}
+(\mbox{$i$th row of } [L]) \cdot (\mbox{$j$th col. of } [M]).
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-54">Let \(L\colon \R^2\to \R\) and \(K\colon \R\to\R^3\) be linear maps such that \(L{\mathbf i}=1\text{,}\) \(L{\mathbf j}=-2\) and \(K(1)=(2,1,3)\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-34">Write the matrices for \(L\) and \(K\text{.}\)</li>
+<li id="li-35">Find the matrix for \(KL\text{.}\)</li>
+<li id="li-36">Find \(KL(2,-1)\text{.}\)</li>
+</ol>
+<p class="continuation"><a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><ol id="p-55" class="lower-alpha">
+<li id="li-37">\(L=
+\left[\begin{array}{cc}
+1 \amp -2
+\end{array}\right]\text{,}\) \(K =
+\left[\begin{array}{c}
+2\\ 1\\ 3
+\end{array}\right]\)</li>
+<li id="li-38">\(\displaystyle \left[\begin{array}{cc}
+2 \amp -4\\
+1 \amp -2\\
+3 \amp -6
+\end{array}\right]\)</li>
+<li id="li-39">\(\displaystyle (8,4,12)\)</li>
+</ol></div></div></p></article></section></section></div></main>
+</div>
+</body>
+</html>
