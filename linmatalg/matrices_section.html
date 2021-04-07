@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*       on 2021-04-07T15:52:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -161,7 +161,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">Matrix notation</span>
 </h3>
-<p id="p-37">A <dfn class="terminology">real matrix</dfn> is a rectangular array of real numbers, called the <dfn class="terminology">entries</dfn> or <dfn class="terminology">elements</dfn> in the matrix.  Matrix entries are indexed by a pair of integers \(i,j\) that indicate the row and column, respectively, of the entry. Rows are counted from top to bottom and columns are counted from left to right. A matrix with \(m\) rows and \(n\) columns is called an <dfn class="terminology">\(m\) by \(n\) matrix</dfn>, written "\(m\times n\) matrix". We write \([a_{ij}]\) to denote a matrix with entries \(a_{ij}\) (here, we adopt the common practice of omitting the comma between the subscripted indices \(i,j\)).</p>
+<p id="p-38">A <dfn class="terminology">real matrix</dfn> is a rectangular array of real numbers, called the <dfn class="terminology">entries</dfn> or <dfn class="terminology">elements</dfn> in the matrix.  Matrix entries are indexed by a pair of integers \(i,j\) that indicate the row and column, respectively, of the entry. Rows are counted from top to bottom and columns are counted from left to right. A matrix with \(m\) rows and \(n\) columns is called an <dfn class="terminology">\(m\) by \(n\) matrix</dfn>, written "\(m\times n\) matrix". We write \([a_{ij}]\) to denote a matrix with entries \(a_{ij}\) (here, we adopt the common practice of omitting the comma between the subscripted indices \(i,j\)).</p>
 <div class="displaymath">
 \begin{equation}
 [a_{ij}] =
@@ -175,7 +175,7 @@ a_{m1} \amp a_{m2} \amp \cdots \amp a_{mj} \amp \cdots\amp a_{mn}
 \end{array}\right]\label{aijdisplayed}\tag{3.1}
 \end{equation}
 </div>
-<p id="p-38">A matrix with only 1 row is called a <dfn class="terminology">row matrix</dfn> and a matrix with only 1 column is a <dfn class="terminology">column matrix</dfn>. Entries of row and column matrices (the plural of "matrix" is "matrices") are usually given with just one index.</p>
+<p id="p-39">A matrix with only 1 row is called a <dfn class="terminology">row matrix</dfn> and a matrix with only 1 column is a <dfn class="terminology">column matrix</dfn>. Entries of row and column matrices (the plural of "matrix" is "matrices") are usually given with just one index.</p>
 <div class="displaymath">
 \begin{equation*}
 \mbox{a row matrix } \left[
@@ -187,7 +187,7 @@ b_1\\ b_2\\ \vdots \\ b_n
 \end{array}\right]
 \end{equation*}
 </div>
-<p id="p-39">In the matrix <a class="xref" data-knowl="./knowl/aijdisplayed.html" title="Equation 3.1">(3.1)</a>, it is sometimes useful to write</p>
+<p id="p-40">In the matrix <a class="xref" data-knowl="./knowl/aijdisplayed.html" title="Equation 3.1">(3.1)</a>, it is sometimes useful to write</p>
 <div class="displaymath">
 \begin{equation}
 [a_{ij}]= \left[ \mathbf{c}_1 \; \mathbf{c}_2 \; \cdots \; \mathbf{c}_n\right]\label{colsandrowsmat}\tag{3.2}
@@ -197,7 +197,7 @@ b_1\\ b_2\\ \vdots \\ b_n
 a_{mj}\end{array}\right]\) is the \(j\)th column of the matrix \([a_{ij}]\text{.}\)</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2</span> <span class="title">Matrices and vectors</span>
 </h3>
-<p id="p-40">In matrix algebra, vectors are identified with column matrices.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
+<p id="p-41">In matrix algebra, vectors are identified with column matrices.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
 <div class="displaymath">
 \begin{equation*}
 \mathbf{x}= (x_1,x_2,\ldots,x_n) = \left[\begin{array}{c}
@@ -211,8 +211,8 @@ x_n
 <div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">In some texts, \(n\)-tuples denoted by comma-separated lists are considered to be different types of objects from \(n\)-tuples written as column matrices. In these notes, we consider the comma-separated list and the column matrix to simply be two notations for the same thing. Users should make an effort to adapt to whatever convention is in effect.</div></div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3</span> <span class="title">Matrices and linear transformations</span>
 </h3>
-<p id="p-41">Next, we establish a one-to-one correspondence between linear transformations \(\R^n\to \R^m\) and \(m\times n\) matrices.</p>
-<p id="p-42">Given a linear transformation \(L\colon \R^n\to \R^m\text{,}\) let \([L]\) denote the \(m\times n\) matrix whose columns are the vectors \(L\mathbf{e}_1,L\mathbf{e}_2,\ldots,L\mathbf{e}_n\text{.}\)</p>
+<p id="p-42">Next, we establish a one-to-one correspondence between linear transformations \(\R^n\to \R^m\) and \(m\times n\) matrices.</p>
+<p id="p-43">Given a linear transformation \(L\colon \R^n\to \R^m\text{,}\) let \([L]\) denote the \(m\times n\) matrix whose columns are the vectors \(L\mathbf{e}_1,L\mathbf{e}_2,\ldots,L\mathbf{e}_n\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 [L]=
@@ -244,8 +244,8 @@ L \amp\longleftrightarrow \amp [L]
 </div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4</span> <span class="title">Matrix algebra</span>
 </h3>
-<p id="p-43">Using the one-to-one correspondence \(L\leftrightarrow [L]\text{,}\) we can define the following matrix operations. Let \(A\) be an \(m\times n\) matrix, and let \(\mathbf{x}\) be an \(n\times 1\) column matrix. By <a class="xref" data-knowl="./knowl/lintransmatonetoone.html" title="Equation 3.4">(3.4)</a>, there is a linear transformation \(L\colon \R^n\to \R^m\) such that \([L]=A\text{.}\) We define \(A\mathbf{x}\) to be equal to \(L\mathbf{x}\text{.}\) Given a scalar \(\alpha\text{,}\) we define \(\alpha A\) to be equal to \([\alpha L]\text{.}\) If \(A'\) is another \(m\times n\) matrix with \(A'=[L']\text{,}\) we define \(A+A'\) to be equal to \([L+L']\text{.}\) Finally, if \(B\) is an \(n\times p\) matrix such that \(B=[M]\text{,}\) we define \(AB\) to be equal to \([LM]\text{.}\)</p>
-<p id="p-44">Here is a summary of the operations of matrix algebra.</p>
+<p id="p-44">Using the one-to-one correspondence \(L\leftrightarrow [L]\text{,}\) we can define the following matrix operations. Let \(A\) be an \(m\times n\) matrix, and let \(\mathbf{x}\) be an \(n\times 1\) column matrix. By <a class="xref" data-knowl="./knowl/lintransmatonetoone.html" title="Equation 3.4">(3.4)</a>, there is a linear transformation \(L\colon \R^n\to \R^m\) such that \([L]=A\text{.}\) We define \(A\mathbf{x}\) to be equal to \(L\mathbf{x}\text{.}\) Given a scalar \(\alpha\text{,}\) we define \(\alpha A\) to be equal to \([\alpha L]\text{.}\) If \(A'\) is another \(m\times n\) matrix with \(A'=[L']\text{,}\) we define \(A+A'\) to be equal to \([L+L']\text{.}\) Finally, if \(B\) is an \(n\times p\) matrix such that \(B=[M]\text{,}\) we define \(AB\) to be equal to \([LM]\text{.}\)</p>
+<p id="p-45">Here is a summary of the operations of matrix algebra.</p>
 <div class="displaymath">
 \begin{align}
 [L]\mathbf{x}\amp=L\mathbf{x}\amp \text{(matrix times a vector)}\label{evalmatmult}\tag{3.5}\\
@@ -254,7 +254,7 @@ L \amp\longleftrightarrow \amp [L]
 [L][M] \amp= [LM]\amp \text{(matrix multiplication)}\label{multmatdef}\tag{3.8}
 \end{align}
 </div>
-<p id="p-45">Here are formulas for matrix operations in terms of matrix entries.</p>
+<p id="p-46">Here are formulas for matrix operations in terms of matrix entries.</p>
 <div class="displaymath">
 \begin{align}
 \mbox{$i,j$ entry of $\alpha A$} \amp= \alpha \mbox{($i,j$ entry of $A$)} \label{scalemateqn}\tag{3.9}\\
@@ -277,9 +277,9 @@ L \amp\longleftrightarrow \amp [L]
 <span class="type">Exercises</span> <span class="codenumber">3.5</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-46">Perform the matrix multiplications below.</p>
+<p id="p-47">Perform the matrix multiplications below.</p>
 <ol class="lower-alpha">
-<li id="li-13"><div class="displaymath">
+<li id="li-15"><div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{cc}
 1 \amp -2\\
@@ -291,7 +291,7 @@ L \amp\longleftrightarrow \amp [L]
 \end{array}\right]
 \end{equation*}
 </div></li>
-<li id="li-14"><div class="displaymath">
+<li id="li-16"><div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{ccc}
 1 \amp -2 \amp 0\\
@@ -305,37 +305,37 @@ L \amp\longleftrightarrow \amp [L]
 \end{equation*}
 </div></li>
 </ol>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><ol id="p-47" class="lower-alpha">
-<li id="li-15">\(\displaystyle \left[\begin{array}{cc}
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><ol id="p-48" class="lower-alpha">
+<li id="li-17">\(\displaystyle \left[\begin{array}{cc}
 -2 \amp
 4\\
 3 \amp
 -5
 \end{array}\right]\)</li>
-<li id="li-16">\(\displaystyle \left[\begin{array}{cc}
+<li id="li-18">\(\displaystyle \left[\begin{array}{cc}
 -2 \amp
 4\\
 5 \amp
 -5
 \end{array}\right]\)</li>
 </ol></div></div></article><article class="exercise exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-48">Let \(L\colon \R^3\to\R^2\) be a linear map with \(L\mathbf{e}_1=(1,2)\text{,}\) \(L\mathbf{e}_2=(-1,1)\text{,}\) and \(L\mathbf{e}_3=(0,1)\text{.}\)</p>
+<p id="p-49">Let \(L\colon \R^3\to\R^2\) be a linear map with \(L\mathbf{e}_1=(1,2)\text{,}\) \(L\mathbf{e}_2=(-1,1)\text{,}\) and \(L\mathbf{e}_3=(0,1)\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-17">Write the matrix for L.</li>
-<li id="li-19">Evaluate \(L(2,1,3)\text{.}\)</li>
-<li id="li-20">Evaluate \(L(0,1,1)\text{.}\)</li>
+<li id="li-19">Write the matrix for L.</li>
+<li id="li-21">Evaluate \(L(2,1,3)\text{.}\)</li>
+<li id="li-22">Evaluate \(L(0,1,1)\text{.}\)</li>
 </ol>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><ol id="p-49" class="lower-alpha">
-<li id="li-21">\(\displaystyle \left[\begin{array}{ccc}
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><ol id="p-50" class="lower-alpha">
+<li id="li-23">\(\displaystyle \left[\begin{array}{ccc}
 1 \amp  -1 \amp
 0\\
 2 \amp  1  \amp
 1
 \end{array}\right]\)</li>
-<li id="li-22">\(\displaystyle (1,8)\)</li>
-<li id="li-23">\(\displaystyle (-1,2)\)</li>
+<li id="li-24">\(\displaystyle (1,8)\)</li>
+<li id="li-25">\(\displaystyle (-1,2)\)</li>
 </ol></div></div></article><article class="exercise exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-50">Let \(L\colon\R^2\to\R^3\) be a linear map with the following matrix.</p>
+<p id="p-51">Let \(L\colon\R^2\to\R^3\) be a linear map with the following matrix.</p>
 <div class="displaymath">
 \begin{equation*}
 \left[\begin{array}{cc}
@@ -346,14 +346,14 @@ L \amp\longleftrightarrow \amp [L]
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-24">Evaluate \(L(1,2)\text{.}\)</li>
-<li id="li-25">Evaluate \(L(-2,1)\text{.}\)</li>
+<li id="li-26">Evaluate \(L(1,2)\text{.}\)</li>
+<li id="li-27">Evaluate \(L(-2,1)\text{.}\)</li>
 </ol>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><ol id="p-51" class="lower-alpha">
-<li id="li-26">\(\displaystyle (5,1,2)\)</li>
-<li id="li-27">\(\displaystyle (0,-7,1)\)</li>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><ol id="p-52" class="lower-alpha">
+<li id="li-28">\(\displaystyle (5,1,2)\)</li>
+<li id="li-29">\(\displaystyle (0,-7,1)\)</li>
 </ol></div></div></article><article class="exercise exercise-like" id="matmultexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-52">Equation <a class="xref" data-knowl="./knowl/multmateqn.html" title="Equation 3.11">(3.11)</a> is a fundamental formula for matrix calculations. This exercise outlines a proof. Let \(L,M\) be linear transformations</p>
+<p id="p-53">Equation <a class="xref" data-knowl="./knowl/multmateqn.html" title="Equation 3.11">(3.11)</a> is a fundamental formula for matrix calculations. This exercise outlines a proof. Let \(L,M\) be linear transformations</p>
 <div class="displaymath">
 \begin{equation*}
 \R^p \stackrel{M}{\to} \R^n \stackrel{L}{\to} \R^m.
@@ -368,7 +368,7 @@ L \amp\longleftrightarrow \amp [L]
 </div>
 <p class="continuation">Justify each step in the derivation below.</p>
 <ol class="lower-alpha">
-<li id="li-28">For \(\mathbf{x}\) in \(\R^n\text{,}\) we have<div class="displaymath">
+<li id="li-30">For \(\mathbf{x}\) in \(\R^n\text{,}\) we have<div class="displaymath">
 \begin{equation*}
 L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 = 
@@ -381,7 +381,7 @@ L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 \end{equation*}
 </div>
 </li>
-<li id="li-29">Now let \(\mathbf{x}=M(\mbox{$j$th standard basis vector})\) so that (say why!)<div class="displaymath">
+<li id="li-31">Now let \(\mathbf{x}=M(\mbox{$j$th standard basis vector})\) so that (say why!)<div class="displaymath">
 \begin{equation*}
 \mathbf{x}= (\mbox{$j$th column of $[M]$}).
 \end{equation*}
@@ -392,33 +392,33 @@ L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 \end{align*}
 </div>
 </li>
-<li id="li-30">From this we conclude (say how!) that the \(i,j\) entry in \([LM]\) is<div class="displaymath">
+<li id="li-32">From this we conclude (say how!) that the \(i,j\) entry in \([LM]\) is<div class="displaymath">
 \begin{equation*}
 (\mbox{$i$th row of } [L]) \cdot (\mbox{$j$th col. of } [M]).
 \end{equation*}
 </div>
 </li>
 </ol></article><article class="exercise exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-54">Let \(L\colon \R^2\to \R\) and \(K\colon \R\to\R^3\) be linear maps such that \(L{\mathbf i}=1\text{,}\) \(L{\mathbf j}=-2\) and \(K(1)=(2,1,3)\text{.}\)</p>
+<p id="p-55">Let \(L\colon \R^2\to \R\) and \(K\colon \R\to\R^3\) be linear maps such that \(L{\mathbf i}=1\text{,}\) \(L{\mathbf j}=-2\) and \(K(1)=(2,1,3)\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-34">Write the matrices for \(L\) and \(K\text{.}\)</li>
-<li id="li-35">Find the matrix for \(KL\text{.}\)</li>
-<li id="li-36">Find \(KL(2,-1)\text{.}\)</li>
+<li id="li-36">Write the matrices for \(L\) and \(K\text{.}\)</li>
+<li id="li-37">Find the matrix for \(KL\text{.}\)</li>
+<li id="li-38">Find \(KL(2,-1)\text{.}\)</li>
 </ol>
-<p class="continuation"><a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><ol id="p-55" class="lower-alpha">
-<li id="li-37">\(L=
+<p class="continuation"><a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><ol id="p-56" class="lower-alpha">
+<li id="li-39">\(L=
 \left[\begin{array}{cc}
 1 \amp -2
 \end{array}\right]\text{,}\) \(K =
 \left[\begin{array}{c}
 2\\ 1\\ 3
 \end{array}\right]\)</li>
-<li id="li-38">\(\displaystyle \left[\begin{array}{cc}
+<li id="li-40">\(\displaystyle \left[\begin{array}{cc}
 2 \amp -4\\
 1 \amp -2\\
 3 \amp -6
 \end{array}\right]\)</li>
-<li id="li-39">\(\displaystyle (8,4,12)\)</li>
+<li id="li-41">\(\displaystyle (8,4,12)\)</li>
 </ol></div></div></p></article></section></section></div></main>
 </div>
 </body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*       on 2021-04-07T15:52:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Verify equation <a class="xref" data-knowl="./knowl/ithentry.html" title="Equation 1.2">(1.2)</a>.</p>
+<p>We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\sum_{i=1}^n x_i\mathbf{e}_i \amp = x_1\mathbf{e}_1
++x_2\mathbf{e}_2 + \cdots + x_n\mathbf{e}_n \\
+\amp =x_1(1,0,0,\ldots,0) + x_2(0,1,0,\ldots,0) + \cdots x_n
+(0,0,\ldots,0,1) \amp \text{(defn. of standard basis vects.)}\\
+\amp =(x_1,0,0,\ldots,0) + (0,x_2,0,\ldots,0) + \cdots 
+(0,0,\ldots,0,x_n) \amp \text{(scalar mult.)}\\
+\amp = (x_1, x_2, \ldots , x_n)\amp \text{(vector addition)}\\
+\amp = \mathbf{x}.
+\end{align*}
+</div>
 <span class="incontext"><a href="rnvects_section.html#p-16">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*       on 2021-04-07T15:52:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,36 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Using the one-to-one correspondence \(L\leftrightarrow [L]\text{,}\) we can define the following matrix operations. Let \(A\) be an \(m\times n\) matrix, and let \(\mathbf{x}\) be an \(n\times 1\) column matrix. By <a class="xref" data-knowl="./knowl/lintransmatonetoone.html" title="Equation 3.4">(3.4)</a>, there is a linear transformation \(L\colon \R^n\to \R^m\) such that \([L]=A\text{.}\) We define \(A\mathbf{x}\) to be equal to \(L\mathbf{x}\text{.}\) Given a scalar \(\alpha\text{,}\) we define \(\alpha A\) to be equal to \([\alpha L]\text{.}\) If \(A'\) is another \(m\times n\) matrix with \(A'=[L']\text{,}\) we define \(A+A'\) to be equal to \([L+L']\text{.}\) Finally, if \(B\) is an \(n\times p\) matrix such that \(B=[M]\text{,}\) we define \(AB\) to be equal to \([LM]\text{.}\)</p>
+<p>Given a linear transformation \(L\colon \R^n\to \R^m\text{,}\) let \([L]\) denote the \(m\times n\) matrix whose columns are the vectors \(L\mathbf{e}_1,L\mathbf{e}_2,\ldots,L\mathbf{e}_n\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+[L]=
+\begin{bmatrix} L\mathbf{e}_1 \amp L\mathbf{e}_2 \amp \cdots \amp L\mathbf{e}_n
+\end{bmatrix}.\tag{3.3}
+\end{equation}
+</div>
+<p class="continuation">Conversely, given an \(m\times n\) matrix \(A\text{,}\) let \(L_A\) denote the linear transformation \(\R^n\to \R^m\) given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L_A(x_1,x_2,\ldots,x_n) = \sum_{j=1}^n x_j(\mbox{$j$th column of $A$}).
+\end{equation*}
+</div>
+<p class="continuation">It is clear that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L_A\mathbf{e}_j = (\mbox{$j$th column of $A$})
+\end{equation*}
+</div>
+<p class="continuation">and therefore, that \([L_A] = A\text{.}\) We conclude that the correspondence \(L\leftrightarrow [L]\) is a one-to-one correspondence between the set of linear transformations \(\R^n\to \R^m\) and the set of \(m\times n\) matrices.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\begin{array}{ccc}
+\{\mbox{linear maps }\R^n\to \R^m\} \amp\longleftrightarrow \amp \{m\times
+n\mbox{ matrices}\}\\
+L \amp\longleftrightarrow \amp [L] 
+\end{array}\tag{3.4}
+\end{equation}
+</div>
 <span class="incontext"><a href="matrices_section.html#p-43">in-context</a></span>
 </body>
 </html>

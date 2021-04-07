@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*       on 2021-04-07T15:52:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Show that</p>
+<p>We have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mathbf{e}_i\cdot \mathbf{e}_j = \delta_{ij}
-\end{equation*}
-</div>
-<p class="continuation">where \(\delta_{ij}\), called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Kronecker delta</dfn>, is given by</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\delta_{ij}=\left\{ \begin{array}{cc}
-1 \amp \mbox{if $i=j$}\\
-0 \amp \mbox{if $i\neq j$}
-\end{array}
-\right.\tag{1.4}
-\end{equation}
+\begin{align*}
+\mathbf{e}_i\cdot \mathbf{x} \amp = (0,0,\ldots,0,1,0,\ldots,0) \cdot
+(x_1,x_2,\ldots,x_n) \amp \text{(defn. of standard basis vect.)}\\
+\amp = 0x_1+0x_2+\cdots 0x_{i-1} + 1x_i+ 0x_{i+1}+\cdots +
+0x_n \amp \text{(defn. of dot product)}\\
+\amp = x_i.
+\end{align*}
 </div>
 <span class="incontext"><a href="rnvects_section.html#p-18">in-context</a></span>
 </body>

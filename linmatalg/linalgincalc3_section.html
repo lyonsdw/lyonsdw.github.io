@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-07T12:12:01-04:00       *-->
+<!--*       on 2021-04-07T15:52:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -161,7 +161,7 @@ MathJax.Hub.Config({
 <section class="subsection" id="diffdefsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1</span> <span class="title">Differentiability</span>
 </h3>
-<p id="p-56">A function \(f\colon \R^n\to \R^m\) is <dfn class="terminology">differentiable</dfn> at the point \(\mathbf{x}_0\) if there exists a linear transformation \(L\colon \R^n\to \R^m\) such that</p>
+<p id="p-57">A function \(f\colon \R^n\to \R^m\) is <dfn class="terminology">differentiable</dfn> at the point \(\mathbf{x}_0\) if there exists a linear transformation \(L\colon \R^n\to \R^m\) such that</p>
 <div class="displaymath">
 \begin{equation}
 \lim_{\mathbf{h}\to 0} \frac{f(\mathbf{x}_0+ \mathbf{h}) - f(\mathbf{x}_0)-
@@ -169,7 +169,7 @@ L\mathbf{h}}{|\mathbf{h}|} = 0.\label{diffabilitydef}\tag{4.1}
 \end{equation}
 </div>
 <p class="continuation">If \(L\) exists, it is called the <dfn class="terminology">derivative of \(f\) at \(\mathbf{x}_0\)</dfn> denoted \(Df(\mathbf{x_0})\).</p>
-<p id="p-57">To understand the definition of the derivative, start with the case \(n=m=1\text{.}\) The derivative of \(f\) at \(x_0\) is a number \(f'(x_0)\) such that</p>
+<p id="p-58">To understand the definition of the derivative, start with the case \(n=m=1\text{.}\) The derivative of \(f\) at \(x_0\) is a number \(f'(x_0)\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 f(x_0 + h) -f(x_0) \approx f'(x_0)h
@@ -206,7 +206,7 @@ y_i}{\partial x_j}\right]\text{.}\)</p>
 </div></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.2</span> <span class="title">The Chain Rule</span>
 </h3>
-<p id="p-58">Consider the composition of functions</p>
+<p id="p-59">Consider the composition of functions</p>
 <div class="displaymath">
 \begin{equation*}
 \R^p \stackrel{g}{\longrightarrow} \R^n
@@ -228,8 +228,8 @@ D(f\circ g)(\mathbf{t}_0) = Df(\mathbf{x}_0) Dg(\mathbf{t}_0)\label{chainrule}\t
 <span class="type">Exercises</span> <span class="codenumber">4.3</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="nm1diffexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-59">Verify the definition of differentiable function <a class="xref" data-knowl="./knowl/diffabilitydef.html" title="Equation 4.1">(4.1)</a> given in is equivalent to the usual definition for \(n=m=1\) from Calculus 1.</p></article><article class="exercise exercise-like" id="partialderivlimitexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-62">Explain equation <a class="xref" data-knowl="./knowl/dfofej.html" title="Equation 4.2">(4.2)</a>. Why does the limit on the left equal the vector on the right?</p>
+<p id="p-60">Verify the definition of differentiable function <a class="xref" data-knowl="./knowl/diffabilitydef.html" title="Equation 4.1">(4.1)</a> given in is equivalent to the usual definition for \(n=m=1\) from Calculus 1.</p></article><article class="exercise exercise-like" id="partialderivlimitexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-63">Explain equation <a class="xref" data-knowl="./knowl/dfofej.html" title="Equation 4.2">(4.2)</a>. Why does the limit on the left equal the vector on the right?</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{t\to 0} \frac{f(\mathbf{x}_0 +
@@ -238,8 +238,8 @@ t\mathbf{e}_j) -f(\mathbf{x}_0)}{t}=
 y_2}{\partial x_j},\ldots, \frac{\partial y_m}{\partial x_j}\right)
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="dfmatexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-64">Explain equation <a class="xref" data-knowl="./knowl/dfmat.html" title="Equation 4.3">(4.3)</a>. How does this equation follow from the previous?</p></article><article class="exercise exercise-like" id="chainrulereconcilexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-66">Explain equation <a class="xref" data-knowl="./knowl/chainrulematrixmult.html" title="Equation 4.5">(4.5)</a>. How is it the same as the chain rule <a class="xref" data-knowl="./knowl/chainrule.html" title="Equation 4.4">(4.4)</a>?</p></article></section></section></div></main>
+<p id="p-65">Explain equation <a class="xref" data-knowl="./knowl/dfmat.html" title="Equation 4.3">(4.3)</a>. How does this equation follow from the previous?</p></article><article class="exercise exercise-like" id="chainrulereconcilexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-67">Explain equation <a class="xref" data-knowl="./knowl/chainrulematrixmult.html" title="Equation 4.5">(4.5)</a>. How is it the same as the chain rule <a class="xref" data-knowl="./knowl/chainrule.html" title="Equation 4.4">(4.4)</a>?</p></article></section></section></div></main>
 </div>
 </body>
 </html>
