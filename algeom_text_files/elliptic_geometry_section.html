@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-23T11:27:12-04:00       *-->
+<!--*       on 2021-04-08T11:39:27-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -213,7 +213,7 @@ r \to \left[ v\to rvr^\ast \right]
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span>
 </h3>
 <p id="p-498">Let \(R_{{v},\theta}\) denote the rotation of \(\R^3\) about the axis given by a unit vector \({v}\) by an angle \(\theta\text{.}\) We use the standard orientation, so that a positive value of \(\theta\) is a counterclockwise rotation of the plane orthogonal to \({v}\text{,}\) as viewed from "above" where \({v}\) points in the "up" direction. See <a class="xref" data-knowl="./knowl/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</p>
-<figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vectangrot.png" style="width: 100%; height: auto;" alt=""></div>
+<figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vectangrot.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation \(R_{v,\theta}\) about the vector \(v\) by the angle \(\theta\)</figcaption></figure><p id="p-499"><em class="alert">Notation convention:</em> For readability and convenience, we write \(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\) to denote rotations by \(\theta\) radians about the standard basis vectors \((1,0,0), (0,1,0), (0,0,1)\text{,}\) respectively.</p>
 <p id="p-500">We will write \(\Rot(S^2)\) to denote the set of all rotations.</p>
 <div class="displaymath">
@@ -222,13 +222,13 @@ r \to \left[ v\to rvr^\ast \right]
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<p class="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
+<p class="continuation">To see why the set \(\Rot(S^2)\) is a group<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 1 </sup></a> under the operation of composition, consider the map \(U(\Quat)\to \Rot(S^2)\) given by \(r\to R_r\) established by <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>. The fact that \(R_r\circ R_s = R_{rs}\) (see <a class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that \(\Rot(S^2)\) is a group, the same equation \(R_r\circ R_s = R_{rs}\) shows that the map \(r\to R_r\) is a homomorphism of groups \(U(\Quat)\to \Rot(S^2)\text{.}\) The kernel of this homomorphism is \(\{\pm 1\}\text{.}\) This establishes an isomorphism</p>
 <div class="displaymath">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
 </div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that \(\Rot(S^2)\) is the group \(SO(3)\) of orthogonal transformations of \(\R^3\) with determinant 1.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that \(\Rot(S^2)\) is the group \(SO(3)\) of orthogonal transformations of \(\R^3\) with determinant 1.</div></div>
 <article class="exercise exercise-like" id="s2rotisgpexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-s2rotisgpexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-s2rotisgpexer"><article class="exercise exercise-like">Complete the details to show that \(\Rot(S^2)\) is a group. Show that the kernel of the homomorphism \(U(\Quat)\to \Rot(S^2)\) given by \(r\to
@@ -267,7 +267,7 @@ G'\to G''\to G
 \begin{equation*}
 C\to R(C) \to C' \to C''\to C.
 \end{equation*}
-</div>This leads to the decomposition \(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\) <figure class="figure figure-like" id="rotation_decomposition_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/rot_decomp2.png" style="width: 100%; height: auto;" alt=""></div>
+</div>This leads to the decomposition \(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\) <figure class="figure figure-like" id="rotation_decomposition_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/rot_decomp2.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotation \(R\)</figcaption></figure></article></div></section><section class="subsection" id="ellipticsubgpssubsec"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span>
 </h3>
@@ -331,13 +331,13 @@ Tz=e^{i\theta}\frac{z-z_0}{z_0^\ast z+1}\label{ellipticgp0inftyform}\tag{3.4.5}
 <span class="type">Subsection</span> <span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on \(S^2\)</span>
 </h3>
 <p id="p-513">The standard orientation for angles on \(S^2\) (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a class="xref" data-knowl="./knowl/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</p>
-<figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/2orientations.png" style="width: 100%; height: auto;" alt=""></div>
+<figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/2orientations.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.16<span class="period">.</span></span><span class="space"> </span>Two orientations on the sphere: oriented angle \(\angle
 PQR\) is positive viewed from the outward-pointing normal vector \(v\text{,}\) but is negative viewed from the inward-pointing vector \(-v\text{.}\)</figcaption></figure><article class="corollary theorem-like" id="corollary-7"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection is conformal.</span>
 </h6>
 <p id="p-514">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</p></article><article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof">Proof sketch: Begin with the special case of curves \(C_1,C_2\) that intersect at the south pole \(S=(0,0,-1)\text{.}\) The lines \(L_1,L_2\) that are tangent to \(C_1,C_2\) at \(S\) lie in planes \(\Pi_1,\Pi_2\) that contain the south pole and the origin. The tangents \(L_1,L_2\) also lie in the plane \(z=-1\) tangent to the sphere at the south pole. It is clear that the lines \(L_1',L_2'\) tangent to \(s(C_1),s(C_2)\) at \(s(S)=0\) are straight lines that intersect at the origin. The angle made by \(L_1,L_2\) is the same as the angle made by the planes \(\Pi_1,\Pi_2\text{,}\) but with inward-normal orientation! See <a class="xref" data-knowl="./knowl/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at \(P\text{.}\) Choose a rotation \(R\) of \(S^2\) that takes \(P\) to the south pole, and let \(T=s\circ R\circ s^{-1}\) be the conjugate element in \(\S\text{.}\) It is clear that \(R\) and \(T\) are conformal (because \(T\) is a Möbius transformation!). Now the fact that \(s\) is conformal at \((0,0,-1)\) implies that \(s=T^{-1}\circ s\circ
-R\) is conformal at \(P\text{.}\) <figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereo_conformal.png" style="width: 100%; height: auto;" alt=""></div>
+R\) is conformal at \(P\text{.}\) <figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereo_conformal.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>Stereographic projection is conformal at \(S=(0,0,-1)\text{.}\)</figcaption></figure></article></div></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span>
 </h3>
@@ -379,7 +379,7 @@ d_{\extC}(p,q) = d_{\extC}(Tp,Tq)\tag{3.4.8}
 d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. \label{ellipticdist0u}\tag{3.4.9}
 \end{equation}
 </div>
-<figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/elliptic_distance.png" style="width: 100%; height: auto;" alt=""></div>
+<figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/elliptic_distance.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on \(S^2\) to \(\extC\) via stereographic projection.</figcaption></figure><article class="exercise exercise-like" id="ellipticdistlemmaexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdistlemmaexer"><h6 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.21</span><span class="period">.</span>
 </h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdistlemmaexer"><article class="exercise exercise-like">Show that \(\theta/2=\alpha=\arctan u\) in <a class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>.</article></div>
@@ -425,7 +425,7 @@ dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\label{ellipticareaintformula}\ta
 </h6>
 <p id="p-530">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In \(\extC\text{,}\) any 2-gon is congruent to a set of the form \(R_{\alpha} :=\{z\in \C\colon
 0\leq \arg z \leq \alpha\}\cup \{\infty\}\) for some \(\alpha\) in the range \(0\leq \alpha\lt
-2\pi\text{.}\) See <a class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in \(\extC\) to show that the area of \(R_{\alpha}\) is \(2\alpha\text{.}\) Verify that this is the right answer using a picture of \(S^2\text{.}\) <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" style="width: 100%; height: auto;" alt=""></div>
+2\pi\text{.}\) See <a class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in \(\extC\) to show that the area of \(R_{\alpha}\) is \(2\alpha\text{.}\) Verify that this is the right answer using a picture of \(S^2\text{.}\) <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in \(\extC\) and \(S^2\text{.}\)</figcaption></figure></p></article><article class="exercise exercise-like" id="elliptic_triangle_area_exer"><h6 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic triangle.</span>
 </h6>
@@ -455,7 +455,7 @@ C)-\pi.\label{elliptictrianglearea}\tag{3.4.13}
 </div>
 </li>
 </ol>
-<p class="continuation"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/elliptic_triangle_area.png" style="width: 100%; height: auto;" alt=""></div>
+<p class="continuation"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/elliptic_triangle_area.png" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article>
 </div>
 </div></section></section></div></main>
