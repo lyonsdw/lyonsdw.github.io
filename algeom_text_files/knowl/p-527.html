@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-08T11:39:38-04:00       *-->
+<!--*       on 2021-04-20T13:20:31-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,24 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The three models for elliptic geometry are \((S^2_\Quat,U(\Quat))\text{,}\) \((S^2,\Rot(S^2))\text{,}\) and \((\extC,\S)\text{.}\) The maps</p>
+<p>We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      \\
+\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
+\frac{du}{u}\right] d\theta \;\;(\text{for }u=1+r^2)\\
+\amp =
+2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta\\
+\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.
+\end{align*}
+</div>
+<p class="continuation">In terms of \(r=2\arctan \alpha\text{,}\) we have \(\alpha=\tan\frac{r}{2}\) and</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{array}{ccccc}
-S^2_\Quat \amp \longleftrightarrow \amp S^2 \amp
-\longrightarrow \amp \extC\\
-xi+yj+zk \amp \longleftrightarrow \amp (x,y,z) \amp
-\stackrel{s}{\longrightarrow} \amp \frac{x+iy}{1-z}
-\end{array}      
+\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
+\tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.
 \end{equation*}
 </div>
-<p class="continuation">are clearly bijections. The correspondences</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-r \leftrightarrow R_r \leftrightarrow s\circ R_r \circ
-s^{-1}
-\end{equation*}
-</div>
-<p class="continuation">that have been established in the exposition and the exercises establish the necessary conjugacies for elements of \(U(\Quat),\Rot(S^2),\S\text{.}\)</p>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-527">in-context</a></span>
 </body>
 </html>

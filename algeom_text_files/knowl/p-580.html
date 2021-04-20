@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-08T11:39:39-04:00       *-->
+<!--*       on 2021-04-20T13:20:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,99 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<ol class="lower-alpha">
+<li>Apply <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a> to \(r_{a,b}=\cos\theta +u\sin\theta\) with \(u=\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\) and \(\theta=2\arccos(\re(a))\text{.}\)</li>
+<li>Solutions to \(T_{a,b}z=z\) are roots of the quadratic equation<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+0 = b^\ast z^2 + z(a-a^\ast) + b.
+\end{equation*}
+</div>Using \(2i\im(a)=a-a^\ast\text{,}\) we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+z \amp = \frac{-2i\im(a) \pm \sqrt{(2i\im(a))^2 -
+4|b|^2}}{2b^\ast}\\
+\amp = \frac{-2i(\im(a) \pm
+\sqrt{(\im(a))^2+|b|^2})}{2b^\ast}\\
+\amp = \frac{-ib(\im(a)\pm \sqrt{1-(\re(a))^2})}{|b|^2}.
+\end{align*}
+</div>
+</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)\amp
+= \frac{\im(b) -i\re(b)}{\sqrt{1-(\re(a))^2} -\im(a)}\\
+\amp = \frac{-ib}{\sqrt{1-(\re(a))^2}
+-\im(a)}\frac{\sqrt{1-(\re(a))^2} +\im(a)}{\sqrt{1-(\re(a))^2}
++\im(a)}\\
+\amp = \frac{-ib(\sqrt{1-(\re(a))^2} +
+\im(a))}{|b|^2}\\
+\amp = p.
+\end{align*}
+</div>
+</li>
+<li>
 <p xmlns:svg="http://www.w3.org/2000/svg">First, we explain why it is sufficient to check equality at three points. The right side of <a class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> is a Möbius transformation because \(s\circ (h\circ R_{r_{a,b}}\circ
 h)\circ s^{-1}\) is (by definition) an element of the elliptic group \(\S\text{,}\) we know that every element of \(\S\) is a Möbius transformation by the explanation given in the second paragraph of <a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal" title="Subsection 3.4.3: The elliptic subgroup of the Möbius group">Subsection 3.4.3</a>. By the Fundamental Theorem of Möbius Geometry, we know that \(T_{a,b}\) and \(s\circ (h\circ R_{r_{a,b}}\circ
 h)\circ s^{-1}\) are equal if and only if they agree at three points.</p>
+<p>Next, we check the input value \(p\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
+p\amp \stackrel{s^{-1}}{\longrightarrow}
+\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
+\amp \stackrel{h}{\longrightarrow}
+\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp
+\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{s}{\longrightarrow} p
+\end{align*}
+</div>
+<p class="continuation">Next, we check the input value \(0\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+0\amp \stackrel{T_{a,b}}{\longrightarrow}
+\frac{b}{a^\ast}\\
+0\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,-1)\\
+\amp \stackrel{h}{\longrightarrow}
+(-1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
+\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
+\end{align*}
+</div>
+<p class="continuation">Finally, we check the input value \(\infty\text{.}\) We have the following.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
+-\frac{a}{b^\ast}\\
+\infty\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,1)\\
+\amp \stackrel{h}{\longrightarrow}
+(1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
+\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
+\end{align*}
+</div>
+</li>
+<li>First, verify the suggestions in the hint. Now start in the upper left of the diagram with \(M_{a,b}\text{.}\) Tracing the path to the right and down to the lower right corner, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+M_{a,b} \stackrel{C_{iH}}{\longrightarrow} (iH)M_{a,b}(iH)
+\longrightarrow Q(iH)r_{a,b}Q(iH)\longrightarrow h\circ R_{r_{a,b}}
+\circ h.
+\end{equation*}
+</div>Tracing the path down the left side, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+M_{a,b} \longrightarrow T_{a,b} \longrightarrow
+R_{T_{a,b}}=s^{-1}\circ T\circ s.
+\end{equation*}
+</div>The bottom arrow of the diagram matches up by <a class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a>.</li>
+</ol>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-580">in-context</a></span>
 </body>
 </html>
