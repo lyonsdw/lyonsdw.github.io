@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-04-08T11:35:16-04:00       *-->
+<!--*       on 2021-05-13T14:52:11-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,13 +16,14 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\cosh(c) \amp=  \frac{1+u^2}{1-u^2} \\
-\amp = \frac{1+\left|\frac{B-A}{1-A^\ast B}\right|^2}{1-\left|\frac{B-A}{1-A^\ast B}\right|^2}\\
-\amp = \frac{1+\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}{1-\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}\\
-\amp = \frac{1+|A|^2 + |B|^2 + |A|^2|B|^2}{1-|A|^2 -
-|B|^2 + |A|^2|B|^2}\\
-\amp = \frac{(1+|A|^2)(1 + |B|^2)}{(1-|A|^2)(1- |B|^2)}\\
-\amp =  \cosh(a)\cosh(b).
+\cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right)
+\amp = \frac{e^{\ln(\text{stuff})} +
+e^{-\ln(\text{stuff})}}{2} \;\; \left(\text{stuff }=\frac{1+u}{1-u}\right)\\
+\amp = \frac{\frac{1+u}{1-u} +
+\frac{1-u}{1+u}}{2}\\
+\amp = \frac{(1+u)^2 + (1-u)^2}{2(1-a^2)}\\
+\amp = \frac{2(1+u^2)}{2(1-a^2)}\\
+\amp = \frac{1+u^2}{1-u^2}.
 \end{align*}
 </div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#mjx-eqn-mrow-300">in-context</a></span>
