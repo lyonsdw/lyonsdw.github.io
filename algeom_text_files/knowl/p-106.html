@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:02-04:00       *-->
+<!--*       on 2021-05-14T12:22:06-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,30 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection of nonempty disjoint sets whose union is \(X\text{.}\)</p>
-<span class="incontext"><a href="section-4.html#p-106">in-context</a></span>
+<p>We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+s(a,b,c)(s(-a,-b,-c))^\ast \amp =
+\frac{a+bi}{1-c}\left(\frac{-a-bi}{1+c}\right)^\ast\\
+\amp = \frac{(a+bi)(-a+bi)}{1-c^2}\\
+\amp = \frac{-a^2-b^2}{1-c^2}\\
+\amp = \frac{c^2-1}{1-c^2} = -1.
+\end{align*}
+</div>
+<p class="continuation">Conversely, if \(zw^\ast = -1\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+s^{-1}(w)\amp =
+s^{-1}\left(\frac{-1}{z^\ast}\right)\\
+\amp = s^{-1}\left(\frac{-z}{|z|^2}\right)\\
+\amp = \left(\frac{1}{|z|^2+1}\right)
+\left(\frac{-2\re(z)}{|z|^2},\frac{-2\im(z)}{|z|^2},\frac{1}{|z|^2}-1
+\right)\\
+\amp = \left(\frac{1}{1+|z|^2}\right)
+\left(-2\re(z),-2\im(z),1-|z|^2\right)\\
+\amp = -s^{-1}(z).
+\end{align*}
+</div>
+<span class="incontext"><a href="stereoprojsect.html#p-106">in-context</a></span>
 </body>
 </html>

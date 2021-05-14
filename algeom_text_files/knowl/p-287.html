@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:04-04:00       *-->
+<!--*       on 2021-05-14T12:22:09-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(G\) be a group. An <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">automorphism</dfn> of \(G\) is an isomorphism from \(G\) to itself. The set of all automorphisms of \(G\) is denoted \(\Aut(G)\).</p>
-<ol class="lower-alpha">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Show that \(\Aut(G)\) is a group under the operation of function composition.</p></li>
-<li>
-<p>Show that</p>
+<p>Suppose that \(K\) is a normal subgroup of \(G\text{.}\) We just need to show that the multiplication given by Equation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> is well-defined. Suppose that \(xK=x'K\) and \(yK=y'K\text{.}\) First write \(x'=xk_1\) and \(y'=yk_2\) for some \(k_1,k_2\in K\text{.}\) Finally, let \(k_4=y^{-1}k_1y\text{,}\) and note that \(k_4\in K\) by the assumption of normality. Now let \(x'y'k_3\) be an element of \(x'y'K\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\Inn(G) := \{C_g\colon g\in
-G\}
+x'y'k_3=xk_1yk_2k_3=x(yk_4y^{-1})yk_2k_3=(xy)k_4(y^{-1}y)k_2k_3=xy(k_4k_2k_3)
 \end{equation*}
 </div>
-<p class="continuation"> is a subgroup of  \(\Aut(G)\text{.}\) (The group \(\Inn(G)\) is called the group of <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inner automorphisms</dfn> of \(G\text{.}\))</p>
-</li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Find an example of an automorphism of a group that is not an inner automorphism.</p></li>
-</ol>
+<p class="continuation">which is in \(xyK\text{,}\) as required. This proves \(x'y'K\subseteq
+xyK\text{.}\) A similar argument shows containment in the other direction.</p>
 <span class="incontext"><a href="section-8.html#p-287">in-context</a></span>
 </body>
 </html>

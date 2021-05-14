@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:03-04:00       *-->
+<!--*       on 2021-05-14T12:22:07-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(n\) be a positive integer and \(k\) be an integer in the range \(1\leq k\leq n\text{.}\) A permutation \(\pi\in S_n\) (see <a class="xref" data-knowl="./knowl/permgpdef.html" title="Definition 2.1.1">Definition 2.1.1</a>) is called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">\(k\)-cycle</dfn> if there is a \(k\)-element set \(A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}\) such that \(\pi(a_i)=a_{i+1}\) for \(1\leq i\leq k-1\) and \(\pi(a_k)=a_1\text{,}\) and \(\pi(j)=j\) for \(j\not\in
-A\text{.}\) We use <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cycle notation</dfn> \((a_1a_2\cdots a_k)\) to denote the \(k\)-cycle that acts as</p>
+<p>A group \(G\) is called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cyclic</dfn> if there exists an element \(g\) in \(G\text{,}\) called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">generator</dfn>, such that the sequence</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-a_1{\to} a_2{\to} a_3{\to} \cdots{\to} a_k{\to} a_1
+\left(g^k\right)_{k\in
+\Z}=(\ldots,g^{-3},g^{-2},g^{-1},g^0,g^1,g^2,g^3,\ldots)
 \end{equation*}
 </div>
-<p class="continuation">on the distinct positive integers \(a_1,a_2,\ldots,a_k\text{.}\) For example, the element \(\pi=[1,4,2,3]=(2,4,3)\) is a 3-cycle in \(S_4\) because \(\pi\) acts on the set \(A=\{2,3,4\}\) by</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2\to 4\to 3\to 2
-\end{equation*}
-</div>
-<p class="continuation">and \(\pi\) acts on \(A^c=\{1\}\) as the identity. Note cycle notation is not unique. For example, we have \((2,4,3)=(4,3,2)=(3,2,4)\) in \(S_4.\) Cycles of any length (any positive integer) are called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">cyclic</dfn> permutations. A 2-cycle is called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">transposition</dfn>.</p>
+<p class="continuation">contains all of the elements in \(G\text{.}\)</p>
 <ol class="lower-alpha">
-<li>Find all of the cyclic permutations in \(S_3\text{.}\) Find their inverses.</li>
-<li>Find all of the cyclic permutations in \(S_4\text{.}\)</li>
+<li>The group of integers is cyclic. Find all of the generators.</li>
+<li>The group \(\Z_8\) is cyclic. Find all of the generators.</li>
+<li>The group \(\Z_2\times \Z_3\) is cyclic. Find all of the generators.</li>
+<li>Show that the group \(\Z_2\times \Z_2\) is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">not</em> cyclic.</li>
+<li>Let \(m,n\) be positive integers. Show that the group \(\Z_m\times \Z_n\) is cyclic if and only if \(m,n\) are relatively prime, that is, if the greatest common divisor of \(m,n\) is 1.</li>
 </ol>
 <span class="incontext"><a href="groupdefsection.html#p-190">in-context</a></span>
 </body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:01-04:00       *-->
+<!--*       on 2021-05-14T12:22:06-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(S^1\) denote the unit circle in the \(x,y\)-plane.</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\tag{1.3.1}
-\end{equation}
+<ol class="lower-alpha">
+<li>First, check that, for any pure, unit quaternion \(u\text{,}\) we have \(u^2=-1\) (use <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
+\sin\theta)\\
+\amp = u(\cos^2\theta+\sin^2\theta) -
+\sin\theta\cos\theta + \sin\theta\cos\theta\\
+\amp = u
+\end{align*}
 </div>
-<p class="continuation">Let \(N=(0,1)\) denote the "north pole" (that is, the point at the "top" of the unit circle). Given a point \(P=(x,y)\neq N\) on the unit circle, let \(s(P)\) denote the intersection of the line \(\overline{NP}\) with the \(x\)-axis. See <a class="xref" data-knowl="./knowl/stereoprojfig.html" title="Figure 1.3.1">Figure 1.3.1</a>. The map \(s\colon S^1\setminus \{N\}\to \R\) given by this rule is called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that \(s(x,y)=\frac{x}{1-y}\text{.}\)</p>
-<span class="incontext"><a href="stereoprojsect.html#p-83">in-context</a></span>
+</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)\\
+\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
+-uvu\sin^2\theta\\
+\amp =v(\cos^2\theta -\sin^2\theta) +
+2w\sin\theta\cos\theta
+\end{align*}
+</div>(use <a class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to simplify \(uv-vu=2u\times v=2w\) and use <a class="xref" data-knowl="./knowl/quatreflectionexer.html" title="Exercise 1.2.6.1">Exercise 1.2.6.1</a> to get \(v=uvu\text{,}\) the reflection of \(v\) in the plane perpendicular to \(u\)). Using double angle formulas, the last expression in the displayed derivation becomes<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+v\cos(2\theta) + w\sin(2\theta).
+\end{equation*}
+</div>Since \(R_r\) is a linear map that acts on the an orthogonal basis \(u,v,w\) as a rotation about \(u\) by the angle \(2\theta\text{,}\) the Proposition is established.</li>
+</ol>
+<span class="incontext"><a href="quaternionsection.html#p-83">in-context</a></span>
 </body>
 </html>

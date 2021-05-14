@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:02-04:00       *-->
+<!--*       on 2021-05-14T12:22:06-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg"><article class="fact theorem-like"><h6 class="heading">
-<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalence relations and partitions.</span>
-</h6>
-<p>Let \(X\) be a set. Equivalence relations on \(X\) and partitions of \(X\) are in one-to-one correspondence, as follows. Given an equivalence relation \(\sim\) on \(X\text{,}\) the collection</p>
-<div class="displaymath">
-\begin{equation*}
-X/\!\!\sim \; = \{[x]\colon x\in X\}
-\end{equation*}
+<p>A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+[x] = \{y\in X\colon x\sim y\},\tag{1.4.1}
+\end{equation}
 </div>
-<p class="continuation">is a partition of \(X\text{.}\) Conversely, given a partition \({\mathcal P}\) of \(X\text{,}\) the relation \(\sim_{\mathcal P}\) defined by</p>
-<div class="displaymath">
-\begin{equation*}
-x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\mathcal P}
-\end{equation*}
+<p class="continuation">called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">equivalence class</dfn> of the element \(x\text{.}\) The set of equivalence classes is denoted \(X/\!\!\sim\text{,}\) that is,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+X/\!\!\sim \; = \{[x]\colon x\in X\}.\tag{1.4.2}
+\end{equation}
 </div>
-<p class="continuation">is an equivalence relation. These correspondences are inverse to one another. That is, \(\sim = \sim_{(X/\sim)}\) and \(X/(\sim_{\mathcal P}) = {\mathcal P}\text{.}\)</p></article></p>
 <span class="incontext"><a href="section-4.html#p-107">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-13T14:52:01-04:00       *-->
+<!--*       on 2021-05-14T12:22:06-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,32 +16,24 @@
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
 <ol class="lower-alpha">
-<li>Let \(T(a,b)\) denote the matrix \(\twotwo{a}{b}{-b}{a}\) in \({\mathcal M}_\C\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<li>Starting with the right hand side of <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} \\
-\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}\\
-\amp = T(a+c,b+d)\\
-T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} \\
-\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}\\
-\amp = T(ac-bd,ad+bc)
+|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast\\
+\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
+-aa^\ast\\
+\amp = |z|^2 -2\re(za^\ast)
 \end{align*}
-</div>
-</li>
-<li>Let \(z=a+bi\) and \(w=c+di\) so that \(M(z)=T(a,b)\) and \(M(w)=T(c,d)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>as desired. Applying this to the equation given at the end of the part a, we set \(a=-i\) and complete the square by adding \(|-i|^2=1\) to both sides. Rearranging, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|z-(-i)|^2 = (\sqrt{6})^2.
+\end{equation*}
+</div>This is a circle centered at \(a=-i\text{,}\) with radius \(r=\sqrt{6}\text{.}\)</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-C(M(z)+M(w)) \amp = C(T(a,b)+T(c,d))\\
-\amp = C(T(a+c,b+d)) \;\;(\text{by part (a)})\\
-\amp = (a+c)+i(b+d)\\
-\amp = (a+ib)+(c+id)\\
-\amp =z+w\\
-C(M(z)M(w)) \amp = C(T(a,b)T(c,d))\\
-\amp = C(T(ac-bd,ad+bc)) \;\;(\text{by part (a)})\\
-\amp = (ac-bd)+i(ad+bc)\\
-\amp = (a+ib)(c+id)\\
-\amp =z+w
+\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)\\
+\amp = \im( (ux-vy+r) + i(vx+uy+s)
 \end{align*}
-</div>
-</li>
+</div>so the equation \(\im(az+b)=0\) is equivalent to \(vx+uy+s=0\text{.}\) This is the general form for the equation for a line in \(\R^2\text{,}\) as long as \((u,v)\) is not the zero vector (if \(0=u=v\text{,}\) then the solutions to \(s=0\) is either the empty set or the whole plane).</li>
 </ol>
 <span class="incontext"><a href="section-1.html#p-52">in-context</a></span>
 </body>
