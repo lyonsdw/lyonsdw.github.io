@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:33-04:00       *-->
+<!--*       on 2021-06-02T12:41:00-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(G\) be a group whose elements are \(n\times n\) matrices with entries in a field \(\F\) and with the group operation of matrix multiplication. The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">natural action</dfn> \(G\to \Perm(X)\) of \(G\) on the vector space \(X=\F^n\) is given by</p>
+<p>An orbit of the group action \(H\to \Perm(G)\) is a set of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-g\to [v\to g\cdot v],
+\Orb(g)=\{gh^{-1}\colon h\in H\}
 \end{equation*}
 </div>
-<p class="continuation">where the "dot" in the expression \(g\cdot v\) is ordinary multiplication of a matrix times a column vector. Show that this is indeed a group action.</p>
+<p class="continuation">for some \(g\in
+G\text{.}\) Consider the map \(x\to gx^{-1}g\text{.}\) For \(x=gh^{-1}\in
+\Orb(g)\text{,}\) we have \(i(gh^{-1})=g(gh^{-1})g=gh\text{,}\) so the image of \(i\) is contained in the coset \(gH\text{.}\) The map \(i\) is its own inverse:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+i(i(x))= i(gxg^{-1})= g(gxg^{-1})g=x\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so we conclude that \(i\colon \Orb(g)\to gH\) is bijective. Thus we have established that \(\Orb(g)=gH\text{,}\) as desired.</p>
 <span class="incontext"><a href="section-9.html#p-311">in-context</a></span>
 </body>
 </html>

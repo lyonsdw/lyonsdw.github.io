@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:35-04:00       *-->
+<!--*       on 2021-06-02T12:41:01-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,35 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Prove <a class="xref" data-knowl="./knowl/mobinvrealisclineprop.html" title="Proposition 3.2.12">Proposition 3.2.12</a>. Suggestion: Let \(Tz=\frac{az+b}{cz+d}\text{,}\) then manipulate \(Tz=(Tz)^\ast\) to an equation with \(|z|^2,z,z^\ast\) terms and coefficients involving \(a,b,c,d\) and their conjugates. Then use "complex completing the square" (see <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>). The hint below shows a version of a circle equation; peek if you need to, and use it to work partially forwards from \(Tz=(Tz)^\ast\text{,}\) and partially backwards from the equation in the hint.</p>
+<ol class="lower-alpha">
+<li>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
+</div>
+</li>
+<li>Put together the pieces from the previous part.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
+</div>
+</li>
+</ol>
 <span class="incontext"><a href="section-12.html#p-414">in-context</a></span>
 </body>
 </html>

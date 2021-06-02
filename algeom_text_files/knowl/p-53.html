@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \({\mathcal M}_\C\) denote the set of \(2\times
-2\) matrices of the form \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) with \(a,b\in \R\text{.}\) Given a complex number \(z\) with Cartesian form  \(z=a+bi\text{,}\) let \(M(z)\) denote the matrix in \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) in \({\mathcal
-M}_\C\text{.}\) Conversely, given a matrix \(M\in {\mathcal M}_\C\) with top left entry \(a\) and top right entry \(b\text{,}\) let \(C(M)\) denote the complex number \(a+bi\text{.}\) It is clear that the mappings \(z\to M(z)\) and \(M\to C(M)\) are inverses to one another, and establish a one-to-one correspondence \(\C\leftrightarrow {\mathcal M}_\C\text{.}\)</p>
 <ol class="lower-alpha">
-<li>Show that \({\mathcal M}_\C\) is closed under addition and multiplication. That is, suppose that \(M,N\) are elements of \({\mathcal M}_\C\text{.}\) Show that \(M+N\) and \(MN\) are also elements of \({\mathcal M}_\C\text{.}\)</li>
-<li>Show that complex addition and multiplication are "mirrored" in \({\mathcal M}_\C\text{.}\) That is, show that \(C(M(z)+M(w))=z+w\) and \(C(M(z)M(w))=zw\) for all \(z,w\in \C\text{.}\)</li>
+<li>Starting with the right hand side of <a class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast\\
+\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
+-aa^\ast\\
+\amp = |z|^2 -2\re(za^\ast)
+\end{align*}
+</div>as desired. Applying this to the equation given at the end of the part a, we set \(a=-i\) and complete the square by adding \(|-i|^2=1\) to both sides. Rearranging, we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|z-(-i)|^2 = (\sqrt{6})^2.
+\end{equation*}
+</div>This is a circle centered at \(a=-i\text{,}\) with radius \(r=\sqrt{6}\text{.}\)</li>
+<li>We have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)\\
+\amp = \im( (ux-vy+r) + i(vx+uy+s)
+\end{align*}
+</div>so the equation \(\im(az+b)=0\) is equivalent to \(vx+uy+s=0\text{.}\) This is the general form for the equation for a line in \(\R^2\text{,}\) as long as \((u,v)\) is not the zero vector (if \(0=u=v\text{,}\) then the solutions to \(s=0\) is either the empty set or the whole plane).</li>
 </ol>
 <span class="incontext"><a href="section-1.html#p-53">in-context</a></span>
 </body>

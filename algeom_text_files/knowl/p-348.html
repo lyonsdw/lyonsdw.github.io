@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:33-04:00       *-->
+<!--*       on 2021-06-02T12:41:00-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>One possible composition of rotations is \(R_{Y,\pi/2}\) followed by \(R_{X,\pi/2}\text{.}\) These rotations are realized by quaternions \(\frac{1}{\sqrt{2}}(1+j)\text{,}\) \(\frac{1}{\sqrt{2}}(1+i)\text{,}\) respectively. So the rotation we want is given by the quaternion</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{1}{\sqrt{2}}(1+i)\frac{1}{\sqrt{2}}(1+j)
-=\frac{1}{2}+\frac{\sqrt{3}}{2}\left(\frac{i+j+k}{\sqrt{3}}\right)=\cos
-\frac{\pi}{3} + \sin \frac{\pi}{3}u
-\end{equation*}
-</div>
-<p class="continuation">with \(u=\frac{1}{\sqrt{3}}(i+j+k)\text{.}\) By <a class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \(\R^3_\Quat\)">Proposition 1.2.9</a>, this is the rotation about \((1,1,1)\) by \(\pi/6\) radians.</p>
+<p>These are both 3-4-5 triangles. One way to map the first triangle to the second is the following sequence of transformations.</p>
+<ol class="lower-roman">
+<li>shift left 6 units: \((x,y)\to (x-6,y)\)</li>
+<li>rotate 90 degrees (counterclockwise): \((x,y)\to (-y,x)\)</li>
+<li>shift down 1 unit: \((x,y)\to (x,y-1)\)</li>
+<li>reflect across the \(y\)-axis: \((x,y)\to (-x,y)\)</li>
+</ol>
+<p class="continuation">Putting all this together, we get \((x,y)\to (y,x-7)\)</p>
 <span class="incontext"><a href="geomdefsect.html#p-348">in-context</a></span>
 </body>
 </html>

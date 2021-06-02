@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,33 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<p>Let \({\mathcal M}_\C\) denote the set of \(2\times
+2\) matrices of the form \(\left[\begin{array}{cc}a\amp
+b\\-b\amp a\end{array}\right]\) with \(a,b\in \R\text{.}\) Given a complex number \(z\) with Cartesian form  \(z=a+bi\text{,}\) let \(M(z)\) denote the matrix in \(\left[\begin{array}{cc}a\amp
+b\\-b\amp a\end{array}\right]\) in \({\mathcal
+M}_\C\text{.}\) Conversely, given a matrix \(M\in {\mathcal M}_\C\) with top left entry \(a\) and top right entry \(b\text{,}\) let \(C(M)\) denote the complex number \(a+bi\text{.}\) It is clear that the mappings \(z\to M(z)\) and \(M\to C(M)\) are inverses to one another, and establish a one-to-one correspondence \(\C\leftrightarrow {\mathcal M}_\C\text{.}\)</p>
 <ol class="lower-alpha">
-<li>Let \(T(a,b)\) denote the matrix \(\twotwo{a}{b}{-b}{a}\) in \({\mathcal M}_\C\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} \\
-\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}\\
-\amp = T(a+c,b+d)\\
-T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} \\
-\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}\\
-\amp = T(ac-bd,ad+bc)
-\end{align*}
-</div>
-</li>
-<li>Let \(z=a+bi\) and \(w=c+di\) so that \(M(z)=T(a,b)\) and \(M(w)=T(c,d)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-C(M(z)+M(w)) \amp = C(T(a,b)+T(c,d))\\
-\amp = C(T(a+c,b+d)) \;\;(\text{by part (a)})\\
-\amp = (a+c)+i(b+d)\\
-\amp = (a+ib)+(c+id)\\
-\amp =z+w\\
-C(M(z)M(w)) \amp = C(T(a,b)T(c,d))\\
-\amp = C(T(ac-bd,ad+bc)) \;\;(\text{by part (a)})\\
-\amp = (ac-bd)+i(ad+bc)\\
-\amp = (a+ib)(c+id)\\
-\amp =z+w
-\end{align*}
-</div>
-</li>
+<li>Show that \({\mathcal M}_\C\) is closed under addition and multiplication. That is, suppose that \(M,N\) are elements of \({\mathcal M}_\C\text{.}\) Show that \(M+N\) and \(MN\) are also elements of \({\mathcal M}_\C\text{.}\)</li>
+<li>Show that complex addition and multiplication are "mirrored" in \({\mathcal M}_\C\text{.}\) That is, show that \(C(M(z)+M(w))=z+w\) and \(C(M(z)M(w))=zw\) for all \(z,w\in \C\text{.}\)</li>
 </ol>
 <span class="incontext"><a href="section-1.html#p-54">in-context</a></span>
 </body>

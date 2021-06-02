@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Analogous to the way that the complex numbers \(\C\) can be realized as the set \({\mathcal M}_\C\) of \(2\times 2\) real matrices  (see <a class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as \(2\times 2\) real matrices">Exercise 1.1.7.12</a>), the quaternions can be realized by a set of \(2\times 2\) complex matrices, as follows.  Let \({\mathcal M}_\Quat\) denote the set of \(2\times 2\) complex matrices of the form \(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
-u^\ast\end{array}\right]\text{.}\) Given a quaternion \(r=a+bi+cj+dk\text{,}\) let \(u,v\) be the complex numbers \(u=a+bi\) and \(v=c+di\text{,}\) and let \({M}(r)\) denote the \(2\times 2\) matrix in \({\mathcal M}_\Quat\) given by</p>
+<p>The quaternions \(i,j,k\) are defined as follows.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-{M}(r)=\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
-u^\ast\end{array}\right].
-\end{equation*}
+\begin{align}
+i \amp \leftrightarrow (0,1,0,0)\tag{1.2.1}\\
+j \amp \leftrightarrow (0,0,1,0)\tag{1.2.2}\\
+k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
+\end{align}
 </div>
-<p class="continuation">Conversely, given a matrix \(M\in {\mathcal M}_\Quat\text{,}\) with top left entry \(a+bi\) and top right entry \(c+di\text{,}\) let \(Q(M)\) denote the quaternion \(r=a+bi+cj+dk\text{.}\) It is clear that the mappings \(r\to M(r)\) and \(M\to Q(M)\) are inverses to one another, and establish a one-to-one correspondence \(\Quat\leftrightarrow {\mathcal M}_\Quat\text{.}\)</p>
+<p class="continuation">The expression \(r=a+bi+cj+dk\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector \((a,b,c,d)\) in \(\R^4\text{.}\) A quaternion of the form \(a=a+0i+0j+0k\leftrightarrow
+(a,0,0,0)\) is called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">scalar</dfn> quaternion or a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">real</dfn> quaternion. A quaternion of the form \(xi+yj+zk\leftrightarrow
+(0,x,y,z)\) is called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">pure</dfn> quaternion or an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">imaginary</dfn> quaternion. For a quaternion \(r=a+bi+cj+dk\text{,}\) we call the real quaternion \(a\) the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">scalar part</dfn> or <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">real part</dfn> of \(r\text{,}\) and we call the quaternion \(xi+yj+zk\) the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">vector part</dfn> or the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">imaginary part</dfn> of \(r\text{.}\) To reflect the natural correspondence of the pure quaternion \(xi+yj+zk\) with the vector \((x,y,z)\) in \(\R^3\text{,}\) we will write \(\R^3_\Quat\) to denote the space of pure quaternions.</p>
 <span class="incontext"><a href="quaternionsection.html#p-58">in-context</a></span>
 </body>
 </html>

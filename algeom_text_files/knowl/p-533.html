@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:37-04:00       *-->
+<!--*       on 2021-06-02T12:41:03-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,10 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In \(\extC\text{,}\) any 2-gon is congruent to a set of the form \(R_{\alpha} :=\{z\in \C\colon
-0\leq \arg z \leq \alpha\}\cup \{\infty\}\) for some \(\alpha\) in the range \(0\leq \alpha\lt
-2\pi\text{.}\) See <a class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in \(\extC\) to show that the area of \(R_{\alpha}\) is \(2\alpha\text{.}\) Verify that this is the right answer using a picture of \(S^2\text{.}\) <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in \(\extC\) and \(S^2\text{.}\)</figcaption></figure></p>
+<p>Let \(T\in \S\) so that \(T=s\circ R\circ s^{-1}\) for some \(R\in \Rot(S^2)\text{.}\) We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)\\
+\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}})\\
+\amp = d_{S^2}(s^{-1}p,s^{-1}q)
+\;\;(d_{S^2}\text{ is invariant under rotation }R)\\
+\amp = d_{\extC}(p,q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}}).
+\end{align*}
+</div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-533">in-context</a></span>
 </body>
 </html>

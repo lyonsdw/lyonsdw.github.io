@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(z=re^{i\theta}\text{.}\)  Then \(\overline{z}=re^{-i\theta}\text{,}\) and we have</p>
+<p>Here is one route to an algebraic proof: Let \(z=a+bi\text{,}\) \(w=c+di\text{.}\) Manipulate the triangle inequality (start by squaring both sides) to obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-z\overline{z} \amp = re^{i\theta}re^{-i\theta}\\
-\amp = r^2 e^0\\
-\amp = r^2 = |z|^2.
-\end{align*}
+\begin{equation*}
+2abcd \leq b^2c^2 + a^2d^2.
+\end{equation*}
 </div>
+<p class="continuation">This is the same as the clearly true statement</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+0\leq  b^2c^2 + a^2d^2 - 2abcd = (bc-ad)^2.
+\end{equation*}
+</div>
+<p class="continuation">Conclude by observing that all steps of the derivation are reversible.</p>
 <span class="incontext"><a href="section-1.html#p-45">in-context</a></span>
 </body>
 </html>

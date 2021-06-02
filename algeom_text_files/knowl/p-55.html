@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,34 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The quaternions, discovered by William Rowan Hamilton in 1843, were invented to capture the algebra of rotations of 3-dimensional real space, extending the way that the complex numbers capture the algebra of rotations of 2-dimensional real space.</p>
-<span class="incontext"><a href="quaternionsection.html#p-55">in-context</a></span>
+<ol class="lower-alpha">
+<li>Let \(T(a,b)\) denote the matrix \(\twotwo{a}{b}{-b}{a}\) in \({\mathcal M}_\C\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} \\
+\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}\\
+\amp = T(a+c,b+d)\\
+T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} \\
+\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}\\
+\amp = T(ac-bd,ad+bc)
+\end{align*}
+</div>
+</li>
+<li>Let \(z=a+bi\) and \(w=c+di\) so that \(M(z)=T(a,b)\) and \(M(w)=T(c,d)\text{.}\) We have the following.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+C(M(z)+M(w)) \amp = C(T(a,b)+T(c,d))\\
+\amp = C(T(a+c,b+d)) \;\;(\text{by part (a)})\\
+\amp = (a+c)+i(b+d)\\
+\amp = (a+ib)+(c+id)\\
+\amp =z+w\\
+C(M(z)M(w)) \amp = C(T(a,b)T(c,d))\\
+\amp = C(T(ac-bd,ad+bc)) \;\;(\text{by part (a)})\\
+\amp = (ac-bd)+i(ad+bc)\\
+\amp = (a+ib)(c+id)\\
+\amp =z+w
+\end{align*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="section-1.html#p-55">in-context</a></span>
 </body>
 </html>

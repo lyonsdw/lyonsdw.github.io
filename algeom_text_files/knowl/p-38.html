@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:29-04:00       *-->
+<!--*       on 2021-06-02T12:40:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(C\) be the circle of radius \(r\gt 0\) and with center \(a\in \C\text{.}\) A point \(z\) lies on \(C\) if and only if the distance from \(z\) to \(a\) equals \(r\text{.}\) In mathematical symbols, \(C\) is the set of solutions \(z\) for the following equation.</p>
+<p>The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">conjugate</dfn> of the complex number \(z=x+iy=re^{i\theta}\text{,}\) denoted \(\overline{z}\) or \(z^\ast\) , is defined to be \(z^\ast = x-iy =
+re^{-i\theta}\text{.}\) Geometrically, \(z^\ast\) is the reflection of \(z\) across the real axis (the \(x\)-axis) in \(\R^2\text{.}\) Here are some relations involving conjugates.</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-|z-a|=r\tag{1.1.22}
-\end{equation}
+\begin{align}
+\re(z) \amp = \frac{z + z^\ast}{2}\tag{1.1.16}\\
+\im(z) \amp = \frac{z - z^\ast}{2i}\tag{1.1.17}\\
+|z|^2 \amp = zz^\ast\tag{1.1.18}\\
+2\arg z \amp = \frac{z}{z^\ast} \;\;\text{(for $z\neq 0$)}\tag{1.1.19}\\
+\frac{1}{z}
+\amp = \frac{z^\ast}{zz^\ast}= \frac{z^\ast}{|z|^2} \;\;\text{(for $z\neq 0$)}\tag{1.1.20}\\
+(zw)^\ast \amp = z^\ast w^\ast\tag{1.1.21}
+\end{align}
 </div>
 <span class="incontext"><a href="section-1.html#p-38">in-context</a></span>
 </body>

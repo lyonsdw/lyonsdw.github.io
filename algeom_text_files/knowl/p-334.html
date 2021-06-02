@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-02T12:31:33-04:00       *-->
+<!--*       on 2021-06-02T12:41:00-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can also see the semidirect product structure directly, without using the result from the previous part. From what we have shown, multiplication in \(D_n\) looks like this.</p>
+<p>We apply the previous part to \(K=\langle R_{1/n}\rangle\approx C_n, H=\langle
+F_L\rangle\approx C_2\text{,}\) where \(L\) is any one of the lines of symmetry of the \(n\)-gon. Because \(K\) is Abelian, the rotation group \(K\) is normal in \(D_n\text{.}\) To see that \(D_n=KH\text{,}\) first, we confirm that \(D_n=\langle R_{1/n},F_L\rangle\text{.}\) To see why, verify the relations</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(R_\theta F_L^a)(R_\phi F_L^b)
-\amp = R_\theta F_L^aR_\phi (F_L^a F_L^a) F_L^b\\
-\amp = R_\theta (F_L^aR_\phi F_L^a) F_L^a F_L^b\\
-\amp = R_\theta R_{(-1)^a\phi}F_L^{a+b}\\
-\amp = R_{\theta+(-1)^a\phi}F_L^{a+b}
-\end{align*}
+\begin{gather*}
+R^{-1}=FRF\\
+F_{R(L)}=RF_LR^{-1}
+\end{gather*}
 </div>
-<p class="continuation">This last expression is the same as the multiplication given by the semidirect product.</p>
+<p class="continuation">which hold for any rotation \(R\) and any reflection \(F\text{.}\) Now, given any string of \(R\)'s (for various angles) and \(F\)'s, first rewrite all the \(F\)'s in the form \(RF_LR^{-1}\text{,}\) then apply \(F_LR=R^{-1}F_L\) to shift all the \(R\)'s to the left and all the \(F_L\)'s to the right. This shows that any element in \(D_n\) can be written in the form \(R_\theta F_L^a\) for some \(\theta\) and \(a=0,1\text{.}\) Finally, it is clear that we have \(K\cap H=\{R_0\}\text{.}\) The hypothesis of the result in the previous part are met, so we conclude that \(D_n
+\approx K\rtimes H \approx C_n\rtimes C_2\text{.}\)</p>
 <span class="incontext"><a href="groups_extra_exer_section.html#p-334">in-context</a></span>
 </body>
 </html>
