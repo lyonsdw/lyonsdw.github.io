@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:10:37-04:00       *-->
+<!--*       on 2022-02-15T18:36:01-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,23 +9,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Complex Numbers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
   },
   chtml: {
     scale: 0.88,
@@ -36,21 +38,24 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,14 +92,14 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="basics_chapter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="quaternionsection.html" title="Next">Next</a></span>
@@ -104,59 +109,60 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="basics_chapter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="quaternionsection.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
 <li><a href="section-1.html" data-scroll="section-1" class="active">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
+<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-1"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Complex Numbers</span>
 </h2>
 <section class="introduction" id="introduction-1"><p id="p-21">The complex numbers were originally invented to solve problems in algebra. It was later recognized that the algebra of complex numbers provides an elegant set of tools for geometry in the plane. This section presents the basics of the algebra and geometry of the complex numbers.</p>
-<p id="p-22">Elements in the set of complex numbers \(\C\) are in one-to-one correspondence with points in the 2-dimensional real plane \(\R^2\) (where \(\R\)  denotes the set of real numbers). We will write \(z\leftrightarrow (x,y)\) to denote that the complex number \(z\) corresponds to the ordered pair \((x,y)\) of real numbers.</p></section><section class="subsection" id="complexrealimagsubsect"><h3 class="heading hide-type">
+<p id="p-22">Elements in the set of complex numbers <span class="process-math">\(\C\)</span> are in one-to-one correspondence with points in the 2-dimensional real plane <span class="process-math">\(\R^2\)</span> (where <span class="process-math">\(\R\)</span>  denotes the set of real numbers). We will write <span class="process-math">\(z\leftrightarrow (x,y)\)</span> to denote that the complex number <span class="process-math">\(z\)</span> corresponds to the ordered pair <span class="process-math">\((x,y)\)</span> of real numbers.</p></section><section class="subsection" id="complexrealimagsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span>
 </h3>
-<p id="p-23">Given a complex number \(z\) corresponding to the point \((x,y)\) in \(\R^2\text{,}\) we say that \(x\) is the <dfn class="terminology">real part</dfn> of \(z\) and that \(y\) is the <dfn class="terminology">imaginary part</dfn> of \(z\text{,}\) denoted \(\re(z)=x\) and \(\im(z)=y\text{.}\) The set \(\C\) contains the set \(\R\) as a subset. The real number \(x\text{,}\) which is also the complex number \(x\text{,}\) corresponds to the ordered pair \((x,0)\text{.}\) A complex number that corresponds to an ordered pair \((0,y)\) is called <dfn class="terminology">(pure) imaginary</dfn>. The complex number \(i\) corresponds to the ordered pair \((0,1)\text{.}\) Here is a summary so far.</p>
-<div class="displaymath">
+<p id="p-23">Given a complex number <span class="process-math">\(z\)</span> corresponding to the point <span class="process-math">\((x,y)\)</span> in <span class="process-math">\(\R^2\text{,}\)</span> we say that <span class="process-math">\(x\)</span> is the <dfn class="terminology">real part</dfn> of <span class="process-math">\(z\)</span> and that <span class="process-math">\(y\)</span> is the <dfn class="terminology">imaginary part</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\re(z)=x\)</span> and <span class="process-math">\(\im(z)=y\text{.}\)</span> The set <span class="process-math">\(\C\)</span> contains the set <span class="process-math">\(\R\)</span> as a subset. The real number <span class="process-math">\(x\text{,}\)</span> which is also the complex number <span class="process-math">\(x\text{,}\)</span> corresponds to the ordered pair <span class="process-math">\((x,0)\text{.}\)</span> A complex number that corresponds to an ordered pair <span class="process-math">\((0,y)\)</span> is called <dfn class="terminology">(pure) imaginary</dfn>. The complex number <span class="process-math">\(i\)</span> corresponds to the ordered pair <span class="process-math">\((0,1)\text{.}\)</span> Here is a summary so far.</p>
+<div class="displaymath process-math" id="md-1">
 \begin{align*}
 z \amp \leftrightarrow (\re(z),\im(z))\\
 x\in \R \amp \leftrightarrow (x,0)\\
@@ -165,112 +171,111 @@ i \amp \leftrightarrow (0,1)
 </div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span>
 </h3>
-<figure class="figure figure-like" id="norm_and_arg_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/norm_and_arg.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span>Norm and argument of a complex number are polar coordinates.</figcaption></figure><p id="p-24">Given a complex number \(z\leftrightarrow (x,y)\text{,}\) let \((r,\theta)\) be polar coordinates for the point \((x,y)\) such that \(r\geq 0\) and \(\theta\) is measured in radians. The <dfn class="terminology">modulus</dfn> or <dfn class="terminology">norm</dfn> of \(z\text{,}\) denoted \(|z|\) , is defined to be the polar coordinate \(r=\sqrt{x^2+y^2}\) and the <dfn class="terminology">argument</dfn> of \(z\text{,}\) denoted \(\arg(z)\) , is the polar coordinate \(\theta\text{,}\) that is, the oriented angle made by the real vector \((x,y)\) with the positive real axis. In other words, \((|z|,\arg{z})\) are polar coordinates for the point \((x,y)\text{.}\) See <a class="xref" data-knowl="./knowl/norm_and_arg_fig.html" title="Figure 1.1.1">Figure 1.1.1</a>. Here is a summary.</p>
-<article class="assemblage assemblage-like" id="assemblage-1"><h6 class="heading"><span class="title">Norm and argument.</span></h6>
-<div class="displaymath" id="p-25">
+<figure class="figure figure-like" id="norm_and_arg_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/norm_and_arg.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span>Norm and argument of a complex number are polar coordinates.</figcaption></figure><p id="p-24">Given a complex number <span class="process-math">\(z\leftrightarrow (x,y)\text{,}\)</span> let <span class="process-math">\((r,\theta)\)</span> be polar coordinates for the point <span class="process-math">\((x,y)\)</span> such that <span class="process-math">\(r\geq 0\)</span> and <span class="process-math">\(\theta\)</span> is measured in radians. The <dfn class="terminology">modulus</dfn> or <dfn class="terminology">norm</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(|z|\)</span> , is defined to be the polar coordinate <span class="process-math">\(r=\sqrt{x^2+y^2}\)</span> and the <dfn class="terminology">argument</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\arg(z)\)</span> , is the polar coordinate <span class="process-math">\(\theta\text{,}\)</span> that is, the oriented angle made by the real vector <span class="process-math">\((x,y)\)</span> with the positive real axis. In other words, <span class="process-math">\((|z|,\arg{z})\)</span> are polar coordinates for the point <span class="process-math">\((x,y)\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/norm_and_arg_fig.html" title="Figure 1.1.1">Figure 1.1.1</a>. Here is a summary.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><h4 class="heading"><span class="title">Norm and argument.</span></h4>
+<div class="displaymath process-math" id="normargdef">
 \begin{equation}
-z\leftrightarrow (x,y) = \left(|z|\cos( \arg{z}),|z|\sin(\arg{z})\right) \label{normargdef}\tag{1.1.1}
+z\leftrightarrow (x,y) = \left(|z|\cos( \arg{z}),|z|\sin(\arg{z})\right) \tag{1.1.1}
 \end{equation}
 </div></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span>
 </h3>
-<p id="p-26">Given complex numbers \(z\leftrightarrow (x,y)\) and \(z'\leftrightarrow
-(x',y')\text{,}\) the sum \(z+z'\) is defined by the following.</p>
-<article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">Complex addition.</span></h6>
-<div class="displaymath" id="p-27">
+<p id="p-26">Given complex numbers <span class="process-math">\(z\leftrightarrow (x,y)\)</span> and <span class="process-math">\(z'\leftrightarrow
+(x',y')\text{,}\)</span> the sum <span class="process-math">\(z+z'\)</span> is defined by the following.</p>
+<article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Complex addition.</span></h4>
+<div class="displaymath process-math" id="complexadddef">
 \begin{equation}
-z+z' \leftrightarrow (x+x',y+y')\label{complexadddef}\tag{1.1.2}
+z+z' \leftrightarrow (x+x',y+y')\tag{1.1.2}
 \end{equation}
-</div></article><p id="p-28">In other words, complex addition corresponds to real vector addition. See <a class="xref" data-knowl="./knowl/parallelogramlawfig.html" title="Figure 1.1.2">Figure 1.1.2</a>. <figure class="figure figure-like" id="parallelogramlawfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/parallelogramlaw_clip.jpg" class="contained" alt=""></div>
+</div></article><p id="p-28">In other words, complex addition corresponds to real vector addition. See <a href="" class="xref" data-knowl="./knowl/parallelogramlawfig.html" title="Figure 1.1.2">Figure 1.1.2</a>. <figure class="figure figure-like" id="parallelogramlawfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/parallelogramlaw_clip.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span>Complex addition is vector addition</figcaption></figure></p>
-<p id="p-29">The product \(zz'\) is defined as follows.</p>
-<article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">Complex multiplication.</span></h6>
-<div class="displaymath" id="p-30">
+<p id="p-29">The product <span class="process-math">\(zz'\)</span> is defined as follows.</p>
+<article class="assemblage assemblage-like" id="assemblage-3"><h4 class="heading"><span class="title">Complex multiplication.</span></h4>
+<div class="displaymath process-math" id="mdn-1">
 \begin{align}
-|zz'| \amp = |z||z'|\label{complexmultdefnorm}\tag{1.1.3}\\
-\arg(zz') \amp = \arg{z}+\arg{z'}\label{complexmultdefarg}\tag{1.1.4}
+|zz'| \amp = |z||z'|\tag{1.1.3}\\
+\arg(zz') \amp = \arg{z}+\arg{z'}\tag{1.1.4}
 \end{align}
-</div></article><p id="p-31">The interaction between complex addition and multiplication is expressed by the following relationship, which holds for any complex \(z,u,v\text{.}\) See <a class="xref" data-knowl="./knowl/distlawfig.html" title="Figure 1.1.3">Figure 1.1.3</a>.</p>
-<article class="assemblage assemblage-like" id="assemblage-4"><h6 class="heading"><span class="title">Distributive law.</span></h6>
-<div class="displaymath" id="p-32">
+</div></article><p id="p-31">The interaction between complex addition and multiplication is expressed by the following relationship, which holds for any complex <span class="process-math">\(z,u,v\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/distlawfig.html" title="Figure 1.1.3">Figure 1.1.3</a>.</p>
+<article class="assemblage assemblage-like" id="assemblage-4"><h4 class="heading"><span class="title">Distributive law.</span></h4>
+<div class="displaymath process-math" id="distributivelaw">
 \begin{equation}
-z(u+v) = zu+zv \label{distributivelaw}\tag{1.1.5}
+z(u+v) = zu+zv \tag{1.1.5}
 \end{equation}
-</div></article><figure class="figure figure-like" id="distlawfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/distlaw_clip.jpg" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span>The distributive law: multiplication by \(z\) rotates the vectors \(u\text{,}\) \(v\text{,}\) and \(u+v\) by angle \(\arg z\) and scales by the factor \(|z|\text{.}\)</figcaption></figure><p id="p-33">Below are a number of relationships arising from the definitions of complex addition and multiplication. Let \(a,b,c,d\) be real numbers and let \(z,u,v\) be complex numbers. The following relationships hold. <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
-<div class="displaymath">
+</div></article><figure class="figure figure-like" id="distlawfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/distlaw_clip.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span>The distributive law: multiplication by <span class="process-math">\(z\)</span> rotates the vectors <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(v\text{,}\)</span> and <span class="process-math">\(u+v\)</span> by angle <span class="process-math">\(\arg z\)</span> and scales by the factor <span class="process-math">\(|z|\text{.}\)</span></figcaption></figure><p id="p-33">Below are a number of relationships arising from the definitions of complex addition and multiplication. Let <span class="process-math">\(a,b,c,d\)</span> be real numbers and let <span class="process-math">\(z,u,v\)</span> be complex numbers. The following relationships hold. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a></p>
+<div class="displaymath process-math" id="mdn-2">
 \begin{align}
 a+ib \amp \leftrightarrow (a,b)\tag{1.1.6}\\
-a+b \;\;\text{(complex sum)} \amp= a+b \;\;\text{(real sum)}\label{addextends}\tag{1.1.7}\\
-ab \;\;\text{(complex product)} \amp = ab \;\;\text{(real product)}\label{multextends}\tag{1.1.8}\\
-|a| \;\;\text{(complex norm)} \amp = |a| \;\;\text{(real absolute value)}\label{normextends}\tag{1.1.9}\\
-1z \amp = z1 = z \label{multidentity}\tag{1.1.10}\\
-i^2 \amp = -1\label{i2isminus1}\tag{1.1.11}\\
+a+b \;\;\text{(complex sum)} \amp= a+b \;\;\text{(real sum)}\tag{1.1.7}\\
+ab \;\;\text{(complex product)} \amp = ab \;\;\text{(real product)}\tag{1.1.8}\\
+|a| \;\;\text{(complex norm)} \amp = |a| \;\;\text{(real absolute value)}\tag{1.1.9}\\
+1z \amp = z1 = z \tag{1.1.10}\\
+i^2 \amp = -1\tag{1.1.11}\\
 (a+ib)+ (c+id) \amp = (a+c) + i(b+d)\tag{1.1.12}\\
-(a+ib)(c+id) \amp = (ac-bd) + i(ad+bc)\label{complexmultrectangular}\tag{1.1.13}
+(a+ib)(c+id) \amp = (ac-bd) + i(ad+bc)\tag{1.1.13}
 \end{align}
-</div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Equations <a class="xref" data-knowl="./knowl/addextends.html" title="Equation 1.1.7">(1.1.7)</a>, <a class="xref" data-knowl="./knowl/multextends.html" title="Equation 1.1.8">(1.1.8)</a>, and <a class="xref" data-knowl="./knowl/normextends.html" title="Equation 1.1.9">(1.1.9)</a> say that complex addition, multiplication, and norm <em class="emphasis">extend</em> the corresponding operations on the reals. Equation <a class="xref" data-knowl="./knowl/multidentity.html" title="Equation 1.1.10">(1.1.10)</a> is expressed by saying 1 is the <em class="emphasis">multiplicative identity</em>.</div></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span>
 </h3>
-<p id="p-34">The Taylor series for the real function \(y=e^x\) is</p>
-<div class="displaymath">
+<p id="p-34">The Taylor series for the real function <span class="process-math">\(y=e^x\)</span> is</p>
+<div class="displaymath process-math">
 \begin{equation*}
 e^x = 1 +x +\frac{x^2}{2} +\frac{x^3}{3!} + \cdots .
 \end{equation*}
 </div>
 <p class="continuation">Convergence for sequences and series of complex numbers can be defined in a way that naturally extends the definitions for real numbers. It turns out that the complex power series</p>
-<div class="displaymath">
+<div class="displaymath process-math">
 \begin{equation*}
 1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots 
 \end{equation*}
 </div>
-<p class="continuation">converges for every <em class="emphasis">complex</em> number \(z\text{,}\) so we define the <em class="emphasis">complex</em> exponential function by</p>
-<div class="displaymath">
+<p class="continuation">converges for every <em class="emphasis">complex</em> number <span class="process-math">\(z\text{,}\)</span> so we define the <em class="emphasis">complex</em> exponential function by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 e^z= 1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots .
 \end{equation*}
 </div>
-<p class="continuation">The complex exponential obeys familiar laws of the real exponential. For \(z,w\) in \(\C\text{,}\) we have</p>
-<div class="displaymath">
+<p class="continuation">The complex exponential obeys familiar laws of the real exponential. For <span class="process-math">\(z,w\)</span> in <span class="process-math">\(\C\text{,}\)</span> we have</p>
+<div class="displaymath process-math" id="md-2">
 \begin{align*}
 e^ze^w \amp = e^{z+w}\\
 e^0 \amp =1
 \end{align*}
 </div>
 <p class="continuation">A key property of the complex exponential is the following, called <dfn class="terminology">Euler's formula</dfn>.</p>
-<article class="assemblage assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">Euler's formula.</span></h6>
-<div class="displaymath" id="p-35">
+<article class="assemblage assemblage-like" id="assemblage-5"><h4 class="heading"><span class="title">Euler's formula.</span></h4>
+<div class="displaymath process-math" id="eulersformula">
 \begin{equation}
-e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}\label{eulersformula}\tag{1.1.14}
+e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}\tag{1.1.14}
 \end{equation}
-</div></article><p id="p-36">For \(z\) with \(r=|z|\) and \(t=\arg(z)\text{,}\) the expression \(z=re^{it}\) is called the <dfn class="terminology">polar form</dfn> for \(z\text{.}\) By contrast, we call \(z=x+iy\) the <dfn class="terminology">rectangular form</dfn> (or the <dfn class="terminology">Cartesian form</dfn> ) for \(z\text{.}\) <a class="xref" data-knowl="./knowl/zxyrthetafig.html" title="Figure 1.1.4">Figure 1.1.4</a> shows a summary of the geometric content of the rectangular and polar forms for a complex number \(z\text{.}\)</p>
-<p id="p-37">Here is how complex multiplication looks in polar form. For \(z=re^{i\theta},
-w=se^{i\phi}\text{,}\) we have</p>
-<div class="displaymath">
+</div></article><p id="p-36">For <span class="process-math">\(z\)</span> with <span class="process-math">\(r=|z|\)</span> and <span class="process-math">\(t=\arg(z)\text{,}\)</span> the expression <span class="process-math">\(z=re^{it}\)</span> is called the <dfn class="terminology">polar form</dfn> for <span class="process-math">\(z\text{.}\)</span> By contrast, we call <span class="process-math">\(z=x+iy\)</span> the <dfn class="terminology">rectangular form</dfn> (or the <dfn class="terminology">Cartesian form</dfn> ) for <span class="process-math">\(z\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/zxyrthetafig.html" title="Figure 1.1.4">Figure 1.1.4</a> shows a summary of the geometric content of the rectangular and polar forms for a complex number <span class="process-math">\(z\text{.}\)</span></p>
+<p id="p-37">Here is how complex multiplication looks in polar form. For <span class="process-math">\(z=re^{i\theta},
+w=se^{i\phi}\text{,}\)</span> we have</p>
+<div class="displaymath process-math" id="complexmultpolar">
 \begin{equation}
-zw = (re^{i\theta})(se^{i\phi}) = rse^{i(\theta + \phi)}.\label{complexmultpolar}\tag{1.1.15}
+zw = (re^{i\theta})(se^{i\phi}) = rse^{i(\theta + \phi)}.\tag{1.1.15}
 \end{equation}
 </div>
-<p class="continuation">From this it is easy to see that for \(r\neq 0\text{,}\) we have</p>
-<div class="displaymath">
+<p class="continuation">From this it is easy to see that for <span class="process-math">\(r\neq 0\text{,}\)</span> we have</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \left(re^{i\theta}\right)\; \left(\frac{1}{r}e^{-i\theta}\right) = 1.
 \end{equation*}
 </div>
-<p class="continuation">For \(z=re^{i\theta}\) with \(r\neq 0\text{,}\) we call \(\frac{1}{r}e^{-i\theta}\) the <dfn class="terminology">multiplicative inverse</dfn> of \(z\text{,}\) denoted \({1}/{z}\) or \(z^{-1}\text{.}\)</p>
-<figure class="figure figure-like" id="zxyrthetafig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/zxyrtheta_clip.jpg" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>Rectangular and polar forms for a complex number  \(z\)</figcaption></figure></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<p class="continuation">For <span class="process-math">\(z=re^{i\theta}\)</span> with <span class="process-math">\(r\neq 0\text{,}\)</span> we call <span class="process-math">\(\frac{1}{r}e^{-i\theta}\)</span> the <dfn class="terminology">multiplicative inverse</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\({1}/{z}\)</span> or <span class="process-math">\(z^{-1}\text{.}\)</span></p>
+<figure class="figure figure-like" id="zxyrthetafig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/zxyrtheta_clip.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>Rectangular and polar forms for a complex number  <span class="process-math">\(z\)</span></figcaption></figure></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Conjugation</span>
 </h3>
-<p id="p-38">The <dfn class="terminology">conjugate</dfn> of the complex number \(z=x+iy=re^{i\theta}\text{,}\) denoted \(\overline{z}\) or \(z^\ast\) , is defined to be \(z^\ast = x-iy =
-re^{-i\theta}\text{.}\) Geometrically, \(z^\ast\) is the reflection of \(z\) across the real axis (the \(x\)-axis) in \(\R^2\text{.}\) Here are some relations involving conjugates.</p>
-<div class="displaymath">
+<p id="p-38">The <dfn class="terminology">conjugate</dfn> of the complex number <span class="process-math">\(z=x+iy=re^{i\theta}\text{,}\)</span> denoted <span class="process-math">\(\overline{z}\)</span> or <span class="process-math">\(z^\ast\)</span> , is defined to be <span class="process-math">\(z^\ast = x-iy =
+re^{-i\theta}\text{.}\)</span> Geometrically, <span class="process-math">\(z^\ast\)</span> is the reflection of <span class="process-math">\(z\)</span> across the real axis (the <span class="process-math">\(x\)</span>-axis) in <span class="process-math">\(\R^2\text{.}\)</span> Here are some relations involving conjugates.</p>
+<div class="displaymath process-math" id="mdn-3">
 \begin{align}
-\re(z) \amp = \frac{z + z^\ast}{2}\label{realpartformula}\tag{1.1.16}\\
-\im(z) \amp = \frac{z - z^\ast}{2i}\label{imagpartformula}\tag{1.1.17}\\
-|z|^2 \amp = zz^\ast\label{zzbarisnormsq}\tag{1.1.18}\\
+\re(z) \amp = \frac{z + z^\ast}{2}\tag{1.1.16}\\
+\im(z) \amp = \frac{z - z^\ast}{2i}\tag{1.1.17}\\
+|z|^2 \amp = zz^\ast\tag{1.1.18}\\
 2\arg z \amp = \frac{z}{z^\ast} \;\;\text{(for $z\neq 0$)}\tag{1.1.19}\\
 \frac{1}{z}
 \amp = \frac{z^\ast}{zz^\ast}= \frac{z^\ast}{|z|^2} \;\;\text{(for $z\neq 0$)}\tag{1.1.20}\\
@@ -279,69 +284,69 @@ re^{-i\theta}\text{.}\) Geometrically, \(z^\ast\) is the reflection of \(z\) acr
 </div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span>
 </h3>
-<p id="p-39">Let \(C\) be the circle of radius \(r\gt 0\) and with center \(a\in \C\text{.}\) A point \(z\) lies on \(C\) if and only if the distance from \(z\) to \(a\) equals \(r\text{.}\) In mathematical symbols, \(C\) is the set of solutions \(z\) for the following equation.</p>
-<div class="displaymath">
+<p id="p-39">Let <span class="process-math">\(C\)</span> be the circle of radius <span class="process-math">\(r\gt 0\)</span> and with center <span class="process-math">\(a\in \C\text{.}\)</span> A point <span class="process-math">\(z\)</span> lies on <span class="process-math">\(C\)</span> if and only if the distance from <span class="process-math">\(z\)</span> to <span class="process-math">\(a\)</span> equals <span class="process-math">\(r\text{.}\)</span> In mathematical symbols, <span class="process-math">\(C\)</span> is the set of solutions <span class="process-math">\(z\)</span> for the following equation.</p>
+<div class="displaymath process-math" id="circleeqn">
 \begin{equation}
-|z-a|=r\label{circleeqn}\tag{1.1.22}
+|z-a|=r\tag{1.1.22}
 \end{equation}
 </div>
-<p id="p-40">The real line \(\R\) is the set of solutions \(z\) of the equation \(\im(z)=0\text{.}\) More generally, let \(L\) be a line that contains the point \(p\in \C\) and makes an angle \(\theta\) with the real axis (set \(\theta=0\) if \(L\) is parallel to the real axis). If \(z\in L\text{,}\) then \(e^{-i\theta}(z-p)\) is real, so \(\im(e^{-i\theta}(z-p))=0\text{.}\) See <a class="xref" data-knowl="./knowl/lines_in_complex_plane_fig.html" title="Figure 1.1.5">Figure 1.1.5</a>. Conversely, if \(e^{-i\theta}(z-p)\) is real, then \(z\) lies on \(L\text{.}\) Multiplying by a positive constant \(k\text{,}\) and setting \(a=ke^{-i\theta}\) and \(b=-ke^{-i\theta}p\text{,}\) we conclude that the line \(L\) is the set of solutions to the following equation.</p>
-<div class="displaymath">
+<p id="p-40">The real line <span class="process-math">\(\R\)</span> is the set of solutions <span class="process-math">\(z\)</span> of the equation <span class="process-math">\(\im(z)=0\text{.}\)</span> More generally, let <span class="process-math">\(L\)</span> be a line that contains the point <span class="process-math">\(p\in \C\)</span> and makes an angle <span class="process-math">\(\theta\)</span> with the real axis (set <span class="process-math">\(\theta=0\)</span> if <span class="process-math">\(L\)</span> is parallel to the real axis). If <span class="process-math">\(z\in L\text{,}\)</span> then <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, so <span class="process-math">\(\im(e^{-i\theta}(z-p))=0\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/lines_in_complex_plane_fig.html" title="Figure 1.1.5">Figure 1.1.5</a>. Conversely, if <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, then <span class="process-math">\(z\)</span> lies on <span class="process-math">\(L\text{.}\)</span> Multiplying by a positive constant <span class="process-math">\(k\text{,}\)</span> and setting <span class="process-math">\(a=ke^{-i\theta}\)</span> and <span class="process-math">\(b=-ke^{-i\theta}p\text{,}\)</span> we conclude that the line <span class="process-math">\(L\)</span> is the set of solutions to the following equation.</p>
+<div class="displaymath process-math" id="lineeqn">
 \begin{equation}
-\im(az+b)=0\label{lineeqn}\tag{1.1.23}
+\im(az+b)=0\tag{1.1.23}
 \end{equation}
 </div>
-<figure class="figure figure-like" id="lines_in_complex_plane_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/lines_in_complex_plane.png" class="contained" alt=""></div>
+<figure class="figure figure-like" id="lines_in_complex_plane_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/lines_in_complex_plane.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>A line in the complex plane.</figcaption></figure></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.1.7</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>What is the difference between polar coordinates and polar form? What is the difference between rectangular coordinates and rectangular form?  Write formulas for converting from polar to rectangular coordinates and vice-versa.<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-41">Let \(z\) be a complex number, let \(x=\re(z)\text{,}\) \(y=\im(z)\text{,}\) \(r=|z|\) and \(\theta = \arg(z)\text{.}\)  The pair \((r,\theta)\) is called the polar coordinates for \(z\text{,}\) while the expression \(re^{i\theta}\) is called the polar form for \(z\text{.}\)  The pair \((x,y)\) is called the rectangular coordinates for \(z\text{,}\) while the expression \(x+iy\) is called the rectangular form for \(z\text{.}\)</p>
-<p id="p-42">To convert from polar to rectangular, use the equations \(x=r\cos \theta,
-y=r\sin \theta\) (show sketches to explain these formulas).  To convert from rectangular to polar, use \(r=\sqrt{x^2+y^2}\) and \(\tan \theta =
-y/x\text{.}\)  For the last equation, you must use judgment when \(x=0\) to decide whether \(\theta\) should be \(\pi/2\) or \(-\pi/2\text{.}\)  You must also use judgment when calculating \(\theta = \arctan (y/x)\text{.}\) The standard codomain for \(\arctan\) is the interval \((\pi/2,\pi/2)\text{,}\) so you need to use \(\theta = \arctan (y/x) + \pi\) for \(x\lt 0\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>What is the difference between polar coordinates and polar form? What is the difference between rectangular coordinates and rectangular form?  Write formulas for converting from polar to rectangular coordinates and vice-versa.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-41">Let <span class="process-math">\(z\)</span> be a complex number, let <span class="process-math">\(x=\re(z)\text{,}\)</span> <span class="process-math">\(y=\im(z)\text{,}\)</span> <span class="process-math">\(r=|z|\)</span> and <span class="process-math">\(\theta = \arg(z)\text{.}\)</span>  The pair <span class="process-math">\((r,\theta)\)</span> is called the polar coordinates for <span class="process-math">\(z\text{,}\)</span> while the expression <span class="process-math">\(re^{i\theta}\)</span> is called the polar form for <span class="process-math">\(z\text{.}\)</span>  The pair <span class="process-math">\((x,y)\)</span> is called the rectangular coordinates for <span class="process-math">\(z\text{,}\)</span> while the expression <span class="process-math">\(x+iy\)</span> is called the rectangular form for <span class="process-math">\(z\text{.}\)</span></p>
+<p id="p-42">To convert from polar to rectangular, use the equations <span class="process-math">\(x=r\cos \theta,
+y=r\sin \theta\)</span> (show sketches to explain these formulas).  To convert from rectangular to polar, use <span class="process-math">\(r=\sqrt{x^2+y^2}\)</span> and <span class="process-math">\(\tan \theta =
+y/x\text{.}\)</span>  For the last equation, you must use judgment when <span class="process-math">\(x=0\)</span> to decide whether <span class="process-math">\(\theta\)</span> should be <span class="process-math">\(\pi/2\)</span> or <span class="process-math">\(-\pi/2\text{.}\)</span>  You must also use judgment when calculating <span class="process-math">\(\theta = \arctan (y/x)\text{.}\)</span> The standard codomain for <span class="process-math">\(\arctan\)</span> is the interval <span class="process-math">\((\pi/2,\pi/2)\text{,}\)</span> so you need to use <span class="process-math">\(\theta = \arctan (y/x) + \pi\)</span> for <span class="process-math">\(x\lt 0\text{.}\)</span></p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>Express each of the following in rectangular and polar form. <ol class="lower-alpha">
-<li id="li-6">\(\displaystyle 3(2-i) + 6(1+i)\)</li>
-<li id="li-7">\(\displaystyle \left(2e^{i\pi/6}\right)\left(3e^{-i\pi/3}\right)\)</li>
-<li id="li-8">\(\displaystyle (2+3i)(4-i)\)</li>
-<li id="li-9">\(\displaystyle (1+i)^3\)</li>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>Express each of the following in rectangular and polar form. <ol class="lower-alpha">
+<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(\displaystyle 3(2-i) + 6(1+i)\)</span></p></li>
+<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\displaystyle \left(2e^{i\pi/6}\right)\left(3e^{-i\pi/3}\right)\)</span></p></li>
+<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle (2+3i)(4-i)\)</span></p></li>
+<li id="li-9"><p id="p-derived-li-9"><span class="process-math">\(\displaystyle (1+i)^3\)</span></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol class="lower-alpha">
-<li id="li-10">\(\displaystyle 12+3i=\sqrt{153}\;e^{i\arctan(1/4)}\)</li>
-<li id="li-11">\(\displaystyle 6e^{-i\pi/6}=3\sqrt{3}-3i\)</li>
-<li id="li-12">\(\displaystyle 11+10i=\sqrt{221}\;e^{i\arctan(10/11)}\)</li>
-<li id="li-13">\(\displaystyle -2+2i=2\sqrt{2}\;e^{i3\pi/4}\)</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\displaystyle 12+3i=\sqrt{153}\;e^{i\arctan(1/4)}\)</span></p></li>
+<li id="li-11"><p id="p-derived-li-11"><span class="process-math">\(\displaystyle 6e^{-i\pi/6}=3\sqrt{3}-3i\)</span></p></li>
+<li id="li-12"><p id="p-derived-li-12"><span class="process-math">\(\displaystyle 11+10i=\sqrt{221}\;e^{i\arctan(10/11)}\)</span></p></li>
+<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\displaystyle -2+2i=2\sqrt{2}\;e^{i3\pi/4}\)</span></p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>Prove the following property of norm. <article class="assemblage assemblage-like" id="assemblage-6"><h6 class="heading"><span class="title">The triangle inequality.</span></h6>
-<p id="p-43">For any two complex numbers \(z,w\text{,}\) we have</p>
-<div class="displaymath">
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Prove the following property of norm. <article class="assemblage assemblage-like" id="assemblage-6"><h5 class="heading"><span class="title">The triangle inequality.</span></h5>
+<p id="p-43">For any two complex numbers <span class="process-math">\(z,w\text{,}\)</span> we have</p>
+<div class="displaymath process-math">
 \begin{equation*}
 |z+w|\leq |z|+|w|.
 \end{equation*}
 </div></article><div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
 <p id="p-44">The simplest approach is geometric: Sketch the parallelogram for vector addition and use the fact that the length of any side of a triangle is less than the sum of the lengths of the other two sides.</p>
-<p id="p-45">Here is one route to an algebraic proof: Let \(z=a+bi\text{,}\) \(w=c+di\text{.}\) Manipulate the triangle inequality (start by squaring both sides) to obtain</p>
-<div class="displaymath">
+<p id="p-45">Here is one route to an algebraic proof: Let <span class="process-math">\(z=a+bi\text{,}\)</span> <span class="process-math">\(w=c+di\text{.}\)</span> Manipulate the triangle inequality (start by squaring both sides) to obtain</p>
+<div class="displaymath process-math">
 \begin{equation*}
 2abcd \leq b^2c^2 + a^2d^2.
 \end{equation*}
 </div>
 <p class="continuation">This is the same as the clearly true statement</p>
-<div class="displaymath">
+<div class="displaymath process-math">
 \begin{equation*}
 0\leq  b^2c^2 + a^2d^2 - 2abcd = (bc-ad)^2.
 \end{equation*}
 </div>
 <p class="continuation">Conclude by observing that all steps of the derivation are reversible.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Prove <a class="xref" data-knowl="./knowl/zzbarisnormsq.html" title="Equation 1.1.18">(1.1.18)</a>.<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<p id="p-46">Let \(z=re^{i\theta}\text{.}\)  Then \(\overline{z}=re^{-i\theta}\text{,}\) and we have</p>
-<div class="displaymath">
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>Prove <a href="" class="xref" data-knowl="./knowl/zzbarisnormsq.html" title="Equation 1.1.18">(1.1.18)</a>.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-46">Let <span class="process-math">\(z=re^{i\theta}\text{.}\)</span>  Then <span class="process-math">\(\overline{z}=re^{-i\theta}\text{,}\)</span> and we have</p>
+<div class="displaymath process-math" id="md-3">
 \begin{align*}
 z\overline{z} \amp = re^{i\theta}re^{-i\theta}\\
 \amp = r^2 e^0\\
@@ -349,106 +354,107 @@ z\overline{z} \amp = re^{i\theta}re^{-i\theta}\\
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>Let \(p\) and \(q\) be complex numbers.  Prove that the distance (ordinary distance between points in the plane) between \(p\) and \(q\) is \(|p-q|\text{.}\)<div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-47">Use rectangular form.</p></div></div>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-48">Let \(p=a+ib\) and \(q=c+id\text{.}\) We have</p>
-<div class="displaymath">
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be complex numbers.  Prove that the distance (ordinary distance between points in the plane) between <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> is <span class="process-math">\(|p-q|\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-47">Use rectangular form.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-48">Let <span class="process-math">\(p=a+ib\)</span> and <span class="process-math">\(q=c+id\text{.}\)</span> We have</p>
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 |p-q| \amp = |(a+ib)-(c+id)| \\
 \amp = |(a-c)+i(b-d)|\\
 \amp = \sqrt{(a-c)^2 + (b-d)^2}.
 \end{align*}
 </div>
-<p class="continuation">The latter expression is the distance from \(p\) to \(q\text{,}\) so we are done.</p>
+<p class="continuation">The latter expression is the distance from <span class="process-math">\(p\)</span> to <span class="process-math">\(q\text{,}\)</span> so we are done.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>Express each of the following in rectangular and polar form. <ol class="lower-alpha">
-<li id="li-14">\(\displaystyle \displaystyle \frac{2+i}{3-i}\)</li>
-<li id="li-15">\(\displaystyle \displaystyle \frac{1+2i}{1-2i}\)</li>
-<li id="li-16">\(\displaystyle \displaystyle \frac{2e^{i\pi/4}}{3e^{-i\pi/2}}\)</li>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>Express each of the following in rectangular and polar form. <ol class="lower-alpha">
+<li id="li-14"><p id="p-derived-li-14"><span class="process-math">\(\displaystyle \displaystyle \frac{2+i}{3-i}\)</span></p></li>
+<li id="li-15"><p id="p-derived-li-15"><span class="process-math">\(\displaystyle \displaystyle \frac{1+2i}{1-2i}\)</span></p></li>
+<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\displaystyle \displaystyle \frac{2e^{i\pi/4}}{3e^{-i\pi/2}}\)</span></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><ol class="lower-alpha">
-<li id="li-17">\(\displaystyle \displaystyle \frac{1}{2} + \frac{1}{2}i=\frac{\sqrt{2}}{2}e^{i\pi/4}\)</li>
-<li id="li-18">\(\displaystyle \displaystyle -\frac{3}{5} +\frac{4}{5}i=e^{i(\arctan(-4/3)+\pi)}\)</li>
-<li id="li-19">\(\displaystyle \displaystyle \frac{2}{3}e^{i3\pi/4}=-\frac{\sqrt{2}}{3} +
-\frac{\sqrt{2}}{3}i\)</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(\displaystyle \displaystyle \frac{1}{2} + \frac{1}{2}i=\frac{\sqrt{2}}{2}e^{i\pi/4}\)</span></p></li>
+<li id="li-18"><p id="p-derived-li-18"><span class="process-math">\(\displaystyle \displaystyle -\frac{3}{5} +\frac{4}{5}i=e^{i(\arctan(-4/3)+\pi)}\)</span></p></li>
+<li id="li-19"><p id="p-derived-li-19"><span class="process-math">\(\displaystyle \displaystyle \frac{2}{3}e^{i3\pi/4}=-\frac{\sqrt{2}}{3} +
+\frac{\sqrt{2}}{3}i\)</span></p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>Verify the formulas <a class="xref" data-knowl="./knowl/realpartformula.html" title="Equation 1.1.16">(1.1.16)</a> and <a class="xref" data-knowl="./knowl/imagpartformula.html" title="Equation 1.1.17">(1.1.17)</a>.<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-49">Let \(z=x+iy\text{.}\)  Then we have</p>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>Verify the formulas <a href="" class="xref" data-knowl="./knowl/realpartformula.html" title="Equation 1.1.16">(1.1.16)</a> and <a href="" class="xref" data-knowl="./knowl/imagpartformula.html" title="Equation 1.1.17">(1.1.17)</a>.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-49">Let <span class="process-math">\(z=x+iy\text{.}\)</span>  Then we have</p>
 <ul class="disc">
-<li id="li-20">\(\displaystyle \frac{z+\overline{z}}{2}= \frac{2x}{2}=x=\re(z)\text{,}\) and</li>
-<li id="li-21">\(\displaystyle
-\frac{z-\overline{z}}{2i}=\frac{2iy}{2i}=y=\im(z)\text{.}\)</li>
+<li id="li-20"><p id="p-derived-li-20"><span class="process-math">\(\displaystyle \frac{z+\overline{z}}{2}= \frac{2x}{2}=x=\re(z)\text{,}\)</span> and</p></li>
+<li id="li-21"><p id="p-derived-li-21"><span class="process-math">\(\displaystyle
+\frac{z-\overline{z}}{2i}=\frac{2iy}{2i}=y=\im(z)\text{.}\)</span></p></li>
 </ul>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>Given a nonzero complex number \(z\text{,}\) explain why \(z\) has exactly two square roots, and explain how to find them.<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-50">Since squaring a number squares the norm and doubles the argument, a square root can be found by taking the square root of the norm and dividing the argument by two.  That is, for \(z=re^{i\theta}\text{,}\) a square root of \(z\) is \(\sqrt{r}e^{i\theta/2}\text{.}\)  Another square root of \(z\) is the negative of that expression.  Any other square root of \(z\) would have to have norm \(\sqrt{|z|}\) and argument \(\theta/2\) plus or minus an integer multiple of \(\pi\text{,}\) so these must be all the square roots of \(z\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>Find all complex solutions of the following equations. <ol class="lower-alpha">
-<li id="li-22">\(\displaystyle \displaystyle z^2 + 3z + 5 = 0\)</li>
-<li id="li-23">\(\displaystyle (z - i)(z + i) = 1\)</li>
-<li id="li-24">\(\displaystyle \displaystyle \frac{2z + i}{-z+3i} = z\)</li>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>Given a nonzero complex number <span class="process-math">\(z\text{,}\)</span> explain why <span class="process-math">\(z\)</span> has exactly two square roots, and explain how to find them.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-50">Since squaring a number squares the norm and doubles the argument, a square root can be found by taking the square root of the norm and dividing the argument by two.  That is, for <span class="process-math">\(z=re^{i\theta}\text{,}\)</span> a square root of <span class="process-math">\(z\)</span> is <span class="process-math">\(\sqrt{r}e^{i\theta/2}\text{.}\)</span>  Another square root of <span class="process-math">\(z\)</span> is the negative of that expression.  Any other square root of <span class="process-math">\(z\)</span> would have to have norm <span class="process-math">\(\sqrt{|z|}\)</span> and argument <span class="process-math">\(\theta/2\)</span> plus or minus an integer multiple of <span class="process-math">\(\pi\text{,}\)</span> so these must be all the square roots of <span class="process-math">\(z\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>Find all complex solutions of the following equations. <ol class="lower-alpha">
+<li id="li-22"><p id="p-derived-li-22"><span class="process-math">\(\displaystyle \displaystyle z^2 + 3z + 5 = 0\)</span></p></li>
+<li id="li-23"><p id="p-derived-li-23"><span class="process-math">\(\displaystyle (z - i)(z + i) = 1\)</span></p></li>
+<li id="li-24"><p id="p-derived-li-24"><span class="process-math">\(\displaystyle \displaystyle \frac{2z + i}{-z+3i} = z\)</span></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><ol class="lower-alpha">
-<li id="li-25">\(\displaystyle \displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}\)</li>
-<li id="li-26">\(\displaystyle 0\)</li>
-<li id="li-27">\(\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
-281^{1/4}\sin \varphi)]\text{,}\) where \(\varphi=(\arctan(16/5)+\pi)/2\)</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-25"><p id="p-derived-li-25"><span class="process-math">\(\displaystyle \displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}\)</span></p></li>
+<li id="li-26"><p id="p-derived-li-26"><span class="process-math">\(\displaystyle 0\)</span></p></li>
+<li id="li-27"><p id="p-derived-li-27"><span class="process-math">\(\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
+281^{1/4}\sin \varphi)]\text{,}\)</span> where <span class="process-math">\(\varphi=(\arctan(16/5)+\pi)/2\)</span></p></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>Use the fact that \(e^{ia}e^{ib}=e^{i(a+b)}\) together with Euler's formula \(e^{i\theta}=\cos\theta + i\sin\theta\) to derive the trigonometric angle sum formulas below.<div class="displaymath">
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>Use the fact that <span class="process-math">\(e^{ia}e^{ib}=e^{i(a+b)}\)</span> together with Euler's formula <span class="process-math">\(e^{i\theta}=\cos\theta + i\sin\theta\)</span> to derive the trigonometric angle sum formulas below.<div class="displaymath process-math" id="md-5">
 \begin{align*}
 \cos(a+b) \amp = \cos a \cos b -\sin a \sin b\\
 \sin(a+b) \amp = \cos a \sin b + \sin a \cos b
 \end{align*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
 <p id="p-51">Using Euler's formula for the first equality below, and then using complex multiplication for the second equality, we have</p>
-<div class="displaymath">
+<div class="displaymath process-math" id="mdn-4">
 \begin{align}
 e^{ia}e^{ib} \amp = (\cos a + i\sin a)(\cos b + i\sin b)\notag\\
-\amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).\label{localtag1}\tag{\(\star\)}
+\amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).\tag{✶}
 \end{align}
 </div>
 <p class="continuation">On the other hand, Euler's formula also gives</p>
-<div class="displaymath">
+<div class="displaymath process-math" id="mdn-5">
 \begin{gather}
 e^{i(a+b)}= \cos(a+b) + i\sin
-(a+b).\label{localtag2}\tag{\(\star\star\)}
+(a+b).\tag{✶✶}
 \end{gather}
 </div>
-<p class="continuation">Equating real and and imaginary parts of <a class="xref" data-knowl="./knowl/localtag1.html" title="Equation">(\(\star\))</a> and <a class="xref" data-knowl="./knowl/localtag2.html" title="Equation">(\(\star\star\))</a> gives the desired trigonometric identities.</p>
+<p class="continuation">Equating real and and imaginary parts of <a href="" class="xref" data-knowl="./knowl/localtag1.html" title="Equation">(✶)</a> and <a href="" class="xref" data-knowl="./knowl/localtag2.html" title="Equation">(✶✶)</a> gives the desired trigonometric identities.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="complexcircleslines"><h6 class="heading">
+</div></article><article class="exercise exercise-like" id="complexcircleslines"><h4 class="heading">
 <span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Circles and lines.</span>
-</h6>
+</h4>
 <ol id="p-52" class="lower-alpha">
-<li id="li-28">For a real variable \(x\) and a real constant \(a\text{,}\) <em class="emphasis">completing the square</em> refers to rewriting the expression \(x^2 - 2ax\) as follows.<div class="displaymath">
+<li id="li-28"><p id="p-derived-li-28">For a real variable <span class="process-math">\(x\)</span> and a real constant <span class="process-math">\(a\text{,}\)</span> <em class="emphasis">completing the square</em> refers to rewriting the expression <span class="process-math">\(x^2 - 2ax\)</span> as follows.<div class="displaymath process-math">
 \begin{equation*}
 x^2-2ax = x^2-2ax +a^2 - a^2 = \left(x-a\right)^2
 -a^2.
 \end{equation*}
-</div>A complex version of completing the square for a complex variable \(z\) and a complex constant \(a\) is the following.<div class="displaymath">
+</div>A complex version of completing the square for a complex variable <span class="process-math">\(z\)</span> and a complex constant <span class="process-math">\(a\)</span> is the following.<div class="displaymath process-math" id="complexcompletesquare">
 \begin{equation}
 |z|^2-2\re(za^\ast)=|z-a|^2
--|a|^2\label{complexcompletesquare}\tag{1.1.24}
+-|a|^2\tag{1.1.24}
 \end{equation}
-</div>Write a derivation to justify this. Then use completing the square to find the center and radius of the circle given by the equation \(|z|^2 -iz +iz^\ast -5=0\text{.}\)</li>
-<li id="li-29">Write an alternative proof for the general form for the equation of a line <a class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>, as follows. Let \(a=u+iv\text{,}\) \(b=r+is\text{,}\) \(z=x+iy\text{.}\) Find the equation of the line \(\im(az+b)=0\) in terms of the real variables \(x,y\) and real constants \(u,v,r,s\text{.}\) Explain why it is necessary that \(a\neq 0\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="complexnosasrealmatalg"><h6 class="heading">
-<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Complex numbers as \(2\times 2\) real matrices.</span>
-</h6>
-<p id="p-54">Let \({\mathcal M}_\C\) denote the set of \(2\times
-2\) matrices of the form \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) with \(a,b\in \R\text{.}\) Given a complex number \(z\) with Cartesian form  \(z=a+bi\text{,}\) let \(M(z)\) denote the matrix in \(\left[\begin{array}{cc}a\amp
-b\\-b\amp a\end{array}\right]\) in \({\mathcal
-M}_\C\text{.}\) Conversely, given a matrix \(M\in {\mathcal M}_\C\) with top left entry \(a\) and top right entry \(b\text{,}\) let \(C(M)\) denote the complex number \(a+bi\text{.}\) It is clear that the mappings \(z\to M(z)\) and \(M\to C(M)\) are inverses to one another, and establish a one-to-one correspondence \(\C\leftrightarrow {\mathcal M}_\C\text{.}\)</p>
+</div>Write a derivation to justify this. Then use completing the square to find the center and radius of the circle given by the equation <span class="process-math">\(|z|^2 -iz +iz^\ast -5=0\text{.}\)</span></p></li>
+<li id="li-29"><p id="p-derived-li-29">Write an alternative proof for the general form for the equation of a line <a href="" class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>, as follows. Let <span class="process-math">\(a=u+iv\text{,}\)</span> <span class="process-math">\(b=r+is\text{,}\)</span> <span class="process-math">\(z=x+iy\text{.}\)</span> Find the equation of the line <span class="process-math">\(\im(az+b)=0\)</span> in terms of the real variables <span class="process-math">\(x,y\)</span> and real constants <span class="process-math">\(u,v,r,s\text{.}\)</span> Explain why it is necessary that <span class="process-math">\(a\neq 0\text{.}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="complexnosasrealmatalg"><h4 class="heading">
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Complex numbers as <span class="process-math">\(2\times 2\)</span> real matrices.</span>
+</h4>
+<p id="p-54">Let <span class="process-math">\({\mathcal M}_\C\)</span> denote the set of <span class="process-math">\(2\times
+2\)</span> matrices of the form <span class="process-math">\(\left[\begin{array}{cc}a\amp
+b\\-b\amp a\end{array}\right]\)</span> with <span class="process-math">\(a,b\in \R\text{.}\)</span> Given a complex number <span class="process-math">\(z\)</span> with Cartesian form  <span class="process-math">\(z=a+bi\text{,}\)</span> let <span class="process-math">\(M(z)\)</span> denote the matrix in <span class="process-math">\(\left[\begin{array}{cc}a\amp
+b\\-b\amp a\end{array}\right]\)</span> in <span class="process-math">\({\mathcal
+M}_\C\text{.}\)</span> Conversely, given a matrix <span class="process-math">\(M\in {\mathcal M}_\C\)</span> with top left entry <span class="process-math">\(a\)</span> and top right entry <span class="process-math">\(b\text{,}\)</span> let <span class="process-math">\(C(M)\)</span> denote the complex number <span class="process-math">\(a+bi\text{.}\)</span> It is clear that the mappings <span class="process-math">\(z\to M(z)\)</span> and <span class="process-math">\(M\to C(M)\)</span> are inverses to one another, and establish a one-to-one correspondence <span class="process-math">\(\C\leftrightarrow {\mathcal M}_\C\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-32">Show that \({\mathcal M}_\C\) is closed under addition and multiplication. That is, suppose that \(M,N\) are elements of \({\mathcal M}_\C\text{.}\) Show that \(M+N\) and \(MN\) are also elements of \({\mathcal M}_\C\text{.}\)</li>
-<li id="li-33">Show that complex addition and multiplication are "mirrored" in \({\mathcal M}_\C\text{.}\) That is, show that \(C(M(z)+M(w))=z+w\) and \(C(M(z)M(w))=zw\) for all \(z,w\in \C\text{.}\)</li>
-</ol></article></section></section></div></main>
+<li id="li-32"><p id="p-derived-li-32">Show that <span class="process-math">\({\mathcal M}_\C\)</span> is closed under addition and multiplication. That is, suppose that <span class="process-math">\(M,N\)</span> are elements of <span class="process-math">\({\mathcal M}_\C\text{.}\)</span> Show that <span class="process-math">\(M+N\)</span> and <span class="process-math">\(MN\)</span> are also elements of <span class="process-math">\({\mathcal M}_\C\text{.}\)</span></p></li>
+<li id="li-33"><p id="p-derived-li-33">Show that complex addition and multiplication are "mirrored" in <span class="process-math">\({\mathcal M}_\C\text{.}\)</span> That is, show that <span class="process-math">\(C(M(z)+M(w))=z+w\)</span> and <span class="process-math">\(C(M(z)M(w))=zw\)</span> for all <span class="process-math">\(z,w\in \C\text{.}\)</span></p></li>
+</ol></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Equations <a href="" class="xref" data-knowl="./knowl/addextends.html" title="Equation 1.1.7">(1.1.7)</a>, <a href="" class="xref" data-knowl="./knowl/multextends.html" title="Equation 1.1.8">(1.1.8)</a>, and <a href="" class="xref" data-knowl="./knowl/normextends.html" title="Equation 1.1.9">(1.1.9)</a> say that complex addition, multiplication, and norm <em class="emphasis">extend</em> the corresponding operations on the reals. Equation <a href="" class="xref" data-knowl="./knowl/multidentity.html" title="Equation 1.1.10">(1.1.10)</a> is expressed by saying 1 is the <em class="emphasis">multiplicative identity</em>.</div></div>
+</div></main>
 </div>
 </body>
 </html>

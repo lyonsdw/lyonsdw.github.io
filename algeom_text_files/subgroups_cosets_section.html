@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:10:39-04:00       *-->
+<!--*       on 2022-02-15T18:36:02-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,23 +9,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Subgroups and cosets</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
   },
   chtml: {
     scale: 0.88,
@@ -36,21 +38,24 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,14 +92,14 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groupdefsection.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span>
@@ -104,95 +109,95 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groupdefsection.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
+<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
 <li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="active">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="subgroups_cosets_section"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="subgroups_cosets_section"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span>
 </h2>
 <section class="subsection" id="subsection-27"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title"></span>
 </h3>
-<p id="p-206"><article class="definition definition-like" id="subgroupdefn"><h6 class="heading">
+<p id="p-206"><article class="definition definition-like" id="subgroupdefn"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups and cosets.</span>
-</h6>
-<p id="p-207">A subset \(H\) of a group \(G\) is called a <dfn class="terminology">subgroup</dfn> of \(G\) if \(H\) itself is a group under the group operation of \(G\) restricted to \(H\text{.}\) We write \(H\leq
-G\) to indicate that \(H\) is a subgroup of \(G\text{.}\) A <dfn class="terminology">(left) coset</dfn> of a subgroup \(H\) of \(G\) is a set of the form</p>
-<div class="displaymath">
+</h4>
+<p id="p-207">A subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is called a <dfn class="terminology">subgroup</dfn> of <span class="process-math">\(G\)</span> if <span class="process-math">\(H\)</span> itself is a group under the group operation of <span class="process-math">\(G\)</span> restricted to <span class="process-math">\(H\text{.}\)</span> We write <span class="process-math">\(H\leq
+G\)</span> to indicate that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> A <dfn class="terminology">(left) coset</dfn> of a subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\)</span> is a set of the form</p>
+<div class="displaymath process-math">
 \begin{equation*}
 gH := \{gh \colon h\in H\}.
 \end{equation*}
 </div>
-<p class="continuation">The set of all cosets of \(H\) is denoted \(G/H\text{.}\)</p>
-<div class="displaymath">
+<p class="continuation">The set of all cosets of <span class="process-math">\(H\)</span> is denoted <span class="process-math">\(G/H\text{.}\)</span></p>
+<div class="displaymath process-math">
 \begin{equation*}
 G/H := \{gH\colon g\in G\}
 \end{equation*}
 </div></article></p>
-<article class="exercise exercise-like" id="dihedral_subgroup_reading_exercise"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-dihedral_subgroup_reading_exercise"><h6 class="heading">
+<article class="exercise exercise-like" id="dihedral_subgroup_reading_exercise"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-dihedral_subgroup_reading_exercise"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral_subgroup_reading_exercise"><article class="exercise exercise-like"><p id="p-208">Consider \(D_4\) as described in <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p>
-<div class="displaymath">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral_subgroup_reading_exercise"><article class="exercise exercise-like"><p id="p-208">Consider <span class="process-math">\(D_4\)</span> as described in <a href="" class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</p>
+<div class="displaymath process-math">
 \begin{equation*}
 D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-129">Is the subset \(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\) of rotations a subgroup of \(D_4\text{?}\) Why or why not?</li>
-<li id="li-130">Is the subset \(\{F_H,F_V,F_D,F_{D'}\}\) of reflections a subgroup of \(D_4\text{?}\) Why or why not?</li>
+<li id="li-129"><p id="p-derived-li-129">Is the subset <span class="process-math">\(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\)</span> of rotations a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</p></li>
+<li id="li-130"><p id="p-derived-li-130">Is the subset <span class="process-math">\(\{F_H,F_V,F_D,F_{D'}\}\)</span> of reflections a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><ol class="decimal">
-<li id="li-131">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</li>
-<li id="li-132">No. Just observe that \(F_H^2=R_0\) is not a reflection. The group operation on \(D_4\) does not restrict properly to the subset of reflections.</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><ol class="decimal">
+<li id="li-131"><p id="p-derived-li-131">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</p></li>
+<li id="li-132"><p id="p-derived-li-132">No. Just observe that <span class="process-math">\(F_H^2=R_0\)</span> is not a reflection. The group operation on <span class="process-math">\(D_4\)</span> does not restrict properly to the subset of reflections.</p></li>
 </ol></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-61"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-61"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><p id="p-209">Find \(G/H\) for \(G=S_3\text{,}\) \(H=\{e,(12)\}\text{.}\)</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><p id="p-209">Find <span class="process-math">\(G/H\)</span> for <span class="process-math">\(G=S_3\text{,}\)</span> <span class="process-math">\(H=\{e,(12)\}\text{.}\)</span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="displaymath">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="displaymath process-math" id="md-22">
 \begin{align*}
 G/H \amp =\{eH, (12)H, (13)H, (23)H, (123)H, (132)H\}\\
 \amp =
@@ -201,124 +206,120 @@ G/H \amp =\{eH, (12)H, (13)H, (23)H, (123)H, (132)H\}\\
 \end{align*}
 </div></div></div>
 </div></article></div>
-<article class="proposition theorem-like" id="subgrouptests"><h6 class="heading">
+<article class="proposition theorem-like" id="subgrouptests"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup tests.</span>
-</h6>
-<p id="p-210">Let \(H\) be a subset of a group \(G\text{.}\) The following are equivalent.</p>
+</h4>
+<p id="p-210">Let <span class="process-math">\(H\)</span> be a subset of a group <span class="process-math">\(G\text{.}\)</span> The following are equivalent.</p>
 <ol class="lower-roman">
-<li id="li-133">\(H\) is a subgroup of \(G\)</li>
-<li id="li-134">
-<dfn class="terminology">(2-step subgroup test)</dfn> \(H\) is nonempty, \(ab\) is in \(H\) for every \(a,b\) in \(H\) (\(H\) is closed under the group operation), and \(a^{-1}\) is in \(H\) for every \(a\) in \(H\) (\(H\) is closed under group inversion)</li>
-<li id="li-135">
-<dfn class="terminology">(1-step subgroup test)</dfn> \(H\) is nonempty and \(ab^{-1}\) is in \(H\) for every \(a,b\) in \(H\)</li>
-</ol></article><article class="hiddenproof" id="proof-3"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-211">See <a class="xref" data-knowl="./knowl/subgrouptestsexer.html" title="Exercise 2.3.2.1">Exercise 2.3.2.1</a>.</p></article></div>
-<article class="proposition theorem-like" id="proposition-5"><h6 class="heading">
+<li id="li-133"><p id="p-derived-li-133"><span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span></p></li>
+<li id="li-134"><p id="p-derived-li-134"><dfn class="terminology">(2-step subgroup test)</dfn> <span class="process-math">\(H\)</span> is nonempty, <span class="process-math">\(ab\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a,b\)</span> in <span class="process-math">\(H\)</span> (<span class="process-math">\(H\)</span> is closed under the group operation), and <span class="process-math">\(a^{-1}\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a\)</span> in <span class="process-math">\(H\)</span> (<span class="process-math">\(H\)</span> is closed under group inversion)</p></li>
+<li id="li-135"><p id="p-derived-li-135"><dfn class="terminology">(1-step subgroup test)</dfn> <span class="process-math">\(H\)</span> is nonempty and <span class="process-math">\(ab^{-1}\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a,b\)</span> in <span class="process-math">\(H\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-211">See <a href="" class="xref" data-knowl="./knowl/subgrouptestsexer.html" title="Exercise 2.3.2.1">Exercise 2.3.2.1</a>.</p></article></div>
+<article class="proposition theorem-like" id="proposition-5"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup generated by a set of elements.</span>
-</h6>
-<p id="p-212">Let \(S\) be a nonempty subset of a group \(G\text{,}\) and let \(S^{-1}\) denote the set \(S^{-1}=\{s^{-1}\colon s\in S\}\) of inverses of elements in \(S\text{.}\) We write \(\langle S\rangle\) to denote the set of all elements of \(G\) of the form</p>
-<div class="displaymath">
+</h4>
+<p id="p-212">Let <span class="process-math">\(S\)</span> be a nonempty subset of a group <span class="process-math">\(G\text{,}\)</span> and let <span class="process-math">\(S^{-1}\)</span> denote the set <span class="process-math">\(S^{-1}=\{s^{-1}\colon s\in S\}\)</span> of inverses of elements in <span class="process-math">\(S\text{.}\)</span> We write <span class="process-math">\(\langle S\rangle\)</span> to denote the set of all elements of <span class="process-math">\(G\)</span> of the form</p>
+<div class="displaymath process-math">
 \begin{equation*}
 s_1s_2\cdots s_k
 \end{equation*}
 </div>
-<p class="continuation">where \(k\) is a positive integer and each \(s_i\) is in \(S\cup S^{-1}\) for \(1\leq i\leq k\text{.}\) The set \(\langle S\rangle\) is a subgroup of \(G\text{,}\) called the <dfn class="terminology">subgroup generated by the set \(S\)</dfn> , and the elements of \(S\) are called the <dfn class="terminology">generators</dfn> of \(\langle S\rangle\text{.}\)</p></article><p id="p-213"><em class="alert">Comment on notational convention:</em> If \(S=\{s_1,s_2,\ldots,s_k\}\) is finite, we write \(\langle
-s_1,s_2,\ldots,s_k\rangle\) for \(\langle S\rangle\text{,}\) instead of the more cumbersome \(\langle \{s_1,s_2,\ldots,s_k\}\rangle\text{.}\)</p>
-<article class="observation remark-like" id="observation-1"><h6 class="heading">
+<p class="continuation">where <span class="process-math">\(k\)</span> is a positive integer and each <span class="process-math">\(s_i\)</span> is in <span class="process-math">\(S\cup S^{-1}\)</span> for <span class="process-math">\(1\leq i\leq k\text{.}\)</span> The set <span class="process-math">\(\langle S\rangle\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> called the <dfn class="terminology">subgroup generated by the set <span class="process-math">\(S\)</span></dfn> , and the elements of <span class="process-math">\(S\)</span> are called the <dfn class="terminology">generators</dfn> of <span class="process-math">\(\langle S\rangle\text{.}\)</span></p></article><p id="p-213"><em class="alert">Comment on notational convention:</em> If <span class="process-math">\(S=\{s_1,s_2,\ldots,s_k\}\)</span> is finite, we write <span class="process-math">\(\langle
+s_1,s_2,\ldots,s_k\rangle\)</span> for <span class="process-math">\(\langle S\rangle\text{,}\)</span> instead of the more cumbersome <span class="process-math">\(\langle \{s_1,s_2,\ldots,s_k\}\rangle\text{.}\)</span></p>
+<article class="observation remark-like" id="observation-1"><h4 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
-</h6>
-<p id="p-214">If \(G\) is a cyclic group with generator \(g\text{,}\) then \(G=\langle g\rangle\text{.}\)</p></article><article class="exercise exercise-like" id="subgpgenbysetexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-subgpgenbysetexer"><h6 class="heading">
+</h4>
+<p id="p-214">If <span class="process-math">\(G\)</span> is a cyclic group with generator <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\(G=\langle g\rangle\text{.}\)</span></p></article><article class="exercise exercise-like" id="subgpgenbysetexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-subgpgenbysetexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-subgpgenbysetexer"><article class="exercise exercise-like"><p id="p-215">Show that \(\langle S\rangle\) is indeed a subgroup of \(G\text{.}\) How would this fail if \(S\) were empty?</p></article></div>
-<article class="exercise exercise-like" id="generators-reading-exer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-generators-reading-exer"><h6 class="heading">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-subgpgenbysetexer"><article class="exercise exercise-like"><p id="p-215">Show that <span class="process-math">\(\langle S\rangle\)</span> is indeed a subgroup of <span class="process-math">\(G\text{.}\)</span> How would this fail if <span class="process-math">\(S\)</span> were empty?</p></article></div>
+<article class="exercise exercise-like" id="generators-reading-exer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-generators-reading-exer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-generators-reading-exer"><article class="exercise exercise-like"><ol id="p-217" class="decimal">
-<li id="li-136">Find \(\langle F_H,F_V\rangle\subseteq D_4\text{.}\)</li>
-<li id="li-137">Find \(\langle 6,8\rangle \subseteq \Z\text{.}\)</li>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-generators-reading-exer"><article class="exercise exercise-like"><ol id="p-217" class="decimal">
+<li id="li-136"><p id="p-derived-li-136">Find <span class="process-math">\(\langle F_H,F_V\rangle\subseteq D_4\text{.}\)</span></p></li>
+<li id="li-137"><p id="p-derived-li-137">Find <span class="process-math">\(\langle 6,8\rangle \subseteq \Z\text{.}\)</span></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
-<li id="li-138">\(\displaystyle \langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}\)</li>
-<li id="li-139">\(\displaystyle \langle 6,8\rangle =\langle 2\rangle = 2\Z\)</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
+<li id="li-138"><p id="p-derived-li-138"><span class="process-math">\(\displaystyle \langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}\)</span></p></li>
+<li id="li-139"><p id="p-derived-li-139"><span class="process-math">\(\displaystyle \langle 6,8\rangle =\langle 2\rangle = 2\Z\)</span></p></li>
 </ol></div></div>
 </div></article></div>
-<p id="p-219"><article class="proposition theorem-like" id="cosetspartition"><h6 class="heading">
+<p id="p-219"><article class="proposition theorem-like" id="cosetspartition"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as equivalence classes.</span>
-</h6>
-<p id="p-220">Let \(G\) be a group and let \(H\) be a subgroup of \(G\text{.}\) Let \(\sim_H\) be the relation on \(G\) defined by \(x\sim_H y\) if and only if \(x^{-1}y \in
-H\text{.}\) The relation \(\sim_H\) is an equivalence relation on \(G\text{,}\) and the equivalence classes are the cosets of \(H\text{,}\) that is, we have \(G/\!\!\sim_H= G/H\text{.}\)</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/cosetspartitionexer.html" title="Exercise 2.3.2.7: Cosets of a subgroup partition the group, Lagrange's Theorem">Exercise 2.3.2.7</a></article></div> <article class="corollary theorem-like" id="corollary-1"><h6 class="heading">
+</h4>
+<p id="p-220">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(\sim_H\)</span> be the relation on <span class="process-math">\(G\)</span> defined by <span class="process-math">\(x\sim_H y\)</span> if and only if <span class="process-math">\(x^{-1}y \in
+H\text{.}\)</span> The relation <span class="process-math">\(\sim_H\)</span> is an equivalence relation on <span class="process-math">\(G\text{,}\)</span> and the equivalence classes are the cosets of <span class="process-math">\(H\text{,}\)</span> that is, we have <span class="process-math">\(G/\!\!\sim_H= G/H\text{.}\)</span></p></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof">See <a href="" class="xref" data-knowl="./knowl/cosetspartitionexer.html" title="Exercise 2.3.2.7: Cosets of a subgroup partition the group, Lagrange's Theorem">Exercise 2.3.2.7</a></article></div> <article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as a partition.</span>
-</h6>
-<p id="p-221">Let \(G\) be a group and let \(H\) be a subgroup of \(G\text{.}\) The set \(G/H\) of cosets of \(H\) form a partition of \(G\text{.}\)</p></article></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+</h4>
+<p id="p-221">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> The set <span class="process-math">\(G/H\)</span> of cosets of <span class="process-math">\(H\)</span> form a partition of <span class="process-math">\(G\text{.}\)</span></p></article></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.3.2</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="subgrouptestsexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-222">Prove <a class="xref" data-knowl="./knowl/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</p></article><article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-224">Find all the subgroups of \(S_3\text{.}\)</p>
+<article class="exercise exercise-like" id="subgrouptestsexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-222">Prove <a href="" class="xref" data-knowl="./knowl/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</p></article><article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-224">Find all the subgroups of <span class="process-math">\(S_3\text{.}\)</span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-225">In the "list of values" permutation notation of <a class="xref" data-knowl="./knowl/permutation-reading-exercise.html" title="Checkpoint 2.1.2">Checkpoint 2.1.2</a>, the subgroups of \(S_3\) are \(\{[1,2,3]\}\text{,}\) \(\{[1,2,3],[2,1,3]\}\text{,}\) \(\{[1,2,3],[1,3,2]\}\text{,}\) \(\{[1,2,3],[3,2,1]\}\text{,}\) \(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\) and \(S_3\text{.}\) In cycle notation, the subgroups of \(S_3\) (in the same order) are \(\{e\}\text{,}\) \(\{e,(12)\}\text{,}\) \(\{e,(23)\}\text{,}\) \(\{e,(13)\}\text{,}\) \(\{e,(123),(132)\}\text{,}\) \(S_3\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="d4cosetexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-226">Find all the cosets of the subgroup \(\{R_0,R_{1/2}\}\) of  \(D_4\text{.}\)</p></article><article class="exercise exercise-like" id="subgpsofzexer"><h6 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of \(\Z\) and \(\Z_n\).</span>
-</h6>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-225">In the "list of values" permutation notation of <a href="" class="xref" data-knowl="./knowl/permutation-reading-exercise.html" title="Checkpoint 2.1.2">Checkpoint 2.1.2</a>, the subgroups of <span class="process-math">\(S_3\)</span> are <span class="process-math">\(\{[1,2,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,1,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[1,3,2]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[3,2,1]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\)</span> and <span class="process-math">\(S_3\text{.}\)</span> In cycle notation, the subgroups of <span class="process-math">\(S_3\)</span> (in the same order) are <span class="process-math">\(\{e\}\text{,}\)</span> <span class="process-math">\(\{e,(12)\}\text{,}\)</span> <span class="process-math">\(\{e,(23)\}\text{,}\)</span> <span class="process-math">\(\{e,(13)\}\text{,}\)</span> <span class="process-math">\(\{e,(123),(132)\}\text{,}\)</span> <span class="process-math">\(S_3\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="d4cosetexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-226">Find all the cosets of the subgroup <span class="process-math">\(\{R_0,R_{1/2}\}\)</span> of  <span class="process-math">\(D_4\text{.}\)</span></p></article><article class="exercise exercise-like" id="subgpsofzexer"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Z_n\)</span>.</span>
+</h4>
 <ol id="p-228" class="lower-alpha">
-<li id="li-140">Let \(H\) be a subgroup of \(\Z\text{.}\) Show that either \(H=\{0\}\) or \(H=\langle d\rangle\text{,}\) where \(d\) is the smallest positive element in \(H\text{.}\)</li>
-<li id="li-141">Let \(H\) be a subgroup of \(\Z_n\text{.}\) Show that either \(H=\{0\}\) or \(H=\langle d\rangle\text{,}\) where \(d\) is the smallest positive element in \(H\text{.}\)</li>
-<li id="li-142">Let \(n_1,n_2,\ldots,n_r\) be positive integers. Show that<div class="displaymath">
+<li id="li-140"><p id="p-derived-li-140">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span></p></li>
+<li id="li-141"><p id="p-derived-li-141">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z_n\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span></p></li>
+<li id="li-142"><p id="p-derived-li-142">Let <span class="process-math">\(n_1,n_2,\ldots,n_r\)</span> be positive integers. Show that<div class="displaymath process-math">
 \begin{equation*}
 \langle n_1,n_2,\ldots,n_r
 \rangle = \langle \gcd(n_1,n_2,\ldots,n_r)\rangle
 \end{equation*}
-</div>
-</li>
+</div></p></li>
 </ol>
-<p id="p-229"><em class="alert">Consequence of this exercise:</em> The greatest common divisor \(\gcd(a,b)\) of integers \(a,b\) is the smallest positive integer of the form \(sa+tb\) over all integers \(s,t\text{.}\) Two integers \(a,b\) are relatively prime if and only if there exist integers \(s,t\) such that \(sa+tb=1\text{.}\)</p></article><article class="exercise exercise-like" id="center"><h6 class="heading">
+<p id="p-229"><em class="alert">Consequence of this exercise:</em> The greatest common divisor <span class="process-math">\(\gcd(a,b)\)</span> of integers <span class="process-math">\(a,b\)</span> is the smallest positive integer of the form <span class="process-math">\(sa+tb\)</span> over all integers <span class="process-math">\(s,t\text{.}\)</span> Two integers <span class="process-math">\(a,b\)</span> are relatively prime if and only if there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sa+tb=1\text{.}\)</span></p></article><article class="exercise exercise-like" id="center"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Centralizers, Center of a group.</span>
-</h6>
-<p id="p-231">The <dfn class="terminology">centralizer</dfn> of an element \(a\) in a group \(G\text{,}\) denoted \(C(a)\text{,}\) is the set</p>
-<div class="displaymath">
+</h4>
+<p id="p-231">The <dfn class="terminology">centralizer</dfn> of an element <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(C(a)\text{,}\)</span> is the set</p>
+<div class="displaymath process-math">
 \begin{equation*}
 C(a) = \{g\in G\colon ag=ga\}.
 \end{equation*}
 </div>
-<p class="continuation">The <dfn class="terminology">center</dfn> of a group \(G\text{,}\) denoted \(Z(G)\text{,}\) is the set</p>
-<div class="displaymath">
+<p class="continuation">The <dfn class="terminology">center</dfn> of a group <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(Z(G)\text{,}\)</span> is the set</p>
+<div class="displaymath process-math">
 \begin{equation*}
 Z(G) = \{g\in G\colon ag=ga \;\; \forall a\in G\}.
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-146">Show that the centralizer \(C(a)\) of any element \(a\) in a group \(G\) is a subgroup of \(G\text{.}\)</li>
-<li id="li-147">Show that the center \(Z(G)\) of a group \(G\) is a subgroup of \(G\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="orderofaneltexer"><h6 class="heading">
+<li id="li-146"><p id="p-derived-li-146">Show that the centralizer <span class="process-math">\(C(a)\)</span> of any element <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span></p></li>
+<li id="li-147"><p id="p-derived-li-147">Show that the center <span class="process-math">\(Z(G)\)</span> of a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="orderofaneltexer"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a group element.</span>
-</h6>
-<p id="p-233">Let \(g\) be an element of a group \(G\text{.}\) The <dfn class="terminology">order</dfn> of \(g\text{,}\) denoted \(|g|\text{,}\) is the smallest positive integer \(n\) such that \(g^n=e\text{,}\) if such an integer exists. If there is no positive integer \(n\) such that \(g^n=e\text{,}\) then \(g\) is said to have <em class="emphasis">infinite</em> order. Show that, if the order of \(g\) is finite, say \(|g|=n\text{,}\) then</p>
-<div class="displaymath">
+</h4>
+<p id="p-233">Let <span class="process-math">\(g\)</span> be an element of a group <span class="process-math">\(G\text{.}\)</span> The <dfn class="terminology">order</dfn> of <span class="process-math">\(g\text{,}\)</span> denoted <span class="process-math">\(|g|\text{,}\)</span> is the smallest positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(g^n=e\text{,}\)</span> if such an integer exists. If there is no positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(g^n=e\text{,}\)</span> then <span class="process-math">\(g\)</span> is said to have <em class="emphasis">infinite</em> order. Show that, if the order of <span class="process-math">\(g\)</span> is finite, say <span class="process-math">\(|g|=n\text{,}\)</span> then</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \langle g \rangle =
 \{g^0,g^1,g^2,\ldots,g^{n-1}\}\text{.}
 \end{equation*}
 </div>
-<p id="p-234"><em class="alert">Consequence of this exercise:</em> If \(G\) is cyclic with generator \(g\text{,}\) then \(|G|=|g|\text{.}\)</p></article><article class="exercise exercise-like" id="cosetspartitionexer"><h6 class="heading">
+<p id="p-234"><em class="alert">Consequence of this exercise:</em> If <span class="process-math">\(G\)</span> is cyclic with generator <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\(|G|=|g|\text{.}\)</span></p></article><article class="exercise exercise-like" id="cosetspartitionexer"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets of a subgroup partition the group, Lagrange's Theorem.</span>
-</h6>
+</h4>
 <ol id="p-236" class="lower-alpha">
-<li id="li-150">Prove <a class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>.</li>
-<li id="li-151">Now suppose that a group \(G\) is finite. Show that all of the cosets of a subgroup \(H\) have the same size.</li>
-<li id="li-152">Prove the following. <article class="assemblage assemblage-like" id="assemblage-9"><h6 class="heading"><span class="title"><dfn class="terminology">Lagrange's Theorem</dfn>.</span></h6>
-<p id="p-237">If \(G\) is a finite group and \(H\) is a subgroup, then the order of \(H\) divides the order of \(G\text{.}\)</p></article>
-</li>
+<li id="li-150"><p id="p-derived-li-150">Prove <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>.</p></li>
+<li id="li-151"><p id="p-derived-li-151">Now suppose that a group <span class="process-math">\(G\)</span> is finite. Show that all of the cosets of a subgroup <span class="process-math">\(H\)</span> have the same size.</p></li>
+<li id="li-152"><p id="p-derived-li-152">Prove the following. <article class="assemblage assemblage-like" id="assemblage-9"><h5 class="heading"><span class="title"><dfn class="terminology">Lagrange's Theorem</dfn>.</span></h5>
+<p id="p-237">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(H\)</span> is a subgroup, then the order of <span class="process-math">\(H\)</span> divides the order of <span class="process-math">\(G\text{.}\)</span></p></article></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-238">For part (b), let \(aH,bH\) be cosets. Show that the function \(aH\to bH\) given by \(x\to ba^{-1}x\) is a bijection.</p></div></div>
-</div></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h6 class="heading">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-238">For part (b), let <span class="process-math">\(aH,bH\)</span> be cosets. Show that the function <span class="process-math">\(aH\to bH\)</span> given by <span class="process-math">\(x\to ba^{-1}x\)</span> is a bijection.</p></div></div>
+</div></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h4 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Consequences of Lagrange's Theorem.</span>
-</h6>
+</h4>
 <ol id="p-240" class="lower-alpha">
-<li id="li-156">Show that the order of any element of a finite group divides the order of the group.</li>
-<li id="li-157">Let \(G\) be a finite group, and let \(g\in
-G\text{.}\) Show that \(g^{|G|}=e\text{.}\)</li>
-<li id="li-158">Show that a group of prime order is cyclic.</li>
+<li id="li-156"><p id="p-derived-li-156">Show that the order of any element of a finite group divides the order of the group.</p></li>
+<li id="li-157"><p id="p-derived-li-157">Let <span class="process-math">\(G\)</span> be a finite group, and let <span class="process-math">\(g\in
+G\text{.}\)</span> Show that <span class="process-math">\(g^{|G|}=e\text{.}\)</span></p></li>
+<li id="li-158"><p id="p-derived-li-158">Show that a group of prime order is cyclic.</p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>

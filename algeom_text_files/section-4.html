@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:10:38-04:00       *-->
+<!--*       on 2022-02-15T18:36:01-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,23 +9,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Equivalence Relations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
   },
   chtml: {
     scale: 0.88,
@@ -36,21 +38,24 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,14 +92,14 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="stereoprojsect.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="groups_chapter.html" title="Next">Next</a></span>
@@ -104,207 +109,206 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="stereoprojsect.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="groups_chapter.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
+<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
 <li><a href="section-4.html" data-scroll="section-4" class="active">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-4"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-4"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Equivalence Relations</span>
 </h2>
 <section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Definitions</span>
 </h3>
-<p id="p-108">A relation on a set \(X\) is a subset of \(X\times X\text{.}\) Given a relation \(R\subseteq X\times X\text{,}\) we write \(x\sim_R y\text{,}\) or just \(x\sim y\) if \(R\) is understood by context, to denote that \((x,y)\in R\text{.}\) A relation is <dfn class="terminology">reflexive</dfn> if \(x\sim x\) for every \(x\) in \(X\text{.}\) A relation is <dfn class="terminology">symmetric</dfn> if \(x\sim y\) implies \(y\sim x\text{.}\) A relation is <dfn class="terminology">transitive</dfn> if \(x\sim y\) and \(y\sim z \) together imply that \(x\sim z\text{.}\) A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on \(X\) and an element \(x\in X\text{,}\) we write \([x]\) to denote the set</p>
-<div class="displaymath">
+<p id="p-108">A relation on a set <span class="process-math">\(X\)</span> is a subset of <span class="process-math">\(X\times X\text{.}\)</span> Given a relation <span class="process-math">\(R\subseteq X\times X\text{,}\)</span> we write <span class="process-math">\(x\sim_R y\text{,}\)</span> or just <span class="process-math">\(x\sim y\)</span> if <span class="process-math">\(R\)</span> is understood by context, to denote that <span class="process-math">\((x,y)\in R\text{.}\)</span> A relation is <dfn class="terminology">reflexive</dfn> if <span class="process-math">\(x\sim x\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(X\text{.}\)</span> A relation is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(x\sim y\)</span> implies <span class="process-math">\(y\sim x\text{.}\)</span> A relation is <dfn class="terminology">transitive</dfn> if <span class="process-math">\(x\sim y\)</span> and <span class="process-math">\(y\sim z \)</span> together imply that <span class="process-math">\(x\sim z\text{.}\)</span> A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on <span class="process-math">\(X\)</span> and an element <span class="process-math">\(x\in X\text{,}\)</span> we write <span class="process-math">\([x]\)</span> to denote the set</p>
+<div class="displaymath process-math" id="equivalenceclass">
 \begin{equation}
-[x] = \{y\in X\colon x\sim y\},\label{equivalenceclass}\tag{1.4.1}
+[x] = \{y\in X\colon x\sim y\},\tag{1.4.1}
 \end{equation}
 </div>
-<p class="continuation">called the <dfn class="terminology">equivalence class</dfn> of the element \(x\text{.}\) The set of equivalence classes is denoted \(X/\!\!\sim\text{,}\) that is,</p>
-<div class="displaymath">
+<p class="continuation">called the <dfn class="terminology">equivalence class</dfn> of the element <span class="process-math">\(x\text{.}\)</span> The set of equivalence classes is denoted <span class="process-math">\(X/\!\!\sim\text{,}\)</span> that is,</p>
+<div class="displaymath process-math" id="setofequivclasses">
 \begin{equation}
-X/\!\!\sim \; = \{[x]\colon x\in X\}.\label{setofequivclasses}\tag{1.4.2}
+X/\!\!\sim \; = \{[x]\colon x\in X\}.\tag{1.4.2}
 \end{equation}
 </div>
-<p id="p-109">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection of nonempty disjoint sets whose union is \(X\text{.}\)</p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<p id="p-109">A <dfn class="terminology">partition</dfn> of a set <span class="process-math">\(X\)</span> is a collection of nonempty disjoint sets whose union is <span class="process-math">\(X\text{.}\)</span></p></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Facts</span>
 </h3>
-<p id="p-110"><article class="fact theorem-like" id="equivrelpart"><h6 class="heading">
+<p id="p-110"><article class="fact theorem-like" id="equivrelpart"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalence relations and partitions.</span>
-</h6>
-<p id="p-111">Let \(X\) be a set. Equivalence relations on \(X\) and partitions of \(X\) are in one-to-one correspondence, as follows. Given an equivalence relation \(\sim\) on \(X\text{,}\) the collection</p>
-<div class="displaymath">
+</h4>
+<p id="p-111">Let <span class="process-math">\(X\)</span> be a set. Equivalence relations on <span class="process-math">\(X\)</span> and partitions of <span class="process-math">\(X\)</span> are in one-to-one correspondence, as follows. Given an equivalence relation <span class="process-math">\(\sim\)</span> on <span class="process-math">\(X\text{,}\)</span> the collection</p>
+<div class="displaymath process-math">
 \begin{equation*}
 X/\!\!\sim \; = \{[x]\colon x\in X\}
 \end{equation*}
 </div>
-<p class="continuation">is a partition of \(X\text{.}\) Conversely, given a partition \({\mathcal P}\) of \(X\text{,}\) the relation \(\sim_{\mathcal P}\) defined by</p>
-<div class="displaymath">
+<p class="continuation">is a partition of <span class="process-math">\(X\text{.}\)</span> Conversely, given a partition <span class="process-math">\({\mathcal P}\)</span> of <span class="process-math">\(X\text{,}\)</span> the relation <span class="process-math">\(\sim_{\mathcal P}\)</span> defined by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\mathcal P}
 \end{equation*}
 </div>
-<p class="continuation">is an equivalence relation. These correspondences are inverse to one another. That is, \(\sim = \sim_{(X/\sim)}\) and \(X/(\sim_{\mathcal P}) = {\mathcal P}\text{.}\)</p></article></p>
-<p id="p-112"><article class="fact theorem-like" id="welldefinedness"><h6 class="heading">
+<p class="continuation">is an equivalence relation. These correspondences are inverse to one another. That is, <span class="process-math">\(\sim = \sim_{(X/\sim)}\)</span> and <span class="process-math">\(X/(\sim_{\mathcal P}) = {\mathcal P}\text{.}\)</span></p></article></p>
+<p id="p-112"><article class="fact theorem-like" id="welldefinedness"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of functions on sets of equivalence classes.</span>
-</h6>
-<p id="p-113">Let \(\sim\) be an equivalence relation on a set \(X\text{,}\) let \(\pi\colon X\to X/\!\!\sim\) denote the map given by \(x\to [x]\text{,}\) and let \(f\colon X\to Y\) be a function. There exists a map \(\overline{f}\colon X/\!\!\sim
-\to Y\) such that \((\overline{f}\circ \pi)(x)=f(x)\) for all \(x\in X\) if and only if \(f\) is constant on equivalence classes (that is, if and only if \([x\sim
-y\Rightarrow f(x)=f(y)]\text{.}\))</p></article></p>
-<p id="p-114"><em class="alert">Note on terminology:</em> when a function \(f\) is constant on equivalence classes, we say that the associated function \(\overline{f}\) is <dfn class="terminology">well-defined</dfn>.</p>
-<p id="p-115"><article class="fact theorem-like" id="constructequivrelpart"><h6 class="heading">
+</h4>
+<p id="p-113">Let <span class="process-math">\(\sim\)</span> be an equivalence relation on a set <span class="process-math">\(X\text{,}\)</span> let <span class="process-math">\(\pi\colon X\to X/\!\!\sim\)</span> denote the map given by <span class="process-math">\(x\to [x]\text{,}\)</span> and let <span class="process-math">\(f\colon X\to Y\)</span> be a function. There exists a map <span class="process-math">\(\overline{f}\colon X/\!\!\sim
+\to Y\)</span> such that <span class="process-math">\((\overline{f}\circ \pi)(x)=f(x)\)</span> for all <span class="process-math">\(x\in X\)</span> if and only if <span class="process-math">\(f\)</span> is constant on equivalence classes (that is, if and only if <span class="process-math">\([x\sim
+y\Rightarrow f(x)=f(y)]\text{.}\)</span>)</p></article></p>
+<p id="p-114"><em class="alert">Note on terminology:</em> when a function <span class="process-math">\(f\)</span> is constant on equivalence classes, we say that the associated function <span class="process-math">\(\overline{f}\)</span> is <dfn class="terminology">well-defined</dfn>.</p>
+<p id="p-115"><article class="fact theorem-like" id="constructequivrelpart"><h4 class="heading">
 <span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Construction of equivalence relations and partitions from functions.</span>
-</h6>
-<p id="p-116">Given a function \(f\colon X\to
-Y\text{,}\) there is a natural equivalence relation \(\sim_f\) on \(X\) given by \(x\sim_f y\) if and only if \(f(x)=f(y)\text{.}\) The corresponding set of equivalence classes is \(X/\!\!\sim_f \; = \{f^{-1}(y)\colon y\in
-f(X)\}\text{.}\) Furthermore, the function \(X/\!\!\sim_f \; \to f(X)\) given by \([x]\to f(x)\) is a one-to-one correspondence.</p></article></p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer \(n\)</span>
+</h4>
+<p id="p-116">Given a function <span class="process-math">\(f\colon X\to
+Y\text{,}\)</span> there is a natural equivalence relation <span class="process-math">\(\sim_f\)</span> on <span class="process-math">\(X\)</span> given by <span class="process-math">\(x\sim_f y\)</span> if and only if <span class="process-math">\(f(x)=f(y)\text{.}\)</span> The corresponding set of equivalence classes is <span class="process-math">\(X/\!\!\sim_f \; = \{f^{-1}(y)\colon y\in
+f(X)\}\text{.}\)</span> Furthermore, the function <span class="process-math">\(X/\!\!\sim_f \; \to f(X)\)</span> given by <span class="process-math">\([x]\to f(x)\)</span> is a one-to-one correspondence.</p></article></p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span>
 </h3>
-<p id="p-117">Let \(n\) be a positive integer. Let \(\sim_n\) be the relation on the integers \(\Z\) given by</p>
-<div class="displaymath">
+<p id="p-117">Let <span class="process-math">\(n\)</span> be a positive integer. Let <span class="process-math">\(\sim_n\)</span> be the relation on the integers <span class="process-math">\(\Z\)</span> given by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 x\sim_n y \Leftrightarrow n|(x-y)
 \end{equation*}
 </div>
-<p class="continuation">(recall that the symbols "\(a|b\)" for integers \(a,b\text{,}\) pronounced "\(a\) divides \(b\)", means \(b=ka\) for some integer \(k\)). It is easy to show that \(\sim_n\) is an equivalence relation, and that the equivalence classes are precisely the set</p>
-<div class="displaymath">
+<p class="continuation">(recall that the symbols "<span class="process-math">\(a|b\)</span>" for integers <span class="process-math">\(a,b\text{,}\)</span> pronounced "<span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span>", means <span class="process-math">\(b=ka\)</span> for some integer <span class="process-math">\(k\)</span>). It is easy to show that <span class="process-math">\(\sim_n\)</span> is an equivalence relation, and that the equivalence classes are precisely the set</p>
+<div class="displaymath process-math">
 \begin{equation*}
 Z/\!\!\sim_n = \{[0],[1],[2],\ldots,[n-1]\}.
 \end{equation*}
 </div>
-<article class="exercise exercise-like" id="equivmodnisequivrelnexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-equivmodnisequivrelnexer"><h6 class="heading">
+<article class="exercise exercise-like" id="equivmodnisequivrelnexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-equivmodnisequivrelnexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-equivmodnisequivrelnexer"><article class="exercise exercise-like"><ol id="p-118" class="decimal">
-<li id="li-44">Verify that the relation \(\sim_n\) is indeed an equivalence relation.</li>
-<li id="li-45">Verify that the equivalence classes of the equivalence relation \(\sim_n\) are indeed \(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\) Hint: Use the <dfn class="terminology">division algorithm</dfn>, which says that for any \(x\in \Z\text{,}\) there are unique integers \(q,r\text{,}\) with \(r\) in the range \(0\leq r\leq n-1\text{,}\) such that \(x=qn+r\text{.}\)</li>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-equivmodnisequivrelnexer"><article class="exercise exercise-like"><ol id="p-118" class="decimal">
+<li id="li-44"><p id="p-derived-li-44">Verify that the relation <span class="process-math">\(\sim_n\)</span> is indeed an equivalence relation.</p></li>
+<li id="li-45"><p id="p-derived-li-45">Verify that the equivalence classes of the equivalence relation <span class="process-math">\(\sim_n\)</span> are indeed <span class="process-math">\(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\)</span> Hint: Use the <dfn class="terminology">division algorithm</dfn>, which says that for any <span class="process-math">\(x\in \Z\text{,}\)</span> there are unique integers <span class="process-math">\(q,r\text{,}\)</span> with <span class="process-math">\(r\)</span> in the range <span class="process-math">\(0\leq r\leq n-1\text{,}\)</span> such that <span class="process-math">\(x=qn+r\text{.}\)</span></p></li>
 </ol></article></div>
-<p id="p-120">This set of equivalence classes is fundamental and pervasive in mathematics. Instead of writing \(Z/\!\!\sim_n\text{,}\) the universally used notation is \(\Z_n\text{.}\) Instead of writing \(x\sim_n y\text{,}\) the universally used notation is \(x=y\pmod{n}\) (or sometimes \(x\equiv y\pmod{n}\)).</p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<p id="p-120">This set of equivalence classes is fundamental and pervasive in mathematics. Instead of writing <span class="process-math">\(Z/\!\!\sim_n\text{,}\)</span> the universally used notation is <span class="process-math">\(\Z_n\text{.}\)</span> Instead of writing <span class="process-math">\(x\sim_n y\text{,}\)</span> the universally used notation is <span class="process-math">\(x=y\pmod{n}\)</span> (or sometimes <span class="process-math">\(x\equiv y\pmod{n}\)</span>).</p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span>
 </h3>
-<p id="p-121">A <dfn class="terminology">directed graph</dfn> (or <em class="emphasis">digraph</em> ) is a set \(V\) of <em class="emphasis">vertices</em> and a set \(E\subset V\times V\) of <em class="emphasis">directed edges</em>. We draw pictures of digraphs by drawing an arrow pointing from a vertex \(v\) to a vertex \(w\) whenever \((v,w)\in E\text{.}\) See <a class="xref" data-knowl="./knowl/digraphegfig.html" title="Figure 1.4.5">Figure 1.4.5</a>.</p>
-<p id="p-122">A <dfn class="terminology">path</dfn> in a directed graph is a sequence of vertices \(v_0,v_2,\ldots,v_{n}\) such that \((v_{i-1},v_i)\in E\) for \(1\leq i\leq n\text{.}\) The vertex \(v_0\) is called the <dfn class="terminology">initial vertex</dfn> and \(v_n\) is called the <dfn class="terminology">final vertex</dfn> of the path \(v_0,v_2,\ldots,v_{n}\text{.}\)</p>
-<figure class="figure figure-like" id="digraphegfig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/digraphegfig.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.5<span class="period">.</span></span><span class="space"> </span>Example of a directed graph with vertex set \(V=\{a,b,c,d\}\) and edge set \(E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\text{.}\) The vertex sequences \(c,b\) and \(c,a,b\) are both paths from \(c\) to \(b\text{.}\)</figcaption></figure><p id="p-123">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
+<p id="p-121">A <dfn class="terminology">directed graph</dfn> (or <em class="emphasis">digraph</em> ) is a set <span class="process-math">\(V\)</span> of <em class="emphasis">vertices</em> and a set <span class="process-math">\(E\subset V\times V\)</span> of <em class="emphasis">directed edges</em>. We draw pictures of digraphs by drawing an arrow pointing from a vertex <span class="process-math">\(v\)</span> to a vertex <span class="process-math">\(w\)</span> whenever <span class="process-math">\((v,w)\in E\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/digraphegfig.html" title="Figure 1.4.5">Figure 1.4.5</a>.</p>
+<p id="p-122">A <dfn class="terminology">path</dfn> in a directed graph is a sequence of vertices <span class="process-math">\(v_0,v_2,\ldots,v_{n}\)</span> such that <span class="process-math">\((v_{i-1},v_i)\in E\)</span> for <span class="process-math">\(1\leq i\leq n\text{.}\)</span> The vertex <span class="process-math">\(v_0\)</span> is called the <dfn class="terminology">initial vertex</dfn> and <span class="process-math">\(v_n\)</span> is called the <dfn class="terminology">final vertex</dfn> of the path <span class="process-math">\(v_0,v_2,\ldots,v_{n}\text{.}\)</span></p>
+<figure class="figure figure-like" id="digraphegfig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/digraphegfig.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.5<span class="period">.</span></span><span class="space"> </span>Example of a directed graph with vertex set <span class="process-math">\(V=\{a,b,c,d\}\)</span> and edge set <span class="process-math">\(E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\text{.}\)</span> The vertex sequences <span class="process-math">\(c,b\)</span> and <span class="process-math">\(c,a,b\)</span> are both paths from <span class="process-math">\(c\)</span> to <span class="process-math">\(b\text{.}\)</span></figcaption></figure><p id="p-123">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</p>
 <ol class="decimal">
-<li id="li-51">Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge \(f=(X,Y)\) denotes a function \(f\colon
-X\to Y\text{.}\)</li>
-<li id="li-52">Whenever there are two paths from an initial vertex \(X\) to a final vertex \(Y\text{,}\) the composition of functions along one path is equal to the composition of functions along the other path. That is, if \(X_0,X_1,\ldots,X_n\) is a path with edges \(f_i\colon X_{i-1}\to X_{i}\) for \(1\leq i\leq n\) and \(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\) is a path with edges \(g_i\colon Y_{i-1}\to Y_{i}\) for \(1\leq i\leq
-m\text{,}\) then<div class="displaymath">
+<li id="li-51"><p id="p-derived-li-51">Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge <span class="process-math">\(f=(X,Y)\)</span> denotes a function <span class="process-math">\(f\colon
+X\to Y\text{.}\)</span></p></li>
+<li id="li-52"><p id="p-derived-li-52">Whenever there are two paths from an initial vertex <span class="process-math">\(X\)</span> to a final vertex <span class="process-math">\(Y\text{,}\)</span> the composition of functions along one path is equal to the composition of functions along the other path. That is, if <span class="process-math">\(X_0,X_1,\ldots,X_n\)</span> is a path with edges <span class="process-math">\(f_i\colon X_{i-1}\to X_{i}\)</span> for <span class="process-math">\(1\leq i\leq n\)</span> and <span class="process-math">\(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\)</span> is a path with edges <span class="process-math">\(g_i\colon Y_{i-1}\to Y_{i}\)</span> for <span class="process-math">\(1\leq i\leq
+m\text{,}\)</span> then<div class="displaymath process-math">
 \begin{equation*}
 f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
 g_{m-1}\circ\cdots\circ g_1.
 \end{equation*}
-</div>
-</li>
+</div></p></li>
 </ol>
-<p id="p-124"><a class="xref" data-knowl="./knowl/welldefinednessfig.html" title="Figure 1.4.6">Figure 1.4.6</a> shows a commutative diagram that goes with <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>. <a class="xref" data-knowl="./knowl/conjtransdeffig.html" title="Figure 1.4.7">Figure 1.4.7</a> shows a commutative diagram that illustrates the definition of conjugate transformations.</p>
-<figure class="figure figure-like" id="welldefinednessfig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/commutediagramtestfig.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.6<span class="period">.</span></span><span class="space"> </span>A commutative diagram showing the relationship \(\overline{f}\circ \pi = f\) in <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>.</figcaption></figure><figure class="figure figure-like" id="conjtransdeffig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/conjtransdefdiagram.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.7<span class="period">.</span></span><span class="space"> </span>A commutative diagram illustrating the definition of conjugate transformations \(f,g\) given in <a class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.3.3.3–6: Conjugate transformations.">Exercise Group 1.3.3.3–6</a>.</figcaption></figure></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
+<p id="p-124"><a href="" class="xref" data-knowl="./knowl/welldefinednessfig.html" title="Figure 1.4.6">Figure 1.4.6</a> shows a commutative diagram that goes with <a href="" class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>. <a href="" class="xref" data-knowl="./knowl/conjtransdeffig.html" title="Figure 1.4.7">Figure 1.4.7</a> shows a commutative diagram that illustrates the definition of conjugate transformations.</p>
+<figure class="figure figure-like" id="welldefinednessfig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/commutediagramtestfig.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.6<span class="period">.</span></span><span class="space"> </span>A commutative diagram showing the relationship <span class="process-math">\(\overline{f}\circ \pi = f\)</span> in <a href="" class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>.</figcaption></figure><figure class="figure figure-like" id="conjtransdeffig"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/conjtransdefdiagram.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.7<span class="period">.</span></span><span class="space"> </span>A commutative diagram illustrating the definition of conjugate transformations <span class="process-math">\(f,g\)</span> given in <a href="" class="xref" data-knowl="./knowl/stereolifts.html" title="Exercise Group 1.3.3.3–6: Conjugate transformations.">Exercise Group 1.3.3.3–6</a>.</figcaption></figure></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.4.5</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="zmodn">
-<h6 class="heading"><span class="title">The integers modulo \(n\text{.}\)</span></h6>
-<div class="introduction" id="introduction-5">Let \(n\) be a positive integer.</div>
+<h4 class="heading"><span class="title">The integers modulo <span class="process-math">\(n\text{.}\)</span>.</span></h4>
+<div class="introduction" id="introduction-5">Let <span class="process-math">\(n\)</span> be a positive integer.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="zmodnins1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-125">Let \(\omega\) be the complex number \(\omega=e^{2\pi i/n}\text{,}\) and let \(f\colon \Z\to \C\) be given by \(m\to \omega^m\text{.}\) Show that the equivalence relation \(\sim_f\) given by <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a> is the same as \(\sim_n\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnadd"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-126">Show that the operation of addition on \(\Z_n\) given by</p>
-<div class="displaymath">
+<article class="exercise exercise-like" id="zmodnins1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-125">Let <span class="process-math">\(\omega\)</span> be the complex number <span class="process-math">\(\omega=e^{2\pi i/n}\text{,}\)</span> and let <span class="process-math">\(f\colon \Z\to \C\)</span> be given by <span class="process-math">\(m\to \omega^m\text{.}\)</span> Show that the equivalence relation <span class="process-math">\(\sim_f\)</span> given by <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a> is the same as <span class="process-math">\(\sim_n\text{.}\)</span></p></article><article class="exercise exercise-like" id="intmodnadd"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-126">Show that the operation of addition on <span class="process-math">\(\Z_n\)</span> given by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 [x]+[y] := [x+y]
 \end{equation*}
 </div>
-<p class="continuation">is <dfn class="terminology">well-defined</dfn>. This means showing that if \([x]=[x']\) and \([y]=[y']\text{,}\) then \([x+y]=[x'+y']\text{.}\)</p></article><article class="exercise exercise-like" id="intmodnmult"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-127">Show that the operation of multiplication on \(\Z_n\) given by</p>
-<div class="displaymath">
+<p class="continuation">is <dfn class="terminology">well-defined</dfn>. This means showing that if <span class="process-math">\([x]=[x']\)</span> and <span class="process-math">\([y]=[y']\text{,}\)</span> then <span class="process-math">\([x+y]=[x'+y']\text{.}\)</span></p></article><article class="exercise exercise-like" id="intmodnmult"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-127">Show that the operation of multiplication on <span class="process-math">\(\Z_n\)</span> given by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 [x]\cdot [y] := [xy]
 \end{equation*}
 </div>
-<p class="continuation">is well-defined.</p></article><article class="exercise exercise-like" id="zmodnaltconstr"><h6 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of \(\Z_n\).</span>
-</h6>
-<p id="p-128">Another standard definition of the set \(\Z_n\text{,}\) together with its operations of addition and multiplication, is the following. Given an integer \(a\text{,}\) we write \(a \MOD
-n\) to denote the <dfn class="terminology">remainder</dfn> obtained when dividing \(a\) by \(n\) (the integer \(a \MOD n\) is the same as the integer \(r\) in the statement of the division algorithm given in <a class="xref" data-knowl="./knowl/equivmodnisequivrelnexer.html" title="Checkpoint 1.4.4">Checkpoint 1.4.4</a>). Now define \(\Z_n\) to be the set</p>
-<div class="displaymath">
+<p class="continuation">is well-defined.</p></article><article class="exercise exercise-like" id="zmodnaltconstr"><h5 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of <span class="process-math">\(\Z_n\)</span>.</span>
+</h5>
+<p id="p-128">Another standard definition of the set <span class="process-math">\(\Z_n\text{,}\)</span> together with its operations of addition and multiplication, is the following. Given an integer <span class="process-math">\(a\text{,}\)</span> we write <span class="process-math">\(a \MOD
+n\)</span> to denote the <dfn class="terminology">remainder</dfn> obtained when dividing <span class="process-math">\(a\)</span> by <span class="process-math">\(n\)</span> (the integer <span class="process-math">\(a \MOD n\)</span> is the same as the integer <span class="process-math">\(r\)</span> in the statement of the division algorithm given in <a href="" class="xref" data-knowl="./knowl/equivmodnisequivrelnexer.html" title="Checkpoint 1.4.4">Checkpoint 1.4.4</a>). Now define <span class="process-math">\(\Z_n\)</span> to be the set</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \Z_n=\{0,1,2,\ldots,n-1\},
 \end{equation*}
 </div>
-<p class="continuation">define the addition operation \(+_n\) on \(\Z_n\) by</p>
-<div class="displaymath">
+<p class="continuation">define the addition operation <span class="process-math">\(+_n\)</span> on <span class="process-math">\(\Z_n\)</span> by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 x+_n y= (x+y)\MOD n 
 \end{equation*}
 </div>
-<p class="continuation">and define the multiplication operation \(\cdot_n\) on \(\Z_n\) by</p>
-<div class="displaymath">
+<p class="continuation">and define the multiplication operation <span class="process-math">\(\cdot_n\)</span> on <span class="process-math">\(\Z_n\)</span> by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 x\cdot_n y = (xy) \MOD n.
 \end{equation*}
 </div>
-<p class="continuation">Show that this version of \(\Z_n\) is equivalent to the version developed in <a class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.5.2">Exercise 1.4.5.2</a> and <a class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>.</p></article>
+<p class="continuation">Show that this version of <span class="process-math">\(\Z_n\)</span> is equivalent to the version developed in <a href="" class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.5.2">Exercise 1.4.5.2</a> and <a href="" class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.5.3">Exercise 1.4.5.3</a>.</p></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="diagramexer"><h6 class="heading">
+<article class="exercise exercise-like" id="diagramexer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Commutative diagram examples.</span>
-</h6>
+</h4>
 <ol id="p-133" class="lower-alpha">
-<li id="li-53">Draw a commutative diagram that illustrates the results of <a class="xref" data-knowl="./knowl/stereo2dliftinversion.html" title="Exercise 1.3.3.5">Exercise 1.3.3.5</a>.</li>
-<li id="li-54">The <dfn class="terminology">distributive law</dfn> for \(\Z_n\) says that<div class="displaymath">
+<li id="li-53"><p id="p-derived-li-53">Draw a commutative diagram that illustrates the results of <a href="" class="xref" data-knowl="./knowl/stereo2dliftinversion.html" title="Exercise 1.3.3.5">Exercise 1.3.3.5</a>.</p></li>
+<li id="li-54">The <dfn class="terminology">distributive law</dfn> for <span class="process-math">\(\Z_n\)</span> says that<div class="displaymath process-math">
 \begin{equation*}
 [x]\left([y]+[z]\right) = [x][y] +
 [x][z]
 \end{equation*}
-</div>for all \([x],[y],[z]\in
-\Z_n\text{.}\) Label the maps in the commutative diagram below to express the distributive law. <figure class="figure figure-like" id="distlawexer_diagram_blank_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/distlawexer_diagram_blank.png" class="contained" alt=""></div>
+</div>for all <span class="process-math">\([x],[y],[z]\in
+\Z_n\text{.}\)</span> Label the maps in the commutative diagram below to express the distributive law. <figure class="figure figure-like" id="distlawexer_diagram_blank_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/distlawexer_diagram_blank.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
 </li>
-</ol></article><article class="exercise exercise-like" id="equivrelpartexer"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-135">Prove <a class="xref" data-knowl="./knowl/equivrelpart.html" title="Fact 1.4.1: Equivalence relations and partitions">Fact 1.4.1</a>.</p></article><article class="exercise exercise-like" id="welldefinednessexer"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-137">Prove <a class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>.</p></article><article class="exercise exercise-like" id="constructequivrelpartexer"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-139">Prove <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a>.</p></article></section></section></div></main>
+</ol></article><article class="exercise exercise-like" id="equivrelpartexer"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-135">Prove <a href="" class="xref" data-knowl="./knowl/equivrelpart.html" title="Fact 1.4.1: Equivalence relations and partitions">Fact 1.4.1</a>.</p></article><article class="exercise exercise-like" id="welldefinednessexer"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-137">Prove <a href="" class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a>.</p></article><article class="exercise exercise-like" id="constructequivrelpartexer"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-139">Prove <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a>.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

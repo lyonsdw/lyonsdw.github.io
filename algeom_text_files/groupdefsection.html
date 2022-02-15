@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:10:38-04:00       *-->
+<!--*       on 2022-02-15T18:36:02-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,23 +9,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Definition of a group</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
   },
   chtml: {
     scale: 0.88,
@@ -36,21 +38,24 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,14 +92,14 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groupintrosection.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subgroups_cosets_section.html" title="Next">Next</a></span>
@@ -104,190 +109,190 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groupintrosection.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subgroups_cosets_section.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
+<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
+<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
 <li><a href="groupdefsection.html" data-scroll="groupdefsection" class="active">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="groupdefsection"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="groupdefsection"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Definition of a group</span>
 </h2>
 <section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title"></span>
 </h3>
-<p id="p-174">We will use the notation \(\ast \colon S\times S\to S\) to denote a binary operation on a set \(S\) that sends the pair \((x,y)\) to \(x\ast y\text{.}\) Recall that a binary operation \(\ast\) is <em class="emphasis">associative</em> means that \(x\ast(y\ast z)= (x\ast y)\ast z\) for all \(x,y,z\in
-S\text{.}\)  <article class="definition definition-like" id="groupdefn"><h6 class="heading">
+<p id="p-174">We will use the notation <span class="process-math">\(\ast \colon S\times S\to S\)</span> to denote a binary operation on a set <span class="process-math">\(S\)</span> that sends the pair <span class="process-math">\((x,y)\)</span> to <span class="process-math">\(x\ast y\text{.}\)</span> Recall that a binary operation <span class="process-math">\(\ast\)</span> is <em class="emphasis">associative</em> means that <span class="process-math">\(x\ast(y\ast z)= (x\ast y)\ast z\)</span> for all <span class="process-math">\(x,y,z\in
+S\text{.}\)</span>  <article class="definition definition-like" id="groupdefn"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group.</span>
-</h6>
-<p id="p-175">A <dfn class="terminology">group</dfn> is a set \(G\text{,}\) together with a binary operation \(\ast\colon G\times G \to G\) with the following properties.</p>
+</h4>
+<p id="p-175">A <dfn class="terminology">group</dfn> is a set <span class="process-math">\(G\text{,}\)</span> together with a binary operation <span class="process-math">\(\ast\colon G\times G \to G\)</span> with the following properties.</p>
 <ul class="disc">
-<li id="li-103">The operation \(\ast\) is associative.</li>
-<li id="li-104">There exists an element \(e\) in \(G\text{,}\) called an <dfn class="terminology">identity</dfn> element, such that \(e\ast g=g\ast e=g\) for all \(g\in
-G\text{.}\)</li>
-<li id="li-105">For every \(g\in G\text{,}\) there exists an element \(h\in G\text{,}\) called an <dfn class="terminology">inverse</dfn> element for \(g\text{,}\) such that \(g\ast h=h \ast g=e\text{.}\)</li>
-</ul></article> <article class="proposition theorem-like" id="groupdefnprop"><h6 class="heading">
+<li id="li-103"><p id="p-derived-li-103">The operation <span class="process-math">\(\ast\)</span> is associative.</p></li>
+<li id="li-104"><p id="p-derived-li-104">There exists an element <span class="process-math">\(e\)</span> in <span class="process-math">\(G\text{,}\)</span> called an <dfn class="terminology">identity</dfn> element, such that <span class="process-math">\(e\ast g=g\ast e=g\)</span> for all <span class="process-math">\(g\in
+G\text{.}\)</span></p></li>
+<li id="li-105"><p id="p-derived-li-105">For every <span class="process-math">\(g\in G\text{,}\)</span> there exists an element <span class="process-math">\(h\in G\text{,}\)</span> called an <dfn class="terminology">inverse</dfn> element for <span class="process-math">\(g\text{,}\)</span> such that <span class="process-math">\(g\ast h=h \ast g=e\text{.}\)</span></p></li>
+</ul></article> <article class="proposition theorem-like" id="groupdefnprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Immediate consequences of the definition of group.</span>
-</h6>
-<p id="p-176">Let \(G\) be a group. The element \(e\) in the second property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique. Given \(g\in G\text{,}\) the element \(h\) in the third property of <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-177">See <a class="xref" data-knowl="./knowl/idunique.html" title="Exercise 2.2.2.1: Uniqueness of the identity element">Exercise 2.2.2.1</a> and <a class="xref" data-knowl="./knowl/invunique.html" title="Exercise 2.2.2.2: Uniqueness of inverse elements">Exercise 2.2.2.2</a>.</p></article></div> <article class="definition definition-like" id="definition-10"><h6 class="heading">
+</h4>
+<p id="p-176">Let <span class="process-math">\(G\)</span> be a group. The element <span class="process-math">\(e\)</span> in the second property of <a href="" class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique. Given <span class="process-math">\(g\in G\text{,}\)</span> the element <span class="process-math">\(h\)</span> in the third property of <a href="" class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a> is unique.</p></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-177">See <a href="" class="xref" data-knowl="./knowl/idunique.html" title="Exercise 2.2.2.1: Uniqueness of the identity element">Exercise 2.2.2.1</a> and <a href="" class="xref" data-knowl="./knowl/invunique.html" title="Exercise 2.2.2.2: Uniqueness of inverse elements">Exercise 2.2.2.2</a>.</p></article></div> <article class="definition definition-like" id="definition-10"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplicative notation.</span>
-</h6>
-<p id="p-178">Let \(G\) be a group. By <a class="xref" data-knowl="./knowl/groupdefnprop.html" title="Proposition 2.2.2: Immediate consequences of the definition of group">Proposition 2.2.2</a>, we may speak of an identity element as <em class="emphasis">the</em> identity element for \(G\text{.}\)  Given \(g\in G\text{,}\) we may refer to an inverse element for \(g\) as <em class="emphasis">the</em> inverse of \(g\text{,}\) and we write \(g^{-1}\) to denote this element.  In practice, we often omit the operator \(\ast\text{,}\) and simply write \(gh\) to denote \(g\ast h\text{.}\) We adopt the convention that \(g^0\) is the identity element. For \(k\geq
-1\text{,}\) we write \(g^k\) to denote \(\underbrace{g\ast g\ast \cdots \ast g}_{k \text{
-factors}}\) and we write \(g^{-k}\) to denote \(\left(g^{k}\right)^{-1}\text{.}\) This set of notational conventions is called <dfn class="terminology">multiplicative notation</dfn> .</p></article> <article class="definition definition-like" id="definition-11"><h6 class="heading">
+</h4>
+<p id="p-178">Let <span class="process-math">\(G\)</span> be a group. By <a href="" class="xref" data-knowl="./knowl/groupdefnprop.html" title="Proposition 2.2.2: Immediate consequences of the definition of group">Proposition 2.2.2</a>, we may speak of an identity element as <em class="emphasis">the</em> identity element for <span class="process-math">\(G\text{.}\)</span>  Given <span class="process-math">\(g\in G\text{,}\)</span> we may refer to an inverse element for <span class="process-math">\(g\)</span> as <em class="emphasis">the</em> inverse of <span class="process-math">\(g\text{,}\)</span> and we write <span class="process-math">\(g^{-1}\)</span> to denote this element.  In practice, we often omit the operator <span class="process-math">\(\ast\text{,}\)</span> and simply write <span class="process-math">\(gh\)</span> to denote <span class="process-math">\(g\ast h\text{.}\)</span> We adopt the convention that <span class="process-math">\(g^0\)</span> is the identity element. For <span class="process-math">\(k\geq
+1\text{,}\)</span> we write <span class="process-math">\(g^k\)</span> to denote <span class="process-math">\(\underbrace{g\ast g\ast \cdots \ast g}_{k \text{
+factors}}\)</span> and we write <span class="process-math">\(g^{-k}\)</span> to denote <span class="process-math">\(\left(g^{k}\right)^{-1}\text{.}\)</span> This set of notational conventions is called <dfn class="terminology">multiplicative notation</dfn> .</p></article> <article class="definition definition-like" id="definition-11"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian group, additive notation.</span>
-</h6>
-<p id="p-179">In general, group operations are not commutative.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a>	     A group with a commutative operation is called <dfn class="terminology">Abelian</dfn>.</p> For some Abelian groups, such as the group of integers, the group operation is called <em class="emphasis">addition</em>, and we write \(a+b\) instead of using the multiplicative notation \(a\ast b\text{.}\) We write \(0\) to denote the identity element, we write \(-a\) to denote the inverse of \(a\text{,}\) and we write \(ka\) to denote \(\underbrace{a+ a+ \cdots +a}_{k
-\text{ summands}}\) for positive integers \(k\text{.}\) This set of notational conventions is called <dfn class="terminology">additive notation</dfn> .</article></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">Recall that a binary operation \(\ast\) on a set \(S\) is called <em class="emphasis">commutative</em> if \(x \ast y = y\ast
-x\) for all \(x,y\in S\text{.}\)</div></div>
-<article class="definition definition-like" id="definition-12"><h6 class="heading">
+</h4>
+<p id="p-179">In general, group operations are not commutative.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>	     A group with a commutative operation is called <dfn class="terminology">Abelian</dfn>.</p> For some Abelian groups, such as the group of integers, the group operation is called <em class="emphasis">addition</em>, and we write <span class="process-math">\(a+b\)</span> instead of using the multiplicative notation <span class="process-math">\(a\ast b\text{.}\)</span> We write <span class="process-math">\(0\)</span> to denote the identity element, we write <span class="process-math">\(-a\)</span> to denote the inverse of <span class="process-math">\(a\text{,}\)</span> and we write <span class="process-math">\(ka\)</span> to denote <span class="process-math">\(\underbrace{a+ a+ \cdots +a}_{k
+\text{ summands}}\)</span> for positive integers <span class="process-math">\(k\text{.}\)</span> This set of notational conventions is called <dfn class="terminology">additive notation</dfn> .</article></p>
+<article class="definition definition-like" id="definition-12"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Order of a group.</span>
-</h6> The number of elements in a finite group is called the <dfn class="terminology">order</dfn> of the group. A group with infinitely many elements is said to be of <em class="emphasis">infinite order</em>. We write \(|G|\) to denote the order of the group \(G\text{.}\)</article><article class="definition definition-like" id="definition-13"><h6 class="heading">
+</h4> The number of elements in a finite group is called the <dfn class="terminology">order</dfn> of the group. A group with infinitely many elements is said to be of <em class="emphasis">infinite order</em>. We write <span class="process-math">\(|G|\)</span> to denote the order of the group <span class="process-math">\(G\text{.}\)</span></article><article class="definition definition-like" id="definition-13"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The trivial group.</span>
-</h6>
-<p id="p-180">A group with a single element (which is necessarily the identity element) is called a <dfn class="terminology">trivial group</dfn>. In multiplicative notation, one might write \(\{1\}\text{,}\) and in additive notation, one might write \(\{0\}\text{,}\) to denote a trivial group.</p></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+</h4>
+<p id="p-180">A group with a single element (which is necessarily the identity element) is called a <dfn class="terminology">trivial group</dfn>. In multiplicative notation, one might write <span class="process-math">\(\{1\}\text{,}\)</span> and in additive notation, one might write <span class="process-math">\(\{0\}\text{,}\)</span> to denote a trivial group.</p></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.2.2</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="idunique"><h6 class="heading">
+<article class="exercise exercise-like" id="idunique"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Uniqueness of the identity element.</span>
-</h6>
-<p id="p-181">Let \(G\) be a group. Suppose that \(e,e'\) both satisfy the second property of the <a class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>, that is, suppose \(e\ast x=x\ast e = e'\ast x=x\ast e'=x\) for all \(x\in G\text{.}\) Show that \(e=e'\text{.}\)</p></article><article class="exercise exercise-like" id="invunique"><h6 class="heading">
+</h4>
+<p id="p-181">Let <span class="process-math">\(G\)</span> be a group. Suppose that <span class="process-math">\(e,e'\)</span> both satisfy the second property of the <a href="" class="xref" data-knowl="./knowl/groupdefn.html" title="Definition 2.2.1: Group">Definition 2.2.1</a>, that is, suppose <span class="process-math">\(e\ast x=x\ast e = e'\ast x=x\ast e'=x\)</span> for all <span class="process-math">\(x\in G\text{.}\)</span> Show that <span class="process-math">\(e=e'\text{.}\)</span></p></article><article class="exercise exercise-like" id="invunique"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Uniqueness of inverse elements.</span>
-</h6>
-<p id="p-183">Let \(G\) be a group with identity element \(e\text{.}\) Let \(g\in G\) and suppose that \(g\ast h = h\ast g = g\ast h' = h'\ast g =
-e\text{.}\) Show that \(h=h'\text{.}\)</p></article><article class="exercise exercise-like" id="cancellation"><h6 class="heading">
+</h4>
+<p id="p-183">Let <span class="process-math">\(G\)</span> be a group with identity element <span class="process-math">\(e\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and suppose that <span class="process-math">\(g\ast h = h\ast g = g\ast h' = h'\ast g =
+e\text{.}\)</span> Show that <span class="process-math">\(h=h'\text{.}\)</span></p></article><article class="exercise exercise-like" id="cancellation"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The cancellation law.</span>
-</h6>
-<p id="p-185">Suppose that \(gx=hx\) for some elements \(g,h,x\) in a group \(G\text{.}\) Show that \(g=h\text{.}\) [Note that the same proof, mutatis mutandis, shows that if \(xg=xh\text{,}\) then \(g=h\text{.}\)]</p></article><article class="exercise exercise-like" id="socksandshoes"><h6 class="heading">
+</h4>
+<p id="p-185">Suppose that <span class="process-math">\(gx=hx\)</span> for some elements <span class="process-math">\(g,h,x\)</span> in a group <span class="process-math">\(G\text{.}\)</span> Show that <span class="process-math">\(g=h\text{.}\)</span> [Note that the same proof, mutatis mutandis, shows that if <span class="process-math">\(xg=xh\text{,}\)</span> then <span class="process-math">\(g=h\text{.}\)</span>]</p></article><article class="exercise exercise-like" id="socksandshoes"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The "socks and shoes" property.</span>
-</h6>
-<p id="p-187">Let \(g,h\) be elements of a group \(G\text{.}\) Show that \((gh)^{-1} = h^{-1}g^{-1}\text{.}\)</p></article><article class="exercise exercise-like" id="productgroupexer"><h6 class="heading">
+</h4>
+<p id="p-187">Let <span class="process-math">\(g,h\)</span> be elements of a group <span class="process-math">\(G\text{.}\)</span> Show that <span class="process-math">\((gh)^{-1} = h^{-1}g^{-1}\text{.}\)</span></p></article><article class="exercise exercise-like" id="productgroupexer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Product Groups.</span>
-</h6>
-<p id="p-189">Given two groups \(G,H\) with group operations \(\ast_G,\ast_H\text{,}\) the Cartesian product \(G\times H\) is a group with the operation \(\ast_{G\times H}\) given by</p>
-<div class="displaymath">
+</h4>
+<p id="p-189">Given two groups <span class="process-math">\(G,H\)</span> with group operations <span class="process-math">\(\ast_G,\ast_H\text{,}\)</span> the Cartesian product <span class="process-math">\(G\times H\)</span> is a group with the operation <span class="process-math">\(\ast_{G\times H}\)</span> given by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 (g,h)\ast_{G\times H} (g',h')= (g\ast_G g',h\ast_H
 h').
 \end{equation*}
 </div>
-<p class="continuation">Show that this operation satisfies the definition of a group.</p></article><article class="exercise exercise-like" id="cyclicgroups"><h6 class="heading">
+<p class="continuation">Show that this operation satisfies the definition of a group.</p></article><article class="exercise exercise-like" id="cyclicgroups"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic groups.</span>
-</h6>
-<p id="p-191">A group \(G\) is called <dfn class="terminology">cyclic</dfn> if there exists an element \(g\) in \(G\text{,}\) called a <dfn class="terminology">generator</dfn>, such that the sequence</p>
-<div class="displaymath">
+</h4>
+<p id="p-191">A group <span class="process-math">\(G\)</span> is called <dfn class="terminology">cyclic</dfn> if there exists an element <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> called a <dfn class="terminology">generator</dfn>, such that the sequence</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \left(g^k\right)_{k\in
 \Z}=(\ldots,g^{-3},g^{-2},g^{-1},g^0,g^1,g^2,g^3,\ldots)
 \end{equation*}
 </div>
-<p class="continuation">contains all of the elements in \(G\text{.}\)</p>
+<p class="continuation">contains all of the elements in <span class="process-math">\(G\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-106">The group of integers is cyclic. Find all of the generators.</li>
-<li id="li-107">The group \(\Z_8\) is cyclic. Find all of the generators.</li>
-<li id="li-108">The group \(\Z_2\times \Z_3\) is cyclic. Find all of the generators.</li>
-<li id="li-109">Show that the group \(\Z_2\times \Z_2\) is <em class="emphasis">not</em> cyclic.</li>
-<li id="li-110">Let \(m,n\) be positive integers. Show that the group \(\Z_m\times \Z_n\) is cyclic if and only if \(m,n\) are relatively prime, that is, if the greatest common divisor of \(m,n\) is 1.</li>
+<li id="li-106"><p id="p-derived-li-106">The group of integers is cyclic. Find all of the generators.</p></li>
+<li id="li-107"><p id="p-derived-li-107">The group <span class="process-math">\(\Z_8\)</span> is cyclic. Find all of the generators.</p></li>
+<li id="li-108"><p id="p-derived-li-108">The group <span class="process-math">\(\Z_2\times \Z_3\)</span> is cyclic. Find all of the generators.</p></li>
+<li id="li-109"><p id="p-derived-li-109">Show that the group <span class="process-math">\(\Z_2\times \Z_2\)</span> is <em class="emphasis">not</em> cyclic.</p></li>
+<li id="li-110"><p id="p-derived-li-110">Let <span class="process-math">\(m,n\)</span> be positive integers. Show that the group <span class="process-math">\(\Z_m\times \Z_n\)</span> is cyclic if and only if <span class="process-math">\(m,n\)</span> are relatively prime, that is, if the greatest common divisor of <span class="process-math">\(m,n\)</span> is 1.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">For the last part, observe that \((a,b)\in \Z_m\times
-\Z_n\) is a generator if and only if every entry in the sequence<div class="displaymath">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">For the last part, observe that <span class="process-math">\((a,b)\in \Z_m\times
+\Z_n\)</span> is a generator if and only if every entry in the sequence<div class="displaymath process-math">
 \begin{equation*}
 (a,b),(2a,2b),(3a,3b),\ldots,(mna,mnb)
 \end{equation*}
-</div>is distinct (say why!). Let \(L\) be the least common multiple of \(n,m\text{.}\) If \(m,n\) are relatively prime, then \(L=mn\text{,}\) and if \(m,n\) are not relatively prime, then \(L\lt mn\) (say why!). Use this observation to prove the statement in the exercise.</div></div>
-</div></article><article class="exercise exercise-like" id="cyclicpermutations"><h6 class="heading">
+</div>is distinct (say why!). Let <span class="process-math">\(L\)</span> be the least common multiple of <span class="process-math">\(n,m\text{.}\)</span> If <span class="process-math">\(m,n\)</span> are relatively prime, then <span class="process-math">\(L=mn\text{,}\)</span> and if <span class="process-math">\(m,n\)</span> are not relatively prime, then <span class="process-math">\(L\lt mn\)</span> (say why!). Use this observation to prove the statement in the exercise.</div></div>
+</div></article><article class="exercise exercise-like" id="cyclicpermutations"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic permutations.</span>
-</h6>
-<p id="p-193">Let \(n\) be a positive integer and \(k\) be an integer in the range \(1\leq k\leq n\text{.}\) A permutation \(\pi\in S_n\) (see <a class="xref" data-knowl="./knowl/permgpdef.html" title="Definition 2.1.1">Definition 2.1.1</a>) is called a <dfn class="terminology">\(k\)-cycle</dfn> if there is a \(k\)-element set \(A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}\) such that \(\pi(a_i)=a_{i+1}\) for \(1\leq i\leq k-1\) and \(\pi(a_k)=a_1\text{,}\) and \(\pi(j)=j\) for \(j\not\in
-A\text{.}\) We use <dfn class="terminology">cycle notation</dfn> \((a_1a_2\cdots a_k)\) to denote the \(k\)-cycle that acts as</p>
-<div class="displaymath">
+</h4>
+<p id="p-193">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(k\)</span> be an integer in the range <span class="process-math">\(1\leq k\leq n\text{.}\)</span> A permutation <span class="process-math">\(\pi\in S_n\)</span> (see <a href="" class="xref" data-knowl="./knowl/permgpdef.html" title="Definition 2.1.1">Definition 2.1.1</a>) is called a <dfn class="terminology"><span class="process-math">\(k\)</span>-cycle</dfn> if there is a <span class="process-math">\(k\)</span>-element set <span class="process-math">\(A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}\)</span> such that <span class="process-math">\(\pi(a_i)=a_{i+1}\)</span> for <span class="process-math">\(1\leq i\leq k-1\)</span> and <span class="process-math">\(\pi(a_k)=a_1\text{,}\)</span> and <span class="process-math">\(\pi(j)=j\)</span> for <span class="process-math">\(j\not\in
+A\text{.}\)</span> We use <dfn class="terminology">cycle notation</dfn> <span class="process-math">\((a_1a_2\cdots a_k)\)</span> to denote the <span class="process-math">\(k\)</span>-cycle that acts as</p>
+<div class="displaymath process-math">
 \begin{equation*}
 a_1{\to} a_2{\to} a_3{\to} \cdots{\to} a_k{\to} a_1
 \end{equation*}
 </div>
-<p class="continuation">on the distinct positive integers \(a_1,a_2,\ldots,a_k\text{.}\) For example, the element \(\pi=[1,4,2,3]=(2,4,3)\) is a 3-cycle in \(S_4\) because \(\pi\) acts on the set \(A=\{2,3,4\}\) by</p>
-<div class="displaymath">
+<p class="continuation">on the distinct positive integers <span class="process-math">\(a_1,a_2,\ldots,a_k\text{.}\)</span> For example, the element <span class="process-math">\(\pi=[1,4,2,3]=(2,4,3)\)</span> is a 3-cycle in <span class="process-math">\(S_4\)</span> because <span class="process-math">\(\pi\)</span> acts on the set <span class="process-math">\(A=\{2,3,4\}\)</span> by</p>
+<div class="displaymath process-math">
 \begin{equation*}
 2\to 4\to 3\to 2
 \end{equation*}
 </div>
-<p class="continuation">and \(\pi\) acts on \(A^c=\{1\}\) as the identity. Note cycle notation is not unique. For example, we have \((2,4,3)=(4,3,2)=(3,2,4)\) in \(S_4.\) Cycles of any length (any positive integer) are called <dfn class="terminology">cyclic</dfn> permutations. A 2-cycle is called a <dfn class="terminology">transposition</dfn>.</p>
+<p class="continuation">and <span class="process-math">\(\pi\)</span> acts on <span class="process-math">\(A^c=\{1\}\)</span> as the identity. Note cycle notation is not unique. For example, we have <span class="process-math">\((2,4,3)=(4,3,2)=(3,2,4)\)</span> in <span class="process-math">\(S_4.\)</span> A permutation is called <dfn class="terminology">cyclic</dfn> if it is a <span class="process-math">\(k\)</span>-cycle for some <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(1\leq k \leq
+n\text{.}\)</span> A 2-cycle is called a <dfn class="terminology">transposition</dfn>.</p>
 <ol class="lower-alpha">
-<li id="li-116">Find all of the cyclic permutations in \(S_3\text{.}\) Find their inverses.</li>
-<li id="li-117">Find all of the cyclic permutations in \(S_4\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="disjointcycleproductexer"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-195">Cycles \((a_1a_2\cdots a_k)\) and \((b_1b_2\cdots b_\ell)\) are called <dfn class="terminology">disjoint</dfn> if the the sets \(\{a_1,a_2,\ldots,a_k\}\) and \(\{b_1,b_2,\ldots,b_\ell\}\) are disjoint, that is, if \(a_i\neq b_j\) for all \(i,j\text{.}\) Show that every permutation in \(S_n\) is a product of disjoint cycles.</p></article><article class="exercise exercise-like" id="permtransprodexer"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-197">Show that every permutation in \(S_n\) can be written as a product of transpositions.</p></article><article class="exercise exercise-like" id="permparityexer"><h6 class="heading">
+<li id="li-116"><p id="p-derived-li-116">Find all of the cyclic permutations in <span class="process-math">\(S_3\text{.}\)</span> Find their inverses.</p></li>
+<li id="li-117"><p id="p-derived-li-117">Find all of the cyclic permutations in <span class="process-math">\(S_4\text{.}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="disjointcycleproductexer"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-195">Cycles <span class="process-math">\((a_1a_2\cdots a_k)\)</span> and <span class="process-math">\((b_1b_2\cdots b_\ell)\)</span> are called <dfn class="terminology">disjoint</dfn> if the the sets <span class="process-math">\(\{a_1,a_2,\ldots,a_k\}\)</span> and <span class="process-math">\(\{b_1,b_2,\ldots,b_\ell\}\)</span> are disjoint, that is, if <span class="process-math">\(a_i\neq b_j\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> Show that every permutation in <span class="process-math">\(S_n\)</span> is a product of disjoint cycles.</p></article><article class="exercise exercise-like" id="permtransprodexer"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-197">Show that every permutation in <span class="process-math">\(S_n\)</span> can be written as a product of transpositions.</p></article><article class="exercise exercise-like" id="permparityexer"><h4 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Parity of a permutation.</span>
-</h6>
+</h4>
 <ol id="p-199" class="lower-alpha">
-<li id="li-120">Suppose that the identity permutation \(e\) in \(S_n\) is written as a product of transpositions<div class="displaymath">
+<li id="li-120"><p id="p-derived-li-120">Suppose that the identity permutation <span class="process-math">\(e\)</span> in <span class="process-math">\(S_n\)</span> is written as a product of transpositions<div class="displaymath process-math">
 \begin{equation*}
 e=\tau_1\tau_2\cdots \tau_r.
 \end{equation*}
-</div>Show that \(r\) is even.</li>
-<li id="li-121">Suppose that \(\sigma\) in \(S_n\) is written in two ways as a product of transpositions.<div class="displaymath">
+</div>Show that <span class="process-math">\(r\)</span> is even.</p></li>
+<li id="li-121"><p id="p-derived-li-121">Suppose that <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S_n\)</span> is written in two ways as a product of transpositions.<div class="displaymath process-math">
 \begin{equation*}
 \sigma = (a_1b_1)(a_2b_2)\cdots (a_sb_s) =
 (c_1d_1)(c_2d_2)\cdots (c_td_t)
 \end{equation*}
-</div>Show that \(s,t\) are either both even or both odd. The common evenness or oddness of \(s,t\) is called the <dfn class="terminology">parity</dfn> of the permutation \(\sigma\text{.}\)</li>
-<li id="li-122">Show that the parity of a \(k\)-cycle is even if \(k\) is odd, and the parity of a \(k\)-cycle is odd if \(k\) is even.</li>
+</div>Show that <span class="process-math">\(s,t\)</span> are either both even or both odd. The common evenness or oddness of <span class="process-math">\(s,t\)</span> is called the <dfn class="terminology">parity</dfn> of the permutation <span class="process-math">\(\sigma\text{.}\)</span></p></li>
+<li id="li-122"><p id="p-derived-li-122">Show that the parity of a <span class="process-math">\(k\)</span>-cycle is even if <span class="process-math">\(k\)</span> is odd, and the parity of a <span class="process-math">\(k\)</span>-cycle is odd if <span class="process-math">\(k\)</span> is even.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><ol id="p-200" class="lower-alpha"><li id="li-123">Consider the two rightmost transpositions \(\tau_{r-1}\tau_{r}\text{.}\) They have one of the following forms, where \(a,b,c,d\) are distinct.<div class="displaymath">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><ol id="p-200" class="lower-alpha"><li id="li-123"><p id="p-derived-li-123">Consider the two rightmost transpositions <span class="process-math">\(\tau_{r-1}\tau_{r}\text{.}\)</span> They have one of the following forms, where <span class="process-math">\(a,b,c,d\)</span> are distinct.<div class="displaymath process-math">
 \begin{equation*}
 (ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
 \end{equation*}
-</div>The first allows you to reduce the transposition count by two by cancelling. The remaining three can be rewritten.<div class="displaymath">
+</div>The first allows you to reduce the transposition count by two by cancelling. The remaining three can be rewritten.<div class="displaymath process-math">
 \begin{equation*}
 (ab)(bc), (ac)(cb), (ab)(cd)
 \end{equation*}
-</div>Notice that the index of the rightmost transposition in which the symbol \(a\) occurs has been reduced by 1 (from \(r\) to \(r-1\)). Finish this reasoning with an inductive argument.</li></ol></div></div>
-</div></article><article class="exercise exercise-like" id="cayleytable"><h6 class="heading">
+</div>Notice that the index of the rightmost transposition in which the symbol <span class="process-math">\(a\)</span> occurs has been reduced by 1 (from <span class="process-math">\(r\)</span> to <span class="process-math">\(r-1\)</span>). Finish this reasoning with an inductive argument.</p></li></ol></div></div>
+</div></article><article class="exercise exercise-like" id="cayleytable"><h4 class="heading">
 <span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Cayley tables.</span>
-</h6>
-<p id="p-202">The <dfn class="terminology">Cayley table</dfn> for a finite group \(G\) is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry \(gh\) in position with row label \(g\) and column label \(h\text{.}\) Partial Cayley tables for \(S_3\) (<a class="xref" data-knowl="./knowl/s3cayleytablefig.html" title="Figure 2.2.7">Figure 2.2.7</a>) and \(D_4\) (<a class="xref" data-knowl="./knowl/d4cayleytablefig.html" title="Figure 2.2.8">Figure 2.2.8</a>) are given below. <figure class="figure figure-like" id="s3cayleytablefig"><div class="displaymath">
+</h4>
+<p id="p-202">The <dfn class="terminology">Cayley table</dfn> for a finite group <span class="process-math">\(G\)</span> is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry <span class="process-math">\(gh\)</span> in position with row label <span class="process-math">\(g\)</span> and column label <span class="process-math">\(h\text{.}\)</span> Partial Cayley tables for <span class="process-math">\(S_3\)</span> (<a href="" class="xref" data-knowl="./knowl/s3cayleytablefig.html" title="Figure 2.2.7">Figure 2.2.7</a>) and <span class="process-math">\(D_4\)</span> (<a href="" class="xref" data-knowl="./knowl/d4cayleytablefig.html" title="Figure 2.2.8">Figure 2.2.8</a>) are given below. <figure class="figure figure-like" id="s3cayleytablefig"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}
 {c|cccccc}
@@ -302,7 +307,7 @@ e \amp  \amp  \amp  \amp (12) \amp  \amp  \\
 \end{array}
 \end{equation*}
 </div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span>(Partial) Cayley table for \(S_3\text{.}\) The symbol \(e\) denotes the identity permutation.</figcaption></figure> <figure class="figure figure-like" id="d4cayleytablefig"><div class="displaymath">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span>(Partial) Cayley table for <span class="process-math">\(S_3\text{.}\)</span> The symbol <span class="process-math">\(e\)</span> denotes the identity permutation.</figcaption></figure> <figure class="figure figure-like" id="d4cayleytablefig"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}
 {c|cccccccc}
@@ -319,13 +324,13 @@ R_0\amp  \amp  \amp  \amp  \amp  \amp    \amp   \amp
 \end{array}
 \end{equation*}
 </div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.8<span class="period">.</span></span><span class="space"> </span>(Partial) Cayley table for \(D_4\text{.}\) (See <a class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a> for notation for the elements of \(D_4\text{.}\))</figcaption></figure></p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.8<span class="period">.</span></span><span class="space"> </span>(Partial) Cayley table for <span class="process-math">\(D_4\text{.}\)</span> (See <a href="" class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a> for notation for the elements of <span class="process-math">\(D_4\text{.}\)</span>)</figcaption></figure></p>
 <ol class="lower-alpha">
-<li id="li-127">Fill in the remaining entries in the Cayley tables for \(S_3\) and \(D_4\text{.}\)</li>
-<li id="li-128">Prove that the Cayley table for any group is a <dfn class="terminology">Latin square</dfn>. This means that every element of the group appears exactly once in each row and in each column.</li>
+<li id="li-127"><p id="p-derived-li-127">Fill in the remaining entries in the Cayley tables for <span class="process-math">\(S_3\)</span> and <span class="process-math">\(D_4\text{.}\)</span></p></li>
+<li id="li-128"><p id="p-derived-li-128">Prove that the Cayley table for any group is a <dfn class="terminology">Latin square</dfn>. This means that every element of the group appears exactly once in each row and in each column.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="displaymath" id="p-203">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="displaymath process-math" id="p-203">
 \begin{equation*}
 \begin{array}
 {c|cccccc}
@@ -340,7 +345,7 @@ e \amp e \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
 \end{array}
 \end{equation*}
 </div></div></div>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="displaymath" id="p-204">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="displaymath process-math" id="p-204">
 \begin{equation*}
 \begin{array}
 {c|cccccccc}
@@ -357,7 +362,10 @@ R_0 \amp     F_V   \amp   F_H  \amp   F_D  \amp   F_{D'} \amp    R_{1/4}  \amp  
 \end{array}
 \end{equation*}
 </div></div></div>
-</div></article></section></section></div></main>
+</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">Recall that a binary operation <span class="process-math">\(\ast\)</span> on a set <span class="process-math">\(S\)</span> is called <em class="emphasis">commutative</em> if <span class="process-math">\(x \ast y = y\ast
+x\)</span> for all <span class="process-math">\(x,y\in S\text{.}\)</span>
+</div></div>
+</div></main>
 </div>
 </body>
 </html>

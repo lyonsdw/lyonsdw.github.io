@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:10:38-04:00       *-->
+<!--*       on 2022-02-15T18:36:01-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,23 +9,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Stereographic projection</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
   },
   chtml: {
     scale: 0.88,
@@ -36,21 +38,24 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,14 +92,14 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="quaternionsection.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a></span>
@@ -104,162 +109,167 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="quaternionsection.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="basics_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-4.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
+<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
+<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
 <li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="active">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
+<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
+<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
+<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
+<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
+<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
+<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
+<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
+<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
+<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="stereoprojsect"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="stereoprojsect"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Stereographic projection</span>
 </h2>
 <section class="subsection" id="subsection-12"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Stereographic projection \(S^1\to \extR\)</span>
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span>
 </h3>
-<p id="p-86">Let \(S^1\) denote the unit circle in the \(x,y\)-plane.</p>
-<div class="displaymath">
+<p id="p-86">Let <span class="process-math">\(S^1\)</span> denote the unit circle in the <span class="process-math">\(x,y\)</span>-plane.</p>
+<div class="displaymath process-math" id="s1defn">
 \begin{equation}
-S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\label{s1defn}\tag{1.3.1}
+S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\tag{1.3.1}
 \end{equation}
 </div>
-<p class="continuation">Let \(N=(0,1)\) denote the "north pole" (that is, the point at the "top" of the unit circle). Given a point \(P=(x,y)\neq N\) on the unit circle, let \(s(P)\) denote the intersection of the line \(\overline{NP}\) with the \(x\)-axis. See <a class="xref" data-knowl="./knowl/stereoprojfig.html" title="Figure 1.3.1">Figure 1.3.1</a>. The map \(s\colon S^1\setminus \{N\}\to \R\) given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that \(s(x,y)=\frac{x}{1-y}\text{.}\)</p>
-<figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj.png" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure><article class="exercise exercise-like" id="stereoproj1formulaexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-stereoproj1formulaexer"><h6 class="heading">
+<p class="continuation">Let <span class="process-math">\(N=(0,1)\)</span> denote the "north pole" (that is, the point at the "top" of the unit circle). Given a point <span class="process-math">\(P=(x,y)\neq N\)</span> on the unit circle, let <span class="process-math">\(s(P)\)</span> denote the intersection of the line <span class="process-math">\(\overline{NP}\)</span> with the <span class="process-math">\(x\)</span>-axis. See <a href="" class="xref" data-knowl="./knowl/stereoprojfig.html" title="Figure 1.3.1">Figure 1.3.1</a>. The map <span class="process-math">\(s\colon S^1\setminus \{N\}\to \R\)</span> given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that <span class="process-math">\(s(x,y)=\frac{x}{1-y}\text{.}\)</span></p>
+<figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure><article class="exercise exercise-like" id="stereoproj1formulaexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-stereoproj1formulaexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-stereoproj1formulaexer"><article class="exercise exercise-like"><p id="p-87">Draw the relevant similar triangles and verify the formula \(s(x,y) = \frac{x}{1-y}\text{.}\)</p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-stereoproj1formulaexer"><article class="exercise exercise-like"><p id="p-87">Draw the relevant similar triangles and verify the formula <span class="process-math">\(s(x,y) = \frac{x}{1-y}\text{.}\)</span></p></article></div>
 <p id="p-89">We extend stereographic projection to the entire unit circle as follows. We call the set</p>
-<div class="displaymath">
+<div class="displaymath process-math" id="extendedrealsdefn">
 \begin{equation}
-\extR=\R\cup \{\infty\}\label{extendedrealsdefn}\tag{1.3.2}
+\extR=\R\cup \{\infty\}\tag{1.3.2}
 \end{equation}
 </div>
-<p class="continuation">the <dfn class="terminology">extended real numbers</dfn>, where "\(\infty\)" is an element that is not a real number. Now we define stereographic projection \(s\colon S^1 \to \extR\) by</p>
-<div class="displaymath">
+<p class="continuation">the <dfn class="terminology">extended real numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a real number. Now we define stereographic projection <span class="process-math">\(s\colon S^1 \to \extR\)</span> by</p>
+<div class="displaymath process-math" id="stereoproj1defn">
 \begin{equation}
 s(x,y) = \left\{
 \begin{array}{cc}
 \frac{x}{1-y} \amp y\neq 1\\
 \infty \amp y=1
 \end{array}
-\right..\label{stereoproj1defn}\tag{1.3.3}
+\right..\tag{1.3.3}
 \end{equation}
 </div></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Stereographic projection \(S^2\to \extC\)</span>
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span>
 </h3>
 <p id="p-90">The definitions in the previous subsection extend naturally to higher dimensions. Here are the details for the main case of interest.</p>
-<p id="p-91">Let \(S^2\) denote the unit sphere in \(\R^3\text{.}\)</p>
-<div class="displaymath">
+<p id="p-91">Let <span class="process-math">\(S^2\)</span> denote the unit sphere in <span class="process-math">\(\R^3\text{.}\)</span></p>
+<div class="displaymath process-math" id="s2defn">
 \begin{equation}
-S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\label{s2defn}\tag{1.3.4}
+S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\tag{1.3.4}
 \end{equation}
 </div>
-<p class="continuation">Let \(N=(0,0,1)\) denote the "north pole" (that is, the point at the "top" of the sphere, where the positive \(z\)-axis is "up"). Given a point \(P=(a,b,c)\neq N\) on the unit sphere, let \(s(P)\) denote the intersection of the line \(\overline{NP}\) with the \(x,y\)-plane, which we identify with the complex plane \(\C\text{.}\) See See <a class="xref" data-knowl="./knowl/stereoproj2fig.html" title="Figure 1.3.3">Figure 1.3.3</a>. The map \(s\colon S^2\setminus \{N\}\to \C\) given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that \(s(a,b,c)=\frac{a+ib}{1-c}\text{.}\)</p>
-<figure class="figure figure-like" id="stereoproj2fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj2.png" class="contained" alt=""></div>
+<p class="continuation">Let <span class="process-math">\(N=(0,0,1)\)</span> denote the "north pole" (that is, the point at the "top" of the sphere, where the positive <span class="process-math">\(z\)</span>-axis is "up"). Given a point <span class="process-math">\(P=(a,b,c)\neq N\)</span> on the unit sphere, let <span class="process-math">\(s(P)\)</span> denote the intersection of the line <span class="process-math">\(\overline{NP}\)</span> with the <span class="process-math">\(x,y\)</span>-plane, which we identify with the complex plane <span class="process-math">\(\C\text{.}\)</span> See See <a href="" class="xref" data-knowl="./knowl/stereoproj2fig.html" title="Figure 1.3.3">Figure 1.3.3</a>. The map <span class="process-math">\(s\colon S^2\setminus \{N\}\to \C\)</span> given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that <span class="process-math">\(s(a,b,c)=\frac{a+ib}{1-c}\text{.}\)</span></p>
+<figure class="figure figure-like" id="stereoproj2fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure><p id="p-92">We extend stereographic projection to the entire unit sphere as follows. We call the set</p>
-<div class="displaymath">
+<div class="displaymath process-math" id="extendedcomplexsdefn">
 \begin{equation}
-\extC=\C\cup \{\infty\}\label{extendedcomplexsdefn}\tag{1.3.5}
+\extC=\C\cup \{\infty\}\tag{1.3.5}
 \end{equation}
 </div>
-<p class="continuation">the <dfn class="terminology">extended complex numbers</dfn>, where "\(\infty\)" is an element that is not a complex number. Now we define stereographic projection \(s\colon S^2 \to \extC\) by</p>
-<div class="displaymath">
+<p class="continuation">the <dfn class="terminology">extended complex numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a complex number. Now we define stereographic projection <span class="process-math">\(s\colon S^2 \to \extC\)</span> by</p>
+<div class="displaymath process-math" id="stereoprojdefn">
 \begin{equation}
 s(a,b,c) = \left\{
 \begin{array}{cc}
 \frac{a+ib}{1-c} \amp c\neq 1\\
 \infty \amp c=1
 \end{array}
-\right..\label{stereoprojdefn}\tag{1.3.6}
+\right..\tag{1.3.6}
 \end{equation}
 </div></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.3.3</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="stereoformulas">
-<h6 class="heading"><span class="title">Formulas for inverse stereographic projection.</span></h6>
+<h4 class="heading"><span class="title">Formulas for inverse stereographic projection..</span></h4>
 <div class="introduction" id="introduction-3"><p id="p-93">It is intuitively clear that stereographic projection is a bijection. Make this rigorous by finding a formula for the inverse.</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="inverse1dstereoexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-94">For \(s\colon S^1\to \extR\text{,}\) find a formula for \(s^{-1}\colon \extR\to S^1\text{.}\) Find \(s^{-1}(3)\text{.}\)</p>
+<article class="exercise exercise-like" id="inverse1dstereoexer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-94">For <span class="process-math">\(s\colon S^1\to \extR\text{,}\)</span> find a formula for <span class="process-math">\(s^{-1}\colon \extR\to S^1\text{.}\)</span> Find <span class="process-math">\(s^{-1}(3)\text{.}\)</span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
-<div class="displaymath">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like">
+<div class="displaymath process-math">
 \begin{equation*}
 s^{-1}(r) = \begin{cases}
 \left(\frac{2r}{r^2+1},\frac{r^2-1}{r^2+1}\right) \amp
 \text{ if } r\neq \infty\\ (0,1)\amp \text{ if } r=\infty
 \end{cases}
 \end{equation*}
-</div>\(s^{-1}(3) = (3/5,4/5)\)</div></div>
-</div></article><article class="exercise exercise-like" id="inverse2dstereoexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-95">For \(s\colon S^2\to \extC\text{,}\) find a formula for \(s^{-1}\colon \extC\to S^2\text{.}\) Find \(s^{-1}(3+i)\text{.}\)</p>
+</div>
+<span class="process-math">\(s^{-1}(3) = (3/5,4/5)\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="inverse2dstereoexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-95">For <span class="process-math">\(s\colon S^2\to \extC\text{,}\)</span> find a formula for <span class="process-math">\(s^{-1}\colon \extC\to S^2\text{.}\)</span> Find <span class="process-math">\(s^{-1}(3+i)\text{.}\)</span></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
-<div class="displaymath">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
+<div class="displaymath process-math">
 \begin{equation*}
 s^{-1}(z) = \begin{cases}
 \left(\frac{2\re(z)}{|z|^2+1},\frac{2\im(z)}{|z|^2+1},
 \frac{|z|^2-1}{|z|^2+1}\right)\amp \text{ if } z\neq
 \infty\\ (0,0,1) \amp \text{ if } z=\infty \end{cases}
 \end{equation*}
-</div>\(s^{-1}(3+i) = (6/11,2/11,9/11)\)</div></div>
+</div>
+<span class="process-math">\(s^{-1}(3+i) = (6/11,2/11,9/11)\)</span>
+</div></div>
 </div></article>
 </div>
 </div>
 <div class="exercisegroup" id="stereolifts">
-<h6 class="heading"><span class="title">Conjugate transformations.</span></h6>
-<div class="introduction" id="introduction-4">Let \(\mu \colon X\to Y\) be a bijective map. We say that maps  and \(f\colon X\to X\) and \(g\colon Y\to Y\) are <dfn class="terminology">conjugate transformations</dfn> (with respect to the bijection \(\mu\)) if \(f = \mu^{-1}\circ g\circ \mu\text{.}\)</div>
+<h4 class="heading"><span class="title">Conjugate transformations..</span></h4>
+<div class="introduction" id="introduction-4">Let <span class="process-math">\(\mu \colon X\to Y\)</span> be a bijective map. We say that maps  and <span class="process-math">\(f\colon X\to X\)</span> and <span class="process-math">\(g\colon Y\to Y\)</span> are <dfn class="terminology">conjugate transformations</dfn> (with respect to the bijection <span class="process-math">\(\mu\)</span>) if <span class="process-math">\(f = \mu^{-1}\circ g\circ \mu\text{.}\)</span>
+</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="stereo1dliftinversion"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-98">Show that the maps \(S^1\to S^1\) given by \((x,y)\to (x,-y)\) and \(\extR\to \extR\) given by \(x\to 1/x\) are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="mobiuszrotations"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-99">Show that the map \(R_{Z,\theta}\colon S^2\to S^2\) given by \((a,b,c)\to
-(a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)\) (a rotation about the \(z\)-axis by angle \(\theta\)) and the map \(T_{Z,\theta}\colon \extC\to \extC\) given by \(z\to
-e^{i\theta}z\) are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="stereo2dliftinversion"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-100">Show that the map \(R_{X,\pi}\colon S^2\to S^2\) given by \((a,b,c)\to (a,-b,-c)\) (rotation about the \(x\)-axis by \(\pi\) radians)	and the map \(T_{X,\pi}\colon \extC\to \extC\) given by \(z\to 1/z\) are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="mobiusxpiby2rotations"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-101">Show that the map \(R_{X,\pi/2}\colon S^2\to S^2\) given by \((a,b,c)\to (a,-c,b)\) (rotation about the \(x\)-axis by \(\pi/2\) radians) and the map \(T_{X,\pi/2}\colon \extC\to \extC\) given by \(z\to \frac{z+i}{iz+1}\) are conjugate transformations with respect to stereographic projection.</p></article>
+<article class="exercise exercise-like" id="stereo1dliftinversion"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-98">Show that the maps <span class="process-math">\(S^1\to S^1\)</span> given by <span class="process-math">\((x,y)\to (x,-y)\)</span> and <span class="process-math">\(\extR\to \extR\)</span> given by <span class="process-math">\(x\to 1/x\)</span> are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="mobiuszrotations"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-99">Show that the map <span class="process-math">\(R_{Z,\theta}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to
+(a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)\)</span> (a rotation about the <span class="process-math">\(z\)</span>-axis by angle <span class="process-math">\(\theta\)</span>) and the map <span class="process-math">\(T_{Z,\theta}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to
+e^{i\theta}z\)</span> are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="stereo2dliftinversion"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-100">Show that the map <span class="process-math">\(R_{X,\pi}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to (a,-b,-c)\)</span> (rotation about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi\)</span> radians)	and the map <span class="process-math">\(T_{X,\pi}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to 1/z\)</span> are conjugate transformations with respect to stereographic projection.</p></article><article class="exercise exercise-like" id="mobiusxpiby2rotations"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-101">Show that the map <span class="process-math">\(R_{X,\pi/2}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to (a,-c,b)\)</span> (rotation about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians) and the map <span class="process-math">\(T_{X,\pi/2}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> are conjugate transformations with respect to stereographic projection.</p></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="stereoprojdiamends"><h6 class="heading">
+<article class="exercise exercise-like" id="stereoprojdiamends"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Projections of endpoints of diameters.</span>
-</h6>
-<p id="p-106">Show that \(s(a,b,c)(s(-a,-b,-c))^\ast=-1\) for any point \((a,b,c)\) in \(S^2\) with \(|c|\neq 1\text{.}\) Conversely, suppose that \(zw^\ast=-1\) for some \(z,w\in \C\text{.}\) Show that \(s^{-1}(z)=-s^{-1}(w)\text{.}\)</p></article></section></section></div></main>
+</h4>
+<p id="p-106">Show that <span class="process-math">\(s(a,b,c)(s(-a,-b,-c))^\ast=-1\)</span> for any point <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(S^2\)</span> with <span class="process-math">\(|c|\neq 1\text{.}\)</span> Conversely, suppose that <span class="process-math">\(zw^\ast=-1\)</span> for some <span class="process-math">\(z,w\in \C\text{.}\)</span> Show that <span class="process-math">\(s^{-1}(z)=-s^{-1}(w)\text{.}\)</span></p></article></section></section></div></main>
 </div>
 </body>
 </html>
