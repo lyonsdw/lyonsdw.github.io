@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-07T13:12:13-04:00       *-->
+<!--*       on 2022-02-15T18:36:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,29 +13,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<article class="commentary"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.6.</span></h5>
-<p>Suppose \(\gcd(a,n)=1\text{.}\) Then there exist integers \(s,t\) such that \(sa+tn=1\text{.}\) Then we have \(as = 1-tn = 1\pmod{n}\text{,}\) so \(x=s \pmod{n}\) is a solution to \(ax=1 \pmod{n}\text{.}\) This give us an inverse mapping.</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.6.</span></h4>
+<p>Suppose <span class="process-math">\(\gcd(a,n)=1\text{.}\)</span> Then there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sa+tn=1\text{.}\)</span> Then we have <span class="process-math">\(as = 1-tn = 1\pmod{n}\text{,}\)</span> so <span class="process-math">\(x=s \pmod{n}\)</span> is a solution to <span class="process-math">\(ax=1 \pmod{n}\text{.}\)</span> This give us an inverse mapping.</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \mu_a^{-1}=\mu_s
 \end{equation*}
 </div>
-<p class="continuation">We conclude that \(\mu_a\) is an isomorphism.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">More comprehensive version of the problem:</em> Show that \(\mu_a\colon \Z_n\to \Z_n\) given by \(\mu_a(x)=ax\) is an isomorphism if and only if \(n,a\) are relatively prime.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like"><h6 class="heading">
+<p class="continuation">We conclude that <span class="process-math">\(\mu_a\)</span> is an isomorphism.</p>
+<p><em class="alert">More comprehensive version of the problem:</em> Show that <span class="process-math">\(\mu_a\colon \Z_n\to \Z_n\)</span> given by <span class="process-math">\(\mu_a(x)=ax\)</span> is an isomorphism if and only if <span class="process-math">\(n,a\)</span> are relatively prime.</p>
+<p><em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like"><h4 class="heading">
 <span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
-</h6>\(\ker(\mu_a)=\left\langle
-\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</article> Here is how result follows from the Claim. If \(n,a\) are relatively prime, then \(\lcm(n,a)=na\text{,}\) so \(\lcm(n,a)/a=n\text{,}\) so \(\ker(\mu_a)=\{0\}\text{.}\) Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If \(n,a\) are not relatively prime, then \(\lcm(n,a)\lt
-na\text{,}\) and \(\lcm(n,a)/a\leq n\text{.}\) Then \(\ker(\mu_a)\) is not trivial. Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.4.6</a> to conclude that \(\mu_a\) is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</p>
-<p>Now we prove the Claim. Let \(b=\langle \lcm(a,n)/a\rangle\text{.}\) We have</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</h4>
+<span class="process-math">\(\ker(\mu_a)=\left\langle
+\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</span></article> Here is how result follows from the Claim. If <span class="process-math">\(n,a\)</span> are relatively prime, then <span class="process-math">\(\lcm(n,a)=na\text{,}\)</span> so <span class="process-math">\(\lcm(n,a)/a=n\text{,}\)</span> so <span class="process-math">\(\ker(\mu_a)=\{0\}\text{.}\)</span> Now apply Property 7 of <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If <span class="process-math">\(n,a\)</span> are not relatively prime, then <span class="process-math">\(\lcm(n,a)\lt
+na\text{,}\)</span> and <span class="process-math">\(\lcm(n,a)/a\leq n\text{.}\)</span> Then <span class="process-math">\(\ker(\mu_a)\)</span> is not trivial. Now apply Property 7 of <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a> to conclude that <span class="process-math">\(\mu_a\)</span> is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</p>
+<p>Now we prove the Claim. Let <span class="process-math">\(b=\langle \lcm(a,n)/a\rangle\text{.}\)</span> We have</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \mu_a(b)=ab = \lcm(a,n) = 0 \pmod{n}
 \end{equation*}
 </div>
-<p class="continuation">so \(b\in \ker(\mu_a)\text{.}\) If \(c\in \ker(\mu_a)\text{,}\) then \(\mu_a(c)=ac=kn\) for some integer \(k\text{.}\) Since \(kn\) is divisible by \(a\text{,}\) we have \(kn\geq \lcm(a,n)\text{,}\) so \(c\geq
-b\text{.}\) This shows \(b\) is the smallest positive element in \(\ker(\mu_a)\) (or \(b=0\)). Applying <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that \(b\in \ker(\mu_a)\text{.}\)</p></article><span class="incontext"><a href="section-8.html#commentary-64">in-context</a></span>
+<p class="continuation">so <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span> If <span class="process-math">\(c\in \ker(\mu_a)\text{,}\)</span> then <span class="process-math">\(\mu_a(c)=ac=kn\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(kn\)</span> is divisible by <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(kn\geq \lcm(a,n)\text{,}\)</span> so <span class="process-math">\(c\geq
+b\text{.}\)</span> This shows <span class="process-math">\(b\)</span> is the smallest positive element in <span class="process-math">\(\ker(\mu_a)\)</span> (or <span class="process-math">\(b=0\)</span>). Applying <a href="" class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \Z and \Z_n">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</p>
+<p><em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span></p></article><span class="incontext"><a href="section-8.html#commentary-64" class="internal">in-context</a></span>
 </body>
 </html>
