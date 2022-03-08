@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:54-05:00       *-->
+<!--*       on 2022-03-08T10:34:47-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,32 +16,21 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <ol class="lower-alpha">
-<li><p>First, check that, for any pure, unit quaternion <span class="process-math">\(u\text{,}\)</span> we have <span class="process-math">\(u^2=-1\)</span> (use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div class="displaymath process-math">
-\begin{align*}
-R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
-u\sin\theta)^\ast\\
-\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
-\sin\theta)\\
-\amp = u(\cos^2\theta+\sin^2\theta) -
-\sin\theta\cos\theta + \sin\theta\cos\theta\\
-\amp = u
-\end{align*}
-</div></p></li>
-<li><p>We have<div class="displaymath process-math">
-\begin{align*}
-R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
-u\sin\theta)^\ast\\
-\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)\\
-\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
--uvu\sin^2\theta\\
-\amp =v(\cos^2\theta -\sin^2\theta) +
-2w\sin\theta\cos\theta
-\end{align*}
-</div>(use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to simplify <span class="process-math">\(uv-vu=2u\times v=2w\)</span> and use <a href="" class="xref" data-knowl="./knowl/quatreflectionexer.html" title="Exercise 1.2.6.1">Exercise 1.2.6.1</a> to get <span class="process-math">\(v=uvu\text{,}\)</span> the reflection of <span class="process-math">\(v\)</span> in the plane perpendicular to <span class="process-math">\(u\)</span>). Using double angle formulas, the last expression in the displayed derivation becomes<div class="displaymath process-math">
+<li><p>For all <span class="process-math">\(u\in \R^3_\Quat\text{,}\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-v\cos(2\theta) + w\sin(2\theta).
+(R_r\circ R_s)(u) = R_r(sus^\ast)=r(sus^\ast)r^\ast =
+(rs)u(rs)^\ast = R_{rs}(u).
 \end{equation*}
-</div>Since <span class="process-math">\(R_r\)</span> is a linear map that acts on the an orthogonal basis <span class="process-math">\(u,v,w\)</span> as a rotation about <span class="process-math">\(u\)</span> by the angle <span class="process-math">\(2\theta\text{,}\)</span> the Proposition is established.</p></li>
+</div></p></li>
+<li><p>Applying the result from the previous part, we have<div class="displaymath process-math">
+\begin{equation*}
+R_{r^\ast}\circ R_r = R_{r^\ast r} = R_{|r|^2}=R_1 = \Id
+\end{equation*}
+</div>and similarly,<div class="displaymath process-math">
+\begin{equation*}
+R_r\circ R_{r^\ast}=\Id.
+\end{equation*}
+</div>We conclude that <span class="process-math">\((R_r)^{-1}=R_{r^\ast}\text{.}\)</span></p></li>
 </ol>
 <span class="incontext"><a href="quaternionsection.html#p-84" class="internal">in-context</a></span>
 </body>

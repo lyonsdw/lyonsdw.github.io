@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:54-05:00       *-->
+<!--*       on 2022-03-08T10:34:47-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Let <span class="process-math">\(S^2\)</span> denote the unit sphere in <span class="process-math">\(\R^3\text{.}\)</span></p>
+<p>We extend stereographic projection to the entire unit sphere as follows. We call the set</p>
 <div class="displaymath process-math">
 \begin{equation}
-S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\tag{1.3.4}
+\extC=\C\cup \{\infty\}\tag{1.3.5}
 \end{equation}
 </div>
-<p class="continuation">Let <span class="process-math">\(N=(0,0,1)\)</span> denote the "north pole" (that is, the point at the "top" of the sphere, where the positive <span class="process-math">\(z\)</span>-axis is "up"). Given a point <span class="process-math">\(P=(a,b,c)\neq N\)</span> on the unit sphere, let <span class="process-math">\(s(P)\)</span> denote the intersection of the line <span class="process-math">\(\overline{NP}\)</span> with the <span class="process-math">\(x,y\)</span>-plane, which we identify with the complex plane <span class="process-math">\(\C\text{.}\)</span> See See <a href="" class="xref" data-knowl="./knowl/stereoproj2fig.html" title="Figure 1.3.3">Figure 1.3.3</a>. The map <span class="process-math">\(s\colon S^2\setminus \{N\}\to \C\)</span> given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that <span class="process-math">\(s(a,b,c)=\frac{a+ib}{1-c}\text{.}\)</span></p>
+<p class="continuation">the <dfn class="terminology">extended complex numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a complex number. Now we define stereographic projection <span class="process-math">\(s\colon S^2 \to \extC\)</span> by</p>
+<div class="displaymath process-math">
+\begin{equation}
+s(a,b,c) = \left\{
+\begin{array}{cc}
+\frac{a+ib}{1-c} \amp c\neq 1\\
+\infty \amp c=1
+\end{array}
+\right..\tag{1.3.6}
+\end{equation}
+</div>
 <span class="incontext"><a href="stereoprojsect.html#p-91" class="internal">in-context</a></span>
 </body>
 </html>

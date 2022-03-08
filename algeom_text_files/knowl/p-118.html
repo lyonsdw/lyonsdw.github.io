@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:54-05:00       *-->
+<!--*       on 2022-03-08T10:34:47-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,10 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <ol class="decimal">
-<li><p>Verify that the relation <span class="process-math">\(\sim_n\)</span> is indeed an equivalence relation.</p></li>
-<li><p>Verify that the equivalence classes of the equivalence relation <span class="process-math">\(\sim_n\)</span> are indeed <span class="process-math">\(\{[0],[1],[2],\ldots,[n-1]\}\text{.}\)</span> Hint: Use the <dfn class="terminology">division algorithm</dfn>, which says that for any <span class="process-math">\(x\in \Z\text{,}\)</span> there are unique integers <span class="process-math">\(q,r\text{,}\)</span> with <span class="process-math">\(r\)</span> in the range <span class="process-math">\(0\leq r\leq n-1\text{,}\)</span> such that <span class="process-math">\(x=qn+r\text{.}\)</span></p></li>
+<li><p><ol class="lower-alpha">
+<li><p>(reflexivity) It is clear that <span class="process-math">\(n|(x-x)\)</span> for all <span class="process-math">\(x\in \Z\text{.}\)</span></p></li>
+<li><p>(symmetry) If <span class="process-math">\(n|(x-y)\text{,}\)</span> say <span class="process-math">\(x-y=kn\text{,}\)</span> then <span class="process-math">\(y-x = -kn\text{,}\)</span> so <span class="process-math">\(n|(y-x)\text{.}\)</span></p></li>
+<li><p>(transitivity) If <span class="process-math">\(n|(x-y)\text{,}\)</span> say <span class="process-math">\(x-y=kn\text{,}\)</span> and <span class="process-math">\(n|(y-z)\text{,}\)</span> say <span class="process-math">\(y-z=\ell n\text{,}\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+x-z=(x-y)+(y-z)= (k+\ell)n\text{,}
+\end{equation*}
+</div>so <span class="process-math">\(n|(x-z)\text{.}\)</span></p></li>
+</ol></p></li>
+<li><p>The division algorithm says that for any <span class="process-math">\(x\in
+\Z\text{,}\)</span> there are unique integers <span class="process-math">\(q,r\text{,}\)</span> with <span class="process-math">\(r\)</span> in the range <span class="process-math">\(0\leq r\leq n-1\text{,}\)</span> such that <span class="process-math">\(x=qn+r\text{.}\)</span> Thus <span class="process-math">\(x\sim_n r\text{.}\)</span> This means that <span class="process-math">\([x]=[r]\)</span> for <em class="emphasis">some</em> <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(0\leq r\leq n-1\text{.}\)</span> The uniqueness of <span class="process-math">\(r\)</span> means that the equivalence classes <span class="process-math">\([0],[1],\ldots,[n-1]\)</span> are distinct. We conclude that<div class="displaymath process-math">
+\begin{equation*}
+\Z_n=\{[0],[1],\ldots,[n-1]\}.
+\end{equation*}
+</div></p></li>
 </ol>
 <span class="incontext"><a href="section-4.html#p-118" class="internal">in-context</a></span>
 </body>

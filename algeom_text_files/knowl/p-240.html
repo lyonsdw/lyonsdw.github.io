@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:56-05:00       *-->
+<!--*       on 2022-03-08T10:34:49-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,12 +14,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <ol class="lower-alpha">
-<li><p>Show that the order of any element of a finite group divides the order of the group.</p></li>
-<li><p>Let <span class="process-math">\(G\)</span> be a finite group, and let <span class="process-math">\(g\in
-G\text{.}\)</span> Show that <span class="process-math">\(g^{|G|}=e\text{.}\)</span></p></li>
-<li><p>Show that a group of prime order is cyclic.</p></li>
+<li><p>Apply Lagrange's theorem to the subgroup <span class="process-math">\(H=\langle g\rangle\text{,}\)</span> and use the fact that <span class="process-math">\(|g|=|\langle g\rangle|\)</span> (<a href="" class="xref" data-knowl="./knowl/orderofaneltexer.html" title="Exercise 2.3.2.6: The order of a group element">Exercise 2.3.2.6</a>).</p></li>
+<li><p>By the previous part, we have <span class="process-math">\(|G|=|g|k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> So<div class="displaymath process-math">
+\begin{equation*}
+g^{|G|}=g^{|g|k}=(g^{|g|})^k=e^k=e.
+\end{equation*}
+</div></p></li>
+<li><p>Let <span class="process-math">\(p=|G|\text{.}\)</span> By part 1, the order of any element in <span class="process-math">\(G\)</span> must divide <span class="process-math">\(p\text{,}\)</span> and since <span class="process-math">\(p\)</span> is prime, the order of any element in <span class="process-math">\(G\)</span> must be 1 or <span class="process-math">\(p\text{.}\)</span> The identity is the only element of order 1, so the rest of the elements in <span class="process-math">\(G\)</span> are all generators, and <span class="process-math">\(G\)</span> is cyclic.</p></li>
 </ol>
 <span class="incontext"><a href="subgroups_cosets_section.html#p-240" class="internal">in-context</a></span>
 </body>

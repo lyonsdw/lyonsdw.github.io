@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:53-05:00       *-->
+<!--*       on 2022-03-08T10:34:47-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Verify <a href="" class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a href="" class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>.</p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>We have <span class="process-math">\(M(1) = \Id\text{,}\)</span> <span class="process-math">\(M(i)=\twotwo{i}{0}{0}{-i}\text{,}\)</span> <span class="process-math">\(M(j)=\twotwo{0}{1}{-1}{0}\text{,}\)</span> and <span class="process-math">\(M(k)=\twotwo{0}{i}{i}{0}\text{.}\)</span> (These are, in order, <span class="process-math">\(\Id,iZ,iY,iX\text{,}\)</span> where <span class="process-math">\(X,Y,Z\)</span> are the Pauli matrices.) First, we work out the products of <span class="process-math">\(M(i),M(j),M(k)\text{.}\)</span> Here is a sample.</p>
+<div class="displaymath process-math">
+\begin{align*}
+M(i)^2 \amp = \twotwo{i}{0}{0}{-i}\twotwo{i}{0}{0}{-i} = \twotwo{-1}{0}{0}{-1}=-\Id\\
+M(i)M(j) \amp = \twotwo{i}{0}{0}{-i}\twotwo{0}{1}{-1}{0} = \twotwo{0}{i}{i}{0}=M(k)
+\end{align*}
+</div>
+<p class="continuation">Then we work out all the equations <a href="" class="xref" data-knowl="./knowl/ijksquaretominus1.html" title="Equation 1.2.9">(1.2.9)</a> and <a href="" class="xref" data-knowl="./knowl/quatmultrules.html" title="Equation 1.2.10">(1.2.10)</a>. Here is a sample.</p>
+<div class="displaymath process-math">
+\begin{align*}
+i^2 \amp = Q(M(i)^2) = Q(-\Id) = -1\\
+ij\amp =Q(M(i)M(j)) = Q(M(k))=k
+\end{align*}
+</div>
 <span class="incontext"><a href="quaternionsection.html#p-65" class="internal">in-context</a></span>
 </body>
 </html>

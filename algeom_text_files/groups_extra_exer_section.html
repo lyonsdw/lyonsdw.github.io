@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-28T17:28:49-05:00       *-->
+<!--*       on 2022-03-08T10:34:43-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -51,7 +51,7 @@
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.44deab00544cc8fc.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.a1a8707963a337ef.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
+<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
 <link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
@@ -163,7 +163,7 @@
 <article class="exercise exercise-like" id="unitsinzngpexer"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">The group of units in <span class="process-math">\(\Z_n\)</span>.</span>
 </h4>
-<p id="p-321">Let <span class="process-math">\(U_n\)</span> denote the set of elements in <span class="process-math">\(Z_n\)</span> that have multiplicative inverses, that is,</p>
+<p id="p-320">Let <span class="process-math">\(U_n\)</span> denote the set of elements in <span class="process-math">\(Z_n\)</span> that have multiplicative inverses, that is,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 U_n = \{x\in \Z_n\colon \exists y, xy=1\pmod{n}\}.
@@ -174,25 +174,25 @@ U_n = \{x\in \Z_n\colon \exists y, xy=1\pmod{n}\}.
 <li id="li-239"><p id="p-derived-li-239">Show that <span class="process-math">\(U_n\)</span> with the binary operation of multiplication mod <span class="process-math">\(n\)</span> is an Abelian group.</p></li>
 <li id="li-240"><p id="p-derived-li-240">Show that <span class="process-math">\(U_n\)</span> is isomorphic to <span class="process-math">\(\Aut(\Z_n)\)</span> via <span class="process-math">\(x\to [a\to ax]\text{.}\)</span></p></li>
 </ol>
-<p id="p-322"><em class="alert">Terminology:</em> The group <span class="process-math">\(U_n\)</span> is called the the group of <dfn class="terminology">(multiplicative) units</dfn> in <span class="process-math">\(\Z_n\text{.}\)</span> The function <span class="process-math">\(n\to |U_n|\text{,}\)</span> important in number theory, is called the <dfn class="terminology">Euler phi function</dfn>, written <span class="process-math">\(\phi(n)=|U_n|\text{.}\)</span></p></article><article class="exercise exercise-like" id="fermatslittlethmexer"><h4 class="heading">
+<p id="p-321"><em class="alert">Terminology:</em> The group <span class="process-math">\(U_n\)</span> is called the the group of <dfn class="terminology">(multiplicative) units</dfn> in <span class="process-math">\(\Z_n\text{.}\)</span> The function <span class="process-math">\(n\to |U_n|\text{,}\)</span> important in number theory, is called the <dfn class="terminology">Euler phi function</dfn>, written <span class="process-math">\(\phi(n)=|U_n|\text{.}\)</span></p></article><article class="exercise exercise-like" id="fermatslittlethmexer"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title"><dfn class="terminology">Fermat's Little Theorem</dfn>.</span>
 </h4>
-<p id="p-324">For every integer <span class="process-math">\(x\)</span> and every prime <span class="process-math">\(p\text{,}\)</span> we have <span class="process-math">\(x^p = x \pmod{p}\text{.}\)</span></p>
+<p id="p-323">For every integer <span class="process-math">\(x\)</span> and every prime <span class="process-math">\(p\text{,}\)</span> we have <span class="process-math">\(x^p = x \pmod{p}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-325">First, reduce <span class="process-math">\(x\)</span> mod <span class="process-math">\(p\text{,}\)</span> that is, write <span class="process-math">\(x=qp+r\)</span> with <span class="process-math">\(0\leq r\leq p-1\text{.}\)</span> Now consider two cases. The case <span class="process-math">\(r=0\)</span> is trivial. If <span class="process-math">\(r\neq 0\text{,}\)</span> apply the fact <span class="process-math">\(r^{|G|}=e\)</span> (see <a href="" class="xref" data-knowl="./knowl/lagrangeconseqexer.html" title="Exercise 2.3.2.8: Consequences of Lagrange's Theorem">Exercise 2.3.2.8</a>) to the group <span class="process-math">\(G=U_p\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-324">First, reduce <span class="process-math">\(x\)</span> mod <span class="process-math">\(p\text{,}\)</span> that is, write <span class="process-math">\(x=qp+r\)</span> with <span class="process-math">\(0\leq r\leq p-1\text{.}\)</span> Now consider two cases. The case <span class="process-math">\(r=0\)</span> is trivial. If <span class="process-math">\(r\neq 0\text{,}\)</span> apply the fact <span class="process-math">\(r^{|G|}=e\)</span> (see <a href="" class="xref" data-knowl="./knowl/lagrangeconseqexer.html" title="Exercise 2.3.2.8: Consequences of Lagrange's Theorem">Exercise 2.3.2.8</a>) to the group <span class="process-math">\(G=U_p\text{.}\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="alternatinggpexer"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The alternating group.</span>
 </h4>
-<ol id="p-327" class="lower-alpha">
+<ol id="p-326" class="lower-alpha">
 <li id="li-244"><p id="p-derived-li-244">Show that, for <span class="process-math">\(n\geq 2\text{,}\)</span> half of the elements of <span class="process-math">\(S_n\)</span> are even, and half are odd.</p></li>
 <li id="li-245"><p id="p-derived-li-245">The set of even permutations in <span class="process-math">\(S_n\)</span> is called the <dfn class="terminology">alternating group</dfn>, denoted <span class="process-math">\(A_n\)</span>. Show that <span class="process-math">\(A_n\)</span> is indeed a subgroup of <span class="process-math">\(S_n\text{.}\)</span></p></li>
 </ol></article><article class="exercise exercise-like" id="orderofapermexer"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a permutation.</span>
 </h4>
-<p id="p-329">Let <span class="process-math">\(\sigma\in S_n\)</span> be written as a product of disjoint cycles. Show that the order <span class="process-math">\(\sigma\)</span> is the least common multiple of the lengths of those disjoint cycles.</p></article><article class="exercise exercise-like" id="semidirect_product_exer"><h4 class="heading">
+<p id="p-328">Let <span class="process-math">\(\sigma\in S_n\)</span> be written as a product of disjoint cycles. Show that the order <span class="process-math">\(\sigma\)</span> is the least common multiple of the lengths of those disjoint cycles.</p></article><article class="exercise exercise-like" id="semidirect_product_exer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Semidirect product.</span>
 </h4>
-<p id="p-331">Let <span class="process-math">\(K,H\)</span> be groups, and let <span class="process-math">\(\phi\colon H\to \Aut(K)\)</span> be a homomorphism. The <dfn class="terminology">semidirect product</dfn>, denoted <span class="process-math">\(K\times_{\phi} H\text{,}\)</span> or <span class="process-math">\(K\rtimes H\)</span> if <span class="process-math">\(\phi\)</span> is understood, is the set consisting of all pairs <span class="process-math">\((k,h)\)</span> with <span class="process-math">\(k\in K\text{,}\)</span> <span class="process-math">\(h\in H\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 1 </sup></a> with the group multiplication operation <span class="process-math">\(\ast\)</span> given by</p>
+<p id="p-330">Let <span class="process-math">\(K,H\)</span> be groups, and let <span class="process-math">\(\phi\colon H\to \Aut(K)\)</span> be a homomorphism. The <dfn class="terminology">semidirect product</dfn>, denoted <span class="process-math">\(K\times_{\phi} H\text{,}\)</span> or <span class="process-math">\(K\rtimes H\)</span> if <span class="process-math">\(\phi\)</span> is understood, is the set consisting of all pairs <span class="process-math">\((k,h)\)</span> with <span class="process-math">\(k\in K\text{,}\)</span> <span class="process-math">\(h\in H\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 1 </sup></a> with the group multiplication operation <span class="process-math">\(\ast\)</span> given by</p>
 <div class="displaymath process-math">
 \begin{equation*}
 (k_1,h_1)\ast (k_1,h_2) = (k_1\phi(h_1)(k_2),h_1h_2).
@@ -215,7 +215,7 @@ H\}\text{.}\)</span> Suppose that <span class="process-math">\(K\)</span> is a n
 </ol></article><article class="exercise exercise-like" id="gpactonfunspaceexer"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Group action on functions on a <span class="process-math">\(G\)</span>-space.</span>
 </h4>
-<p id="p-336">Suppose that a group <span class="process-math">\(G\)</span> acts on a set <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\({\mathcal F}(X,Y)\)</span> denote the set of functions</p>
+<p id="p-335">Suppose that a group <span class="process-math">\(G\)</span> acts on a set <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\({\mathcal F}(X,Y)\)</span> denote the set of functions</p>
 <div class="displaymath process-math">
 \begin{equation*}
 {\mathcal F}(X,Y) = \{f\colon X\to Y\}
