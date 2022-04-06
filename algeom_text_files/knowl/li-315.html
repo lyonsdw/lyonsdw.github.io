@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-29T11:01:19-04:00       *-->
+<!--*       on 2022-04-06T11:17:28-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">3.2.6.6.c</span><span class="period">.</span>
-</h5>Now let <span class="process-math">\(C\)</span> be a circle with center <span class="process-math">\(a\)</span> and radius <span class="process-math">\(r\gt 0\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a> to show that <span class="process-math">\(z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a\text{.}\)</span></article><span class="incontext"><a href="section-12.html#li-315" class="internal">in-context</a></span>
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
+</h4>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
+</div></article><span class="incontext"><a href="section-12.html#li-315" class="internal">in-context</a></span>
 </body>
 </html>

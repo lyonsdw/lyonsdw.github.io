@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-29T11:01:21-04:00       *-->
+<!--*       on 2022-04-06T11:17:30-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>We have</p>
+<p>Let <span class="process-math">\(T\in \S\)</span> so that <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> for some <span class="process-math">\(R\in \Rot(S^2)\text{.}\)</span> We have</p>
 <div class="displaymath process-math">
 \begin{align*}
-\text{Area}(R_{\alpha}) \amp = \int_0^\alpha \int_0^\infty
-\frac{4r\;dr\;d\theta}{(1+r^2)^2}\\
-\amp = 2\int_0^\alpha \left[\frac{du}{u}\right]_1^\infty
-d\theta \;\;(u=1+r^2)\\
-\amp = 2\int_0^\alpha 1 \; d\theta\\
-\amp = 2\alpha.
+d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)\\
+\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}})\\
+\amp = d_{S^2}(s^{-1}p,s^{-1}q)
+\;\;(d_{S^2}\text{ is invariant under rotation }R)\\
+\amp = d_{\extC}(p,q)
+\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}}).
 \end{align*}
-</div>
-<p class="continuation">You can see this is the right answer on <span class="process-math">\(S^2\text{.}\)</span> The area of <span class="process-math">\(R_\alpha\)</span> is the fraction <span class="process-math">\(\frac{\alpha}{2\pi}\)</span> of the total area <span class="process-math">\(4\pi\)</span> of <span class="process-math">\(S^2\text{,}\)</span> so</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\text{Area}(R_\alpha) = \frac{\alpha}{2\pi}4\pi=2\alpha.
-\end{equation*}
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-535" class="internal">in-context</a></span>
 </body>

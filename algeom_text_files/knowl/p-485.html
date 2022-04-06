@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-29T11:01:20-04:00       *-->
+<!--*       on 2022-04-06T11:17:29-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,15 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>A triangle with one vertex in <span class="process-math">\(\D\)</span> and two vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called a <dfn class="terminology">doubly-asymptotic</dfn> hyperbolic triangle. Examples are <span class="process-math">\(\triangle AA_1A_2\text{,}\)</span> <span class="process-math">\(\triangle
-BB_1B_2\text{,}\)</span> and <span class="process-math">\(\triangle CC_1C_2\)</span> in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.22">Figure 3.3.22</a>.</p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <ol class="lower-alpha">
-<li><p>Explain why any doubly-asymptotic triangle in the upper half-plane is congruent to the one shown in <a href="" class="xref" data-knowl="./knowl/doubleasymp_tri_upperhalfplane_fig.html" title="Figure 3.3.23">Figure 3.3.23</a>for some angle <span class="process-math">\(\alpha\text{.}\)</span></p></li>
-<li><p>Now use the integration formula for the upper half-plane model to show that the area of the doubly-asymptotic triangle with angle <span class="process-math">\(\alpha\)</span> (at the vertex interior to <span class="process-math">\(\U\)</span>) is <span class="process-math">\(\pi-\alpha\text{.}\)</span></p></li>
+<li><p>The map <span class="process-math">\(\mu\)</span> sends <span class="process-math">\(1\to
+-i\text{,}\)</span> <span class="process-math">\(0\to -1\text{,}\)</span> and <span class="process-math">\(\infty \to 1\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\R\)</span> to the unit circle. Checking point interior to <span class="process-math">\(\U\text{,}\)</span> we have <span class="process-math">\(\mu(i)=0\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span></p></li>
+<li><p>We have<div class="displaymath process-math">
+\begin{align*}
+\frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
+\amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
+\frac{z_1-i}{z_1+i}}\\
+\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
+\left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)\\
+\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
+\end{align*}
+</div>where <span class="process-math">\(t=-2\arg(z_0+i)\text{.}\)</span></p></li>
+<li><p>For <span class="process-math">\(dt\)</span> small, we have <span class="process-math">\(z_1-z_0 \approx dz=
+|z'(t)|dt\text{,}\)</span> and <span class="process-math">\(z_0^\ast -z_1 \approx 2i\im(z(t)) =
+2iy(t)\text{.}\)</span> Taking norms yields the desired expression for the length differential.</p></li>
 </ol>
-<p class="continuation"><figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/2asymp_tri_upperhalfplane.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.23<span class="period">.</span></span><span class="space"> </span>Doubly-asymptotic hyperbolic triangle in the upper half-plane with vertices <span class="process-math">\(1,p,\infty\)</span> with <span class="process-math">\(p\)</span> on the upper half of the unit circle</figcaption></figure></p>
 <span class="incontext"><a href="section-13.html#p-485" class="internal">in-context</a></span>
 </body>
 </html>
