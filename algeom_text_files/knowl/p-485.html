@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-06T11:17:29-04:00       *-->
+<!--*       on 2022-04-08T14:28:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,19 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<ol class="lower-alpha">
-<li><p>The map <span class="process-math">\(\mu\)</span> sends <span class="process-math">\(1\to
--i\text{,}\)</span> <span class="process-math">\(0\to -1\text{,}\)</span> and <span class="process-math">\(\infty \to 1\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\R\)</span> to the unit circle. Checking point interior to <span class="process-math">\(\U\text{,}\)</span> we have <span class="process-math">\(\mu(i)=0\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span></p></li>
-<li><p>We have<div class="displaymath process-math">
-\begin{align*}
-\frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
-\amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
-\frac{z_1-i}{z_1+i}}\\
-\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
-\left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)\\
-\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
-\end{align*}
-</div>where <span class="process-math">\(t=-2\arg(z_0+i)\text{.}\)</span></p></li>
-<li><p>For <span class="process-math">\(dt\)</span> small, we have <span class="process-math">\(z_1-z_0 \approx dz=
-|z'(t)|dt\text{,}\)</span> and <span class="process-math">\(z_0^\ast -z_1 \approx 2i\im(z(t)) =
-2iy(t)\text{.}\)</span> Taking norms yields the desired expression for the length differential.</p></li>
-</ol>
+<p>Because <span class="process-math">\(T\in \HU\)</span> must send the real line to itself, so the preimages <span class="process-math">\(z_1=T^{-1}(1),z_2=T^{-1}(0),z_3=T^{-1}(\infty)\)</span> must be real. Thus we have</p>
+<div class="displaymath process-math">
+\begin{equation*}
+Tz=(z,z_1,z_2,z_3)=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_2-z_3}=\frac{az+b}{cz+d}
+\end{equation*}
+</div>
+<p class="continuation">for some real <span class="process-math">\(a,b,c,d\text{.}\)</span> We have</p>
+<div class="displaymath process-math">
+\begin{equation*}
+Ti = \frac{ai+b}{ci+d}= \frac{ac+bd + i(ad-bc)}{c^2+d^2}
+\end{equation*}
+</div>
+<p class="continuation">so <span class="process-math">\(ad-bc\)</span> must be positive because <span class="process-math">\(T(\U)=\U\text{.}\)</span></p>
 <span class="incontext"><a href="section-13.html#p-485" class="internal">in-context</a></span>
 </body>
 </html>
