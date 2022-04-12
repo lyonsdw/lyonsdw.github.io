@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-09T14:21:03-04:00       *-->
+<!--*       on 2022-04-12T18:25:01-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,26 +14,97 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(\triangle ABC\)</span> be a right triangle with right angle <span class="process-math">\(\angle C\)</span> with side lengths <span class="process-math">\(a=d(B,C)\text{,}\)</span> <span class="process-math">\(b=d(A,C)\text{,}\)</span> and <span class="process-math">\(c=d(A,B)\)</span> so that the length of the hypotenuse is <span class="process-math">\(c\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/right_triangle_fig.html" title="Figure 3.6.3">Figure 3.6.3</a>.</p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <ol class="lower-alpha">
-<li><p>Prove the following identities.<div class="displaymath process-math">
-\begin{align}
-\cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right) \amp =
-\frac{1+u^2}{1-u^2}\;\;(0\lt u\lt 1)\tag{3.6.6}\\
-\cos(2\arctan u) \amp = \frac{1-u^2}{1+u^2}\tag{3.6.7}
-\end{align}
+<li><p>Apply <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a> to <span class="process-math">\(r_{a,b}=\cos\theta +u\sin\theta\)</span> with <span class="process-math">\(u=\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</span> and <span class="process-math">\(\theta=2\arccos(\re(a))\text{.}\)</span></p></li>
+<li><p>Solutions to <span class="process-math">\(T_{a,b}z=z\)</span> are roots of the quadratic equation<div class="displaymath process-math">
+\begin{equation*}
+0 = b^\ast z^2 + z(a-a^\ast) + b.
+\end{equation*}
+</div>Using <span class="process-math">\(2i\im(a)=a-a^\ast\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{align*}
+z \amp = \frac{-2i\im(a) \pm \sqrt{(2i\im(a))^2 -
+4|b|^2}}{2b^\ast}\\
+\amp = \frac{-2i(\im(a) \pm
+\sqrt{(\im(a))^2+|b|^2})}{2b^\ast}\\
+\amp = \frac{-ib(\im(a)\pm \sqrt{1-(\re(a))^2})}{|b|^2}.
+\end{align*}
 </div></p></li>
-<li><p><dfn class="terminology">The Hyperbolic Pythagorean Theorem</dfn>. Show that<div class="displaymath process-math">
-\begin{equation}
-\cosh(c)=\cosh(a)\cosh(b)\tag{3.6.8}
-\end{equation}
-</div>if <span class="process-math">\(T\)</span> is a hyperbolic triangle.</p></li>
-<li><p><dfn class="terminology">The Elliptic Pythagorean Theorem</dfn>. Show that<div class="displaymath process-math">
-\begin{equation}
-\cos(c)=\cos(a)\cos(b)\tag{3.6.9}
-\end{equation}
-</div>if <span class="process-math">\(T\)</span> is an elliptic triangle.</p></li>
+<li><p>We have<div class="displaymath process-math">
+\begin{align*}
+s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)\amp
+= \frac{\im(b) -i\re(b)}{\sqrt{1-(\re(a))^2} -\im(a)}\\
+\amp = \frac{-ib}{\sqrt{1-(\re(a))^2}
+-\im(a)}\frac{\sqrt{1-(\re(a))^2} +\im(a)}{\sqrt{1-(\re(a))^2}
++\im(a)}\\
+\amp = \frac{-ib(\sqrt{1-(\re(a))^2} +
+\im(a))}{|b|^2}\\
+\amp = p.
+\end{align*}
+</div></p></li>
+<li>
+<p>First, we explain why it is sufficient to check equality at three points. The right side of <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> is a Möbius transformation because <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
+h)\circ s^{-1}\)</span> is (by definition) an element of the elliptic group <span class="process-math">\(\S\text{,}\)</span> we know that every element of <span class="process-math">\(\S\)</span> is a Möbius transformation by the explanation given in the second paragraph of <a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal" title="Subsection 3.4.3: The elliptic subgroup of the Möbius group">Subsection 3.4.3</a>. By the Fundamental Theorem of Möbius Geometry, we know that <span class="process-math">\(T_{a,b}\)</span> and <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
+h)\circ s^{-1}\)</span> are equal if and only if they agree at three points.</p>
+<p>Next, we check the input value <span class="process-math">\(p\text{.}\)</span> We have the following.</p>
+<div class="displaymath process-math">
+\begin{align*}
+p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
+p\amp \stackrel{s^{-1}}{\longrightarrow}
+\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
+\amp \stackrel{h}{\longrightarrow}
+\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp
+\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{s}{\longrightarrow} p
+\end{align*}
+</div>
+<p class="continuation">Next, we check the input value <span class="process-math">\(0\text{.}\)</span> We have the following.</p>
+<div class="displaymath process-math">
+\begin{align*}
+0\amp \stackrel{T_{a,b}}{\longrightarrow}
+\frac{b}{a^\ast}\\
+0\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,-1)\\
+\amp \stackrel{h}{\longrightarrow}
+(-1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
+\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
+\end{align*}
+</div>
+<p class="continuation">Finally, we check the input value <span class="process-math">\(\infty\text{.}\)</span> We have the following.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
+-\frac{a}{b^\ast}\\
+\infty\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,1)\\
+\amp \stackrel{h}{\longrightarrow}
+(1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
+\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
+\end{align*}
+</div>
+</li>
+<li><p>First, verify the suggestions in the hint. Now start in the upper left of the diagram with <span class="process-math">\(M_{a,b}\text{.}\)</span> Tracing the path to the right and down to the lower right corner, we have<div class="displaymath process-math">
+\begin{equation*}
+M_{a,b} \stackrel{C_{iH}}{\longrightarrow} (iH)M_{a,b}(iH)
+\longrightarrow Q(iH)r_{a,b}Q(iH)\longrightarrow h\circ R_{r_{a,b}}
+\circ h.
+\end{equation*}
+</div>Tracing the path down the left side, we have<div class="displaymath process-math">
+\begin{equation*}
+M_{a,b} \longrightarrow T_{a,b} \longrightarrow
+R_{T_{a,b}}=s^{-1}\circ T\circ s.
+\end{equation*}
+</div>The bottom arrow of the diagram matches up by <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a>.</p></li>
 </ol>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-590" class="internal">in-context</a></span>
 </body>
