@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-12T19:28:40-04:00       *-->
+<!--*       on 2022-04-13T15:14:39-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,42 +14,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.4.</span></h4>
-<ol class="lower-alpha">
-<li><p>First use a hyperbolic transformation to take <span class="process-math">\(a\to 0\)</span> and <span class="process-math">\(b,c\)</span> real with <span class="process-math">\(0=a\lt c\lt b \lt 1\text{.}\)</span> Let <span class="process-math">\(p=-1\)</span> and <span class="process-math">\(q=1\text{.}\)</span> Assuming <span class="process-math">\(a,b,c\)</span> are distinct, we have the following.<div class="displaymath process-math">
-\begin{align*}
-d(a,b) \amp = \ln (a,b,q,p)\\
-\amp = \ln  \left(\frac{a-q}{a-p}\frac{b-p}{b-q}\right)\\
-\amp = \left(\frac{q-a}{a-p}\frac{b-p}{q-b}\right)\\
-\amp = \ln(q-a)-\ln(a-p)+\ln(b-p)-\ln(q-b)\\
-d(a,c)\amp = \ln(a,c,q,p)\\
-\amp = \ln  \left(\frac{q-a}{a-p}\frac{c-p}{q-c}\right)\\
-\amp = \ln(q-a)-\ln(a-p)+\ln(c-p)-\ln(q-c)\\
-d(c,b) \amp = \ln(b,c,q,p)\\
-\amp = \ln  \left(\frac{q-c}{c-p}\frac{b-p}{q-b}\right)\\
-\amp = \ln(q-c)-\ln(c-p)+\ln(b-p)-\ln(q-b)
-\end{align*}
-</div>From this we have <span class="process-math">\(d(a,b)= d(a,c)+d(c,b)\text{.}\)</span> Degenerate cases where two or more of <span class="process-math">\(a,b,c\)</span> coincide are trivial.</p></li>
-<li><p>Observe that, for <span class="process-math">\(0\lt u\lt 1\text{,}\)</span><div class="displaymath process-math">
-\begin{align*}
-\frac{d}{du}d(0,u)\amp =
-\frac{d}{du}\ln\left(\frac{1+u}{1-u}\right)\\
-\amp = \frac{d}{du}\left(\ln(1+u)-\ln(1-u)\right)\\
-\amp = \frac{1}{1+u} + \frac{1}{1-u}\\
-\amp = \frac{2}{1-u^2}\gt 0,
-\end{align*}
-</div>so <span class="process-math">\(d(0,u)\)</span> is an increasing function of <span class="process-math">\(u\text{.}\)</span> This means that if <span class="process-math">\(0=a\lt b\lt c\)</span> (we may assume this without loss of generality), then <span class="process-math">\(d(a,c)\gt d(a,b)\text{,}\)</span> so that we have<div class="displaymath process-math">
-\begin{equation*}
-d(a,b)\lt d(a,c)+d(c,b)
-\end{equation*}
-</div>as claimed.</p></li>
-<li><p>Following the suggestion, it is clear (draw a sketch!) that <span class="process-math">\(Tq'\)</span> is between <span class="process-math">\(Tp=0\)</span> and <span class="process-math">\(r\text{.}\)</span> Thus, by part (a), we have <span class="process-math">\(d(0,Tq')\lt d(0,r)=d(0,Tq)\text{,}\)</span> where the last equality is justified because rotation about 0 is distance preserving.</p></li>
-<li><p>We have<div class="displaymath process-math">
-\begin{align*}
-d(a,b)\amp \leq d(a,c')+d(c',b) \;\;\text{(by parts (a),(b))}\\
-\amp \leq d(a,c)+d(c,b)\;\; \text{(by part (c))}.
-\end{align*}
-</div></p></li>
-</ol></article><span class="incontext"><a href="section-13.html#commentary-120" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.3.</span></h4>
+<p>Let <span class="process-math">\(Tz=\frac{z-p}{1-p^\ast z}\text{,}\)</span> so that <span class="process-math">\(Tp=0\text{.}\)</span> Let <span class="process-math">\(a,b\)</span> be the points where <span class="process-math">\(T(L)\)</span> intersects the unit circle. There is a unique diameter, say <span class="process-math">\(K\text{,}\)</span> that bisects the Euclidean straight line segment connecting <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> It is clear that <span class="process-math">\(K\)</span> is orthogonal to <span class="process-math">\(T(L)\text{.}\)</span> It follows that <span class="process-math">\(T^{-1}(K)\)</span> is the unique hyperbolic straight line that passes through <span class="process-math">\(p\)</span> and is orthogonal to <span class="process-math">\(L\text{.}\)</span></p></article><span class="incontext"><a href="section-13.html#commentary-120" class="internal">in-context</a></span>
 </body>
 </html>

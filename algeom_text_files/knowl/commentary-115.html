@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-12T19:28:40-04:00       *-->
+<!--*       on 2022-04-13T15:14:38-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,21 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.19.</span></h4>
-<p>For <span class="process-math">\(z(t)=\alpha e^{it}\text{,}\)</span> we have <span class="process-math">\(z'(t)=i\alpha
-e^{it}\text{,}\)</span> and  <span class="process-math">\(|z(t)|=|z'(t)|=\alpha\text{.}\)</span> The circumference of the circle is</p>
-<div class="displaymath process-math">
-\begin{align}
-\text{circumference } \amp = 2\int_0^{2\pi}
-\frac{|z'(t)|}{1-|z(t)|^2}dt\tag{3.3.7}\\
-\amp =	2\int_0^{2\pi} \frac{\alpha}{1-\alpha^2}dt\tag{3.3.8}\\
-\amp = \frac{4\pi\alpha}{1-\alpha^2}.\tag{3.3.9}
-\end{align}
-</div>
-<p class="continuation">While this answer is correct, it is more useful to have the circumference expressed in terms of the hyperbolic radius <span class="process-math">\(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\)</span> Solving for <span class="process-math">\(\alpha\)</span> in terms of <span class="process-math">\(r\text{,}\)</span> we get <span class="process-math">\(\alpha=\frac{e^r-1}{e^r+1}\text{.}\)</span> Then simplifying <a href="" class="xref" data-knowl="./knowl/hypcircalpha.html" title="Equation 3.3.9">(3.3.9)</a>, we get</p>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.18.</span></h4>
+<p>Using the Taylor series</p>
 <div class="displaymath process-math">
 \begin{equation*}
-\text{circumference } = \pi(e^r-e^{-r})=2\pi \sinh r.
+\ln(1+u) =
+u-\frac{u^2}{2}+\frac{u^3}{3} -\cdots
+\end{equation*}
+</div>
+<p class="continuation">and the fact <span class="process-math">\(\ln[(1+u)/(1-u)]=\ln(1+u)=\ln(1-u)\)</span> we get</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln\left(\frac{1+u}{1-u}\right)=2\left(u+\frac{u^3}{3}+\frac{u^5}{5}+\cdots\right) .
 \end{equation*}
 </div></article><span class="incontext"><a href="section-13.html#commentary-115" class="internal">in-context</a></span>
 </body>
