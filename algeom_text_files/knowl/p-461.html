@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-13T15:21:44-04:00       *-->
+<!--*       on 2022-04-14T17:52:28-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The function <span class="process-math">\(d\)</span> given by <a href="" class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> is invariant under the action of the hyperbolic group. That is, we have</p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Now, given any points <span class="process-math">\(z_1,z_2\)</span> in <span class="process-math">\(\D\text{,}\)</span> not necessarily distinct, define the quantity <span class="process-math">\(d(z_1,z_2)\)</span> by</p>
 <div class="displaymath process-math">
 \begin{equation}
-d(z_1,z_2) = d(Tz_1,Tz_2)\tag{3.3.5}
+d(z_1,z_2)=
+\left\{\begin{array}{cc}\ln((z_1,z_2,q_2,q_1)) \amp z_1\neq
+z_2 \\ 0 \amp z_1=z_2\end{array}\right.\tag{3.3.3}
 \end{equation}
 </div>
-<p class="continuation">for all <span class="process-math">\(z_1,z_2\in \D\)</span> and for all <span class="process-math">\(T\in\H\text{.}\)</span></p>
+<p class="continuation">where <span class="process-math">\(q_1,q_2\)</span> are the ideal points on the hyperbolic straight line connecting <span class="process-math">\(z_1,z_2\)</span> (with each <span class="process-math">\(q_i\)</span> at the <span class="process-math">\(z_i\)</span> end of the line) as described above, in the case <span class="process-math">\(z_1\neq z_2\text{.}\)</span> From the discussion above we have</p>
+<div class="displaymath process-math">
+\begin{equation}
+d(z_1,z_2) = \ln\left(\frac{1+u}{1-u}\right)\tag{3.3.4}
+\end{equation}
+</div>
+<p class="continuation">where <span class="process-math">\(u=\left|\frac{z_2-z_1}{1-z_1^\ast z_2}\right|\text{.}\)</span></p>
 <span class="incontext"><a href="section-13.html#p-461" class="internal">in-context</a></span>
 </body>
 </html>

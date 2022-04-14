@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-13T15:16:43-04:00       *-->
+<!--*       on 2022-04-14T17:51:49-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,24 +14,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.4.24.</span></h4>
-<p>We have</p>
-<div class="displaymath process-math">
-\begin{align*}
-\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      \\
-\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
-\frac{du}{u}\right] d\theta \;\;(\text{for }u=1+r^2)\\
-\amp =
-2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta\\
-\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.
-\end{align*}
-</div>
-<p class="continuation">In terms of <span class="process-math">\(r=2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha=\tan\frac{r}{2}\)</span> and</p>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.4.22.</span></h4>
+<p>Integrating the geometric series</p>
 <div class="displaymath process-math">
 \begin{equation*}
-\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
-\tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.
+\frac{1}{1+x^2} = 1-x^2+x^4 -x^6 + \cdots 
 \end{equation*}
-</div></article><span class="incontext"><a href="elliptic_geometry_section.html#commentary-137" class="internal">in-context</a></span>
+</div>
+<p class="continuation">term by term yields</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\arctan x = x-\frac{x^3}{3}+ \frac{x^5}{5} - \cdots .
+\end{equation*}
+</div>
+<p class="continuation">We have <span class="process-math">\(z_2-z_1\approx z'(t)\;dt\)</span> and <span class="process-math">\(z_1^\ast z_2 + 1
+\approx |z(t)|^2 + 1\text{.}\)</span></p></article><span class="incontext"><a href="elliptic_geometry_section.html#commentary-137" class="internal">in-context</a></span>
 </body>
 </html>

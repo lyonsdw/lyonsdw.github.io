@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-13T15:16:42-04:00       *-->
+<!--*       on 2022-04-14T17:51:48-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.2.</span></h4>
-<p>Let <span class="process-math">\(Tz=\frac{z-p}{1-p^\ast z}\text{,}\)</span> so that <span class="process-math">\(Tp=0\text{.}\)</span> There is only one hyperbolic straight line that contains <span class="process-math">\(Tp,Tq\text{,}\)</span> namely, the diameter line of the unit circle, say <span class="process-math">\(L\text{,}\)</span> that passes through <span class="process-math">\(Tq\text{.}\)</span> Therefore <span class="process-math">\(T^{-1}(L)\)</span> is the unique hyperbolic straight line that contains <span class="process-math">\(p,q\text{.}\)</span></p></article><span class="incontext"><a href="section-13.html#commentary-119" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.21.</span></h4>
+<p>We have</p>
+<div class="displaymath process-math">
+\begin{align*}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
+\frac{4r\;dr\;d\theta}{(1-r^2)^2}\\
+\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
+\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)\\
+\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
+\right]d\theta\\
+\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
+d\theta\\
+\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.
+\end{align*}
+</div>
+<p class="continuation">As was the case for <a href="" class="xref" data-knowl="./knowl/hyperboliccirclecircumexer.html" title="Checkpoint 3.3.20">Checkpoint 3.3.20</a>, this solution is correct, but we want an expression in terms of the hyperbolic radius <span class="process-math">\(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\)</span> Again, solve for <span class="process-math">\(\alpha\)</span> in terms of <span class="process-math">\(r\text{,}\)</span> then simplify. We get</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).
+\end{equation*}
+</div></article><span class="incontext"><a href="section-13.html#commentary-119" class="internal">in-context</a></span>
 </body>
 </html>

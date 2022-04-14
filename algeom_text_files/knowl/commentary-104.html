@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-13T15:16:41-04:00       *-->
+<!--*       on 2022-04-14T17:51:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,31 +14,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.4 (proof of Proposition 3.2.13).</span></h4>
-<p>Starting with <span class="process-math">\(Tz=(Tz)^\ast\text{,}\)</span> we get</p>
-<div class="displaymath process-math">
-\begin{equation*}
-|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
-d+bc^\ast) = b^\ast d-bd^\ast.
-\end{equation*}
-</div>
-<p class="continuation">If <span class="process-math">\(ac^\ast -a^\ast c\neq
-0\text{,}\)</span> let <span class="process-math">\(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
-c}\text{,}\)</span> then complete the square to get</p>
-<div class="displaymath process-math">
-\begin{equation*}
-|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
-|\alpha|^2.
-\end{equation*}
-</div>
-<p class="continuation">Manipulate the right hand side to <span class="process-math">\(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\)</span> For the case <span class="process-math">\(ac^\ast -a^\ast c=0\text{,}\)</span> let <span class="process-math">\(\gamma=ad^\ast
--b^\ast c\)</span> and  <span class="process-math">\(\delta=bd^\ast\text{.}\)</span> Then the equation</p>
-<div class="displaymath process-math">
-\begin{equation*}
-z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
-d+bc^\ast) = b^\ast d-bd^\ast
-\end{equation*}
-</div>
-<p class="continuation">becomes <span class="process-math">\(\im(\gamma z+\delta)=0\text{,}\)</span> which is the equation for a line.</p></article><span class="incontext"><a href="section-12.html#commentary-104" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.3.</span></h4>
+<ol class="lower-alpha">
+<li><p>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
+</div></p></li>
+<li><p>Put together the pieces from the previous part.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
+</div></p></li>
+</ol></article><span class="incontext"><a href="section-12.html#commentary-104" class="internal">in-context</a></span>
 </body>
 </html>
