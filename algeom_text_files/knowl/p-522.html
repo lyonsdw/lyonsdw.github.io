@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T17:52:29-04:00       *-->
+<!--*       on 2022-04-14T23:21:03-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,97 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
-T}\colon GL(2,\C)\to \M\)</span> that sends the matrix <span class="process-math">\(\left[\begin{array}{cc} a\amp b\\ c\amp
-d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="" class="xref" data-knowl="./knowl/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</p>
+<ol class="lower-alpha">
+<li><p>Apply <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a> to <span class="process-math">\(r_{a,b}=\cos\theta +u\sin\theta\)</span> with <span class="process-math">\(u=\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</span> and <span class="process-math">\(\theta=2\arccos(\re(a))\text{.}\)</span></p></li>
+<li><p>Solutions to <span class="process-math">\(T_{a,b}z=z\)</span> are roots of the quadratic equation<div class="displaymath process-math">
+\begin{equation*}
+0 = b^\ast z^2 + z(a-a^\ast) + b.
+\end{equation*}
+</div>Using <span class="process-math">\(2i\im(a)=a-a^\ast\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{align*}
+z \amp = \frac{-2i\im(a) \pm \sqrt{(2i\im(a))^2 -
+4|b|^2}}{2b^\ast}\\
+\amp = \frac{-2i(\im(a) \pm
+\sqrt{(\im(a))^2+|b|^2})}{2b^\ast}\\
+\amp = \frac{-ib(\im(a)\pm \sqrt{1-(\re(a))^2})}{|b|^2}.
+\end{align*}
+</div></p></li>
+<li><p>We have<div class="displaymath process-math">
+\begin{align*}
+s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)\amp
+= \frac{\im(b) -i\re(b)}{\sqrt{1-(\re(a))^2} -\im(a)}\\
+\amp = \frac{-ib}{\sqrt{1-(\re(a))^2}
+-\im(a)}\frac{\sqrt{1-(\re(a))^2} +\im(a)}{\sqrt{1-(\re(a))^2}
++\im(a)}\\
+\amp = \frac{-ib(\sqrt{1-(\re(a))^2} +
+\im(a))}{|b|^2}\\
+\amp = p.
+\end{align*}
+</div></p></li>
+<li>
+<p>First, we explain why it is sufficient to check equality at three points. The right side of <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.5.5">(3.5.5)</a> is a Möbius transformation because <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
+h)\circ s^{-1}\)</span> is (by definition) an element of the elliptic group <span class="process-math">\(\S\text{,}\)</span> we know that every element of <span class="process-math">\(\S\)</span> is a Möbius transformation by the explanation given in the second paragraph of <a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal" title="Subsection 3.3.3: The elliptic subgroup of the Möbius group">Subsection 3.3.3</a>. By the Fundamental Theorem of Möbius Geometry, we know that <span class="process-math">\(T_{a,b}\)</span> and <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
+h)\circ s^{-1}\)</span> are equal if and only if they agree at three points.</p>
+<p>Next, we check the input value <span class="process-math">\(p\text{.}\)</span> We have the following.</p>
 <div class="displaymath process-math">
-\begin{align}
-T_{Z,\theta} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
-e^{i\theta/2} \amp 0\\ 0 \amp
-e^{-i\theta/2}\end{array}\right]\right)\tag{3.4.3}\\
-T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
-\frac{1}{\sqrt{2}}\amp \frac{i}{\sqrt{2}}\\
-\frac{i}{\sqrt{2}}\amp \frac{1}{\sqrt{2}}\end{array}\right]\right)\tag{3.4.4}
-\end{align}
+\begin{align*}
+p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
+p\amp \stackrel{s^{-1}}{\longrightarrow}
+\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
+\amp \stackrel{h}{\longrightarrow}
+\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp
+\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{s}{\longrightarrow} p
+\end{align*}
 </div>
-<p class="continuation">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="" class="xref" data-knowl="./knowl/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span></p>
-<span class="incontext"><a href="elliptic_geometry_section.html#p-522" class="internal">in-context</a></span>
+<p class="continuation">Next, we check the input value <span class="process-math">\(0\text{.}\)</span> We have the following.</p>
+<div class="displaymath process-math">
+\begin{align*}
+0\amp \stackrel{T_{a,b}}{\longrightarrow}
+\frac{b}{a^\ast}\\
+0\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,-1)\\
+\amp \stackrel{h}{\longrightarrow}
+(-1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
+\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
+\end{align*}
+</div>
+<p class="continuation">Finally, we check the input value <span class="process-math">\(\infty\text{.}\)</span> We have the following.</p>
+<div class="displaymath process-math">
+\begin{align*}
+\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
+-\frac{a}{b^\ast}\\
+\infty\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,1)\\
+\amp \stackrel{h}{\longrightarrow}
+(1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
+\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
+\end{align*}
+</div>
+</li>
+<li><p>First, verify the suggestions in the hint. Now start in the upper left of the diagram with <span class="process-math">\(M_{a,b}\text{.}\)</span> Tracing the path to the right and down to the lower right corner, we have<div class="displaymath process-math">
+\begin{equation*}
+M_{a,b} \stackrel{C_{iH}}{\longrightarrow} (iH)M_{a,b}(iH)
+\longrightarrow Q(iH)r_{a,b}Q(iH)\longrightarrow h\circ R_{r_{a,b}}
+\circ h.
+\end{equation*}
+</div>Tracing the path down the left side, we have<div class="displaymath process-math">
+\begin{equation*}
+M_{a,b} \longrightarrow T_{a,b} \longrightarrow
+R_{T_{a,b}}=s^{-1}\circ T\circ s.
+\end{equation*}
+</div>The bottom arrow of the diagram matches up by <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.5.5">(3.5.5)</a>.</p></li>
+</ol>
+<span class="incontext"><a href="geometry_extra_exer_section.html#p-522" class="internal">in-context</a></span>
 </body>
 </html>

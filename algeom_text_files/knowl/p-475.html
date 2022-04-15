@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T17:52:28-04:00       *-->
+<!--*       on 2022-04-14T23:21:03-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,9 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Find the area of the hyperbolic disk <span class="process-math">\(\{|z|\leq
-\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span></p>
-<span class="incontext"><a href="section-13.html#p-475" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>We have</p>
+<div class="displaymath process-math">
+\begin{align*}
+\text{Area}(R_{\alpha}) \amp = \int_0^\alpha \int_0^\infty
+\frac{4r\;dr\;d\theta}{(1+r^2)^2}\\
+\amp = 2\int_0^\alpha \left[\frac{du}{u}\right]_1^\infty
+d\theta \;\;(u=1+r^2)\\
+\amp = 2\int_0^\alpha 1 \; d\theta\\
+\amp = 2\alpha.
+\end{align*}
+</div>
+<p class="continuation">You can see this is the right answer on <span class="process-math">\(S^2\text{.}\)</span> The area of <span class="process-math">\(R_\alpha\)</span> is the fraction <span class="process-math">\(\frac{\alpha}{2\pi}\)</span> of the total area <span class="process-math">\(4\pi\)</span> of <span class="process-math">\(S^2\text{,}\)</span> so</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area}(R_\alpha) = \frac{\alpha}{2\pi}4\pi=2\alpha.
+\end{equation*}
+</div>
+<span class="incontext"><a href="elliptic_geometry_section.html#p-475" class="internal">in-context</a></span>
 </body>
 </html>
