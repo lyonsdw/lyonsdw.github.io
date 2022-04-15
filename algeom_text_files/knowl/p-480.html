@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:03-04:00       *-->
+<!--*       on 2022-04-14T23:21:29-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,27 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>A <dfn class="terminology">line</dfn> in projective space is a set of the form</p>
+<p>Hyperbolic straight lines in the upper half-plane model are clines that intersect the real line at right angles. The hyperbolic distance between two points <span class="process-math">\(z_1,z_2\)</span> in the upper half-plane is</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\ell_\Pi=\{[v]\colon v\in \Pi\setminus\{0\}\}
-\end{equation*}
+\begin{equation}
+d(z_1,z_2)=\ln((z_1,z_2,q_2,q_1))\tag{3.3.12}
+\end{equation}
 </div>
-<p class="continuation">for some 2-dimensional subspace <span class="process-math">\(\Pi\)</span> in <span class="process-math">\(V\text{.}\)</span> Thus, projective lines correspond bijectively to 2-dimensional subspaces of <span class="process-math">\(V\)</span> via</p>
+<p class="continuation">where <span class="process-math">\(q_1,q_2\)</span> are the points on the (extended) real line at the end of the hyperbolic straight line that contains <span class="process-math">\(z_1,z_2\text{,}\)</span> with each <span class="process-math">\(q_i\)</span> on the same "side" as the corresponding <span class="process-math">\(z_i\text{.}\)</span> The hyperbolic length of a  curve <span class="process-math">\(\gamma\)</span> parameterized by <span class="process-math">\(t\to
+z(t)=x(t)+iy(t)\)</span> on the interval <span class="process-math">\(a\leq t\leq b\)</span> is</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\ell_{\Pi} \leftrightarrow \Pi.
-\end{equation*}
+\begin{equation}
+\text{Length}(\gamma)=\int_a^b
+\frac{|z'(t)|}{y(t)}\;dt.\tag{3.3.13}
+\end{equation}
 </div>
-<p class="continuation">The set of 2-dimensional subspaces in <span class="process-math">\(V\)</span> is denoted <span class="process-math">\(G(2,V)\text{.}\)</span> Points in projective space are called <dfn class="terminology">collinear</dfn> if they lie together on a projective line. We will usually denote projective lines using lower case letters, such as <span class="process-math">\(\ell\text{,}\)</span> <span class="process-math">\(m\text{,}\)</span> etc.</p>
-<span class="incontext"><a href="section-14.html#p-480" class="internal">in-context</a></span>
+<p class="continuation">The hyperbolic area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\U\)</span> is</p>
+<div class="displaymath process-math">
+\begin{equation}
+\text{Area}(R)=\iint_R
+dA = \iint_R \frac{dx\;dy}{y^2}.\tag{3.3.14}
+\end{equation}
+</div>
+<span class="incontext"><a href="section-13.html#p-480" class="internal">in-context</a></span>
 </body>
 </html>

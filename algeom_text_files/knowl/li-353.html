@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:03-04:00       *-->
+<!--*       on 2022-04-14T23:21:30-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="period">.</span>
-</h5>Check that <span class="process-math">\(AR=[0,-1,1]\)</span> and <span class="process-math">\(A'R=[1,0,-1]\text{.}\)</span></article><span class="incontext"><a href="section-14.html#li-353" class="internal">in-context</a></span>
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
+</h4>First use a hyperbolic transformation to take <span class="process-math">\(a\to 0\)</span> and <span class="process-math">\(b,c\)</span> real with <span class="process-math">\(0=a\lt c\lt b \lt 1\text{.}\)</span> Let <span class="process-math">\(p=-1\)</span> and <span class="process-math">\(q=1\text{.}\)</span> Assuming <span class="process-math">\(a,b,c\)</span> are distinct, we have the following.<div class="displaymath process-math">
+\begin{align*}
+d(a,b) \amp = \ln (a,b,q,p)\\
+\amp = \ln  \left(\frac{a-q}{a-p}\frac{b-p}{b-q}\right)\\
+\amp = \left(\frac{q-a}{a-p}\frac{b-p}{q-b}\right)\\
+\amp = \ln(q-a)-\ln(a-p)+\ln(b-p)-\ln(q-b)\\
+d(a,c)\amp = \ln(a,c,q,p)\\
+\amp = \ln  \left(\frac{q-a}{a-p}\frac{c-p}{q-c}\right)\\
+\amp = \ln(q-a)-\ln(a-p)+\ln(c-p)-\ln(q-c)\\
+d(c,b) \amp = \ln(b,c,q,p)\\
+\amp = \ln  \left(\frac{q-c}{c-p}\frac{b-p}{q-b}\right)\\
+\amp = \ln(q-c)-\ln(c-p)+\ln(b-p)-\ln(q-b)
+\end{align*}
+</div>From this we have <span class="process-math">\(d(a,b)= d(a,c)+d(c,b)\text{.}\)</span> Degenerate cases where two or more of <span class="process-math">\(a,b,c\)</span> coincide are trivial.</article><span class="incontext"><a href="section-13.html#li-353" class="internal">in-context</a></span>
 </body>
 </html>

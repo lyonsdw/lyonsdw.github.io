@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:03-04:00       *-->
+<!--*       on 2022-04-14T23:21:30-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,24 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>To facilitate thinking about the interplay between the projective geometry <span class="process-math">\(\Proj(\F^{n+1})=\F\Proj_n\)</span> and the geometry of <span class="process-math">\(\F^{n}\)</span> (rather than <span class="process-math">\(\F^{n+1}\text{!}\)</span>) it is useful to have a careful definition for "taking inhomogeneous coordinates in position <span class="process-math">\(i\)</span>". Here it is: Let <span class="process-math">\(U_i\)</span> be the subset of <span class="process-math">\(\F\Proj_n\)</span> of points whose homogeneous coordinate <span class="process-math">\(x_i\)</span> is nonzero. Let <span class="process-math">\(\pi_i\colon U_i\to
-\F^n\)</span> be given by</p>
-<div class="displaymath process-math">
-\begin{equation*}
-[x_0,x_2,\ldots x_{i-1},x_i,x_{i+1},\ldots,x_n]
-\to  \left(\frac{x_0}{x_i},\frac{x_2}{x_i},\ldots
-\frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_n}{x_i}\right).
-\end{equation*}
-</div>
-<p class="continuation">The one-sided inverse <span class="process-math">\(\F^n\to \F\Proj_n\)</span> given by</p>
-<div class="displaymath process-math">
-\begin{equation*}
-(x_0,x_1,\ldots x_{i-1},\widehat{x_i},x_{i+1},\ldots,x_n)
-\to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]
-\end{equation*}
-</div>
-<p class="continuation">(where the circumflex hat indicates a deleted item from a sequence) is called the <span class="process-math">\(i\)</span>-th <dfn class="terminology">coordinate chart</dfn> for <span class="process-math">\(\F\Proj_n\text{.}\)</span> What is the map that results from applying the <span class="process-math">\(0\)</span>-th coordinate chart <span class="process-math">\(\C\to \C\Proj_2\)</span> followed by taking homogeneous coordinates in position 1?</p>
-<span class="incontext"><a href="section-14.html#p-495" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<ol class="lower-alpha">
+<li><p>The map <span class="process-math">\(\mu\)</span> sends <span class="process-math">\(1\to
+-i\text{,}\)</span> <span class="process-math">\(0\to -1\text{,}\)</span> and <span class="process-math">\(\infty \to 1\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\R\)</span> to the unit circle. Checking point interior to <span class="process-math">\(\U\text{,}\)</span> we have <span class="process-math">\(\mu(i)=0\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span></p></li>
+<li><p>We have<div class="displaymath process-math">
+\begin{align*}
+\frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
+\amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
+\frac{z_1-i}{z_1+i}}\\
+\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
+\left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)\\
+\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
+\end{align*}
+</div>where <span class="process-math">\(t=-2\arg(z_0+i)\text{.}\)</span></p></li>
+<li><p>For <span class="process-math">\(dt\)</span> small, we have <span class="process-math">\(z_1-z_0 \approx dz=
+|z'(t)|dt\text{,}\)</span> and <span class="process-math">\(z_0^\ast -z_1 \approx 2i\im(z(t)) =
+2iy(t)\text{.}\)</span> Taking norms yields the desired expression for the length differential.</p></li>
+</ol>
+<span class="incontext"><a href="section-13.html#p-495" class="internal">in-context</a></span>
 </body>
 </html>
