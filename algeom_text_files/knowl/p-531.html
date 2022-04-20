@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:30-04:00       *-->
+<!--*       on 2022-04-19T20:42:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The distance between points <span class="process-math">\(P,Q\)</span> on <span class="process-math">\(S^2\)</span> is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle <span class="process-math">\(\angle
-POQ\text{,}\)</span> where <span class="process-math">\(O\)</span> is the origin. From vector calculus, we have the following dot product formula.</p>
+<p>We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
+T}\colon GL(2,\C)\to \M\)</span> that sends the matrix <span class="process-math">\(\left[\begin{array}{cc} a\amp b\\ c\amp
+d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="" class="xref" data-knowl="./knowl/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</p>
 <div class="displaymath process-math">
-\begin{equation*}
-(\overrightarrow{OP})\cdot (\overrightarrow{OQ})=|\overrightarrow{OP}||\overrightarrow{OQ}|\cos(\angle
-POQ)
-\end{equation*}
+\begin{align}
+T_{Z,\theta} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
+e^{i\theta/2} \amp 0\\ 0 \amp
+e^{-i\theta/2}\end{array}\right]\right)\tag{3.4.3}\\
+T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}}\amp \frac{i}{\sqrt{2}}\\
+\frac{i}{\sqrt{2}}\amp \frac{1}{\sqrt{2}}\end{array}\right]\right)\tag{3.4.4}
+\end{align}
 </div>
-<p class="continuation">Solving for <span class="process-math">\(\cos(\angle POQ)\text{,}\)</span> we obtain the formula for the distance <span class="process-math">\(d_{S^2}(P,Q)\)</span> between points <span class="process-math">\(P,Q\)</span> in <span class="process-math">\(S^2\text{.}\)</span></p>
-<div class="displaymath process-math">
-\begin{equation}
-d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)\tag{3.4.6}
-\end{equation}
-</div>
+<p class="continuation">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="" class="xref" data-knowl="./knowl/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span></p>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-531" class="internal">in-context</a></span>
 </body>
 </html>

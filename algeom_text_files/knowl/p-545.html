@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:31-04:00       *-->
+<!--*       on 2022-04-19T20:42:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Let <span class="process-math">\(T\in \S\)</span> so that <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> for some <span class="process-math">\(R\in \Rot(S^2)\text{.}\)</span> We have</p>
+<p>Integrating the geometric series</p>
 <div class="displaymath process-math">
-\begin{align*}
-d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)\\
-\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
-\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}})\\
-\amp = d_{S^2}(s^{-1}p,s^{-1}q)
-\;\;(d_{S^2}\text{ is invariant under rotation }R)\\
-\amp = d_{\extC}(p,q)
-\;\;(\text{by definition } \knowl{./knowl/elliptic_metric_def.html}{\text{(3.4.7)}}).
-\end{align*}
+\begin{equation*}
+\frac{1}{1+x^2} = 1-x^2+x^4 -x^6 + \cdots 
+\end{equation*}
 </div>
+<p class="continuation">term by term yields</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\arctan x = x-\frac{x^3}{3}+ \frac{x^5}{5} - \cdots .
+\end{equation*}
+</div>
+<p class="continuation">We have <span class="process-math">\(z_2-z_1\approx z'(t)\;dt\)</span> and <span class="process-math">\(z_1^\ast z_2 + 1
+\approx |z(t)|^2 + 1\text{.}\)</span></p>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-545" class="internal">in-context</a></span>
 </body>
 </html>

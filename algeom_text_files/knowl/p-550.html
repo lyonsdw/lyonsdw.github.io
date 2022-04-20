@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:31-04:00       *-->
+<!--*       on 2022-04-19T20:42:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>Early motivation for the development of projective geometry came from artists trying to solve practical problems in perspective drawing and painting. In this section, we present a modern Kleinian version of projective geometry.</p>
-<span class="incontext"><a href="section-15.html#p-550" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>We have</p>
+<div class="displaymath process-math">
+\begin{align*}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      \\
+\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
+\frac{du}{u}\right] d\theta \;\;(\text{for }u=1+r^2)\\
+\amp =
+2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta\\
+\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.
+\end{align*}
+</div>
+<p class="continuation">In terms of <span class="process-math">\(r=2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha=\tan\frac{r}{2}\)</span> and</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
+\tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.
+\end{equation*}
+</div>
+<span class="incontext"><a href="elliptic_geometry_section.html#p-550" class="internal">in-context</a></span>
 </body>
 </html>

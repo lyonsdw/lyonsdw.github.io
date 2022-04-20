@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-14T23:21:31-04:00       *-->
+<!--*       on 2022-04-19T20:42:56-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,52 +15,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Next, we check the input value <span class="process-math">\(p\text{.}\)</span> We have the following.</p>
-<div class="displaymath process-math">
-\begin{align*}
-p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
-p\amp \stackrel{s^{-1}}{\longrightarrow}
-\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
-\amp \stackrel{h}{\longrightarrow}
-\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
-\amp
-\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
-\amp \stackrel{s}{\longrightarrow} p
-\end{align*}
-</div>
-<p class="continuation">Next, we check the input value <span class="process-math">\(0\text{.}\)</span> We have the following.</p>
-<div class="displaymath process-math">
-\begin{align*}
-0\amp \stackrel{T_{a,b}}{\longrightarrow}
-\frac{b}{a^\ast}\\
-0\amp \stackrel{s^{-1}}{\longrightarrow}
-(0,0,-1)\\
-\amp \stackrel{h}{\longrightarrow}
-(-1,0,0)\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
-(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
-\amp \stackrel{h}{\longrightarrow}
-(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
-\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
-\end{align*}
-</div>
-<p class="continuation">Finally, we check the input value <span class="process-math">\(\infty\text{.}\)</span> We have the following.</p>
-<div class="displaymath process-math">
-\begin{align*}
-\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
--\frac{a}{b^\ast}\\
-\infty\amp \stackrel{s^{-1}}{\longrightarrow}
-(0,0,1)\\
-\amp \stackrel{h}{\longrightarrow}
-(1,0,0)\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
-(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
-\amp \stackrel{h}{\longrightarrow}
-(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
-\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
-\end{align*}
-</div>
+<p>No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y)\to (x,-y)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(\twotwo{1}{0}{0}{-1}\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but not in <span class="process-math">\(\E\text{.}\)</span> To justify the "not in <span class="process-math">\(\E\)</span>" claim, observe that generating elements of <span class="process-math">\(\E\)</span> (rotations and translations) preserve oriented angles, so all elements of <span class="process-math">\(\E\)</span> preserve oriented angles. But <span class="process-math">\((x,y)\to
+(x,-y)\)</span> takes the oriented angle <span class="process-math">\(\angle 1,0,i\text{,}\)</span> which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle 1,0,-i\text{,}\)</span> which measures <span class="process-math">\(-\pi/2\)</span> radians.</p>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-597" class="internal">in-context</a></span>
 </body>
 </html>
