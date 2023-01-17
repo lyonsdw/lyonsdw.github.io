@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-01T15:36:29-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,45 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-13.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-15.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -92,94 +216,219 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-13.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-15.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-13.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="biography-1.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
+<li>
+<div class="toc-item"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-5" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-6" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#exercises-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-7" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-8" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-9" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-11" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#exercises-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="active">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Stereographic projection</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-12" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-13" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#exercises-3" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<li>
+<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-4.html#subsection-14" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-15" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Facts</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-16" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-17" class="internal"><span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#exercises-4" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-18" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-19" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-21" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-22" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-23" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-24" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-25" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#exercises-5" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupdefsection.html#subsection-26" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="groupdefsection.html#exercises-6" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#subsection-27" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#exercises-7" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-8.html#subsection-28" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-8.html#exercises-8" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-29" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-30" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#exercises-9" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="groups_extra_exer_section.html#exercises-10" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-32" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-33" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#exercises-11" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-12.html#subsection-34" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-35" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Cross ratio</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-36" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#normalformssubsect" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Normal forms</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-38" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Steiner circles</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#exercises-12" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-13.html#subsection-39" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-40" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-41" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-42" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-43" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#exercises-13" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-44" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-47" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-48" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-49" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#exercises-14" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-15.html#subsection-50" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-51" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-52" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-53" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#exercises-15" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="geometry_extra_exer_section.html#exercises-16" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li><div class="toc-item"><a href="references-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="references-3.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="elliptic_geometry_section"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span>
 </h2>
-<section class="introduction" id="introduction-15"><p id="p-514">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</p>
-<p id="p-515">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions.</p>
+<section class="introduction" id="introduction-15"><div class="para" id="p-514">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</div> <div class="para logical" id="p-515">
+<div class="para">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}
 \end{equation*}
 </div>
-<p class="continuation">We begin by establishing some basic facts about the relevant transformation groups.</p></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
+<div class="para">We begin by establishing some basic facts about the relevant transformation groups.</div>
+</div></section><section class="subsection" id="subsection-44"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span>
 </h3>
-<p id="p-516">Recall from <a href="quaternionsection.html" class="internal" title="Section 1.2: Quaternions">Section 1.2</a> that <span class="process-math">\(U(\Quat)\)</span> is the set of quaternions of modulus 1. In fact, <span class="process-math">\(U(\Quat)\)</span> is a group.</p>
+<div class="para" id="p-516">Recall from <a href="quaternionsection.html" class="internal" title="Section 1.2: Quaternions">Section 1.2</a> that <span class="process-math">\(U(\Quat)\)</span> is the set of quaternions of modulus 1. In fact, <span class="process-math">\(U(\Quat)\)</span> is a group.</div>
 <article class="exercise exercise-like" id="unitquatisgpexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-unitquatisgpexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-unitquatisgpexer"><article class="exercise exercise-like">Show that <span class="process-math">\(U(\Quat)\)</span> is a group.</article></div>
-<p id="p-518">Recall that the map <span class="process-math">\(M\colon \Quat \to
-{\mathcal M}_{\Quat}\)</span> sends <span class="process-math">\(r=a+bi+cj+dk\)</span> to the matrix</p>
+<div class="para logical" id="p-518">
+<div class="para">Recall that the map <span class="process-math">\(M\colon \Quat \to
+{\mathcal M}_{\Quat}\)</span> sends <span class="process-math">\(r=a+bi+cj+dk\)</span> to the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{cc} a+bi \amp c+di\\ -c+di \amp
 a-bi\end{array}\right]\text{.}
 \end{equation*}
 </div>
-<p class="continuation">The image of <span class="process-math">\(U(\Quat)\)</span> under <span class="process-math">\(M\)</span> is the matrix group <span class="process-math">\(SU(2)\)</span> , called the <em class="emphasis">special unitary</em> group.</p>
+<div class="para">The image of <span class="process-math">\(U(\Quat)\)</span> under <span class="process-math">\(M\)</span> is the matrix group <span class="process-math">\(SU(2)\)</span> , called the <em class="emphasis">special unitary</em> group.</div>
 <div class="displaymath process-math" id="su2def">
 \begin{equation}
 SU(2)= \left\{\left[\begin{array}{cc} a \amp b\\ -b^\ast \amp
@@ -187,21 +436,22 @@ a^\ast\end{array}\right]\colon a,b\in \C,
 |a|^2+|b|^2=1\right\}\tag{3.4.1}
 \end{equation}
 </div>
-<p class="continuation"> Restricting the domain of <span class="process-math">\(M\)</span> to <span class="process-math">\(U(\Quat)\)</span> and restricting the codomain of <span class="process-math">\(M\)</span> to <span class="process-math">\(M(U(\Quat))=SU(2)\)</span> is an isomorphism of groups</p>
+<div class="para"> Restricting the domain of <span class="process-math">\(M\)</span> to <span class="process-math">\(U(\Quat)\)</span> and restricting the codomain of <span class="process-math">\(M\)</span> to <span class="process-math">\(M(U(\Quat))=SU(2)\)</span> is an isomorphism of groups</div>
 <div class="displaymath process-math">
 \begin{equation*}
 U(\Quat)\approx SU(2).
 \end{equation*}
+</div>
 </div>
 <article class="exercise exercise-like" id="su2isgpisounitquitexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-su2isgpisounitquitexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-su2isgpisounitquitexer"><article class="exercise exercise-like">Show that <span class="process-math">\(SU(2)\)</span> is a group. Show that <span class="process-math">\(M\colon U(\Quat)\to SU(2)\)</span> is a homomorphism.<div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like">It is not necessary to perform any new computation to show that <span class="process-math">\(M\)</span> is a homomorphism. Instead, use <a href="" class="xref" data-knowl="./knowl/quatmultdef.html" title="Equation 1.2.5">(1.2.5)</a>.</div></div>
 </div></article></div>
-<p id="p-520">The action of a unit quaternion as a rotation on <span class="process-math">\(\R^3_\Quat\)</span> (see <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>) takes the sphere <span class="process-math">\(S^2_\Quat\)</span> to itself. The action of the group <span class="process-math">\(U(\H)\)</span> on <span class="process-math">\(S^2_\Quat\)</span> defines a model of elliptic geometry.</p>
+<div class="para" id="p-520">The action of a unit quaternion as a rotation on <span class="process-math">\(\R^3_\Quat\)</span> (see <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>) takes the sphere <span class="process-math">\(S^2_\Quat\)</span> to itself. The action of the group <span class="process-math">\(U(\H)\)</span> on <span class="process-math">\(S^2_\Quat\)</span> defines a model of elliptic geometry.</div>
 <article class="definition definition-like" id="definition-25"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
-</h4>The <dfn class="terminology">quaternion model</dfn> of elliptic geometry is <span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span></article><article class="exercise exercise-like" id="unitquatactionons2exer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-unitquatactionons2exer"><h4 class="heading">
+</h4>The <dfn class="terminology">quaternion model</dfn>  of elliptic geometry is <span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span></article><article class="exercise exercise-like" id="unitquatactionons2exer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-unitquatactionons2exer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-unitquatactionons2exer"><article class="exercise exercise-like">Show that the map <span class="process-math">\(U(\Quat)\to
 \Perm(S^2_\Quat)\)</span> given by<div class="displaymath process-math">
@@ -211,21 +461,24 @@ r \to \left[ v\to rvr^\ast \right]
 </div>is a group action.</article></div></section><section class="subsection" id="rotgp"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span>
 </h3>
-<p id="p-522">Let <span class="process-math">\(R_{{v},\theta}\)</span> denote the rotation of <span class="process-math">\(\R^3\)</span> about the axis given by a unit vector <span class="process-math">\({v}\)</span> by an angle <span class="process-math">\(\theta\text{.}\)</span> We use the standard orientation, so that a positive value of <span class="process-math">\(\theta\)</span> is a counterclockwise rotation of the plane orthogonal to <span class="process-math">\({v}\text{,}\)</span> as viewed from "above" where <span class="process-math">\({v}\)</span> points in the "up" direction. See <a href="" class="xref" data-knowl="./knowl/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</p>
+<div class="para" id="p-522">Let <span class="process-math">\(R_{{v},\theta}\)</span> denote the rotation of <span class="process-math">\(\R^3\)</span> about the axis given by a unit vector <span class="process-math">\({v}\)</span> by an angle <span class="process-math">\(\theta\text{.}\)</span> We use the standard orientation, so that a positive value of <span class="process-math">\(\theta\)</span> is a counterclockwise rotation of the plane orthogonal to <span class="process-math">\({v}\text{,}\)</span> as viewed from "above" where <span class="process-math">\({v}\)</span> points in the "up" direction. See <a href="" class="xref" data-knowl="./knowl/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</div>
 <figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vectangrot.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation <span class="process-math">\(R_{v,\theta}\)</span> about the vector <span class="process-math">\(v\)</span> by the angle <span class="process-math">\(\theta\)</span></figcaption></figure><p id="p-523"><em class="alert">Notation convention:</em> For readability and convenience, we write <span class="process-math">\(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\)</span> to denote rotations by <span class="process-math">\(\theta\)</span> radians about the standard basis vectors <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively.</p>
-<p id="p-524">We will write <span class="process-math">\(\Rot(S^2)\)</span> to denote the set of all rotations.</p>
-<div class="displaymath process-math">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation <span class="process-math">\(R_{v,\theta}\)</span> about the vector <span class="process-math">\(v\)</span> by the angle <span class="process-math">\(\theta\)</span></figcaption></figure><div class="para" id="p-523">
+<em class="alert">Notation convention:</em> For readability and convenience, we write <span class="process-math">\(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\)</span> to denote rotations by <span class="process-math">\(\theta\)</span> radians about the standard basis vectors <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively.</div>
+<div class="para logical" id="p-524">
+<div class="para">We will write <span class="process-math">\(\Rot(S^2)\)</span> to denote the set of all rotations.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotprop.html ./knowl/quatrotcompinvexer.html">
 \begin{equation*}
 \Rot(S^2)=\{R_{{v},\theta}\colon
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<p class="continuation">To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 1 </sup></a> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="" class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</p>
-<div class="displaymath process-math">
+<div class="para">To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 1 </sup></a> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="" class="xref" data-knowl="./knowl/quatrotcompinvexer.html" title="Exercise 1.2.6.3">Exercise 1.2.6.3</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotprop.html ./knowl/quatrotcompinvexer.html">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
+</div>
 </div>
 <article class="exercise exercise-like" id="s2rotisgpexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-s2rotisgpexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
@@ -235,7 +488,7 @@ R_r\)</span> is <span class="process-math">\(\{\pm 1\}\text{.}\)</span><div clas
 </div></article></div>
 <article class="definition definition-like" id="definition-26"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
-</h4>The <dfn class="terminology">spherical model</dfn> of elliptic geometry is <span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span></article><p id="p-526">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</p>
+</h4>The <dfn class="terminology">spherical model</dfn>  of elliptic geometry is <span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span></article><div class="para" id="p-526">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</div>
 <article class="lemma theorem-like" id="lemma-5"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Rotations about the <span class="process-math">\(y\)</span>-axis.</span>
 </h4>An arbitrary rotation about the <span class="process-math">\(y\)</span>-axis is a composition of a rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians with a rotation about the <span class="process-math">\(z\)</span>-axis. Specifically, we have the following.<div class="displaymath process-math" id="yrotdecomp">
@@ -250,20 +503,20 @@ R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\tag{3.4.2}
 \{R_{Z,\theta}\colon \theta\in
 \R\}\cup \{R_{X,\pi/2}\}
 \end{equation*}
-</div>is a generating set for <span class="process-math">\(\Rot(S^2)\text{.}\)</span> This means that any rotation may be written as a composition of rotations about the <span class="process-math">\(z\)</span>-axis and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians.</article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the <span class="process-math">\(x,z\)</span>-plane. The sphere in the upper left of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole <span class="process-math">\(N\text{,}\)</span> Greenwich <span class="process-math">\(G\text{,}\)</span> and the great circle <span class="process-math">\(C\)</span> that is the intersection of the sphere with the <span class="process-math">\(x,z\)</span>-plane (<span class="process-math">\(C\)</span> is shown in red in all four spheres for reference). Now let <span class="process-math">\(R\)</span> be an arbitrary rotation. The sphere in the upper right of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how <span class="process-math">\(\)</span><span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(C\)</span> are transformed by <span class="process-math">\(R\text{.}\)</span> The rest of the diagram shows how we can write <span class="process-math">\(R^{-1}\)</span> as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation <span class="process-math">\(R_{Z,\theta_1}\)</span> about the <span class="process-math">\(z\)</span>-axis that brings the north pole into the <span class="process-math">\(x,z\)</span>-plane. Next, we perform the rotation <span class="process-math">\(R_{Y,\theta_2}\)</span> about the <span class="process-math">\(y\)</span>-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation <span class="process-math">\(R_{Z,\theta_3}\)</span> to bring Greenwich back home in the <span class="process-math">\(x,z\)</span>-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath process-math">
+</div>is a generating set for <span class="process-math">\(\Rot(S^2)\text{.}\)</span> This means that any rotation may be written as a composition of rotations about the <span class="process-math">\(z\)</span>-axis and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians.</article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original has-image" data-refid="hk-proof-22"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the <span class="process-math">\(x,z\)</span>-plane. The sphere in the upper left of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole <span class="process-math">\(N\text{,}\)</span> Greenwich <span class="process-math">\(G\text{,}\)</span> and the great circle <span class="process-math">\(C\)</span> that is the intersection of the sphere with the <span class="process-math">\(x,z\)</span>-plane (<span class="process-math">\(C\)</span> is shown in red in all four spheres for reference). Now let <span class="process-math">\(R\)</span> be an arbitrary rotation. The sphere in the upper right of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how <span class="process-math">\(\)</span> <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(C\)</span> are transformed by <span class="process-math">\(R\text{.}\)</span> The rest of the diagram shows how we can write <span class="process-math">\(R^{-1}\)</span> as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation <span class="process-math">\(R_{Z,\theta_1}\)</span> about the <span class="process-math">\(z\)</span>-axis that brings the north pole into the <span class="process-math">\(x,z\)</span>-plane. Next, we perform the rotation <span class="process-math">\(R_{Y,\theta_2}\)</span> about the <span class="process-math">\(y\)</span>-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation <span class="process-math">\(R_{Z,\theta_3}\)</span> to bring Greenwich back home in the <span class="process-math">\(x,z\)</span>-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
 \begin{equation*}
 R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}
 \end{equation*}
-</div>takes the north pole <span class="process-math">\(N\)</span> through the sequence<div class="displaymath process-math">
+</div>takes the north pole <span class="process-math">\(N\)</span> through the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
 \begin{equation*}
 N\to R(N)\to N' \to N''=N\to N\text{.}
 \end{equation*}
-</div>Meanwhile, <span class="process-math">\(G\)</span> traces the path<div class="displaymath process-math">
+</div>Meanwhile, <span class="process-math">\(G\)</span> traces the path<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
 \begin{equation*}
 G\to R(G)\to
 G'\to G''\to G 
 \end{equation*}
-</div>while the great circle <span class="process-math">\(C\)</span> is transformed in the sequence<div class="displaymath process-math">
+</div>while the great circle <span class="process-math">\(C\)</span> is transformed in the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
 \begin{equation*}
 C\to R(C) \to C' \to C''\to C.
 \end{equation*}
@@ -271,33 +524,36 @@ C\to R(C) \to C' \to C''\to C.
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotation <span class="process-math">\(R\)</span></figcaption></figure></article></div></section><section class="subsection" id="ellipticsubgpssubsec"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span>
 </h3>
-<p id="p-527"></p>
-<p id="p-528">Let <span class="process-math">\(\S\)</span> denote the group of transformations of <span class="process-math">\(\extC\)</span> that are conjugate to rotations of <span class="process-math">\(S^2\)</span> via the stereographic projection.</p>
+<div class="para" id="p-527"></div>
+<div class="para logical" id="p-528">
+<div class="para">Let <span class="process-math">\(\S\)</span> denote the group of transformations of <span class="process-math">\(\extC\)</span> that are conjugate to rotations of <span class="process-math">\(S^2\)</span> via the stereographic projection.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \S=\{s\circ R\circ s^{-1} \;\;\colon \;\;R\in
 \Rot(S^2)\}
 \end{equation*}
 </div>
-<p class="continuation">The group <span class="process-math">\(\S\)</span> is called the <dfn class="terminology">elliptic group</dfn>. It is easy to check that the map <span class="process-math">\(\Rot(S^2)\to
-\S\)</span> given by <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is an isomorphism of groups, so we have</p>
+<div class="para">The group <span class="process-math">\(\S\)</span> is called the <dfn class="terminology">elliptic group</dfn>. It is easy to check that the map <span class="process-math">\(\Rot(S^2)\to
+\S\)</span> given by <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is an isomorphism of groups, so we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \S\approx \Rot(S^2).
 \end{equation*}
 </div>
+</div>
 <article class="exercise exercise-like" id="ellipticgpisgpexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticgpisgpexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.11</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticgpisgpexer"><article class="exercise exercise-like">Show that <span class="process-math">\(\S\)</span> is indeed a group. Show that <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is a group isomorphism <span class="process-math">\(\Rot(S^2)\to \S\text{.}\)</span></article></div>
-<p id="p-530">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that <span class="process-math">\(s\circ
+<div class="para" id="p-530">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that <span class="process-math">\(s\circ
 R_{Z,\theta}\circ s^{-1}\)</span> the Möbius transformation <span class="process-math">\(T_{Z,\theta}\)</span> given by <span class="process-math">\(z\to e^{i\theta}z\)</span> (see <a href="" class="xref" data-knowl="./knowl/mobiuszrotations.html" title="Exercise 1.3.3.4">Exercise 1.3.3.4</a>) and that <span class="process-math">\(s\circ
-R_{X,\pi/2}\circ s^{-1}\)</span> is the Möbius transformation <span class="process-math">\(T_{X,\pi/2}\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> (see <a href="" class="xref" data-knowl="./knowl/mobiusxpiby2rotations.html" title="Exercise 1.3.3.6">Exercise 1.3.3.6</a>). The fact (<a href="" class="xref" data-knowl="./knowl/rotgenprop.html" title="Proposition 3.4.9: Generators for \Rot(S^2)">Proposition 3.4.9</a>) that rotations of the form <span class="process-math">\(R_{Z,\theta},R_{X,\pi/2}\)</span> generate <span class="process-math">\(\Rot(S^2)\)</span>  implies that the Möbius transformations <span class="process-math">\(T_{Z,\theta}\)</span> and <span class="process-math">\(T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{.}\)</span> Therefore <span class="process-math">\(\S\)</span> is in fact a subgroup of the Möbius group.</p>
+R_{X,\pi/2}\circ s^{-1}\)</span> is the Möbius transformation <span class="process-math">\(T_{X,\pi/2}\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> (see <a href="" class="xref" data-knowl="./knowl/mobiusxpiby2rotations.html" title="Exercise 1.3.3.6">Exercise 1.3.3.6</a>). The fact (<a href="" class="xref" data-knowl="./knowl/rotgenprop.html" title="Proposition 3.4.9: Generators for \Rot(S^2)">Proposition 3.4.9</a>) that rotations of the form <span class="process-math">\(R_{Z,\theta},R_{X,\pi/2}\)</span> generate <span class="process-math">\(\Rot(S^2)\)</span>  implies that the Möbius transformations <span class="process-math">\(T_{Z,\theta}\)</span> and <span class="process-math">\(T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{.}\)</span> Therefore <span class="process-math">\(\S\)</span> is in fact a subgroup of the Möbius group.</div>
 <article class="definition definition-like" id="definition-27"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span>
-</h4>The <dfn class="terminology">Möbius subgeometry model</dfn> of elliptic geometry is <span class="process-math">\((\extC,\S)\text{.}\)</span></article><p id="p-531">We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
+</h4>The <dfn class="terminology">Möbius subgeometry model</dfn>  of elliptic geometry is <span class="process-math">\((\extC,\S)\text{.}\)</span></article><div class="para logical" id="p-531">
+<div class="para">We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
 T}\colon GL(2,\C)\to \M\)</span> that sends the matrix <span class="process-math">\(\left[\begin{array}{cc} a\amp b\\ c\amp
-d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="" class="xref" data-knowl="./knowl/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</p>
-<div class="displaymath process-math" id="mdn-16">
+d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="" class="xref" data-knowl="./knowl/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/gl2tomobgp.html ./knowl/su2def.html" id="mdn-16">
 \begin{align}
 T_{Z,\theta} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
 e^{i\theta/2} \amp 0\\ 0 \amp
@@ -307,158 +563,195 @@ T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
 \frac{i}{\sqrt{2}}\amp \frac{1}{\sqrt{2}}\end{array}\right]\right)\tag{3.4.4}
 \end{align}
 </div>
-<p class="continuation">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="" class="xref" data-knowl="./knowl/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span></p>
+<div class="para">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="" class="xref" data-knowl="./knowl/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span>
+</div>
+</div>
 <article class="exercise exercise-like" id="ellipticgpgenexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticgpgenexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticgpgenexer"><article class="exercise exercise-like">Let <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> denote the matrices <span class="process-math">\(\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
 \twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}\text{,}\)</span> respectively.  Verify that <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> are indeed elements of <span class="process-math">\(SU(2)\text{.}\)</span> Verify <a href="" class="xref" data-knowl="./knowl/tzthetaassu2image.html" title="Equation 3.4.3">(3.4.3)</a> and <a href="" class="xref" data-knowl="./knowl/txpiby2assu2image.html" title="Equation 3.4.4">(3.4.4)</a>.  Explain the final comment in the paragraph above. Why does it follow that every element of <span class="process-math">\(\S\)</span> is the image of an element of <span class="process-math">\(SU(2)\text{?}\)</span></article></div>
-<p id="p-533">Thus we have proved the following explicit formula for elements of <span class="process-math">\(\S\text{.}\)</span></p>
+<div class="para" id="p-533">Thus we have proved the following explicit formula for elements of <span class="process-math">\(\S\text{.}\)</span>
+</div>
 <article class="proposition theorem-like" id="ellipticgpissu2imageprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Formula for transformations in the elliptic group.</span>
 </h4>
-<p id="p-534">A map <span class="process-math">\(T\)</span> is an element of <span class="process-math">\(\S\)</span> if and only if <span class="process-math">\(T\)</span> may be written in the form <span class="process-math">\(Tz=\frac{az+b}{-b^\ast z+a^\ast}\)</span> for some <span class="process-math">\(a,b\in \C\)</span> with <span class="process-math">\(|a|^2+|b|^2=1\text{.}\)</span></p></article><p id="p-535">Setting <span class="process-math">\(e^{i\theta}=\frac{a}{a^\ast}\)</span> and <span class="process-math">\(z_0=\frac{-b}{a}\text{,}\)</span> we have the following alternative form for <span class="process-math">\(T\in \S\text{.}\)</span></p>
+<div class="para" id="p-534">A map <span class="process-math">\(T\)</span> is an element of <span class="process-math">\(\S\)</span> if and only if <span class="process-math">\(T\)</span> may be written in the form <span class="process-math">\(Tz=\frac{az+b}{-b^\ast z+a^\ast}\)</span> for some <span class="process-math">\(a,b\in \C\)</span> with <span class="process-math">\(|a|^2+|b|^2=1\text{.}\)</span>
+</div></article><div class="para logical" id="p-535">
+<div class="para">Setting <span class="process-math">\(e^{i\theta}=\frac{a}{a^\ast}\)</span> and <span class="process-math">\(z_0=\frac{-b}{a}\text{,}\)</span> we have the following alternative form for <span class="process-math">\(T\in \S\text{.}\)</span>
+</div>
 <div class="displaymath process-math" id="ellipticgp0inftyform">
 \begin{equation}
 Tz=e^{i\theta}\frac{z-z_0}{z_0^\ast z+1}\tag{3.4.5}
 \end{equation}
+</div>
 </div></section><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span>
 </h3>
-<p id="p-536">A <em class="emphasis">circle</em> in <span class="process-math">\(S^2\)</span> is a circle in a plane intersecting <span class="process-math">\(S^2\text{.}\)</span> A <dfn class="terminology">great circle</dfn> is the intersection of <span class="process-math">\(S^2\)</span> with a plane through the origin. In elliptic geometry, a great circle is called an <dfn class="terminology">elliptic straight line</dfn> because the path of shortest length connecting two given points in <span class="process-math">\(S^2\)</span> is an arc of a great circle. Circles in <span class="process-math">\(S^2\)</span> that are not great circles are called <dfn class="terminology">elliptic cycles</dfn>. Elliptic straight lines and elliptic cycles in the Möbius subgeometry model <span class="process-math">\((\extC,\S)\)</span> are stereographic projections of elliptic straight lines and elliptic cycles in the spherical model. It turns out that elliptic straight lines and elliptic cycles in <span class="process-math">\(\extC\)</span> are in fact clines. Here is the statement and proof.</p>
+<div class="para" id="p-536">A <em class="emphasis">circle</em> in <span class="process-math">\(S^2\)</span> is a circle in a plane intersecting <span class="process-math">\(S^2\text{.}\)</span> A <dfn class="terminology">great circle</dfn> is the intersection of <span class="process-math">\(S^2\)</span> with a plane through the origin. In elliptic geometry, a great circle is called an <dfn class="terminology">elliptic straight line</dfn> because the path of shortest length connecting two given points in <span class="process-math">\(S^2\)</span> is an arc of a great circle. Circles in <span class="process-math">\(S^2\)</span> that are not great circles are called <dfn class="terminology">elliptic cycles</dfn>. Elliptic straight lines and elliptic cycles in the Möbius subgeometry model <span class="process-math">\((\extC,\S)\)</span> are stereographic projections of elliptic straight lines and elliptic cycles in the spherical model. It turns out that elliptic straight lines and elliptic cycles in <span class="process-math">\(\extC\)</span> are in fact clines. Here is the statement and proof.</div>
 <article class="proposition theorem-like" id="proposition-24"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection takes circles to clines.</span>
 </h4>Let <span class="process-math">\(C\)</span> be a circle that is the intersection of <span class="process-math">\(S^2\)</span> with a plane in <span class="process-math">\(\R^3\text{.}\)</span> If <span class="process-math">\(C\)</span> contains the north pole <span class="process-math">\((0,0,1)\)</span> of <span class="process-math">\(S^2\text{,}\)</span> then <span class="process-math">\(s(C\setminus\{(0,0,1)\})\)</span> is a Euclidean straight line in <span class="process-math">\(\C\text{.}\)</span> Otherwise, <span class="process-math">\(s(C)\)</span> is a circle in <span class="process-math">\(\C\text{.}\)</span></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof">Proof sketch: The statement about the case when <span class="process-math">\(C\)</span> contains the north pole is geometrically clear. For the case when <span class="process-math">\(C\)</span> does not contain <span class="process-math">\((0,0,1)\text{,}\)</span> choose a rotation <span class="process-math">\(R\)</span> of <span class="process-math">\(S^2\)</span> that takes some point on <span class="process-math">\(C\)</span> to the north pole. Again, let <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> be the conjugate element in <span class="process-math">\(\S\text{.}\)</span> It is clear that <span class="process-math">\(R\)</span> takes <span class="process-math">\(C\)</span> to a circle, that <span class="process-math">\(s\)</span> takes <span class="process-math">\(R(C)\)</span> to a Euclidean straight line, and that <span class="process-math">\(T^{-1}\)</span> takes <span class="process-math">\(s(R(C))\)</span> to a cline (because <span class="process-math">\(T^{-1}\)</span> is a Möbius transformation!). Thus <span class="process-math">\(s(C)=(T^{-1}\circ s\circ R)(C)\)</span> is a cline. Because <span class="process-math">\((0,0,1)\)</span> is not on <span class="process-math">\(C\text{,}\)</span> it must be that <span class="process-math">\(\infty\)</span> is not on <span class="process-math">\(s(C)\text{,}\)</span> so <span class="process-math">\(s(C)\)</span> is a circle in <span class="process-math">\(\C\text{.}\)</span></article></div></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span>
 </h3>
-<p id="p-537">The standard orientation for angles on <span class="process-math">\(S^2\)</span> (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a href="" class="xref" data-knowl="./knowl/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</p>
+<div class="para" id="p-537">The standard orientation for angles on <span class="process-math">\(S^2\)</span> (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a href="" class="xref" data-knowl="./knowl/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</div>
 <figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/2orientations.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.16<span class="period">.</span></span><span class="space"> </span>Two orientations on the sphere: oriented angle <span class="process-math">\(\angle
 PQR\)</span> is positive viewed from the outward-pointing normal vector <span class="process-math">\(v\text{,}\)</span> but is negative viewed from the inward-pointing vector <span class="process-math">\(-v\text{.}\)</span></figcaption></figure><article class="corollary theorem-like" id="corollary-7"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection is conformal.</span>
 </h4>
-<p id="p-538">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</p></article><article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof">Proof sketch: Begin with the special case of curves <span class="process-math">\(C_1,C_2\)</span> that intersect at the south pole <span class="process-math">\(S=(0,0,-1)\text{.}\)</span> The lines <span class="process-math">\(L_1,L_2\)</span> that are tangent to <span class="process-math">\(C_1,C_2\)</span> at <span class="process-math">\(S\)</span> lie in planes <span class="process-math">\(\Pi_1,\Pi_2\)</span> that contain the south pole and the origin. The tangents <span class="process-math">\(L_1,L_2\)</span> also lie in the plane <span class="process-math">\(z=-1\)</span> tangent to the sphere at the south pole. It is clear that the lines <span class="process-math">\(L_1',L_2'\)</span> tangent to <span class="process-math">\(s(C_1),s(C_2)\)</span> at <span class="process-math">\(s(S)=0\)</span> are straight lines that intersect at the origin. The angle made by <span class="process-math">\(L_1,L_2\)</span> is the same as the angle made by the planes <span class="process-math">\(\Pi_1,\Pi_2\text{,}\)</span> but with inward-normal orientation! See <a href="" class="xref" data-knowl="./knowl/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at <span class="process-math">\(P\text{.}\)</span> Choose a rotation <span class="process-math">\(R\)</span> of <span class="process-math">\(S^2\)</span> that takes <span class="process-math">\(P\)</span> to the south pole, and let <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> be the conjugate element in <span class="process-math">\(\S\text{.}\)</span> It is clear that <span class="process-math">\(R\)</span> and <span class="process-math">\(T\)</span> are conformal (because <span class="process-math">\(T\)</span> is a Möbius transformation!). Now the fact that <span class="process-math">\(s\)</span> is conformal at <span class="process-math">\((0,0,-1)\)</span> implies that <span class="process-math">\(s=T^{-1}\circ s\circ
+<div class="para" id="p-538">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</div></article><article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original has-image" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof">Proof sketch: Begin with the special case of curves <span class="process-math">\(C_1,C_2\)</span> that intersect at the south pole <span class="process-math">\(S=(0,0,-1)\text{.}\)</span> The lines <span class="process-math">\(L_1,L_2\)</span> that are tangent to <span class="process-math">\(C_1,C_2\)</span> at <span class="process-math">\(S\)</span> lie in planes <span class="process-math">\(\Pi_1,\Pi_2\)</span> that contain the south pole and the origin. The tangents <span class="process-math">\(L_1,L_2\)</span> also lie in the plane <span class="process-math">\(z=-1\)</span> tangent to the sphere at the south pole. It is clear that the lines <span class="process-math">\(L_1',L_2'\)</span> tangent to <span class="process-math">\(s(C_1),s(C_2)\)</span> at <span class="process-math">\(s(S)=0\)</span> are straight lines that intersect at the origin. The angle made by <span class="process-math">\(L_1,L_2\)</span> is the same as the angle made by the planes <span class="process-math">\(\Pi_1,\Pi_2\text{,}\)</span> but with inward-normal orientation! See <a href="" class="xref" data-knowl="./knowl/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at <span class="process-math">\(P\text{.}\)</span> Choose a rotation <span class="process-math">\(R\)</span> of <span class="process-math">\(S^2\)</span> that takes <span class="process-math">\(P\)</span> to the south pole, and let <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> be the conjugate element in <span class="process-math">\(\S\text{.}\)</span> It is clear that <span class="process-math">\(R\)</span> and <span class="process-math">\(T\)</span> are conformal (because <span class="process-math">\(T\)</span> is a Möbius transformation!). Now the fact that <span class="process-math">\(s\)</span> is conformal at <span class="process-math">\((0,0,-1)\)</span> implies that <span class="process-math">\(s=T^{-1}\circ s\circ
 R\)</span> is conformal at <span class="process-math">\(P\text{.}\)</span> <figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereo_conformal.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>Stereographic projection is conformal at <span class="process-math">\(S=(0,0,-1)\text{.}\)</span></figcaption></figure></article></div></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span>
 </h3>
-<p id="p-539">The distance between points <span class="process-math">\(P,Q\)</span> on <span class="process-math">\(S^2\)</span> is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle <span class="process-math">\(\angle
-POQ\text{,}\)</span> where <span class="process-math">\(O\)</span> is the origin. From vector calculus, we have the following dot product formula.</p>
+<div class="para logical" id="p-539">
+<div class="para">The distance between points <span class="process-math">\(P,Q\)</span> on <span class="process-math">\(S^2\)</span> is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle <span class="process-math">\(\angle
+POQ\text{,}\)</span> where <span class="process-math">\(O\)</span> is the origin. From vector calculus, we have the following dot product formula.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (\overrightarrow{OP})\cdot (\overrightarrow{OQ})=|\overrightarrow{OP}||\overrightarrow{OQ}|\cos(\angle
 POQ)
 \end{equation*}
 </div>
-<p class="continuation">Solving for <span class="process-math">\(\cos(\angle POQ)\text{,}\)</span> we obtain the formula for the distance <span class="process-math">\(d_{S^2}(P,Q)\)</span> between points <span class="process-math">\(P,Q\)</span> in <span class="process-math">\(S^2\text{.}\)</span></p>
+<div class="para">Solving for <span class="process-math">\(\cos(\angle POQ)\text{,}\)</span> we obtain the formula for the distance <span class="process-math">\(d_{S^2}(P,Q)\)</span> between points <span class="process-math">\(P,Q\)</span> in <span class="process-math">\(S^2\text{.}\)</span>
+</div>
 <div class="displaymath process-math" id="s2metric">
 \begin{equation}
 d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)\tag{3.4.6}
 \end{equation}
 </div>
-<p id="p-540">To "transfer" the metric <a href="" class="xref" data-knowl="./knowl/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to <span class="process-math">\(\extC\)</span> by stereographic projection means that we define the elliptic metric <span class="process-math">\(d_{\extC}\)</span> on <span class="process-math">\(\extC\)</span> by the following.</p>
-<div class="displaymath process-math" id="elliptic_metric_def">
+</div>
+<div class="para logical" id="p-540">
+<div class="para">To "transfer" the metric <a href="" class="xref" data-knowl="./knowl/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to <span class="process-math">\(\extC\)</span> by stereographic projection means that we define the elliptic metric <span class="process-math">\(d_{\extC}\)</span> on <span class="process-math">\(\extC\)</span> by the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s2metric.html" id="elliptic_metric_def">
 \begin{equation}
 d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))\tag{3.4.7}
 \end{equation}
 </div>
+</div>
 <article class="proposition theorem-like" id="elliptic_metric_is_invariant"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.19</span><span class="period">.</span>
 </h4>
-<p id="p-541">The elliptic metric <a href="" class="xref" data-knowl="./knowl/elliptic_metric_def.html" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</p>
-<div class="displaymath process-math" id="men-48">
+<div class="para logical" id="p-541">
+<div class="para">The elliptic metric <a href="" class="xref" data-knowl="./knowl/elliptic_metric_def.html" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_metric_def.html" id="men-48">
 \begin{equation}
 d_{\extC}(p,q) = d_{\extC}(Tp,Tq)\tag{3.4.8}
 \end{equation}
 </div>
-<p class="continuation">for all <span class="process-math">\(p,q\in \extC\)</span> and for all <span class="process-math">\(T\in\S\text{.}\)</span></p></article><article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof">See <a href="" class="xref" data-knowl="./knowl/ellipticmetinvexer.html" title="Exercise 3.4.7.2">Exercise 3.4.7.2</a>.</article></div>
-<p id="p-542">In order to obtain a formula for computing <span class="process-math">\(d_{\extC}(p,q)\text{,}\)</span> we follow the same procedure for hyperbolic distance. First, we find the distance <span class="process-math">\(d_{\extC}(0,u)\text{,}\)</span> where <span class="process-math">\(0\leq u\leq
+<div class="para">for all <span class="process-math">\(p,q\in \extC\)</span> and for all <span class="process-math">\(T\in\S\text{.}\)</span>
+</div>
+</div></article><article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof">See <a href="" class="xref" data-knowl="./knowl/ellipticmetinvexer.html" title="Exercise 3.4.7.2">Exercise 3.4.7.2</a>.</article></div>
+<div class="para logical" id="p-542">
+<div class="para">In order to obtain a formula for computing <span class="process-math">\(d_{\extC}(p,q)\text{,}\)</span> we follow the same procedure for hyperbolic distance. First, we find the distance <span class="process-math">\(d_{\extC}(0,u)\text{,}\)</span> where <span class="process-math">\(0\leq u\leq
 1\text{.}\)</span> Let <span class="process-math">\(S=(0,0,-1)=s^{-1}(0)\)</span> and let <span class="process-math">\(U=s^{-1}(u)\text{.}\)</span> Let <span class="process-math">\(0=(0,0,0)\text{,}\)</span> let <span class="process-math">\(N=(0,0,1)\text{,}\)</span> let <span class="process-math">\(\alpha =
-\angle SNU\)</span> and let <span class="process-math">\(\theta = \angle SOU\)</span> (see <a href="" class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that <span class="process-math">\(\alpha = \theta/2\text{,}\)</span> so that we have</p>
-<div class="displaymath process-math" id="ellipticdist0u">
+\angle SNU\)</span> and let <span class="process-math">\(\theta = \angle SOU\)</span> (see <a href="" class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that <span class="process-math">\(\alpha = \theta/2\text{,}\)</span> so that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_distance_fig.html" id="ellipticdist0u">
 \begin{equation}
 d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. \tag{3.4.9}
 \end{equation}
+</div>
 </div>
 <figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/elliptic_distance.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on <span class="process-math">\(S^2\)</span> to <span class="process-math">\(\extC\)</span> via stereographic projection.</figcaption></figure><article class="exercise exercise-like" id="ellipticdistlemmaexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdistlemmaexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.21</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdistlemmaexer"><article class="exercise exercise-like">Show that <span class="process-math">\(\theta/2=\alpha=\arctan u\)</span> in <a href="" class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>.</article></div>
-<p id="p-544">For the general case, let <span class="process-math">\(z_1,z_2\in \extC\text{.}\)</span> Because and let <span class="process-math">\(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\)</span> be the transformation in <span class="process-math">\(\S\)</span> (using the form <a href="" class="xref" data-knowl="./knowl/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to u\geq 0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in <span class="process-math">\(\extC\text{.}\)</span></p>
-<div class="displaymath process-math" id="ellipticdist">
+<div class="para logical" id="p-544">
+<div class="para">For the general case, let <span class="process-math">\(z_1,z_2\in \extC\text{.}\)</span> Because and let <span class="process-math">\(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\)</span> be the transformation in <span class="process-math">\(\S\)</span> (using the form <a href="" class="xref" data-knowl="./knowl/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to u\geq 0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in <span class="process-math">\(\extC\text{.}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticgp0inftyform.html ./knowl/ellipticdist0u.html ./knowl/hyperboliclengthformula.html" id="ellipticdist">
 \begin{equation}
 d_{\extC}(z_1,z_2)=2\arctan
 \left|\frac{z_2-z_1}{z_1^\ast z_2 + 1}\right|\tag{3.4.10}
 \end{equation}
 </div>
-<p class="continuation">Now let <span class="process-math">\(\gamma\)</span> be a parametric curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> in <span class="process-math">\(\extC\text{.}\)</span> Using the same argument as in the paragraph preceding the hyperbolic length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, using the first order Taylor approximation <span class="process-math">\(\arctan u \approx u\)</span> and making the appropriate changes, we arrive at the elliptic length integral formula.</p>
-<div class="displaymath process-math" id="ellipticlengthformula">
+<div class="para">Now let <span class="process-math">\(\gamma\)</span> be a parametric curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> in <span class="process-math">\(\extC\text{.}\)</span> Using the same argument as in the paragraph preceding the hyperbolic length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, using the first order Taylor approximation <span class="process-math">\(\arctan u \approx u\)</span> and making the appropriate changes, we arrive at the elliptic length integral formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticgp0inftyform.html ./knowl/ellipticdist0u.html ./knowl/hyperboliclengthformula.html" id="ellipticlengthformula">
 \begin{equation}
 \text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt\tag{3.4.11}
 \end{equation}
+</div>
 </div>
 <article class="exercise exercise-like" id="ellipticdsexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdsexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.22</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdsexer"><article class="exercise exercise-like">Show that the first order Taylor approximation for <span class="process-math">\(\arctan u\)</span> is <span class="process-math">\(u\text{.}\)</span> Complete the details of modifying the derivation of the hyperbolic length integral formula to obtain the elliptic length integral formula.</article></div>
 <article class="exercise exercise-like" id="ellipticcircumexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticcircumexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.23</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticcircumexer"><article class="exercise exercise-like"><p id="p-546">Find the length of the elliptic cycle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\leq 1\)</span> .</p></article></div>
-<p id="p-548">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</p>
-<div class="displaymath process-math" id="ellipticareaintformula">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticcircumexer"><article class="exercise exercise-like"><div class="para" id="p-546">Find the length of the elliptic cycle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\leq 1\)</span> .</div></article></div>
+<div class="para logical" id="p-548">
+<div class="para">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicareaintformula.html" id="ellipticareaintformula">
 \begin{equation}
 \text{Area}(R)=\iint_R
 dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\tag{3.4.12}
 \end{equation}
 </div>
+</div>
 <article class="exercise exercise-like" id="ellipticdiskareaexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ellipticdiskareaexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.24</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdiskareaexer"><article class="exercise exercise-like"><p id="p-549">Find the area of the elliptic disk <span class="process-math">\(\{|z|\leq
-\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span></p></article></div></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ellipticdiskareaexer"><article class="exercise exercise-like"><div class="para" id="p-549">Find the area of the elliptic disk <span class="process-math">\(\{|z|\leq
+\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span>
+</div></article></div></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.4.7</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="threeellipticmodelssameexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>Show that the three models of elliptic geometry are equivalent.</article><article class="exercise exercise-like" id="ellipticmetinvexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-555">Prove <a href="" class="xref" data-knowl="./knowl/elliptic_metric_is_invariant.html" title="Proposition 3.4.19">Proposition 3.4.19</a>.</p></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
+<div class="para" id="p-555">Prove <a href="" class="xref" data-knowl="./knowl/elliptic_metric_is_invariant.html" title="Proposition 3.4.19">Proposition 3.4.19</a>.</div></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
 <h4 class="heading"><span class="title">Area of an elliptic triangle..</span></h4>
 <div class="introduction" id="introduction-16">The following sequence of exercises establishes the area formula for elliptic triangles.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="twogonareaexer"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic 2-gon.</span>
 </h5>
-<p id="p-557">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In <span class="process-math">\(\extC\text{,}\)</span> any 2-gon is congruent to a set of the form <span class="process-math">\(R_{\alpha} :=\{z\in \C\colon
+<div class="para" id="p-557">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In <span class="process-math">\(\extC\text{,}\)</span> any 2-gon is congruent to a set of the form <span class="process-math">\(R_{\alpha} :=\{z\in \C\colon
 0\leq \arg z \leq \alpha\}\cup \{\infty\}\)</span> for some <span class="process-math">\(\alpha\)</span> in the range <span class="process-math">\(0\leq \alpha\lt
 2\pi\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in <span class="process-math">\(\extC\)</span> to show that the area of <span class="process-math">\(R_{\alpha}\)</span> is <span class="process-math">\(2\alpha\text{.}\)</span> Verify that this is the right answer using a picture of <span class="process-math">\(S^2\text{.}\)</span> <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in <span class="process-math">\(\extC\)</span> and <span class="process-math">\(S^2\text{.}\)</span></figcaption></figure></p></article><article class="exercise exercise-like" id="elliptic_triangle_area_exer"><h5 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in <span class="process-math">\(\extC\)</span> and <span class="process-math">\(S^2\text{.}\)</span></figcaption></figure>
+</div></article><article class="exercise exercise-like" id="elliptic_triangle_area_exer"><h5 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic triangle.</span>
 </h5>
-<p id="p-558">Let <span class="process-math">\(\triangle ABC\)</span> be an elliptic triangle. Let <span class="process-math">\({\mathcal C}_{AB},{\mathcal
-C}_{AC},{\mathcal C}_{BC}\)</span> denote the great circles that extend the sides <span class="process-math">\(AB,AC,BC\)</span> of the triangle. See <a href="" class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>.</p>
+<div class="para logical" id="p-558">
+<div class="para">Let <span class="process-math">\(\triangle ABC\)</span> be an elliptic triangle. Let <span class="process-math">\({\mathcal C}_{AB},{\mathcal
+C}_{AC},{\mathcal C}_{BC}\)</span> denote the great circles that extend the sides <span class="process-math">\(AB,AC,BC\)</span> of the triangle. See <a href="" class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>.</div>
 <ol class="lower-alpha">
-<li id="li-370"><p id="p-derived-li-370">Explain why <span class="process-math">\(A,A'\)</span> are endpoints of the same diameter, that is, endpoints of a diameter of <span class="process-math">\(S^2\)</span> or their stereographic projections in <span class="process-math">\(\extC\text{.}\)</span></p></li>
-<li id="li-371"><p id="p-derived-li-371">Explain why <span class="process-math">\(\triangle A'B'C'\)</span> has the same area as <span class="process-math">\(\triangle ABC\text{,}\)</span> even though the two triangles are not necessarily congruent! (Note that the interior of <span class="process-math">\(\triangle A'B'C'\)</span> is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point <span class="process-math">\(\infty\text{.}\)</span>) Hint: What does part (a) of this problem imply about the relationship between points <span class="process-math">\(X\)</span> and <span class="process-math">\(X'\)</span> on <span class="process-math">\(S^2\)</span> for <span class="process-math">\(X=A,B,C\text{?}\)</span></p></li>
-<li id="li-372"><p id="p-derived-li-372">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="" class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math">
+<li id="li-370"><div class="para" id="p-derived-li-370">Explain why <span class="process-math">\(A,A'\)</span> are endpoints of the same diameter, that is, endpoints of a diameter of <span class="process-math">\(S^2\)</span> or their stereographic projections in <span class="process-math">\(\extC\text{.}\)</span>
+</div></li>
+<li id="li-371"><div class="para" id="p-derived-li-371">Explain why <span class="process-math">\(\triangle A'B'C'\)</span> has the same area as <span class="process-math">\(\triangle ABC\text{,}\)</span> even though the two triangles are not necessarily congruent! (Note that the interior of <span class="process-math">\(\triangle A'B'C'\)</span> is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point <span class="process-math">\(\infty\text{.}\)</span>) Hint: What does part (a) of this problem imply about the relationship between points <span class="process-math">\(X\)</span> and <span class="process-math">\(X'\)</span> on <span class="process-math">\(S^2\)</span> for <span class="process-math">\(X=A,B,C\text{?}\)</span>
+</div></li>
+<li id="li-372"><div class="para" id="p-derived-li-372">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="" class="xref" data-knowl="./knowl/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_triangle_area_fig.html">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 ABC).
 \end{equation*}
-</div>Suggestion: Decompose <span class="process-math">\(R\)</span> using overlapping 2-gons.</p></li>
-<li id="li-373"><p id="p-derived-li-373">Let <span class="process-math">\(R'\)</span> denote the exterior of the region <span class="process-math">\(R\text{,}\)</span> that is, <span class="process-math">\(R'=\extC\setminus R\text{.}\)</span> Explain why the area of <span class="process-math">\(R'\)</span> is<div class="displaymath process-math">
+</div>Suggestion: Decompose <span class="process-math">\(R\)</span> using overlapping 2-gons.</div></li>
+<li id="li-373"><div class="para" id="p-derived-li-373">Let <span class="process-math">\(R'\)</span> denote the exterior of the region <span class="process-math">\(R\text{,}\)</span> that is, <span class="process-math">\(R'=\extC\setminus R\text{.}\)</span> Explain why the area of <span class="process-math">\(R'\)</span> is<div class="displaymath process-math">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 A'B'C').
 \end{equation*}
-</div>Suggestion: Decompose <span class="process-math">\(R'\)</span> into overlapping 2-gons.</p></li>
-<li id="li-374"><p id="p-derived-li-374">Explain why the area of elliptic triangle <span class="process-math">\(\triangle ABC\)</span> is<div class="displaymath process-math" id="elliptictrianglearea">
+</div>Suggestion: Decompose <span class="process-math">\(R'\)</span> into overlapping 2-gons.</div></li>
+<li id="li-374"><div class="para" id="p-derived-li-374">Explain why the area of elliptic triangle <span class="process-math">\(\triangle ABC\)</span> is<div class="displaymath process-math" id="elliptictrianglearea">
 \begin{equation}
 \text{Area}(\triangle
 ABC)= (\angle A +\angle B + \angle
 C)-\pi.\tag{3.4.13}
 \end{equation}
-</div></p></li>
+</div>
+</div></li>
 </ol>
-<p class="continuation"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/elliptic_triangle_area.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure></p></article>
+<div class="para"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/elliptic_triangle_area.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+</div></article>
 </div>
 </div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-13.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-15.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

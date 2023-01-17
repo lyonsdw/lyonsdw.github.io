@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-01T15:36:27-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,45 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="groups_extra_exer_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="algeom_text.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="geomdefsect.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -92,78 +216,209 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groups_extra_exer_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="algeom_text.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="geomdefsect.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groups_extra_exer_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="algeom_text.html" title="Up">Up</a><a class="next-button button toolbar-item" href="geomdefsect.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="biography-1.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
+<li>
+<div class="toc-item"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-5" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-6" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#exercises-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-7" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-8" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-9" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-11" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#exercises-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link active">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13" class="internal">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Stereographic projection</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-12" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-13" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#exercises-3" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="geometry_chapter"><h2 class="heading">
+<li>
+<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-4.html#subsection-14" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-15" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Facts</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-16" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-17" class="internal"><span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#exercises-4" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-18" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-19" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-21" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-22" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-23" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-24" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-25" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#exercises-5" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupdefsection.html#subsection-26" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="groupdefsection.html#exercises-6" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#subsection-27" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#exercises-7" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-8.html#subsection-28" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-8.html#exercises-8" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-29" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-30" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#exercises-9" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="groups_extra_exer_section.html#exercises-10" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-32" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-33" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#exercises-11" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-12.html#subsection-34" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-35" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Cross ratio</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-36" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#normalformssubsect" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Normal forms</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-38" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Steiner circles</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#exercises-12" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-13.html#subsection-39" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-40" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-41" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-42" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-43" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#exercises-13" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-44" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-47" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-48" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-49" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#exercises-14" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-15.html#subsection-50" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-51" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-52" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-53" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#exercises-15" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="geometry_extra_exer_section.html#exercises-16" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li><div class="toc-item"><a href="references-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="references-3.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="geometry_chapter"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Geometries</span>
 </h2>
-<section class="introduction" id="introduction-9"></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-9"> </section><nav class="summary-links"><ul>
 <li><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></li>
 <li><a href="section-12.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></li>
 <li><a href="section-13.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></li>
 <li><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></li>
 <li><a href="section-15.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></li>
 <li><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></li>
-</ul></nav></section></div></main>
+</ul></nav></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="groups_extra_exer_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="geomdefsect.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

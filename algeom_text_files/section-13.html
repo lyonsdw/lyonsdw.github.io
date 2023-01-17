@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-01T15:36:28-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,45 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="_static/runtime.dae47fcea5a0b194.bundle.js"></script><script type="text/javascript" src="_static/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="_static/runestone.61f83a67b708750a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="_static/runestone.d062db89aaf1dddd.css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-12.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="elliptic_geometry_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -92,125 +216,254 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-12.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="elliptic_geometry_section.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-12.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="geometry_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="elliptic_geometry_section.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1" class="internal">About the author</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="biography-1.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection" class="internal">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect" class="internal">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Equivalence Relations</a></li>
+<li>
+<div class="toc-item"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-5" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-6" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#exercises-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupintrosection.html" data-scroll="groupintrosection" class="internal">Examples of groups</a></li>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection" class="internal">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section" class="internal">Subgroups and cosets</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Group homomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-7" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-8" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-9" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#subsection-11" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="quaternionsection.html#exercises-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect" class="internal">Geometries and models</a></li>
-<li><a href="section-12.html" data-scroll="section-12" class="internal">Möbius geometry</a></li>
-<li><a href="section-13.html" data-scroll="section-13" class="active">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section" class="internal">Elliptic geometry</a></li>
-<li><a href="section-15.html" data-scroll="section-15" class="internal">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section" class="internal">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Stereographic projection</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-12" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-13" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#exercises-3" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2" class="internal"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3" class="internal"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-13"><h2 class="heading hide-type">
+<li>
+<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-4.html#subsection-14" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-15" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Facts</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-16" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#subsection-17" class="internal"><span class="codenumber">1.4.4</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html#exercises-4" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-18" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-19" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-21" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-22" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-23" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-24" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-25" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#exercises-5" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupdefsection.html#subsection-26" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="groupdefsection.html#exercises-6" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#subsection-27" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#exercises-7" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-8.html#subsection-28" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-8.html#exercises-8" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-29" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-30" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#exercises-9" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="groups_extra_exer_section.html#exercises-10" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-32" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-33" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#exercises-11" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-12.html#subsection-34" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-35" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Cross ratio</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-36" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#normalformssubsect" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Normal forms</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-38" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Steiner circles</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#exercises-12" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-13.html#subsection-39" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-40" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-41" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-42" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-43" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#exercises-13" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-44" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-47" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-48" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-49" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#exercises-14" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-15.html#subsection-50" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-51" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-52" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-53" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#exercises-15" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="geometry_extra_exer_section.html#exercises-16" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li><div class="toc-item"><a href="references-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="references-3.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-13"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span>
 </h2>
-<section class="introduction" id="introduction-13"><p id="p-438">Before the discovery of hyperbolic geometry, it was believed that Euclidean geometry was the only possible geometry of the plane. In fact, hyperbolic geometry arose as a byproduct of efforts to prove that there was no alternative to Euclidean geometry. In this section, we present a Kleinian version of hyperbolic geometry.</p>
-<article class="definition definition-like" id="definition-23"><h3 class="heading">
+<section class="introduction" id="introduction-13"><div class="para" id="p-438">Before the discovery of hyperbolic geometry, it was believed that Euclidean geometry was the only possible geometry of the plane. In fact, hyperbolic geometry arose as a byproduct of efforts to prove that there was no alternative to Euclidean geometry. In this section, we present a Kleinian version of hyperbolic geometry.</div> <article class="definition definition-like" id="definition-23"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h3>
-<p id="p-439">Let <span class="process-math">\(\D=\{z\colon |z|\lt
-1\}\)</span> denote the open unit disk in the complex plane. The <dfn class="terminology">hyperbolic group</dfn>, denoted <span class="process-math">\(\H\)</span>, is the subgroup of the Möbius group <span class="process-math">\(\M\)</span> of transformations that map <span class="process-math">\(\D\)</span> onto itself. The pair <span class="process-math">\((\D,\H)\)</span> is the <dfn class="terminology">(Poincaré) disk model</dfn> of hyperbolic geometry.</p></article><p id="p-440"><em class="alert">Comments on terminology:</em> Beware of the two different meanings of the adjective "hyperbolic". To say that a Möbius transformation is hyperbolic means that it is conjugate to a homothety (see <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a>). That is not the same thing as an element of the group of hyperbolic transformations.</p></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<div class="para" id="p-439">Let <span class="process-math">\(\D=\{z\colon |z|\lt
+1\}\)</span> denote the open unit disk in the complex plane. The <dfn class="terminology">hyperbolic group</dfn>, denoted <span class="process-math">\(\H\)</span>, is the subgroup of the Möbius group <span class="process-math">\(\M\)</span> of transformations that map <span class="process-math">\(\D\)</span> onto itself. The pair <span class="process-math">\((\D,\H)\)</span> is the <dfn class="terminology">(Poincaré) disk model</dfn> of hyperbolic geometry.</div></article> <div class="para" id="p-440">
+<em class="alert">Comments on terminology:</em> Beware of the two different meanings of the adjective "hyperbolic". To say that a Möbius transformation is hyperbolic means that it is conjugate to a homothety (see <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a>). That is not the same thing as an element of the group of hyperbolic transformations.</div></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span>
 </h3>
-<p id="p-441">Our first task is to characterize transformations in the group <span class="process-math">\(\H\text{.}\)</span> We begin with an observation about Möbius transformations that map one "side" of a cline to itself. This is pertinent because the disk <span class="process-math">\(\D\)</span> is the "inside" of the cline which is the unit circle. It will be useful to start with a general case.</p>
-<p id="p-442">Any cline <span class="process-math">\(C\)</span> divides the extended plane into two regions. If <span class="process-math">\(C\)</span> is a Euclidean circle, we might called these regions the "inside" and the "outside" of <span class="process-math">\(C\text{.}\)</span> If <span class="process-math">\(C\)</span> is a Euclidean straight line, we simply have one side and the other of <span class="process-math">\(C\text{.}\)</span></p>
+<div class="para" id="p-441">Our first task is to characterize transformations in the group <span class="process-math">\(\H\text{.}\)</span> We begin with an observation about Möbius transformations that map one "side" of a cline to itself. This is pertinent because the disk <span class="process-math">\(\D\)</span> is the "inside" of the cline which is the unit circle. It will be useful to start with a general case.</div>
+<div class="para" id="p-442">Any cline <span class="process-math">\(C\)</span> divides the extended plane into two regions. If <span class="process-math">\(C\)</span> is a Euclidean circle, we might called these regions the "inside" and the "outside" of <span class="process-math">\(C\text{.}\)</span> If <span class="process-math">\(C\)</span> is a Euclidean straight line, we simply have one side and the other of <span class="process-math">\(C\text{.}\)</span>
+</div>
 <article class="proposition theorem-like" id="transpreservesdiskprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Möbius transformations that map one side of a cline to itself.</span>
 </h4>
-<p id="p-443">Let <span class="process-math">\(C\)</span> be a cline, and let <span class="process-math">\(D,E\)</span> be the two disjoint regions of <span class="process-math">\(\extC \setminus C\text{.}\)</span> Let <span class="process-math">\(T\)</span> be a Möbius transformation that maps <span class="process-math">\(D\)</span> onto itself. Then <span class="process-math">\(T\)</span> also maps <span class="process-math">\(E\)</span> onto itself, and <span class="process-math">\(T\)</span> maps <span class="process-math">\(C\)</span> onto itself.</p></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof">Sketch: Suppose that <span class="process-math">\(T\)</span> maps <span class="process-math">\(D\)</span> onto itself. The "other side" of <span class="process-math">\(C\)</span> is the set of points that are symmetric, with respect to <span class="process-math">\(C\text{,}\)</span> to the points in <span class="process-math">\(D\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.19">Proposition 3.2.19</a>, <span class="process-math">\(T\)</span> maps symmetric points to symmetric points, so <span class="process-math">\(T\)</span> maps <span class="process-math">\(E\)</span> into itself. It is easy to check that, in fact, <span class="process-math">\(T\)</span> maps <span class="process-math">\(E\)</span><em class="emphasis">onto</em> itself. By elimination, it must be that <span class="process-math">\(T\)</span> maps <span class="process-math">\(C\)</span> onto itself.</article></div>
+<div class="para" id="p-443">Let <span class="process-math">\(C\)</span> be a cline, and let <span class="process-math">\(D,E\)</span> be the two disjoint regions of <span class="process-math">\(\extC \setminus C\text{.}\)</span> Let <span class="process-math">\(T\)</span> be a Möbius transformation that maps <span class="process-math">\(D\)</span> onto itself. Then <span class="process-math">\(T\)</span> also maps <span class="process-math">\(E\)</span> onto itself, and <span class="process-math">\(T\)</span> maps <span class="process-math">\(C\)</span> onto itself.</div></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof">Sketch: Suppose that <span class="process-math">\(T\)</span> maps <span class="process-math">\(D\)</span> onto itself. The "other side" of <span class="process-math">\(C\)</span> is the set of points that are symmetric, with respect to <span class="process-math">\(C\text{,}\)</span> to the points in <span class="process-math">\(D\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.19">Proposition 3.2.19</a>, <span class="process-math">\(T\)</span> maps symmetric points to symmetric points, so <span class="process-math">\(T\)</span> maps <span class="process-math">\(E\)</span> into itself. It is easy to check that, in fact, <span class="process-math">\(T\)</span> maps <span class="process-math">\(E\)</span> <em class="emphasis">onto</em> itself. By elimination, it must be that <span class="process-math">\(T\)</span> maps <span class="process-math">\(C\)</span> onto itself.</article></div>
 <article class="exercise exercise-like" id="transpreservesdiskpropexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-transpreservesdiskpropexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-transpreservesdiskpropexer"><article class="exercise exercise-like"><p id="p-444">Complete the sketch of the proof of <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a>.</p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-transpreservesdiskpropexer"><article class="exercise exercise-like"><div class="para" id="p-444">Complete the sketch of the proof of <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a>.</div></article></div>
 <article class="corollary theorem-like" id="hyperbolictransfixunitcirc"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h4>
-<p id="p-446">If <span class="process-math">\(T\in
-\H\text{,}\)</span> then <span class="process-math">\(T\)</span> maps the unit circle onto itself. </p></article><p id="p-447">Given <span class="process-math">\(T\in \H\text{,}\)</span> let <span class="process-math">\(z_0\in\D\)</span> be the point that <span class="process-math">\(T\)</span> maps to <span class="process-math">\(0\text{.}\)</span> It must be that <span class="process-math">\(T\)</span> maps the symmetric point <span class="process-math">\(1/z_0^\ast\)</span> to <span class="process-math">\(\infty\text{.}\)</span> Let <span class="process-math">\(z_1\)</span> be the point that <span class="process-math">\(T\)</span> maps to <span class="process-math">\(1\text{.}\)</span> Then <span class="process-math">\(T\)</span> has the form (see <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a>)</p>
-<div class="displaymath process-math">
+<div class="para" id="p-446">If <span class="process-math">\(T\in
+\H\text{,}\)</span> then <span class="process-math">\(T\)</span> maps the unit circle onto itself. </div></article><div class="para logical" id="p-447">
+<div class="para">Given <span class="process-math">\(T\in \H\text{,}\)</span> let <span class="process-math">\(z_0\in\D\)</span> be the point that <span class="process-math">\(T\)</span> maps to <span class="process-math">\(0\text{.}\)</span> It must be that <span class="process-math">\(T\)</span> maps the symmetric point <span class="process-math">\(1/z_0^\ast\)</span> to <span class="process-math">\(\infty\text{.}\)</span> Let <span class="process-math">\(z_1\)</span> be the point that <span class="process-math">\(T\)</span> maps to <span class="process-math">\(1\text{.}\)</span> Then <span class="process-math">\(T\)</span> has the form (see <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a>)</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/mob10inftyform.html ./knowl/diskhypgptrans0inftyform.html ./knowl/diskhypgptranssu11form.html ./knowl/hyperbolictransformulaexer.html">
 \begin{equation*}
 Tz =
 \frac{z-z_0}{z-1/z_0^\ast}\frac{z_1-1/z_0^\ast}{z_1-z_0}.
 \end{equation*}
 </div>
-<p class="continuation">Multiplying top and bottom by <span class="process-math">\(-z_0^\ast\text{,}\)</span> and setting <span class="process-math">\(\alpha=-z_0^\ast \frac{z_1-1/z_0^\ast}{z_1-z_0}\text{,}\)</span> we have</p>
-<div class="displaymath process-math">
+<div class="para">Multiplying top and bottom by <span class="process-math">\(-z_0^\ast\text{,}\)</span> and setting <span class="process-math">\(\alpha=-z_0^\ast \frac{z_1-1/z_0^\ast}{z_1-z_0}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/mob10inftyform.html ./knowl/diskhypgptrans0inftyform.html ./knowl/diskhypgptranssu11form.html ./knowl/hyperbolictransformulaexer.html">
 \begin{equation*}
 Tz=\alpha\frac{z-z_0}{1-z_0^\ast z}.
 \end{equation*}
 </div>
-<p class="continuation">A straightforward derivation shows that <span class="process-math">\(|\alpha|=1\text{,}\)</span> so that we have <a href="" class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> below. Another computation establishes an alternative formula <a href="" class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> for <span class="process-math">\(T\in \H\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaexer.html" title="Exercise 3.3.6.1">Exercise 3.3.6.1</a>.</p>
+<div class="para">A straightforward derivation shows that <span class="process-math">\(|\alpha|=1\text{,}\)</span> so that we have <a href="" class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> below. Another computation establishes an alternative formula <a href="" class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> for <span class="process-math">\(T\in \H\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaexer.html" title="Exercise 3.3.6.1">Exercise 3.3.6.1</a>.</div>
+</div>
 <article class="proposition theorem-like" id="hyperbolictransformulaprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h4>
-<p id="p-448">A Möbius transformation <span class="process-math">\(T\)</span> is in <span class="process-math">\(\H\)</span> if an only if <span class="process-math">\(T\)</span> can be written in the form</p>
+<div class="para logical" id="p-448">
+<div class="para">A Möbius transformation <span class="process-math">\(T\)</span> is in <span class="process-math">\(\H\)</span> if an only if <span class="process-math">\(T\)</span> can be written in the form</div>
 <div class="displaymath process-math" id="diskhypgptrans0inftyform">
 \begin{equation}
 Tz=e^{it}\frac{z-z_0}{1-z_0^\ast z}\tag{3.3.1}
 \end{equation}
 </div>
-<p class="continuation">for some <span class="process-math">\(t\in \R\)</span> and <span class="process-math">\(z_0\in \D\text{.}\)</span> Alternatively, we have <span class="process-math">\(T\in \H\)</span> if and only if <span class="process-math">\(T\)</span> can be written in the form</p>
+<div class="para">for some <span class="process-math">\(t\in \R\)</span> and <span class="process-math">\(z_0\in \D\text{.}\)</span> Alternatively, we have <span class="process-math">\(T\in \H\)</span> if and only if <span class="process-math">\(T\)</span> can be written in the form</div>
 <div class="displaymath process-math" id="diskhypgptranssu11form">
 \begin{equation}
 Tz=\frac{az+b}{b^\ast
 z+a^\ast}\tag{3.3.2}
 \end{equation}
 </div>
-<p class="continuation">for some <span class="process-math">\(a,b\in \C\)</span> such that <span class="process-math">\(|a|^2-|b|^2=1\text{.}\)</span></p></article></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<div class="para">for some <span class="process-math">\(a,b\in \C\)</span> such that <span class="process-math">\(|a|^2-|b|^2=1\text{.}\)</span>
+</div>
+</div></article></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span>
 </h3>
-<p id="p-449">The clines of Möbius geometry are classified into several types in hyperbolic geometry, as summarized in <a href="" class="xref" data-knowl="./knowl/hyperbolicclinesummary.html" title="Table 3.3.6: Clines in hyperbolic geometry">Table 3.3.6</a>.</p>
+<div class="para" id="p-449">The clines of Möbius geometry are classified into several types in hyperbolic geometry, as summarized in <a href="" class="xref" data-knowl="./knowl/hyperbolicclinesummary.html" title="Table 3.3.6: Clines in hyperbolic geometry">Table 3.3.6</a>.</div>
 <figure class="table table-like" id="hyperbolicclinesummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.6<span class="period">.</span></span><span class="space"> </span>Clines in hyperbolic geometry</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r1 l1 t1 lines">hyperbolic curve type</td>
@@ -235,29 +488,31 @@ z+a^\ast}\tag{3.3.2}
 </tr>
 </table></div></figure><article class="exercise exercise-like" id="hyplinewith0isdiam"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyplinewith0isdiam"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyplinewith0isdiam"><article class="exercise exercise-like"><p id="p-450">Show that a hyperbolic straight line that contains 0 must be a diameter of the unit circle.</p>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like">Prove the contrapositive: assume <span class="process-math">\(C\)</span> is a hyperbolic straight line that is also a Euclidean circle, and intersects the unit circle orthogonally at <span class="process-math">\(p\text{.}\)</span> Give an argument why <span class="process-math">\(C\)</span> can <em class="emphasis">not</em> contain 0.</div></div></article></div></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyplinewith0isdiam"><article class="exercise exercise-like"><div class="para" id="p-450">Show that a hyperbolic straight line that contains 0 must be a diameter of the unit circle.</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like">Prove the contrapositive: assume <span class="process-math">\(C\)</span> is a hyperbolic straight line that is also a Euclidean circle, and intersects the unit circle orthogonally at <span class="process-math">\(p\text{.}\)</span> Give an argument why <span class="process-math">\(C\)</span> can <em class="emphasis">not</em> contain 0.</div></div></article></div></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span>
 </h3>
-<p id="p-452">In this subsection, we follow the development of normal forms for general Möbius transformations given in <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a> to derive normal forms and graphical interpretations for transformations in the hyperbolic group. We begin with an observation about fixed points of a Möbius transformation that maps a cline to itself.</p>
+<div class="para" id="p-452">In this subsection, we follow the development of normal forms for general Möbius transformations given in <a href="section-12.html#normalformssubsect" class="internal" title="Subsection 3.2.4: Normal forms">Subsection 3.2.4</a> to derive normal forms and graphical interpretations for transformations in the hyperbolic group. We begin with an observation about fixed points of a Möbius transformation that maps a cline to itself.</div>
 <article class="lemma theorem-like" id="hyperbolicfixptlemma"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
 </h4>Let <span class="process-math">\(T\in \M\)</span> and let <span class="process-math">\(C\)</span> be a cline. If <span class="process-math">\(Tz=z\text{,}\)</span> then <span class="process-math">\(T(z^{\ast C})=z^{\ast C}\text{.}\)</span></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof">Apply <a href="" class="xref" data-knowl="./knowl/symmptinvariantprop.html" title="Proposition 3.2.19">Proposition 3.2.19</a>.</article></div>
-<p id="p-453">Now let <span class="process-math">\(T\)</span> be a non-identity element of <span class="process-math">\(\H\text{.}\)</span> The fact that <span class="process-math">\(T\)</span> maps the unit circle to itself implies that there are exactly three possible cases for fixed points of <span class="process-math">\(T\text{.}\)</span></p>
+<div class="para logical" id="p-453">
+<div class="para">Now let <span class="process-math">\(T\)</span> be a non-identity element of <span class="process-math">\(\H\text{.}\)</span> The fact that <span class="process-math">\(T\)</span> maps the unit circle to itself implies that there are exactly three possible cases for fixed points of <span class="process-math">\(T\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-339"><p id="p-derived-li-339">There is a pair of fixed points <span class="process-math">\(p,q\)</span>  with <span class="process-math">\(|p|\lt 1\text{,}\)</span> <span class="process-math">\(|q|\gt 1\text{,}\)</span> and <span class="process-math">\(q=\frac{1}{p^\ast}\text{,}\)</span> that is, <span class="process-math">\(p,q\)</span> are a pair of symmetric points (with respect to the unit circle) that do not lie on the unit circle.</p></li>
-<li id="li-340"><p id="p-derived-li-340">There is a pair of fixed points that lie on the unit circle.</p></li>
-<li id="li-341"><p id="p-derived-li-341">There is a single fixed point that lies on the unit circle.</p></li>
+<li id="li-339"><div class="para" id="p-derived-li-339">There is a pair of fixed points <span class="process-math">\(p,q\)</span>  with <span class="process-math">\(|p|\lt 1\text{,}\)</span> <span class="process-math">\(|q|\gt 1\text{,}\)</span> and <span class="process-math">\(q=\frac{1}{p^\ast}\text{,}\)</span> that is, <span class="process-math">\(p,q\)</span> are a pair of symmetric points (with respect to the unit circle) that do not lie on the unit circle.</div></li>
+<li id="li-340"><div class="para" id="p-derived-li-340">There is a pair of fixed points that lie on the unit circle.</div></li>
+<li id="li-341"><div class="para" id="p-derived-li-341">There is a single fixed point that lies on the unit circle.</div></li>
 </ol>
+</div>
 <article class="exercise exercise-like" id="hyperbolicfixptcaseexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyperbolicfixptcaseexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicfixptcaseexer"><article class="exercise exercise-like">Give an argument to justify the three cases above.</article></div>
 <figure class="figure figure-like" id="hyp_transf_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/hyperbolic_transformations.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.10<span class="period">.</span></span><span class="space"> </span>Three types of hyperbolic transformations</figcaption></figure><p id="p-455">For cases 1 and 2 above, the map <span class="process-math">\(T\)</span> acting on the <span class="process-math">\(z\)</span>-plane is conjugate to the map <span class="process-math">\(U=S\circ T\circ
-S^{-1}\)</span> acting on the <span class="process-math">\(w\)</span>-plane by <span class="process-math">\(Uw=\lambda w\text{,}\)</span> for some nonzero <span class="process-math">\(\lambda\in\C\text{,}\)</span> via the map <span class="process-math">\(w=Sz=\frac{z-p}{z-q}\text{.}\)</span> In case 1, the map <span class="process-math">\(S\)</span> takes the unit circle to some polar circle, say <span class="process-math">\(C\text{,}\)</span> so <span class="process-math">\(U\)</span> must map <span class="process-math">\(C\)</span> to itself. It follows that <span class="process-math">\(|\lambda|=1\text{,}\)</span> so the Möbius normal form type for <span class="process-math">\(T\)</span> is elliptic.  The action of <span class="process-math">\(T\)</span> is a rotation about Steiner circles of the second kind (hyperbolic circles) with respect to the fixed points <span class="process-math">\(p,q\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">hyperbolic rotation</dfn>.  See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</p>
-<p id="p-456">For case 2, the map <span class="process-math">\(w=Sz=\frac{z-p}{z-q}\)</span> takes the unit circle to a straight line, say <span class="process-math">\(L\text{,}\)</span> through the origin, so <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> must map <span class="process-math">\(L\)</span> to itself. It follows that <span class="process-math">\(\lambda\)</span> is real. Since <span class="process-math">\(S\)</span> maps <span class="process-math">\(\D\)</span> to one of the two half planes on either side of <span class="process-math">\(L\text{,}\)</span> the map <span class="process-math">\(U\)</span> must take this half plane to itself. If follows that <span class="process-math">\(\lambda\)</span> must be a <em class="emphasis">positive</em> real number, so the Möbius normal form type for <span class="process-math">\(T\)</span> is hyperbolic.  The action of <span class="process-math">\(T\)</span> is a flow about Steiner circles of the first kind (hypercycles and one hyperbolic straight line) with respect to the fixed points <span class="process-math">\(p,q\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">hyperbolic translation</dfn>. See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</p>
-<p id="p-457">For case 3, the conjugating map <span class="process-math">\(w=Sz=\frac{1}{z-p}\)</span> takes <span class="process-math">\(T\)</span> to   <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> of the form <span class="process-math">\(Uw=w+\beta\)</span> for some <span class="process-math">\(\beta\neq 0\text{.}\)</span> The Möbius normal form type for <span class="process-math">\(T\)</span> is parabolic. The action of <span class="process-math">\(T\)</span> is a flow along degenerate Steiner circles (horocycles) tangent to the unit circle at <span class="process-math">\(p\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">parallel displacement</dfn>. See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</p>
-<p id="p-458">This completes the list of transformation types for the hyperbolic group. See <a href="" class="xref" data-knowl="./knowl/hyperbolictransfsummary.html" title="Table 3.3.11: Normal forms for the hyperbolic group">Table 3.3.11</a> for a summary.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.10<span class="period">.</span></span><span class="space"> </span>Three types of hyperbolic transformations</figcaption></figure><div class="para" id="p-455">For cases 1 and 2 above, the map <span class="process-math">\(T\)</span> acting on the <span class="process-math">\(z\)</span>-plane is conjugate to the map <span class="process-math">\(U=S\circ T\circ
+S^{-1}\)</span> acting on the <span class="process-math">\(w\)</span>-plane by <span class="process-math">\(Uw=\lambda w\text{,}\)</span> for some nonzero <span class="process-math">\(\lambda\in\C\text{,}\)</span> via the map <span class="process-math">\(w=Sz=\frac{z-p}{z-q}\text{.}\)</span> In case 1, the map <span class="process-math">\(S\)</span> takes the unit circle to some polar circle, say <span class="process-math">\(C\text{,}\)</span> so <span class="process-math">\(U\)</span> must map <span class="process-math">\(C\)</span> to itself. It follows that <span class="process-math">\(|\lambda|=1\text{,}\)</span> so the Möbius normal form type for <span class="process-math">\(T\)</span> is elliptic.  The action of <span class="process-math">\(T\)</span> is a rotation about Steiner circles of the second kind (hyperbolic circles) with respect to the fixed points <span class="process-math">\(p,q\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">hyperbolic rotation</dfn>.  See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</div>
+<div class="para" id="p-456">For case 2, the map <span class="process-math">\(w=Sz=\frac{z-p}{z-q}\)</span> takes the unit circle to a straight line, say <span class="process-math">\(L\text{,}\)</span> through the origin, so <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> must map <span class="process-math">\(L\)</span> to itself. It follows that <span class="process-math">\(\lambda\)</span> is real. Since <span class="process-math">\(S\)</span> maps <span class="process-math">\(\D\)</span> to one of the two half planes on either side of <span class="process-math">\(L\text{,}\)</span> the map <span class="process-math">\(U\)</span> must take this half plane to itself. If follows that <span class="process-math">\(\lambda\)</span> must be a <em class="emphasis">positive</em> real number, so the Möbius normal form type for <span class="process-math">\(T\)</span> is hyperbolic.  The action of <span class="process-math">\(T\)</span> is a flow about Steiner circles of the first kind (hypercycles and one hyperbolic straight line) with respect to the fixed points <span class="process-math">\(p,q\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">hyperbolic translation</dfn>. See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</div>
+<div class="para" id="p-457">For case 3, the conjugating map <span class="process-math">\(w=Sz=\frac{1}{z-p}\)</span> takes <span class="process-math">\(T\)</span> to   <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> of the form <span class="process-math">\(Uw=w+\beta\)</span> for some <span class="process-math">\(\beta\neq 0\text{.}\)</span> The Möbius normal form type for <span class="process-math">\(T\)</span> is parabolic. The action of <span class="process-math">\(T\)</span> is a flow along degenerate Steiner circles (horocycles) tangent to the unit circle at <span class="process-math">\(p\text{.}\)</span> A transformation <span class="process-math">\(T\in \H\)</span> of this type is called a <dfn class="terminology">parallel displacement</dfn>. See <a href="" class="xref" data-knowl="./knowl/hyp_transf_fig.html" title="Figure 3.3.10">Figure 3.3.10</a>.</div>
+<div class="para" id="p-458">This completes the list of transformation types for the hyperbolic group. See <a href="" class="xref" data-knowl="./knowl/hyperbolictransfsummary.html" title="Table 3.3.11: Normal forms for the hyperbolic group">Table 3.3.11</a> for a summary.</div>
 <figure class="table table-like" id="hyperbolictransfsummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.11<span class="period">.</span></span><span class="space"> </span>Normal forms for the hyperbolic group</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r1 l1 t1 lines">hyperbolic transformation type</td>
@@ -288,27 +543,32 @@ S^{-1}\)</span> acting on the <span class="process-math">\(w\)</span>-plane by <
 <span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span>
 </h3>
 <figure class="figure figure-like" id="hyperbolic_distance_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_distance2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.12<span class="period">.</span></span><span class="space"> </span>Constructing the hyperbolic straight line containing two points <span class="process-math">\(z_1,z_2\)</span></figcaption></figure><p id="p-459">Let <span class="process-math">\(z_1,z_2\)</span> be distinct points in <span class="process-math">\(\D\text{.}\)</span> Let <span class="process-math">\(T\in\H\)</span> be the transformation that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to  u\gt 0\text{.}\)</span> Then <span class="process-math">\(T^{-1}(\R)\)</span> is a hyperbolic straight line that contains <span class="process-math">\(z_1,z_2\text{.}\)</span> Let <span class="process-math">\(q_1=T^{-1}(-1)\)</span> and <span class="process-math">\(q_2=T^{-1}(1)\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolic_distance_fig.html" title="Figure 3.3.12">Figure 3.3.12</a>.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.12<span class="period">.</span></span><span class="space"> </span>Constructing the hyperbolic straight line containing two points <span class="process-math">\(z_1,z_2\)</span></figcaption></figure><div class="para" id="p-459">Let <span class="process-math">\(z_1,z_2\)</span> be distinct points in <span class="process-math">\(\D\text{.}\)</span> Let <span class="process-math">\(T\in\H\)</span> be the transformation that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to  u\gt 0\text{.}\)</span> Then <span class="process-math">\(T^{-1}(\R)\)</span> is a hyperbolic straight line that contains <span class="process-math">\(z_1,z_2\text{.}\)</span> Let <span class="process-math">\(q_1=T^{-1}(-1)\)</span> and <span class="process-math">\(q_2=T^{-1}(1)\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolic_distance_fig.html" title="Figure 3.3.12">Figure 3.3.12</a>.</div>
 <article class="exercise exercise-like" id="hyperbolicdisttransexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyperbolicdisttransexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdisttransexer"><article class="exercise exercise-like"><p id="p-460">Use <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaprop.html" title="Proposition 3.3.5">Proposition 3.3.5</a> to write a formula for the transformation <span class="process-math">\(T\)</span> in the previous paragraph.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdisttransexer"><article class="exercise exercise-like"><div class="para" id="p-460">Use <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaprop.html" title="Proposition 3.3.5">Proposition 3.3.5</a> to write a formula for the transformation <span class="process-math">\(T\)</span> in the previous paragraph.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><p id="p-461">Let <span class="process-math">\(Sz=\frac{z-z_1}{1-z_1^\ast z}\text{,}\)</span> let <span class="process-math">\(t=-\arg
-(Sz_2)\text{,}\)</span> and let <span class="process-math">\(Tz=e^{it}Sz\text{,}\)</span> so that we have <span class="process-math">\(Tz_1=0\)</span> and <span class="process-math">\(Tz_2=u\gt 0\text{.}\)</span> Because <span class="process-math">\(T\in \H\text{,}\)</span>  <span class="process-math">\(T\)</span> is determined by the two parameters <span class="process-math">\(z_1,t\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-461">Let <span class="process-math">\(Sz=\frac{z-z_1}{1-z_1^\ast z}\text{,}\)</span> let <span class="process-math">\(t=-\arg
+(Sz_2)\text{,}\)</span> and let <span class="process-math">\(Tz=e^{it}Sz\text{,}\)</span> so that we have <span class="process-math">\(Tz_1=0\)</span> and <span class="process-math">\(Tz_2=u\gt 0\text{.}\)</span> Because <span class="process-math">\(T\in \H\text{,}\)</span>  <span class="process-math">\(T\)</span> is determined by the two parameters <span class="process-math">\(z_1,t\text{.}\)</span>
+</div></div></div>
 </div></article></div>
-<p id="p-462">A simple calculation verifies that <span class="process-math">\((0,u,1,-1)=\frac{1+u}{1-u}\text{.}\)</span> By invariance of the cross ratio, we have <span class="process-math">\((z_1,z_2,q_2,q_1)=\frac{1+u}{1-u}\text{.}\)</span> For <span class="process-math">\(0\leq u\lt
-1\text{,}\)</span> we have</p>
+<div class="para logical" id="p-462">
+<div class="para">A simple calculation verifies that <span class="process-math">\((0,u,1,-1)=\frac{1+u}{1-u}\text{.}\)</span> By invariance of the cross ratio, we have <span class="process-math">\((z_1,z_2,q_2,q_1)=\frac{1+u}{1-u}\text{.}\)</span> For <span class="process-math">\(0\leq u\lt
+1\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 1\leq \frac{1+u}{1-u}\lt \infty
 \end{equation*}
 </div>
-<p class="continuation">with equality on the left if and only if <span class="process-math">\(u=0\text{.}\)</span></p>
+<div class="para">with equality on the left if and only if <span class="process-math">\(u=0\text{.}\)</span>
+</div>
+</div>
 <article class="exercise exercise-like" id="hyperbolicdistbasiccalcexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyperbolicdistbasiccalcexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.14</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdistbasiccalcexer"><article class="exercise exercise-like"><p id="p-463">Do the simple calculation mentioned above.</p>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-464">Use <a href="" class="xref" data-knowl="./knowl/crossratiofracform.html" title="Equation 3.2.12">(3.2.12)</a>.</p></div></div></article></div>
-<p id="p-466">Now, given any points <span class="process-math">\(z_1,z_2\)</span> in <span class="process-math">\(\D\text{,}\)</span> not necessarily distinct, define the quantity <span class="process-math">\(d(z_1,z_2)\)</span> by</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdistbasiccalcexer"><article class="exercise exercise-like"><div class="para" id="p-463">Do the simple calculation mentioned above.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-464">Use <a href="" class="xref" data-knowl="./knowl/crossratiofracform.html" title="Equation 3.2.12">(3.2.12)</a>.</div></div></div></article></div>
+<div class="para logical" id="p-466">
+<div class="para">Now, given any points <span class="process-math">\(z_1,z_2\)</span> in <span class="process-math">\(\D\text{,}\)</span> not necessarily distinct, define the quantity <span class="process-math">\(d(z_1,z_2)\)</span> by</div>
 <div class="displaymath process-math" id="hyperbolicdistdef">
 \begin{equation}
 d(z_1,z_2)=
@@ -316,202 +576,240 @@ d(z_1,z_2)=
 z_2 \\ 0 \amp z_1=z_2\end{array}\right.\tag{3.3.3}
 \end{equation}
 </div>
-<p class="continuation">where <span class="process-math">\(q_1,q_2\)</span> are the ideal points on the hyperbolic straight line connecting <span class="process-math">\(z_1,z_2\)</span> (with each <span class="process-math">\(q_i\)</span> at the <span class="process-math">\(z_i\)</span> end of the line) as described above, in the case <span class="process-math">\(z_1\neq z_2\text{.}\)</span> From the discussion above we have</p>
+<div class="para">where <span class="process-math">\(q_1,q_2\)</span> are the ideal points on the hyperbolic straight line connecting <span class="process-math">\(z_1,z_2\)</span> (with each <span class="process-math">\(q_i\)</span> at the <span class="process-math">\(z_i\)</span> end of the line) as described above, in the case <span class="process-math">\(z_1\neq z_2\text{.}\)</span> From the discussion above we have</div>
 <div class="displaymath process-math" id="disthyperbolicfrac">
 \begin{equation}
 d(z_1,z_2) = \ln\left(\frac{1+u}{1-u}\right)\tag{3.3.4}
 \end{equation}
 </div>
-<p class="continuation">where <span class="process-math">\(u=\left|\frac{z_2-z_1}{1-z_1^\ast z_2}\right|\text{.}\)</span></p>
+<div class="para">where <span class="process-math">\(u=\left|\frac{z_2-z_1}{1-z_1^\ast z_2}\right|\text{.}\)</span>
+</div>
+</div>
 <article class="exercise exercise-like" id="hyperbolicdistformexer2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyperbolicdistformexer2"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.15</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdistformexer2"><article class="exercise exercise-like"><p id="p-467">Justify the value of <span class="process-math">\(u\)</span> in <a href="" class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>.</p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperbolicdistformexer2"><article class="exercise exercise-like"><div class="para" id="p-467">Justify the value of <span class="process-math">\(u\)</span> in <a href="" class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>.</div></article></div>
 <article class="proposition theorem-like" id="hyperbolic_metric_is_invariant"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.16</span><span class="period">.</span>
 </h4>
-<p id="p-469">The function <span class="process-math">\(d\)</span> given by <a href="" class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> is invariant under the action of the hyperbolic group. That is, we have</p>
-<div class="displaymath process-math" id="men-34">
+<div class="para logical" id="p-469">
+<div class="para">The function <span class="process-math">\(d\)</span> given by <a href="" class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> is invariant under the action of the hyperbolic group. That is, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicdistdef.html" id="men-34">
 \begin{equation}
 d(z_1,z_2) = d(Tz_1,Tz_2)\tag{3.3.5}
 \end{equation}
 </div>
-<p class="continuation">for all <span class="process-math">\(z_1,z_2\in \D\)</span> and for all <span class="process-math">\(T\in\H\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-133"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-133"><h4 class="heading">
+<div class="para">for all <span class="process-math">\(z_1,z_2\in \D\)</span> and for all <span class="process-math">\(T\in\H\text{.}\)</span>
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-133"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-133"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.17</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><p id="p-470">Prove <a href="" class="xref" data-knowl="./knowl/hyperbolic_metric_is_invariant.html" title="Proposition 3.3.16">Proposition 3.3.16</a>.</p></article></div>
-<p id="p-472">The following Proposition shows that <span class="process-math">\(d\)</span> is a <em class="emphasis">metric</em> on hyperbolic space, and justifies referring to <span class="process-math">\(d(z_1,z_2)\)</span> as the <dfn class="terminology">(hyperbolic) distance</dfn> between the points <span class="process-math">\(z_1,z_2.\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><div class="para" id="p-470">Prove <a href="" class="xref" data-knowl="./knowl/hyperbolic_metric_is_invariant.html" title="Proposition 3.3.16">Proposition 3.3.16</a>.</div></article></div>
+<div class="para" id="p-472">The following Proposition shows that <span class="process-math">\(d\)</span> is a <em class="emphasis">metric</em> on hyperbolic space, and justifies referring to <span class="process-math">\(d(z_1,z_2)\)</span> as the <dfn class="terminology">(hyperbolic) distance</dfn> between the points <span class="process-math">\(z_1,z_2.\)</span>
+</div>
 <article class="proposition theorem-like" id="hyperbolicmetricprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.18</span><span class="period">.</span>
 </h4>
-<p id="p-473">The function <span class="process-math">\(d\)</span> given by <a href="" class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> defines a metric on <span class="process-math">\(\D\text{.}\)</span> That is, <span class="process-math">\(d\)</span> satisfies</p>
+<div class="para logical" id="p-473">
+<div class="para">The function <span class="process-math">\(d\)</span> given by <a href="" class="xref" data-knowl="./knowl/hyperbolicdistdef.html" title="Equation 3.3.3">(3.3.3)</a> defines a metric on <span class="process-math">\(\D\text{.}\)</span> That is, <span class="process-math">\(d\)</span> satisfies</div>
 <ol class="decimal">
-<li id="li-342"><p id="p-derived-li-342"><span class="process-math">\(d(z_1,z_2)\geq 0\text{,}\)</span> and <span class="process-math">\(d(z_1,z_2)=0\)</span> if and only if <span class="process-math">\(z_1=z_2\)</span></p></li>
-<li id="li-343"><p id="p-derived-li-343"><span class="process-math">\(\displaystyle d(z_1,z_2)=d(z_2,z_1)\)</span></p></li>
-<li id="li-344"><p id="p-derived-li-344"><span class="process-math">\(d(z_1,z_3)\leq d(z_1,z_2)+d(z_2,z_3)\)</span> (the triangle inequality)</p></li>
+<li id="li-342"><div class="para" id="p-derived-li-342">
+<span class="process-math">\(d(z_1,z_2)\geq 0\text{,}\)</span> and <span class="process-math">\(d(z_1,z_2)=0\)</span> if and only if <span class="process-math">\(z_1=z_2\)</span>
+</div></li>
+<li id="li-343"><div class="para" id="p-derived-li-343"><span class="process-math">\(\displaystyle d(z_1,z_2)=d(z_2,z_1)\)</span></div></li>
+<li id="li-344"><div class="para" id="p-derived-li-344">
+<span class="process-math">\(d(z_1,z_3)\leq d(z_1,z_2)+d(z_2,z_3)\)</span> (the triangle inequality)</div></li>
 </ol>
-<p class="continuation">for all <span class="process-math">\(z_1,z_2,z_3\)</span> in <span class="process-math">\(\D\text{.}\)</span></p></article><article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof">Property 1 follows immediately from <a href="" class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>. Property 2 is a simple calculation: just write down the cross ratio expressions for <span class="process-math">\(d(z_1,z_2)\)</span> and <span class="process-math">\(d(z_2,z_1)\)</span> and compare. The proof of Property 3 is outlined in exercise <a href="" class="xref" data-knowl="./knowl/hyperbolictriangleineqexer.html" title="Exercise 3.3.6.4: The triangle inequality for the hyperbolic metric">Exercise 3.3.6.4</a>.</article></div>
-<p id="p-474">Now let <span class="process-math">\(\gamma\)</span> be a curve parameterized by <span class="process-math">\(t\to z(t)=x(t)
+<div class="para">for all <span class="process-math">\(z_1,z_2,z_3\)</span> in <span class="process-math">\(\D\text{.}\)</span>
+</div>
+</div></article><article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof">Property 1 follows immediately from <a href="" class="xref" data-knowl="./knowl/disthyperbolicfrac.html" title="Equation 3.3.4">(3.3.4)</a>. Property 2 is a simple calculation: just write down the cross ratio expressions for <span class="process-math">\(d(z_1,z_2)\)</span> and <span class="process-math">\(d(z_2,z_1)\)</span> and compare. The proof of Property 3 is outlined in exercise <a href="" class="xref" data-knowl="./knowl/hyperbolictriangleineqexer.html" title="Exercise 3.3.6.4: The triangle inequality for the hyperbolic metric">Exercise 3.3.6.4</a>.</article></div>
+<div class="para logical" id="p-474">
+<div class="para">Now let <span class="process-math">\(\gamma\)</span> be a curve parameterized by <span class="process-math">\(t\to z(t)=x(t)
 + iy(t)\text{,}\)</span> where <span class="process-math">\(x(t),y(t)\)</span> are differentiable real-valued functions of the real parameter <span class="process-math">\(t\)</span> on an interval <span class="process-math">\(a\lt t\lt b\text{.}\)</span> Consider a short segment of <span class="process-math">\(\gamma\text{,}\)</span> say, on an interval <span class="process-math">\(t_0\leq t\leq
-t_1\text{.}\)</span> Let <span class="process-math">\(z_0=z(t_0)\)</span> and <span class="process-math">\(z_1=z(t_1)\text{.}\)</span> Then we have <span class="process-math">\(d(z(t_0),z(t_1))=\ln\left(\frac{1+u}{1-u}\right)\)</span> where <span class="process-math">\(u=\left|\frac{z_1-z_0}{1-z_0^\ast(z_1)}\right|\text{.}\)</span> The quantity <span class="process-math">\(|z_1-z_0|\)</span> is well-approximated by <span class="process-math">\(|z'(t_0)|dt\text{,}\)</span> where <span class="process-math">\(z'(t)=x'(t)+iy'(t)\)</span> and <span class="process-math">\(dt=t_1-t_0\text{.}\)</span> Thus, <span class="process-math">\(u\)</span> is well-approximated by <span class="process-math">\(\frac{|z'(t_0)|}{1-|z(t_0)|^2}\;dt\text{.}\)</span> The first order Taylor approximation for <span class="process-math">\(\ln((1+u)/(1-u))\)</span> is <span class="process-math">\(2u\text{.}\)</span> Putting this all together, we have the following.</p>
+t_1\text{.}\)</span> Let <span class="process-math">\(z_0=z(t_0)\)</span> and <span class="process-math">\(z_1=z(t_1)\text{.}\)</span> Then we have <span class="process-math">\(d(z(t_0),z(t_1))=\ln\left(\frac{1+u}{1-u}\right)\)</span> where <span class="process-math">\(u=\left|\frac{z_1-z_0}{1-z_0^\ast(z_1)}\right|\text{.}\)</span> The quantity <span class="process-math">\(|z_1-z_0|\)</span> is well-approximated by <span class="process-math">\(|z'(t_0)|dt\text{,}\)</span> where <span class="process-math">\(z'(t)=x'(t)+iy'(t)\)</span> and <span class="process-math">\(dt=t_1-t_0\text{.}\)</span> Thus, <span class="process-math">\(u\)</span> is well-approximated by <span class="process-math">\(\frac{|z'(t_0)|}{1-|z(t_0)|^2}\;dt\text{.}\)</span> The first order Taylor approximation for <span class="process-math">\(\ln((1+u)/(1-u))\)</span> is <span class="process-math">\(2u\text{.}\)</span> Putting this all together, we have the following.</div>
 <div class="displaymath process-math" id="hyperboliclengthformula">
 \begin{equation}
 \text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1-|z(t)|^2}\;dt\tag{3.3.6}
 \end{equation}
 </div>
+</div>
 <article class="exercise exercise-like" id="taylorseriesinvhyptanexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-taylorseriesinvhyptanexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.19</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-taylorseriesinvhyptanexer"><article class="exercise exercise-like"><p id="p-475">Show that the first order Taylor approximation of <span class="process-math">\(\ln((1+u)/(1-u))\)</span> is <span class="process-math">\(2u\text{.}\)</span></p></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-taylorseriesinvhyptanexer"><article class="exercise exercise-like"><div class="para" id="p-475">Show that the first order Taylor approximation of <span class="process-math">\(\ln((1+u)/(1-u))\)</span> is <span class="process-math">\(2u\text{.}\)</span>
+</div></article></div>
 <article class="exercise exercise-like" id="hyperboliccirclecircumexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hyperboliccirclecircumexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.20</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperboliccirclecircumexer"><article class="exercise exercise-like"><p id="p-477">Find the length of the hyperbolic circle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\lt 1\)</span> .</p></article></div>
-<p id="p-479">We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\D\text{,}\)</span> following the development in <a href="" class="xref" data-knowl="./knowl/henle_modern_geometries.html" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.  As a function of the two real variables <span class="process-math">\(r\)</span> and <span class="process-math">\(\theta\text{,}\)</span> the polar form expression <span class="process-math">\(z=re^{i\theta}\)</span> gives rise to the two parameterized curves <span class="process-math">\(r\to z_1(r)=re^{i\theta}\)</span> (where <span class="process-math">\(\theta\)</span> is constant) and <span class="process-math">\(\theta \to z_2(\theta) = re^{i\theta}\)</span> (where <span class="process-math">\(r\)</span> is constant). Using <span class="process-math">\(z_1'(r) =
-e^{i\theta}\)</span> and <span class="process-math">\(z_2'(\theta)=ire^{i\theta}\text{,}\)</span> the arc length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> for the two curves are the following.</p>
-<div class="displaymath process-math">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hyperboliccirclecircumexer"><article class="exercise exercise-like"><div class="para" id="p-477">Find the length of the hyperbolic circle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\lt 1\)</span> .</div></article></div>
+<div class="para logical" id="p-479">
+<div class="para">We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\D\text{,}\)</span> following the development in <a href="" class="xref" data-knowl="./knowl/henle_modern_geometries.html" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.  As a function of the two real variables <span class="process-math">\(r\)</span> and <span class="process-math">\(\theta\text{,}\)</span> the polar form expression <span class="process-math">\(z=re^{i\theta}\)</span> gives rise to the two parameterized curves <span class="process-math">\(r\to z_1(r)=re^{i\theta}\)</span> (where <span class="process-math">\(\theta\)</span> is constant) and <span class="process-math">\(\theta \to z_2(\theta) = re^{i\theta}\)</span> (where <span class="process-math">\(r\)</span> is constant). Using <span class="process-math">\(z_1'(r) =
+e^{i\theta}\)</span> and <span class="process-math">\(z_2'(\theta)=ire^{i\theta}\text{,}\)</span> the arc length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> for the two curves are the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html">
 \begin{equation*}
 \frac{2|e^{i\theta}|\;dr}{1-r^2}=\frac{2\;dr}{1-r^2}
 \;(\text{for curve } z_1)
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html">
 \begin{equation*}
 \frac{2|ire^{i\theta}|\;dr}{1-r^2}=\frac{2r\;dr}{1-r^2}
 \;(\text{for curve } z_2)
 \end{equation*}
 </div>
-<p class="continuation">Thus we have <span class="process-math">\(dA=\frac{4r\;dr\;d\theta}{(1-r^2)^2}\text{,}\)</span> so that the area of a region <span class="process-math">\(R\)</span> is</p>
-<div class="displaymath process-math" id="hyperbolicareaintformula">
+<div class="para">Thus we have <span class="process-math">\(dA=\frac{4r\;dr\;d\theta}{(1-r^2)^2}\text{,}\)</span> so that the area of a region <span class="process-math">\(R\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html" id="hyperbolicareaintformula">
 \begin{equation}
 \text{Area}(R)=\iint_R
 dA = \iint_R \frac{4r\;dr\;d\theta}{(1-r^2)^2}.\tag{3.3.10}
 \end{equation}
 </div>
+</div>
 <article class="exercise exercise-like" id="hypdiskareaexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-hypdiskareaexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.21</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hypdiskareaexer"><article class="exercise exercise-like"><p id="p-480">Find the area of the hyperbolic disk <span class="process-math">\(\{|z|\leq
-\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span></p></article></div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-hypdiskareaexer"><article class="exercise exercise-like"><div class="para" id="p-480">Find the area of the hyperbolic disk <span class="process-math">\(\{|z|\leq
+\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span>
+</div></article></div></section><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span>
 </h3>
-<p id="p-482"><article class="definition definition-like" id="definition-24"><h4 class="heading">
+<div class="para" id="p-482"><article class="definition definition-like" id="definition-24"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.22</span><span class="period">.</span><span class="space"> </span><span class="title">The upper half-plane model of hyperbolic geometry.</span>
-</h4>
-<p id="p-483">Let <span class="process-math">\(\U=\{z\colon \im(z)\gt
-0\}\)</span> denote the upper half of complex plane above the real axis, and let <span class="process-math">\(\HU\)</span> denote the subgroup of the Möbius group <span class="process-math">\(\M\)</span> of transformations that map <span class="process-math">\(\U\)</span> onto itself. The pair <span class="process-math">\((\U,\HU)\)</span> is the <dfn class="terminology">upper half-plane model</dfn> of hyperbolic geometry.</p></article></p>
+</h4> <div class="para" id="p-483">Let <span class="process-math">\(\U=\{z\colon \im(z)\gt
+0\}\)</span> denote the upper half of complex plane above the real axis, and let <span class="process-math">\(\HU\)</span> denote the subgroup of the Möbius group <span class="process-math">\(\M\)</span> of transformations that map <span class="process-math">\(\U\)</span> onto itself. The pair <span class="process-math">\((\U,\HU)\)</span> is the <dfn class="terminology">upper half-plane model</dfn> of hyperbolic geometry.</div></article></div>
 <article class="proposition theorem-like" id="upperhalfplanetransfprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.23</span><span class="period">.</span>
 </h4>
-<p id="p-484">A Möbius transformation <span class="process-math">\(T\)</span> is in <span class="process-math">\(\HU\)</span> if and only if <span class="process-math">\(T\)</span> can be written in the form</p>
+<div class="para logical" id="p-484">
+<div class="para">A Möbius transformation <span class="process-math">\(T\)</span> is in <span class="process-math">\(\HU\)</span> if and only if <span class="process-math">\(T\)</span> can be written in the form</div>
 <div class="displaymath process-math" id="halfplanehypgptrans">
 \begin{equation}
 Tz=\frac{az+b}{cz+d}\tag{3.3.11}
 \end{equation}
 </div>
-<p class="continuation">such that <span class="process-math">\(a,b,c,d\)</span> are real and <span class="process-math">\(ad-bc\gt
-0\text{.}\)</span></p></article><p id="p-485">Hyperbolic straight lines in the upper half-plane model are clines that intersect the real line at right angles. The hyperbolic distance between two points <span class="process-math">\(z_1,z_2\)</span> in the upper half-plane is</p>
+<div class="para">such that <span class="process-math">\(a,b,c,d\)</span> are real and <span class="process-math">\(ad-bc\gt
+0\text{.}\)</span>
+</div>
+</div></article><div class="para logical" id="p-485">
+<div class="para">Hyperbolic straight lines in the upper half-plane model are clines that intersect the real line at right angles. The hyperbolic distance between two points <span class="process-math">\(z_1,z_2\)</span> in the upper half-plane is</div>
 <div class="displaymath process-math" id="men-38">
 \begin{equation}
 d(z_1,z_2)=\ln((z_1,z_2,q_2,q_1))\tag{3.3.12}
 \end{equation}
 </div>
-<p class="continuation">where <span class="process-math">\(q_1,q_2\)</span> are the points on the (extended) real line at the end of the hyperbolic straight line that contains <span class="process-math">\(z_1,z_2\text{,}\)</span> with each <span class="process-math">\(q_i\)</span> on the same "side" as the corresponding <span class="process-math">\(z_i\text{.}\)</span> The hyperbolic length of a  curve <span class="process-math">\(\gamma\)</span> parameterized by <span class="process-math">\(t\to
-z(t)=x(t)+iy(t)\)</span> on the interval <span class="process-math">\(a\leq t\leq b\)</span> is</p>
+<div class="para">where <span class="process-math">\(q_1,q_2\)</span> are the points on the (extended) real line at the end of the hyperbolic straight line that contains <span class="process-math">\(z_1,z_2\text{,}\)</span> with each <span class="process-math">\(q_i\)</span> on the same "side" as the corresponding <span class="process-math">\(z_i\text{.}\)</span> The hyperbolic length of a  curve <span class="process-math">\(\gamma\)</span> parameterized by <span class="process-math">\(t\to
+z(t)=x(t)+iy(t)\)</span> on the interval <span class="process-math">\(a\leq t\leq b\)</span> is</div>
 <div class="displaymath process-math" id="halfplanelengthformula">
 \begin{equation}
 \text{Length}(\gamma)=\int_a^b
 \frac{|z'(t)|}{y(t)}\;dt.\tag{3.3.13}
 \end{equation}
 </div>
-<p class="continuation">The hyperbolic area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\U\)</span> is</p>
+<div class="para">The hyperbolic area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\U\)</span> is</div>
 <div class="displaymath process-math" id="upperhalfplaneareaintformula">
 \begin{equation}
 \text{Area}(R)=\iint_R
 dA = \iint_R \frac{dx\;dy}{y^2}.\tag{3.3.14}
 \end{equation}
+</div>
 </div></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.3.6</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="hyperbolictransformulaexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-489">Prove <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaprop.html" title="Proposition 3.3.5">Proposition 3.3.5</a> using the following outline.</p>
+<div class="para logical" id="p-489">
+<div class="para">Prove <a href="" class="xref" data-knowl="./knowl/hyperbolictransformulaprop.html" title="Proposition 3.3.5">Proposition 3.3.5</a> using the following outline.</div>
 <ol class="lower-alpha">
-<li id="li-345"><p id="p-derived-li-345">Complete the proof of <a href="" class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> using this outline: Let <span class="process-math">\(|z|=1\)</span> and apply <a href="" class="xref" data-knowl="./knowl/hyperbolictransfixunitcirc.html" title="Corollary 3.3.4">Corollary 3.3.4</a>. We have<div class="displaymath process-math">
+<li id="li-345"><div class="para" id="p-derived-li-345">Complete the proof of <a href="" class="xref" data-knowl="./knowl/diskhypgptrans0inftyform.html" title="Equation 3.3.1">(3.3.1)</a> using this outline: Let <span class="process-math">\(|z|=1\)</span> and apply <a href="" class="xref" data-knowl="./knowl/hyperbolictransfixunitcirc.html" title="Corollary 3.3.4">Corollary 3.3.4</a>. We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/diskhypgptrans0inftyform.html ./knowl/hyperbolictransfixunitcirc.html">
 \begin{equation*}
 1=|Tz|=|\alpha|\left| \frac{z-z_0}{1-z_0^\ast
 z}\right|.
 \end{equation*}
-</div>Continue this derivation to show that <span class="process-math">\(|\alpha|=1\text{.}\)</span></p></li>
-<li id="li-346"><p id="p-derived-li-346">Prove <a href="" class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> by verifying the following. Given <span class="process-math">\(z_0\in \D\)</span> and <span class="process-math">\(t\in \R\text{,}\)</span> show that the assignments <span class="process-math">\(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
-b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}\)</span> satisfy <span class="process-math">\(|a|^2-|b|^2=1\)</span> and that<div class="displaymath process-math" id="twohyptransformssame">
+</div>Continue this derivation to show that <span class="process-math">\(|\alpha|=1\text{.}\)</span>
+</div></li>
+<li id="li-346"><div class="para" id="p-derived-li-346">Prove <a href="" class="xref" data-knowl="./knowl/diskhypgptranssu11form.html" title="Equation 3.3.2">(3.3.2)</a> by verifying the following. Given <span class="process-math">\(z_0\in \D\)</span> and <span class="process-math">\(t\in \R\text{,}\)</span> show that the assignments <span class="process-math">\(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
+b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}\)</span> satisfy <span class="process-math">\(|a|^2-|b|^2=1\)</span> and that<div class="displaymath process-math" data-contains-math-knowls="./knowl/diskhypgptranssu11form.html ./knowl/twohyptransformssame.html" id="twohyptransformssame">
 \begin{equation}
 \frac{az+b}{b^\ast  z+a^\ast} = e^{it}\frac{z-z_0}{1-z_0^\ast z}\text{.}\tag{3.3.15}
 \end{equation}
 </div>Conversely, given <span class="process-math">\(a,b\in \C\)</span> with <span class="process-math">\(|a|^2-|b|^2=1\text{,}\)</span> show that the assignments <span class="process-math">\(t=2\arg a, z_0=-\frac{b}{a}\)</span> satisfy <span class="process-math">\(z_0\in
-\D\text{,}\)</span> and that <a href="" class="xref" data-knowl="./knowl/twohyptransformssame.html" title="Equation 3.3.15">(3.3.15)</a> holds.</p></li>
-</ol></article><article class="exercise exercise-like" id="twopts2lineexer"><h4 class="heading">
+\D\text{,}\)</span> and that <a href="" class="xref" data-knowl="./knowl/twohyptransformssame.html" title="Equation 3.3.15">(3.3.15)</a> holds.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="twopts2lineexer"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Two points determine a line.</span>
 </h4>
-<p id="p-491">Let <span class="process-math">\(p,q\)</span> be distinct points in <span class="process-math">\(\D\text{.}\)</span> Show that there is a unique hyperbolic straight line that contains <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span></p>
+<div class="para" id="p-491">Let <span class="process-math">\(p,q\)</span> be distinct points in <span class="process-math">\(\D\text{.}\)</span> Show that there is a unique hyperbolic straight line that contains <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><p id="p-492">Start by choosing a transformation that sends <span class="process-math">\(p\to
-0\text{.}\)</span> For uniqueness, use <a href="" class="xref" data-knowl="./knowl/hyplinewith0isdiam.html" title="Checkpoint 3.3.7">Checkpoint 3.3.7</a>.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><div class="para" id="p-492">Start by choosing a transformation that sends <span class="process-math">\(p\to
+0\text{.}\)</span> For uniqueness, use <a href="" class="xref" data-knowl="./knowl/hyplinewith0isdiam.html" title="Checkpoint 3.3.7">Checkpoint 3.3.7</a>.</div></div></div>
 </div></article><article class="exercise exercise-like" id="dropperpexer"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Dropping a perpendicular from a point to a line.</span>
 </h4>
-<p id="p-494">Let <span class="process-math">\(L\)</span> be a hyperbolic straight line and let <span class="process-math">\(p\in\D\)</span> be a point not on <span class="process-math">\(L\text{.}\)</span> Show that there is a unique hyperbolic straight line <span class="process-math">\(M\)</span> that contains <span class="process-math">\(p\)</span> and is orthogonal to <span class="process-math">\(L\text{.}\)</span></p>
+<div class="para" id="p-494">Let <span class="process-math">\(L\)</span> be a hyperbolic straight line and let <span class="process-math">\(p\in\D\)</span> be a point not on <span class="process-math">\(L\text{.}\)</span> Show that there is a unique hyperbolic straight line <span class="process-math">\(M\)</span> that contains <span class="process-math">\(p\)</span> and is orthogonal to <span class="process-math">\(L\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><p id="p-495">Start by choosing a transformation that sends <span class="process-math">\(p\to
-0\text{.}\)</span> For uniqueness, use <a href="" class="xref" data-knowl="./knowl/hyplinewith0isdiam.html" title="Checkpoint 3.3.7">Checkpoint 3.3.7</a>.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><div class="para" id="p-495">Start by choosing a transformation that sends <span class="process-math">\(p\to
+0\text{.}\)</span> For uniqueness, use <a href="" class="xref" data-knowl="./knowl/hyplinewith0isdiam.html" title="Checkpoint 3.3.7">Checkpoint 3.3.7</a>.</div></div></div>
 </div></article><article class="exercise exercise-like" id="hyperbolictriangleineqexer"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The triangle inequality for the hyperbolic metric.</span>
 </h4>
-<p id="p-497">Show that <span class="process-math">\(d(a,b)\leq d(a,c)+d(c,b)\)</span> for all <span class="process-math">\(a,b,c\)</span> in <span class="process-math">\(\D\)</span> using the outline below.</p>
+<div class="para logical" id="p-497">
+<div class="para">Show that <span class="process-math">\(d(a,b)\leq d(a,c)+d(c,b)\)</span> for all <span class="process-math">\(a,b,c\)</span> in <span class="process-math">\(\D\)</span> using the outline below.</div>
 <ol class="lower-alpha">
-<li id="li-349"><p id="p-derived-li-349">Show that the triangle inequality holds with strict equality when <span class="process-math">\(a,b,c\)</span> are collinear and <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Suggestion: This is a straightforward computation using the cross ratio expressions for the values of <span class="process-math">\(d\text{.}\)</span></p></li>
-<li id="li-350"><p id="p-derived-li-350">Show that the triangle inequality holds with strict inequality when <span class="process-math">\(a,b,c\)</span> are collinear and <span class="process-math">\(c\)</span> is not between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></li>
-<li id="li-351"><p id="p-derived-li-351">Let <span class="process-math">\(p\in \D\)</span> lie on a hyperbolic line <span class="process-math">\(L\text{,}\)</span> let <span class="process-math">\(q\in \D\text{,}\)</span> let <span class="process-math">\(M\)</span> be a line through <span class="process-math">\(q\)</span> perpendicular to <span class="process-math">\(L\)</span> (this line <span class="process-math">\(M\)</span> exists by <a href="" class="xref" data-knowl="./knowl/dropperpexer.html" title="Exercise 3.3.6.3: Dropping a perpendicular from a point to a line">Exercise 3.3.6.3</a>), and let <span class="process-math">\(q'\)</span> be the point of intersection of <span class="process-math">\(L,M\text{.}\)</span> Show that <span class="process-math">\(d(p,q')\leq d(p,q)\text{.}\)</span> Suggestion: apply <span class="process-math">\(T\in
+<li id="li-349"><div class="para" id="p-derived-li-349">Show that the triangle inequality holds with strict equality when <span class="process-math">\(a,b,c\)</span> are collinear and <span class="process-math">\(c\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Suggestion: This is a straightforward computation using the cross ratio expressions for the values of <span class="process-math">\(d\text{.}\)</span>
+</div></li>
+<li id="li-350"><div class="para" id="p-derived-li-350">Show that the triangle inequality holds with strict inequality when <span class="process-math">\(a,b,c\)</span> are collinear and <span class="process-math">\(c\)</span> is not between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+</div></li>
+<li id="li-351"><div class="para" id="p-derived-li-351">Let <span class="process-math">\(p\in \D\)</span> lie on a hyperbolic line <span class="process-math">\(L\text{,}\)</span> let <span class="process-math">\(q\in \D\text{,}\)</span> let <span class="process-math">\(M\)</span> be a line through <span class="process-math">\(q\)</span> perpendicular to <span class="process-math">\(L\)</span> (this line <span class="process-math">\(M\)</span> exists by <a href="" class="xref" data-knowl="./knowl/dropperpexer.html" title="Exercise 3.3.6.3: Dropping a perpendicular from a point to a line">Exercise 3.3.6.3</a>), and let <span class="process-math">\(q'\)</span> be the point of intersection of <span class="process-math">\(L,M\text{.}\)</span> Show that <span class="process-math">\(d(p,q')\leq d(p,q)\text{.}\)</span> Suggestion: apply <span class="process-math">\(T\in
 \H\)</span> that takes <span class="process-math">\(p\to 0\)</span> and takes <span class="process-math">\(L\to
 \R\text{.}\)</span> Let <span class="process-math">\(t=-\arg(Tq)\)</span> if <span class="process-math">\(\re(Tq)\geq 0\)</span> and let <span class="process-math">\(t=\pi-\arg(Tq)\)</span> if <span class="process-math">\(\re(Tq)\lt
-0\text{.}\)</span> Let <span class="process-math">\(r=e^{it}Tq\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolic_tri_ineq_fig.html" title="Figure 3.3.24">Figure 3.3.24</a>.</p></li>
-<li id="li-352"><p id="p-derived-li-352">Given arbitrary <span class="process-math">\(a,b,c\text{,}\)</span> apply a transformation <span class="process-math">\(T\)</span> to send <span class="process-math">\(a\to 0\)</span> and <span class="process-math">\(b\)</span> to a nonnegative real point. Drop a perpendicular from <span class="process-math">\(Tc\)</span> to the real line, say, to <span class="process-math">\(c'\text{.}\)</span> Apply results from the previous steps of this outline.</p></li>
-</ol></article><figure class="figure figure-like" id="hyperbolic_tri_ineq_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/hyperbolic_tri_ineq.png" class="contained"></div>
+0\text{.}\)</span> Let <span class="process-math">\(r=e^{it}Tq\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/hyperbolic_tri_ineq_fig.html" title="Figure 3.3.24">Figure 3.3.24</a>.</div></li>
+<li id="li-352"><div class="para" id="p-derived-li-352">Given arbitrary <span class="process-math">\(a,b,c\text{,}\)</span> apply a transformation <span class="process-math">\(T\)</span> to send <span class="process-math">\(a\to 0\)</span> and <span class="process-math">\(b\)</span> to a nonnegative real point. Drop a perpendicular from <span class="process-math">\(Tc\)</span> to the real line, say, to <span class="process-math">\(c'\text{.}\)</span> Apply results from the previous steps of this outline.</div></li>
+</ol>
+</div></article><figure class="figure figure-like" id="hyperbolic_tri_ineq_fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/hyperbolic_tri_ineq.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.24<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="exercise exercise-like" id="upperhalfplanetransfpropexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-499">Prove <a href="" class="xref" data-knowl="./knowl/upperhalfplanetransfprop.html" title="Proposition 3.3.23">Proposition 3.3.23</a>.</p>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><p id="p-500">For the "only if" direction, apply <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a> to the cline <span class="process-math">\(\extR\text{,}\)</span> and conclude that <span class="process-math">\(T\)</span> must send the real line to itself. Set <span class="process-math">\(z_1,z_2,z_3\)</span> to be the preimages under <span class="process-math">\(T\)</span> of <span class="process-math">\(0,1,\infty\text{,}\)</span> and then use <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a>. For the "if" direction, suppose <span class="process-math">\(T\)</span> has the given form. Let <span class="process-math">\(y\gt 0\)</span> and show that <span class="process-math">\(\im(T(x+iy))\gt 0\text{.}\)</span></p></div></div></article><article class="exercise exercise-like" id="upperhalfplanelengthexer"><h4 class="heading">
+<div class="para" id="p-499">Prove <a href="" class="xref" data-knowl="./knowl/upperhalfplanetransfprop.html" title="Proposition 3.3.23">Proposition 3.3.23</a>.</div> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><div class="para" id="p-500">For the "only if" direction, apply <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a> to the cline <span class="process-math">\(\extR\text{,}\)</span> and conclude that <span class="process-math">\(T\)</span> must send the real line to itself. Set <span class="process-math">\(z_1,z_2,z_3\)</span> to be the preimages under <span class="process-math">\(T\)</span> of <span class="process-math">\(0,1,\infty\text{,}\)</span> and then use <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a>. For the "if" direction, suppose <span class="process-math">\(T\)</span> has the given form. Let <span class="process-math">\(y\gt 0\)</span> and show that <span class="process-math">\(\im(T(x+iy))\gt 0\text{.}\)</span>
+</div></div></div></article><article class="exercise exercise-like" id="upperhalfplanelengthexer"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Length integral in the upper half-plane model.</span>
 </h4>
-<p id="p-502">This exercise is to establish <a href="" class="xref" data-knowl="./knowl/halfplanelengthformula.html" title="Equation 3.3.13">(3.3.13)</a>. The strategy is to obtain the differential expression</p>
-<div class="displaymath process-math">
+<div class="para logical" id="p-502">
+<div class="para">This exercise is to establish <a href="" class="xref" data-knowl="./knowl/halfplanelengthformula.html" title="Equation 3.3.13">(3.3.13)</a>. The strategy is to obtain the differential expression</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/halfplanelengthformula.html ./knowl/hyperboliclengthformula.html">
 \begin{equation*}
 d(z(t_0),z(t_1))\approx \frac{|z'(t)|dt}{y(t)}
 \end{equation*}
 </div>
-<p class="continuation">for a curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> with <span class="process-math">\(z(t_0)=z_0\text{,}\)</span> <span class="process-math">\(z(t_1)=z_1\text{,}\)</span> and <span class="process-math">\(dt=t_1=t_0\)</span> using the following sequence of steps.</p>
+<div class="para">for a curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> with <span class="process-math">\(z(t_0)=z_0\text{,}\)</span> <span class="process-math">\(z(t_1)=z_1\text{,}\)</span> and <span class="process-math">\(dt=t_1=t_0\)</span> using the following sequence of steps.</div>
 <ul class="disc">
-<li id="li-357"><p id="p-derived-li-357">First, map <span class="process-math">\(z_0,z_1\)</span> in <span class="process-math">\(\U\)</span> to <span class="process-math">\(z_0',z_1'\)</span> in <span class="process-math">\(\D\)</span> using a transformation <span class="process-math">\(\mu\)</span> that preserves distance.</p></li>
-<li id="li-358"><p id="p-derived-li-358">Using the analysis we used to get the disk model length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, we have<div class="displaymath process-math">
+<li id="li-357"><div class="para" id="p-derived-li-357">First, map <span class="process-math">\(z_0,z_1\)</span> in <span class="process-math">\(\U\)</span> to <span class="process-math">\(z_0',z_1'\)</span> in <span class="process-math">\(\D\)</span> using a transformation <span class="process-math">\(\mu\)</span> that preserves distance.</div></li>
+<li id="li-358"><div class="para" id="p-derived-li-358">Using the analysis we used to get the disk model length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliclengthformula.html">
 \begin{equation*}
 d(z_0',z_1')=\ln\left(\frac{1+u}{1-u}\right)
 \end{equation*}
 </div>where <span class="process-math">\(u=\left|\frac{z_1'-z_0'}{1-(z_0')^\ast
-z_1'}\right|\text{.}\)</span></p></li>
-<li id="li-359"><p id="p-derived-li-359">Translate the above expression in terms of <span class="process-math">\(z_0,z_1\text{,}\)</span> and show that the differential approximation is <span class="process-math">\(\frac{|z'(t)|dt}{y(t)}\text{.}\)</span></p></li>
+z_1'}\right|\text{.}\)</span>
+</div></li>
+<li id="li-359"><div class="para" id="p-derived-li-359">Translate the above expression in terms of <span class="process-math">\(z_0,z_1\text{,}\)</span> and show that the differential approximation is <span class="process-math">\(\frac{|z'(t)|dt}{y(t)}\text{.}\)</span>
+</div></li>
 </ul>
-<p class="continuation">Complete the exercise parts below to carry out the strategy just outlined.</p>
+<div class="para">Complete the exercise parts below to carry out the strategy just outlined.</div>
 <ol class="lower-alpha">
-<li id="li-360"><p id="p-derived-li-360">Show that <span class="process-math">\(\mu z=\frac{z-i}{z+i}\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span></p></li>
-<li id="li-361"><p id="p-derived-li-361">Let <span class="process-math">\(z_0'=\mu z_0\)</span> and <span class="process-math">\(z_1'=\mu z_1\text{.}\)</span> Show that<div class="displaymath process-math">
+<li id="li-360"><div class="para" id="p-derived-li-360">Show that <span class="process-math">\(\mu z=\frac{z-i}{z+i}\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span>
+</div></li>
+<li id="li-361"><div class="para" id="p-derived-li-361">Let <span class="process-math">\(z_0'=\mu z_0\)</span> and <span class="process-math">\(z_1'=\mu z_1\text{.}\)</span> Show that<div class="displaymath process-math">
 \begin{equation*}
 \frac{z_1'-z_0'}{1-(z_0')^\ast
 z_1'}=e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
 \end{equation*}
-</div>for some real <span class="process-math">\(t\text{.}\)</span></p></li>
-<li id="li-362"><p id="p-derived-li-362">Let <span class="process-math">\(u=\left|\frac{z_1-z_0}{z_0^\ast -
+</div>for some real <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li id="li-362"><div class="para" id="p-derived-li-362">Let <span class="process-math">\(u=\left|\frac{z_1-z_0}{z_0^\ast -
 z_1}\right|\text{.}\)</span> Show that<div class="displaymath process-math">
 \begin{equation*}
 \ln\left(\frac{1+u}{1-u}\right)\approx \frac{|z(t)|dt}{y(t)}.
 \end{equation*}
-</div></p></li>
-</ol></article><article class="exercise exercise-like" id="upperhalfplaneareaintformulaexer"><h4 class="heading">
+</div>
+</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="upperhalfplaneareaintformulaexer"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Area integral in the upper half-plane model.</span>
 </h4>
-<p id="p-504">Adapt the argument in the paragraph preceding the disk model area integral <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a> to establish the upper half-plane area integral  <a href="" class="xref" data-knowl="./knowl/upperhalfplaneareaintformula.html" title="Equation 3.3.14">(3.3.14)</a>.</p></article><figure class="figure figure-like" id="hyperbolic_triangle_area_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_triangle_area.png" class="contained"></div>
+<div class="para" id="p-504">Adapt the argument in the paragraph preceding the disk model area integral <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a> to establish the upper half-plane area integral  <a href="" class="xref" data-knowl="./knowl/upperhalfplaneareaintformula.html" title="Equation 3.3.14">(3.3.14)</a>.</div></article><figure class="figure figure-like" id="hyperbolic_triangle_area_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/hyperbolic_triangle_area.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.25<span class="period">.</span></span><span class="space"> </span>Hyperbolic triangle <span class="process-math">\(\triangle ABC\)</span></figcaption></figure><div class="exercisegroup" id="exercisegroup-9">
 <h4 class="heading"><span class="title">Area of a hyperbolic triangle..</span></h4>
 <div class="introduction" id="introduction-14">The following sequence of exercises establishes the area formula for hyperbolic triangles.</div>
@@ -519,36 +817,52 @@ z_1}\right|\text{.}\)</span> Show that<div class="displaymath process-math">
 <article class="exercise exercise-like" id="doubasymptriareaexer"><h5 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Area of a doubly-asymptotic triangle.</span>
 </h5>
-<p id="p-506">A triangle with one vertex in <span class="process-math">\(\D\)</span> and two vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called a <dfn class="terminology">doubly-asymptotic</dfn> hyperbolic triangle. Examples are <span class="process-math">\(\triangle AA_1A_2\text{,}\)</span> <span class="process-math">\(\triangle
-BB_1B_2\text{,}\)</span> and <span class="process-math">\(\triangle CC_1C_2\)</span> in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>.</p>
+<div class="para logical" id="p-506">
+<div class="para">A triangle with one vertex in <span class="process-math">\(\D\)</span> and two vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called a <dfn class="terminology">doubly-asymptotic</dfn> hyperbolic triangle. Examples are <span class="process-math">\(\triangle AA_1A_2\text{,}\)</span> <span class="process-math">\(\triangle
+BB_1B_2\text{,}\)</span> and <span class="process-math">\(\triangle CC_1C_2\)</span> in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>.</div>
 <ol class="lower-alpha">
-<li id="li-366"><p id="p-derived-li-366">Explain why any doubly-asymptotic triangle in the upper half-plane is congruent to the one shown in <a href="" class="xref" data-knowl="./knowl/doubleasymp_tri_upperhalfplane_fig.html" title="Figure 3.3.26">Figure 3.3.26</a>for some angle <span class="process-math">\(\alpha\text{.}\)</span></p></li>
-<li id="li-367"><p id="p-derived-li-367">Now use the integration formula for the upper half-plane model to show that the area of the doubly-asymptotic triangle with angle <span class="process-math">\(\alpha\)</span> (at the vertex interior to <span class="process-math">\(\U\)</span>) is <span class="process-math">\(\pi-\alpha\text{.}\)</span></p></li>
+<li id="li-366"><div class="para" id="p-derived-li-366">Explain why any doubly-asymptotic triangle in the upper half-plane is congruent to the one shown in <a href="" class="xref" data-knowl="./knowl/doubleasymp_tri_upperhalfplane_fig.html" title="Figure 3.3.26">Figure 3.3.26</a>for some angle <span class="process-math">\(\alpha\text{.}\)</span>
+</div></li>
+<li id="li-367"><div class="para" id="p-derived-li-367">Now use the integration formula for the upper half-plane model to show that the area of the doubly-asymptotic triangle with angle <span class="process-math">\(\alpha\)</span> (at the vertex interior to <span class="process-math">\(\U\)</span>) is <span class="process-math">\(\pi-\alpha\text{.}\)</span>
+</div></li>
 </ol>
-<p class="continuation"><figure class="figure figure-like" id="doubleasymp_tri_upperhalfplane_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/2asymp_tri_upperhalfplane.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.26<span class="period">.</span></span><span class="space"> </span>Doubly-asymptotic hyperbolic triangle in the upper half-plane with vertices <span class="process-math">\(1,p,\infty\)</span> with <span class="process-math">\(p\)</span> on the upper half of the unit circle</figcaption></figure></p></article><article class="exercise exercise-like" id="asympngonareaexer"><h5 class="heading">
+<div class="para"><figure class="figure figure-like" id="doubleasymp_tri_upperhalfplane_fig"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/2asymp_tri_upperhalfplane.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.26<span class="period">.</span></span><span class="space"> </span>Doubly-asymptotic hyperbolic triangle in the upper half-plane with vertices <span class="process-math">\(1,p,\infty\)</span> with <span class="process-math">\(p\)</span> on the upper half of the unit circle</figcaption></figure></div>
+</div></article><article class="exercise exercise-like" id="asympngonareaexer"><h5 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an asymptotic <span class="process-math">\(n\)</span>-gon.</span>
 </h5>
-<p id="p-507">A polygon with <span class="process-math">\(n\geq 3\)</span> vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called an <dfn class="terminology">asymptotic</dfn> <span class="process-math">\(n\)</span>-gon. An example of an asymptotic hexagon is the figure with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_2,C_2\)</span> connected by the colored hyperbolic lines in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>. Show that the area of an asymptotic <span class="process-math">\(n\)</span>-gon is <span class="process-math">\(\pi(n-2)\text{.}\)</span></p>
+<div class="para" id="p-507">A polygon with <span class="process-math">\(n\geq 3\)</span> vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called an <dfn class="terminology">asymptotic</dfn> <span class="process-math">\(n\)</span>-gon. An example of an asymptotic hexagon is the figure with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_2,C_2\)</span> connected by the colored hyperbolic lines in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>. Show that the area of an asymptotic <span class="process-math">\(n\)</span>-gon is <span class="process-math">\(\pi(n-2)\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><p id="p-508">Partition the asymptotic <span class="process-math">\(n\)</span>-gon into <span class="process-math">\(n\)</span> doubly-asymptotic triangles.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-508">Partition the asymptotic <span class="process-math">\(n\)</span>-gon into <span class="process-math">\(n\)</span> doubly-asymptotic triangles.</div></div></div>
 </div></article><article class="exercise exercise-like" id="hyperbolic_triangle_area_exer"><h5 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Area of a hyperbolic triangle.</span>
 </h5>
-<p id="p-509">Let <span class="process-math">\(\triangle
-ABC\)</span> be a hyperbolic triangle. Extend the three sides <span class="process-math">\(AB\text{,}\)</span> <span class="process-math">\(BC\text{,}\)</span> <span class="process-math">\(AC\)</span> to six points on the unit circle. See <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>. Use a partition of the asymptotic hexagon whose vertices are these six points to show that the area of <span class="process-math">\(\triangle ABC\)</span> is</p>
-<div class="displaymath process-math" id="hyperbolictrianglearea">
+<div class="para logical" id="p-509">
+<div class="para">Let <span class="process-math">\(\triangle
+ABC\)</span> be a hyperbolic triangle. Extend the three sides <span class="process-math">\(AB\text{,}\)</span> <span class="process-math">\(BC\text{,}\)</span> <span class="process-math">\(AC\)</span> to six points on the unit circle. See <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>. Use a partition of the asymptotic hexagon whose vertices are these six points to show that the area of <span class="process-math">\(\triangle ABC\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolic_triangle_area_fig.html" id="hyperbolictrianglearea">
 \begin{equation}
 \text{Area}(\triangle
 ABC)= \pi-(\angle A +\angle B + \angle C).\tag{3.3.16}
 \end{equation}
 </div>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><p id="p-510">Partition the asymptotic hexagon with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_1,C_2\text{.}\)</span> Start with the six overlapping doubly-asymptotic triangles whose bases are colored arcs and whose vertex in <span class="process-math">\(\D\)</span> is whichever of <span class="process-math">\(A,B,C\)</span> matches the color of the base. For example, the two red doubly-asymptotic triangles are <span class="process-math">\(\triangle AA_1A_2\)</span> and <span class="process-math">\(\triangle
-AC_1B_2\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-510">Partition the asymptotic hexagon with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_1,C_2\text{.}\)</span> Start with the six overlapping doubly-asymptotic triangles whose bases are colored arcs and whose vertex in <span class="process-math">\(\D\)</span> is whichever of <span class="process-math">\(A,B,C\)</span> matches the color of the base. For example, the two red doubly-asymptotic triangles are <span class="process-math">\(\triangle AA_1A_2\)</span> and <span class="process-math">\(\triangle
+AC_1B_2\text{.}\)</span>
+</div></div></div>
 </div></article>
 </div>
-</div></section></section></div></main>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-12.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="elliptic_geometry_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>
