@@ -575,11 +575,13 @@ R_r(\alpha v) = \alpha R_r(v)\tag{1.2.19}
 <ol class="lower-alpha">
 <li id="li-36"><div class="para" id="p-derived-li-36">Show that <span class="process-math">\(R_r(u)=u\text{.}\)</span>
 </div></li>
-<li id="li-37"><div class="para" id="p-derived-li-37">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
-\begin{equation*}
-R_r(v) = \cos(2\theta)v + \sin(2\theta)w
-\end{equation*}
-</div>(use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and explain how this proves the Proposition.</div></li>
+<li id="li-37"><div class="para" id="p-derived-li-37">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatrotpropformula.html ./knowl/purequatproduct.html" id="quatrotpropformula">
+\begin{equation}
+R_r(v) = \cos(2\theta)v + \sin(2\theta)w\tag{1.2.20}
+\end{equation}
+</div>(use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-83">In deriving equation <a href="" class="xref" data-knowl="./knowl/quatrotpropformula.html" title="Equation 1.2.20">(1.2.20)</a>, you will obtain expressions <span class="process-math">\(uv-vu\)</span> and <span class="process-math">\(uvu\text{.}\)</span> Use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to show that <span class="process-math">\(uv-vu=w\)</span> and <span class="process-math">\(uvu=v\text{.}\)</span>
+</div></div></div>
+</div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="quatrotcompinvexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Show that the following hold for all <span class="process-math">\(r,s\in U(\Quat)\text{.}\)</span> <ol class="lower-alpha">
 <li id="li-40"><div class="para" id="p-derived-li-40"><span class="process-math">\(R_r\circ R_s = R_{rs}\text{.}\)</span></div></li>

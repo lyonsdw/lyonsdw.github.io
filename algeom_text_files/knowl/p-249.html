@@ -13,14 +13,28 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(K\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> The set <span class="process-math">\(G/K\)</span> of cosets of <span class="process-math">\(K\)</span> forms a group, called a <dfn class="terminology">quotient group</dfn> (or <dfn class="terminology">factor group</dfn>), under the operation</div>
-<div class="displaymath process-math">
-\begin{equation}
-(xK)(yK) = xyK\tag{2.4.1}
-\end{equation}
-</div>
-<div class="para">if and only if <span class="process-math">\(K\)</span> is the kernel of a homomorphism <span class="process-math">\(G\to G'\)</span> for some group <span class="process-math">\(G'\text{.}\)</span>
-</div>
+<div class="para">Let <span class="process-math">\(\phi\colon G\to H\)</span> be a homomorphism of groups. Let <span class="process-math">\(e_G,e_H\)</span> denote the identity elements of <span class="process-math">\(G,H\text{,}\)</span> respectively. We have the following.</div>
+<ol class="decimal">
+<li><div class="para">(identity goes to identity) <span class="process-math">\(\phi(e_G) = e_H\)</span>
+</div></li>
+<li><div class="para">(inverses go to inverses) <span class="process-math">\(\phi\left(g^{-1}\right)  = \left(\phi(g)\right)^{-1}\)</span> for all <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\ker(\phi)\)</span> is a subgroup of <span class="process-math">\(G\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\phi(G)\)</span> is a subgroup of <span class="process-math">\(H\)</span>
+</div></li>
+<li><div class="para">(preimage sets are cosets of the kernel) <span class="process-math">\(\phi(x)=y\)</span> if and only if <span class="process-math">\(\phi^{-1}(y) =
+x\ker(\phi)\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\phi(a)=\phi(b)\)</span> if and only if <span class="process-math">\(a\ker(\phi)=b\ker(\phi)\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\phi\)</span> is one-to-one if and only if <span class="process-math">\(\ker(\phi)=\{e_G\}\)</span>
+</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="section-8.html#p-249" class="internal">in-context</a></span>
 </body>

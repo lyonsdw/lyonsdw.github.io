@@ -1,63 +1,185 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-02T13:36:18-05:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Group homomorphisms</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\require{tikz}\require{graphicx}      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="subgroups_cosets_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-8.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -81,7 +203,7 @@ MathJax.Hub.Config({
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
 \newcommand{\E}{{\rm \bf E}} 
-\renewcommand{\H}{{\rm \bf H}} 
+\renewcommand{\H}{{\rm \bf H }} 
 \newcommand{\HU}{\H_{\U}} 
 \renewcommand{\S}{{\rm \bf S}} 
 \newcommand{\D}{\mathbb{D}} 
@@ -94,374 +216,599 @@ MathJax.Hub.Config({
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subgroups_cosets_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subgroups_cosets_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups_chapter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
-<li><a href="biography-1.html" data-scroll="biography-1">About the author</a></li>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li><div class="toc-item"><a href="biography-1.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="basics_chapter.html" data-scroll="basics_chapter"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1">Complex Numbers</a></li>
-<li><a href="quaternionsection.html" data-scroll="quaternionsection">Quaternions</a></li>
-<li><a href="stereoprojsect.html" data-scroll="stereoprojsect">Stereographic projection</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Equivalence Relations</a></li>
+<li>
+<div class="toc-item"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-5" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#subsection-6" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
+<li><div class="toc-item"><a href="section-1.html#exercises-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="groups_chapter.html" data-scroll="groups_chapter"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
-<li><a href="groupdefsection.html" data-scroll="groupdefsection">Definition of a group</a></li>
-<li><a href="subgroups_cosets_section.html" data-scroll="subgroups_cosets_section">Subgroups and cosets</a></li>
-<li><a href="section-7.html" data-scroll="section-7" class="active">Group homomorphisms</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Group actions</a></li>
-<li><a href="groups_extra_exer_section.html" data-scroll="groups_extra_exer_section">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Stereographic projection</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-7" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#subsection-8" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="stereoprojsect.html#exercises-2" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="geometry_chapter.html" data-scroll="geometry_chapter"><span class="codenumber">3</span> <span class="title">Geometries</span></a><ul>
-<li><a href="geomdefsect.html" data-scroll="geomdefsect">Geometries and models</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Möbius geometry</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Hyperbolic geometry</a></li>
-<li><a href="elliptic_geometry_section.html" data-scroll="elliptic_geometry_section">Elliptic geometry</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Projective geometry</a></li>
-<li><a href="geometry_extra_exer_section.html" data-scroll="geometry_extra_exer_section">Additional exercises</a></li>
+<li>
+<div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-3.html#subsection-9" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Definitions</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html#subsection-10" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Facts</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html#subsection-11" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html#subsection-12" class="internal"><span class="codenumber">1.3.4</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html#exercises-3" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Further topics</span></a></li>
-<li class="link"><a href="references-2.html" data-scroll="references-2"><span class="title">References</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-3.html" data-scroll="references-3"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-7"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Group homomorphisms</span>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-13" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-14" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-16" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-17" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-18" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-19" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#subsection-20" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="groupintrosection.html#exercises-4" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="groupdefsection.html#subsection-21" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="groupdefsection.html#exercises-5" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#subsection-22" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="subgroups_cosets_section.html#exercises-6" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-7.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-7.html#subsection-23" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-7.html#exercises-7" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-8.html#subsection-24" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-8.html#subsection-25" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="section-8.html#exercises-8" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="groups_extra_exer_section.html#exercises-9" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-27" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#subsection-28" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li><div class="toc-item"><a href="geomdefsect.html#exercises-10" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-11.html#subsection-29" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-30" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Cross ratio</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-31" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#normalformssubsect" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Normal forms</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-33" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Steiner circles</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#exercises-11" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-12.html#subsection-34" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-35" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-36" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-37" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#subsection-38" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
+<li><div class="toc-item"><a href="section-12.html#exercises-12" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-39" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-42" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-43" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-44" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
+<li><div class="toc-item"><a href="elliptic_geometry_section.html#exercises-13" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-14.html#subsection-45" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-46" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-47" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-48" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#exercises-14" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="geometry_extra_exer_section.html#exercises-15" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li><div class="toc-item"><a href="references-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="references-3.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-7"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span>
 </h2>
-<section class="subsection" id="subsection-20"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title"></span>
+<section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title"></span>
 </h3>
-<p id="p-206"><article class="definition definition-like" id="definition-7"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group homomorphism.</span>
-</h6>Let \(G,H\) be groups. <p id="p-207">A map \(\phi\colon G\to H\) is called a <dfn class="terminology">homomorphism</dfn> if</p>
-<div class="displaymath">
+<div class="para" id="p-211"><article class="definition definition-like" id="definition-15"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group homomorphism.</span>
+</h4>  Let <span class="process-math">\(G,H\)</span> be groups. <div class="para logical" id="p-212">
+<div class="para">A map <span class="process-math">\(\phi\colon G\to H\)</span> is called a <dfn class="terminology">homomorphism</dfn> if</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \phi(xy) = \phi(x)\phi(y)
 \end{equation*}
 </div>
-<p class="continuation">for all \(x,y\) in \(G\text{.}\) A homomorphism that is both injective (one-to-one) and surjective (onto) is called an <dfn class="terminology">isomorphism</dfn> of groups. If \(\phi\colon G\to H\) is an isomorphism, we say that \(G\) is <dfn class="terminology">isomorphic</dfn> to \(H\text{,}\) and we write \(G\approx H\text{.}\)</p></article></p>
-<article class="exercise exercise-like" id="homismdefegexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-homismdefegexer"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-homismdefegexer"><article class="exercise exercise-like"><p id="p-208">Show that each of the following are homomorphisms.</p>
+<div class="para">for all <span class="process-math">\(x,y\)</span> in <span class="process-math">\(G\text{.}\)</span> A homomorphism that is both injective (one-to-one) and surjective (onto) is called an <dfn class="terminology">isomorphism</dfn> of groups. If <span class="process-math">\(\phi\colon G\to H\)</span> is an isomorphism, we say that <span class="process-math">\(G\)</span> is <dfn class="terminology">isomorphic</dfn> to <span class="process-math">\(H\text{,}\)</span> and we write <span class="process-math">\(G\approx H\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="exercise exercise-like" id="homismdefegexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-homismdefegexer"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-homismdefegexer"><article class="exercise exercise-like"><div class="para logical" id="p-213">
+<div class="para">Show that each of the following are homomorphisms.</div>
 <ul class="disc">
-<li id="li-116">\(GL(n,\R)\to \R^\ast\) given by \(M\to \det M\)</li>
-<li id="li-117">\(\Z\to \Z\) given by \(x\to mx\text{,}\) some fixed \(m\in \Z\)</li>
-<li id="li-118">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
-axa^{-1}\text{,}\) some fixed \(a\in G\)</li>
-<li id="li-119">\(\C^\ast\to\C^\ast\) given by \(z\to z^2\)</li>
+<li id="li-154"><div class="para" id="p-derived-li-154">
+<span class="process-math">\(GL(n,\R)\to \R^\ast\)</span> given by <span class="process-math">\(M\to \det M\)</span>
+</div></li>
+<li id="li-155"><div class="para" id="p-derived-li-155">
+<span class="process-math">\(\Z\to \Z\)</span> given by <span class="process-math">\(x\to mx\text{,}\)</span> some fixed <span class="process-math">\(m\in \Z\)</span>
+</div></li>
+<li id="li-156"><div class="para" id="p-derived-li-156">
+<span class="process-math">\(G\to G\text{,}\)</span> <span class="process-math">\(G\)</span> any group, given by <span class="process-math">\(x\to
+axa^{-1}\text{,}\)</span> some fixed <span class="process-math">\(a\in G\)</span>
+</div></li>
+<li id="li-157"><div class="para" id="p-derived-li-157">
+<span class="process-math">\(\C^\ast\to\C^\ast\)</span> given by <span class="process-math">\(z\to z^2\)</span>
+</div></li>
 </ul>
-<p class="continuation">Show that each of the following are not homomorphisms. In each case, demonstrate what fails.</p>
+<div class="para">Show that each of the following are not homomorphisms. In each case, demonstrate what fails.</div>
 <ul class="disc">
-<li id="li-120">\(\Z\to \Z\) given by \(x\to x+3\)</li>
-<li id="li-121">\(\Z\to \Z\) given by \(x\to x^2\)</li>
-<li id="li-122">\(D_4\to D_4\) given by \(g\to g^2\)</li>
-</ul></article></div>
-<article class="commentary" id="commentary-51"><h5 class="heading"><span class="title">Instructor's solution for Checkpoint 2.3.2.</span></h5>
-<p id="p-209">Given two \(n\times n\) matrices \(M,N\text{,}\) we have \(\det(MN)=\det(M)\det(N)\text{,}\) so the determinant map is a homomorphism on \(GL_n\text{.}\) Given \(a,b\in \Z\text{,}\) the distributive law \(m(a+b)=ma+mb\) says that multiplication by \(m\) is a homomorphism. Given a group \(G\) and elements \(a,x,y\in G\text{,}\) we have</p>
-<div class="displaymath">
+<li id="li-158"><div class="para" id="p-derived-li-158">
+<span class="process-math">\(\Z\to \Z\)</span> given by <span class="process-math">\(x\to x+3\)</span>
+</div></li>
+<li id="li-159"><div class="para" id="p-derived-li-159">
+<span class="process-math">\(\Z\to \Z\)</span> given by <span class="process-math">\(x\to x^2\)</span>
+</div></li>
+<li id="li-160"><div class="para" id="p-derived-li-160">
+<span class="process-math">\(D_4\to D_4\)</span> given by <span class="process-math">\(g\to g^2\)</span>
+</div></li>
+</ul>
+</div></article></div>
+<article class="commentary" id="commentary-48"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 2.4.2.</span></h4>
+<div class="para logical" id="p-214">
+<div class="para">Given two <span class="process-math">\(n\times n\)</span> matrices <span class="process-math">\(M,N\text{,}\)</span> we have <span class="process-math">\(\det(MN)=\det(M)\det(N)\text{,}\)</span> so the determinant map is a homomorphism on <span class="process-math">\(GL_n\text{.}\)</span> Given <span class="process-math">\(a,b\in \Z\text{,}\)</span> the distributive law <span class="process-math">\(m(a+b)=ma+mb\)</span> says that multiplication by <span class="process-math">\(m\)</span> is a homomorphism. Given a group <span class="process-math">\(G\)</span> and elements <span class="process-math">\(a,x,y\in G\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
 a(xy)a^{-1} = ax(a^{-1}a)ya^{-1}=(axa^{-1})(aya^{-1}),
 \end{equation*}
 </div>
-<p class="continuation">so conjugation by \(a\) is a homomorphism. Given \(z,w\in
-\C^\ast\text{,}\) we have \((zw)^2=zwzw=zzww=z^2w^2\text{,}\) so the squaring map is a homomorphism.</p>
-<p id="p-210">An example for the failure of \(x\to x+3\) is</p>
-<div class="displaymath">
+<div class="para">so conjugation by <span class="process-math">\(a\)</span> is a homomorphism. Given <span class="process-math">\(z,w\in
+\C^\ast\text{,}\)</span> we have <span class="process-math">\((zw)^2=zwzw=zzww=z^2w^2\text{,}\)</span> so the squaring map is a homomorphism.</div>
+</div>
+<div class="para logical" id="p-215">
+<div class="para">An example for the failure of <span class="process-math">\(x\to x+3\)</span> is</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (1+2)+3 = 6 \neq 9=
 (1+3)+(2+3).
 \end{equation*}
 </div>
-<p class="continuation">For \(x\to x^2\text{,}\) we have</p>
-<div class="displaymath">
+<div class="para">For <span class="process-math">\(x\to x^2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (1+2)^2 = 9
 \neq 5 = 1^2+2^2.
 \end{equation*}
 </div>
-<p class="continuation">For \(g\to g^2\text{,}\) we have</p>
-<div class="displaymath">
+<div class="para">For <span class="process-math">\(g\to g^2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (F_HF_D)^2 = R_{1/4}^2=R_{1/2}\neq R_0=F_H^2F_D^2.
 \end{equation*}
-</div></article><article class="definition definition-like" id="definition-8"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel of a group homomorphism.</span>
-</h6>
-<p id="p-211">Let \(\phi\colon G\to H\) be a group homomorphism, and let \(e_H\) be the identity element for \(H\text{.}\) We write \(\ker(\phi)\) to denote the set</p>
-<div class="displaymath">
+</div>
+</div></article><article class="definition definition-like" id="definition-16"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel of a group homomorphism.</span>
+</h4>  <div class="para logical" id="p-216">
+<div class="para">Let <span class="process-math">\(\phi\colon G\to H\)</span> be a group homomorphism, and let <span class="process-math">\(e_H\)</span> be the identity element for <span class="process-math">\(H\text{.}\)</span> We write <span class="process-math">\(\ker(\phi)\)</span> to denote the set</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \ker(\phi) :=\phi^{-1}(e_H) = \{g\in G\colon \phi(g)=e_H\},
 \end{equation*}
 </div>
-<p class="continuation">called the <dfn class="terminology">kernel</dfn> of \(\phi\text{.}\)</p></article><article class="exercise exercise-like" id="kerneldefegexer"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-kerneldefegexer"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-kerneldefegexer"><article class="exercise exercise-like"><p id="p-212">Find the kernel of each of the following homomorphisms.</p>
+<div class="para">called the <dfn class="terminology">kernel</dfn> of <span class="process-math">\(\phi\text{.}\)</span>
+</div>
+</div></article><article class="exercise exercise-like" id="kerneldefegexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-kerneldefegexer"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-kerneldefegexer"><article class="exercise exercise-like"><div class="para logical" id="p-217">
+<div class="para">Find the kernel of each of the following homomorphisms.</div>
 <ul class="disc">
-<li id="li-123">\(\C^\ast\to \C^\ast\) given by \(z\to z^n\)</li>
-<li id="li-124">\(\Z_8\to \Z_8\) given by \(x\to 6x \pmod{8}\)</li>
-<li id="li-125">\(G\to G\text{,}\) \(G\) any group, given by \(x\to
-axa^{-1}\text{,}\) some fixed \(a\in G\)</li>
+<li id="li-161"><div class="para" id="p-derived-li-161">
+<span class="process-math">\(\C^\ast\to \C^\ast\)</span> given by <span class="process-math">\(z\to z^n\)</span>
+</div></li>
+<li id="li-162"><div class="para" id="p-derived-li-162">
+<span class="process-math">\(\Z_8\to \Z_8\)</span> given by <span class="process-math">\(x\to 6x \pmod{8}\)</span>
+</div></li>
+<li id="li-163"><div class="para" id="p-derived-li-163">
+<span class="process-math">\(G\to G\text{,}\)</span> <span class="process-math">\(G\)</span> any group, given by <span class="process-math">\(x\to
+axa^{-1}\text{,}\)</span> some fixed <span class="process-math">\(a\in G\)</span>
+</div></li>
 </ul>
+</div>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
-<li id="li-126">\(\displaystyle C_n\)</li>
-<li id="li-127">\(\displaystyle \langle 4\rangle = \{0,4\}\)</li>
-<li id="li-128">\(\displaystyle \{x\in G\colon axa^{-1}=e\}=C(a)\)</li>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><ol class="decimal">
+<li id="li-164"><div class="para" id="p-derived-li-164"><span class="process-math">\(\displaystyle C_n\)</span></div></li>
+<li id="li-165"><div class="para" id="p-derived-li-165"><span class="process-math">\(\displaystyle \langle 4\rangle = \{0,4\}\)</span></div></li>
+<li id="li-166"><div class="para" id="p-derived-li-166"><span class="process-math">\(\displaystyle \{e\}\)</span></div></li>
 </ol></div></div>
 </div></article></div>
-<article class="proposition theorem-like" id="homismbasicproperties"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of homomorphisms.</span>
-</h6>
-<p id="p-213">Let \(\phi\colon G\to H\) be a homomorphism of groups. Let \(e_G,e_H\) denote the identity elements of \(G,H\text{,}\) respectively. We have the following.</p>
+<article class="proposition theorem-like" id="homismbasicproperties"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of homomorphisms.</span>
+</h4>
+<div class="para logical" id="p-218">
+<div class="para">Let <span class="process-math">\(\phi\colon G\to H\)</span> be a homomorphism of groups. Let <span class="process-math">\(e_G,e_H\)</span> denote the identity elements of <span class="process-math">\(G,H\text{,}\)</span> respectively. We have the following.</div>
 <ol class="decimal">
-<li id="idtoid">(identity goes to identity) \(\phi(e_G) = e_H\)</li>
-<li id="invtoinv">(inverses go to inverses) \(\phi\left(g^{-1}\right)  = \left(\phi(g)\right)^{-1}\) for all \(g\in G\)</li>
-<li id="kerissubgp">\(\ker(\phi)\) is a subgroup of \(G\)</li>
-<li id="imissubgp">\(\phi(G)\) is a subgroup of \(H\)</li>
-<li id="preimiskercoset">(preimage sets are cosets of the kernel) \(\phi(x)=y\) if and only if \(\phi^{-1}(y) =
-x\ker(\phi)\)</li>
-<li id="imagesameiffkernelcosetsame">\(\phi(a)=\phi(b)\) if and only if \(a\ker(\phi)=b\ker(\phi)\)</li>
-<li id="injiffkertriv">\(\phi\) is one-to-one if and only if \(\ker(\phi)=\{e_G\}\)</li>
-</ol></article><article class="hiddenproof" id="proof-5"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof">See <a class="xref" data-knowl="./knowl/homismbasicpropertiesexer.html" title="Exercise Group 2.3.2.1–3: Basic properties of homomorphisms.">Exercise Group 2.3.2.1–3</a>.</article></div>
-<article class="proposition theorem-like" id="gmodkisgroup"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">\(G/K\) is a group if and only if \(K\) is a kernel.</span>
-</h6>
-<p id="p-214">Let \(K\) be a subgroup of a group \(G\text{.}\) The set \(G/K\) of cosets of \(K\) forms a group, called a <dfn class="terminology">quotient group</dfn> (or <dfn class="terminology">factor group</dfn>), under the operation</p>
-<div class="displaymath">
+<li id="idtoid"><div class="para" id="p-derived-idtoid">(identity goes to identity) <span class="process-math">\(\phi(e_G) = e_H\)</span>
+</div></li>
+<li id="invtoinv"><div class="para" id="p-derived-invtoinv">(inverses go to inverses) <span class="process-math">\(\phi\left(g^{-1}\right)  = \left(\phi(g)\right)^{-1}\)</span> for all <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li id="kerissubgp"><div class="para" id="p-derived-kerissubgp">
+<span class="process-math">\(\ker(\phi)\)</span> is a subgroup of <span class="process-math">\(G\)</span>
+</div></li>
+<li id="imissubgp"><div class="para" id="p-derived-imissubgp">
+<span class="process-math">\(\phi(G)\)</span> is a subgroup of <span class="process-math">\(H\)</span>
+</div></li>
+<li id="preimiskercoset"><div class="para" id="p-derived-preimiskercoset">(preimage sets are cosets of the kernel) <span class="process-math">\(\phi(x)=y\)</span> if and only if <span class="process-math">\(\phi^{-1}(y) =
+x\ker(\phi)\)</span>
+</div></li>
+<li id="imagesameiffkernelcosetsame"><div class="para" id="p-derived-imagesameiffkernelcosetsame">
+<span class="process-math">\(\phi(a)=\phi(b)\)</span> if and only if <span class="process-math">\(a\ker(\phi)=b\ker(\phi)\)</span>
+</div></li>
+<li id="injiffkertriv"><div class="para" id="p-derived-injiffkertriv">
+<span class="process-math">\(\phi\)</span> is one-to-one if and only if <span class="process-math">\(\ker(\phi)=\{e_G\}\)</span>
+</div></li>
+</ol>
+</div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof">See <a href="" class="xref" data-knowl="./knowl/homismbasicpropertiesexer.html" title="Exercise Group 2.4.2.1–3: Basic properties of homomorphisms.">Exercise Group 2.4.2.1–3</a>.</article></div>
+<article class="proposition theorem-like" id="gmodkisgroup"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(G/K\)</span> is a group if and only if <span class="process-math">\(K\)</span> is a kernel.</span>
+</h4>
+<div class="para logical" id="p-219">
+<div class="para">Let <span class="process-math">\(K\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> The set <span class="process-math">\(G/K\)</span> of cosets of <span class="process-math">\(K\)</span> forms a group, called a <dfn class="terminology">quotient group</dfn> (or <dfn class="terminology">factor group</dfn>), under the operation</div>
+<div class="displaymath process-math" id="multkernelcosets">
 \begin{equation}
-(xK)(yK) = xyK\label{multkernelcosets}\tag{2.3.1}
+(xK)(yK) = xyK\tag{2.4.1}
 \end{equation}
 </div>
-<p class="continuation">if and only if \(K\) is the kernel of a homomorphism \(G\to G'\) for some group \(G'\text{.}\)</p></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-215">See <a class="xref" data-knowl="./knowl/gmodkisgroupexer.html" title="Exercise 2.3.2.5">Exercise 2.3.2.5</a>.</p></article></div>
-<p id="p-216">Here is a corollary of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a> and its proof.</p>
-<article class="corollary theorem-like" id="firstisothm"><h6 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
-</h6>
-<p id="p-217">Let \(\phi\colon G\to H\) be a homomorphism of groups. Then \(G/\ker(\phi)\) is isomorphic to \(\phi(G)\) via the map \(g\ker(\phi) \to \phi(g)\text{.}\)</p></article><article class="definition definition-like" id="normalsubgroupdefn"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Normal subgroup.</span>
-</h6>
-<p id="p-218">A subgroup \(H\) of a group \(G\) is called <dfn class="terminology">normal</dfn> if \(ghg^{-1}\in H\) for every \(g\in G\text{,}\) \(h\in H\text{.}\) We write \(H\trianglelefteq G\) to indicate that \(H\) is a normal subgroup of \(G\text{.}\)</p></article><article class="proposition theorem-like" id="normalsubgroupcharacterization"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of normal subgroups.</span>
-</h6>
-<p id="p-219">Let \(K\) be a subgroup of a group \(G\text{.}\) The following are equivalent.</p>
+<div class="para">if and only if <span class="process-math">\(K\)</span> is the kernel of a homomorphism <span class="process-math">\(G\to G'\)</span> for some group <span class="process-math">\(G'\text{.}\)</span>
+</div>
+</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-220">See <a href="" class="xref" data-knowl="./knowl/gmodkisgroupexer.html" title="Exercise 2.4.2.5">Exercise 2.4.2.5</a>.</div></article></div>
+<div class="para" id="p-221">Here is a corollary of <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a> and its proof.</div>
+<article class="corollary theorem-like" id="firstisothm"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
+</h4>
+<div class="para" id="p-222">Let <span class="process-math">\(\phi\colon G\to H\)</span> be a homomorphism of groups. Then <span class="process-math">\(G/\ker(\phi)\)</span> is isomorphic to <span class="process-math">\(\phi(G)\)</span> via the map <span class="process-math">\(g\ker(\phi) \to \phi(g)\text{.}\)</span>
+</div></article><article class="definition definition-like" id="normalsubgroupdefn"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Normal subgroup.</span>
+</h4>  <div class="para" id="p-223">A subgroup <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is called <dfn class="terminology">normal</dfn> if <span class="process-math">\(ghg^{-1}\in H\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{.}\)</span> We write <span class="process-math">\(H\trianglelefteq G\)</span> to indicate that <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="normalsubgroupcharacterization"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of normal subgroups.</span>
+</h4>
+<div class="para logical" id="p-224">
+<div class="para">Let <span class="process-math">\(K\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> The following are equivalent.</div>
 <ol class="decimal">
-<li id="kernelprop">\(K\) is the kernel of some group homomorphism \(\phi\colon G\to H\)</li>
-<li id="quotientgpprop">\(G/K\) is a group with multiplication given by Equation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a>
-</li>
-<li id="normalprop">\(K\) is a normal subgroup of \(G\)</li>
-</ol></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">2.3.2</span> <span class="title">Exercises</span>
+<li id="kernelprop"><div class="para" id="p-derived-kernelprop">
+<span class="process-math">\(K\)</span> is the kernel of some group homomorphism <span class="process-math">\(\phi\colon G\to H\)</span>
+</div></li>
+<li id="quotientgpprop"><div class="para" id="p-derived-quotientgpprop">
+<span class="process-math">\(G/K\)</span> is a group with multiplication given by Equation <a href="" class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a>
+</div></li>
+<li id="normalprop"><div class="para" id="p-derived-normalprop">
+<span class="process-math">\(K\)</span> is a normal subgroup of <span class="process-math">\(G\)</span>
+</div></li>
+</ol>
+</div></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.4.2</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="homismbasicpropertiesexer">
-<h6 class="heading"><span class="title">Basic properties of homomorphisms.</span></h6>
-<div class="introduction" id="introduction-6">Prove <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.3.5: Basic properties of homomorphisms">Proposition 2.3.5</a>.</div>
+<h4 class="heading"><span class="title">Basic properties of homomorphisms..</span></h4>
+<div class="introduction" id="introduction-6">Prove <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="homismbasicpart1exer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-220">Prove Properties 1 and 2. </p></article><article class="exercise exercise-like" id="homismbasicpart2exer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-221">Prove Properties 3 and 4. </p></article><article class="exercise exercise-like" id="homismbasicpart3exer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-222">Prove Properties 5, 6, and 7. </p>
+<article class="exercise exercise-like" id="homismbasicpart1exer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-225">Prove Properties 1 and 2. </div></article><article class="exercise exercise-like" id="homismbasicpart2exer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-226">Prove Properties 3 and 4. </div></article><article class="exercise exercise-like" id="homismbasicpart3exer"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="p-227">Prove Properties 5, 6, and 7. </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-223">Use <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a>.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-228">Use <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.3.3: Construction of equivalence relations and partitions from functions">Fact 1.3.3</a>.</div></div></div>
 </div></article>
 </div>
 </div>
-<article class="commentary" id="commentary-52"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.1 (proof of Proposition 2.3.5, part 1).</span></h5>
-<p id="p-224">For Property 1, apply \(\phi\) to both sides of \(e_G=e_Ge_G\) to get \(\phi(e_G)=(\phi(e_G))^2\text{.}\) Now multiply both sides by \((\phi(e_G))^{-1}\) to get \(e_H=\phi(e_G)\text{.}\) For Property 2, apply \(\phi\) to both sides of \(gg^{-1}=e_G\) to get \(\phi(g)\phi(g^{-1})=e_H\) (using Property 1), so that we have \(\phi(g^{-1})=(\phi(g))^{-1}\text{.}\)</p></article><article class="commentary" id="commentary-53"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.2 (proof of Proposition 2.3.5, part 2).</span></h5>
-<p id="p-225">For Property 3, let \(a,b\) be elements of \(\ker(\phi)\text{.}\) Then \(\phi(ab)=\phi(a)\phi(b)=e_H\text{,}\) so \(ab\) is in \(\ker(\phi)\text{.}\) We also have \(e_H=(\phi(a))^{-1}=\phi(a^{-1})\) (by Property 2) so \(\ker(\phi)\) is closed under taking inverses. Also, \(\ker(\phi)\) is not empty (\(\ker(\phi)\) contains \(e_G\) by Property 1), so \(\ker(\phi)\) is a subgroup by the 2-step subgroup test. For Property 4, if \(\phi(x_1)=y_1\) and \(\phi(x_2)=y_2\) are in \(\phi(G)\text{,}\) then \(y_1y_2 = \phi(x_1)\phi(x_2)=
-\phi(x_1x_2)\text{,}\) so \(\phi(G)\) is closed under multiplication. Also, \(y_1^{-1}=(\phi(x_1))^{-1}=\phi(x_1^{-1})\) (by Property 2), so \(\phi(G)\) is closed under taking inverses. Finally, \(\phi(G)\) is not empty because it contains \(e_H\) (by Property 1), so \(\phi(G)\) passes the 2-step subgroup test.</p></article><article class="commentary" id="commentary-54"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.3 (proof of Proposition 2.3.5, part 3).</span></h5>
-<p id="p-226">For Property 5, suppose \(\phi(x)=y\text{.}\) If \(k\in
-\ker(\phi)\text{,}\) then \(\phi(xk)=
-\phi(x)\phi(k)=\phi(x)=y\) so \(\phi^{-1}(y)\) contains \(x\ker(\phi)\text{.}\) Conversely, if \(a\in \phi^{-1}(y)\text{,}\) then \(\phi(x^{-1}a)=\phi(x)^{-1}\phi(a)=y^{-1}y=e_H\text{,}\) so \(x^{-1}a\in \ker(\phi)\text{.}\) This implies \(a\in
-x\ker(\phi)\) by <a class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.2.9: Cosets as equivalence classes">Proposition 2.2.9</a>. For Property 6, apply Property 5 to conclude that \(\phi(a)=\phi(b)=c\) if and only if \(a\ker(\phi)=\phi{-1}(c)=b\ker(\phi)\text{.}\) For Property 7, observe that Property 6 implies that the kernel of \(\phi\) has more than one element if and only if \(\phi\) is not one-to-one.</p></article><article class="exercise exercise-like" id="isoinvisisoexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>Show that the inverse of an isomorphism is an isomorphism.</article><article class="commentary" id="commentary-55"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.4.</span></h5>
-<p id="p-227">An isomorphism is a bijection, so the inverse mapping is a bijection. We need to prove the inverse map is operation preserving. Let \(\phi\colon G\to H\) be an isomorphism of groups. Let \(a,b\) be elements in \(H\text{,}\) and let \(x=\phi^{-1}(a), y=\phi^{-1}(b)\text{.}\) Then</p>
-<div class="displaymath">
+<article class="commentary" id="commentary-49"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.1 (proof of Proposition 2.4.5, part 1).</span></h4>
+<div class="para" id="p-229">For Property 1, apply <span class="process-math">\(\phi\)</span> to both sides of <span class="process-math">\(e_G=e_Ge_G\)</span> to get <span class="process-math">\(\phi(e_G)=(\phi(e_G))^2\text{.}\)</span> Now multiply both sides by <span class="process-math">\((\phi(e_G))^{-1}\)</span> to get <span class="process-math">\(e_H=\phi(e_G)\text{.}\)</span> For Property 2, apply <span class="process-math">\(\phi\)</span> to both sides of <span class="process-math">\(gg^{-1}=e_G\)</span> to get <span class="process-math">\(\phi(g)\phi(g^{-1})=e_H\)</span> (using Property 1), so that we have <span class="process-math">\(\phi(g^{-1})=(\phi(g))^{-1}\text{.}\)</span>
+</div></article><article class="commentary" id="commentary-50"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.2 (proof of Proposition 2.4.5, part 2).</span></h4>
+<div class="para" id="p-230">For Property 3, let <span class="process-math">\(a,b\)</span> be elements of <span class="process-math">\(\ker(\phi)\text{.}\)</span> Then <span class="process-math">\(\phi(ab)=\phi(a)\phi(b)=e_H\text{,}\)</span> so <span class="process-math">\(ab\)</span> is in <span class="process-math">\(\ker(\phi)\text{.}\)</span> We also have <span class="process-math">\(e_H=(\phi(a))^{-1}=\phi(a^{-1})\)</span> (by Property 2) so <span class="process-math">\(\ker(\phi)\)</span> is closed under taking inverses. Also, <span class="process-math">\(\ker(\phi)\)</span> is not empty (<span class="process-math">\(\ker(\phi)\)</span> contains <span class="process-math">\(e_G\)</span> by Property 1), so <span class="process-math">\(\ker(\phi)\)</span> is a subgroup by the 2-step subgroup test. For Property 4, if <span class="process-math">\(\phi(x_1)=y_1\)</span> and <span class="process-math">\(\phi(x_2)=y_2\)</span> are in <span class="process-math">\(\phi(G)\text{,}\)</span> then <span class="process-math">\(y_1y_2 = \phi(x_1)\phi(x_2)=
+\phi(x_1x_2)\text{,}\)</span> so <span class="process-math">\(\phi(G)\)</span> is closed under multiplication. Also, <span class="process-math">\(y_1^{-1}=(\phi(x_1))^{-1}=\phi(x_1^{-1})\)</span> (by Property 2), so <span class="process-math">\(\phi(G)\)</span> is closed under taking inverses. Finally, <span class="process-math">\(\phi(G)\)</span> is not empty because it contains <span class="process-math">\(e_H\)</span> (by Property 1), so <span class="process-math">\(\phi(G)\)</span> passes the 2-step subgroup test.</div></article><article class="commentary" id="commentary-51"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.3 (proof of Proposition 2.4.5, part 3).</span></h4>
+<div class="para" id="p-231">For Property 5, suppose <span class="process-math">\(\phi(x)=y\text{.}\)</span> If <span class="process-math">\(k\in
+\ker(\phi)\text{,}\)</span> then <span class="process-math">\(\phi(xk)=
+\phi(x)\phi(k)=\phi(x)=y\)</span> so <span class="process-math">\(\phi^{-1}(y)\)</span> contains <span class="process-math">\(x\ker(\phi)\text{.}\)</span> Conversely, if <span class="process-math">\(a\in \phi^{-1}(y)\text{,}\)</span> then <span class="process-math">\(\phi(x^{-1}a)=\phi(x)^{-1}\phi(a)=y^{-1}y=e_H\text{,}\)</span> so <span class="process-math">\(x^{-1}a\in \ker(\phi)\text{.}\)</span> This implies <span class="process-math">\(a\in
+x\ker(\phi)\)</span> by <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>. For Property 6, apply Property 5 to conclude that <span class="process-math">\(\phi(a)=\phi(b)=c\)</span> if and only if <span class="process-math">\(a\ker(\phi)=\phi^{-1}(c)=b\ker(\phi)\text{.}\)</span> For Property 7, observe that Property 6 implies that the kernel of <span class="process-math">\(\phi\)</span> has more than one element if and only if <span class="process-math">\(\phi\)</span> is not one-to-one.</div></article><article class="exercise exercise-like" id="isoinvisisoexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>Show that the inverse of an isomorphism is an isomorphism.</article><article class="commentary" id="commentary-52"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.4.</span></h4>
+<div class="para logical" id="p-232">
+<div class="para">An isomorphism is a bijection, so the inverse mapping is a bijection. We need to prove the inverse map is operation preserving. Let <span class="process-math">\(\phi\colon G\to H\)</span> be an isomorphism of groups. Let <span class="process-math">\(a,b\)</span> be elements in <span class="process-math">\(H\text{,}\)</span> and let <span class="process-math">\(x=\phi^{-1}(a), y=\phi^{-1}(b)\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \phi^{-1}(ab)=
 \phi^{-1}(\phi(x)\phi(y))=\phi^{-1}(\phi(xy))=xy=\phi^{-1}(a)\phi^{-1}(b),
 \end{equation*}
 </div>
-<p class="continuation">as required.</p></article><article class="exercise exercise-like" id="gmodkisgroupexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-228">Prove <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a>.</p></article><article class="commentary" id="commentary-56"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.5 (proof of Proposition 2.3.6).</span></h5>
-<p id="p-229">For the "if" direction, let \(K=\ker(\phi)\) for some homomorphism \(\phi \colon G\to G'\) for some group \(G'\text{.}\) By  <a class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a> of <a class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.3.5: Basic properties of homomorphisms">Proposition 2.3.5</a>, we have a one-to-one correspondence \(G/K\leftrightarrow \phi(G)\text{.}\) The group structure of \(\phi(G)\) (see <a class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>) induces the group multiplication <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a> on \(G/K\text{.}\) For the "only if" direction, suppose \(G/K\) is a group under the operation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a>. Let \(\phi\colon G\to G/K\) be given by \(g\to gK\text{.}\) Then it is easy to check that \(K=\ker(\phi)\text{.}\)</p></article><article class="exercise exercise-like" id="autznexer"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-230">Let \(n,a\) be relatively prime positive integers. Show that the map \(\Z_n\to \Z_n\) given by \(x\to ax\) is an isomorphism.</p>
+<div class="para">as required.</div>
+</div></article><article class="exercise exercise-like" id="gmodkisgroupexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-233">Prove <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a>.</div></article><article class="commentary" id="commentary-53"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.5 (proof of Proposition 2.4.6).</span></h4>
+<div class="para" id="p-234">For the "if" direction, let <span class="process-math">\(K=\ker(\phi)\)</span> for some homomorphism <span class="process-math">\(\phi \colon G\to G'\)</span> for some group <span class="process-math">\(G'\text{.}\)</span> By  <a href="" class="xref" data-knowl="./knowl/imagesameiffkernelcosetsame.html" title="Item 6">Item 6</a> of <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>, we have a one-to-one correspondence <span class="process-math">\(G/K\leftrightarrow \phi(G)\text{.}\)</span> The group structure of <span class="process-math">\(\phi(G)\)</span> (see <a href="" class="xref" data-knowl="./knowl/imissubgp.html" title="Item 4">Item 4</a>) induces the group multiplication <a href="" class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> on <span class="process-math">\(G/K\text{.}\)</span> For the "only if" direction, suppose <span class="process-math">\(G/K\)</span> is a group under the operation <a href="" class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a>. Let <span class="process-math">\(\phi\colon G\to G/K\)</span> be given by <span class="process-math">\(g\to gK\text{.}\)</span> Then it is easy to check that <span class="process-math">\(K=\ker(\phi)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="autznexer"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-235">Let <span class="process-math">\(n,a\)</span> be relatively prime positive integers. Show that the map <span class="process-math">\(\Z_n\to \Z_n\)</span> given by <span class="process-math">\(x\to ax\)</span> is an isomorphism.</div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like">Use the fact that \(\gcd(m,n)\) is the least positive integer of the form \(sm+tn\) over all integers \(s,t\) (see <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.2.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.2.2.4</a>). Use this to solve \(ax=1 \pmod{n}\) when \(a,n\) are relatively prime.</div></div>
-</div></article><article class="commentary" id="commentary-57"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.6.</span></h5>
-<p id="p-231">Suppose \(\gcd(a,n)=1\text{.}\) Then there exist integers \(s,t\) such that \(sa+tn=1\text{.}\) Then we have \(as = 1-tn = 1\pmod{n}\text{,}\) so \(x=s \pmod{n}\) is a solution to \(ax=1 \pmod{n}\text{.}\) This give us an inverse mapping.</p>
-<div class="displaymath">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like">Use the fact that <span class="process-math">\(\gcd(m,n)\)</span> is the least positive integer of the form <span class="process-math">\(sm+tn\)</span> over all integers <span class="process-math">\(s,t\)</span> (see <a href="" class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \Z and \Z_n">Exercise 2.3.2.4</a>). Use this to solve <span class="process-math">\(ax=1 \pmod{n}\)</span> when <span class="process-math">\(a,n\)</span> are relatively prime.</div></div>
+</div></article><article class="commentary" id="commentary-54"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.6.</span></h4>
+<div class="para logical" id="p-236">
+<div class="para">Suppose <span class="process-math">\(\gcd(a,n)=1\text{.}\)</span> Then there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sa+tn=1\text{.}\)</span> Then we have <span class="process-math">\(as = 1-tn = 1\pmod{n}\text{,}\)</span> so <span class="process-math">\(x=s \pmod{n}\)</span> is a solution to <span class="process-math">\(ax=1 \pmod{n}\text{.}\)</span> This give us an inverse mapping.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \mu_a^{-1}=\mu_s
 \end{equation*}
 </div>
-<p class="continuation">We conclude that \(\mu_a\) is an isomorphism.</p>
-<p id="p-232"><em class="alert">More comprehensive version of the problem:</em> Show that \(\mu_a\colon \Z_n\to \Z_n\) given by \(\mu_a(x)=ax\) is an isomorphism if and only if \(n,a\) are relatively prime.</p>
-<p id="p-233"><em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like" id="claim-1"><h6 class="heading">
-<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
-</h6>\(\ker(\mu_a)=\left\langle
-\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</article> Here is how result follows from the Claim. If \(n,a\) are relatively prime, then \(\lcm(n,a)=na\text{,}\) so \(\lcm(n,a)/a=n\text{,}\) so \(\ker(\mu_a)=\{0\}\text{.}\) Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If \(n,a\) are not relatively prime, then \(\lcm(n,a)\lt
-na\text{,}\) and \(\lcm(n,a)/a\leq n\text{.}\) Then \(\ker(\mu_a)\) is not trivial. Now apply Property 7 of <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a> to conclude that \(\mu_a\) is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</p>
-<p id="p-234">Now we prove the Claim. Let \(b=\langle \lcm(a,n)/a\rangle\text{.}\) We have</p>
-<div class="displaymath">
+<div class="para">We conclude that <span class="process-math">\(\mu_a\)</span> is an isomorphism.</div>
+</div>
+<div class="para" id="p-237">
+<em class="alert">More comprehensive version of the problem:</em> Show that <span class="process-math">\(\mu_a\colon \Z_n\to \Z_n\)</span> given by <span class="process-math">\(\mu_a(x)=ax\)</span> is an isomorphism if and only if <span class="process-math">\(n,a\)</span> are relatively prime.</div>
+<div class="para" id="p-238">
+<em class="alert">Solution to the more comprehensive version of the problem.</em> We claim the following. <article class="claim theorem-like" id="claim-1"><h4 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
+</h4>
+<span class="process-math">\(\ker(\mu_a)=\left\langle
+\frac{\lcm(a,n)}{a}\right \rangle\text{.}\)</span></article> Here is how result follows from the Claim. If <span class="process-math">\(n,a\)</span> are relatively prime, then <span class="process-math">\(\lcm(n,a)=na\text{,}\)</span> so <span class="process-math">\(\lcm(n,a)/a=n\text{,}\)</span> so <span class="process-math">\(\ker(\mu_a)=\{0\}\text{.}\)</span> Now apply Property 7 of <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a>, together with the fact that for a mapping from a finite set to itself, the mapping is one-to-one if and only if the mapping is onto. If <span class="process-math">\(n,a\)</span> are not relatively prime, then <span class="process-math">\(\lcm(n,a)\lt
+na\text{,}\)</span> and <span class="process-math">\(\lcm(n,a)/a\leq n\text{.}\)</span> Then <span class="process-math">\(\ker(\mu_a)\)</span> is not trivial. Now apply Property 7 of <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a> to conclude that <span class="process-math">\(\mu_a\)</span> is <em class="emphasis">not</em> one-to-one, and therefore is not an isomorphism.</div>
+<div class="para logical" id="p-239">
+<div class="para">Now we prove the Claim. Let <span class="process-math">\(b=\langle \lcm(a,n)/a\rangle\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/subgpsofzexer.html">
 \begin{equation*}
 \mu_a(b)=ab = \lcm(a,n) = 0 \pmod{n}
 \end{equation*}
 </div>
-<p class="continuation">so \(b\in \ker(\mu_a)\text{.}\) If \(c\in \ker(\mu_a)\text{,}\) then \(\mu_a(c)=ac=kn\) for some integer \(k\text{.}\) Since \(kn\) is divisible by \(a\text{,}\) we have \(kn\geq \lcm(a,n)\text{,}\) so \(c\geq
-b\text{.}\) This shows \(b\) is the smallest positive element in \(\ker(\mu_a)\) (or \(b=0\)). Applying <a class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.2.2.4: Subgroups of \(\Z\) and \(\Z_n\)">Exercise 2.2.2.4</a>, we conclude the statement in the Claim.</p>
-<p id="p-235"><em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that \(b\in \ker(\mu_a)\text{.}\)</p></article><article class="exercise exercise-like" id="zmodnascnexer"><h6 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Another construction of \(\Z_n\).</span>
-</h6>
-<p id="p-236">Let \(n\geq 1\) be an integer and let \(\omega=e^{i2\pi/n}\text{.}\) Let \(\phi\colon
-\Z\to S^1\) be given by \(k\to \omega^k\text{.}\)</p>
+<div class="para">so <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span> If <span class="process-math">\(c\in \ker(\mu_a)\text{,}\)</span> then <span class="process-math">\(\mu_a(c)=ac=kn\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(kn\)</span> is divisible by <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(kn\geq \lcm(a,n)\text{,}\)</span> so <span class="process-math">\(c\geq
+b\text{.}\)</span> This shows <span class="process-math">\(b\)</span> is the smallest positive element in <span class="process-math">\(\ker(\mu_a)\)</span> (or <span class="process-math">\(b=0\)</span>). Applying <a href="" class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \Z and \Z_n">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</div>
+</div>
+<div class="para" id="p-240">
+<em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="zmodnascnexer"><h4 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Another construction of <span class="process-math">\(\Z_n\)</span>.</span>
+</h4>
+<div class="para logical" id="p-241">
+<div class="para">Let <span class="process-math">\(n\geq 1\)</span> be an integer and let <span class="process-math">\(\omega=e^{i2\pi/n}\text{.}\)</span> Let <span class="process-math">\(\phi\colon
+\Z\to S^1\)</span> be given by <span class="process-math">\(k\to \omega^k\text{.}\)</span>
+</div>
 <ol class="lower-alpha">
-<li id="li-139">Show that the the image of \(\phi\) is the group \(C_n\) of \(n\)th roots of unity.</li>
-<li id="li-140">Show that \(\phi\) is a homomorphism, and that the kernel of \(\phi\) is the set \(n\Z=\{nk\colon k\in \Z\}\text{.}\)</li>
-<li id="li-141">Conclude that \(\Z/\!(n\Z)\) is isomorphic to the group of \(n\)-th roots of unity.</li>
-</ol></article><article class="commentary" id="commentary-58"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.7.</span></h5>
-<ol id="p-237" class="lower-alpha">
-<li id="li-142">By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "rootsofunitygpfacts" missing or not unique]</code>, we have \(C_n=\{\omega^0,\ldots,\omega^{n-1}\}\text{,}\) so it is clear that \(C_n\subseteq \img(\phi)\text{.}\) Conversely, given \(k\in Z\text{,}\) write \(k=qn+r\) for some \(q\in \Z\) and \(0\leq r\leq n-1\text{.}\) Then we have \(\omega^k=\omega^r\text{.}\) Thus we have \(\img(\phi)\subseteq
-C_n\text{.}\) We conclude that \(\img(\phi)=C_n\text{,}\) as desired.</li>
-<li id="li-143">That \(\phi\) is a homomorphism is clear: we have \(\phi(a+b) =
-\omega^{a+b}=\omega^a\omega^b=\phi(a)\phi(b)\text{.}\) We have \(\omega^{kn}=\omega^0=1\) for all \(k\in \Z\text{,}\) so \(n\Z\subseteq \ker(\phi)\) Conversely, let \(k\in \Z\) and write \(k=nq+r\) as in the previous part, so that \(\omega^k=\omega^r\text{.}\) Since \(\omega^r=1\) if and only if \(r=0\) for \(0\leq r\leq n-1\text{,}\) we have \(\ker(\phi)\subseteq n\Z\text{.}\) We conclude that \(\ker(\phi)=n\Z\text{,}\) as desired.</li>
-<li id="li-144">By the First Isomorphism Theorem, we have \(\Z/(n\Z)\approx C_n\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="isogen2genexer"><h6 class="heading">
+<li id="li-177"><div class="para" id="p-derived-li-177">Show that the the image of <span class="process-math">\(\phi\)</span> is the group <span class="process-math">\(C_n\)</span> of <span class="process-math">\(n\)</span>th roots of unity.</div></li>
+<li id="li-178"><div class="para" id="p-derived-li-178">Show that <span class="process-math">\(\phi\)</span> is a homomorphism, and that the kernel of <span class="process-math">\(\phi\)</span> is the set <span class="process-math">\(n\Z=\{nk\colon k\in \Z\}\text{.}\)</span>
+</div></li>
+<li id="li-179"><div class="para" id="p-derived-li-179">Conclude that <span class="process-math">\(\Z/\!(n\Z)\)</span> is isomorphic to the group of <span class="process-math">\(n\)</span>-th roots of unity.</div></li>
+</ol>
+</div></article><article class="commentary" id="commentary-55"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.7.</span></h4>
+<div class="para logical" id="p-242"><ol class="lower-alpha">
+<li id="li-180"><div class="para" id="p-derived-li-180">By <a href="" class="xref" data-knowl="./knowl/rootsofunitygpfacts.html" title="Checkpoint 2.1.10">Checkpoint 2.1.10</a>, we have <span class="process-math">\(C_n=\{\omega^0,\ldots,\omega^{n-1}\}\text{,}\)</span> so it is clear that <span class="process-math">\(C_n\subseteq \img(\phi)\text{.}\)</span> Conversely, given <span class="process-math">\(k\in Z\text{,}\)</span> write <span class="process-math">\(k=qn+r\)</span> for some <span class="process-math">\(q\in \Z\)</span> and <span class="process-math">\(0\leq r\leq n-1\text{.}\)</span> Then we have <span class="process-math">\(\omega^k=\omega^r\text{.}\)</span> Thus we have <span class="process-math">\(\img(\phi)\subseteq
+C_n\text{.}\)</span> We conclude that <span class="process-math">\(\img(\phi)=C_n\text{,}\)</span> as desired.</div></li>
+<li id="li-181"><div class="para" id="p-derived-li-181">That <span class="process-math">\(\phi\)</span> is a homomorphism is clear: we have <span class="process-math">\(\phi(a+b) =
+\omega^{a+b}=\omega^a\omega^b=\phi(a)\phi(b)\text{.}\)</span> We have <span class="process-math">\(\omega^{kn}=\omega^0=1\)</span> for all <span class="process-math">\(k\in \Z\text{,}\)</span> so <span class="process-math">\(n\Z\subseteq \ker(\phi)\)</span> Conversely, let <span class="process-math">\(k\in \Z\)</span> and write <span class="process-math">\(k=nq+r\)</span> as in the previous part, so that <span class="process-math">\(\omega^k=\omega^r\text{.}\)</span> Since <span class="process-math">\(\omega^r=1\)</span> if and only if <span class="process-math">\(r=0\)</span> for <span class="process-math">\(0\leq r\leq n-1\text{,}\)</span> we have <span class="process-math">\(\ker(\phi)\subseteq n\Z\text{.}\)</span> We conclude that <span class="process-math">\(\ker(\phi)=n\Z\text{,}\)</span> as desired.</div></li>
+<li id="li-182"><div class="para" id="p-derived-li-182">By the First Isomorphism Theorem, we have <span class="process-math">\(\Z/(n\Z)\approx C_n\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="isogen2genexer"><h4 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Isomorphic images of generators are generators.</span>
-</h6>
-<p id="p-238">Let \(S\) be a subset of a group \(G\text{.}\) Let \(\phi\colon	G\to H\) be an isomorphism of groups, and let \(\phi(S)=\{\phi(s)\colon s\in S\}\text{.}\) Show that \(\phi(\langle S\rangle)=\langle \phi(S)\rangle\text{.}\)</p></article><article class="commentary" id="commentary-59"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.8.</span></h5>
-<p id="p-239">Elements of \(\phi(\langle S\rangle)\) have the form \(\phi(s_1s_2\cdots s_k)\) for some \(s_i\in S\cup
-S^{-1}\text{.}\) Elements of \(\langle \phi(S) \rangle\) have the form \(\phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\) The result follows from the fact that \(\phi(s_1s_2\cdots s_k) = \phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\)</p></article><article class="exercise exercise-like" id="conjugationexer"><h6 class="heading">
+</h4>
+<div class="para" id="p-243">Let <span class="process-math">\(S\)</span> be a subset of a group <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(\phi\colon	G\to H\)</span> be an isomorphism of groups, and let <span class="process-math">\(\phi(S)=\{\phi(s)\colon s\in S\}\text{.}\)</span> Show that <span class="process-math">\(\phi(\langle S\rangle)=\langle \phi(S)\rangle\text{.}\)</span>
+</div></article><article class="commentary" id="commentary-56"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.8.</span></h4>
+<div class="para" id="p-244">Elements of <span class="process-math">\(\phi(\langle S\rangle)\)</span> have the form <span class="process-math">\(\phi(s_1s_2\cdots s_k)\)</span> for some <span class="process-math">\(s_i\in S\cup
+S^{-1}\text{.}\)</span> Elements of <span class="process-math">\(\langle \phi(S) \rangle\)</span> have the form <span class="process-math">\(\phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\)</span> The result follows from the fact that <span class="process-math">\(\phi(s_1s_2\cdots s_k) = \phi(s_1)\phi(s_2)\cdots \phi(s_k)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="conjugationexer"><h4 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Conjugation.</span>
-</h6>
-<p id="p-240">Let \(G\) be a group, let \(a\) be an element of \(G\text{,}\) and let \(C_a\colon G\to G\) be given by \(C_a(g)=aga^{-1}\text{.}\) The map \(C_a\) is called <dfn class="terminology">conjugation</dfn> by the element \(a\)  and the elements \(g,aga^{-1}\) are said to be <dfn class="terminology">conjugate</dfn> to one another.</p>
+</h4>
+<div class="para logical" id="p-245">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group, let <span class="process-math">\(a\)</span> be an element of <span class="process-math">\(G\text{,}\)</span> and let <span class="process-math">\(C_a\colon G\to G\)</span> be given by <span class="process-math">\(C_a(g)=aga^{-1}\text{.}\)</span> The map <span class="process-math">\(C_a\)</span> is called <dfn class="terminology">conjugation</dfn> by the element <span class="process-math">\(a\)</span>  and the elements <span class="process-math">\(g,aga^{-1}\)</span> are said to be <dfn class="terminology">conjugate</dfn> to one another.</div>
 <ol class="lower-alpha">
-<li id="li-145"><p id="p-241">Show that \(C_a\) is an isomorphism of \(G\) with itself.</p></li>
-<li id="li-146"><p id="p-242">Show that "is conjugate to" is an equivalence relation. That is, consider the relation on \(G\) given by \(x\sim y\) if \(y=C_a(x)\) for some \(a\text{.}\) Show that this is an equivalence relation.</p></li>
-</ol></article><article class="commentary" id="commentary-60"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.9.</span></h5>
-<ol id="p-243" class="lower-alpha">
-<li id="li-147">
-<p id="p-244">Since we've already shown that conjugation is a homomorphism (see <a class="xref" data-knowl="./knowl/homismdefegexer.html" title="Checkpoint 2.3.2">Checkpoint 2.3.2</a>), it is enough to show that \(C_a\) is bijective. We claim that  \(C_{a^{-1}}=(C_a)^{-1}\text{.}\) Indeed, we have</p>
-<div class="displaymath">
+<li id="li-183"><div class="para" id="p-246">Show that <span class="process-math">\(C_a\)</span> is an isomorphism of <span class="process-math">\(G\)</span> with itself.</div></li>
+<li id="li-184"><div class="para" id="p-247">Show that "is conjugate to" is an equivalence relation. That is, consider the relation on <span class="process-math">\(G\)</span> given by <span class="process-math">\(x\sim y\)</span> if <span class="process-math">\(y=C_a(x)\)</span> for some <span class="process-math">\(a\text{.}\)</span> Show that this is an equivalence relation.</div></li>
+</ol>
+</div></article><article class="commentary" id="commentary-57"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.9.</span></h4>
+<div class="para logical" id="p-248"><ol class="lower-alpha">
+<li id="li-185"><div class="para logical" id="p-249">
+<div class="para">Since we've already shown that conjugation is a homomorphism (see <a href="" class="xref" data-knowl="./knowl/homismdefegexer.html" title="Checkpoint 2.4.2">Checkpoint 2.4.2</a>), it is enough to show that <span class="process-math">\(C_a\)</span> is bijective. We claim that  <span class="process-math">\(C_{a^{-1}}=(C_a)^{-1}\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismdefegexer.html">
 \begin{equation*}
 C_{a^{-1}}(C_a(g))=a^{-1}(aga^{-1})(a^{-1})^{-1} = (aa^{-1})g(a^{-1}a)=g
 \end{equation*}
 </div>
-<p class="continuation">so \(C_{a^{-1}}\circ C_a=\Id\text{.}\) Similarly, we have \(C_a\circ
-C_{a^{-1}}=\Id\text{,}\) so we conclude that \(C_{a^{-1}}=(C_a)^{-1}\text{.}\)</p>
-</li>
-<li id="li-148"><p id="p-245">Apply <a class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a> to \(X=Y=G\text{,}\) \(f=C_a\text{.}\)</p></li>
-</ol></article><article class="exercise exercise-like" id="isoisequivrel"><h6 class="heading">
+<div class="para">so <span class="process-math">\(C_{a^{-1}}\circ C_a=\Id\text{.}\)</span> Similarly, we have <span class="process-math">\(C_a\circ
+C_{a^{-1}}=\Id\text{,}\)</span> so we conclude that <span class="process-math">\(C_{a^{-1}}=(C_a)^{-1}\text{.}\)</span>
+</div>
+</div></li>
+<li id="li-186"><div class="para" id="p-250">For reflexivity, we have <span class="process-math">\(C_{e}(x) = exe^{-1}=x\text{,}\)</span> so <span class="process-math">\(x\sim
+x\)</span> for all <span class="process-math">\(x\text{.}\)</span> For symmetry, if <span class="process-math">\(y=C_a(x)=axa^{-1}\text{,}\)</span> then <span class="process-math">\(C_{a^{-1}}(y)=a^{-1}ya=x\text{,}\)</span> so <span class="process-math">\(x\sim y\)</span> implies <span class="process-math">\(y\sim x\text{.}\)</span> For transitivity, if <span class="process-math">\(C_a(x)=y\)</span> and <span class="process-math">\(C_b(y)=z\text{,}\)</span> then <span class="process-math">\(C_{ba}(x)=baxa^{-1}b^{-1}=byb^{-1}=z\text{,}\)</span> so if <span class="process-math">\(x\sim
+y\)</span> and <span class="process-math">\(y\sim z\text{,}\)</span> then <span class="process-math">\(x\sim z\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="isoisequivrel"><h4 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Isomorphism induces an equivalence relation.</span>
-</h6>
-<p id="p-246">Prove that "is isomorphic to" is an equivalence relation on groups. That is, consider the relation \(\approx\) on the set of all groups, given by \(G\approx H\) if there exists a group isomorphism \(\phi\colon G\to H\text{.}\) Show that this is an equivalence relation.</p></article><article class="commentary" id="commentary-61"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.10.</span></h5>
-<p id="p-247">For reflexivity, notice that \(\Id\colon G\to G\) is an isomorphism for any group \(G\text{.}\) For symmetry, suppose \(\phi\colon G\to H\) is an isomorphism. By <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.3.2.4">Exercise 2.3.2.4</a>, \(\phi^{-1}\colon
-H\to G\) is also an isomorphism. For transitivity, suppose \(\phi\colon G\to H\text{,}\) \(\psi\colon H\to K\) are isomorphisms. For \(g,g'\in G\text{,}\) we have</p>
-<div class="displaymath">
+</h4>
+<div class="para" id="p-251">Prove that "is isomorphic to" is an equivalence relation on groups. That is, consider the relation <span class="process-math">\(\approx\)</span> on the set of all groups, given by <span class="process-math">\(G\approx H\)</span> if there exists a group isomorphism <span class="process-math">\(\phi\colon G\to H\text{.}\)</span> Show that this is an equivalence relation.</div></article><article class="commentary" id="commentary-58"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.10.</span></h4>
+<div class="para logical" id="p-252">
+<div class="para">For reflexivity, notice that <span class="process-math">\(\Id\colon G\to G\)</span> is an isomorphism for any group <span class="process-math">\(G\text{.}\)</span> For symmetry, suppose <span class="process-math">\(\phi\colon G\to H\)</span> is an isomorphism. By <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a>, <span class="process-math">\(\phi^{-1}\colon
+H\to G\)</span> is also an isomorphism. For transitivity, suppose <span class="process-math">\(\phi\colon G\to H\text{,}\)</span> <span class="process-math">\(\psi\colon H\to K\)</span> are isomorphisms. For <span class="process-math">\(g,g'\in G\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoinvisisoexer.html">
 \begin{equation*}
 (\psi\circ \phi)(gg') =
 \psi(\phi(gg'))=\psi(\phi(g)\phi(g')=\psi(\phi(g))\psi(\phi(g'))=(\psi\circ
 \phi)(g)(\psi\circ \phi)(g')
 \end{equation*}
 </div>
-<p class="continuation">so \(\psi\) is a homomorphism. Since \(\phi,\psi\) are bijective, so is \(\psi\circ \phi\text{.}\) Thus we have \(G\approx
-K\) by the isomorphism \(\psi\circ \phi\text{.}\)</p></article><div class="exercisegroup" id="normalsubgroupcharacterizationexer">
-<h6 class="heading"><span class="title">Characterization of normal subgroups.</span></h6>
-<div class="introduction" id="introduction-7">Prove <a class="xref" data-knowl="./knowl/normalsubgroupcharacterization.html" title="Proposition 2.3.9: Characterization of normal subgroups">Proposition 2.3.9</a>. That <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> is equivalent to <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a> is established by <a class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.3.6: \(G/K\) is a group if and only if \(K\) is a kernel">Proposition 2.3.6</a>.</div>
+<div class="para">so <span class="process-math">\(\psi\)</span> is a homomorphism. Since <span class="process-math">\(\phi,\psi\)</span> are bijective, so is <span class="process-math">\(\psi\circ \phi\text{.}\)</span> Thus we have <span class="process-math">\(G\approx
+K\)</span> by the isomorphism <span class="process-math">\(\psi\circ \phi\text{.}\)</span>
+</div>
+</div></article><div class="exercisegroup" id="normalsubgroupcharacterizationexer">
+<h4 class="heading"><span class="title">Characterization of normal subgroups..</span></h4>
+<div class="introduction" id="introduction-7">Prove <a href="" class="xref" data-knowl="./knowl/normalsubgroupcharacterization.html" title="Proposition 2.4.9: Characterization of normal subgroups">Proposition 2.4.9</a>. That <a href="" class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> is equivalent to <a href="" class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a> is established by <a href="" class="xref" data-knowl="./knowl/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition 2.4.6</a>.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="oneimpliesthree"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-248">Show that <a class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a>.</p></article><article class="exercise exercise-like" id="threeimpliestwo"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-249">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a>. The messy part of this proof is to show that multiplication of cosets is well-defined. This means you start by supposing that \(xK=x'K\) and \(yK=y'K\text{,}\) then show that \(xyK=x'y'K\text{.}\)</p></article><article class="exercise exercise-like" id="morenormalcharexer"><h6 class="heading">
+<article class="exercise exercise-like" id="oneimpliesthree"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="para" id="p-253">Show that <a href="" class="xref" data-knowl="./knowl/kernelprop.html" title="Item 1">Item 1</a> implies <a href="" class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a>.</div></article><article class="exercise exercise-like" id="threeimpliestwo"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="para" id="p-254">Show that <a href="" class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> implies <a href="" class="xref" data-knowl="./knowl/quotientgpprop.html" title="Item 2">Item 2</a>. The messy part of this proof is to show that multiplication of cosets is well-defined. This means you start by supposing that <span class="process-math">\(xK=x'K\)</span> and <span class="process-math">\(yK=y'K\text{,}\)</span> then show that <span class="process-math">\(xyK=x'y'K\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="morenormalcharexer"><h5 class="heading">
 <span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Further characterizations of normal subgroups.</span>
-</h6>
-<p id="p-250">Show that <a class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> is equivalent to the following conditions.</p>
+</h5>
+<div class="para logical" id="p-255">
+<div class="para">Show that <a href="" class="xref" data-knowl="./knowl/normalprop.html" title="Item 3">Item 3</a> is equivalent to the following conditions.</div>
 <ol class="lower-alpha">
-<li id="li-149">\(gKg^{-1}= K\) for all \(g\in G\)</li>
-<li id="li-150">\(gK = Kg\) for all \(g\in G\)</li>
-</ol></article>
+<li id="li-187"><div class="para" id="p-derived-li-187">
+<span class="process-math">\(gKg^{-1}= K\)</span> for all <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li id="li-188"><div class="para" id="p-derived-li-188">
+<span class="process-math">\(gK = Kg\)</span> for all <span class="process-math">\(g\in G\)</span>
+</div></li>
+</ol>
+</div></article>
 </div>
 </div>
-<article class="commentary" id="commentary-62"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.11.</span></h5>
-<p id="p-251">Let \(K\) be the kernel of \(\phi\colon G\to
-H\text{.}\) Let \(g\in G\) and let \(k\in K\text{.}\) Then we have</p>
-<div class="displaymath">
+<article class="commentary" id="commentary-59"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.11.</span></h4>
+<div class="para logical" id="p-256">
+<div class="para">Let <span class="process-math">\(K\)</span> be the kernel of <span class="process-math">\(\phi\colon G\to
+H\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and let <span class="process-math">\(k\in K\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \phi(gkg^{-1})=\phi(g)\phi(k)\phi(g)^{-1}=e_H
 \end{equation*}
 </div>
-<p class="continuation">so \(gkg^{-1}\in K\text{.}\)</p></article><article class="commentary" id="commentary-63"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.12.</span></h5>
-<p id="p-252">Suppose that \(K\) is a normal subgroup of \(G\text{.}\) We just need to show that the multiplication given by Equation <a class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.3.1">(2.3.1)</a> is well-defined. Suppose that \(xK=x'K\) and \(yK=y'K\text{.}\) First write \(x'=xk_1\) and \(y'=yk_2\) for some \(k_1,k_2\in K\text{.}\) Finally, let \(k_4=y^{-1}k_1y\text{,}\) and note that \(k_4\in K\) by the assumption of normality. Now let \(x'y'k_3\) be an element of \(x'y'K\text{.}\) Then</p>
-<div class="displaymath">
+<div class="para">so <span class="process-math">\(gkg^{-1}\in K\text{.}\)</span>
+</div>
+</div></article><article class="commentary" id="commentary-60"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.12.</span></h4>
+<div class="para logical" id="p-257">
+<div class="para">Suppose that <span class="process-math">\(K\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span> We just need to show that the multiplication given by Equation <a href="" class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> is well-defined. Suppose that <span class="process-math">\(xK=x'K\)</span> and <span class="process-math">\(yK=y'K\text{.}\)</span> First write <span class="process-math">\(x'=xk_1\)</span> and <span class="process-math">\(y'=yk_2\)</span> for some <span class="process-math">\(k_1,k_2\in K\text{.}\)</span> Finally, let <span class="process-math">\(k_4=y^{-1}k_1y\text{,}\)</span> and note that <span class="process-math">\(k_4\in K\)</span> by the assumption of normality. Now let <span class="process-math">\(x'y'k_3\)</span> be an element of <span class="process-math">\(x'y'K\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/multkernelcosets.html">
 \begin{equation*}
 x'y'k_3=xk_1yk_2k_3=x(yk_4y^{-1})yk_2k_3=(xy)k_4(y^{-1}y)k_2k_3=xy(k_4k_2k_3)
 \end{equation*}
 </div>
-<p class="continuation">which is in \(xyK\text{,}\) as required. This proves \(x'y'K\subseteq
-xyK\text{.}\) A similar argument shows containment in the other direction.</p></article><article class="commentary" id="commentary-64"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.13.</span></h5>
-<ol id="p-253" class="lower-alpha">
-<li id="li-151">Let \(g\in G\text{.}\) We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.3.2.10: Isomorphism induces an equivalence relation">Exercise 2.3.2.10</a> that \(C_g\colon
-G\to G\) is an isomorphism. By the definition of normality, \(C_g\) restricts to a map from \(K\) to itself. This restriction must also be an isomorphism (with inverse \(C_{g^{-1}}\)), so \(C_g(K)=K\text{,}\) or, said another way, \(gKg^{-1}=K\text{.}\)</li>
-<li id="li-152">Part (a) says that for all \(k\in K\text{,}\) we have \(gkg^{-1}=k'\) for some \(k'\in K\text{.}\) This is the same as \(gk=k'g\text{.}\) That this holds for all \(k\in
-K\) means that \(gK\subseteq Kg\text{.}\) A similar argument shows that \(Kg\subseteq gK\text{.}\) We conclude that \(gK=Kg\text{.}\)</li>
-</ol></article><article class="exercise exercise-like" id="automorphismexer"><h6 class="heading">
+<div class="para">which is in <span class="process-math">\(xyK\text{,}\)</span> as required. This proves <span class="process-math">\(x'y'K\subseteq
+xyK\text{.}\)</span> A similar argument shows containment in the other direction.</div>
+</div></article><article class="commentary" id="commentary-61"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.13.</span></h4>
+<div class="para logical" id="p-258"><ol class="lower-alpha">
+<li id="li-189"><div class="para" id="p-derived-li-189">Let <span class="process-math">\(g\in G\text{.}\)</span> We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that <span class="process-math">\(C_g\colon
+G\to G\)</span> is an isomorphism. By the definition of normality, <span class="process-math">\(C_g\)</span> restricts to a map from <span class="process-math">\(K\)</span> to itself. This restriction must also be an isomorphism (with inverse <span class="process-math">\(C_{g^{-1}}\)</span>), so <span class="process-math">\(C_g(K)=K\text{,}\)</span> or, said another way, <span class="process-math">\(gKg^{-1}=K\text{.}\)</span>
+</div></li>
+<li id="li-190"><div class="para" id="p-derived-li-190">Part (a) says that for all <span class="process-math">\(k\in K\text{,}\)</span> we have <span class="process-math">\(gkg^{-1}=k'\)</span> for some <span class="process-math">\(k'\in K\text{.}\)</span> This is the same as <span class="process-math">\(gk=k'g\text{.}\)</span> That this holds for all <span class="process-math">\(k\in
+K\)</span> means that <span class="process-math">\(gK\subseteq Kg\text{.}\)</span> A similar argument shows that <span class="process-math">\(Kg\subseteq gK\text{.}\)</span> We conclude that <span class="process-math">\(gK=Kg\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="automorphismexer"><h4 class="heading">
 <span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">Automorphisms.</span>
-</h6>
-<p id="p-254">Let \(G\) be a group. An <dfn class="terminology">automorphism</dfn> of \(G\) is an isomorphism from \(G\) to itself. The set of all automorphisms of \(G\) is denoted \(\Aut(G)\).</p>
+</h4>
+<div class="para logical" id="p-259">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group. An <dfn class="terminology">automorphism</dfn> of <span class="process-math">\(G\)</span> is an isomorphism from <span class="process-math">\(G\)</span> to itself. The set of all automorphisms of <span class="process-math">\(G\)</span> is denoted <span class="process-math">\(\Aut(G)\)</span>.</div>
 <ol class="lower-alpha">
-<li id="li-153"><p id="p-255">Show that \(\Aut(G)\) is a group under the operation of function composition.</p></li>
-<li id="li-154">
-<p id="p-256">Show that</p>
-<div class="displaymath">
+<li id="li-191"><div class="para" id="p-260">Show that <span class="process-math">\(\Aut(G)\)</span> is a group under the operation of function composition.</div></li>
+<li id="li-192"><div class="para logical" id="p-261">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \Inn(G) := \{C_g\colon g\in
 G\}
 \end{equation*}
 </div>
-<p class="continuation"> is a subgroup of  \(\Aut(G)\text{.}\) (The group \(\Inn(G)\) is called the group of <dfn class="terminology">inner automorphisms</dfn> of \(G\text{.}\))</p>
-</li>
-<li id="li-155"><p id="p-257">Find an example of an automorphism of a group that is not an inner automorphism.</p></li>
-</ol></article><article class="commentary" id="commentary-65"><h5 class="heading"><span class="title">Instructor's solution for Exercise 2.3.2.14.</span></h5>
-<ol id="p-258" class="lower-alpha">
-<li id="li-156"><p id="p-259">We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.3.2.10: Isomorphism induces an equivalence relation">Exercise 2.3.2.10</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.3.2.4">Exercise 2.3.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for \(\Aut(G)\text{.}\)</p></li>
-<li id="li-157">
-<p id="p-260">We will use the 2-step subgroup test. First, \(\Inn(G)\) contains the identity map \(C_e\colon G\to G\text{,}\) so \(\Inn(G)\) is not empty. Given \(g,h\) in \(G\text{,}\) we have</p>
-<div class="displaymath">
+<div class="para"> is a subgroup of  <span class="process-math">\(\Aut(G)\text{.}\)</span> (The group <span class="process-math">\(\Inn(G)\)</span> is called the group of <dfn class="terminology">inner automorphisms</dfn> of <span class="process-math">\(G\text{.}\)</span>)</div>
+</div></li>
+<li id="li-193"><div class="para" id="p-262">Find an example of an automorphism of a group that is not an inner automorphism.</div></li>
+</ol>
+</div></article><article class="commentary" id="commentary-62"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.14.</span></h4>
+<div class="para logical" id="p-263"><ol class="lower-alpha">
+<li id="li-194"><div class="para" id="p-264">We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for <span class="process-math">\(\Aut(G)\text{.}\)</span>
+</div></li>
+<li id="li-195"><div class="para logical" id="p-265">
+<div class="para">We will use the 2-step subgroup test. First, <span class="process-math">\(\Inn(G)\)</span> contains the identity map <span class="process-math">\(C_e\colon G\to G\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is not empty. Given <span class="process-math">\(g,h\)</span> in <span class="process-math">\(G\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoisequivrel.html">
 \begin{equation*}
 (C_g\circ C_h)(x) = C_g(C_h(x))=g(hxh^{-1})g^{-1}=
 (gh)x(gh)^{-1}=C_{gh}(x)
 \end{equation*}
 </div>
-<p class="continuation">so \(\Inn(G)\) is closed under composition. We showed in <a class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.3.2.10: Isomorphism induces an equivalence relation">Exercise 2.3.2.10</a> that \((C_g)^{-1}=C_{g^{-1}}\text{,}\) so \(\Inn(G)\) is closed under inversion. This completes the 2-step subgroup test, and we conclude that \(\Inn(G)\) is a subgroup of \(\Aut(G)\text{.}\)</p>
-</li>
-<li id="li-158"><p id="p-261">One example is complex conjugation on \(\C^\ast\text{.}\) Any nontrivial automorphism of an Abelian group is an example, because conjugation by any element is the identity. So, for example, \(\mu_2\colon \Z_5\to \Z_5\) given by \(\mu_2(x)=2x\) works.</p></li>
-</ol></article></section></section></div></main>
+<div class="para">so <span class="process-math">\(\Inn(G)\)</span> is closed under composition. We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that <span class="process-math">\((C_g)^{-1}=C_{g^{-1}}\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is closed under inversion. This completes the 2-step subgroup test, and we conclude that <span class="process-math">\(\Inn(G)\)</span> is a subgroup of <span class="process-math">\(\Aut(G)\text{.}\)</span>
+</div>
+</div></li>
+<li id="li-196"><div class="para" id="p-266">One example is complex conjugation on <span class="process-math">\(\C^\ast\text{.}\)</span> Any nontrivial automorphism of an Abelian group is an example, because conjugation by any element is the identity. So, for example, <span class="process-math">\(\mu_2\colon \Z_5\to \Z_5\)</span> given by <span class="process-math">\(\mu_2(x)=2x\)</span> works.</div></li>
+</ol></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="subgroups_cosets_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-8.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

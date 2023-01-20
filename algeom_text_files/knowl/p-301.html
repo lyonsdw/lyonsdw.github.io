@@ -11,14 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let group <span class="process-math">\(G\)</span> act on set <span class="process-math">\(X\text{.}\)</span> The collection of orbits is a partition of <span class="process-math">\(X\text{.}\)</span> The corresponding equivalence relation <span class="process-math">\(\sim_G\)</span> on <span class="process-math">\(X\)</span> is given by <span class="process-math">\(x\sim_G y\)</span> if and only if <span class="process-math">\(y=gx\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> We write <span class="process-math">\(X/G\)</span> to denote the set of orbits, which is the same as the set <span class="process-math">\(X/\!\!\sim_G\)</span> of equivalence classes.</div>
-<div class="displaymath process-math">
+<div class="para">We use the 2-step subgroup test. First, note that <span class="process-math">\(\Stab(x)\)</span> is not empty, because <span class="process-math">\(\Stab(x)\)</span> contains <span class="process-math">\(e_G\)</span> (the action <span class="process-math">\(G\to \Perm(X)\)</span> is a group homomorphism, so <span class="process-math">\(e_G\)</span> must go to the identity transformation on <span class="process-math">\(X\)</span> by Property 1 of <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>). Now suppose <span class="process-math">\(g,h\in
+\Stab(x)\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
 \begin{equation*}
-X/G=\{\Orb(x)\colon x\in X\}
+(gh)(x)=g(hx)=gx=x
 \end{equation*}
 </div>
+<div class="para">so <span class="process-math">\(gh\in \Stab(x)\text{.}\)</span> Also, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
+\begin{equation*}
+x=(g^{-1}g)x
+=g^{-1}(gx)=g^{-1}x\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(g^{-1}\in \Stab(x)\text{.}\)</span> This completes the proof.</div>
 </div>
 <span class="incontext"><a href="section-9.html#p-301" class="internal">in-context</a></span>
 </body>

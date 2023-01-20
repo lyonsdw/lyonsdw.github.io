@@ -11,25 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To facilitate thinking about the interplay between the projective geometry <span class="process-math">\(\Proj(\F^{n+1})=\F\Proj_n\)</span> and the geometry of <span class="process-math">\(\F^{n}\)</span> (rather than <span class="process-math">\(\F^{n+1}\text{!}\)</span>) it is useful to have a careful definition for "taking inhomogeneous coordinates in position <span class="process-math">\(i\)</span>". Here it is: Let <span class="process-math">\(U_i\)</span> be the subset of <span class="process-math">\(\F\Proj_n\)</span> of points whose homogeneous coordinate <span class="process-math">\(x_i\)</span> is nonzero. Let <span class="process-math">\(\pi_i\colon U_i\to
-\F^n\)</span> be given by</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(P_0,P_1,P_2,\ldots,P_{n+1}\)</span> be a set of <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> such that all subsets of size <span class="process-math">\(n+1\)</span> are in general position. Let <span class="process-math">\(v_0,v_1,v_2,\ldots,v_{n+1}\)</span> be vectors in <span class="process-math">\(\F^{n+1}\)</span> such that <span class="process-math">\(P_i=[v_i]\text{.}\)</span> By assumption, the points <span class="process-math">\(P_1,P_2,\ldots,P_{n+1}\)</span> are in general position, so the vectors <span class="process-math">\(v_1,v_2,\ldots,v_{n+1}\)</span> are independent and form a basis of <span class="process-math">\(\F^{n+1}\text{.}\)</span> Let <span class="process-math">\(c_1,c_2,\ldots,c_{n+1}\)</span> be scalars such that <span class="process-math">\(v_0=\sum_{i=1}^{n+1}c_iv_i\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, there is a unique projective transformation <span class="process-math">\(T\)</span> that maps <span class="process-math">\([e_i]\to
+P_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the same argument, there is a unique projective transformation <span class="process-math">\(S\)</span> that maps <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> It follows that the projective transformation <span class="process-math">\(S\circ T^{-1}\)</span> maps <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> For uniqueness, suppose there are two projective maps, say <span class="process-math">\(U,V\)</span> that map <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq
+n+1\text{.}\)</span> It then follows that <span class="process-math">\(U\circ T, V\circ T\)</span> both map <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the uniqueness statement in <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, we have <span class="process-math">\(U\circ T=V\circ T\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fundthmprojgeomlemma.html ./knowl/fundthmprojgeomlemma.html">
 \begin{equation*}
-[x_0,x_1,x_2,\ldots x_{i-1},x_i,x_{i+1},\ldots,x_n]
-\to  \left(\frac{x_0}{x_i},\frac{x_1}{x_i},\frac{x_2}{x_i},\ldots
-\frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_n}{x_i}\right).
+U=(U\circ T)\circ T^{-1} = (V\circ T)\circ T^{-1}=V. 
 \end{equation*}
 </div>
-<div class="para">The one-sided inverse <span class="process-math">\(\F^n\to \F\Proj_n\)</span> given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(x_0,x_1,\ldots x_{i-1},\widehat{x_i},x_{i+1},\ldots,x_n)
-\to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]
-\end{equation*}
-</div>
-<div class="para">(where the circumflex hat indicates a deleted item from a sequence) is called the <span class="process-math">\(i\)</span>-th <dfn class="terminology">coordinate chart</dfn> for <span class="process-math">\(\F\Proj_n\text{.}\)</span> What is the map that results from applying the <span class="process-math">\(0\)</span>-th coordinate chart <span class="process-math">\(\C\to \C\Proj_2\)</span> followed by taking homogeneous coordinates in position 1?</div>
+<div class="para">Alternatively, we could have stated and proved a separate lemma that says that any projective transformation that fixes <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> must be the identity. [The special case of this statement, that we already know, is that a Möbius transformation with three fixed points is the identity.]</div>
 </div>
 <span class="incontext"><a href="section-15.html#p-582" class="internal">in-context</a></span>
 </body>

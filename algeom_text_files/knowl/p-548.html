@@ -13,12 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicareaintformula.html">
-\begin{equation}
-\text{Area}(R)=\iint_R
-dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\tag{3.4.12}
-\end{equation}
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{circumference } \amp = 2\int_0^{2\pi} \frac{\alpha}{1+\alpha^2}dt\\
+\amp = \frac{4\pi\alpha}{1+\alpha^2}.
+\end{align*}
+</div>
+<div class="para">In terms of <span class="process-math">\(r=d_{\extC}(0,\alpha)= 2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha = \tan \frac{r}{2}\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{circumference } = \frac{4\pi\alpha}{1+\alpha^2} =
+4\pi\frac{\tan \frac{r}{2}}{\sec^2 \frac{r}{2}}=
+4\pi\sin\frac{r}{2} \cos \frac{r}{2} = 2\pi \sin r.
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-548" class="internal">in-context</a></span>

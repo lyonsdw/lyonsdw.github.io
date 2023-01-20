@@ -12,23 +12,38 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>Axis and angle of rotation for quaternion and Möbius rotation constructions</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b3 r1 l1 t1 lines"><dfn class="terminology"><span class="process-math">\(R_{v,\theta}\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">axis of rotation <span class="process-math">\(v\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">angle of rotation <span class="process-math">\(\theta\)</span></dfn></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{r_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{T_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-</table></div></figure></div>
+<div class="para logical">
+<div class="para">The discussion of elliptic geometry (<a href="elliptic_geometry_section.html" class="internal" title="Section 3.4: Elliptic geometry">Section 3.4</a>) establishes two ways to construct rotations from matrices. The purpose of this exercise is to reconcile these identifications. Given <span class="process-math">\(a,b\in \C\)</span> with <span class="process-math">\(|a|^2+|b|^2=1\text{,}\)</span> let us define the following objects, all parameterized by <span class="process-math">\(a,b\text{.}\)</span> </div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_geometry_section.html ./knowl/rotcomparetable.html">
+\begin{align*}
+M_{a,b} \amp =\left[\begin{array}{cc}{a}\amp
+{b}\\{-b^\ast}\amp {a^\ast}\end{array}\right]\\
+r_{a,b}\amp = \re(a)+\im(a)i+\re(b)j+\im(b)k \\
+R_{r_{a,b}}\amp = \left[u\to
+r_{a,b}ur_{a,b}^\ast\right]\;\; \text{for }u\in S^2_\Quat\\
+T_{a,b} \amp = \left[z\to \frac{az+b}{-b^\ast
+z+a^\ast}\right] \;\;\text{for }z\in \extC\\
+R_{T_{a,b}} \amp = s^{-1}\circ T_{a,b}\circ s
+\end{align*}
+</div>
+<div class="para">The above objects are organized along two sequences of mappings. The rotation <span class="process-math">\(R_{r_{a,b}}\)</span> is at the end of the  "quaternion path"</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_geometry_section.html ./knowl/rotcomparetable.html">
+\begin{align}
+SU(2)\amp \to U(\Quat)  \to \Rot(S^2_\Quat)\tag{3.6.3}\\
+M_{a,b} \amp
+\to r_{a,b} \to R_{r_{a,b}}\notag
+\end{align}
+</div>
+<div class="para">and the rotation <span class="process-math">\(R_{T_{a,b}}\)</span> is at the end of the  "Möbius path"</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_geometry_section.html ./knowl/rotcomparetable.html">
+\begin{align}
+SU(2)\amp \to \S  \to \Rot(S^2)\tag{3.6.4}\\
+M_{a,b} \amp
+\to T_{a,b} \to R_{T_{a,b}}.\notag
+\end{align}
+</div>
+<div class="para">This problem is about comparing the rotations <span class="process-math">\(R_{r_{a,b}}\)</span> and <span class="process-math">\(R_{T_{a,b}}\)</span> (see <a href="" class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>) and reconciling the difference. The angles of rotation are the same, but the axes are different, but only by a reordering of coordinates and a minus sign.</div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-607" class="internal">in-context</a></span>
 </body>
 </html>
