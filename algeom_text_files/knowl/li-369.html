@@ -13,19 +13,15 @@
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
-</h4>The area of the triangle with vertices at <span class="process-math">\(1,p,\infty\)</span> is<div class="displaymath process-math">
+</h4>We have<div class="displaymath process-math">
 \begin{align*}
-\int_{\cos(\pi-\alpha)}^1
-\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
-dy\;dx
-\amp = \int_{\cos(\pi-\alpha)}^1
-\left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}\\
-\amp =
-\int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx\\
-\amp = \left[-\arccos
-x\right]_{\cos(\pi-\alpha)}^1\\
-\amp = \pi-\alpha.
+\frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
+\amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
+\frac{z_1-i}{z_1+i}}\\
+\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
+\left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)\\
+\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
 \end{align*}
-</div></article><span class="incontext"><a href="section-13.html#li-369" class="internal">in-context</a></span>
+</div>where <span class="process-math">\(t=-2\arg(z_0+i)\text{.}\)</span></article><span class="incontext"><a href="section-13.html#li-369" class="internal">in-context</a></span>
 </body>
 </html>

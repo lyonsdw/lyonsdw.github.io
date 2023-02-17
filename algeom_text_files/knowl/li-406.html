@@ -11,59 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">d</span><span class="period">.</span>
-</h4>
-<div class="para">First, we explain why it is sufficient to check equality at three points. The right side of <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> is a Möbius transformation because <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
-h)\circ s^{-1}\)</span> is (by definition) an element of the elliptic group <span class="process-math">\(\S\text{,}\)</span> we know that every element of <span class="process-math">\(\S\)</span> is a Möbius transformation by the explanation given in the second paragraph of <a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal" title="Subsection 3.4.3: The elliptic subgroup of the Möbius group">Subsection 3.4.3</a>. By the Fundamental Theorem of Möbius Geometry, we know that <span class="process-math">\(T_{a,b}\)</span> and <span class="process-math">\(s\circ (h\circ R_{r_{a,b}}\circ
-h)\circ s^{-1}\)</span> are equal if and only if they agree at three points.</div>
-<div class="para logical">
-<div class="para">Next, we check the input value <span class="process-math">\(p\text{.}\)</span> We have the following.</div>
-<div class="displaymath process-math">
-\begin{align*}
-p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
-p\amp \stackrel{s^{-1}}{\longrightarrow}
-\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
-\amp \stackrel{h}{\longrightarrow}
-\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
-\amp
-\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
-\amp \stackrel{s}{\longrightarrow} p
-\end{align*}
-</div>
-<div class="para">Next, we check the input value <span class="process-math">\(0\text{.}\)</span> We have the following.</div>
-<div class="displaymath process-math">
-\begin{align*}
-0\amp \stackrel{T_{a,b}}{\longrightarrow}
-\frac{b}{a^\ast}\\
-0\amp \stackrel{s^{-1}}{\longrightarrow}
-(0,0,-1)\\
-\amp \stackrel{h}{\longrightarrow}
-(-1,0,0)\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
-(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
-\amp \stackrel{h}{\longrightarrow}
-(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
-\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
-\end{align*}
-</div>
-<div class="para">Finally, we check the input value <span class="process-math">\(\infty\text{.}\)</span> We have the following.</div>
-<div class="displaymath process-math">
-\begin{align*}
-\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
--\frac{a}{b^\ast}\\
-\infty\amp \stackrel{s^{-1}}{\longrightarrow}
-(0,0,1)\\
-\amp \stackrel{h}{\longrightarrow}
-(1,0,0)\\
-\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
-(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
-\amp \stackrel{h}{\longrightarrow}
-(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
-\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
-\end{align*}
-</div>
-</div></article><span class="incontext"><a href="geometry_extra_exer_section.html#li-406" class="internal">in-context</a></span>
+<article class="li"><h5 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">3.6.6.d</span><span class="period">.</span>
+</h5>Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/trhcommute.html">
+\begin{equation}
+T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \tag{3.6.5}
+\end{equation}
+</div>where <span class="process-math">\(h\colon \R^3\to \R^3\)</span> is given by <span class="process-math">\((x,y,z)\to (z,-y,z)\text{.}\)</span> Here's one way to do this: evaluate both sides of <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> on the three points <span class="process-math">\(p,0,\infty\text{.}\)</span> Explain why this is sufficient! Use quaternion multiplication to evaluate <span class="process-math">\(R_{r_{a,b}}\text{.}\)</span> For example, <span class="process-math">\(R_{r_{a,b}}(1,0,0)=r_{a,b}ir_{a,b}^\ast\)</span> under the natural identification <span class="process-math">\(\R^3\leftrightarrow \R^3_\Quat\text{.}\)</span></article><span class="incontext"><a href="geometry_extra_exer_section.html#li-406" class="internal">in-context</a></span>
 </body>
 </html>

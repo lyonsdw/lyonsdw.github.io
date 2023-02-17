@@ -506,7 +506,11 @@ uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
 </div>
 <article class="exercise exercise-like" id="exercise-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-15"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like">Verify <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>.</article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><ol class="decimal">
+<li id="li-36"><div class="para" id="p-derived-li-36">Verify <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>.</div></li>
+<li id="li-37"><div class="para" id="p-derived-li-37">Show that if <span class="process-math">\(u\)</span> is a pure quaternion, then <span class="process-math">\(u^2=-1\text{.}\)</span>
+</div></li>
+</ol></article></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span>
 </h3>
 <div class="para" id="p-68">The <dfn class="terminology">conjugate</dfn> of a quaternion <span class="process-math">\(r=a+bi+cj+dk\)</span> is <span class="process-math">\(r^\ast =
@@ -532,13 +536,13 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 \begin{gather}
 (rs)^\ast = s^\ast r^\ast\tag{1.2.15}\\
 |rs|=|r||s|\tag{1.2.16}\\
-|r|^2 = rr^\ast\text{.}\tag{1.2.17}
+|r|^2 = rr^\ast=r^\ast r\text{.}\tag{1.2.17}
 \end{gather}
 </div>
 </div>
 <article class="exercise exercise-like" id="quatconjnormmultexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quatconjnormmultexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatconjnormmultexer"><article class="exercise exercise-like">Verify the three equations above.</article></div></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-quatconjnormmultexer"><article class="exercise exercise-like">Verify the three equations above. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Use polar form.</div></div></article></div></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span>
 </h3>
 <div class="para" id="p-73">Let <span class="process-math">\(r\)</span> be a unit quaternion and let <span class="process-math">\(v\)</span> be a pure quaternion. Let <span class="process-math">\(R_r(v)\)</span> denote the quaternion <span class="process-math">\(R_r(v)=rvr^\ast\text{.}\)</span> It is easy to check that <span class="process-math">\((R_r(v))^\ast = -R_r(v)\text{.}\)</span> From this we conclude that <span class="process-math">\(rvr^\ast\)</span> is a pure quaternion.</div>
@@ -573,13 +577,13 @@ R_r(\alpha v) = \alpha R_r(v)\tag{1.2.19}
 <div class="para">Prove <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a> using the following outline. Let <span class="process-math">\(r=\cos\theta + u\sin\theta\)</span> be the polar form for a unit quaternion <span class="process-math">\(r\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-36"><div class="para" id="p-derived-li-36">Show that <span class="process-math">\(R_r(u)=u\text{.}\)</span>
+<li id="li-41"><div class="para" id="p-derived-li-41">Show that <span class="process-math">\(R_r(u)=u\text{.}\)</span>
 </div></li>
-<li id="li-37"><div class="para" id="p-derived-li-37">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatrotpropformula.html ./knowl/purequatproduct.html ./knowl/quatrotpropformula.html" id="quatrotpropformula">
+<li id="li-42"><div class="para" id="p-derived-li-42">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatrotpropformula.html ./knowl/purequatproduct.html ./knowl/quatrotpropformula.html" id="quatrotpropformula">
 \begin{equation}
 R_r(v) = \cos(2\theta)v + \sin(2\theta)w\tag{1.2.20}
 \end{equation}
-</div>(use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para logical" id="p-83">
+</div>(use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para logical" id="p-83">
 <div class="para">In deriving equation <a href="" class="xref" data-knowl="./knowl/quatrotpropformula.html" title="Equation 1.2.20">(1.2.20)</a>, you will obtain expressions <span class="process-math">\(uv-vu\)</span> and <span class="process-math">\(uvu\text{.}\)</span> Use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to show that <span class="process-math">\(uv-vu=w\)</span> and <span class="process-math">\(uvu=v\text{.}\)</span> Show that the quaternion on the right side of <a href="" class="xref" data-knowl="./knowl/quatrotpropformula.html" title="Equation 1.2.20">(1.2.20)</a> has norm 1. Finally, use the fact that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotpropformula.html ./knowl/purequatproduct.html ./knowl/quatrotpropformula.html">
 \begin{equation*}
@@ -593,8 +597,8 @@ a\cdot b =
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="quatrotcompinvexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Show that the following hold for all <span class="process-math">\(r,s\in U(\Quat)\text{.}\)</span> <ol class="lower-alpha">
-<li id="li-40"><div class="para" id="p-derived-li-40"><span class="process-math">\(R_r\circ R_s = R_{rs}\text{.}\)</span></div></li>
-<li id="li-41"><div class="para" id="p-derived-li-41"><span class="process-math">\((R_r)^{-1}=R_{r^\ast}\text{.}\)</span></div></li>
+<li id="li-45"><div class="para" id="p-derived-li-45"><span class="process-math">\(R_r\circ R_s = R_{rs}\text{.}\)</span></div></li>
+<li id="li-46"><div class="para" id="p-derived-li-46"><span class="process-math">\((R_r)^{-1}=R_{r^\ast}\text{.}\)</span></div></li>
 </ol></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">The set of unit quaternions <span class="process-math">\(U(\H)\)</span> is in one-to-one correspondence with the 3-sphere <span class="process-math">\(S^3=\{(t,x,y,z)\in \R^4\colon
 t^2+x^2+y^2+z^2=1\}\text{.}\)</span> This is analogous to the set of norm 1 complex numbers that is in one-to-one correspondence with the 1-sphere <span class="process-math">\(S^2\text{.}\)</span>
 </div></div>

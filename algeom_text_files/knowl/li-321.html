@@ -11,12 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">3.2.6.5.a.iv</span><span class="period">.</span>
-</h5>Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="" class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/lineeqn.html">
-\begin{equation*}
-z^\ast = \frac{az+b-b^\ast}{a^\ast}.
-\end{equation*}
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
+</h4>Put together the pieces from the previous part.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
 </div></article><span class="incontext"><a href="section-12.html#li-321" class="internal">in-context</a></span>
 </body>
 </html>
