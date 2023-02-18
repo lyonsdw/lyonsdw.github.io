@@ -12,19 +12,29 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
-</h4>Put together the pieces from the previous part.<div class="displaymath process-math">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
+</h4>
+<div class="para"></div>
+<ol class="lower-roman">
+<li><div class="para">Use <span class="process-math">\(|z-a|^2 = (z-a)(z-a)^\ast\text{.}\)</span> Set the latter expression equal to <span class="process-math">\(r^2\)</span> and solve for <span class="process-math">\(z^\ast\text{.}\)</span>
+</div></li>
+<li><div class="para">The second equality uses part i. Equality (1) uses invariance of the cross ratio, applying the Möbius transformation<div class="displaymath process-math">
 \begin{align*}
-[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
-\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
-[1\to d, 0\to e,\infty\to f]
-\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
-[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
-e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
-\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-\amp \leftrightarrow
-\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+u\amp \to u-a^\ast\\
+\amp \to \frac{r^2}{u-a^\ast}\\
+\amp \to \frac{r^2}{u-a^\ast}+a
 \end{align*}
-</div></article><span class="incontext"><a href="section-12.html#li-318" class="internal">in-context</a></span>
+</div>to all four entries in the cross ratio immediately preceding the equals sign labeled (1).</div></li>
+<li><div class="para">Apply <span class="process-math">\(T^{-1}\)</span> to the first and last expressions in the derivation.</div></li>
+<li><div class="para">A complex number <span class="process-math">\(u\)</span> is real if and only if <span class="process-math">\(u=u^\ast\text{.}\)</span> Apply this to <span class="process-math">\(u=az+b\text{.}\)</span> Solving for <span class="process-math">\(z^\ast\)</span> is straightforward.</div></li>
+<li><div class="para">This is similar to ii above. Equality (1) uses invariance of the cross ratio, applying the Möbius transformation<div class="displaymath process-math">
+\begin{align*}
+u\amp \to a^\ast u\\
+\amp \to a^\ast u + b^\ast -b\\
+\amp \to \frac{a^\ast u + b^\ast -b}{a}
+\end{align*}
+</div>to all four entries in the cross ratio immediately preceding the equals sign labeled (1).</div></li>
+<li><div class="para">Apply <span class="process-math">\(T^{-1}\)</span> to the first and last expressions in the derivation.</div></li>
+</ol></article><span class="incontext"><a href="section-11.html#li-318" class="internal">in-context</a></span>
 </body>
 </html>

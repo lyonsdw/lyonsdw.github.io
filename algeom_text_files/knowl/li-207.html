@@ -12,9 +12,18 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
 </h4>
-<div class="para">We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for <span class="process-math">\(\Aut(G)\text{.}\)</span>
+<div class="para logical">
+<div class="para">We will use the 2-step subgroup test. First, <span class="process-math">\(\Inn(G)\)</span> contains the identity map <span class="process-math">\(C_e\colon G\to G\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is not empty. Given <span class="process-math">\(g,h\)</span> in <span class="process-math">\(G\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoisequivrel.html">
+\begin{equation*}
+(C_g\circ C_h)(x) = C_g(C_h(x))=g(hxh^{-1})g^{-1}=
+(gh)x(gh)^{-1}=C_{gh}(x)
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\Inn(G)\)</span> is closed under composition. We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.10: Isomorphism induces an equivalence relation">Exercise 2.4.2.10</a> that <span class="process-math">\((C_g)^{-1}=C_{g^{-1}}\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is closed under inversion. This completes the 2-step subgroup test, and we conclude that <span class="process-math">\(\Inn(G)\)</span> is a subgroup of <span class="process-math">\(\Aut(G)\text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="section-8.html#li-207" class="internal">in-context</a></span>
 </body>
 </html>

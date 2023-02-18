@@ -13,16 +13,17 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-(\conj\circ T)(z) \amp =
-(z^\ast,z_1^\ast,z_2^\ast,z_3^\ast)\\
-\amp =
-\left(z^\ast,\frac{az_1+b-b^\ast}{a^\ast},\frac{az_2+b-b^\ast}{a^\ast},
-\frac{az_3+b-b^\ast}{a^\ast}\right)\\
-\amp \stackrel{(1)}{=} \left(\frac{z^\ast a^\ast + b^\ast - b}{a},z_1,z_2,z_3\right)\\
-\amp =
-T\left(\frac{z^\ast a^\ast + b^\ast - b}{a}\right).
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
 \end{align*}
 </div>
-<span class="incontext"><a href="section-12.html#md-38" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-12.html#md-39" class="internal">in-context</a></span>
 </body>
 </html>

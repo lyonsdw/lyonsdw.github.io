@@ -11,12 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1.2.6.2.b</span><span class="period">.</span>
-</h5>Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatrotpropformula.html ./knowl/purequatproduct.html ./knowl/quatrotpropformula.html">
-\begin{equation}
-R_r(v) = \cos(2\theta)v + \sin(2\theta)w\tag{1.2.20}
-\end{equation}
-</div>(use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. <a href="" class="hint-knowl original" data-knowl="./knowl/hint-3-hidden.html" title="Hint 1.2.6.2.b.1"><span class="type">Hint</span><span class="period">.</span></a></article><span class="incontext"><a href="quaternionsection.html#li-42" class="internal">in-context</a></span>
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
+</h4>First, check that, for any pure, unit quaternion <span class="process-math">\(u\text{,}\)</span> we have <span class="process-math">\(u^2=-1\)</span> (use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+\begin{align*}
+R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
+\sin\theta)\\
+\amp = u(\cos^2\theta+\sin^2\theta) -
+\sin\theta\cos\theta + \sin\theta\cos\theta\\
+\amp = u
+\end{align*}
+</div></article><span class="incontext"><a href="quaternionsection.html#li-42" class="internal">in-context</a></span>
 </body>
 </html>
