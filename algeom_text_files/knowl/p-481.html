@@ -11,9 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Find the area of the hyperbolic disk <span class="process-math">\(\{|z|\leq
-\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">For <span class="process-math">\(z(t)=\alpha e^{it}\text{,}\)</span> we have <span class="process-math">\(z'(t)=i\alpha
+e^{it}\text{,}\)</span> and  <span class="process-math">\(|z(t)|=|z'(t)|=\alpha\text{.}\)</span> The circumference of the circle is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hypcircalpha.html">
+\begin{align}
+\text{circumference } \amp = 2\int_0^{2\pi}
+\frac{|z'(t)|}{1-|z(t)|^2}dt\tag{3.3.7}\\
+\amp =	2\int_0^{2\pi} \frac{\alpha}{1-\alpha^2}dt\tag{3.3.8}\\
+\amp = \frac{4\pi\alpha}{1-\alpha^2}.\tag{3.3.9}
+\end{align}
+</div>
+<div class="para">While this answer is correct, it is more useful to have the circumference expressed in terms of the hyperbolic radius <span class="process-math">\(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\)</span> Solving for <span class="process-math">\(\alpha\)</span> in terms of <span class="process-math">\(r\text{,}\)</span> we get <span class="process-math">\(\alpha=\frac{e^r-1}{e^r+1}\text{.}\)</span> Then simplifying <a href="" class="xref" data-knowl="./knowl/hypcircalpha.html" title="Equation 3.3.9">(3.3.9)</a>, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hypcircalpha.html">
+\begin{equation*}
+\text{circumference } = \pi(e^r-e^{-r})=2\pi \sinh r.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="section-13.html#p-481" class="internal">in-context</a></span>
 </body>

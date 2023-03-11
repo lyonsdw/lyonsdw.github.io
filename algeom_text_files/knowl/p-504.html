@@ -12,25 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">The map <span class="process-math">\(\mu\)</span> sends <span class="process-math">\(1\to
--i\text{,}\)</span> <span class="process-math">\(0\to -1\text{,}\)</span> and <span class="process-math">\(\infty \to 1\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\R\)</span> to the unit circle. Checking point interior to <span class="process-math">\(\U\text{,}\)</span> we have <span class="process-math">\(\mu(i)=0\text{,}\)</span> so <span class="process-math">\(\mu\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span>
-</div></li>
-<li><div class="para">We have<div class="displaymath process-math">
-\begin{align*}
-\frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
-\amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
-\frac{z_1-i}{z_1+i}}\\
-\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
-\left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)\\
-\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
-\end{align*}
-</div>where <span class="process-math">\(t=-2\arg(z_0+i)\text{.}\)</span>
-</div></li>
-<li><div class="para">For <span class="process-math">\(dt\)</span> small, we have <span class="process-math">\(z_1-z_0 \approx dz=
-|z'(t)|dt\text{,}\)</span> and <span class="process-math">\(z_0^\ast -z_1 \approx 2i\im(z(t)) =
-2iy(t)\text{.}\)</span> Taking norms yields the desired expression for the length differential.</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">First we prove the "only if" direction. Suppose <span class="process-math">\(T\in
+\HU\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a> to the cline <span class="process-math">\(\extR\text{,}\)</span> we conclude that <span class="process-math">\(T\)</span> must send the real line to itself. So the preimages <span class="process-math">\(z_1=T^{-1}(1),z_2=T^{-1}(0),z_3=T^{-1}(\infty)\)</span> must be real. Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/transpreservesdiskprop.html">
+\begin{equation*}
+Tz=(z,z_1,z_2,z_3)=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_2-z_3}=\frac{az+b}{cz+d}
+\end{equation*}
+</div>
+<div class="para">for some real <span class="process-math">\(a,b,c,d\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/transpreservesdiskprop.html">
+\begin{equation*}
+Ti = \frac{ai+b}{ci+d}= \frac{ac+bd + i(ad-bc)}{c^2+d^2}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(ad-bc\)</span> must be positive because <span class="process-math">\(T(\U)=\U\text{.}\)</span> For the "if" direction, suppose <span class="process-math">\(Tz=\frac{az+b}{cz+d}\)</span> with <span class="process-math">\(a,b,c,d\)</span> real, and <span class="process-math">\(ad-bc\gt 0\text{.}\)</span> Let <span class="process-math">\(z=x+iy\)</span> with <span class="process-math">\(y\gt 0\text{.}\)</span> It is straightforward to check that the imaginary part of <span class="process-math">\(Tz\)</span> is <span class="process-math">\(\frac{y(ad-bc)}{(cx+d)^2 + c^2y^2}\gt 0\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-13.html#p-504" class="internal">in-context</a></span>
 </body>
 </html>

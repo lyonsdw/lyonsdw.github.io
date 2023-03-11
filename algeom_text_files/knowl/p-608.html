@@ -11,24 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>Axis and angle of rotation for quaternion and Möbius rotation constructions</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b3 r1 l1 t1 lines"><dfn class="terminology"><span class="process-math">\(R_{v,\theta}\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">axis of rotation <span class="process-math">\(v\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">angle of rotation <span class="process-math">\(\theta\)</span></dfn></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{r_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{T_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-</table></div></figure></div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/mobiusgpaspgl2exer.html">
+\begin{align*}
+\frac{-1}{\left(T\left(\frac{-1}{z^\ast}\right)\right)^\ast}
+\amp =
+-\left(\frac{c\left(\frac{-1}{z^\ast}\right)+d}{a\left(\frac{-1}{z^\ast}\right)+b}\right)\\
+\amp = -\left(\frac{-dz^\ast
++c}{-bz^\ast+a}\right)^\ast\\
+\amp = \frac{d^\ast z-c^\ast}{-b^\ast z+a^\ast}.
+\end{align*}
+</div>
+<div class="para">Thus we have equality of the two maps <span class="process-math">\(z\to \frac{az+b}{cz+d}\text{,}\)</span> <span class="process-math">\(z\to \frac{d^\ast z-c^\ast}{-b^\ast z+a^\ast}\)</span> By <a href="" class="xref" data-knowl="./knowl/mobiusgpaspgl2exer.html" title="Checkpoint 3.2.5">Checkpoint 3.2.5</a>, there is some real <span class="process-math">\(k\neq
+0\)</span> such that <span class="process-math">\(a=kd^\ast\text{,}\)</span> <span class="process-math">\(b=-kc^\ast\text{.}\)</span> The condition <span class="process-math">\(ad-bc=0\)</span> implies that <span class="process-math">\(k=\pm
+1\text{.}\)</span> Choosing <span class="process-math">\(k=1\text{,}\)</span> we have the desired result.</div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-608" class="internal">in-context</a></span>
 </body>
 </html>

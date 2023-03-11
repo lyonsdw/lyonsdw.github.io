@@ -13,28 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(C_1,C_2\)</span> be two curves, parameterized by <span class="process-math">\(p(t),q(s)\text{,}\)</span> respectively, intersecting at <span class="process-math">\(v=p(0)=q(0)\text{,}\)</span> and with</div>
+<div class="para">Let <span class="process-math">\(T(z)=kz\)</span> for <span class="process-math">\(k\gt 0\)</span> be a homothety, and let <span class="process-math">\(u,v,w\)</span> be three points in <span class="process-math">\(\C\text{.}\)</span> Then we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\theta=\lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{q(s)-v}{p(t)-v}\right)
+\angle T(u)T(v)T(w)=
+\arg((kw-kv)/(ku-kv))=\arg((w-v)/(u-v))=\angle uvw.
 \end{equation*}
 </div>
-<div class="para">one of the four oriented angles made by lines tangent to <span class="process-math">\(C_1,C_2\)</span> at <span class="process-math">\(v\text{.}\)</span> After transforming the curves by inversion, the corresponding angle is</div>
-<div class="displaymath process-math">
-\begin{align*}
-\lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{\frac{1}{q(s)}-\frac{1}{v}}{\frac{1}{p(t)}-\frac{1}{v}}\right)
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{\frac{v-q(s)}{vq(s)v}}{\frac{v-p(t)}{vp(t)}}\right)\\
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{p(t)}{q(s)}\frac{v-q(s)}{v-p(t)}\right)\\
-\amp = \lim_{s\to 0^+,t\to 0^+}
-\arg\left(\frac{q(s)-v}{p(t)-v}\right)\\
-\amp = \theta
-\end{align*}
-</div>
-<div class="para">(<span class="process-math">\(q(s)/p(t)\to 1\)</span>  because <span class="process-math">\(q(s), p(t)\to v\)</span> as <span class="process-math">\(s,t\to 0\)</span>).</div>
 </div>
 <span class="incontext"><a href="geomdefsect.html#p-361" class="internal">in-context</a></span>
 </body>

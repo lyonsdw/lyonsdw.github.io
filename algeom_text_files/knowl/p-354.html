@@ -11,8 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Use the fact that rotations and translations are conformal to prove <a href="" class="xref" data-knowl="./knowl/anglemeascomplex.html" title="Equation 3.1.1">(3.1.1)</a>.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The input/output pairs <span class="process-math">\((1,0,0)\to
+(0,1,0)\text{,}\)</span> <span class="process-math">\((0,0,1)\to (1,0,0)\)</span> determine the first and third columns of an orthogonal matrix, namely <span class="process-math">\((0,1,0)^T,(1,0,0)^T\text{.}\)</span> The middle column must then be <span class="process-math">\((0,0,\pm 1)^T\text{.}\)</span> If, instead of an orthogonal matrix, you want to get the geometric information of an axis and angle that specifiy a rotation, you can do this using quaternions, as follows. One possible composition of rotations is <span class="process-math">\(R_{Y,\pi/2}\)</span> followed by <span class="process-math">\(R_{X,\pi/2}\text{.}\)</span> These rotations are realized by quaternions <span class="process-math">\(\frac{1}{\sqrt{2}}(1+j)\text{,}\)</span> <span class="process-math">\(\frac{1}{\sqrt{2}}(1+i)\text{,}\)</span> respectively. So the rotation we want is given by the quaternion</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotprop.html">
+\begin{equation*}
+\frac{1}{\sqrt{2}}(1+i)\frac{1}{\sqrt{2}}(1+j)
+=\frac{1}{2}+\frac{\sqrt{3}}{2}\left(\frac{i+j+k}{\sqrt{3}}\right)=\cos
+\frac{\pi}{3} + \sin \frac{\pi}{3}u
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(u=\frac{1}{\sqrt{3}}(i+j+k)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>, this is the rotation about <span class="process-math">\((1,1,1)\)</span> by <span class="process-math">\(2\pi/3\)</span> radians.</div>
+</div>
 <span class="incontext"><a href="geomdefsect.html#p-354" class="internal">in-context</a></span>
 </body>
 </html>

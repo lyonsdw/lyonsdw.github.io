@@ -11,11 +11,55 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Suggestion: Use a transformation to place <span class="process-math">\(C\)</span> at <span class="process-math">\(0\)</span> in <span class="process-math">\(\D\)</span> or <span class="process-math">\(\extC\text{,}\)</span> with <span class="process-math">\(A\)</span> is real and <span class="process-math">\(B\)</span> pure imaginary.  Use the formula <span class="process-math">\(d(p,q) =
-\ln((1+u)/(1-u))\)</span> with <span class="process-math">\(u=\left|\frac{q-p}{1-p^\ast q}\right|\)</span> for hyperbolic distance. Use the formula <span class="process-math">\(d(p,q) =
-2\arctan(u)\text{,}\)</span> with <span class="process-math">\(u=\left|\frac{q-p}{1+p^\ast
-q}\right|\)</span> for elliptic distance. The identities from part (a) will be useful.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Next, we check the input value <span class="process-math">\(p\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math">
+\begin{align*}
+p\amp \stackrel{T_{a,b}}{\longrightarrow} p\\
+p\amp \stackrel{s^{-1}}{\longrightarrow}
+\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}} \\
+\amp \stackrel{h}{\longrightarrow}
+\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow} \frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\\
+\amp
+\stackrel{h}{\longrightarrow}\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\\
+\amp \stackrel{s}{\longrightarrow} p
+\end{align*}
+</div>
+<div class="para">Next, we check the input value <span class="process-math">\(0\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math">
+\begin{align*}
+0\amp \stackrel{T_{a,b}}{\longrightarrow}
+\frac{b}{a^\ast}\\
+0\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,-1)\\
+\amp \stackrel{h}{\longrightarrow}
+(-1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(|b|^2 - |a|^2,-2\im(ab),2\re(ab)) \;\;(\text{use  } r(-i)r^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(2\re(ab),2\im(ab),|b|^2-|a|^2)\\
+\amp \stackrel{s}{\longrightarrow} \frac{b}{a^\ast}
+\end{align*}
+</div>
+<div class="para">Finally, we check the input value <span class="process-math">\(\infty\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\infty\amp \stackrel{T_{a,b}}{\longrightarrow}
+-\frac{a}{b^\ast}\\
+\infty\amp \stackrel{s^{-1}}{\longrightarrow}
+(0,0,1)\\
+\amp \stackrel{h}{\longrightarrow}
+(1,0,0)\\
+\amp \stackrel{R_{r_{a,b}}}{\longrightarrow}
+(-|b|^2 + |a|^2,2\im(ab),-2\re(ab)) \;\;(\text{use  } rir^\ast)\\
+\amp \stackrel{h}{\longrightarrow}
+(-2\re(ab),-2\im(ab),|a|^2-|b|^2)\\
+\amp \stackrel{s}{\longrightarrow} -\frac{a}{b^\ast}
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-614" class="internal">in-context</a></span>
 </body>
 </html>

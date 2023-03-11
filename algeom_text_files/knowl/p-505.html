@@ -12,7 +12,46 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Adapt the argument in the paragraph preceding the disk model area integral <a href="" class="xref" data-knowl="./knowl/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a> to establish the upper half-plane area integral  <a href="" class="xref" data-knowl="./knowl/upperhalfplaneareaintformula.html" title="Equation 3.3.14">(3.3.14)</a>.</div>
+<div class="para logical">
+<div class="para">This exercise is to establish <a href="" class="xref" data-knowl="./knowl/halfplanelengthformula.html" title="Equation 3.3.13">(3.3.13)</a>. The strategy is to obtain the differential expression</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/halfplanelengthformula.html ./knowl/hyperboliclengthformula.html">
+\begin{equation*}
+d(z(t_0),z(t_1))\approx \frac{|z'(t)|dt}{y(t)}
+\end{equation*}
+</div>
+<div class="para">for a curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> with <span class="process-math">\(z(t_0)=z_0\text{,}\)</span> <span class="process-math">\(z(t_1)=z_1\text{,}\)</span> and <span class="process-math">\(dt=t_1=t_0\)</span> using the following sequence of steps.</div>
+<ul class="disc">
+<li><div class="para">First, map <span class="process-math">\(z_0,z_1\)</span> in <span class="process-math">\(\U\)</span> to <span class="process-math">\(z_0',z_1'\)</span> in <span class="process-math">\(\D\)</span> using a transformation <span class="process-math">\(\mu\)</span> that preserves distance.</div></li>
+<li><div class="para">Using the analysis we used to get the disk model length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliclengthformula.html">
+\begin{equation*}
+d(z_0',z_1')=\ln\left(\frac{1+u}{1-u}\right)
+\end{equation*}
+</div>where <span class="process-math">\(u=\left|\frac{z_1'-z_0'}{1-(z_0')^\ast
+z_1'}\right|\text{.}\)</span>
+</div></li>
+<li><div class="para">Translate the above expression in terms of <span class="process-math">\(z_0,z_1\text{,}\)</span> and show that the differential approximation is <span class="process-math">\(\frac{|z'(t)|dt}{y(t)}\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Complete the exercise parts below to carry out the strategy just outlined.</div>
+<ol class="lower-alpha">
+<li><div class="para">Show that <span class="process-math">\(\mu z=\frac{z-i}{z+i}\)</span> takes <span class="process-math">\(\U\)</span> to <span class="process-math">\(\D\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(z_0'=\mu z_0\)</span> and <span class="process-math">\(z_1'=\mu z_1\text{.}\)</span> Show that<div class="displaymath process-math">
+\begin{equation*}
+\frac{z_1'-z_0'}{1-(z_0')^\ast
+z_1'}=e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
+\end{equation*}
+</div>for some real <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(u=\left|\frac{z_1-z_0}{z_0^\ast -
+z_1}\right|\text{.}\)</span> Show that<div class="displaymath process-math">
+\begin{equation*}
+\ln\left(\frac{1+u}{1-u}\right)\approx \frac{|z(t)|dt}{y(t)}.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
 <span class="incontext"><a href="section-13.html#p-505" class="internal">in-context</a></span>
 </body>
 </html>

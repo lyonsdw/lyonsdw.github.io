@@ -11,34 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.3.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.6.2.</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath process-math">
+<li><div class="para">It is clear by inspection that <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.11">(3.2.11)</a> sends <span class="process-math">\(z_1,z_2,z_3\)</span> to <span class="process-math">\(1,0,\infty\text{,}\)</span> respectively.</div></li>
+<li><div class="para">It is clear by inspection the following transformations make the correct assignments.<div class="displaymath process-math">
 \begin{align*}
-[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
-\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
-\amp \leftrightarrow
-\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
-\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
-[1\to a, 0\to b,\infty\to c]
-\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\text{case } z_1=\infty \amp : \left[z\to
+\frac{z-z_2}{z-z_3}\right]\\
+\text{case } z_2=\infty \amp :\left[z\to
+\frac{z_1-z_3}{z-z_3}\right]\\
+\text{case } z_3=\infty \amp : \left[z\to
+\frac{z-z_2}{z_1-z_2}\right]
 \end{align*}
 </div>
 </div></li>
-<li><div class="para">Put together the pieces from the previous part.<div class="displaymath process-math">
-\begin{align*}
-[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
-\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
-[1\to d, 0\to e,\infty\to f]
-\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
-[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
-e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
-\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-\amp \leftrightarrow
-\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
-\end{align*}
-</div>
+<li><div class="para">Solving <span class="process-math">\(z=\frac{az+b}{cz+d}\text{,}\)</span> we have <span class="process-math">\(cz^2+z(d-a)-b=0\text{.}\)</span> If <span class="process-math">\(c\neq 0\text{,}\)</span> we have 1 or 2 solutions<div class="displaymath process-math">
+\begin{equation*}
+z=\frac{a-d\pm\sqrt{(d-a)^2+4bc}}{2c}.
+\end{equation*}
+</div>If <span class="process-math">\(c=0\)</span> and <span class="process-math">\(d\neq a\text{,}\)</span> we have one solution <span class="process-math">\(z=b/(d-a)\text{.}\)</span> If <span class="process-math">\(c=0\)</span> and <span class="process-math">\(d=a\text{,}\)</span> then we have <span class="process-math">\(b=0\)</span> and <span class="process-math">\(Tz=z\text{.}\)</span>
+</div></li>
+<li><div class="para">It is clear by inspection that <span class="process-math">\(V^{-1}Uz_i=w_i\)</span> and also that <span class="process-math">\(Sw_i=w_i\)</span> for <span class="process-math">\(i=1,2,3\text{.}\)</span>
 </div></li>
 </ol></div></article><span class="incontext"><a href="section-12.html#commentary-105" class="internal">in-context</a></span>
 </body>

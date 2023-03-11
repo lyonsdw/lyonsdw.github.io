@@ -11,14 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.2.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.1 (proof of the Fundamental Theorem of Projective Geometry).</span></h4>
 <div class="para logical">
-<div class="para">The map <span class="process-math">\(\pi_1\circ \text{chart}_0\)</span> is inversion, as follows.</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(P_0,P_1,P_2,\ldots,P_{n+1}\)</span> be a set of <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> such that all subsets of size <span class="process-math">\(n+1\)</span> are in general position. Let <span class="process-math">\(v_0,v_1,v_2,\ldots,v_{n+1}\)</span> be vectors in <span class="process-math">\(\F^{n+1}\)</span> such that <span class="process-math">\(P_i=[v_i]\text{.}\)</span> By assumption, the points <span class="process-math">\(P_1,P_2,\ldots,P_{n+1}\)</span> are in general position, so the vectors <span class="process-math">\(v_1,v_2,\ldots,v_{n+1}\)</span> are independent and form a basis of <span class="process-math">\(\F^{n+1}\text{.}\)</span> Let <span class="process-math">\(c_1,c_2,\ldots,c_{n+1}\)</span> be scalars such that <span class="process-math">\(v_0=\sum_{i=1}^{n+1}c_iv_i\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, there is a unique projective transformation <span class="process-math">\(T\)</span> that maps <span class="process-math">\([e_i]\to
+P_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the same argument, there is a unique projective transformation <span class="process-math">\(S\)</span> that maps <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> It follows that the projective transformation <span class="process-math">\(S\circ T^{-1}\)</span> maps <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> For uniqueness, suppose there are two projective maps, say <span class="process-math">\(U,V\)</span> that map <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq
+n+1\text{.}\)</span> It then follows that <span class="process-math">\(U\circ T, V\circ T\)</span> both map <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the uniqueness statement in <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, we have <span class="process-math">\(U\circ T=V\circ T\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fundthmprojgeomlemma.html ./knowl/fundthmprojgeomlemma.html">
 \begin{equation*}
-z\stackrel{\text{chart}_0}{\to} [1,z] \stackrel{\pi_1}{\to} 1/z
+U=(U\circ T)\circ T^{-1} = (V\circ T)\circ T^{-1}=V. 
 \end{equation*}
 </div>
+<div class="para">Alternatively, we could have stated and proved a separate lemma that says that any projective transformation that fixes <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> must be the identity. [The special case of this statement, that we already know, is that a Möbius transformation with three fixed points is the identity.]</div>
 </div></article><span class="incontext"><a href="section-15.html#commentary-149" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,18 +13,12 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">For the general case, let <span class="process-math">\(z_1,z_2\in \extC\text{.}\)</span> Because and let <span class="process-math">\(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\)</span> be the transformation in <span class="process-math">\(\S\)</span> (using the form <a href="" class="xref" data-knowl="./knowl/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to u\geq 0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in <span class="process-math">\(\extC\text{.}\)</span>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticgp0inftyform.html ./knowl/ellipticdist0u.html ./knowl/hyperboliclengthformula.html">
+<div class="para">In order to obtain a formula for computing <span class="process-math">\(d_{\extC}(p,q)\text{,}\)</span> we follow the same procedure for hyperbolic distance. First, we find the distance <span class="process-math">\(d_{\extC}(0,u)\text{,}\)</span> where <span class="process-math">\(0\leq u\leq
+1\text{.}\)</span> Let <span class="process-math">\(S=(0,0,-1)=s^{-1}(0)\)</span> and let <span class="process-math">\(U=s^{-1}(u)\text{.}\)</span> Let <span class="process-math">\(0=(0,0,0)\text{,}\)</span> let <span class="process-math">\(N=(0,0,1)\text{,}\)</span> let <span class="process-math">\(\alpha =
+\angle SNU\)</span> and let <span class="process-math">\(\theta = \angle SOU\)</span> (see <a href="" class="xref" data-knowl="./knowl/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that <span class="process-math">\(\alpha = \theta/2\text{,}\)</span> so that we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/elliptic_distance_fig.html">
 \begin{equation}
-d_{\extC}(z_1,z_2)=2\arctan
-\left|\frac{z_2-z_1}{z_1^\ast z_2 + 1}\right|\tag{3.4.10}
-\end{equation}
-</div>
-<div class="para">Now let <span class="process-math">\(\gamma\)</span> be a parametric curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> in <span class="process-math">\(\extC\text{.}\)</span> Using the same argument as in the paragraph preceding the hyperbolic length integral formula <a href="" class="xref" data-knowl="./knowl/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, using the first order Taylor approximation <span class="process-math">\(\arctan u \approx u\)</span> and making the appropriate changes, we arrive at the elliptic length integral formula.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticgp0inftyform.html ./knowl/ellipticdist0u.html ./knowl/hyperboliclengthformula.html">
-\begin{equation}
-\text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt\tag{3.4.11}
+d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. \tag{3.4.9}
 \end{equation}
 </div>
 </div>
