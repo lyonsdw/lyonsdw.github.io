@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<em class="alert">Note:</em> It is not necessary to prove the Claim to solve the given exercise. It is enough simply to note that <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Now we prove the Claim. Let <span class="process-math">\(b=\langle \lcm(a,n)/a\rangle\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/subgpsofzexer.html">
+\begin{equation*}
+\mu_a(b)=ab = \lcm(a,n) = 0 \pmod{n}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(b\in \ker(\mu_a)\text{.}\)</span> If <span class="process-math">\(c\in \ker(\mu_a)\text{,}\)</span> then <span class="process-math">\(\mu_a(c)=ac=kn\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(kn\)</span> is divisible by <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(kn\geq \lcm(a,n)\text{,}\)</span> so <span class="process-math">\(c\geq
+b\text{.}\)</span> This shows <span class="process-math">\(b\)</span> is the smallest positive element in <span class="process-math">\(\ker(\mu_a)\)</span> (or <span class="process-math">\(b=0\)</span>). Applying <a href="" class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \Z and \Z_n">Exercise 2.3.2.4</a>, we conclude the statement in the Claim.</div>
 </div>
 <span class="incontext"><a href="section-8.html#p-271" class="internal">in-context</a></span>
 </body>

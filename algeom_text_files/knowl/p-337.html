@@ -13,17 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We can also see the semidirect product structure directly, without using the result from the previous part. From what we have shown, multiplication in <span class="process-math">\(D_n\)</span> looks like this.</div>
+<div class="para">We apply the previous part to <span class="process-math">\(K=\langle R_{1/n}\rangle\approx C_n, H=\langle
+F_L\rangle\approx C_2\text{,}\)</span> where <span class="process-math">\(L\)</span> is any one of the lines of symmetry of the <span class="process-math">\(n\)</span>-gon. Because <span class="process-math">\(K\)</span> is Abelian, the rotation group <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(D_n\text{.}\)</span> To see that <span class="process-math">\(D_n=KH\text{,}\)</span> first, we confirm that <span class="process-math">\(D_n=\langle R_{1/n},F_L\rangle\text{.}\)</span> To see why, verify the relations</div>
 <div class="displaymath process-math">
-\begin{align*}
-(R_\theta F_L^a)(R_\phi F_L^b)
-\amp = R_\theta F_L^aR_\phi (F_L^a F_L^a) F_L^b\\
-\amp = R_\theta (F_L^aR_\phi F_L^a) F_L^a F_L^b\\
-\amp = R_\theta R_{(-1)^a\phi}F_L^{a+b}\\
-\amp = R_{\theta+(-1)^a\phi}F_L^{a+b}
-\end{align*}
+\begin{gather*}
+R^{-1}=FRF\\
+F_{R(L)}=RF_LR^{-1}
+\end{gather*}
 </div>
-<div class="para">This last expression is the same as the multiplication given by the semidirect product.</div>
+<div class="para">which hold for any rotation <span class="process-math">\(R\)</span> and any reflection <span class="process-math">\(F\text{.}\)</span> Now, given any string of <span class="process-math">\(R\)</span>'s (for various angles) and <span class="process-math">\(F\)</span>'s, first rewrite all the <span class="process-math">\(F\)</span>'s in the form <span class="process-math">\(RF_LR^{-1}\text{,}\)</span> then apply <span class="process-math">\(F_LR=R^{-1}F_L\)</span> to shift all the <span class="process-math">\(R\)</span>'s to the left and all the <span class="process-math">\(F_L\)</span>'s to the right. This shows that any element in <span class="process-math">\(D_n\)</span> can be written in the form <span class="process-math">\(R_\theta F_L^a\)</span> for some <span class="process-math">\(\theta\)</span> and <span class="process-math">\(a=0,1\text{.}\)</span> Finally, it is clear that we have <span class="process-math">\(K\cap H=\{R_0\}\text{.}\)</span> The hypothesis of the result in the previous part are met, so we conclude that <span class="process-math">\(D_n
+\approx K\rtimes H \approx C_n\rtimes C_2\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="groups_extra_exer_section.html#p-337" class="internal">in-context</a></span>
 </body>

@@ -13,10 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To "transfer" the metric <a href="" class="xref" data-knowl="./knowl/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to <span class="process-math">\(\extC\)</span> by stereographic projection means that we define the elliptic metric <span class="process-math">\(d_{\extC}\)</span> on <span class="process-math">\(\extC\)</span> by the following.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/s2metric.html">
+<div class="para">The distance between points <span class="process-math">\(P,Q\)</span> on <span class="process-math">\(S^2\)</span> is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle <span class="process-math">\(\angle
+POQ\text{,}\)</span> where <span class="process-math">\(O\)</span> is the origin. From vector calculus, we have the following dot product formula.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\overrightarrow{OP})\cdot (\overrightarrow{OQ})=|\overrightarrow{OP}||\overrightarrow{OQ}|\cos(\angle
+POQ)
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(\cos(\angle POQ)\text{,}\)</span> we obtain the formula for the distance <span class="process-math">\(d_{S^2}(P,Q)\)</span> between points <span class="process-math">\(P,Q\)</span> in <span class="process-math">\(S^2\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation}
-d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))\tag{3.4.7}
+d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)\tag{3.4.6}
 \end{equation}
 </div>
 </div>

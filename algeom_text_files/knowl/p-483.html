@@ -11,9 +11,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Find the area of the hyperbolic disk <span class="process-math">\(\{|z|\leq
-\alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We conclude this subsection on hyperbolic length and area with an integral formula for the area of a region <span class="process-math">\(R\)</span> in <span class="process-math">\(\D\text{,}\)</span> following the development in <a href="" class="xref" data-knowl="./knowl/henle_modern_geometries.html" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.  As a function of the two real variables <span class="process-math">\(r\)</span> and <span class="process-math">\(\theta\text{,}\)</span> the polar form expression <span class="process-math">\(z=re^{i\theta}\)</span> gives rise to the two parameterized curves <span class="process-math">\(r\to z_1(r)=re^{i\theta}\)</span> (where <span class="process-math">\(\theta\)</span> is constant) and <span class="process-math">\(\theta \to z_2(\theta) = re^{i\theta}\)</span> (where <span class="process-math">\(r\)</span> is constant). Using <span class="process-math">\(z_1'(r) =
+e^{i\theta}\)</span> and <span class="process-math">\(z_2'(\theta)=ire^{i\theta}\text{,}\)</span> the arc length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> for the two curves are the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html">
+\begin{equation*}
+\frac{2|e^{i\theta}|\;dr}{1-r^2}=\frac{2\;dr}{1-r^2}
+\;(\text{for curve } z_1)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html">
+\begin{equation*}
+\frac{2|ire^{i\theta}|\;dr}{1-r^2}=\frac{2r\;dr}{1-r^2}
+\;(\text{for curve } z_2)
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(dA=\frac{4r\;dr\;d\theta}{(1-r^2)^2}\text{,}\)</span> so that the area of a region <span class="process-math">\(R\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/henle_modern_geometries.html">
+\begin{equation}
+\text{Area}(R)=\iint_R
+dA = \iint_R \frac{4r\;dr\;d\theta}{(1-r^2)^2}.\tag{3.3.10}
+\end{equation}
+</div>
 </div>
 <span class="incontext"><a href="section-13.html#p-483" class="internal">in-context</a></span>
 </body>

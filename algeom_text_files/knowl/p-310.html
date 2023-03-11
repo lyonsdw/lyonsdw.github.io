@@ -11,16 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{,}\)</span> and consider the map</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/gpselfactionexer.html">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">We will show that <span class="process-math">\(L_g\)</span> is invertible. Similar arguments show that <span class="process-math">\(R_g,C_g\)</span> are invertible. We have<div class="displaymath process-math">
 \begin{equation*}
-R\colon H\to \Perm(G)
+L_{g^{-1}}(L_g(x))=g^{-1}gx=x
 \end{equation*}
-</div>
-<div class="para">given by <span class="process-math">\(h\to R_h\text{,}\)</span> where <span class="process-math">\(R_h(g)=gh^{-1}\)</span> (this is the restriction of right inverse multiplication action in <a href="" class="xref" data-knowl="./knowl/gpselfactionexer.html" title="Exercise 2.5.3.1: Actions of a group on itself">Exercise 2.5.3.1</a> to <span class="process-math">\(H\)</span>). Show that the orbits of this action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> are the same as the cosets of <span class="process-math">\(H\text{.}\)</span> This shows that the two potentially different meanings of <span class="process-math">\(G/H\)</span> (one is the set of cosets, the other is the set of orbits of the action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> via <span class="process-math">\(R\)</span>), are in fact in agreement.</div>
-</div>
+</div>for all <span class="process-math">\(x\in G\text{.}\)</span> A similar argument shows that <span class="process-math">\(L_g(L_{g^{-1}}(x))=x\)</span> for all <span class="process-math">\(x\text{.}\)</span> We conclude that <span class="process-math">\(L_g\)</span> is invertible, with inverse <span class="process-math">\((L_g)^{-1}=L_{g^{-1}}\text{.}\)</span> Thus <span class="process-math">\(L_g\)</span> is an element of <span class="process-math">\(\Perm(G)\text{,}\)</span> as desired.</div></li>
+<li><div class="para">You just have to check that <span class="process-math">\(L_{gh}=L_g\circ
+L_h\text{,}\)</span> <span class="process-math">\(R_{gh}=R_g\circ R_h\)</span> (here you see why the inverse is needed!), and <span class="process-math">\(C_{gh}=C_g\circ C_h\text{.}\)</span> Here is the argument for <span class="process-math">\(L\text{.}\)</span> Similar arguments work for <span class="process-math">\(R,C\text{.}\)</span> Let <span class="process-math">\(g,h\in G\text{.}\)</span> We have <span class="process-math">\(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\)</span> for all <span class="process-math">\(x\in
+G\text{,}\)</span> so we have <span class="process-math">\(L_g\circ L_h = L_{gh}\text{.}\)</span>
+</div></li>
+<li><div class="para">For injectivity, if <span class="process-math">\(L_g=L_h\text{,}\)</span> then <span class="process-math">\(g=L_g(e)=L_h(e)=h\text{.}\)</span> By the First Isomorphism Theorem, we conclude that <span class="process-math">\(G\approx L(G)\text{,}\)</span> which is subgroup of <span class="process-math">\(\Perm(G)\text{.}\)</span>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="section-9.html#p-310" class="internal">in-context</a></span>
 </body>
 </html>
