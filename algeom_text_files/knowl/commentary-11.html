@@ -12,23 +12,34 @@
 </head>
 <body class="ignore-math">
 <article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 1.2.6.1.</span></h4>
-<div class="para logical">
-<div class="para">The component of <span class="process-math">\(u\)</span> in the <span class="process-math">\(r\)</span> direction is <span class="process-math">\((u\cdot r)r\text{,}\)</span> and the desired reflection of <span class="process-math">\(u\)</span> in the plane normal to <span class="process-math">\(r\)</span> is <span class="process-math">\(u-2(u\cdot r)r\text{.}\)</span> The heart of this exercise is to see that <span class="process-math">\(r\times(u\times r) = u-(u\cdot r)r\text{.}\)</span> This follows immediately from the identity</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
-\begin{equation*}
-a\times (b\times c) = (a\cdot c)b - (a\cdot b)c,
-\end{equation*}
-</div>
-<div class="para">which holds for all <span class="process-math">\(a,b,c\in \R^3\text{.}\)</span> Another way is to use the right-hand rule to see that the vectors on both sides of the equation point in the same direction, and use the formula <span class="process-math">\(|a\times b|=|a||b|\sin\theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by vectors <span class="process-math">\(a,b\text{,}\)</span> to see that the vectors on both sides have length <span class="process-math">\(|u|\sin \theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by <span class="process-math">\(u\)</span> and <span class="process-math">\(r\text{.}\)</span> Now we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">First, check that, for any pure, unit quaternion <span class="process-math">\(u\text{,}\)</span> we have <span class="process-math">\(u^2=-1\)</span> (use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
 \begin{align*}
-rur \amp = r(-u\cdot r + u\times r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
-\amp = r(-u\cdot r) -r\cdot (u\times r) + r\times (u\times
-r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
-\amp = u-2(u\cdot r)r
+R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
+\sin\theta)\\
+\amp = u(\cos^2\theta+\sin^2\theta) -
+\sin\theta\cos\theta + \sin\theta\cos\theta\\
+\amp = u
 \end{align*}
 </div>
-<div class="para">as desired.</div>
-</div></article><span class="incontext"><a href="quaternionsection.html#commentary-11" class="internal">in-context</a></span>
+</div></li>
+<li><div class="para">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+\begin{align*}
+R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)\\
+\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
+-uvu\sin^2\theta\\
+\amp =v(\cos^2\theta -\sin^2\theta) +
+2w\sin\theta\cos\theta
+\end{align*}
+</div>(to get the last expression from the next-to-last expression, use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to simplify <span class="process-math">\(uv-vu=2u\times v=2w\)</span> and <span class="process-math">\(uvu=v\)</span>).   Using double angle formulas, the last expression in the displayed derivation becomes<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+\begin{equation*}
+v\cos(2\theta) + w\sin(2\theta).
+\end{equation*}
+</div>Since <span class="process-math">\(R_r\)</span> is a linear map that acts on the an orthogonal basis <span class="process-math">\(u,v,w\)</span> as a rotation about <span class="process-math">\(u\)</span> by the angle <span class="process-math">\(2\theta\text{,}\)</span> the Proposition is established.</div></li>
+</ol></div></article><span class="incontext"><a href="quaternionsection.html#commentary-11" class="internal">in-context</a></span>
 </body>
 </html>

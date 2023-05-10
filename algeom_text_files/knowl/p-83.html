@@ -11,18 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical">
-<div class="para">In deriving equation <a href="" class="xref" data-knowl="./knowl/quatrotpropformula.html" title="Equation 1.2.20">(1.2.20)</a>, you will obtain expressions <span class="process-math">\(uv-vu\)</span> and <span class="process-math">\(uvu\text{.}\)</span> Use equation <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to show that <span class="process-math">\(uv-vu=w\)</span> and <span class="process-math">\(uvu=v\text{.}\)</span> Show that the quaternion on the right side of <a href="" class="xref" data-knowl="./knowl/quatrotpropformula.html" title="Equation 1.2.20">(1.2.20)</a> has norm 1. Finally, use the fact that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotpropformula.html ./knowl/purequatproduct.html ./knowl/quatrotpropformula.html">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">First, check that, for any pure, unit quaternion <span class="process-math">\(u\text{,}\)</span> we have <span class="process-math">\(u^2=-1\)</span> (use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+\begin{align*}
+R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
+\sin\theta)\\
+\amp = u(\cos^2\theta+\sin^2\theta) -
+\sin\theta\cos\theta + \sin\theta\cos\theta\\
+\amp = u
+\end{align*}
+</div>
+</div></li>
+<li><div class="para">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+\begin{align*}
+R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
+u\sin\theta)^\ast\\
+\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)\\
+\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
+-uvu\sin^2\theta\\
+\amp =v(\cos^2\theta -\sin^2\theta) +
+2w\sin\theta\cos\theta
+\end{align*}
+</div>(to get the last expression from the next-to-last expression, use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to simplify <span class="process-math">\(uv-vu=2u\times v=2w\)</span> and <span class="process-math">\(uvu=v\)</span>).   Using double angle formulas, the last expression in the displayed derivation becomes<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
 \begin{equation*}
-a\cdot b =
-|a||b|\cos t
+v\cos(2\theta) + w\sin(2\theta).
 \end{equation*}
-</div>
-<div class="para">for real vectors <span class="process-math">\(a,b\)</span> that make an angle <span class="process-math">\(t\)</span> at the origin to determine the angle made by <span class="process-math">\(v,R_r(v)\text{.}\)</span>
-</div>
-</div>
+</div>Since <span class="process-math">\(R_r\)</span> is a linear map that acts on the an orthogonal basis <span class="process-math">\(u,v,w\)</span> as a rotation about <span class="process-math">\(u\)</span> by the angle <span class="process-math">\(2\theta\text{,}\)</span> the Proposition is established.</div></li>
+</ol></div>
 <span class="incontext"><a href="quaternionsection.html#p-83" class="internal">in-context</a></span>
 </body>
 </html>

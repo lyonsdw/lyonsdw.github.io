@@ -13,31 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We have</div>
+<div class="para">A relation on a set <span class="process-math">\(X\)</span> is a subset of <span class="process-math">\(X\times X\text{.}\)</span> Given a relation <span class="process-math">\(R\subseteq X\times X\text{,}\)</span> we write <span class="process-math">\(x\sim_R y\text{,}\)</span> or just <span class="process-math">\(x\sim y\)</span> if <span class="process-math">\(R\)</span> is understood by context, to denote that <span class="process-math">\((x,y)\in R\text{.}\)</span> A relation is <dfn class="terminology">reflexive</dfn> if <span class="process-math">\(x\sim x\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(X\text{.}\)</span> A relation is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(x\sim y\)</span> implies <span class="process-math">\(y\sim x\text{.}\)</span> A relation is <dfn class="terminology">transitive</dfn> if <span class="process-math">\(x\sim y\)</span> and <span class="process-math">\(y\sim z \)</span> together imply that <span class="process-math">\(x\sim z\text{.}\)</span> A relation is called an <dfn class="terminology">equivalence relation</dfn> if it is reflexive, symmetric, and transitive. Given an equivalence relation on <span class="process-math">\(X\)</span> and an element <span class="process-math">\(x\in X\text{,}\)</span> we write <span class="process-math">\([x]\)</span> to denote the set</div>
 <div class="displaymath process-math">
-\begin{align*}
-s(a,b,c)(s(-a,-b,-c))^\ast \amp =
-\frac{a+bi}{1-c}\left(\frac{-a-bi}{1+c}\right)^\ast\\
-\amp = \frac{(a+bi)(-a+bi)}{1-c^2}\\
-\amp = \frac{-a^2-b^2}{1-c^2}\\
-\amp = \frac{c^2-1}{1-c^2} = -1.
-\end{align*}
+\begin{equation}
+[x] = \{y\in X\colon x\sim y\},\tag{1.4.1}
+\end{equation}
 </div>
-<div class="para">Conversely, if <span class="process-math">\(zw^\ast = -1\text{,}\)</span> then</div>
+<div class="para">called the <dfn class="terminology">equivalence class</dfn> of the element <span class="process-math">\(x\text{.}\)</span> The set of equivalence classes is denoted <span class="process-math">\(X/\!\!\sim\text{,}\)</span> that is,</div>
 <div class="displaymath process-math">
-\begin{align*}
-s^{-1}(w)\amp =
-s^{-1}\left(\frac{-1}{z^\ast}\right)\\
-\amp = s^{-1}\left(\frac{-z}{|z|^2}\right)\\
-\amp = \left(\frac{1}{\frac{1}{|z|^2}+1}\right)
-\left(\frac{-2\re(z)}{|z|^2},\frac{-2\im(z)}{|z|^2},\frac{1}{|z|^2}-1
-\right)\\
-\amp = \left(\frac{1}{1+|z|^2}\right)
-\left(-2\re(z),-2\im(z),1-|z|^2\right)\\
-\amp = -s^{-1}(z).
-\end{align*}
+\begin{equation}
+X/\!\!\sim \; = \{[x]\colon x\in X\}.\tag{1.4.2}
+\end{equation}
 </div>
 </div>
-<span class="incontext"><a href="stereoprojsect.html#p-107" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-4.html#p-107" class="internal">in-context</a></span>
 </body>
 </html>

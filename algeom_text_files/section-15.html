@@ -506,8 +506,27 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 </div></article></section><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.5.5</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="fundthmprojgeompfexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-584">Use <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</div></article><article class="exercise exercise-like" id="chartexer"><h4 class="heading">
+<article class="commentary" id="commentary-148"><div class="para" id="p-581">
+<em class="alert">Essential exercises:</em> <a href="" class="xref" data-knowl="./knowl/fundthmprojgeompfexer.html" title="Exercise 3.5.5.1">1</a>, <a href="" class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">2</a>, <a href="" class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">3</a>, <a href="" class="xref" data-knowl="./knowl/projcrossratioexer.html" title="Exercise 3.5.5.4: Cross ratio">4</a>, <a href="" class="xref" data-knowl="./knowl/rp2collinearconditionexer.html" title="Exercise 3.5.5.5: Condition for collinearity in \R\Proj_2">5</a>
+</div>
+<div class="para" id="p-582">
+<em class="alert">At least discuss the idea:</em> <a href="" class="xref" data-knowl="./knowl/pappusthmexer.html" title="Exercise 3.5.5.6">6</a>
+</div>
+<div class="para" id="p-583">
+<em class="alert">May be omitted:</em> <a href="" class="xref" data-knowl="./knowl/quadricsexer.html" title="Exercise 3.5.5.7: Quadrics">7</a>
+</div></article><article class="exercise exercise-like" id="fundthmprojgeompfexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-584">Use <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</div></article><article class="commentary" id="commentary-149"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.1 (proof of the Fundamental Theorem of Projective Geometry).</span></h4>
+<div class="para logical" id="p-585">
+<div class="para">Let <span class="process-math">\(P_0,P_1,P_2,\ldots,P_{n+1}\)</span> be a set of <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> such that all subsets of size <span class="process-math">\(n+1\)</span> are in general position. Let <span class="process-math">\(v_0,v_1,v_2,\ldots,v_{n+1}\)</span> be vectors in <span class="process-math">\(\F^{n+1}\)</span> such that <span class="process-math">\(P_i=[v_i]\text{.}\)</span> By assumption, the points <span class="process-math">\(P_1,P_2,\ldots,P_{n+1}\)</span> are in general position, so the vectors <span class="process-math">\(v_1,v_2,\ldots,v_{n+1}\)</span> are independent and form a basis of <span class="process-math">\(\F^{n+1}\text{.}\)</span> Let <span class="process-math">\(c_1,c_2,\ldots,c_{n+1}\)</span> be scalars such that <span class="process-math">\(v_0=\sum_{i=1}^{n+1}c_iv_i\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, there is a unique projective transformation <span class="process-math">\(T\)</span> that maps <span class="process-math">\([e_i]\to
+P_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the same argument, there is a unique projective transformation <span class="process-math">\(S\)</span> that maps <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> It follows that the projective transformation <span class="process-math">\(S\circ T^{-1}\)</span> maps <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> For uniqueness, suppose there are two projective maps, say <span class="process-math">\(U,V\)</span> that map <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq
+n+1\text{.}\)</span> It then follows that <span class="process-math">\(U\circ T, V\circ T\)</span> both map <span class="process-math">\([e_i]\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span> By the uniqueness statement in <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a>, we have <span class="process-math">\(U\circ T=V\circ T\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fundthmprojgeomlemma.html ./knowl/fundthmprojgeomlemma.html">
+\begin{equation*}
+U=(U\circ T)\circ T^{-1} = (V\circ T)\circ T^{-1}=V. 
+\end{equation*}
+</div>
+<div class="para">Alternatively, we could have stated and proved a separate lemma that says that any projective transformation that fixes <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> must be the identity. [The special case of this statement, that we already know, is that a Möbius transformation with three fixed points is the identity.]</div>
+</div></article><article class="exercise exercise-like" id="chartexer"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Coordinate charts and inhomogeneous coordinates.</span>
 </h4>
 <div class="para logical" id="p-586">
@@ -528,6 +547,14 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 \end{equation*}
 </div>
 <div class="para">(where the circumflex hat indicates a deleted item from a sequence) is called the <span class="process-math">\(i\)</span>-th <dfn class="terminology">coordinate chart</dfn> for <span class="process-math">\(\F\Proj_n\text{.}\)</span> What is the map that results from applying the <span class="process-math">\(0\)</span>-th coordinate chart <span class="process-math">\(\C\to \C\Proj_2\)</span> followed by taking homogeneous coordinates in position 1?</div>
+</div></article><article class="commentary" id="commentary-150"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.2.</span></h4>
+<div class="para logical" id="p-587">
+<div class="para">The map <span class="process-math">\(\pi_1\circ \text{chart}_0\)</span> is inversion, as follows.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z\stackrel{\text{chart}_0}{\to} [1,z] \stackrel{\pi_1}{\to} 1/z
+\end{equation*}
+</div>
 </div></article><article class="exercise exercise-like" id="mobiusgeomisprojectivegeom"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Möbius geometry is projective geometry.</span>
 </h4>
@@ -545,6 +572,31 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 </div>
 <div class="para">Comment: Observe that <span class="process-math">\(\mu\)</span> is an extension of <span class="process-math">\(\pi_1\colon
 U_1\to \C\)</span> given by <span class="process-math">\(\pi_1([x_0,x_1])=\frac{x_0}{x_1}\)</span> (defined in <a href="" class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>).</div>
+</div></article><article class="commentary" id="commentary-151"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.3.</span></h4>
+<div class="para logical" id="p-589">
+<div class="para">It is clear that <span class="process-math">\(\mu\)</span> is a bijection. Let <span class="process-math">\(T\in
+\M\)</span> be given by <span class="process-math">\(Tz=\frac{az+b}{cz+d}\text{.}\)</span> Let <span class="process-math">\(M\in
+GL(2,C)\)</span> be given by <span class="process-math">\(M=\twotwo{a}{b}{c}{d}\text{.}\)</span> If <span class="process-math">\(\beta\neq 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="md-59">
+\begin{align*}
+\mu([M][\alpha,\beta])\amp
+=\mu\left([a\alpha+b\beta,c\alpha+d\beta]\right)\\
+\amp = \frac{a\alpha+b\beta}{c\alpha+d\beta}\\
+\amp =
+\frac{a\frac{\alpha}{\beta}+b}{c\frac{\alpha}{\beta}+d}\\
+\amp = T(\alpha/\beta)\\
+\amp = T(\mu([\alpha,\beta]).
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(\beta=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu([M][\alpha,0])= \mu([a\alpha,c\alpha])=a/c=T(\infty) =
+T(\mu([\alpha,0]).
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(\mu\circ T\circ \mu{-1} = [M]\in PGL(2,\C)\)</span> and <span class="process-math">\(\mu^{-1}\circ [M]\circ \mu = T\in \M\text{.}\)</span>
+</div>
 </div></article><article class="exercise exercise-like" id="projcrossratioexer"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Cross ratio.</span>
 </h4>
@@ -570,14 +622,30 @@ U_1\to \C\)</span> given by <span class="process-math">\(\pi_1([x_0,x_1])=\frac{
 \end{equation*}
 </div>where <span class="process-math">\(\det(P_iP_j)\)</span> is the determinant of the matrix <span class="process-math">\(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\)</span> where <span class="process-math">\(P_i=[a_i,b_i]\text{.}\)</span> </div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="rp2collinearconditionexer"><h4 class="heading">
+</div></article><article class="commentary" id="commentary-152"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.4.</span></h4>
+<div class="para logical" id="p-591"><ol class="lower-alpha">
+<li id="li-386"><div class="para" id="p-derived-li-386">Let <span class="process-math">\(S=(\cdot,\mu(P_1),\mu(P_2),\mu(P_3))\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, the map <span class="process-math">\(\mu^{-1}\circ S\circ \mu\)</span> is a projective transformation, and it is easy to see that <span class="process-math">\(\mu^{-1}\circ S\circ \mu\)</span> takes <span class="process-math">\(P_1,P_2,P_3\)</span> to <span class="process-math">\([e_0], [e_2],[e_1]\text{,}\)</span> so by the Fundamental Theorem of Projective Geometry, we must have <span class="process-math">\(\mu^{-1}\circ S\circ \mu = [T]\text{.}\)</span> Evaluating both sides of this equation at <span class="process-math">\(P_0\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/mobiusgeomisprojectivegeom.html">
+\begin{equation*}
+(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3)).
+\end{equation*}
+</div>
+</div></li>
+<li id="li-387"><div class="para" id="p-derived-li-387">It is easy to verify that<div class="displaymath process-math">
+\begin{equation*}
+(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))=
+\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="rp2collinearconditionexer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Condition for collinearity in <span class="process-math">\(\R\Proj_2\)</span>.</span>
 </h4>
 <div class="para" id="p-592">Let <span class="process-math">\(u=(u_1,u_2,u_3),v=(v_1,v_2,v_3),w=(w_1,w_2,w_3)\)</span> be vectors in <span class="process-math">\(\R^3\text{,}\)</span> and let <span class="process-math">\(M\)</span> be the matrix <span class="process-math">\(M=\left[\begin{array}{ccc}
 u_1 \amp v_1 \amp w_1\\
 u_2 \amp v_2 \amp w_2\\
 u_3 \amp v_3 \amp w_3\\\end{array}\right]\)</span> Show that <span class="process-math">\([u],[v],[w]\)</span> are collinear in <span class="process-math">\(\R\Proj_2\)</span> if and only if <span class="process-math">\(\det M=0\text{.}\)</span>
-</div></article><figure class="figure figure-like" id="pappus_theorem_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/pappus_theorem.png" class="contained"></div>
+</div></article><article class="commentary" id="commentary-153"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.5.</span></h4>
+<div class="para" id="p-593">A line in projective space <span class="process-math">\(\R\Proj_2\)</span> the set of equivalence classes of all vectors in a 2-dimensional subspace of <span class="process-math">\(\R^3\text{.}\)</span> The three vectors <span class="process-math">\(u,v,w\)</span> lie in a 2-dimensional subspace together if and only if the three vectors are linearly dependent. This holds if and only if the determinant of the given <span class="process-math">\(3\times 3\)</span> matrix is zero.</div></article><figure class="figure figure-like" id="pappus_theorem_fig"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="images/pappus_theorem.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>Pappus' Theorem</figcaption></figure><article class="exercise exercise-like" id="pappusthmexer"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para" id="p-594">The following is a famous theorem of classical geometry.</div> <article class="assemblage assemblage-like" id="assemblage-10"><h5 class="heading"><span class="title">Pappus' Theorem.</span></h5>
 <div class="para" id="p-595">Let <span class="process-math">\(A,B,C\)</span> be three distinct collinear points in <span class="process-math">\(\R\Proj_2\text{.}\)</span> Let <span class="process-math">\(A',B',C'\)</span> be another three distinct collinear points on a different line. Let <span class="process-math">\(P,Q,R\)</span> be the intersection points <span class="process-math">\(P=BC'\cap B'C\text{,}\)</span> <span class="process-math">\(Q=AC'\cap
@@ -600,6 +668,31 @@ A'C\text{,}\)</span> <span class="process-math">\(R=AB'\cap A'B\text{.}\)</span>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like">For the second bullet point, use the fact that <span class="process-math">\(B'=[x,y,z]\)</span> lies on <span class="process-math">\(AR\)</span> to get <span class="process-math">\(y=z\text{.}\)</span> For the third bullet point, use known coordinates for <span class="process-math">\(A,B,B',P\)</span> to get coordinates for lines <span class="process-math">\(AB,PB'\text{.}\)</span> Then <span class="process-math">\(C= AB\cap PB'\text{.}\)</span> Use a similar process for <span class="process-math">\(C'\text{.}\)</span> Four the fourth bullet point, use <span class="process-math">\(Q=AC'\times A'C\text{.}\)</span>
 </div></div>
+</div></article><article class="commentary" id="commentary-154"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.6 (proof of Pappus' Theorem).</span></h4>
+<div class="para logical" id="p-597">
+<div class="para">Following the outline, we have the following.</div>
+<ul class="disc">
+<li id="li-393"><div class="para" id="p-derived-li-393">We have the following.<div class="displaymath process-math" id="md-60">
+\begin{align*}
+AR\amp = [e_1]\times [e_0] = [1,0,0]\times [1,1,1] = [0,-1,1]\\
+A'R\amp = [e_2]\times [e_0] = [0,1,0]\times [1,1,1] = [1,0,-1]
+\end{align*}
+</div>
+</div></li>
+<li id="li-394"><div class="para" id="p-derived-li-394">Since <span class="process-math">\(B'\)</span> lies on <span class="process-math">\(AR\text{,}\)</span> we have <span class="process-math">\(B'\cdot
+AR=0\text{,}\)</span> so <span class="process-math">\(B'=[r,x,x]\)</span> for some <span class="process-math">\(r,x\text{.}\)</span> It must be that <span class="process-math">\(x\neq 0\text{,}\)</span> for otherwise, we would have <span class="process-math">\(B'=A\text{.}\)</span> So we can take <span class="process-math">\(B'\)</span> to be <span class="process-math">\([r,1,1]\text{.}\)</span> Similar reasoning yields <span class="process-math">\(B = [1,s,1]\)</span> for some <span class="process-math">\(s\text{.}\)</span>
+</div></li>
+<li id="li-395"><div class="para" id="p-derived-li-395">Next we have the following.<div class="displaymath process-math" id="md-61">
+\begin{align*}
+AB\amp = [e_1]\times [1,s,1]  = [0,-1,s]\\
+PB'\amp = [e_3]\times [r,1,1] = [-1,r,0]
+\end{align*}
+</div>Now we have <span class="process-math">\(C=AB\times PB'=[rs,s,1]\text{.}\)</span> Similar reasoning applies to <span class="process-math">\(C'\text{,}\)</span> which lies on <span class="process-math">\(A'B'\)</span> and also on <span class="process-math">\(BP\)</span> and yields <span class="process-math">\(C'=[r,rs,1]\text{.}\)</span>
+</div></li>
+<li id="li-396"><div class="para" id="p-derived-li-396">Point <span class="process-math">\(Q\)</span> lies on <span class="process-math">\(AC'=[0,-1,rs]\)</span> and also on <span class="process-math">\(A'C=[1,0,-rs]\text{,}\)</span> so must have the form <span class="process-math">\(AC'\times A'C=[rs,rs,1]\text{.}\)</span>
+</div></li>
+<li id="li-397"><div class="para" id="p-derived-li-397">We have <span class="process-math">\(X\cdot [1,-1,0]=0\)</span> for <span class="process-math">\(X=P,Q,R\text{,}\)</span> so we conclude that <span class="process-math">\(P,Q,R\)</span> are collinear.</div></li>
+</ul>
 </div></article><article class="exercise exercise-like" id="quadricsexer"><h4 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Quadrics.</span>
 </h4>
@@ -621,7 +714,12 @@ x_0^2+x_1^2 -x_2^2=0.
 </div>What are the figures in <span class="process-math">\(\R^2\)</span> that result from taking inhomogeneous coordinates (see <a href="" class="xref" data-knowl="./knowl/chartexer.html" title="Exercise 3.5.5.2: Coordinate charts and inhomogeneous coordinates">Exercise 3.5.5.2</a>) on <span class="process-math">\(C\)</span> in positions <span class="process-math">\(0,1,2\text{?}\)</span>
 </div></li>
 </ol>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">The set <span class="process-math">\(G(d,V)\)</span> is called the <dfn class="terminology">Grassmannian</dfn> of <span class="process-math">\(d\)</span>-dimensional subspaces of <span class="process-math">\(V\text{,}\)</span> named in honor of Hermann Grassmann.</div></div>
+</div></article><article class="commentary" id="commentary-155"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.7.</span></h4>
+<div class="para logical" id="p-599"><ol class="lower-alpha">
+<li id="li-400"><div class="para" id="p-derived-li-400">Given a vector <span class="process-math">\(x=(x_0,x_1,\ldots,x_{n+1})\in\F^{n+1}\text{,}\)</span> let <span class="process-math">\(c(x)\)</span> denote the expression on the left side of <a href="" class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a>. We have <span class="process-math">\(c(kx) = k^2c(x)\)</span> for any scalar <span class="process-math">\(k\text{,}\)</span> so <span class="process-math">\(c(x)=0\)</span> if and only if <span class="process-math">\(c(kx)=0\text{.}\)</span>
+</div></li>
+<li id="li-401"><div class="para" id="p-derived-li-401">Taking inhomogeneous coordinates in position 0, let <span class="process-math">\(u=x_1/x_0,v=x_2/x_0\text{.}\)</span> The points <span class="process-math">\((1,u,v)\)</span> satisfy <span class="process-math">\(1+u^2-v^2=0\text{,}\)</span> which is the equation for a hyperbola in the <span class="process-math">\(u,v\)</span>-plane. Taking inhomogeneous coordinates in position 1 is also a hyperbola. Taking inhomogeneous coordinates in position 2, with <span class="process-math">\(u=x_0/x_2,v=x_1/x_2\text{,}\)</span> we have <span class="process-math">\(u^2+v^2-1=0\text{,}\)</span> which is the equation for the unit circle in the <span class="process-math">\(u,v\)</span>-plane.</div></li>
+</ol></div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">The set <span class="process-math">\(G(d,V)\)</span> is called the <dfn class="terminology">Grassmannian</dfn> of <span class="process-math">\(d\)</span>-dimensional subspaces of <span class="process-math">\(V\text{,}\)</span> named in honor of Hermann Grassmann.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="elliptic_geometry_section.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="geometry_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

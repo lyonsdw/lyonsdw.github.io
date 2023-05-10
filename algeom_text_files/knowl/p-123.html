@@ -11,22 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">A <dfn class="terminology">commutative diagram</dfn> is a directed graph with two properties.</div>
-<ol class="decimal">
-<li><div class="para">Vertices are labeled by sets and directed edges are labeled by functions between those sets. That is, the directed edge <span class="process-math">\(f=(X,Y)\)</span> denotes a function <span class="process-math">\(f\colon
-X\to Y\text{.}\)</span>
-</div></li>
-<li><div class="para">Whenever there are two paths from an initial vertex <span class="process-math">\(X\)</span> to a final vertex <span class="process-math">\(Y\text{,}\)</span> the composition of functions along one path is equal to the composition of functions along the other path. That is, if <span class="process-math">\(X_0,X_1,\ldots,X_n\)</span> is a path with edges <span class="process-math">\(f_i\colon X_{i-1}\to X_{i}\)</span> for <span class="process-math">\(1\leq i\leq n\)</span> and <span class="process-math">\(X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n\)</span> is a path with edges <span class="process-math">\(g_i\colon Y_{i-1}\to Y_{i}\)</span> for <span class="process-math">\(1\leq i\leq
-m\text{,}\)</span> then<div class="displaymath process-math">
+<div class="para">Another standard definition of the set <span class="process-math">\(\Z_n\text{,}\)</span> together with its operations of addition and multiplication, is the following. Given an integer <span class="process-math">\(a\text{,}\)</span> we write <span class="process-math">\(a \MOD
+n\)</span> to denote the <dfn class="terminology">remainder</dfn> obtained when dividing <span class="process-math">\(a\)</span> by <span class="process-math">\(n\)</span> (the integer <span class="process-math">\(a \MOD n\)</span> is the same as the integer <span class="process-math">\(r\)</span> in the statement of the division algorithm given in <a href="" class="xref" data-knowl="./knowl/equivmodnisequivrelnexer.html" title="Checkpoint 1.4.4">Checkpoint 1.4.4</a>). Now define <span class="process-math">\(\Z_n\)</span> to be the set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/equivmodnisequivrelnexer.html ./knowl/intmodnadd.html ./knowl/intmodnmult.html">
 \begin{equation*}
-f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
-g_{m-1}\circ\cdots\circ g_1.
+\Z_n=\{0,1,2,\ldots,n-1\},
 \end{equation*}
 </div>
-</div></li>
-</ol>
+<div class="para">define the addition operation <span class="process-math">\(+_n\)</span> on <span class="process-math">\(\Z_n\)</span> by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/equivmodnisequivrelnexer.html ./knowl/intmodnadd.html ./knowl/intmodnmult.html">
+\begin{equation*}
+x+_n y= (x+y)\MOD n 
+\end{equation*}
+</div>
+<div class="para">and define the multiplication operation <span class="process-math">\(\cdot_n\)</span> on <span class="process-math">\(\Z_n\)</span> by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/equivmodnisequivrelnexer.html ./knowl/intmodnadd.html ./knowl/intmodnmult.html">
+\begin{equation*}
+x\cdot_n y = (xy) \MOD n.
+\end{equation*}
+</div>
+<div class="para">Show that this version of <span class="process-math">\(\Z_n\)</span> is equivalent to the version developed in <a href="" class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.4.2">Exercise 1.4.4.2</a> and <a href="" class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.4.3">Exercise 1.4.4.3</a>.</div>
 </div>
 <span class="incontext"><a href="section-4.html#p-123" class="internal">in-context</a></span>
 </body>

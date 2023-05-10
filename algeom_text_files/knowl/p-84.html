@@ -13,33 +13,23 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">First, check that, for any pure, unit quaternion <span class="process-math">\(u\text{,}\)</span> we have <span class="process-math">\(u^2=-1\)</span> (use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>). Now we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
-\begin{align*}
-R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
-u\sin\theta)^\ast\\
-\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
-\sin\theta)\\
-\amp = u(\cos^2\theta+\sin^2\theta) -
-\sin\theta\cos\theta + \sin\theta\cos\theta\\
-\amp = u
-\end{align*}
+<li><div class="para">For all <span class="process-math">\(u\in \R^3_\Quat\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+(R_r\circ R_s)(u) = R_r(sus^\ast)=r(sus^\ast)r^\ast =
+(rs)u(rs)^\ast = R_{rs}(u).
+\end{equation*}
 </div>
 </div></li>
-<li><div class="para">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
-\begin{align*}
-R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
-u\sin\theta)^\ast\\
-\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)\\
-\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
--uvu\sin^2\theta\\
-\amp =v(\cos^2\theta -\sin^2\theta) +
-2w\sin\theta\cos\theta
-\end{align*}
-</div>(to get the last expression from the next-to-last expression, use <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a> to simplify <span class="process-math">\(uv-vu=2u\times v=2w\)</span> and <span class="process-math">\(uvu=v\)</span>).   Using double angle formulas, the last expression in the displayed derivation becomes<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html">
+<li><div class="para">Applying the result from the previous part, we have<div class="displaymath process-math">
 \begin{equation*}
-v\cos(2\theta) + w\sin(2\theta).
+R_{r^\ast}\circ R_r = R_{r^\ast r} = R_{|r|^2}=R_1 = \Id
 \end{equation*}
-</div>Since <span class="process-math">\(R_r\)</span> is a linear map that acts on the an orthogonal basis <span class="process-math">\(u,v,w\)</span> as a rotation about <span class="process-math">\(u\)</span> by the angle <span class="process-math">\(2\theta\text{,}\)</span> the Proposition is established.</div></li>
+</div>and similarly,<div class="displaymath process-math">
+\begin{equation*}
+R_r\circ R_{r^\ast}=\Id.
+\end{equation*}
+</div>We conclude that <span class="process-math">\((R_r)^{-1}=R_{r^\ast}\text{.}\)</span>
+</div></li>
 </ol></div>
 <span class="incontext"><a href="quaternionsection.html#p-84" class="internal">in-context</a></span>
 </body>

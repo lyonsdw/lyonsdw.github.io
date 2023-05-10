@@ -13,13 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We have <span class="process-math">\((x,y)\stackrel{s}{\to} \frac{x}{1-y}\)</span> and <span class="process-math">\((x,-y)\stackrel{s}{\to} \frac{x}{1+y}\text{,}\)</span> so the question is whether <span class="process-math">\(\frac{x}{1-y}\stackrel{\text{inversion}}{\to}
-\frac{x}{1+y}\text{.}\)</span> The answer is yes, as confirmed by this derivation.</div>
+<div class="para">We have</div>
 <div class="displaymath process-math">
-\begin{equation*}
-\frac{x}{1-y}\stackrel{\text{inversion}}{\to}\frac{1-y}{x}=\frac{(1-y)x}{x^2} = \frac{(1-y)x}{1-y^2} =
-\frac{(1-y)x}{(1-y)(1+y)} = \frac{x}{1+y}
-\end{equation*}
+\begin{align*}
+T_{Z,\theta}(s(a,b,c)) \amp = (cos\theta +
+i\sin\theta)\frac{a+bi}{1-c}\\
+\amp = \frac{(a\cos\theta -b\sin\theta) +  i(a\sin\theta+b\cos\theta)}{1-c}\\
+\amp = s(a\cos\theta -b\sin\theta,
+a\sin\theta+b\cos\theta,c)\\
+\amp =s(R_{Z_\theta})(a,b,c).
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="stereoprojsect.html#p-102" class="internal">in-context</a></span>
