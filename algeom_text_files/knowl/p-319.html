@@ -11,17 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Alternatively, one can check that the given map is well-defined, one-to-one, and onto. Let <span class="process-math">\(\pi\)</span> denote the map <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(U_n\)</span> denote the set of elements in <span class="process-math">\(Z_n\)</span> that have multiplicative inverses, that is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U_n = \{x\in \Z_n\colon \exists y, xy=1\pmod{n}\}.
+\end{equation*}
 </div>
-<ul class="disc">
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is well-defined) Suppose <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>, we have <span class="process-math">\(g^{-1}h\in
-\Stab(x)\text{.}\)</span> Thus we have <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(gx=hx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is one-to-one) Suppose <span class="process-math">\(\pi(g\Stab(x))=gx=hx=\pi(h\Stab(x))\text{.}\)</span> Then <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(g^{-1}h\in \Stab(x)\text{,}\)</span> so <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is one-to-one.</div></li>
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is onto) Given <span class="process-math">\(gx\in \Orb(x)\text{,}\)</span> we have <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
-</ul>
+<ol class="lower-alpha">
+<li><div class="para">Show that <span class="process-math">\(x\)</span> is in <span class="process-math">\(U_n\)</span> if and only if <span class="process-math">\(x\)</span> is relatively prime to <span class="process-math">\(n\text{.}\)</span>
+</div></li>
+<li><div class="para">Show that <span class="process-math">\(U_n\)</span> with the binary operation of multiplication mod <span class="process-math">\(n\)</span> is an Abelian group.</div></li>
+<li><div class="para">Show that <span class="process-math">\(U_n\)</span> is isomorphic to <span class="process-math">\(\Aut(\Z_n)\)</span> via <span class="process-math">\(x\to [a\to ax]\text{.}\)</span>
+</div></li>
+</ol>
 </div>
-<span class="incontext"><a href="section-10.html#p-319" class="internal">in-context</a></span>
+<span class="incontext"><a href="groups_extra_exer_section.html#p-319" class="internal">in-context</a></span>
 </body>
 </html>

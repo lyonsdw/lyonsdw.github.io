@@ -13,45 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">All three equations can be verified by computing the left and right hand sides using rectangular coordindates. A better approach is to write <span class="process-math">\(r=|r|(\cos\theta + u\sin\theta)\text{,}\)</span> <span class="process-math">\(s=|s|(\cos \phi +
-v\sin\phi)\)</span> in polar form. Then we have <span class="process-math">\(r^\ast =
-|r|(\cos\theta - u\sin\theta)\)</span> and <span class="process-math">\(s^\ast = |s|(\cos \phi
--v\sin\phi)\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/purequatproduct.html" title="Equation 1.2.13">(1.2.13)</a>, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatconjmult.html ./knowl/quatnormsquare.html ./knowl/quatnormmult.html ./knowl/quatconjmult.html ./knowl/quatmatalgpropexer.html ./knowl/quatnormsquare.html">
-\begin{align*}
-rs \amp= |r||s|(\cos\theta
-+u\sin\theta)(\cos\phi+v\sin\phi) \\
-\amp = |r||s|\left[\cos\theta \cos\phi - u\cdot v
-\sin\theta\sin\phi\right]\\
-\amp + |r||s|\left[(u\times v)\sin\theta\sin\phi +
-u\sin\theta\cos\phi +v\cos\theta\sin\phi\right].
-\end{align*}
+<div class="para">Continuing the analogy with complex numbers, we have the following, for all quaternions <span class="process-math">\(r,s\text{.}\)</span>
 </div>
-<div class="para">In the last expression above, the real part of <span class="process-math">\(rs\)</span> is on the first line and the imaginary part is on the second line. Thus we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatconjmult.html ./knowl/quatnormsquare.html ./knowl/quatnormmult.html ./knowl/quatconjmult.html ./knowl/quatmatalgpropexer.html ./knowl/quatnormsquare.html">
-\begin{align*}
-(rs)^\ast
-\amp = |r||s|\left[\cos\theta \cos\phi - u\cdot v
-\sin\theta\sin\phi\right]\\
-\amp - |r||s|\left[(u\times v)\sin\theta\sin\phi +
-u\sin\theta\cos\phi +v\cos\theta\sin\phi\right].
-\end{align*}
+<div class="displaymath process-math">
+\begin{gather}
+(rs)^\ast = s^\ast r^\ast\tag{1.2.15}\\
+|r|^2 = rr^\ast=r^\ast r\tag{1.2.16}\\
+|rs|=|r||s|\text{.}\tag{1.2.17}
+\end{gather}
 </div>
-<div class="para">It is straightforward to check that you get the same thing by simplifying</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatconjmult.html ./knowl/quatnormsquare.html ./knowl/quatnormmult.html ./knowl/quatconjmult.html ./knowl/quatmatalgpropexer.html ./knowl/quatnormsquare.html">
-\begin{align*}
-s^\ast r^\ast \amp=
-|r||s|(\cos\phi-v\sin\phi)(\cos\theta -u\sin\theta). 
-\end{align*}
-</div>
-<div class="para">This establishes <a href="" class="xref" data-knowl="./knowl/quatconjmult.html" title="Equation 1.2.15">(1.2.15)</a>. Doing the same computation with <span class="process-math">\(s=r^\ast=|r|(\cos\theta - u\sin\theta)\)</span> gives <a href="" class="xref" data-knowl="./knowl/quatnormsquare.html" title="Equation 1.2.16">(1.2.16)</a>. Finally, use the two equations already established to compute</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/quatconjmult.html ./knowl/quatnormsquare.html ./knowl/quatnormmult.html ./knowl/quatconjmult.html ./knowl/quatmatalgpropexer.html ./knowl/quatnormsquare.html">
-\begin{equation*}
-|rs|^2 = (rs)(rs)^\ast = rss^\ast r^\ast = |s|^2
-rr^\ast = |r|^2|s|^2,
-\end{equation*}
-</div>
-<div class="para">then take square roots to establish <a href="" class="xref" data-knowl="./knowl/quatnormmult.html" title="Equation 1.2.17">(1.2.17)</a>. A slightly more conceptual approach (assuming you are familiar with the matrix algebra operations of transpose and conjugation) is to first verify that <span class="process-math">\((M(r^\ast)) = (M(r))^\dagger\text{,}\)</span> where <span class="process-math">\(\dagger\)</span> denotes the conjugate transpose of a matrix. <a href="" class="xref" data-knowl="./knowl/quatconjmult.html" title="Equation 1.2.15">(1.2.15)</a> follows immediately. Next, verify that <span class="process-math">\(T(u,v)(T(u,v))^\dagger=(|u|^2+|v|^2)\Id\)</span> (here we are using the same notation used in the solution to <a href="" class="xref" data-knowl="./knowl/quatmatalgpropexer.html" title="Checkpoint 1.2.2">Checkpoint 1.2.2</a>). This last matrix corresponds to the quaternion <span class="process-math">\(|r|^2\text{,}\)</span> so this establishes <a href="" class="xref" data-knowl="./knowl/quatnormsquare.html" title="Equation 1.2.16">(1.2.16)</a>.</div>
 </div>
 <span class="incontext"><a href="quaternionsection.html#p-72" class="internal">in-context</a></span>
 </body>

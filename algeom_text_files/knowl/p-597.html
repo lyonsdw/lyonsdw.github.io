@@ -12,31 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Following the outline, we have the following.</div>
-<ul class="disc">
-<li><div class="para">We have the following.<div class="displaymath process-math">
-\begin{align*}
-AR\amp = [e_1]\times [e_0] = [1,0,0]\times [1,1,1] = [0,-1,1]\\
-A'R\amp = [e_2]\times [e_0] = [0,1,0]\times [1,1,1] = [1,0,-1]
-\end{align*}
-</div>
-</div></li>
-<li><div class="para">Since <span class="process-math">\(B'\)</span> lies on <span class="process-math">\(AR\text{,}\)</span> we have <span class="process-math">\(B'\cdot
-AR=0\text{,}\)</span> so <span class="process-math">\(B'=[r,x,x]\)</span> for some <span class="process-math">\(r,x\text{.}\)</span> It must be that <span class="process-math">\(x\neq 0\text{,}\)</span> for otherwise, we would have <span class="process-math">\(B'=A\text{.}\)</span> So we can take <span class="process-math">\(B'\)</span> to be <span class="process-math">\([r,1,1]\text{.}\)</span> Similar reasoning yields <span class="process-math">\(B = [1,s,1]\)</span> for some <span class="process-math">\(s\text{.}\)</span>
-</div></li>
-<li><div class="para">Next we have the following.<div class="displaymath process-math">
-\begin{align*}
-AB\amp = [e_1]\times [1,s,1]  = [0,-1,s]\\
-PB'\amp = [e_3]\times [r,1,1] = [-1,r,0]
-\end{align*}
-</div>Now we have <span class="process-math">\(C=AB\times PB'=[rs,s,1]\text{.}\)</span> Similar reasoning applies to <span class="process-math">\(C'\text{,}\)</span> which lies on <span class="process-math">\(A'B'\)</span> and also on <span class="process-math">\(BP\)</span> and yields <span class="process-math">\(C'=[r,rs,1]\text{.}\)</span>
-</div></li>
-<li><div class="para">Point <span class="process-math">\(Q\)</span> lies on <span class="process-math">\(AC'=[0,-1,rs]\)</span> and also on <span class="process-math">\(A'C=[1,0,-rs]\text{,}\)</span> so must have the form <span class="process-math">\(AC'\times A'C=[rs,rs,1]\text{.}\)</span>
-</div></li>
-<li><div class="para">We have <span class="process-math">\(X\cdot [1,-1,0]=0\)</span> for <span class="process-math">\(X=P,Q,R\text{,}\)</span> so we conclude that <span class="process-math">\(P,Q,R\)</span> are collinear.</div></li>
-</ul>
-</div>
-<span class="incontext"><a href="section-16.html#p-597" class="internal">in-context</a></span>
+<div class="para">No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y)\to (x,-y)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(\twotwo{1}{0}{0}{-1}\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but not in <span class="process-math">\(\E\text{.}\)</span> To justify the "not in <span class="process-math">\(\E\)</span>" claim, observe that generating elements of <span class="process-math">\(\E\)</span> (rotations and translations) preserve oriented angles, so all elements of <span class="process-math">\(\E\)</span> preserve oriented angles. But <span class="process-math">\((x,y)\to
+(x,-y)\)</span> takes the oriented angle <span class="process-math">\(\angle 1,0,i\text{,}\)</span> which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle 1,0,-i\text{,}\)</span> which measures <span class="process-math">\(-\pi/2\)</span> radians.</div>
+<span class="incontext"><a href="geometry_extra_exer_section.html#p-597" class="internal">in-context</a></span>
 </body>
 </html>

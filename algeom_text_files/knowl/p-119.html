@@ -12,7 +12,27 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">This set of equivalence classes is fundamental and pervasive in mathematics. Instead of writing <span class="process-math">\(Z/\!\!\sim_n\text{,}\)</span> the universally used notation is <span class="process-math">\(\Z_n\text{.}\)</span> Instead of writing <span class="process-math">\(x\sim_n y\text{,}\)</span> the universally used notation is <span class="process-math">\(x=y\pmod{n}\)</span> (or sometimes <span class="process-math">\(x\equiv y\pmod{n}\)</span>).</div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para"><ol class="lower-alpha">
+<li><div class="para">(reflexivity) It is clear that <span class="process-math">\(n|(x-x)\)</span> for all <span class="process-math">\(x\in \Z\text{.}\)</span>
+</div></li>
+<li><div class="para">(symmetry) If <span class="process-math">\(n|(x-y)\text{,}\)</span> say <span class="process-math">\(x-y=kn\text{,}\)</span> then <span class="process-math">\(y-x = -kn\text{,}\)</span> so <span class="process-math">\(n|(y-x)\text{.}\)</span>
+</div></li>
+<li><div class="para">(transitivity) If <span class="process-math">\(n|(x-y)\text{,}\)</span> say <span class="process-math">\(x-y=kn\text{,}\)</span> and <span class="process-math">\(n|(y-z)\text{,}\)</span> say <span class="process-math">\(y-z=\ell n\text{,}\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+x-z=(x-y)+(y-z)= (k+\ell)n\text{,}
+\end{equation*}
+</div>so <span class="process-math">\(n|(x-z)\text{.}\)</span>
+</div></li>
+</ol></div></li>
+<li><div class="para">The division algorithm says that for any <span class="process-math">\(x\in
+\Z\text{,}\)</span> there are unique integers <span class="process-math">\(q,r\text{,}\)</span> with <span class="process-math">\(r\)</span> in the range <span class="process-math">\(0\leq r\leq n-1\text{,}\)</span> such that <span class="process-math">\(x=qn+r\text{.}\)</span> Thus <span class="process-math">\(x\sim_n r\text{.}\)</span> This means that <span class="process-math">\([x]=[r]\)</span> for <em class="emphasis">some</em> <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(0\leq r\leq n-1\text{.}\)</span> The uniqueness of <span class="process-math">\(r\)</span> means that the equivalence classes <span class="process-math">\([0],[1],\ldots,[n-1]\)</span> are distinct. We conclude that<div class="displaymath process-math">
+\begin{equation*}
+\Z_n=\{[0],[1],\ldots,[n-1]\}.
+\end{equation*}
+</div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="section-4.html#p-119" class="internal">in-context</a></span>
 </body>
 </html>

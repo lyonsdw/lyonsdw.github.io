@@ -12,7 +12,32 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para"><div class="para">No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y,z)\to (-x,-y,-z)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(-\Id\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but is not conjugate to any element in <span class="process-math">\(\S\text{.}\)</span> To justify the "not conjugate to an element of <span class="process-math">\(\S\)</span>" claim, elements of <span class="process-math">\(\S\)</span> are Möbius transformations, and therefore conformal, and therefore preserve oriented angles. But <span class="process-math">\(-\Id\)</span> takes the oriented angle <span class="process-math">\(\angle XZY\)</span> (where we use the shorthand <span class="process-math">\(X,Y,Z\)</span> for <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively), which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle (-X)(-Z)(-Y)\text{,}\)</span> which  measures <span class="process-math">\(-\pi/2\)</span> radians.</div></div>
+<div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/normalform2fixedpts.html">
+\begin{equation*}
+Tz = \frac{az+b}{-\overline{b}z+\overline{a}}
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(|a|^2+|b|^2=1\text{.}\)</span> The fixed points of <span class="process-math">\(T\)</span> are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/normalform2fixedpts.html">
+\begin{equation*}
+p,q
+= \frac{a-\overline{a} \pm \sqrt{(a-\overline{a})^2
+-4|b|^2}}{-2\overline{b}}
+= \frac{a-\overline{a} \pm \sqrt{(a+\overline{a})^2 -4}}{-2\overline{b}} .
+\end{equation*}
+</div>
+<div class="para">Putting <span class="process-math">\(z=\infty\text{,}\)</span> <span class="process-math">\(Tz=T(\infty) = a/(-\overline{b})\)</span> in the normal form equation <a href="" class="xref" data-knowl="./knowl/normalform2fixedpts.html" title="Equation 3.2.4">(3.2.4)</a>, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/normalform2fixedpts.html">
+\begin{equation*}
+\lambda = \frac{a+p\overline{b}}{a+q\overline{b}}
+= \frac{a+\overline{a}+\sqrt{(a+\overline{a})^2 -4}}{a+\overline{a}-\sqrt{(a+\overline{a})^2 -4}}.
+\end{equation*}
+</div>
+<div class="para">The last expression has the form <span class="process-math">\((c+di)/(c-di)\)</span> for <span class="process-math">\(c,d\)</span> real, so we conclude <span class="process-math">\(|\alpha|=1\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-603" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,8 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">We have <span class="process-math">\(\angle ONU = \alpha\text{,}\)</span> so <span class="process-math">\(\angle NUO = \alpha\text{,}\)</span> so <span class="process-math">\(\angle UON = \pi-2\alpha\text{,}\)</span> so <span class="process-math">\(\theta = \angle SOU =
-\pi-(\pi-2\alpha)=2\alpha\text{.}\)</span> We have <span class="process-math">\(\frac{u}{1}=\tan\alpha\text{,}\)</span> so <span class="process-math">\(\alpha = \arctan u\text{.}\)</span>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{circumference } \amp = 2\int_0^{2\pi} \frac{\alpha}{1+\alpha^2}dt\\
+\amp = \frac{4\pi\alpha}{1+\alpha^2}.
+\end{align*}
+</div>
+<div class="para">In terms of <span class="process-math">\(r=d_{\extC}(0,\alpha)= 2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha = \tan \frac{r}{2}\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{circumference } = \frac{4\pi\alpha}{1+\alpha^2} =
+4\pi\frac{\tan \frac{r}{2}}{\sec^2 \frac{r}{2}}=
+4\pi\sin\frac{r}{2} \cos \frac{r}{2} = 2\pi \sin r.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-547" class="internal">in-context</a></span>
 </body>

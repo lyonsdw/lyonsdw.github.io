@@ -11,19 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Draw a commutative diagram that illustrates the results of <a href="" class="xref" data-knowl="./knowl/stereo2dliftinversion.html" title="Exercise 1.3.3.5">Exercise 1.3.3.5</a>.</div></li>
-<li>The <dfn class="terminology">distributive law</dfn> for <span class="process-math">\(\Z_n\)</span> says that<div class="displaymath process-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The component of <span class="process-math">\(u\)</span> in the <span class="process-math">\(r\)</span> direction is <span class="process-math">\((u\cdot r)r\text{,}\)</span> and the desired reflection of <span class="process-math">\(u\)</span> in the plane normal to <span class="process-math">\(r\)</span> is <span class="process-math">\(u-2(u\cdot r)r\text{.}\)</span> The heart of this exercise is to see that <span class="process-math">\(r\times(u\times r) = u-(u\cdot r)r\text{.}\)</span> This follows immediately from the identity</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
 \begin{equation*}
-[x]\left([y]+[z]\right) = [x][y] +
-[x][z]
+a\times (b\times c) = (a\cdot c)b - (a\cdot b)c,
 \end{equation*}
-</div>for all <span class="process-math">\([x],[y],[z]\in
-\Z_n\text{.}\)</span> Label the maps in the commutative diagram below to express the distributive law. <figure class="figure figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/distlawexer_diagram_blank.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
-</li>
-</ol></div>
+</div>
+<div class="para">which holds for all <span class="process-math">\(a,b,c\in \R^3\text{.}\)</span> Another way is to use the right-hand rule to see that the vectors on both sides of the equation point in the same direction, and use the formula <span class="process-math">\(|a\times b|=|a||b|\sin\theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by vectors <span class="process-math">\(a,b\text{,}\)</span> to see that the vectors on both sides have length <span class="process-math">\(|u|\sin \theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by <span class="process-math">\(u\)</span> and <span class="process-math">\(r\text{.}\)</span> Now we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
+\begin{align*}
+rur \amp = r(-u\cdot r + u\times r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
+\amp = r(-u\cdot r) -r\cdot (u\times r) + r\times (u\times
+r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
+\amp = u-2(u\cdot r)r
+\end{align*}
+</div>
+<div class="para">as desired.</div>
+</div>
 <span class="incontext"><a href="extra_topics_exercises_section.html#p-139" class="internal">in-context</a></span>
 </body>
 </html>

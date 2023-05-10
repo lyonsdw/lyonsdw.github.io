@@ -11,6 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>The transformations <span class="process-math">\((\cdot,z_1,z_2,z_3)\)</span> and <span class="process-math">\((\cdot,Tz_1,Tz_2,Tz_3)\circ T\)</span> both send <span class="process-math">\(z_1\to 1\text{,}\)</span> <span class="process-math">\(z_2\to 0\text{,}\)</span> and <span class="process-math">\(z_3\to \infty\text{,}\)</span> so they must be equal, by the Fundamental Theorem. Now apply both transformations to <span class="process-math">\(z_0\text{.}\)</span></article><span class="incontext"><a href="section-13.html#proof-16" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the <span class="process-math">\(x,z\)</span>-plane. The sphere in the upper left of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole <span class="process-math">\(N\text{,}\)</span> Greenwich <span class="process-math">\(G\text{,}\)</span> and the great circle <span class="process-math">\(C\)</span> that is the intersection of the sphere with the <span class="process-math">\(x,z\)</span>-plane (<span class="process-math">\(C\)</span> is shown in red in all four spheres for reference). Now let <span class="process-math">\(R\)</span> be an arbitrary rotation. The sphere in the upper right of <a href="" class="xref" data-knowl="./knowl/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how <span class="process-math">\(\)</span> <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(C\)</span> are transformed by <span class="process-math">\(R\text{.}\)</span> The rest of the diagram shows how we can write <span class="process-math">\(R^{-1}\)</span> as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation <span class="process-math">\(R_{Z,\theta_1}\)</span> about the <span class="process-math">\(z\)</span>-axis that brings the north pole into the <span class="process-math">\(x,z\)</span>-plane. Next, we perform the rotation <span class="process-math">\(R_{Y,\theta_2}\)</span> about the <span class="process-math">\(y\)</span>-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation <span class="process-math">\(R_{Z,\theta_3}\)</span> to bring Greenwich back home in the <span class="process-math">\(x,z\)</span>-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
+\begin{equation*}
+R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}
+\end{equation*}
+</div>takes the north pole <span class="process-math">\(N\)</span> through the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
+\begin{equation*}
+N\to R(N)\to N' \to N''=N\to N\text{.}
+\end{equation*}
+</div>Meanwhile, <span class="process-math">\(G\)</span> traces the path<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
+\begin{equation*}
+G\to R(G)\to
+G'\to G''\to G 
+\end{equation*}
+</div>while the great circle <span class="process-math">\(C\)</span> is transformed in the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/rotation_decomposition_fig.html ./knowl/rotation_decomposition_fig.html">
+\begin{equation*}
+C\to R(C) \to C' \to C''\to C.
+\end{equation*}
+</div>This leads to the decomposition <span class="process-math">\(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/rot_decomp2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotation <span class="process-math">\(R\)</span></figcaption></figure></article><span class="incontext"><a href="elliptic_geometry_section.html#proof-16" class="internal">in-context</a></span>
 </body>
 </html>

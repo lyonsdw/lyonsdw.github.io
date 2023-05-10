@@ -13,20 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">By virtue of <a href="" class="xref" data-knowl="./knowl/quatmatalgprop.html" title="Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication">Proposition 1.2.1</a>, we can define addition and multiplication of quaternions <span class="process-math">\(r,s\)</span> as follows.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatmatalgprop.html">
-\begin{gather}
-r+s=Q(M(r)+M(s))\tag{1.2.4}\\
-rs=Q(M(r)M(s))\tag{1.2.5}
-\end{gather}
-</div>
-<div class="para">Because matrix algebra has associative and distributive laws, these carry over to quaternions. Note that quaternion multiplication is not commutative! However, for any real quaternion <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(M(a)=a\Id\text{,}\)</span> so <span class="process-math">\(M(a)\)</span> commutes with all matrices, and therefore <span class="process-math">\(a\)</span> commutes with all quaternions. To summarize, let <span class="process-math">\(q,r,s\)</span> be quaternions and let <span class="process-math">\(a\)</span> be a real quaternion. We have the following.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatmatalgprop.html">
-\begin{align}
-q(rs) \amp = (qr)s\;\; \text{ (associative law of multiplication)}\tag{1.2.6}\\
-q(r+s)\amp = qr+qs \;\; \text{ (distributive law)}\tag{1.2.7}\\
-ar\amp =ra \;\; \text{ (real quaternions commute with all quaternions)}\tag{1.2.8}
-\end{align}
+<div class="para">(This is similar to the solution to <a href="" class="xref" data-knowl="./knowl/complexnosasrealmatalg.html" title="Exercise 1.1.7.12: Complex numbers as 2\times 2 real matrices">Exercise 1.1.7.12</a>.)  Let <span class="process-math">\(T(u,v)\)</span> denote the matrix <span class="process-math">\(\twotwo{u}{v}{-v^\ast}{u^\ast}\)</span> in <span class="process-math">\({\mathcal M}_\Quat\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/complexnosasrealmatalg.html">
+\begin{align*}
+T(u,v)+T(r,s)\amp = \twotwo{u}{v}{-v^\ast}{u^\ast} + \twotwo{r}{s}{-s^\ast}{r^\ast} \\
+\amp = \twotwo{u+r}{v+s}{-(v+s)^\ast}{(u+r)^\ast}\\
+\amp = T(u+r,v+s)\\
+T(u,v)T(r,s)\amp = \twotwo{u}{v}{-v^\ast}{u^\ast}  \twotwo{r}{s}{-s^\ast}{r^\ast} \\
+\amp = \twotwo{ur-vs^\ast}{us+vr^\ast}{-(us+vr^\ast)^\ast}{(ur-vs^\ast)^\ast}\\
+\amp = T(ur-vs^\ast,us+vr^\ast)
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="quaternionsection.html#p-62" class="internal">in-context</a></span>

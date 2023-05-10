@@ -13,23 +13,27 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">To facilitate thinking about the interplay between the projective geometry <span class="process-math">\(\Proj(\F^{n+1})=\F\Proj_n\)</span> and the geometry of <span class="process-math">\(\F^{n}\)</span> (rather than <span class="process-math">\(\F^{n+1}\text{!}\)</span>) it is useful to have a careful definition for "taking inhomogeneous coordinates in position <span class="process-math">\(i\)</span>". Here it is: Let <span class="process-math">\(U_i\)</span> be the subset of <span class="process-math">\(\F\Proj_n\)</span> of points whose homogeneous coordinate <span class="process-math">\(x_i\)</span> is nonzero. Let <span class="process-math">\(\pi_i\colon U_i\to
-\F^n\)</span> be given by</div>
-<div class="displaymath process-math">
+<div class="para">The projective space <span class="process-math">\(\Proj_1=\Proj(\F^2)\)</span> is called the <dfn class="terminology">projective line</dfn>). The map <span class="process-math">\(\mu\colon \Proj_1\to \extF\text{,}\)</span> given by <span class="process-math">\(\mu([x_0,x_1])=\frac{x_0}{x_1}\)</span> (defined in <a href="" class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, but where <span class="process-math">\(\F\)</span> may be any field, with <span class="process-math">\(\extF=\F\cup \{\infty\}\)</span>) takes the points</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/mobiusgeomisprojectivegeom.html">
 \begin{equation*}
-[x_0,x_1,x_2,\ldots x_{i-1},x_i,x_{i+1},\ldots,x_n]
-\to  \left(\frac{x_0}{x_i},\frac{x_1}{x_i},\frac{x_2}{x_i},\ldots
-\frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_n}{x_i}\right).
+[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]
 \end{equation*}
 </div>
-<div class="para">The one-sided inverse <span class="process-math">\(\F^n\to \F\Proj_n\)</span> given by</div>
-<div class="displaymath process-math">
+<div class="para">in <span class="process-math">\(\Proj_1\)</span> to the points <span class="process-math">\(1,0,\infty\)</span> in <span class="process-math">\(\extF\text{,}\)</span> respectively. Let <span class="process-math">\((\cdot,P_1,P_2,P_3)\)</span> denote the unique projective transformation <span class="process-math">\([T]\)</span> that takes <span class="process-math">\(P_1,P_2,P_3\)</span> to <span class="process-math">\([e_0],[e_2],[e_1]\text{.}\)</span> The <dfn class="terminology">cross ratio</dfn> <span class="process-math">\((P_0,P_1,P_2,P_3)\)</span> is defined to be <span class="process-math">\(\mu([T](P_0))\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li><div class="para">Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case <span class="process-math">\(\F=\C\text{,}\)</span> via the map <span class="process-math">\(\mu\text{,}\)</span> that is, show that the following holds.<div class="displaymath process-math">
 \begin{equation*}
-(x_0,x_1,\ldots x_{i-1},\widehat{x_i},x_{i+1},\ldots,x_n)
-\to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]
+(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))
 \end{equation*}
 </div>
-<div class="para">(where the circumflex hat indicates a deleted item from a sequence) is called the <span class="process-math">\(i\)</span>-th <dfn class="terminology">coordinate chart</dfn> for <span class="process-math">\(\F\Proj_n\text{.}\)</span> What is the map that results from applying the <span class="process-math">\(0\)</span>-th coordinate chart <span class="process-math">\(\C\to \C\Proj_2\)</span> followed by taking homogeneous coordinates in position 1?</div>
+</div></li>
+<li><div class="para">Show that<div class="displaymath process-math">
+\begin{equation*}
+(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
+\end{equation*}
+</div>where <span class="process-math">\(\det(P_iP_j)\)</span> is the determinant of the matrix <span class="process-math">\(\twotwo{a_i}{a_j}{b_i}{b_j}\text{,}\)</span> where <span class="process-math">\(P_i=[a_i,b_i]\text{.}\)</span> </div></li>
+</ol>
 </div>
 <span class="incontext"><a href="section-16.html#p-586" class="internal">in-context</a></span>
 </body>

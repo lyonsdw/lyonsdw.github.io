@@ -11,13 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">The complex plane comes with a built-in measure of oriented angle. If <span class="process-math">\(u\)</span> is a positive real number, <span class="process-math">\(v=0\text{,}\)</span> and <span class="process-math">\(w\neq 0\)</span> is a complex number, the measure of the oriented angle <span class="process-math">\(\angle uvw\)</span> is <span class="process-math">\(\arg w\text{.}\)</span> More generally, if <span class="process-math">\(u,v,w\)</span> are three complex numbers with <span class="process-math">\(v\)</span> distinct from <span class="process-math">\(u\)</span> and <span class="process-math">\(w\text{,}\)</span> the measure of the oriented angle <span class="process-math">\(\angle uvw\)</span> is</div>
-<div class="displaymath process-math">
+<div class="para">Now suppose two curves <span class="process-math">\(C_1,C_2\)</span> intersect at <span class="process-math">\(v\text{,}\)</span> let <span class="process-math">\(u\)</span> be a point on <span class="process-math">\(C_1\)</span> and let <span class="process-math">\(w\)</span> be a point on <span class="process-math">\(C_2\text{.}\)</span> If <span class="process-math">\(u\)</span> and <span class="process-math">\(w\)</span> are close to <span class="process-math">\(v\text{,}\)</span> then <span class="process-math">\(\angle uvw\)</span> is a secant approximation of an angle made by the tangents to <span class="process-math">\(C_1,C_2\)</span> at <span class="process-math">\(v\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/curve_angle_limit_fig.html" title="Figure 3.1.7">Figure 3.1.7</a>. Now let <span class="process-math">\(p(t),q(s)\)</span> be parameterizations of <span class="process-math">\(C_1,C_2\text{,}\)</span> respectively, with <span class="process-math">\(p(0)=q(0)=v\text{,}\)</span> and <span class="process-math">\(p(t_1)=u\text{,}\)</span> <span class="process-math">\(q(s_1)=w\)</span> for some <span class="process-math">\(t_1,s_2\gt 0\text{.}\)</span>  We can compute an angle made by the tangents to the curves by the following limit.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/curve_angle_limit_fig.html ./knowl/anglemeascurves.html ./knowl/anglemeascurves.html">
 \begin{equation}
-\arg\left(\frac{w-v}{u-v}\right).\tag{3.1.1}
+\lim_{s\to 0^+,t\to 0^+}
+\arg\left(\frac{q(s)-v}{p(t)-v}\right)\tag{3.1.2}
 \end{equation}
+</div>
+<div class="para">The value of limit <a href="" class="xref" data-knowl="./knowl/anglemeascurves.html" title="Equation 3.1.2">(3.1.2)</a> is sensitive to the direction of the curve parameterizations and the sided-ness of the limits <span class="process-math">\(t\to 0^{\pm}\)</span> or <span class="process-math">\(s\to 0^{\pm}\text{.}\)</span> If the value of the limit <a href="" class="xref" data-knowl="./knowl/anglemeascurves.html" title="Equation 3.1.2">(3.1.2)</a> is <span class="process-math">\(\theta\)</span> for one set of choices for parameterizations and sided-ness, the limit for the other choices will be <span class="process-math">\(\theta\)</span> or <span class="process-math">\(\theta \pm \pi\text{.}\)</span> For a given pair of parameterizations <span class="process-math">\(p,q\text{,}\)</span> draw a sketch to illustrate the four possible cases <span class="process-math">\(t\to 0^{\pm},s\to 0^{\pm}\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="geomdefsect.html#p-356" class="internal">in-context</a></span>

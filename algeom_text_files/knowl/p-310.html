@@ -11,20 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">We will show that <span class="process-math">\(L_g\)</span> is invertible. Similar arguments show that <span class="process-math">\(R_g,C_g\)</span> are invertible. We have<div class="displaymath process-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group whose elements are <span class="process-math">\(n\times n\)</span> matrices with entries in a field <span class="process-math">\(\F\)</span> and with the group operation of matrix multiplication. The <dfn class="terminology">natural action</dfn> <span class="process-math">\(G\to \Perm(X)\)</span> of <span class="process-math">\(G\)</span> on the vector space <span class="process-math">\(X=\F^n\)</span> is given by</div>
+<div class="displaymath process-math">
 \begin{equation*}
-L_{g^{-1}}(L_g(x))=g^{-1}gx=x
+g\to [v\to g\cdot v],
 \end{equation*}
-</div>for all <span class="process-math">\(x\in G\text{.}\)</span> A similar argument shows that <span class="process-math">\(L_g(L_{g^{-1}}(x))=x\)</span> for all <span class="process-math">\(x\text{.}\)</span> We conclude that <span class="process-math">\(L_g\)</span> is invertible, with inverse <span class="process-math">\((L_g)^{-1}=L_{g^{-1}}\text{.}\)</span> Thus <span class="process-math">\(L_g\)</span> is an element of <span class="process-math">\(\Perm(G)\text{,}\)</span> as desired.</div></li>
-<li><div class="para">You just have to check that <span class="process-math">\(L_{gh}=L_g\circ
-L_h\text{,}\)</span> <span class="process-math">\(R_{gh}=R_g\circ R_h\)</span> (here you see why the inverse is needed!), and <span class="process-math">\(C_{gh}=C_g\circ C_h\text{.}\)</span> Here is the argument for <span class="process-math">\(L\text{.}\)</span> Similar arguments work for <span class="process-math">\(R,C\text{.}\)</span> Let <span class="process-math">\(g,h\in G\text{.}\)</span> We have <span class="process-math">\(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\)</span> for all <span class="process-math">\(x\in
-G\text{,}\)</span> so we have <span class="process-math">\(L_g\circ L_h = L_{gh}\text{.}\)</span>
-</div></li>
-<li><div class="para">For injectivity, if <span class="process-math">\(L_g=L_h\text{,}\)</span> then <span class="process-math">\(g=L_g(e)=L_h(e)=h\text{.}\)</span> By the First Isomorphism Theorem, we conclude that <span class="process-math">\(G\approx L(G)\text{,}\)</span> which is subgroup of <span class="process-math">\(\Perm(G)\text{.}\)</span>
-</div></li>
-</ol></div>
+</div>
+<div class="para">where the "dot" in the expression <span class="process-math">\(g\cdot v\)</span> is ordinary multiplication of a matrix times a column vector. Show that this is indeed a group action.</div>
+</div>
 <span class="incontext"><a href="section-10.html#p-310" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,15 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{,}\)</span> and consider the map</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/gpselfactionexer.html">
+<div class="para">Let <span class="process-math">\(\phi\)</span> denote the map <span class="process-math">\(\phi\colon G\to \Perm(X)\)</span> given by</div>
+<div class="displaymath process-math">
 \begin{equation*}
-R\colon H\to \Perm(G)
+g\to [v\to g\cdot v],
 \end{equation*}
 </div>
-<div class="para">given by <span class="process-math">\(h\to R_h\text{,}\)</span> where <span class="process-math">\(R_h(g)=gh^{-1}\)</span> (this is the restriction of right inverse multiplication action in <a href="" class="xref" data-knowl="./knowl/gpselfactionexer.html" title="Exercise 2.5.3.1: Actions of a group on itself">Exercise 2.5.3.1</a> to <span class="process-math">\(H\)</span>). Show that the orbits of this action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> are the same as the cosets of <span class="process-math">\(H\text{.}\)</span> This shows that the two potentially different meanings of <span class="process-math">\(G/H\)</span> (one is the set of cosets, the other is the set of orbits of the action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> via <span class="process-math">\(R\)</span>), are in fact in agreement.</div>
+<div class="para">so that <span class="process-math">\((\phi(g))(v)=gv\)</span> for <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(v\in X\text{.}\)</span> To see that <span class="process-math">\(\phi\)</span> is a homomorphism, we have,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\phi(gh))(v)=(gh)v = g(hv) =(\phi(g)\circ\phi(h))(v)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v\in X\text{.}\)</span> [Note: the equality <span class="process-math">\((gh)v=g(hv)\)</span> uses the fact that matrix multiplication is associative.] We conclude that <span class="process-math">\(\phi(gh)=\phi(g)\circ \phi(h)\text{,}\)</span> as required.</div>
 </div>
 <span class="incontext"><a href="section-10.html#p-311" class="internal">in-context</a></span>
 </body>

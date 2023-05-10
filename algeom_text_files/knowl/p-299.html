@@ -11,27 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(X\)</span> be a set. An <dfn class="terminology">action</dfn> of the group <span class="process-math">\(G\)</span> on the set <span class="process-math">\(X\)</span> is a group homomorphism</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/showstabisgpexer.html">
+<div class="para">We use the 2-step subgroup test. First, note that <span class="process-math">\(\Stab(x)\)</span> is not empty, because <span class="process-math">\(\Stab(x)\)</span> contains <span class="process-math">\(e_G\)</span> (the action <span class="process-math">\(G\to \Perm(X)\)</span> is a group homomorphism, so <span class="process-math">\(e_G\)</span> must go to the identity transformation on <span class="process-math">\(X\)</span> by Property 1 of <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>). Now suppose <span class="process-math">\(g,h\in
+\Stab(x)\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
 \begin{equation*}
-\phi \colon G\to \Perm(X).
+(gh)(x)=g(hx)=gx=x
 \end{equation*}
 </div>
-<div class="para">We say that the group <span class="process-math">\(G\)</span> <dfn class="terminology">acts</dfn> on the set <span class="process-math">\(X\text{,}\)</span> and we call <span class="process-math">\(X\)</span> a <dfn class="terminology"><span class="process-math">\(G\)</span>-space</dfn>. For <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(x\in X\text{,}\)</span> we write <span class="process-math">\(gx\)</span> to denote <span class="process-math">\((\phi(g))(x)\text{.}\)</span><a href="" class="fn-knowl original" data-knowl="./knowl/fn-8-hidden.html" title="Footnote 2.5.1"><sup> 1 </sup></a> We write <span class="process-math">\(\Orb(x)\)</span> to denote the set</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/showstabisgpexer.html">
+<div class="para">so <span class="process-math">\(gh\in \Stab(x)\text{.}\)</span> Also, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
 \begin{equation*}
-\Orb(x)=\{gx\colon g\in G\},
+x=(g^{-1}g)x
+=g^{-1}(gx)=g^{-1}x\text{,}
 \end{equation*}
 </div>
-<div class="para">called the <dfn class="terminology">orbit</dfn> of <span class="process-math">\(x\text{,}\)</span> and we write <span class="process-math">\(\Stab(x)\)</span> to denote the set</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/showstabisgpexer.html">
-\begin{equation*}
-\Stab(x) = \{g\in G\colon gx=x\},
-\end{equation*}
-</div>
-<div class="para">called the <dfn class="terminology">stabilizer</dfn> or <dfn class="terminology">isotropy</dfn> subgroup<a href="" class="fn-knowl original" data-knowl="./knowl/fn-9-hidden.html" title="Footnote 2.5.2"><sup> 2 </sup></a> of <span class="process-math">\(x\text{.}\)</span> A group action is <dfn class="terminology">transitive</dfn> if there is only one orbit. A group action is <dfn class="terminology">faithful</dfn> if the map <span class="process-math">\(G\to \Perm(X)\)</span> has a trivial kernel.</div>
+<div class="para">so <span class="process-math">\(g^{-1}\in \Stab(x)\text{.}\)</span> This completes the proof.</div>
 </div>
 <span class="incontext"><a href="section-10.html#p-299" class="internal">in-context</a></span>
 </body>

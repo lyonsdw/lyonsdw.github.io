@@ -11,9 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">A polygon with <span class="process-math">\(n\geq 3\)</span> vertices on the unit circle, connected by arcs of circles that are orthogonal to the unit circle, is called an <dfn class="terminology">asymptotic</dfn> <span class="process-math">\(n\)</span>-gon. An example of an asymptotic hexagon is the figure with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_2,C_2\)</span> connected by the colored hyperbolic lines in <a href="" class="xref" data-knowl="./knowl/hyperbolic_triangle_area_fig.html" title="Figure 3.3.25">Figure 3.3.25</a>. Show that the area of an asymptotic <span class="process-math">\(n\)</span>-gon is <span class="process-math">\(\pi(n-2)\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Let <span class="process-math">\(\triangle ABC\)</span> be a doubly-asymptotic triangle in the upper half-plane, and suppose <span class="process-math">\(B,C\in
+\extR\text{.}\)</span> Any hyperbolic line intersects <span class="process-math">\(\extR\)</span> in two points (this is easy to see in the disk model, so must also be true in the upper half-plane). Let <span class="process-math">\(B'\in
+\extR\)</span> be the intersection of side <span class="process-math">\(AB\)</span> with <span class="process-math">\(\extR\)</span> that is not <span class="process-math">\(B\text{,}\)</span> and let <span class="process-math">\(C'\)</span> be the intersection of side <span class="process-math">\(AC\)</span> with <span class="process-math">\(\extR\)</span> that is not <span class="process-math">\(C\text{.}\)</span> Let <span class="process-math">\(T\)</span> be the Möbius transformation that takes <span class="process-math">\(B\to 1, B'\to -1, C\to \infty\text{,}\)</span> and let <span class="process-math">\(T'\)</span> be the Möbius transformation that takes <span class="process-math">\(C\to 1, C'\to -1, B\to
+\infty\text{.}\)</span> One of <span class="process-math">\(T,T'\)</span> takes <span class="process-math">\(A\)</span> to the upper half-plane, and hence is an element of <span class="process-math">\(\HU\)</span> that make the doubly-asymptotic triangle given in the Figure.</div></li>
+<li><div class="para">The area of the triangle with vertices at <span class="process-math">\(1,p,\infty\)</span> is<div class="displaymath process-math">
+\begin{align*}
+\int_{\cos(\pi-\alpha)}^1
+\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
+dy\;dx
+\amp = \int_{\cos(\pi-\alpha)}^1
+\left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}\\
+\amp =
+\int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx\\
+\amp = \left[-\arccos
+x\right]_{\cos(\pi-\alpha)}^1\\
+\amp = \pi-\alpha.
+\end{align*}
 </div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="section-14.html#p-511" class="internal">in-context</a></span>
 </body>
 </html>
