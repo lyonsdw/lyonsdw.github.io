@@ -11,8 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.8.</span></h4>
-<div class="para">This result is "obvious", so the exercise is about how to say it nicely. Here's one approach: Given <span class="process-math">\(\pi\)</span> in <span class="process-math">\(S_n\text{,}\)</span> define a digraph <span class="process-math">\(G\)</span> with vertex set <span class="process-math">\(\{1,2,\ldots,n\}\)</span> and where <span class="process-math">\((i,j)\)</span> is an edge if and only if <span class="process-math">\(\pi(i)=j\text{.}\)</span> Then the disjoint cycle factors of <span class="process-math">\(\pi\)</span> are the connected components of <span class="process-math">\(G\text{.}\)</span> Another proof is by induction. The statement is obviously true for <span class="process-math">\(S_1\text{.}\)</span> Now suppose the statement holds for <span class="process-math">\(S_k\)</span> for <span class="process-math">\(k\lt n\text{,}\)</span> and let <span class="process-math">\(\pi\in
-S_n\text{.}\)</span> Let <span class="process-math">\((1,\pi(1),\pi^2(1), \ldots, \pi^{j-1}(1))\)</span> be the <span class="process-math">\(j\)</span>-cycle that starts with 1. Now apply the inductive hypothesis to <span class="process-math">\(S_{n-j}\)</span> (with suitable relabelings of indices).</div></article><span class="incontext"><a href="groupdefsection.html#commentary-45" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.10.</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Clearly, <span class="process-math">\(r\)</span> cannot be 1, and the statement is true for <span class="process-math">\(r=2\text{.}\)</span> Now suppose the statement holds for <span class="process-math">\(k\lt
+r\)</span> and let <span class="process-math">\(e=\tau_1\cdot \tau_r\)</span> be given. The four possibilities for <span class="process-math">\(\tau_{r-1}\tau_r\)</span> are the following, where <span class="process-math">\(a,b,c,d\)</span> are distinct.<div class="displaymath process-math">
+\begin{equation*}
+(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
+\end{equation*}
+</div>These products can be rewritten, respectively, as<div class="displaymath process-math">
+\begin{equation*}
+e, (ab)(bc), (ac)(cb), (ab)(cd)
+\end{equation*}
+</div>In the first case, we have <span class="process-math">\(e=\tau_1\cdots \tau_{r-2}\text{,}\)</span> so <span class="process-math">\(r-2\)</span> must be even by the inductive hypothesis, so we are done. In the other three cases, we have an expression where the rightmost occurrence of the symbol <span class="process-math">\(a\)</span> is in position <span class="process-math">\(r-1\text{.}\)</span> Continuing this process, we continue to rewrite the product of transpositions until the number of transpositions drops by 2. This must happen, because otherwise the rightmost occurrence of the symbol <span class="process-math">\(a\)</span> would be in the first transposition, but then the product would not be the identity because it would not fix <span class="process-math">\(a\text{.}\)</span>
+</div></li>
+<li><div class="para">We have<div class="displaymath process-math">
+\begin{equation*}
+e=\sigma\sigma^{-1}  =
+(c_1d_1)(c_2d_2)\cdots (c_td_t)(a_sb_s)\cdots(a_1b_1)
+\end{equation*}
+</div>so <span class="process-math">\(s+t\)</span> is even by the previous part.</div></li>
+<li><div class="para">A <span class="process-math">\(k\)</span>-cycle is a product of <span class="process-math">\(k-1\)</span> transpositions.<div class="displaymath process-math">
+\begin{equation*}
+(a_1a_2\ldots a_k) = (a_1a_2)(a_2a_3)\ldots (a_{k-1}a_k)
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><span class="incontext"><a href="groupdefsection.html#commentary-45" class="internal">in-context</a></span>
 </body>
 </html>

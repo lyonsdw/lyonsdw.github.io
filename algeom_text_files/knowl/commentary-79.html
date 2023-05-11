@@ -11,18 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.5.</span></h4>
-<div class="para">Let <span class="process-math">\(x_0\in X\)</span> and consider the function <span class="process-math">\(f_{x_0}\colon G\to X\)</span> given by <span class="process-math">\(f_{x_0}(g)= gx_0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a> to <span class="process-math">\(f_{x_0}\text{,}\)</span> we have <span class="process-math">\(G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)\text{,}\)</span> and <span class="process-math">\(f_{x_0}(G)=\Orb(x_0)\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Alternatively, one can check that the given map is well-defined, one-to-one, and onto. Let <span class="process-math">\(\pi\)</span> denote the map <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span>
-</div>
-<ul class="disc">
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is well-defined) Suppose <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>, we have <span class="process-math">\(g^{-1}h\in
-\Stab(x)\text{.}\)</span> Thus we have <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(gx=hx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is one-to-one) Suppose <span class="process-math">\(\pi(g\Stab(x))=gx=hx=\pi(h\Stab(x))\text{.}\)</span> Then <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(g^{-1}h\in \Stab(x)\text{,}\)</span> so <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is one-to-one.</div></li>
-<li><div class="para">(<span class="process-math">\(\pi\)</span> is onto) Given <span class="process-math">\(gx\in \Orb(x)\text{,}\)</span> we have <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
-</ul>
-</div></article><span class="incontext"><a href="section-10.html#commentary-79" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.6.1.</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Integers <span class="process-math">\(x,n\)</span> are relatively prime if and only if <span class="process-math">\(\gcd(x,n)=1\text{,}\)</span> if and only if there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sx+tn=1\)</span> (see <a href="" class="xref" data-knowl="./knowl/subgpsofzexer.html" title="Exercise 2.3.2.4: Subgroups of \Z and \Z_n">Exercise 2.3.2.4</a>), if and only if <span class="process-math">\(sx=1 \pmod{n}\text{.}\)</span>
+</div></li>
+<li><div class="para">Multiplication is a well-defined binary operation on <span class="process-math">\(\Z_n\)</span> (see <a href="" class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.4.3">Exercise 1.4.4.3</a>) that is clearly commutative and associative. The element <span class="process-math">\(1\in U_n\)</span> is the identity element, and the existence of inverse elements is part of the definition of <span class="process-math">\(U_n\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(f\colon \Z_n\to \Z_n\)</span> be a group homomorphism, and let <span class="process-math">\(a=f(1)\text{.}\)</span> Then<div class="displaymath process-math">
+\begin{equation*}
+f(x) = f(\underbrace{1+1+\cdots	  +1}_{x \text{ summands}})=xf(1)=ax
+\end{equation*}
+</div>for all <span class="process-math">\(x\text{.}\)</span> The homomorphism <span class="process-math">\(\mu_a\colon
+\Z_n\to\Z_n\)</span> given by <span class="process-math">\(\mu_a(x)=ax\)</span> is invertible if and only if <span class="process-math">\(a\in U_n\)</span> (if <span class="process-math">\(a\not\in U_n\text{,}\)</span> then <span class="process-math">\(1\)</span> is not in the image of <span class="process-math">\(\mu_a\text{,}\)</span> and conversely if <span class="process-math">\(a\in U_n\text{,}\)</span> then <span class="process-math">\(\mu_a\)</span> is invertible with inverse <span class="process-math">\((\mu_a)^{-1}=\mu_{a^{1}}\)</span>). Thus we have a one-to-one correspondence <span class="process-math">\(U_n\leftrightarrow \Aut(\Z_n)\)</span> given by <span class="process-math">\(a\leftrightarrow \mu_a\text{.}\)</span> The fact that <span class="process-math">\((ab)x = a(bx)\)</span> verifies that <span class="process-math">\(\mu_a\circ \mu_b=\mu_{ab}\text{,}\)</span> so the correspondence <span class="process-math">\(a\leftrightarrow \mu_a\)</span> is an isomorphism of groups.</div></li>
+</ol></div></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-79" class="internal">in-context</a></span>
 </body>
 </html>

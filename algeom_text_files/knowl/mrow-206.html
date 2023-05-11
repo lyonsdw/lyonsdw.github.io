@@ -11,12 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliccirclecircumexer.html">
 \begin{align*}
-S\amp \leftrightarrow \twotwo{0}{1}{1}{-p}\\
-S^{-1}\amp \leftrightarrow \twotwo{-p}{-1}{-1}{0}\sim \twotwo{p}{1}{1}{0}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
+\frac{4r\;dr\;d\theta}{(1-r^2)^2}\\
+\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
+\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)\\
+\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
+\right]d\theta\\
+\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
+d\theta\\
+\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.
 \end{align*}
 </div>
-<span class="incontext"><a href="section-13.html#md-44" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-14.html#md-45" class="internal">in-context</a></span>
 </body>
 </html>

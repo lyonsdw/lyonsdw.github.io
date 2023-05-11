@@ -11,9 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.6.5.</span></h4>
-<div class="para">Suppose <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> and let <span class="process-math">\(x,y\)</span> be elements of <span class="process-math">\(G\text{.}\)</span> To show that <span class="process-math">\((xH)(yH)\subseteq xyH\text{,}\)</span> let <span class="process-math">\(u=xh_1yh_2\)</span> for some <span class="process-math">\(h_1,h_2\)</span> for some <span class="process-math">\(h_1,h_2\)</span> in <span class="process-math">\(H\text{.}\)</span> Let <span class="process-math">\(h_3=y^{-1}h_1y\)</span> (we know <span class="process-math">\(h_3\in H\)</span> because <span class="process-math">\(H\)</span> is normal) so that we have <span class="process-math">\(h_1y=yh_3\text{.}\)</span> Then we have <span class="process-math">\(u=xyh_3h_2\in xyH\text{.}\)</span> To see that <span class="process-math">\(xyH\subseteq
-(xH)(yH)\text{,}\)</span> let <span class="process-math">\(xyh\in xyH\text{.}\)</span> Because <span class="process-math">\(H\)</span> is normal, we have <span class="process-math">\(yh=h'y\)</span> for some <span class="process-math">\(h'\in H\text{,}\)</span> so we have <span class="process-math">\(xyh=xh'y=(xh')(ye)\in (xH)(yH)\text{.}\)</span> Conversely, suppose that <span class="process-math">\((xH)(yH)=xyH\)</span> for all <span class="process-math">\(x,y\)</span> in <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(g\)</span> be an element of <span class="process-math">\(G\)</span> and let <span class="process-math">\(h\)</span> be an element of <span class="process-math">\(H\text{.}\)</span> We have <span class="process-math">\(ghg^{-1}=(gh)(g^{-1}e)\in
-(gH)(g^{-1}H)=(gg^{-1})H=H\text{,}\)</span> so <span class="process-math">\(H\)</span> is normal.</div></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-85" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.6.7.</span></h4>
+<div class="para logical">
+<div class="para">We wish to show that the map <span class="process-math">\(G\to \Perm({\mathcal F}(X,Y))\)</span> given by <span class="process-math">\(g\to [\alpha\to \alpha\circ g^{-1}]\)</span> is a homomorphism. Indeed, for <span class="process-math">\(g,h\in G\)</span> and <span class="process-math">\(\alpha\in {\mathcal F}(X,Y)\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(gh)\alpha = \alpha\circ (gh)^{-1}= \alpha\circ (h^{-1}g^{-1})
+= (\alpha\circ h^{-1})\circ g^{-1}=g(h(\alpha)).
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="groups_extra_exer_section.html#commentary-85" class="internal">in-context</a></span>
 </body>
 </html>

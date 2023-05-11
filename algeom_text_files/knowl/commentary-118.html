@@ -11,12 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Proposition 3.3.15.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.19.</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(z_1,z_2\in \D\text{,}\)</span> and let <span class="process-math">\(q_1,q_2\)</span> be points on the hyperbolic line through <span class="process-math">\(z_1,z_2\)</span> that lie on the unit circle, with <span class="process-math">\(q_i\)</span> "on the <span class="process-math">\(z_i\)</span> side" for <span class="process-math">\(i=1,2\text{,}\)</span> that is, <span class="process-math">\(q_i=T^{-1}z_i\text{,}\)</span> where <span class="process-math">\(T\)</span> is the transformation found in <a href="" class="xref" data-knowl="./knowl/hyperbolicdisttransexer.html" title="Checkpoint 3.3.12">Checkpoint 3.3.12</a>. Be invariance of the cross ratio under Möbius transformations, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicdisttransexer.html">
+<div class="para">Using the Taylor series</div>
+<div class="displaymath process-math">
 \begin{equation*}
-d(z_1,z_2)=\ln(z_1,z_2,q_2,q_1)=\ln(Tz_1,Tz_2,Tq_2,Tq_1)=d(Tz_1,Tz_2).
+\ln(1+u) =
+u-\frac{u^2}{2}+\frac{u^3}{3} -\cdots
+\end{equation*}
+</div>
+<div class="para">and the fact <span class="process-math">\(\ln[(1+u)/(1-u)]=\ln(1+u)-\ln(1-u)\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln\left(\frac{1+u}{1-u}\right)=2\left(u+\frac{u^3}{3}+\frac{u^5}{5}+\cdots\right) .
 \end{equation*}
 </div>
 </div></article><span class="incontext"><a href="section-14.html#commentary-118" class="internal">in-context</a></span>

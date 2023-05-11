@@ -11,58 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">Prove <a href="" class="xref" data-knowl="./knowl/symmptindeppts.html" title="Proposition 3.2.18">Proposition 3.2.18</a> by completing the details in the following outline. Let <span class="process-math">\(C=T^{-1}(\extR)\)</span> be a cline that contains points <span class="process-math">\(z_1,z_2,z_3\text{,}\)</span> where <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\text{.}\)</span> First, consider the case when <span class="process-math">\(C\)</span> is a circle, say, with equation <span class="process-math">\(|z-a|=r\text{,}\)</span> where <span class="process-math">\(a,r\)</span> are the center and radius, respectively, of <span class="process-math">\(C\)</span> (see <a href="" class="xref" data-knowl="./knowl/circleeqn.html" title="Equation 1.1.22">(1.1.22)</a>).</div>
-<ol class="lower-roman">
-<li><div class="para">Square both sides of <span class="process-math">\(|z-a|=r\)</span> and solve for <span class="process-math">\(z^\ast\)</span> to get<div class="displaymath process-math">
+<li><div class="para">Use polar form <span class="process-math">\(a=|a|e^{i\arg a}\text{.}\)</span>
+</div></li>
+<li><div class="para logical"><ol class="lower-roman">
+<li><div class="para">homothety and a rotation (multiplying by <span class="process-math">\(c\)</span>), followed by translation (adding <span class="process-math">\(d\)</span>)</div></li>
+<li><div class="para">inversion</div></li>
+<li><div class="para">homothety and rotation (multiplying by <span class="process-math">\(bc-ad\)</span>), followed by translation (adding <span class="process-math">\(a\)</span>)</div></li>
+<li><div class="para">homothety and rotation (multiplying by <span class="process-math">\(1/c\)</span>)</div></li>
+</ol></div></li>
+<li><div class="para">If <span class="process-math">\(c=0\text{,}\)</span> then <span class="process-math">\(ad-bc=ad\neq 0\text{,}\)</span> so <span class="process-math">\(d\neq 0\text{,}\)</span> and we have<div class="displaymath process-math">
 \begin{equation*}
-z^\ast = \frac{r^2}{z-a}+a^\ast\text{.}
+z = \frac{az+b}{d} = \frac{a}{d}z+\frac{b}{d}
 \end{equation*}
-</div>
-</div></li>
-<li><div class="para">We have<div class="displaymath process-math">
-\begin{align*}
-(\conj\circ T)(z) \amp =
-(z^\ast,z_1^\ast,z_2^\ast,z_3^\ast)\\
-\amp = \left(z^\ast,
-\frac{r^2}{z_1-a}+a^\ast,\frac{r^2}{z_2-a}+a^\ast,\frac{r^2}{z_3-a}+a^\ast\right)\\
-\amp \stackrel{(1)}{=} \left(\frac{r^2}{z^\ast -
-a^\ast}+a,z_1,z_2,z_3\right)\\
-\amp =
-T\left(\frac{r^2}{(z-a)^\ast}+a\right).
-\end{align*}
-</div>Explain how invariance of the cross ratio is used to justify the equality (1) in this derivation.</div></li>
-<li><div class="para">Explain how we can conclude that <span class="process-math">\(z^{\ast C}=
-\frac{r^2}{(z-a)^\ast}+a\text{,}\)</span> and that indeed this does not depend on the choice of  <span class="process-math">\(z_1,z_2,z_3\text{.}\)</span>
-</div></li>
-<li><div class="para">Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="" class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/lineeqn.html">
-\begin{equation*}
-z^\ast = \frac{az+b-b^\ast}{a^\ast}.
-\end{equation*}
-</div>
-</div></li>
-<li><div class="para">We have<div class="displaymath process-math">
-\begin{align*}
-(\conj\circ T)(z) \amp =
-(z^\ast,z_1^\ast,z_2^\ast,z_3^\ast)\\
-\amp =
-\left(z^\ast,\frac{az_1+b-b^\ast}{a^\ast},\frac{az_2+b-b^\ast}{a^\ast},
-\frac{az_3+b-b^\ast}{a^\ast}\right)\\
-\amp \stackrel{(1)}{=} \left(\frac{z^\ast a^\ast + b^\ast - b}{a},z_1,z_2,z_3\right)\\
-\amp =
-T\left(\frac{z^\ast a^\ast + b^\ast - b}{a}\right).
-\end{align*}
-</div>Explain how invariance of the cross ratio is used to justify the equality (1) in this derivation.</div></li>
-<li><div class="para">Explain how we can conclude that <span class="process-math">\(z^{\ast C}=\frac{z^\ast
-a^\ast + b^\ast - b}{a}\text{,}\)</span> and that indeed this does not depend on the choice of <span class="process-math">\(z_1,z_2,z_3\text{.}\)</span>
-</div></li>
-</ol>
-</li>
-<li><div class="para">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a circle <span class="process-math">\(C\)</span> with center <span class="process-math">\(a\)</span> and radius <span class="process-math">\(r\)</span> if and only if <span class="process-math">\(|z-a||z'-a|=r^2\)</span> and  <span class="process-math">\(z,z'\)</span> lie on the same ray emanating from <span class="process-math">\(a\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/symmptsfig.html" title="Figure 3.2.25">Figure 3.2.25</a>. <a href="" class="hint-knowl original" data-knowl="./knowl/hint-14-hidden.html" title="Hint 3.2.6.5.b.1"><span class="type">Hint</span><span class="period">.</span></a>
-</div></li>
-<li><div class="para">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a line <span class="process-math">\(C\)</span> if and only if <span class="process-math">\(z,z'\)</span> are reflections of one another across <span class="process-math">\(C\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/symmptsfig.html" title="Figure 3.2.25">Figure 3.2.25</a>.</div></li>
+</div>a homothety and rotation (multiplying by <span class="process-math">\(a/d\)</span> followed by a translation (adding <span class="process-math">\(b/d\)</span>).</div></li>
 </ol></div>
 <span class="incontext"><a href="section-13.html#p-425" class="internal">in-context</a></span>
 </body>

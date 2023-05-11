@@ -13,10 +13,18 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-d(a,b)\amp \leq d(a,c')+d(c',b) \;\;\text{(by parts (a),(b))}\\
-\amp \leq d(a,c)+d(c,b)\;\; \text{(by part (c))}.
+\int_{\cos(\pi-\alpha)}^1
+\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
+dy\;dx
+\amp = \int_{\cos(\pi-\alpha)}^1
+\left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}\\
+\amp =
+\int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx\\
+\amp = \left[-\arccos
+x\right]_{\cos(\pi-\alpha)}^1\\
+\amp = \pi-\alpha.
 \end{align*}
 </div>
-<span class="incontext"><a href="section-14.html#md-50" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-14.html#md-52" class="internal">in-context</a></span>
 </body>
 </html>

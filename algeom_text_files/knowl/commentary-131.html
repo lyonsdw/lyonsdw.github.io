@@ -11,8 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.9.</span></h4>
-<div class="para">Making the hint more explicit, draw a radius from 0 to each of the vertices of the asymptotic <span class="process-math">\(n\)</span>-gon. This partitions the asymptotic <span class="process-math">\(n\)</span>-gon into <span class="process-math">\(n\)</span> doubly-asymptotic triangles. The <span class="process-math">\(n\)</span> angles <span class="process-math">\(\alpha_i\)</span> made be consecutive radii at 0 sum to <span class="process-math">\(2\pi\text{,}\)</span> so the areas of the doubly-asymptotic triangles sum to <span class="process-math">\(\sum_i (\pi-\alpha_i) = n\pi -2\pi = (n-2)\pi\text{.}\)</span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.10.</span></h4>
+<div class="para logical">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/doubasymptriareaexer.html" title="Exercise 3.3.6.8: Area of a doubly-asymptotic triangle">Exercise 3.3.6.8</a>, the sum of the areas of the six doubly asymptotic triangles in the hint is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/doubasymptriareaexer.html ./knowl/asympngonareaexer.html">
+\begin{equation*}
+2((\pi-\angle A)+(\pi-\angle B)+(\pi-\angle
+C)).
+\end{equation*}
+</div>
+<div class="para">Subtracting the overcounted area <span class="process-math">\(2\text{ Area}(\triangle ABC)\)</span> gives the area of the asymptotic hexagon with vertices <span class="process-math">\(A_1,A_2,B_1,B_2,C_1,C_2\text{.}\)</span> We know this quantity is <span class="process-math">\(4\pi\)</span> by <a href="" class="xref" data-knowl="./knowl/asympngonareaexer.html" title="Exercise 3.3.6.9: Area of an asymptotic n-gon">Exercise 3.3.6.9</a>. Rearrange terms in</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/doubasymptriareaexer.html ./knowl/asympngonareaexer.html">
+\begin{equation*}
+2((\pi-\angle A)+(\pi-\angle B)+(\pi-\angle
+C))-2\text{ Area}(\triangle ABC)=4\pi
+\end{equation*}
+</div>
+<div class="para">to get the desired area formula.</div>
 </div></article><span class="incontext"><a href="section-14.html#commentary-131" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,8 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y)\to (x,-y)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(\twotwo{1}{0}{0}{-1}\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but not in <span class="process-math">\(\E\text{.}\)</span> To justify the "not in <span class="process-math">\(\E\)</span>" claim, observe that generating elements of <span class="process-math">\(\E\)</span> (rotations and translations) preserve oriented angles, so all elements of <span class="process-math">\(\E\)</span> preserve oriented angles. But <span class="process-math">\((x,y)\to
-(x,-y)\)</span> takes the oriented angle <span class="process-math">\(\angle 1,0,i\text{,}\)</span> which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle 1,0,-i\text{,}\)</span> which measures <span class="process-math">\(-\pi/2\)</span> radians.</div>
-<span class="incontext"><a href="geometry_extra_exer_section.html#p-597" class="internal">in-context</a></span>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Let <span class="process-math">\(S=(\cdot,\mu(P_1),\mu(P_2),\mu(P_3))\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/mobiusgeomisprojectivegeom.html" title="Exercise 3.5.5.3: Möbius geometry is projective geometry">Exercise 3.5.5.3</a>, the map <span class="process-math">\(\mu^{-1}\circ S\circ \mu\)</span> is a projective transformation, and it is easy to see that <span class="process-math">\(\mu^{-1}\circ S\circ \mu\)</span> takes <span class="process-math">\(P_1,P_2,P_3\)</span> to <span class="process-math">\([e_0], [e_2],[e_1]\text{,}\)</span> so by the Fundamental Theorem of Projective Geometry, we must have <span class="process-math">\(\mu^{-1}\circ S\circ \mu = [T]\text{.}\)</span> Evaluating both sides of this equation at <span class="process-math">\(P_0\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/mobiusgeomisprojectivegeom.html">
+\begin{equation*}
+(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3)).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">It is easy to verify that<div class="displaymath process-math">
+\begin{equation*}
+(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))=
+\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="section-16.html#p-597" class="internal">in-context</a></span>
 </body>
 </html>

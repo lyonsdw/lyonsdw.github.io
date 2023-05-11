@@ -13,24 +13,10 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliccirclecircumexer.html">
-\begin{align*}
-\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
-\frac{4r\;dr\;d\theta}{(1-r^2)^2}\\
-\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
-\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)\\
-\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
-\right]d\theta\\
-\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
-d\theta\\
-\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.
-\end{align*}
-</div>
-<div class="para">As was the case for <a href="" class="xref" data-knowl="./knowl/hyperboliccirclecircumexer.html" title="Checkpoint 3.3.19">Checkpoint 3.3.19</a>, this solution is correct, but we want an expression in terms of the hyperbolic radius <span class="process-math">\(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\)</span> Again, solve for <span class="process-math">\(\alpha\)</span> in terms of <span class="process-math">\(r\text{,}\)</span> then simplify. We get</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliccirclecircumexer.html">
+<div class="para">Let <span class="process-math">\(z_1,z_2\in \D\text{,}\)</span> and let <span class="process-math">\(q_1,q_2\)</span> be points on the hyperbolic line through <span class="process-math">\(z_1,z_2\)</span> that lie on the unit circle, with <span class="process-math">\(q_i\)</span> "on the <span class="process-math">\(z_i\)</span> side" for <span class="process-math">\(i=1,2\text{,}\)</span> that is, <span class="process-math">\(q_i=T^{-1}z_i\text{,}\)</span> where <span class="process-math">\(T\)</span> is the transformation found in <a href="" class="xref" data-knowl="./knowl/hyperbolicdisttransexer.html" title="Checkpoint 3.3.13">Checkpoint 3.3.13</a>. Be invariance of the cross ratio under Möbius transformations, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicdisttransexer.html">
 \begin{equation*}
-\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).
+d(z_1,z_2)=\ln(z_1,z_2,q_2,q_1)=\ln(Tz_1,Tz_2,Tq_2,Tq_1)=d(Tz_1,Tz_2).
 \end{equation*}
 </div>
 </div>

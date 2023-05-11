@@ -11,22 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.4.22.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.4.23.</span></h4>
 <div class="para logical">
-<div class="para">Integrating the geometric series</div>
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{circumference } \amp = 2\int_0^{2\pi} \frac{\alpha}{1+\alpha^2}dt\\
+\amp = \frac{4\pi\alpha}{1+\alpha^2}.
+\end{align*}
+</div>
+<div class="para">In terms of <span class="process-math">\(r=d_{\extC}(0,\alpha)= 2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha = \tan \frac{r}{2}\text{,}\)</span> so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\frac{1}{1+x^2} = 1-x^2+x^4 -x^6 + \cdots 
+\text{circumference } = \frac{4\pi\alpha}{1+\alpha^2} =
+4\pi\frac{\tan \frac{r}{2}}{\sec^2 \frac{r}{2}}=
+4\pi\sin\frac{r}{2} \cos \frac{r}{2} = 2\pi \sin r.
 \end{equation*}
-</div>
-<div class="para">term by term yields</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\arctan x = x-\frac{x^3}{3}+ \frac{x^5}{5} - \cdots .
-\end{equation*}
-</div>
-<div class="para">We have <span class="process-math">\(z_2-z_1\approx z'(t)\;dt\)</span> and <span class="process-math">\(z_1^\ast z_2 + 1
-\approx |z(t)|^2 + 1\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="elliptic_geometry_section.html#commentary-140" class="internal">in-context</a></span>
 </body>

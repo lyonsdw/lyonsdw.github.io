@@ -11,23 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 2.5.3.</span></h4>
-<div class="para logical">
-<div class="para">We use the 2-step subgroup test. First, note that <span class="process-math">\(\Stab(x)\)</span> is not empty, because <span class="process-math">\(\Stab(x)\)</span> contains <span class="process-math">\(e_G\)</span> (the action <span class="process-math">\(G\to \Perm(X)\)</span> is a group homomorphism, so <span class="process-math">\(e_G\)</span> must go to the identity transformation on <span class="process-math">\(X\)</span> by Property 1 of <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>). Now suppose <span class="process-math">\(g,h\in
-\Stab(x)\text{.}\)</span> Then we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.1.</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">We will show that <span class="process-math">\(L_g\)</span> is invertible. Similar arguments show that <span class="process-math">\(R_g,C_g\)</span> are invertible. We have<div class="displaymath process-math">
 \begin{equation*}
-(gh)(x)=g(hx)=gx=x
+L_{g^{-1}}(L_g(x))=g^{-1}gx=x
 \end{equation*}
-</div>
-<div class="para">so <span class="process-math">\(gh\in \Stab(x)\text{.}\)</span> Also, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
-\begin{equation*}
-x=(g^{-1}g)x
-=g^{-1}(gx)=g^{-1}x\text{,}
-\end{equation*}
-</div>
-<div class="para">so <span class="process-math">\(g^{-1}\in \Stab(x)\text{.}\)</span> This completes the proof.</div>
-</div></article><span class="incontext"><a href="section-10.html#commentary-73" class="internal">in-context</a></span>
+</div>for all <span class="process-math">\(x\in G\text{.}\)</span> A similar argument shows that <span class="process-math">\(L_g(L_{g^{-1}}(x))=x\)</span> for all <span class="process-math">\(x\text{.}\)</span> We conclude that <span class="process-math">\(L_g\)</span> is invertible, with inverse <span class="process-math">\((L_g)^{-1}=L_{g^{-1}}\text{.}\)</span> Thus <span class="process-math">\(L_g\)</span> is an element of <span class="process-math">\(\Perm(G)\text{,}\)</span> as desired.</div></li>
+<li><div class="para">You just have to check that <span class="process-math">\(L_{gh}=L_g\circ
+L_h\text{,}\)</span> <span class="process-math">\(R_{gh}=R_g\circ R_h\)</span> (here you see why the inverse is needed!), and <span class="process-math">\(C_{gh}=C_g\circ C_h\text{.}\)</span> Here is the argument for <span class="process-math">\(L\text{.}\)</span> Similar arguments work for <span class="process-math">\(R,C\text{.}\)</span> Let <span class="process-math">\(g,h\in G\text{.}\)</span> We have <span class="process-math">\(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\)</span> for all <span class="process-math">\(x\in
+G\text{,}\)</span> so we have <span class="process-math">\(L_g\circ L_h = L_{gh}\text{.}\)</span>
+</div></li>
+<li><div class="para">For injectivity, if <span class="process-math">\(L_g=L_h\text{,}\)</span> then <span class="process-math">\(g=L_g(e)=L_h(e)=h\text{.}\)</span> By the First Isomorphism Theorem, we conclude that <span class="process-math">\(G\approx L(G)\text{,}\)</span> which is subgroup of <span class="process-math">\(\Perm(G)\text{.}\)</span>
+</div></li>
+</ol></div></article><span class="incontext"><a href="section-10.html#commentary-73" class="internal">in-context</a></span>
 </body>
 </html>

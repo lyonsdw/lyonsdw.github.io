@@ -11,13 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Show that the order of any element of a finite group divides the order of the group.</div></li>
-<li><div class="para">Let <span class="process-math">\(G\)</span> be a finite group, and let <span class="process-math">\(g\in
-G\text{.}\)</span> Show that <span class="process-math">\(g^{|G|}=e\text{.}\)</span>
+<li><div class="para">Apply Lagrange's theorem to the subgroup <span class="process-math">\(H=\langle g\rangle\text{,}\)</span> and use the fact that <span class="process-math">\(|g|=|\langle g\rangle|\)</span> (<a href="" class="xref" data-knowl="./knowl/orderofaneltexer.html" title="Exercise 2.3.2.6: The order of a group element">Exercise 2.3.2.6</a>).</div></li>
+<li><div class="para">By the previous part, we have <span class="process-math">\(|G|=|g|k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> So<div class="displaymath process-math">
+\begin{equation*}
+g^{|G|}=g^{|g|k}=(g^{|g|})^k=e^k=e.
+\end{equation*}
+</div>
 </div></li>
-<li><div class="para">Show that a group of prime order is cyclic.</div></li>
+<li><div class="para">Let <span class="process-math">\(p=|G|\text{.}\)</span> By part 1, the order of any element in <span class="process-math">\(G\)</span> must divide <span class="process-math">\(p\text{,}\)</span> and since <span class="process-math">\(p\)</span> is prime, the order of any element in <span class="process-math">\(G\)</span> must be 1 or <span class="process-math">\(p\text{.}\)</span> The identity is the only element of order 1, so the rest of the elements in <span class="process-math">\(G\)</span> are all generators, and <span class="process-math">\(G\)</span> is cyclic.</div></li>
 </ol></div>
 <span class="incontext"><a href="subgroups_cosets_section.html#p-239" class="internal">in-context</a></span>
 </body>
