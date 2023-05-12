@@ -12,11 +12,31 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Given a vector <span class="process-math">\(x=(x_0,x_1,\ldots,x_{n+1})\in\F^{n+1}\text{,}\)</span> let <span class="process-math">\(c(x)\)</span> denote the expression on the left side of <a href="" class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a>. We have <span class="process-math">\(c(kx) = k^2c(x)\)</span> for any scalar <span class="process-math">\(k\text{,}\)</span> so <span class="process-math">\(c(x)=0\)</span> if and only if <span class="process-math">\(c(kx)=0\text{.}\)</span>
-</div></li>
-<li><div class="para">Taking inhomogeneous coordinates in position 0, let <span class="process-math">\(u=x_1/x_0,v=x_2/x_0\text{.}\)</span> The points <span class="process-math">\((1,u,v)\)</span> satisfy <span class="process-math">\(1+u^2-v^2=0\text{,}\)</span> which is the equation for a hyperbola in the <span class="process-math">\(u,v\)</span>-plane. Taking inhomogeneous coordinates in position 1 is also a hyperbola. Taking inhomogeneous coordinates in position 2, with <span class="process-math">\(u=x_0/x_2,v=x_1/x_2\text{,}\)</span> we have <span class="process-math">\(u^2+v^2-1=0\text{,}\)</span> which is the equation for the unit circle in the <span class="process-math">\(u,v\)</span>-plane.</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">It is clear that <span class="process-math">\(\mu\)</span> is a bijection. Let <span class="process-math">\(T\in
+\M\)</span> be given by <span class="process-math">\(Tz=\frac{az+b}{cz+d}\text{.}\)</span> Let <span class="process-math">\(M\in
+GL(2,C)\)</span> be given by <span class="process-math">\(M=\twotwo{a}{b}{c}{d}\text{.}\)</span> If <span class="process-math">\(\beta\neq 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mu([M][\alpha,\beta])\amp
+=\mu\left([a\alpha+b\beta,c\alpha+d\beta]\right)\\
+\amp = \frac{a\alpha+b\beta}{c\alpha+d\beta}\\
+\amp =
+\frac{a\frac{\alpha}{\beta}+b}{c\frac{\alpha}{\beta}+d}\\
+\amp = T(\alpha/\beta)\\
+\amp = T(\mu([\alpha,\beta]).
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(\beta=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu([M][\alpha,0])= \mu([a\alpha,c\alpha])=a/c=T(\infty) =
+T(\mu([\alpha,0]).
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(\mu\circ T\circ \mu{-1} = [M]\in PGL(2,\C)\)</span> and <span class="process-math">\(\mu^{-1}\circ [M]\circ \mu = T\in \M\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-16.html#p-605" class="internal">in-context</a></span>
 </body>
 </html>

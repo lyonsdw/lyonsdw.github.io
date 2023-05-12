@@ -11,22 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.15.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.14.</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.11: Isomorphism induces an equivalence relation">Exercise 2.4.2.11</a> that the composition of isomorphisms is an isomorphism, so the group operation is well defined. The identity is an isomorphism, and we showed in <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a> that the inverse of an isomorphism is an isomorphism. Associativity is a property of function composition. All of the requirements of a group hold for <span class="process-math">\(\Aut(G)\text{.}\)</span>
+<li><div class="para">Let <span class="process-math">\(g\in G\text{.}\)</span> We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.11: Isomorphism induces an equivalence relation">Exercise 2.4.2.11</a> that <span class="process-math">\(C_g\colon
+G\to G\)</span> is an isomorphism. By the definition of normality, <span class="process-math">\(C_g\)</span> restricts to a map from <span class="process-math">\(K\)</span> to itself. This restriction must also be an isomorphism (with inverse <span class="process-math">\(C_{g^{-1}}\)</span>), so <span class="process-math">\(C_g(K)=K\text{,}\)</span> or, said another way, <span class="process-math">\(gKg^{-1}=K\text{.}\)</span>
 </div></li>
-<li><div class="para logical">
-<div class="para">We will use the 2-step subgroup test. First, <span class="process-math">\(\Inn(G)\)</span> contains the identity map <span class="process-math">\(C_e\colon G\to G\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is not empty. Given <span class="process-math">\(g,h\)</span> in <span class="process-math">\(G\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoisequivrel.html">
-\begin{equation*}
-(C_g\circ C_h)(x) = C_g(C_h(x))=g(hxh^{-1})g^{-1}=
-(gh)x(gh)^{-1}=C_{gh}(x)
-\end{equation*}
-</div>
-<div class="para">so <span class="process-math">\(\Inn(G)\)</span> is closed under composition. We showed in <a href="" class="xref" data-knowl="./knowl/isoisequivrel.html" title="Exercise 2.4.2.11: Isomorphism induces an equivalence relation">Exercise 2.4.2.11</a> that <span class="process-math">\((C_g)^{-1}=C_{g^{-1}}\text{,}\)</span> so <span class="process-math">\(\Inn(G)\)</span> is closed under inversion. This completes the 2-step subgroup test, and we conclude that <span class="process-math">\(\Inn(G)\)</span> is a subgroup of <span class="process-math">\(\Aut(G)\text{.}\)</span>
-</div>
+<li><div class="para">Part (a) says that for all <span class="process-math">\(k\in K\text{,}\)</span> we have <span class="process-math">\(gkg^{-1}=k'\)</span> for some <span class="process-math">\(k'\in K\text{.}\)</span> This is the same as <span class="process-math">\(gk=k'g\text{.}\)</span> That this holds for all <span class="process-math">\(k\in
+K\)</span> means that <span class="process-math">\(gK\subseteq Kg\text{.}\)</span> A similar argument shows that <span class="process-math">\(Kg\subseteq gK\text{.}\)</span> We conclude that <span class="process-math">\(gK=Kg\text{.}\)</span>
 </div></li>
-<li><div class="para">One example is complex conjugation on <span class="process-math">\(\C^\ast\text{.}\)</span> Any nontrivial automorphism of an Abelian group is an example, because conjugation by any element is the identity. So, for example, <span class="process-math">\(\mu_2\colon \Z_5\to \Z_5\)</span> given by <span class="process-math">\(\mu_2(x)=2x\)</span> works.</div></li>
 </ol></div></article><span class="incontext"><a href="section-9.html#commentary-70" class="internal">in-context</a></span>
 </body>
 </html>

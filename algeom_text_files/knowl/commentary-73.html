@@ -11,19 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.1.</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">We will show that <span class="process-math">\(L_g\)</span> is invertible. Similar arguments show that <span class="process-math">\(R_g,C_g\)</span> are invertible. We have<div class="displaymath process-math">
-\begin{equation*}
-L_{g^{-1}}(L_g(x))=g^{-1}gx=x
-\end{equation*}
-</div>for all <span class="process-math">\(x\in G\text{.}\)</span> A similar argument shows that <span class="process-math">\(L_g(L_{g^{-1}}(x))=x\)</span> for all <span class="process-math">\(x\text{.}\)</span> We conclude that <span class="process-math">\(L_g\)</span> is invertible, with inverse <span class="process-math">\((L_g)^{-1}=L_{g^{-1}}\text{.}\)</span> Thus <span class="process-math">\(L_g\)</span> is an element of <span class="process-math">\(\Perm(G)\text{,}\)</span> as desired.</div></li>
-<li><div class="para">You just have to check that <span class="process-math">\(L_{gh}=L_g\circ
-L_h\text{,}\)</span> <span class="process-math">\(R_{gh}=R_g\circ R_h\)</span> (here you see why the inverse is needed!), and <span class="process-math">\(C_{gh}=C_g\circ C_h\text{.}\)</span> Here is the argument for <span class="process-math">\(L\text{.}\)</span> Similar arguments work for <span class="process-math">\(R,C\text{.}\)</span> Let <span class="process-math">\(g,h\in G\text{.}\)</span> We have <span class="process-math">\(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\)</span> for all <span class="process-math">\(x\in
-G\text{,}\)</span> so we have <span class="process-math">\(L_g\circ L_h = L_{gh}\text{.}\)</span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 2.5.5.</span></h4>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">There are 3 types of orbits for the action of <span class="process-math">\(D_4\)</span> on the square.</div>
+<ul class="disc">
+<li><div class="para">the 1-point set <span class="process-math">\(\{(0,0)\}\)</span> (a single orbit)</div></li>
+<li><div class="para">a 4-point set, the vertices of a square, of the form <span class="process-math">\((\pm a,\pm a)\)</span> or <span class="process-math">\(\{(\pm a,0),(0\pm a)\}\)</span> (infinitely many orbits, one for each <span class="process-math">\(a\)</span> in the range <span class="process-math">\(0\lt a\leq 1)\)</span>
 </div></li>
-<li><div class="para">For injectivity, if <span class="process-math">\(L_g=L_h\text{,}\)</span> then <span class="process-math">\(g=L_g(e)=L_h(e)=h\text{.}\)</span> By the First Isomorphism Theorem, we conclude that <span class="process-math">\(G\approx L(G)\text{,}\)</span> which is subgroup of <span class="process-math">\(\Perm(G)\text{.}\)</span>
+<li><div class="para">an 8-point set of the form <span class="process-math">\(\{(\pm a,\pm b),(\pm b,\pm
+a)\}\)</span> (infinitely many orbits, one for each <span class="process-math">\(0\leq a\lt b\)</span>)</div></li>
+</ul>
 </div></li>
+<li><div class="para">The orbits are all the latitude circles with latitude <span class="process-math">\(\theta\text{,}\)</span> for <span class="process-math">\(0\lt \theta\lt \pi/2\text{,}\)</span> and two 1-point orbits, the north and south poles.</div></li>
+<li><div class="para">For the action of a group on itself by conjugation, the orbits are conjugacy classes. How many orbits and how they look depends on the group.</div></li>
 </ol></div></article><span class="incontext"><a href="section-10.html#commentary-73" class="internal">in-context</a></span>
 </body>
 </html>

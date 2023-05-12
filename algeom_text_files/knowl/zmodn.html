@@ -13,13 +13,13 @@
 <body class="ignore-math">
 <div class="exercisegroup">
 <h4 class="heading">
-<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">1.4.4.1–4</span><span class="period">.</span><span class="space"> </span><span class="title">The integers modulo <span class="process-math">\(n\)</span>.</span>
+<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">1.4.4.2–5</span><span class="period">.</span><span class="space"> </span><span class="title">The integers modulo <span class="process-math">\(n\)</span>.</span>
 </h4>
 <div class="introduction">Let <span class="process-math">\(n\)</span> be a positive integer.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para">Let <span class="process-math">\(\omega\)</span> be the complex number <span class="process-math">\(\omega=e^{2\pi i/n}\text{,}\)</span> and let <span class="process-math">\(f\colon \Z\to \C\)</span> be given by <span class="process-math">\(m\to \omega^m\text{.}\)</span> Show that the equivalence relation <span class="process-math">\(\sim_f\)</span> given by <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.3: Construction of equivalence relations and partitions from functions">Fact 1.4.3</a> is the same as <span class="process-math">\(\sim_n\text{.}\)</span>
-</div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para">Let <span class="process-math">\(\omega\)</span> be the complex number <span class="process-math">\(\omega=e^{2\pi i/n}\text{,}\)</span> and let <span class="process-math">\(f\colon \Z\to \C\)</span> be given by <span class="process-math">\(m\to \omega^m\text{.}\)</span> Show that the equivalence relation <span class="process-math">\(\sim_f\)</span> given by <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.5: Construction of equivalence relations and partitions from functions">Fact 1.4.5</a> is the same as <span class="process-math">\(\sim_n\text{.}\)</span>
+</div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical">
 <div class="para">Show that the operation of addition on <span class="process-math">\(\Z_n\)</span> given by</div>
 <div class="displaymath process-math">
@@ -29,7 +29,7 @@
 </div>
 <div class="para">is <dfn class="terminology">well-defined</dfn>. This means showing that if <span class="process-math">\([x]=[x']\)</span> and <span class="process-math">\([y]=[y']\text{,}\)</span> then <span class="process-math">\([x+y]=[x'+y']\text{.}\)</span>
 </div>
-</div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+</div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="para logical">
 <div class="para">Show that the operation of multiplication on <span class="process-math">\(\Z_n\)</span> given by</div>
 <div class="displaymath process-math">
@@ -39,11 +39,11 @@
 </div>
 <div class="para">is well-defined.</div>
 </div></article><article class="exercise exercise-like"><h5 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of <span class="process-math">\(\Z_n\)</span>.</span>
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative construction of <span class="process-math">\(\Z_n\)</span>.</span>
 </h5>
 <div class="para logical">
 <div class="para">Another standard definition of the set <span class="process-math">\(\Z_n\text{,}\)</span> together with its operations of addition and multiplication, is the following. Given an integer <span class="process-math">\(a\text{,}\)</span> we write <span class="process-math">\(a \MOD
-n\)</span> to denote the <dfn class="terminology">remainder</dfn> obtained when dividing <span class="process-math">\(a\)</span> by <span class="process-math">\(n\)</span> (the integer <span class="process-math">\(a \MOD n\)</span> is the same as the integer <span class="process-math">\(r\)</span> in the statement of the division algorithm given in <a href="" class="xref" data-knowl="./knowl/equivmodnisequivrelnexer.html" title="Checkpoint 1.4.4">Checkpoint 1.4.4</a>). Now define <span class="process-math">\(\Z_n\)</span> to be the set</div>
+n\)</span> to denote the <dfn class="terminology">remainder</dfn> obtained when dividing <span class="process-math">\(a\)</span> by <span class="process-math">\(n\)</span> (the integer <span class="process-math">\(a \MOD n\)</span> is the same as the integer <span class="process-math">\(r\)</span> in the statement of the division algorithm given in <a href="" class="xref" data-knowl="./knowl/equivmodnisequivrelnexer.html" title="Checkpoint 1.4.1">Checkpoint 1.4.1</a>). Now define <span class="process-math">\(\Z_n\)</span> to be the set</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/equivmodnisequivrelnexer.html ./knowl/intmodnadd.html ./knowl/intmodnmult.html">
 \begin{equation*}
 \Z_n=\{0,1,2,\ldots,n-1\},
@@ -61,7 +61,7 @@ x+_n y= (x+y)\MOD n
 x\cdot_n y = (xy) \MOD n.
 \end{equation*}
 </div>
-<div class="para">Show that this version of <span class="process-math">\(\Z_n\)</span> is equivalent to the version developed in <a href="" class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.4.2">Exercise 1.4.4.2</a> and <a href="" class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.4.3">Exercise 1.4.4.3</a>.</div>
+<div class="para">Show that this version of <span class="process-math">\(\Z_n\)</span> is equivalent to the version developed in <a href="" class="xref" data-knowl="./knowl/intmodnadd.html" title="Exercise 1.4.4.3">Exercise 1.4.4.3</a> and <a href="" class="xref" data-knowl="./knowl/intmodnmult.html" title="Exercise 1.4.4.4">Exercise 1.4.4.4</a>.</div>
 </div></article>
 </div>
 </div>

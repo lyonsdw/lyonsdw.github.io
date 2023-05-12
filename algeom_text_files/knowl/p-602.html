@@ -13,20 +13,23 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Follow the outline below to prove Pappus' Theorem under the additional assumption that no three of <span class="process-math">\(A,A',P,R\)</span> are collinear. Applying the Fundamental Theorem of Projective Geometry, we may assume <span class="process-math">\(A=[e_1]\text{,}\)</span> <span class="process-math">\(A'=[e_2]\text{,}\)</span> <span class="process-math">\(P=[e_3]\text{,}\)</span> and <span class="process-math">\(R=[e_0]\text{.}\)</span>
+<div class="para">To facilitate thinking about the interplay between the projective geometry <span class="process-math">\(\Proj(\F^{n+1})=\F\Proj_n\)</span> and the geometry of <span class="process-math">\(\F^{n}\)</span> (rather than <span class="process-math">\(\F^{n+1}\text{!}\)</span>) it is useful to have a careful definition for "taking inhomogeneous coordinates in position <span class="process-math">\(i\)</span>". Here it is: Let <span class="process-math">\(U_i\)</span> be the subset of <span class="process-math">\(\F\Proj_n\)</span> of points whose homogeneous coordinate <span class="process-math">\(x_i\)</span> is nonzero. Let <span class="process-math">\(\pi_i\colon U_i\to
+\F^n\)</span> be given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[x_0,x_1,x_2,\ldots x_{i-1},x_i,x_{i+1},\ldots,x_n]
+\to  \left(\frac{x_0}{x_i},\frac{x_1}{x_i},\frac{x_2}{x_i},\ldots
+\frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_n}{x_i}\right).
+\end{equation*}
 </div>
-<ul class="disc">
-<li><div class="para">Check that <span class="process-math">\(AR=[0,-1,1]\)</span> and <span class="process-math">\(A'R=[1,0,-1]\text{.}\)</span>
-</div></li>
-<li><div class="para">Explain why it follows that <span class="process-math">\(B'=[r,1,1]\)</span> and <span class="process-math">\(B=[1,s,1]\)</span> for some <span class="process-math">\(r,s\text{.}\)</span>
-</div></li>
-<li><div class="para">Explain why <span class="process-math">\(C=[rs,s,1]\)</span> and <span class="process-math">\(C'=[r,rs,1]\text{.}\)</span>
-</div></li>
-<li><div class="para">Explain why <span class="process-math">\(Q=[rs,rs,1]\text{.}\)</span>
-</div></li>
-<li><div class="para">Observe that <span class="process-math">\(P,Q,R\)</span> all lie on <span class="process-math">\([1,-1,0]\text{.}\)</span>
-</div></li>
-</ul>
+<div class="para">The one-sided inverse <span class="process-math">\(\F^n\to \F\Proj_n\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x_0,x_1,\ldots x_{i-1},\widehat{x_i},x_{i+1},\ldots,x_n)
+\to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]
+\end{equation*}
+</div>
+<div class="para">(where the circumflex hat indicates a deleted item from a sequence) is called the <span class="process-math">\(i\)</span>-th <dfn class="terminology">coordinate chart</dfn> for <span class="process-math">\(\F\Proj_n\text{.}\)</span> What is the map that results from applying the <span class="process-math">\(0\)</span>-th coordinate chart <span class="process-math">\(\C\to \C\Proj_2\)</span> followed by taking homogeneous coordinates in position 1?</div>
 </div>
 <span class="incontext"><a href="section-16.html#p-602" class="internal">in-context</a></span>
 </body>

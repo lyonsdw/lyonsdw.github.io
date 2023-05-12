@@ -11,8 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(n,a\)</span> be relatively prime positive integers. Show that the map <span class="process-math">\(\Z_n\to \Z_n\)</span> given by <span class="process-math">\(x\to ax\)</span> is an isomorphism.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(\gcd(a,n)=1\text{.}\)</span> Then there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sa+tn=1\text{.}\)</span> Then we have <span class="process-math">\(as = 1-tn = 1\pmod{n}\text{,}\)</span> so <span class="process-math">\(x=s \pmod{n}\)</span> is a solution to <span class="process-math">\(ax=1 \pmod{n}\text{.}\)</span> This give us an inverse mapping.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu_a^{-1}=\mu_s
+\end{equation*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(\mu_a\)</span> is an isomorphism.</div>
+</div>
 <span class="incontext"><a href="section-9.html#p-264" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.4 (proof of Proposition 2.5.4).</span></h4>
-<div class="para">First, we check that <span class="process-math">\(\sim_G\)</span> is an equivalence relation. For symmetry, we have <span class="process-math">\(x=e_Gx\)</span> for all <span class="process-math">\(x\in
-X\text{.}\)</span> For reflexivity, if <span class="process-math">\(y=gx\text{,}\)</span> then <span class="process-math">\(x=g^{-1}y\text{.}\)</span> For transitivity, if <span class="process-math">\(y=gx\)</span> and <span class="process-math">\(z=hy\text{,}\)</span> then <span class="process-math">\(z=hy=h(gx)=(hg)x\text{.}\)</span> It follows that the set of equivalence classes <span class="process-math">\(X/\!\!\sim_G\)</span> forms a partition of <span class="process-math">\(X\text{.}\)</span> Since <span class="process-math">\(X/G=X/\!\!\sim_G\)</span> by definition, it follows that orbits form a partition.</div></article><span class="incontext"><a href="section-10.html#commentary-76" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.3.</span></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\phi\)</span> denote the map <span class="process-math">\(\phi\colon G\to \Perm(X)\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g\to [v\to g\cdot v],
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\((\phi(g))(v)=gv\)</span> for <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(v\in X\text{.}\)</span> To see that <span class="process-math">\(\phi\)</span> is a homomorphism, we have,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\phi(gh))(v)=(gh)v = g(hv) =(\phi(g)\circ\phi(h))(v)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v\in X\text{.}\)</span> [Note: the equality <span class="process-math">\((gh)v=g(hv)\)</span> uses the fact that matrix multiplication is associative.] We conclude that <span class="process-math">\(\phi(gh)=\phi(g)\circ \phi(h)\text{,}\)</span> as required.</div>
+</div></article><span class="incontext"><a href="section-10.html#commentary-76" class="internal">in-context</a></span>
 </body>
 </html>

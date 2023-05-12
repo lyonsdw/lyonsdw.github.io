@@ -11,8 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.8.</span></h4>
-<div class="para">This result is "obvious", so the exercise is about how to say it nicely. Here's one approach: Given <span class="process-math">\(\pi\)</span> in <span class="process-math">\(S_n\text{,}\)</span> define a digraph <span class="process-math">\(G\)</span> with vertex set <span class="process-math">\(\{1,2,\ldots,n\}\)</span> and where <span class="process-math">\((i,j)\)</span> is an edge if and only if <span class="process-math">\(\pi(i)=j\text{.}\)</span> Then the disjoint cycle factors of <span class="process-math">\(\pi\)</span> are the connected components of <span class="process-math">\(G\text{.}\)</span> Another proof is by induction. The statement is obviously true for <span class="process-math">\(S_1\text{.}\)</span> Now suppose the statement holds for <span class="process-math">\(S_k\)</span> for <span class="process-math">\(k\lt n\text{,}\)</span> and let <span class="process-math">\(\pi\in
-S_n\text{.}\)</span> Let <span class="process-math">\((1,\pi(1),\pi^2(1), \ldots, \pi^{j-1}(1))\)</span> be the <span class="process-math">\(j\)</span>-cycle that starts with 1. Now apply the inductive hypothesis to <span class="process-math">\(S_{n-j}\)</span> (with suitable relabelings of indices).</div></article><span class="incontext"><a href="groupdefsection.html#commentary-43" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.2.2.7.</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">The cyclic permutations of <span class="process-math">\(S_3\)</span> are the following. (Every element of <span class="process-math">\(S_3\)</span> is cyclic.<div class="displaymath process-math">
+\begin{equation*}
+e,(12),(13),(23),(123),(132)
+\end{equation*}
+</div>Their inverses (in order) are the following.<div class="displaymath process-math">
+\begin{equation*}
+e,(12),(13),(23),(132),(123)
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">The cyclic permutations of <span class="process-math">\(S_4\)</span> are the following.<div class="displaymath process-math">
+\begin{equation*}
+e,(12),(13),(14),(23),(24),(34),
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(123),(132),(124),(142),(134),(143),(234),(243),
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1234),(1432),(1324),(1423),(1243),(1342) 
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><span class="incontext"><a href="groupdefsection.html#commentary-43" class="internal">in-context</a></span>
 </body>
 </html>

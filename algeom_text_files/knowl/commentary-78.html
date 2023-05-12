@@ -11,41 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.6.</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Apply <a href="" class="xref" data-knowl="./knowl/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></li>
-<li><div class="para">Apply <a href="" class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.2: Construction of functions on sets of equivalence classes">Fact 1.4.2</a> (check that the action of <span class="process-math">\(g\)</span> is constant on projective equivalence classes of vectors).</div></li>
-<li><div class="para">Let <span class="process-math">\(\phi\colon GL(V)\to \Perm(\Proj(V))\)</span> be the action defined by Equation <a href="" class="xref" data-knowl="./knowl/glnprojaction.html" title="Equation 2.5.1">(2.5.1)</a>. It is easy to check that <span class="process-math">\(K\subseteq \ker(\phi)\text{.}\)</span> Containment in the other direction requires a short linear algebra argument. Suppose <span class="process-math">\(g\in
-\ker(\phi)\text{.}\)</span> This means that for every <span class="process-math">\(v\in V\text{,}\)</span> there is a nonzero scalar <span class="process-math">\(\lambda_v\)</span> such that <span class="process-math">\(gv=\lambda_v
-v\)</span> (that is, every vector in <span class="process-math">\(V\)</span> is an eigenvector of the operator <span class="process-math">\(g\)</span>). If <span class="process-math">\(\dim(V)=1\text{,}\)</span> we are done. If <span class="process-math">\(\dim(V)\gt 1\text{,}\)</span> choose independent vectors <span class="process-math">\(v,w\in V\text{.}\)</span> We have <span class="process-math">\(\lambda_{v+w}(v+w)=g(v+w)=\lambda_v v+\lambda_w
-w\text{.}\)</span> Because <span class="process-math">\(v,w\)</span> are independent, it follows that <span class="process-math">\(\lambda_v=\lambda_w=\lambda_{v+w}\text{.}\)</span> Thus it must be that there is a single <span class="process-math">\(\lambda\in \F^\ast\)</span> such that <span class="process-math">\(gv=\lambda v\)</span> for all <span class="process-math">\(v\in V\text{,}\)</span> that is, <span class="process-math">\(g\)</span> is an element of <span class="process-math">\(K\text{.}\)</span>
-</div></li>
-<li><div class="para">Apply the First Isomorphism Theorem (<a href="" class="xref" data-knowl="./knowl/firstisothm.html" title="Corollary 2.4.7: (First Isomorphism Theorem)">Corollary 2.4.7</a>) to <span class="process-math">\(\phi\colon GL(V)\to \Perm(\Proj(V))\)</span> to obtain<div class="displaymath process-math" data-contains-math-knowls="./knowl/firstisothm.html">
-\begin{equation*}
-GL(V)/K \approx \phi(G) \stackrel{\text{inclusion}}{\longrightarrow} \Perm(\Proj(V)).
-\end{equation*}
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.5.3.5.</span></h4>
+<div class="para">Let <span class="process-math">\(x_0\in X\)</span> and consider the function <span class="process-math">\(f_{x_0}\colon G\to X\)</span> given by <span class="process-math">\(f_{x_0}(g)= gx_0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.5: Construction of equivalence relations and partitions from functions">Fact 1.4.5</a> to <span class="process-math">\(f_{x_0}\text{,}\)</span> we have <span class="process-math">\(G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)\text{,}\)</span> and <span class="process-math">\(f_{x_0}(G)=\Orb(x_0)\text{.}\)</span>
 </div>
-</div></li>
-<li><div class="para">Given <span class="process-math">\(\alpha,\beta\)</span> in <span class="process-math">\(\F^\ast\)</span> and <span class="process-math">\(T\)</span> in <span class="process-math">\(GL(V)\text{,}\)</span> the fact that <span class="process-math">\((\alpha \beta)T=\alpha(\beta
-T)\)</span> verifies that the map <span class="process-math">\(\F^\ast \to \Perm(GL(V))\)</span> given by <span class="process-math">\(\alpha\to [T\to \alpha T]\)</span> is a homomorphism. The equivalence relation that corresponds to this action is given by <span class="process-math">\(T\sim_{\F^\ast} S\)</span> if and only if <span class="process-math">\(S=\alpha T\)</span> for some <span class="process-math">\(\alpha\in \F^\ast\text{.}\)</span> Because <span class="process-math">\(S=\alpha T\)</span> if and only if <span class="process-math">\(S=(\alpha \Id)T\text{,}\)</span> the equivalence classes that define <span class="process-math">\(PGL(V)\)</span> in the previous part of this problem are the same as the equivalence classes <span class="process-math">\(GL(V)/\F^\ast\text{.}\)</span>
-</div></li>
-<li><div class="para">Factor the given map as <span class="process-math">\(\Proj(\C^2)\to \extC\to S^2\)</span> given by<div class="displaymath process-math">
-\begin{equation*}
-[(\alpha,\beta)] \to \alpha/\beta \to s^{-1}(\alpha/\beta).
-\end{equation*}
-</div>Let <span class="process-math">\(\mu\)</span> denote the map <span class="process-math">\([(\alpha,\beta)] \to \alpha/\beta \text{.}\)</span> That <span class="process-math">\(\mu\)</span> is well-defined follows from the observation that <span class="process-math">\((k\alpha)/(k\beta)=\alpha/\beta\)</span> for all <span class="process-math">\(k\in
-\F^\ast\text{.}\)</span> To see that <span class="process-math">\(\mu\)</span> is bijective, we will exhibit an inverse map. Let <span class="process-math">\(\nu\colon \extC\to
-\Proj(\C^2)\)</span> be given by <span class="process-math">\(\gamma \to [(\gamma,1)]\)</span> for <span class="process-math">\(\gamma \in \C\)</span> and <span class="process-math">\(\infty \to [(1,0)]\text{.}\)</span> To check that <span class="process-math">\(\nu\circ\mu=\Id\text{,}\)</span> for <span class="process-math">\(\beta\neq 0\text{,}\)</span> we have<div class="displaymath process-math">
-\begin{equation*}
-(\nu\circ \mu)([(\alpha,\beta)])=\nu(\alpha/\beta) =
-[(\alpha/\beta,1)]=[(\alpha,\beta)]
-\end{equation*}
-</div>and for <span class="process-math">\(\beta=0\text{,}\)</span> we have<div class="displaymath process-math">
-\begin{equation*}
-(\nu\circ \mu)([(\alpha,0)])=\nu(\infty) =
-[(1,0)]=[(\alpha,0)].
-\end{equation*}
-</div>Reading the two displayed equations from right to left establishes that <span class="process-math">\(\mu\circ \nu=\Id\text{.}\)</span> We conclude that <span class="process-math">\(\nu=\mu^{-1}\text{.}\)</span> Using the fact that stereographic projection <span class="process-math">\(s\)</span> is bijective, we have <span class="process-math">\(s^{-1}\circ \mu\)</span> is bijective, as desired.</div></li>
-</ol></div></article><span class="incontext"><a href="section-10.html#commentary-78" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Alternatively, one can check that the given map is well-defined, one-to-one, and onto. Let <span class="process-math">\(\pi\)</span> denote the map <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para">(<span class="process-math">\(\pi\)</span> is well-defined) Suppose <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>, we have <span class="process-math">\(g^{-1}h\in
+\Stab(x)\text{.}\)</span> Thus we have <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(gx=hx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
+<li><div class="para">(<span class="process-math">\(\pi\)</span> is one-to-one) Suppose <span class="process-math">\(\pi(g\Stab(x))=gx=hx=\pi(h\Stab(x))\text{.}\)</span> Then <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(g^{-1}h\in \Stab(x)\text{,}\)</span> so <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is one-to-one.</div></li>
+<li><div class="para">(<span class="process-math">\(\pi\)</span> is onto) Given <span class="process-math">\(gx\in \Orb(x)\text{,}\)</span> we have <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
+</ul>
+</div></article><span class="incontext"><a href="section-10.html#commentary-78" class="internal">in-context</a></span>
 </body>
 </html>

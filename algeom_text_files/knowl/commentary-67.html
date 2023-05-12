@@ -11,16 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.12.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.11.</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(K\)</span> be the kernel of <span class="process-math">\(\phi\colon G\to
-H\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and let <span class="process-math">\(k\in K\text{.}\)</span> Then we have</div>
-<div class="displaymath process-math">
+<div class="para">For reflexivity, notice that <span class="process-math">\(\Id\colon G\to G\)</span> is an isomorphism for any group <span class="process-math">\(G\text{.}\)</span> For symmetry, suppose <span class="process-math">\(\phi\colon G\to H\)</span> is an isomorphism. By <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a>, <span class="process-math">\(\phi^{-1}\colon
+H\to G\)</span> is also an isomorphism. For transitivity, suppose <span class="process-math">\(\phi\colon G\to H\text{,}\)</span> <span class="process-math">\(\psi\colon H\to K\)</span> are isomorphisms. For <span class="process-math">\(g,g'\in G\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoinvisisoexer.html">
 \begin{equation*}
-\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g)^{-1}=e_H
+(\psi\circ \phi)(gg') =
+\psi(\phi(gg'))=\psi(\phi(g)\phi(g')=\psi(\phi(g))\psi(\phi(g'))=(\psi\circ
+\phi)(g)(\psi\circ \phi)(g')
 \end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(gkg^{-1}\in K\text{.}\)</span>
+<div class="para">so <span class="process-math">\(\psi\)</span> is a homomorphism. Since <span class="process-math">\(\phi,\psi\)</span> are bijective, so is <span class="process-math">\(\psi\circ \phi\text{.}\)</span> Thus we have <span class="process-math">\(G\approx
+K\)</span> by the isomorphism <span class="process-math">\(\psi\circ \phi\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="section-9.html#commentary-67" class="internal">in-context</a></span>
 </body>

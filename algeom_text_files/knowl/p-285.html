@@ -13,15 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(K\)</span> be the kernel of <span class="process-math">\(\phi\colon G\to
-H\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and let <span class="process-math">\(k\in K\text{.}\)</span> Then we have</div>
-<div class="displaymath process-math">
+<div class="para">Suppose that <span class="process-math">\(K\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span> We just need to show that the multiplication given by Equation <a href="" class="xref" data-knowl="./knowl/multkernelcosets.html" title="Equation 2.4.1">(2.4.1)</a> is well-defined. Suppose that <span class="process-math">\(xK=x'K\)</span> and <span class="process-math">\(yK=y'K\text{.}\)</span> First write <span class="process-math">\(x'=xk_1\)</span> and <span class="process-math">\(y'=yk_2\)</span> for some <span class="process-math">\(k_1,k_2\in K\text{.}\)</span> Finally, let <span class="process-math">\(k_4=y^{-1}k_1y\text{,}\)</span> and note that <span class="process-math">\(k_4\in K\)</span> by the assumption of normality. Now let <span class="process-math">\(x'y'k_3\)</span> be an element of <span class="process-math">\(x'y'K\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/multkernelcosets.html">
 \begin{equation*}
-\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g)^{-1}=e_H
+x'y'k_3=xk_1yk_2k_3=x(yk_4y^{-1})yk_2k_3=(xy)k_4(y^{-1}y)k_2k_3=xy(k_4k_2k_3)
 \end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(gkg^{-1}\in K\text{.}\)</span>
-</div>
+<div class="para">which is in <span class="process-math">\(xyK\text{,}\)</span> as required. This proves <span class="process-math">\(x'y'K\subseteq
+xyK\text{.}\)</span> A similar argument shows containment in the other direction.</div>
 </div>
 <span class="incontext"><a href="section-9.html#p-285" class="internal">in-context</a></span>
 </body>

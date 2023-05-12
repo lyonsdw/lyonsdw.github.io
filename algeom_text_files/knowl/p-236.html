@@ -11,8 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For part (b), let <span class="process-math">\(aH,bH\)</span> be cosets. Show that the function <span class="process-math">\(aH\to bH\)</span> given by <span class="process-math">\(x\to ba^{-1}x\)</span> is a bijection.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Proof of <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>. For reflexivity of the relation <span class="process-math">\(\sim_H\text{,}\)</span> we have <span class="process-math">\(x^{-1}x=e\in H\text{,}\)</span> so <span class="process-math">\(x\sim_H x\text{.}\)</span> For symmetry, suppose <span class="process-math">\(x\sim_H y\)</span> so that  <span class="process-math">\(x^{-1}y\in
+H\text{.}\)</span> Since <span class="process-math">\(H\)</span> is closed under taking inverses, we have <span class="process-math">\((x^{-1}y)^{-1}=y^{-1}x\in
+H\text{,}\)</span> so  <span class="process-math">\(y\sim_H x\text{.}\)</span> For transitivity, suppose <span class="process-math">\(x\sim H y\)</span> and <span class="process-math">\(y\sim_H
+z\text{.}\)</span> Then <span class="process-math">\(x^{-1}y\)</span> and <span class="process-math">\(y^{-1}z\)</span> are in <span class="process-math">\(H\text{.}\)</span> Since <span class="process-math">\(H\)</span> is closed under the group operation, we have <span class="process-math">\(x^{-1}yy^{-1}z=x^{-1}z\in H\text{,}\)</span> so <span class="process-math">\(x\sim_H z\text{.}\)</span> Next, we claim that <span class="process-math">\([x]=xH\text{.}\)</span> If <span class="process-math">\(x\sim_H y\text{,}\)</span> then <span class="process-math">\(x^{-1}y=h\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> so <span class="process-math">\(y=xh\in xH\text{.}\)</span> This shows <span class="process-math">\([x]\subseteq xH\text{.}\)</span> Conversely, if <span class="process-math">\(y\in xH\text{,}\)</span> then <span class="process-math">\(y=xh\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> so <span class="process-math">\(x^{-1}y=h\in H\text{.}\)</span> This shows <span class="process-math">\(xH\subseteq [x]\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(aH,bH\)</span> be cosets, and consider the function <span class="process-math">\(aH\to bH\)</span> given by <span class="process-math">\(x\to ba^{-1}x\text{.}\)</span> It is clear that the function <span class="process-math">\(bH\to aH\)</span> given by <span class="process-math">\(y\to ab^{-1}y\)</span> is the inverse, so the cosets <span class="process-math">\(aH,bH\)</span> are in bijective correspondence, and therefore have the same size.</div></li>
+<li><div class="para">By the previous parts, all the cosets of <span class="process-math">\(H\)</span> have the same size, and also form a partition. So the size of <span class="process-math">\(G\)</span> is the size of <span class="process-math">\(H\)</span> times the number of cosets of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="subgroups_cosets_section.html#p-236" class="internal">in-context</a></span>
 </body>
 </html>

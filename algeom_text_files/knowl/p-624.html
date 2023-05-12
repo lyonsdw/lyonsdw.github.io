@@ -11,60 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/coshhyperbolicdistidentity.html" title="Equation 3.6.6">(3.6.6)</a>, for <span class="process-math">\(0\lt
-u\lt 1\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right)
-\amp = \frac{e^{\ln(\text{stuff})} +
-e^{-\ln(\text{stuff})}}{2} \;\; \left(\text{stuff }=\frac{1+u}{1-u}\right)\\
-\amp = \frac{\frac{1+u}{1-u} +
-\frac{1-u}{1+u}}{2}\\
-\amp = \frac{(1+u)^2 + (1-u)^2}{2(1-a^2)}\\
-\amp = \frac{2(1+u^2)}{2(1-a^2)}\\
-\amp = \frac{1+u^2}{1-u^2}.
-\end{align*}
-</div>For <a href="" class="xref" data-knowl="./knowl/cosellipticistidentity.html" title="Equation 3.6.7">(3.6.7)</a>, using the double angle identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
-\begin{equation*}
-\cos (2\theta) = \cos^2\theta -\sin^2 \theta
-\end{equation*}
-</div>and the identities <span class="process-math">\(\cos(\arctan u) =
-\frac{1}{\sqrt{1+u^2}}\text{,}\)</span> <span class="process-math">\(\sin(\arctan u) =
-\frac{u}{\sqrt{1-u^2}}\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cos(2\arctan u) \amp = \cos^2(\arctan u)
--\sin^2(\arctan u)\\
-\amp = \frac{1}{1+u^2} - \frac{u^2}{1+u^2}\\
-\amp =  \frac{1-u^2}{1+u^2}.
-\end{align*}
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">To obtain an explicit formula for elements of the elliptic group, we begin with a necessary condition. Let <span class="process-math">\(R=s^{-1}\circ
+T\circ s\)</span> be the rotation of <span class="process-math">\(S^2\)</span> that lifts <span class="process-math">\(T\)</span> via stereographic projection. If <span class="process-math">\(P,Q\)</span> are a pair of endpoints of a diameter of <span class="process-math">\(S^2\text{,}\)</span> then <span class="process-math">\(R(P),R(Q)\)</span> must also be a pair of endpoints of a diameter. <a href="" class="xref" data-knowl="./knowl/stereoprojdiamends.html" title="Exercise 1.3.3.7: Projections of endpoints of diameters">Exercise 1.3.3.7</a> establishes the condition that two complex numbers <span class="process-math">\(p,q\)</span> are stereographic projections of endpoints of a diameter if and only if <span class="process-math">\(pq^\ast = -1\text{.}\)</span> Thus we have the following necessary condition for <span class="process-math">\(T\text{.}\)</span>
 </div>
-</div></li>
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/hyperbolicpythagthm.html" title="Equation 3.6.8">(3.6.8)</a>, assume the set up in the suggestion. Using <a href="" class="xref" data-knowl="./knowl/coshhyperbolicdistidentity.html" title="Equation 3.6.6">(3.6.6)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicpythagthm.html ./knowl/coshhyperbolicdistidentity.html">
-\begin{align*}
-\cosh(c) \amp=  \frac{1+u^2}{1-u^2} \\
-\amp = \frac{1+\left|\frac{B-A}{1-A^\ast B}\right|^2}{1-\left|\frac{B-A}{1-A^\ast B}\right|^2}\\
-\amp = \frac{1+\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}{1-\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}\\
-\amp = \frac{1+|A|^2 + |B|^2 + |A|^2|B|^2}{1-|A|^2 -
-|B|^2 + |A|^2|B|^2}\\
-\amp = \frac{(1+|A|^2)(1 + |B|^2)}{(1-|A|^2)(1- |B|^2)}\\
-\amp =  \cosh(a)\cosh(b).
-\end{align*}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/stereoprojdiamends.html ./knowl/elliptictranssu2form.html">
+\begin{equation}
+pq^\ast = -1 \;\;\text{ implies }\;\; Tp(Tq)^\ast =
+-1\tag{3.6.1}
+\end{equation}
 </div>
-</div></li>
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/ellipticpythagthm.html" title="Equation 3.6.9">(3.6.9)</a>, assume the set up in the suggestion. Using <a href="" class="xref" data-knowl="./knowl/cosellipticistidentity.html" title="Equation 3.6.7">(3.6.7)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticpythagthm.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cos(c) \amp=  \frac{1-u^2}{1+u^2} \\
-\amp = \frac{1-\left|\frac{B-A}{1+A^\ast B}\right|^2}{1+\left|\frac{B-A}{1+A^\ast B}\right|^2}\\
-\amp = \frac{1-\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}{1+\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}\\
-\amp = \frac{1-|A|^2 - |B|^2 + |A|^2|B|^2}{1+|A|^2 +
-|B|^2 + |A|^2|B|^2}\\
-\amp = \frac{(1-|A|^2)(1 - |B|^2)}{(1+|A|^2)(1+ |B|^2)}\\
-\amp =  \cos(a)\cos(b).
-\end{align*}
+<div class="para">Now suppose that <span class="process-math">\(Tz=\frac{az+b}{cz+d}\)</span> with <span class="process-math">\(ad-bc=1\text{.}\)</span> Solving the equation <span class="process-math">\(Tp =
+\frac{-1}{(T(\frac{-1}{p^\ast}))^\ast}\)</span> leads to <span class="process-math">\(c=-b^\ast\)</span> and <span class="process-math">\(d=a^\ast\text{.}\)</span> Thus we conclude that <span class="process-math">\(T\)</span> has the following form.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/stereoprojdiamends.html ./knowl/elliptictranssu2form.html">
+\begin{equation}
+Tz=\frac{az+b}{-b^\ast z+a^\ast},\;\;|a|^2+|b|^2=1\tag{3.6.2}
+\end{equation}
 </div>
-</div></li>
-</ol></div>
+<div class="para">Carry out the computation to derive <a href="" class="xref" data-knowl="./knowl/elliptictranssu2form.html" title="Equation 3.6.2">(3.6.2)</a>. Explain why there is no loss of generality by assuming <span class="process-math">\(ad-bc=1\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-624" class="internal">in-context</a></span>
 </body>
 </html>

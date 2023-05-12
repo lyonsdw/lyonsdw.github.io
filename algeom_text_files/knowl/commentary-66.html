@@ -11,20 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.11.</span></h4>
-<div class="para logical">
-<div class="para">For reflexivity, notice that <span class="process-math">\(\Id\colon G\to G\)</span> is an isomorphism for any group <span class="process-math">\(G\text{.}\)</span> For symmetry, suppose <span class="process-math">\(\phi\colon G\to H\)</span> is an isomorphism. By <a href="" class="xref" data-knowl="./knowl/isoinvisisoexer.html" title="Exercise 2.4.2.4">Exercise 2.4.2.4</a>, <span class="process-math">\(\phi^{-1}\colon
-H\to G\)</span> is also an isomorphism. For transitivity, suppose <span class="process-math">\(\phi\colon G\to H\text{,}\)</span> <span class="process-math">\(\psi\colon H\to K\)</span> are isomorphisms. For <span class="process-math">\(g,g'\in G\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/isoinvisisoexer.html">
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 2.4.2.10.</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para logical">
+<div class="para">Since we've already shown that conjugation is a homomorphism (see <a href="" class="xref" data-knowl="./knowl/homismdefegexer.html" title="Checkpoint 2.4.2">Checkpoint 2.4.2</a>), it is enough to show that <span class="process-math">\(C_a\)</span> is bijective. We claim that  <span class="process-math">\(C_{a^{-1}}=(C_a)^{-1}\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismdefegexer.html">
 \begin{equation*}
-(\psi\circ \phi)(gg') =
-\psi(\phi(gg'))=\psi(\phi(g)\phi(g')=\psi(\phi(g))\psi(\phi(g'))=(\psi\circ
-\phi)(g)(\psi\circ \phi)(g')
+C_{a^{-1}}(C_a(g))=a^{-1}(aga^{-1})(a^{-1})^{-1} = (aa^{-1})g(a^{-1}a)=g
 \end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(\psi\)</span> is a homomorphism. Since <span class="process-math">\(\phi,\psi\)</span> are bijective, so is <span class="process-math">\(\psi\circ \phi\text{.}\)</span> Thus we have <span class="process-math">\(G\approx
-K\)</span> by the isomorphism <span class="process-math">\(\psi\circ \phi\text{.}\)</span>
+<div class="para">so <span class="process-math">\(C_{a^{-1}}\circ C_a=\Id\text{.}\)</span> Similarly, we have <span class="process-math">\(C_a\circ
+C_{a^{-1}}=\Id\text{,}\)</span> so we conclude that <span class="process-math">\(C_{a^{-1}}=(C_a)^{-1}\text{.}\)</span>
 </div>
-</div></article><span class="incontext"><a href="section-9.html#commentary-66" class="internal">in-context</a></span>
+</div></li>
+<li><div class="para">For reflexivity, we have <span class="process-math">\(C_{e}(x) = exe^{-1}=x\text{,}\)</span> so <span class="process-math">\(x\sim
+x\)</span> for all <span class="process-math">\(x\text{.}\)</span> For symmetry, if <span class="process-math">\(y=C_a(x)=axa^{-1}\text{,}\)</span> then <span class="process-math">\(C_{a^{-1}}(y)=a^{-1}ya=x\text{,}\)</span> so <span class="process-math">\(x\sim y\)</span> implies <span class="process-math">\(y\sim x\text{.}\)</span> For transitivity, if <span class="process-math">\(C_a(x)=y\)</span> and <span class="process-math">\(C_b(y)=z\text{,}\)</span> then <span class="process-math">\(C_{ba}(x)=baxa^{-1}b^{-1}=byb^{-1}=z\text{,}\)</span> so if <span class="process-math">\(x\sim
+y\)</span> and <span class="process-math">\(y\sim z\text{,}\)</span> then <span class="process-math">\(x\sim z\text{.}\)</span>
+</div></li>
+</ol></div></article><span class="incontext"><a href="section-9.html#commentary-66" class="internal">in-context</a></span>
 </body>
 </html>

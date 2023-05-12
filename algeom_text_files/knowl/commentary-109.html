@@ -11,18 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.7.7.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.8.3.</span></h4>
 <div class="para logical"><ol class="lower-alpha">
-<li><div class="para">The fixed points of <span class="process-math">\(T\)</span> are <span class="process-math">\(\pm 1\text{,}\)</span> so the normal form is<div class="displaymath process-math">
-\begin{equation*}
-\frac{Tz-1}{Tz+1}=\alpha\frac{z-1}{z+1}.
-\end{equation*}
-</div>Putting <span class="process-math">\(z=2\)</span> and solving for <span class="process-math">\(\alpha\text{,}\)</span> we get <span class="process-math">\(\alpha=-1\text{.}\)</span> The Steiner circles of the first kind are circles through <span class="process-math">\(\pm 1\)</span> (and the real axis), and Steiner circles of the second kind are orthogonal to the first family (including the imaginary axis).</div></li>
-<li><div class="para">Solving <span class="process-math">\(Tz=z\text{,}\)</span> we get <span class="process-math">\((z-1)^2=0\text{,}\)</span> so <span class="process-math">\(T\)</span> has a single (degenerate) fixed point at <span class="process-math">\(1\text{.}\)</span> The normal form is<div class="displaymath process-math">
-\begin{equation*}
-\frac{1}{Tz-1} = \frac{1}{z-1}+\beta.
-\end{equation*}
-</div>Putting <span class="process-math">\(z=0\)</span> and solving for <span class="process-math">\(\beta\text{,}\)</span> we get <span class="process-math">\(\beta=1/2\text{.}\)</span> It is clear that <span class="process-math">\(T\)</span> takes the real axis to itself, so degenerate Steiner circles are tangent to the real axis at <span class="process-math">\(1\text{.}\)</span>
+<li><div class="para">Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+\amp \leftrightarrow
+\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
+[1\to a, 0\to b,\infty\to c]
+\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\end{align*}
+</div>
+</div></li>
+<li><div class="para">Put together the pieces from the previous part.<div class="displaymath process-math">
+\begin{align*}
+[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+\frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
+\amp \leftrightarrow
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+\end{align*}
+</div>
 </div></li>
 </ol></div></article><span class="incontext"><a href="section-13.html#commentary-109" class="internal">in-context</a></span>
 </body>

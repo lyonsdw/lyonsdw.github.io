@@ -11,24 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.6.1<span class="period">.</span></span><span class="space"> </span>Axis and angle of rotation for quaternion and Möbius rotation constructions</figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b3 r1 l1 t1 lines"><dfn class="terminology"><span class="process-math">\(R_{v,\theta}\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">axis of rotation <span class="process-math">\(v\)</span></dfn></td>
-<td class="c m b3 r1 l0 t1 lines"><dfn class="terminology">angle of rotation <span class="process-math">\(\theta\)</span></dfn></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{r_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(a),\re(b),\im(b))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(R_{T_{a,b}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\)</span></td>
-<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\arccos(\re(a))\)</span></td>
-</tr>
-</table></div></figure></div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y)\to (x,-y)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(\twotwo{1}{0}{0}{-1}\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but not in <span class="process-math">\(\E\text{.}\)</span> To justify the "not in <span class="process-math">\(\E\)</span>" claim, observe that generating elements of <span class="process-math">\(\E\)</span> (rotations and translations) preserve oriented angles, so all elements of <span class="process-math">\(\E\)</span> preserve oriented angles. But <span class="process-math">\((x,y)\to
+(x,-y)\)</span> takes the oriented angle <span class="process-math">\(\angle 1,0,i\text{,}\)</span> which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle 1,0,-i\text{,}\)</span> which measures <span class="process-math">\(-\pi/2\)</span> radians.</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-617" class="internal">in-context</a></span>
 </body>
 </html>

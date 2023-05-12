@@ -11,9 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For the "only if" direction, apply <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a> to the cline <span class="process-math">\(\extR\text{,}\)</span> and conclude that <span class="process-math">\(T\)</span> must send the real line to itself. Set <span class="process-math">\(z_1,z_2,z_3\)</span> to be the preimages under <span class="process-math">\(T\)</span> of <span class="process-math">\(0,1,\infty\text{,}\)</span> and then use <a href="" class="xref" data-knowl="./knowl/mob10inftyform.html" title="Equation 3.2.3">(3.2.3)</a>. For the "if" direction, suppose <span class="process-math">\(T\)</span> has the given form. Let <span class="process-math">\(y\gt 0\)</span> and show that <span class="process-math">\(\im(T(x+iy))\gt 0\text{.}\)</span>
-</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">We have<div class="displaymath process-math">
+\begin{equation*}
+\left|\frac{z-z_0}{1-z_0^\ast z}\right|^2 =
+\frac{(z-z_0)(z^\ast-z_0^\ast)}{(1-z_0^\ast z)(1-z_0z^\ast)} =
+\frac{|z|^2+|z_0|^2-z_0z^\ast -z_0^\ast z}{1+|z_0|^2-z_0z^\ast
+-z_0^\ast z} = 1
+\end{equation*}
+</div>(because <span class="process-math">\(|z|=1\)</span> by assumption). It follows that <span class="process-math">\(|\alpha|=1\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(|z_0|\in \D\)</span> and <span class="process-math">\(t\in \R\)</span> be given and let <span class="process-math">\(a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
+b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}\text{.}\)</span> We have the following.<div class="displaymath process-math">
+\begin{align*}
+|a|^2-|b|^2 \amp= \frac{1 - |z_0|^2}{1-|z_0|^2}
+=1\\
+\frac{az+b}{b^\ast  z+a^\ast} \amp= \frac{e^{it/2}z-e^{it/2}z_0}{-e^{-it/2}z_0^\ast  z+e^{-it/2}}
+= e^{it}\frac{z-z_0}{1-z_0^\ast z}
+\end{align*}
+</div>Conversely, let <span class="process-math">\(a,b\in \C\)</span> be given with <span class="process-math">\(|a|^2-|b|^2=1\)</span> and let <span class="process-math">\(t=2\arg a,
+z_0=-\frac{b}{a}\text{.}\)</span> The assumption <span class="process-math">\(|a|^2-|b|^2=1\)</span> implies that <span class="process-math">\(|a|\gt |b|\text{,}\)</span> so <span class="process-math">\(|z_0|=|b|/|a|\lt 1\text{,}\)</span> as required. We have<div class="displaymath process-math">
+\begin{align*}
+\frac{az+b}{b^\ast  z+a^\ast} \amp =
+\frac{az - az_0}{-a^\ast z_0^\ast z + a^\ast}\\
+\amp = \frac{a}{a^\ast}\frac{z-z_0}{1-z_0^\ast z}\\
+\amp  = e^{it}\frac{z-z_0}{1-z_0^\ast z},
+\end{align*}
+</div>as desired.</div></li>
+</ol></div>
 <span class="incontext"><a href="section-14.html#p-510" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para logical">
+<div class="para logical">
 <div class="para">These are both 3-4-5 triangles. One way to map the first triangle to the second is the following sequence of transformations.</div>
 <ol class="lower-roman">
 <li><div class="para">shift left 6 units: <span class="process-math">\((x,y)\to (x-6,y)\)</span>
@@ -29,33 +28,7 @@
 (y,x-7)\text{.}\)</span> This is the Euclidean transformation <span class="process-math">\(v\to
 Rv + b\)</span> with <span class="process-math">\(R=\twotwo{0}{1}{1}{0}\)</span> and <span class="process-math">\(b=(0,-7)\text{.}\)</span>
 </div>
-</div></li>
-<li><div class="para logical">
-<div class="para">The input/output pairs <span class="process-math">\((1,0,0)\to
-(0,1,0)\text{,}\)</span> <span class="process-math">\((0,0,1)\to (1,0,0)\)</span> determine the first and third columns of an orthogonal matrix, namely <span class="process-math">\((0,1,0)^T,(1,0,0)^T\text{.}\)</span> The middle column must then be <span class="process-math">\((0,0,\pm 1)^T\text{.}\)</span> The matrix with middle column <span class="process-math">\((0,0, 1)^T\)</span> has determinant 1, so it is the rotation. You can find the axis of rotation by finding an eigenvector. It would then take more work to find the angle of rotation. Here is a way to use quaternions to determine the axis and angle. One possible composition of rotations is <span class="process-math">\(R_{Y,\pi/2}\)</span> followed by <span class="process-math">\(R_{X,\pi/2}\text{.}\)</span> These rotations are realized by quaternions <span class="process-math">\(\frac{1}{\sqrt{2}}(1+j)\text{,}\)</span> <span class="process-math">\(\frac{1}{\sqrt{2}}(1+i)\text{,}\)</span> respectively. So the rotation we want is given by the quaternion</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/quatrotprop.html">
-\begin{equation*}
-\frac{1}{\sqrt{2}}(1+i)\frac{1}{\sqrt{2}}(1+j)
-=\frac{1}{2}+\frac{\sqrt{3}}{2}\left(\frac{i+j+k}{\sqrt{3}}\right)=\cos
-\frac{\pi}{3} + \sin \frac{\pi}{3}u
-\end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(u=\frac{1}{\sqrt{3}}(i+j+k)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>, this is the rotation about <span class="process-math">\((1,1,1)\)</span> by <span class="process-math">\(2\pi/3\)</span> radians.</div>
-</div></li>
-<li><div class="para">We need a two-by-two invertible matrix <span class="process-math">\(T\)</span> such that <span class="process-math">\(T(1,0)= \alpha(c,1)\text{,}\)</span> <span class="process-math">\(T(0,1)=\beta(b,1)\)</span> and <span class="process-math">\(T(1,1)= \gamma(a,1)\)</span> for some <span class="process-math">\(\alpha,\beta,\gamma\text{.}\)</span> The first two requirements are met by <span class="process-math">\(T=\twotwo{\alpha c}{\beta b}{\alpha}{\beta}\text{.}\)</span> Solve the system <span class="process-math">\(T(1,1)=\gamma(a,1)\)</span> leads to <span class="process-math">\((\alpha,\beta)\propto (a-b,c-a)\text{.}\)</span> This leads to the projective transformation given by the matrix <span class="process-math">\(\twotwo{(a-b)c}{(c-a)b}{a-b}{c-a}\text{.}\)</span>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(T_1,T_2\)</span> be Euclidean transformations given by <span class="process-math">\(v\to R_1v+b_1\)</span> and <span class="process-math">\(v\to R_2v+b_2\text{,}\)</span> respectively. The composition<div class="displaymath process-math">
-\begin{equation*}
-T_2(T_1(v))=R_2(R_1v+b_1)+ b_2=R_2R_1v + (R_2b_1+b_2)
-\end{equation*}
-</div>is indeed a Euclidean transformation. The identity element has <span class="process-math">\(R=\Id\)</span> and <span class="process-math">\(b=(0,0)\text{.}\)</span> The inverse of <span class="process-math">\(v\to Rv+b\)</span> is given by <span class="process-math">\(v\to R^{-1}v - R^{-1}b\text{.}\)</span>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(T\)</span> be given by <span class="process-math">\(v\to Rv+b\text{.}\)</span> We have<div class="displaymath process-math">
-\begin{equation*}
-d(T(P),T(Q))= |(RP+b)-(RQ+b)|=|R(P-Q)|=|P-Q|=d(P,Q)
-\end{equation*}
-</div>(the penultimate equality holds because orthogonal transformations preserve vector norm).</div></li>
-</ol></div>
 <span class="incontext"><a href="geomdefsect.html#p-350" class="internal">in-context</a></span>
 </body>
 </html>

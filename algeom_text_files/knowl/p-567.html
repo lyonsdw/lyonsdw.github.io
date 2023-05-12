@@ -11,11 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In <span class="process-math">\(\extC\text{,}\)</span> any 2-gon is congruent to a set of the form <span class="process-math">\(R_{\alpha} :=\{z\in \C\colon
-0\leq \arg z \leq \alpha\}\cup \{\infty\}\)</span> for some <span class="process-math">\(\alpha\)</span> in the range <span class="process-math">\(0\leq \alpha\lt
-2\pi\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in <span class="process-math">\(\extC\)</span> to show that the area of <span class="process-math">\(R_{\alpha}\)</span> is <span class="process-math">\(2\alpha\text{.}\)</span> Verify that this is the right answer using a picture of <span class="process-math">\(S^2\text{.}\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in <span class="process-math">\(\extC\)</span> and <span class="process-math">\(S^2\text{.}\)</span></figcaption></figure>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{circumference } \amp = 2\int_0^{2\pi} \frac{\alpha}{1+\alpha^2}dt\\
+\amp = \frac{4\pi\alpha}{1+\alpha^2}.
+\end{align*}
+</div>
+<div class="para">In terms of <span class="process-math">\(r=d_{\extC}(0,\alpha)= 2\arctan \alpha\text{,}\)</span> we have <span class="process-math">\(\alpha = \tan \frac{r}{2}\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{circumference } = \frac{4\pi\alpha}{1+\alpha^2} =
+4\pi\frac{\tan \frac{r}{2}}{\sec^2 \frac{r}{2}}=
+4\pi\sin\frac{r}{2} \cos \frac{r}{2} = 2\pi \sin r.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="elliptic_geometry_section.html#p-567" class="internal">in-context</a></span>
 </body>

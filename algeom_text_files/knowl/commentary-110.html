@@ -11,18 +11,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.7.8.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.2.8.4 (proof of Proposition 3.2.17).</span></h4>
 <div class="para logical">
-<div class="para">We have</div>
+<div class="para">Starting with <span class="process-math">\(Tz=(Tz)^\ast\text{,}\)</span> we get</div>
 <div class="displaymath process-math">
-\begin{align*}
-S\amp \leftrightarrow \twotwo{0}{1}{1}{-p}\\
-S^{-1}\amp \leftrightarrow \twotwo{-p}{-1}{-1}{0}\sim \twotwo{p}{1}{1}{0}
-\end{align*}
+\begin{equation*}
+|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast.
+\end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(S^{-1}w=\frac{pw+1}{w}\text{,}\)</span> so <span class="process-math">\(S^{-1}\)</span> takes <span class="process-math">\(0,\beta,\infty\)</span> to <span class="process-math">\(\infty,\frac{p\beta+1}{\beta},p\text{.}\)</span> Thus, <span class="process-math">\(S^{-1}\)</span> transforms the line through <span class="process-math">\(0,\beta\)</span> in the <span class="process-math">\(w\)</span>-plane to the line through <span class="process-math">\(\frac{p\beta+1}{\beta},p\)</span> in the <span class="process-math">\(z\)</span>-plane. This degenerate Steiner line has a direction vector given by <span class="process-math">\(\frac{p\beta+1}{\beta}-p=\frac{p\beta+1-p\beta}{\beta}
-=\frac{1}{\beta} = \frac{\beta^\ast}{|\beta|^2}\propto
-\beta^\ast\text{,}\)</span> as claimed.</div>
+<div class="para">If <span class="process-math">\(ac^\ast -a^\ast c\neq
+0\text{,}\)</span> let <span class="process-math">\(\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
+c}\text{,}\)</span> then complete the square to get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
+|\alpha|^2.
+\end{equation*}
+</div>
+<div class="para">Manipulate the right hand side to <span class="process-math">\(\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2\text{.}\)</span> For the case <span class="process-math">\(ac^\ast -a^\ast c=0\text{,}\)</span> let <span class="process-math">\(\gamma=ad^\ast
+-b^\ast c\)</span> and  <span class="process-math">\(\delta=bd^\ast\text{.}\)</span> Then the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+d+bc^\ast) = b^\ast d-bd^\ast
+\end{equation*}
+</div>
+<div class="para">becomes <span class="process-math">\(\im(\gamma z+\delta)=0\text{,}\)</span> which is the equation for a line.</div>
 </div></article><span class="incontext"><a href="section-13.html#commentary-110" class="internal">in-context</a></span>
 </body>
 </html>

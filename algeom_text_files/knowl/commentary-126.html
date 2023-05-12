@@ -11,22 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.3.6.5 (proof of Proposition 3.3.23).</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.3.23.</span></h4>
 <div class="para logical">
-<div class="para">First we prove the "only if" direction. Suppose <span class="process-math">\(T\in
-\HU\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/transpreservesdiskprop.html" title="Proposition 3.3.2: Möbius transformations that map one side of a cline to itself">Proposition 3.3.2</a> to the cline <span class="process-math">\(\extR\text{,}\)</span> we conclude that <span class="process-math">\(T\)</span> must send the real line to itself. So the preimages <span class="process-math">\(z_1=T^{-1}(1),z_2=T^{-1}(0),z_3=T^{-1}(\infty)\)</span> must be real. Thus we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/transpreservesdiskprop.html">
-\begin{equation*}
-Tz=(z,z_1,z_2,z_3)=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_2-z_3}=\frac{az+b}{cz+d}
-\end{equation*}
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliccirclecircumexer.html">
+\begin{align*}
+\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
+\frac{4r\;dr\;d\theta}{(1-r^2)^2}\\
+\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
+\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)\\
+\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
+\right]d\theta\\
+\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
+d\theta\\
+\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.
+\end{align*}
 </div>
-<div class="para">for some real <span class="process-math">\(a,b,c,d\text{.}\)</span> We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/transpreservesdiskprop.html">
+<div class="para">As was the case for <a href="" class="xref" data-knowl="./knowl/hyperboliccirclecircumexer.html" title="Checkpoint 3.3.22">Checkpoint 3.3.22</a>, this solution is correct, but we want an expression in terms of the hyperbolic radius <span class="process-math">\(r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)\text{.}\)</span> Again, solve for <span class="process-math">\(\alpha\)</span> in terms of <span class="process-math">\(r\text{,}\)</span> then simplify. We get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperboliccirclecircumexer.html">
 \begin{equation*}
-Ti = \frac{ai+b}{ci+d}= \frac{ac+bd + i(ad-bc)}{c^2+d^2}
+\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).
 \end{equation*}
-</div>
-<div class="para">so <span class="process-math">\(ad-bc\)</span> must be positive because <span class="process-math">\(T(\U)=\U\text{.}\)</span> For the "if" direction, suppose <span class="process-math">\(Tz=\frac{az+b}{cz+d}\)</span> with <span class="process-math">\(a,b,c,d\)</span> real, and <span class="process-math">\(ad-bc\gt 0\text{.}\)</span> Let <span class="process-math">\(z=x+iy\)</span> with <span class="process-math">\(y\gt 0\text{.}\)</span> It is straightforward to check that the imaginary part of <span class="process-math">\(Tz\)</span> is <span class="process-math">\(\frac{y(ad-bc)}{(cx+d)^2 + c^2y^2}\gt 0\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="section-14.html#commentary-126" class="internal">in-context</a></span>
 </body>

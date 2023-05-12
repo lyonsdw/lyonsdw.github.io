@@ -11,7 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">First we consider the "if" direction. Suppose <span class="process-math">\(f\colon X\to Y\)</span> is constant on equivalence classes of the equivalence relation <span class="process-math">\(\sim\)</span> on <span class="process-math">\(X\text{.}\)</span> It is clear then that <span class="process-math">\(\overline{f}([x])=f(x)\)</span> is well-defined. For the "only if" direction, suppose that <span class="process-math">\(\overline{f}\colon X\to Y\)</span> given by <span class="process-math">\(\overline{f}([x])=f(x)\)</span> exists. Now if <span class="process-math">\(x\sim y\text{,}\)</span> we have <span class="process-math">\([x]=[y]\text{,}\)</span> so <span class="process-math">\(f(x)=\overline{f}([x])=\overline{f}([y])=f(y)\text{.}\)</span> It follows that <span class="process-math">\(f\)</span> is constant on equivalence classes.</div></article><span class="incontext"><a href="section-4.html#proof-2" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>Let <span class="process-math">\(z_1,z_2,z_3\)</span> be three points on <span class="process-math">\(C\text{,}\)</span> so that <span class="process-math">\(Sz_1,Sz_2,Sz_3\)</span> are three points on <span class="process-math">\(S(C)\text{.}\)</span> Let <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\)</span> and let <span class="process-math">\(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\)</span> By invariance of the cross ratio, we have<div class="displaymath process-math">
+\begin{equation*}
+(U\circ S)z=Tz\text{.}
+\end{equation*}
+</div>Thus we have<div class="displaymath process-math">
+\begin{align*}
+(Sz)^{\ast S(C)} \amp = (U^{-1}\circ \conj\circ
+U)(Sz) \;\; \text{(by definition)}\\
+\amp = (S\circ S^{-1}\circ U^{-1}\circ \conj\circ
+U\circ S)(z)\\
+\amp = S (S^{-1}\circ U^{-1}\circ \conj\circ
+U\circ S)(z)\\
+\amp = S(T^{-1}\circ \conj \circ T)(z)\\
+\amp = S(z^{\ast C})
+\end{align*}
+</div>as desired.</article><span class="incontext"><a href="section-13.html#proof-2" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,7 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.6.2.</span></h4>
-<div class="para"><div class="para">No, the two geometries are not equivalent. The transformation <span class="process-math">\((x,y,z)\to (-x,-y,-z)\text{,}\)</span> corresponding to the orthogonal matrix <span class="process-math">\(-\Id\text{,}\)</span> is an element of the group given in <a href="geomdefsect.html#geomexamples" class="internal" title="Subsection 3.1.1: Examples of geometries">Subsection 3.1.1</a>, but is not conjugate to any element in <span class="process-math">\(\S\text{.}\)</span> To justify the "not conjugate to an element of <span class="process-math">\(\S\)</span>" claim, elements of <span class="process-math">\(\S\)</span> are Möbius transformations, and therefore conformal, and therefore preserve oriented angles. But <span class="process-math">\(-\Id\)</span> takes the oriented angle <span class="process-math">\(\angle XZY\)</span> (where we use the shorthand <span class="process-math">\(X,Y,Z\)</span> for <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively), which measures <span class="process-math">\(+\pi/2\)</span> radians, to the angle <span class="process-math">\(\angle (-X)(-Z)(-Y)\text{,}\)</span> which  measures <span class="process-math">\(-\pi/2\)</span> radians.</div></div></article><span class="incontext"><a href="geometry_extra_exer_section.html#commentary-156" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 3.5.5.3.</span></h4>
+<div class="para logical">
+<div class="para">It is clear that <span class="process-math">\(\mu\)</span> is a bijection. Let <span class="process-math">\(T\in
+\M\)</span> be given by <span class="process-math">\(Tz=\frac{az+b}{cz+d}\text{.}\)</span> Let <span class="process-math">\(M\in
+GL(2,C)\)</span> be given by <span class="process-math">\(M=\twotwo{a}{b}{c}{d}\text{.}\)</span> If <span class="process-math">\(\beta\neq 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mu([M][\alpha,\beta])\amp
+=\mu\left([a\alpha+b\beta,c\alpha+d\beta]\right)\\
+\amp = \frac{a\alpha+b\beta}{c\alpha+d\beta}\\
+\amp =
+\frac{a\frac{\alpha}{\beta}+b}{c\frac{\alpha}{\beta}+d}\\
+\amp = T(\alpha/\beta)\\
+\amp = T(\mu([\alpha,\beta]).
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(\beta=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu([M][\alpha,0])= \mu([a\alpha,c\alpha])=a/c=T(\infty) =
+T(\mu([\alpha,0]).
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(\mu\circ T\circ \mu{-1} = [M]\in PGL(2,\C)\)</span> and <span class="process-math">\(\mu^{-1}\circ [M]\circ \mu = T\in \M\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="section-16.html#commentary-156" class="internal">in-context</a></span>
 </body>
 </html>

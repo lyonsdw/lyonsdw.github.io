@@ -12,12 +12,19 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">d</span><span class="period">.</span>
-</h4>We have<div class="displaymath process-math">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
+</h4>Observe that, for <span class="process-math">\(0\lt u\lt 1\text{,}\)</span><div class="displaymath process-math">
 \begin{align*}
-d(a,b)\amp \leq d(a,c')+d(c',b) \;\;\text{(by parts (a),(b))}\\
-\amp \leq d(a,c)+d(c,b)\;\; \text{(by part (c))}.
+\frac{d}{du}d(0,u)\amp =
+\frac{d}{du}\ln\left(\frac{1+u}{1-u}\right)\\
+\amp = \frac{d}{du}\left(\ln(1+u)-\ln(1-u)\right)\\
+\amp = \frac{1}{1+u} + \frac{1}{1-u}\\
+\amp = \frac{2}{1-u^2}\gt 0,
 \end{align*}
-</div></article><span class="incontext"><a href="section-14.html#li-366" class="internal">in-context</a></span>
+</div>so <span class="process-math">\(d(0,u)\)</span> is an increasing function of <span class="process-math">\(u\text{.}\)</span> This means that if <span class="process-math">\(0=a\lt b\lt c\)</span> (we may assume this without loss of generality), then <span class="process-math">\(d(a,c)\gt d(a,b)\text{,}\)</span> so that we have<div class="displaymath process-math">
+\begin{equation*}
+d(a,b)\lt d(a,c)+d(c,b)
+\end{equation*}
+</div>as claimed.</article><span class="incontext"><a href="section-14.html#li-366" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,16 +12,33 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Now suppose there is another map <span class="process-math">\([S]\)</span> that agrees with <span class="process-math">\([T]\)</span> on the <span class="process-math">\(n+2\)</span> points <span class="process-math">\([e_0],[e_1],[e_2],\ldots,[e_{n+1}]\text{.}\)</span> Then <span class="process-math">\([U]:=[S]^{-1}\circ
-[T]\)</span> fixes all the points <span class="process-math">\([e_0],[e_1],[e_2],\ldots,[e_{n+1}]\text{.}\)</span> This means that <span class="process-math">\(Ue_i=k_ie_i\)</span> for some nonzero scalars <span class="process-math">\(k_1,k_2,\ldots,k_{n+1}\)</span> and that <span class="process-math">\(Ue_0=k'e_0\)</span> for some <span class="process-math">\(k'\neq 0\text{.}\)</span> This implies</div>
-<div class="displaymath process-math">
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para">The points <span class="process-math">\(A,A'\)</span> are the intersections of great circles <span class="process-math">\(AC,AB\text{,}\)</span> so they are endpoints of a diameter. (Two planes through the origin intersect in a line through the origin, and that line contains a diameter of the sphere.)</div></li>
+<li><div class="para">On <span class="process-math">\(S^2\text{,}\)</span> points <span class="process-math">\(p,q\)</span> are antipodal if and only if <span class="process-math">\(q=-p\text{.}\)</span> So we have <span class="process-math">\(X'=-X\)</span> for <span class="process-math">\(X=A,B,C\text{.}\)</span> The antipodal map <span class="process-math">\(x\to -x\)</span> is not an element of <span class="process-math">\(\Rot(S^2)\text{,}\)</span> but it is clear that it is distance and area preserving. Triangles <span class="process-math">\(\triangle ABC\)</span> and <span class="process-math">\(\triangle A'B'C'\)</span> are antipodal images of each other, so they have the same area.</div></li>
+<li><div class="para">View <span class="process-math">\(R\)</span> as three 2-gons <span class="process-math">\(AA',BB',CC'\)</span> that overlap in triangle <span class="process-math">\(\triangle
+ABC\text{.}\)</span>
+</div></li>
+<li><div class="para">View <span class="process-math">\(R'\)</span> as three 2-gons <span class="process-math">\(AA',BB',CC'\)</span> that overlap in triangle <span class="process-math">\(\triangle
+A'B'C'\text{.}\)</span>
+</div></li>
+<li><div class="para">We have<div class="displaymath process-math">
+\begin{align*}
+4\pi \amp =\text{ Area}(S^2)\\
+\amp = \text{ Area}(R)+\text{ Area}(R')\\
+\amp = 4(\angle A+\angle B+\angle C) -
+2\left(\text{Area}(\triangle ABC)+\text{Area}(\triangle
+A'B'C')\right).\\
+\amp = 4(\angle A+\angle B+\angle C) -
+4\left(\text{Area}(\triangle ABC)\right)
+\end{align*}
+</div>Rearranging, we have<div class="displaymath process-math">
 \begin{equation*}
-(k_1,k_2,\ldots,k_{n+1})=(k',k',\ldots,k') 
+\text{Area}(\triangle ABC)= (\angle A +\angle B + \angle
+C)-\pi.
 \end{equation*}
 </div>
-<div class="para">so we have <span class="process-math">\(k'=k_1=k+2=\cdots k_{n+1}\text{.}\)</span> Therefore <span class="process-math">\([U]\)</span> is the identity transformation, so <span class="process-math">\([S]=[T]\text{.}\)</span> We have just proved the following existence and uniqueness lemma.</div>
-</div>
-<span class="incontext"><a href="section-16.html#p-580" class="internal">in-context</a></span>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="elliptic_geometry_section.html#p-580" class="internal">in-context</a></span>
 </body>
 </html>

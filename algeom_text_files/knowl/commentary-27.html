@@ -11,24 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 1.5.2.1.</span></h4>
-<div class="para logical">
-<div class="para">The component of <span class="process-math">\(u\)</span> in the <span class="process-math">\(r\)</span> direction is <span class="process-math">\((u\cdot r)r\text{,}\)</span> and the desired reflection of <span class="process-math">\(u\)</span> in the plane normal to <span class="process-math">\(r\)</span> is <span class="process-math">\(u-2(u\cdot r)r\text{.}\)</span> The heart of this exercise is to see that <span class="process-math">\(r\times(u\times r) = u-(u\cdot r)r\text{.}\)</span> This follows immediately from the identity</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
-\begin{equation*}
-a\times (b\times c) = (a\cdot c)b - (a\cdot b)c,
-\end{equation*}
-</div>
-<div class="para">which holds for all <span class="process-math">\(a,b,c\in \R^3\text{.}\)</span> Another way is to use the right-hand rule to see that the vectors on both sides of the equation point in the same direction, and use the formula <span class="process-math">\(|a\times b|=|a||b|\sin\theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by vectors <span class="process-math">\(a,b\text{,}\)</span> to see that the vectors on both sides have length <span class="process-math">\(|u|\sin \theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle made by <span class="process-math">\(u\)</span> and <span class="process-math">\(r\text{.}\)</span> Now we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/purequatproduct.html ./knowl/purequatproduct.html">
-\begin{align*}
-rur \amp = r(-u\cdot r + u\times r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
-\amp = r(-u\cdot r) -r\cdot (u\times r) + r\times (u\times
-r)\;\;(\text{by }\knowl{./knowl/purequatproduct.html}{\text{(1.2.13)}})\\
-\amp = u-2(u\cdot r)r
-\end{align*}
-</div>
-<div class="para">as desired.</div>
-</div></article><span class="incontext"><a href="extra_topics_exercises_section.html#commentary-27" class="internal">in-context</a></span>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Exercise 1.4.4.5.</span></h4>
+<div class="para">We need to show that <span class="process-math">\(x+_n y\leftrightarrow [x]+[y]\)</span> under the correspondence <span class="process-math">\(x\leftrightarrow [x]\text{.}\)</span> This is the same as showing <span class="process-math">\((x+y)\MOD n = [x+y]\text{.}\)</span> Use the division algorithm to write <span class="process-math">\(x+y=qn+r\text{.}\)</span> Then we have <span class="process-math">\((x+y)\MOD n = r\)</span> (by definition of <span class="process-math">\(\MOD\)</span>) and <span class="process-math">\([x+y]=[qn+r]=[r]\)</span> (by definition of <span class="process-math">\(\sim_n\)</span>). A similar argument establishes <span class="process-math">\(x\cdot_n y\leftrightarrow [x][y]\text{.}\)</span>
+</div></article><span class="incontext"><a href="section-4.html#commentary-27" class="internal">in-context</a></span>
 </body>
 </html>

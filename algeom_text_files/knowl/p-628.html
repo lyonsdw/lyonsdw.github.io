@@ -11,60 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/coshhyperbolicdistidentity.html" title="Equation 3.6.6">(3.6.6)</a>, for <span class="process-math">\(0\lt
-u\lt 1\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cosh \left(\ln\left(\frac{1+u}{1-u}\right)\right)
-\amp = \frac{e^{\ln(\text{stuff})} +
-e^{-\ln(\text{stuff})}}{2} \;\; \left(\text{stuff }=\frac{1+u}{1-u}\right)\\
-\amp = \frac{\frac{1+u}{1-u} +
-\frac{1-u}{1+u}}{2}\\
-\amp = \frac{(1+u)^2 + (1-u)^2}{2(1-a^2)}\\
-\amp = \frac{2(1+u^2)}{2(1-a^2)}\\
-\amp = \frac{1+u^2}{1-u^2}.
-\end{align*}
-</div>For <a href="" class="xref" data-knowl="./knowl/cosellipticistidentity.html" title="Equation 3.6.7">(3.6.7)</a>, using the double angle identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">The exercises outlined below verify the values for <span class="process-math">\(v,\theta\)</span> in <a href="" class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</div>
+<ol class="lower-alpha">
+<li><div class="para">Use <a href="" class="xref" data-knowl="./knowl/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a> to justify the values for <span class="process-math">\(v\)</span> and <span class="process-math">\(\theta\)</span> for <span class="process-math">\(R_{r_{a,b}}\)</span> in <a href="" class="xref" data-knowl="./knowl/rotcomparetable.html" title="Table 3.6.1: Axis and angle of rotation for quaternion and Möbius rotation constructions">Table 3.6.1</a>.</div></li>
+<li><div class="para">Solve <span class="process-math">\(T_{a,b}z=z\)</span> to show that one of the fixed points of <span class="process-math">\(T_{a,b}\)</span> is<div class="displaymath process-math">
 \begin{equation*}
-\cos (2\theta) = \cos^2\theta -\sin^2 \theta
+p=-ib\left( \frac{\sqrt{1-(\re(a))^2} + \im(a)}{|b|^2}\right).
 \end{equation*}
-</div>and the identities <span class="process-math">\(\cos(\arctan u) =
-\frac{1}{\sqrt{1+u^2}}\text{,}\)</span> <span class="process-math">\(\sin(\arctan u) =
-\frac{u}{\sqrt{1-u^2}}\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/coshhyperbolicdistidentity.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cos(2\arctan u) \amp = \cos^2(\arctan u)
--\sin^2(\arctan u)\\
-\amp = \frac{1}{1+u^2} - \frac{u^2}{1+u^2}\\
-\amp =  \frac{1-u^2}{1+u^2}.
-\end{align*}
 </div>
 </div></li>
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/hyperbolicpythagthm.html" title="Equation 3.6.8">(3.6.8)</a>, assume the set up in the suggestion. Using <a href="" class="xref" data-knowl="./knowl/coshhyperbolicdistidentity.html" title="Equation 3.6.6">(3.6.6)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/hyperbolicpythagthm.html ./knowl/coshhyperbolicdistidentity.html">
-\begin{align*}
-\cosh(c) \amp=  \frac{1+u^2}{1-u^2} \\
-\amp = \frac{1+\left|\frac{B-A}{1-A^\ast B}\right|^2}{1-\left|\frac{B-A}{1-A^\ast B}\right|^2}\\
-\amp = \frac{1+\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}{1-\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}\\
-\amp = \frac{1+|A|^2 + |B|^2 + |A|^2|B|^2}{1-|A|^2 -
-|B|^2 + |A|^2|B|^2}\\
-\amp = \frac{(1+|A|^2)(1 + |B|^2)}{(1-|A|^2)(1- |B|^2)}\\
-\amp =  \cosh(a)\cosh(b).
-\end{align*}
-</div>
+<li><div class="para">Show that <span class="process-math">\(s\left(\frac{(\im(b),-\re(b),\im(a))}{\sqrt{1-(\re(a))^2}}\right)=p\text{.}\)</span>
 </div></li>
-<li><div class="para">For <a href="" class="xref" data-knowl="./knowl/ellipticpythagthm.html" title="Equation 3.6.9">(3.6.9)</a>, assume the set up in the suggestion. Using <a href="" class="xref" data-knowl="./knowl/cosellipticistidentity.html" title="Equation 3.6.7">(3.6.7)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/ellipticpythagthm.html ./knowl/cosellipticistidentity.html">
-\begin{align*}
-\cos(c) \amp=  \frac{1-u^2}{1+u^2} \\
-\amp = \frac{1-\left|\frac{B-A}{1+A^\ast B}\right|^2}{1+\left|\frac{B-A}{1+A^\ast B}\right|^2}\\
-\amp = \frac{1-\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}{1+\frac{|A|^2+|B|^2}{1+|A|^2|B|^2}}\\
-\amp = \frac{1-|A|^2 - |B|^2 + |A|^2|B|^2}{1+|A|^2 +
-|B|^2 + |A|^2|B|^2}\\
-\amp = \frac{(1-|A|^2)(1 - |B|^2)}{(1+|A|^2)(1+ |B|^2)}\\
-\amp =  \cos(a)\cos(b).
-\end{align*}
-</div>
+<li><div class="para">Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/trhcommute.html">
+\begin{equation}
+T_{a,b} = s\circ h\circ R_{r_{a,b}}\circ h \circ s^{-1} \tag{3.6.5}
+\end{equation}
+</div>where <span class="process-math">\(h\colon \R^3\to \R^3\)</span> is given by <span class="process-math">\((x,y,z)\to (z,-y,z)\text{.}\)</span> Here's one way to do this: evaluate both sides of <a href="" class="xref" data-knowl="./knowl/trhcommute.html" title="Equation 3.6.5">(3.6.5)</a> on the three points <span class="process-math">\(p,0,\infty\text{.}\)</span> Explain why this is sufficient! Use quaternion multiplication to evaluate <span class="process-math">\(R_{r_{a,b}}\text{.}\)</span> For example, <span class="process-math">\(R_{r_{a,b}}(1,0,0)=r_{a,b}ir_{a,b}^\ast\)</span> under the natural identification <span class="process-math">\(\R^3\leftrightarrow \R^3_\Quat\text{.}\)</span>
 </div></li>
-</ol></div>
+<li><div class="para">Here is one way to reconcile the quaternion path <a href="" class="xref" data-knowl="./knowl/quatpath.html" title="Equation 3.6.3">(3.6.3)</a> with the Möbius path <a href="" class="xref" data-knowl="./knowl/mobiuspath.html" title="Equation 3.6.4">(3.6.4)</a>.  Let <span class="process-math">\(H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1\amp 1 \\ 1\amp -1\end{array}\right]\)</span> (the matrix <span class="process-math">\(H\)</span> is sometimes called the <em class="emphasis">Hadamard</em> matrix) and let <span class="process-math">\(C_{iH}\)</span> denote the map <span class="process-math">\(M\to (iH)M(iH)^{-1}\text{.}\)</span> Show that the diagram in <a href="" class="xref" data-knowl="./knowl/rot_id_fig.html" title="Figure 3.6.2">Figure 3.6.2</a> commutes. Hint: Notice that <span class="process-math">\(iH\in SU(2)\)</span> and that <span class="process-math">\(Q(iH)=\frac{1}{\sqrt{2}}(i+k)\text{,}\)</span> and that <span class="process-math">\(R_{Q(iH)}=h\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para"><figure class="figure figure-like"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/rot_id_diagram.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.6.2<span class="period">.</span></span><span class="space"> </span>The map <span class="process-math">\(C_{iH}\)</span> is given by <span class="process-math">\(C_{iH}(T)=(iH)T(iH)^{-1}\text{.}\)</span> The column of maps on the left is the "Möbius path", and the column of maps on the right is the "quaternion path".</figcaption></figure></div>
+</div>
 <span class="incontext"><a href="geometry_extra_exer_section.html#p-628" class="internal">in-context</a></span>
 </body>
 </html>

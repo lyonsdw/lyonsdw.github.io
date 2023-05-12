@@ -11,19 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.3.</span></h4>
+<article class="commentary"><h4 class="heading"><span class="title">Instructor's solution for Checkpoint 3.2.2.</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(Tz=\frac{az+b}{cz+d}\)</span> and <span class="process-math">\(Sz=\frac{ez+f}{gz+h}\text{.}\)</span> Then we have</div>
+<div class="para">First, we solve <span class="process-math">\(w=\frac{az+b}{cz+d}\)</span> for <span class="process-math">\(z\text{.}\)</span> This yields <span class="process-math">\(z=\frac{dw-b}{-cw+a}\text{.}\)</span> When we <em class="emphasis">check</em> the composition, we see that</div>
 <div class="displaymath process-math">
 \begin{align*}
-S(Tz)\amp = \frac{e\frac{az+b}{cz+d} +f}{g\frac{az+b}{cz+d}+h}\\
-\amp = \frac{e(az+b)+f(cz+d)}{g(az+b)+h(cz+d)}\\
-\amp = \frac{(ea+fc)z + (eb+fd)}{(ga+hc)z+(gb+hd)}\\
-\amp = \frac{rz+s}{tz+u}
+\frac{a\left(\frac{dw-b}{-cw+a}\right)+b}{c\left(\frac{dw-b}{-cw+a}\right)+d}
+\amp = \frac{a(dw-b)+b(-cw+a)}{c(dw-b)+d(-cw+a)}\\
+\amp  = w\frac{ad-bc}{ad-bc}.
 \end{align*}
 </div>
-<div class="para">for <span class="process-math">\(r=ea+fc\text{,}\)</span> <span class="process-math">\(s=eb+fd\text{,}\)</span> <span class="process-math">\(t=ga+hc\text{,}\)</span> <span class="process-math">\(u=gb+hd\text{.}\)</span> The composition is invertible because both of its factors are invertible. It follows from the previous exercise that <span class="process-math">\(ru-ts\neq 0\text{.}\)</span>
-</div>
+<div class="para">Thus it is clear that the condition <span class="process-math">\(ad-bc\)</span> is necessary and sufficient for invertibility.</div>
 </div></article><span class="incontext"><a href="section-13.html#commentary-98" class="internal">in-context</a></span>
 </body>
 </html>
