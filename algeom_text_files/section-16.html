@@ -474,7 +474,7 @@ n+1\text{.}\)</span> Projectively, <span class="process-math">\([T]\)</span> sen
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-591">Let <span class="process-math">\(v_1,v_2,\ldots,v_{n+1}\)</span> be an independent set of vectors in <span class="process-math">\(\F^{n+1}\)</span> and let <span class="process-math">\(v_0=\sum_{i=1}^{n+1}c_iv_i\)</span> for some nonzero scalars <span class="process-math">\(c_1,c_2,\ldots,c_{n+1}\text{.}\)</span> There exists a unique projective transformation that maps <span class="process-math">\([e_i]\to [v_i]\)</span> for <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
+</div></article><article class="theorem theorem-like" id="fundthmprojgeom"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Projective Geometry.</span>
 </h4>
 <div class="para" id="p-592">Let <span class="process-math">\(P_0,P_1,P_2,\ldots,P_{n+1}\)</span> be a set of <span class="process-math">\(n+2\)</span> points in <span class="process-math">\(\Proj(\F^{n+1})\)</span> such that all subsets of size <span class="process-math">\(n+1\)</span> are in general position. Let <span class="process-math">\(Q_0,Q_1,Q_2,\ldots,Q_{n+1}\)</span> be another such set. There exists a unique projective transformation that maps <span class="process-math">\(P_i\to Q_i\text{,}\)</span> <span class="process-math">\(0\leq i\leq n+1\text{.}\)</span>
@@ -514,7 +514,7 @@ n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
 <span class="type">Exercises</span> <span class="codenumber">3.5.5</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="fundthmprojgeompfexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-600">Use <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry.</div></article><article class="exercise exercise-like" id="chartexer"><h4 class="heading">
+<div class="para" id="p-600">Use <a href="" class="xref" data-knowl="./knowl/fundthmprojgeomlemma.html" title="Lemma 3.5.1">Lemma 3.5.1</a> to prove the Fundamental Theorem of Projective Geometry (<a href="" class="xref" data-knowl="./knowl/fundthmprojgeom.html" title="Theorem 3.5.2: Fundamental Theorem of Projective Geometry">Theorem 3.5.2</a>).</div></article><article class="exercise exercise-like" id="chartexer"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Coordinate charts and inhomogeneous coordinates.</span>
 </h4>
 <div class="para logical" id="p-602">
@@ -565,13 +565,13 @@ U_1\to \C\)</span> given by <span class="process-math">\(\pi_1([x_0,x_1])=\frac{
 <div class="para">in <span class="process-math">\(\Proj_1\)</span> to the points <span class="process-math">\(1,0,\infty\)</span> in <span class="process-math">\(\extF\text{,}\)</span> respectively. Let <span class="process-math">\((\cdot,P_1,P_2,P_3)\)</span> denote the unique projective transformation <span class="process-math">\([T]\)</span> that takes <span class="process-math">\(P_1,P_2,P_3\)</span> to <span class="process-math">\([e_0],[e_2],[e_1]\text{.}\)</span> The <dfn class="terminology">cross ratio</dfn> <span class="process-math">\((P_0,P_1,P_2,P_3)\)</span> is defined to be <span class="process-math">\(\mu([T](P_0))\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-392"><div class="para" id="p-derived-li-392">Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case <span class="process-math">\(\F=\C\text{,}\)</span> via the map <span class="process-math">\(\mu\text{,}\)</span> that is, show that the following holds.<div class="displaymath process-math">
+<li id="li-393"><div class="para" id="p-derived-li-393">Show that this definition of cross ratio in projective geometry corresponds to the cross ratio of Möbius geometry for the case <span class="process-math">\(\F=\C\text{,}\)</span> via the map <span class="process-math">\(\mu\text{,}\)</span> that is, show that the following holds.<div class="displaymath process-math">
 \begin{equation*}
 (P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))
 \end{equation*}
 </div>
 </div></li>
-<li id="li-393"><div class="para" id="p-derived-li-393">Show that<div class="displaymath process-math">
+<li id="li-394"><div class="para" id="p-derived-li-394">Show that<div class="displaymath process-math">
 \begin{equation*}
 (P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}
 \end{equation*}
@@ -592,15 +592,15 @@ A'C\text{,}\)</span> <span class="process-math">\(R=AB'\cap A'B\text{.}\)</span>
 <div class="para">Follow the outline below to prove Pappus' Theorem under the additional assumption that no three of <span class="process-math">\(A,A',P,R\)</span> are collinear. Applying the Fundamental Theorem of Projective Geometry, we may assume <span class="process-math">\(A=[e_1]\text{,}\)</span> <span class="process-math">\(A'=[e_2]\text{,}\)</span> <span class="process-math">\(P=[e_3]\text{,}\)</span> and <span class="process-math">\(R=[e_0]\text{.}\)</span>
 </div>
 <ul class="disc">
-<li id="li-396"><div class="para" id="p-derived-li-396">Check that <span class="process-math">\(AR=[0,-1,1]\)</span> and <span class="process-math">\(A'R=[1,0,-1]\text{.}\)</span>
+<li id="li-397"><div class="para" id="p-derived-li-397">Check that <span class="process-math">\(AR=[0,-1,1]\)</span> and <span class="process-math">\(A'R=[1,0,-1]\text{.}\)</span>
 </div></li>
-<li id="li-397"><div class="para" id="p-derived-li-397">Explain why it follows that <span class="process-math">\(B'=[r,1,1]\)</span> and <span class="process-math">\(B=[1,s,1]\)</span> for some <span class="process-math">\(r,s\text{.}\)</span>
+<li id="li-398"><div class="para" id="p-derived-li-398">Explain why it follows that <span class="process-math">\(B'=[r,1,1]\)</span> and <span class="process-math">\(B=[1,s,1]\)</span> for some <span class="process-math">\(r,s\text{.}\)</span>
 </div></li>
-<li id="li-398"><div class="para" id="p-derived-li-398">Explain why <span class="process-math">\(C=[rs,s,1]\)</span> and <span class="process-math">\(C'=[r,rs,1]\text{.}\)</span>
+<li id="li-399"><div class="para" id="p-derived-li-399">Explain why <span class="process-math">\(C=[rs,s,1]\)</span> and <span class="process-math">\(C'=[r,rs,1]\text{.}\)</span>
 </div></li>
-<li id="li-399"><div class="para" id="p-derived-li-399">Explain why <span class="process-math">\(Q=[rs,rs,1]\text{.}\)</span>
+<li id="li-400"><div class="para" id="p-derived-li-400">Explain why <span class="process-math">\(Q=[rs,rs,1]\text{.}\)</span>
 </div></li>
-<li id="li-400"><div class="para" id="p-derived-li-400">Observe that <span class="process-math">\(P,Q,R\)</span> all lie on <span class="process-math">\([1,-1,0]\text{.}\)</span>
+<li id="li-401"><div class="para" id="p-derived-li-401">Observe that <span class="process-math">\(P,Q,R\)</span> all lie on <span class="process-math">\([1,-1,0]\text{.}\)</span>
 </div></li>
 </ul>
 </div>
@@ -619,9 +619,9 @@ A'C\text{,}\)</span> <span class="process-math">\(R=AB'\cap A'B\text{.}\)</span>
 </div>
 <div class="para">A quadric in <span class="process-math">\(\R\Proj_2\)</span> is called a <dfn class="terminology">conic</dfn>.</div>
 <ol class="lower-alpha">
-<li id="li-406"><div class="para" id="p-derived-li-406">Explain why <a href="" class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a> is a legitimate definition of a set of points in <span class="process-math">\(\Proj(\F^{n+1})\text{.}\)</span>
+<li id="li-407"><div class="para" id="p-derived-li-407">Explain why <a href="" class="xref" data-knowl="./knowl/quadriceqn.html" title="Equation 3.5.4">(3.5.4)</a> is a legitimate definition of a set of points in <span class="process-math">\(\Proj(\F^{n+1})\text{.}\)</span>
 </div></li>
-<li id="li-407"><div class="para" id="p-derived-li-407">Consider the conic <span class="process-math">\(C\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/chartexer.html">
+<li id="li-408"><div class="para" id="p-derived-li-408">Consider the conic <span class="process-math">\(C\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/chartexer.html">
 \begin{equation*}
 x_0^2+x_1^2 -x_2^2=0.
 \end{equation*}
