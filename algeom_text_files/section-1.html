@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Complex numbers</title>
@@ -14,68 +14,97 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
 </h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="basics_chapter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basics_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="quaternionsection.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
 <li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
 <ol class="hidden avatar">
 <li data-val="You!" tabindex="-1">
@@ -177,9 +206,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="basics_chapter.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="basics_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="quaternionsection.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -220,7 +247,7 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural">
@@ -409,10 +436,10 @@ window.MathJax = {
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-1"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Complex numbers</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Complex numbers</span>
 </h2>
 <section class="introduction" id="introduction-1"><div class="para" id="p-21">The complex numbers were originally invented to solve problems in algebra. It was later recognized that the algebra of complex numbers provides an elegant set of tools for geometry in the plane. This section presents the basics of the algebra and geometry of the complex numbers.</div> <div class="para" id="p-22">Elements in the set of complex numbers <span class="process-math">\(\C\)</span> are in one-to-one correspondence with points in the 2-dimensional real plane <span class="process-math">\(\R^2\)</span> (where <span class="process-math">\(\R\)</span>  denotes the set of real numbers). We will write <span class="process-math">\(z\leftrightarrow (x,y)\)</span> to denote that the complex number <span class="process-math">\(z\)</span> corresponds to the ordered pair <span class="process-math">\((x,y)\)</span> of real numbers.</div></section><section class="subsection" id="complexrealimagsubsect"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Real and imaginary parts</span>
 </h3>
 <div class="para" id="p-23">Given a complex number <span class="process-math">\(z\)</span> corresponding to the point <span class="process-math">\((x,y)\)</span> in <span class="process-math">\(\R^2\text{,}\)</span> we say that <span class="process-math">\(x\)</span> is the <dfn class="terminology">real part</dfn> of <span class="process-math">\(z\)</span> and that <span class="process-math">\(y\)</span> is the <dfn class="terminology">imaginary part</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\re(z)=x\)</span> and <span class="process-math">\(\im(z)=y\text{.}\)</span> The set <span class="process-math">\(\C\)</span> contains the set <span class="process-math">\(\R\)</span> as a subset. The real number <span class="process-math">\(x\text{,}\)</span> which is also the complex number <span class="process-math">\(x\text{,}\)</span> corresponds to the ordered pair <span class="process-math">\((x,0)\text{.}\)</span> A complex number that corresponds to an ordered pair <span class="process-math">\((0,y)\)</span> is called <dfn class="terminology">(pure) imaginary</dfn>. The complex number <span class="process-math">\(i\)</span> corresponds to the ordered pair <span class="process-math">\((0,1)\text{.}\)</span> Here is a summary so far.</div>
 <div class="displaymath process-math" id="md-1">
@@ -422,7 +449,7 @@ x\in \R \amp \leftrightarrow (x,0)\\
 i \amp \leftrightarrow (0,1)
 \end{align*}
 </div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Modulus and argument</span>
 </h3>
 <figure class="figure figure-like" id="norm_and_arg_fig"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/norm_and_arg.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span>Norm and argument of a complex number are polar coordinates.</figcaption></figure><div class="para" id="p-24">Given a complex number <span class="process-math">\(z\leftrightarrow (x,y)\text{,}\)</span> let <span class="process-math">\((r,\theta)\)</span> be polar coordinates for the point <span class="process-math">\((x,y)\)</span> such that <span class="process-math">\(r\geq 0\)</span> and <span class="process-math">\(\theta\)</span> is measured in radians. The <dfn class="terminology">modulus</dfn> or <dfn class="terminology">norm</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(|z|\)</span>, is defined to be the polar coordinate <span class="process-math">\(r=\sqrt{x^2+y^2}\)</span> and the <dfn class="terminology">argument</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\arg(z)\)</span>, is the polar coordinate <span class="process-math">\(\theta\text{,}\)</span> that is, the oriented angle made by the real vector <span class="process-math">\((x,y)\)</span> with the positive real axis. In other words, <span class="process-math">\((|z|,\arg{z})\)</span> are polar coordinates for the point <span class="process-math">\((x,y)\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/norm_and_arg_fig.html" title="Figure 1.1.1">Figure 1.1.1</a>. Here is a summary.</div>
@@ -432,7 +459,7 @@ i \amp \leftrightarrow (0,1)
 z\leftrightarrow (x,y) = \left(|z|\cos( \arg{z}),|z|\sin(\arg{z})\right) \tag{1.1.1}
 \end{equation}
 </div></div></article></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Addition and multiplication of complex numbers</span>
 </h3>
 <div class="para" id="p-26">Given complex numbers <span class="process-math">\(z\leftrightarrow (x,y)\)</span> and <span class="process-math">\(z'\leftrightarrow
 (x',y')\text{,}\)</span> the sum <span class="process-math">\(z+z'\)</span> is defined by the following.</div>
@@ -474,7 +501,7 @@ i^2 \amp = -1\tag{1.1.11}\\
 \end{align}
 </div>
 </div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="space"> </span><span class="title">The complex exponential function</span>
 </h3>
 <div class="para logical" id="p-34">
 <div class="para">The Taylor series for the real function <span class="process-math">\(y=e^x\)</span> is</div>
@@ -502,9 +529,9 @@ e^ze^w \amp = e^{z+w}\\
 e^0 \amp =1
 \end{align*}
 </div>
-<div class="para">A key property of the complex exponential is the following, called <dfn class="terminology">Euler's formula</dfn>.</div>
+<div class="para">A key property of the complex exponential is the following, called <dfn class="terminology">Euler’s formula</dfn>.</div>
 </div>
-<article class="assemblage assemblage-like" id="assemblage-5"><h4 class="heading"><span class="title">Euler's formula.</span></h4>
+<article class="assemblage assemblage-like" id="assemblage-5"><h4 class="heading"><span class="title">Euler’s formula.</span></h4>
 <div class="para logical" id="p-35"><div class="displaymath process-math" id="eulersformula">
 \begin{equation}
 e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}\tag{1.1.14}
@@ -530,7 +557,7 @@ zw = (re^{i\theta})(se^{i\phi}) = rse^{i(\theta + \phi)}.\tag{1.1.15}
 </div>
 <figure class="figure figure-like" id="zxyrthetafig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/zxyrtheta_clip.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span>Rectangular and polar forms for a complex number  <span class="process-math">\(z\)</span></figcaption></figure></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Conjugation</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="space"> </span><span class="title">Conjugation</span>
 </h3>
 <div class="para logical" id="p-38">
 <div class="para">The <dfn class="terminology">conjugate</dfn> of the complex number <span class="process-math">\(z=x+iy=re^{i\theta}\text{,}\)</span> denoted <span class="process-math">\(\overline{z}\)</span> or <span class="process-math">\(z^\ast\)</span> , is defined to be <span class="process-math">\(z^\ast = x-iy =
@@ -547,7 +574,7 @@ re^{-i\theta}\text{.}\)</span> Geometrically, <span class="process-math">\(z^\as
 \end{align}
 </div>
 </div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="space"> </span><span class="title">Circles and lines</span>
 </h3>
 <div class="para logical" id="p-39">
 <div class="para">Let <span class="process-math">\(C\)</span> be the circle of radius <span class="process-math">\(r\gt 0\)</span> and with center <span class="process-math">\(a\in \C\text{.}\)</span> A point <span class="process-math">\(z\)</span> lies on <span class="process-math">\(C\)</span> if and only if the distance from <span class="process-math">\(z\)</span> to <span class="process-math">\(a\)</span> equals <span class="process-math">\(r\text{.}\)</span> In mathematical symbols, <span class="process-math">\(C\)</span> is the set of solutions <span class="process-math">\(z\)</span> for the following equation.</div>
@@ -567,7 +594,7 @@ re^{-i\theta}\text{.}\)</span> Geometrically, <span class="process-math">\(z^\as
 </div>
 <figure class="figure figure-like" id="lines_in_complex_plane_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/lines_in_complex_plane.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>A line in the complex plane.</figcaption></figure></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">1.1.7</span> <span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>What is the difference between polar coordinates and polar form? What is the difference between rectangular coordinates and rectangular form?  Write formulas for converting from polar to rectangular coordinates and vice-versa.<div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
@@ -679,7 +706,7 @@ z\overline{z} \amp = re^{i\theta}re^{-i\theta}\\
 281^{1/4}\sin \varphi)]\text{,}\)</span> where <span class="process-math">\(\varphi=(\arctan(16/5)+\pi)/2\)</span>
 </div></li>
 </ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>Use the fact that <span class="process-math">\(e^{ia}e^{ib}=e^{i(a+b)}\)</span> together with Euler's formula <span class="process-math">\(e^{i\theta}=\cos\theta + i\sin\theta\)</span> to derive the trigonometric angle sum formulas below.<div class="displaymath process-math" id="md-5">
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>Use the fact that <span class="process-math">\(e^{ia}e^{ib}=e^{i(a+b)}\)</span> together with Euler’s formula <span class="process-math">\(e^{i\theta}=\cos\theta + i\sin\theta\)</span> to derive the trigonometric angle sum formulas below.<div class="displaymath process-math" id="md-5">
 \begin{align*}
 \cos(a+b) \amp = \cos a \cos b -\sin a \sin b\\
 \sin(a+b) \amp = \cos a \sin b + \sin a \cos b
@@ -687,14 +714,14 @@ z\overline{z} \amp = re^{i\theta}re^{-i\theta}\\
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="para logical" id="p-51">
-<div class="para">Using Euler's formula for the first equality below, and then using complex multiplication for the second equality, we have</div>
+<div class="para">Using Euler’s formula for the first equality below, and then using complex multiplication for the second equality, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/localtag1.html ./knowl/localtag2.html" id="mdn-4">
 \begin{align}
 e^{ia}e^{ib} \amp = (\cos a + i\sin a)(\cos b + i\sin b)\notag\\
 \amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).\tag{✶}
 \end{align}
 </div>
-<div class="para">On the other hand, Euler's formula also gives</div>
+<div class="para">On the other hand, Euler’s formula also gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/localtag1.html ./knowl/localtag2.html" id="mdn-5">
 \begin{gather}
 e^{i(a+b)}= \cos(a+b) + i\sin
@@ -721,6 +748,27 @@ x^2-2ax = x^2-2ax +a^2 - a^2 = \left(x-a\right)^2
 </div></li>
 <li id="li-29"><div class="para" id="p-derived-li-29">Write an alternative proof for the general form for the equation of a line <a href="" class="xref" data-knowl="./knowl/lineeqn.html" title="Equation 1.1.23">(1.1.23)</a>, as follows. Let <span class="process-math">\(a=u+iv\text{,}\)</span> <span class="process-math">\(b=r+is\text{,}\)</span> <span class="process-math">\(z=x+iy\text{.}\)</span> Find the equation of the line <span class="process-math">\(\im(az+b)=0\)</span> in terms of the real variables <span class="process-math">\(x,y\)</span> and real constants <span class="process-math">\(u,v,r,s\text{.}\)</span> Explain why it is necessary that <span class="process-math">\(a\neq 0\text{.}\)</span>
 </div></li>
+</ol></div></article><article class="commentary" id="commentary-2"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.1.7.11.</span></h4>
+<div class="para logical" id="p-53"><ol class="lower-alpha">
+<li id="li-30"><div class="para" id="p-derived-li-30">Starting with the right hand side of <a href="" class="xref" data-knowl="./knowl/complexcompletesquare.html" title="Equation 1.1.24">(1.1.24)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/complexcompletesquare.html" id="md-6">
+\begin{align*}
+|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast\\
+\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
+-aa^\ast\\
+\amp = |z|^2 -2\re(za^\ast)
+\end{align*}
+</div>as desired. Applying this to the equation given at the end of the part a, we set <span class="process-math">\(a=-i\)</span> and complete the square by adding <span class="process-math">\(|-i|^2=1\)</span> to both sides. Rearranging, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/complexcompletesquare.html">
+\begin{equation*}
+|z-(-i)|^2 = (\sqrt{6})^2.
+\end{equation*}
+</div>This is a circle centered at <span class="process-math">\(a=-i\text{,}\)</span> with radius <span class="process-math">\(r=\sqrt{6}\text{.}\)</span>
+</div></li>
+<li id="li-31"><div class="para" id="p-derived-li-31">We have<div class="displaymath process-math" id="md-7">
+\begin{align*}
+\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)\\
+\amp = \im( (ux-vy+r) + i(vx+uy+s)
+\end{align*}
+</div>so the equation <span class="process-math">\(\im(az+b)=0\)</span> is equivalent to <span class="process-math">\(vx+uy+s=0\text{.}\)</span> This is the general form for the equation for a line in <span class="process-math">\(\R^2\text{,}\)</span> as long as <span class="process-math">\((u,v)\)</span> is not the zero vector (if <span class="process-math">\(0=u=v\text{,}\)</span> then the solutions to <span class="process-math">\(s=0\)</span> is either the empty set or the whole plane).</div></li>
 </ol></div></article><article class="exercise exercise-like" id="complexnosasrealmatalg"><h4 class="heading">
 <span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Complex numbers as <span class="process-math">\(2\times 2\)</span> real matrices.</span>
 </h4>
@@ -737,13 +785,41 @@ M}_\C\text{.}\)</span> Conversely, given a matrix <span class="process-math">\(M
 <li id="li-33"><div class="para" id="p-derived-li-33">Show that complex addition and multiplication are "mirrored" in <span class="process-math">\({\mathcal M}_\C\text{.}\)</span> That is, show that <span class="process-math">\(C(M(z)+M(w))=z+w\)</span> and <span class="process-math">\(C(M(z)M(w))=zw\)</span> for all <span class="process-math">\(z,w\in \C\text{.}\)</span>
 </div></li>
 </ol>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Equations <a href="" class="xref" data-knowl="./knowl/addextends.html" title="Equation 1.1.7">(1.1.7)</a>, <a href="" class="xref" data-knowl="./knowl/multextends.html" title="Equation 1.1.8">(1.1.8)</a>, and <a href="" class="xref" data-knowl="./knowl/normextends.html" title="Equation 1.1.9">(1.1.9)</a> say that complex addition, multiplication, and norm <em class="emphasis">extend</em> the corresponding operations on the reals. Equation <a href="" class="xref" data-knowl="./knowl/multidentity.html" title="Equation 1.1.10">(1.1.10)</a> is expressed by saying 1 is the <em class="emphasis">multiplicative identity</em>.</div></div>
+</div></article><article class="commentary" id="commentary-3"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.1.7.12.</span></h4>
+<div class="para logical" id="p-55"><ol class="lower-alpha">
+<li id="li-34"><div class="para" id="p-derived-li-34">Let <span class="process-math">\(T(a,b)\)</span> denote the matrix <span class="process-math">\(\twotwo{a}{b}{-b}{a}\)</span> in <span class="process-math">\({\mathcal M}_\C\text{.}\)</span> We have the following.<div class="displaymath process-math" id="md-8">
+\begin{align*}
+T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} \\
+\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}\\
+\amp = T(a+c,b+d)\\
+T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} \\
+\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}\\
+\amp = T(ac-bd,ad+bc)
+\end{align*}
+</div>
+</div></li>
+<li id="li-35"><div class="para" id="p-derived-li-35">Let <span class="process-math">\(z=a+bi\)</span> and <span class="process-math">\(w=c+di\)</span> so that <span class="process-math">\(M(z)=T(a,b)\)</span> and <span class="process-math">\(M(w)=T(c,d)\text{.}\)</span> We have the following.<div class="displaymath process-math" id="md-9">
+\begin{align*}
+C(M(z)+M(w)) \amp = C(T(a,b)+T(c,d))\\
+\amp = C(T(a+c,b+d)) \;\;(\text{by part (a)})\\
+\amp = (a+c)+i(b+d)\\
+\amp = (a+ib)+(c+id)\\
+\amp =z+w\\
+C(M(z)M(w)) \amp = C(T(a,b)T(c,d))\\
+\amp = C(T(ac-bd,ad+bc)) \;\;(\text{by part (a)})\\
+\amp = (ac-bd)+i(ad+bc)\\
+\amp = (a+ib)(c+id)\\
+\amp =z+w
+\end{align*}
+</div>
+</div></li>
+</ol></div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Equations <a href="" class="xref" data-knowl="./knowl/addextends.html" title="Equation 1.1.7">(1.1.7)</a>, <a href="" class="xref" data-knowl="./knowl/multextends.html" title="Equation 1.1.8">(1.1.8)</a>, and <a href="" class="xref" data-knowl="./knowl/normextends.html" title="Equation 1.1.9">(1.1.9)</a> say that complex addition, multiplication, and norm <em class="emphasis">extend</em> the corresponding operations on the reals. Equation <a href="" class="xref" data-knowl="./knowl/multidentity.html" title="Equation 1.1.10">(1.1.10)</a> is expressed by saying 1 is the <em class="emphasis">multiplicative identity</em>.</div></div>
 </div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="basics_chapter.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="quaternionsection.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="basics_chapter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="quaternionsection.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
+<div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Subgroups and cosets</title>
@@ -14,172 +14,99 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://quantum.lvc.edu/lyons"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="algeom_text-6-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="groupdefsection.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-9.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groupdefsection.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="groups_chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -220,202 +147,202 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li><div class="toc-item"><a href="biography-1.html" class="internal"><span class="title">About the author</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-1.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#subsection-5" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#subsection-6" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
-<li><div class="toc-item"><a href="section-1.html#exercises-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics_chapter-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-9" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="quaternionsection.html#subsection-7" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span></a></div></li>
-<li><div class="toc-item"><a href="quaternionsection.html#subsection-8" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
-<li><div class="toc-item"><a href="quaternionsection.html#subsection-9" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
-<li><div class="toc-item"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
-<li><div class="toc-item"><a href="quaternionsection.html#subsection-11" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="quaternionsection.html#exercises-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cartesian form and pure quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-8" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-9" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Stereographic projection</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="stereoprojsect.html#subsection-12" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="stereoprojsect.html#subsection-13" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="stereoprojsect.html#exercises-3" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stereoprojsect.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Stereographic projection</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stereoprojsect.html#stereoprojsect-2" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="stereoprojsect.html#stereoprojsect-3" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Stereographic projection <span class="process-math">\(S^2\to \extC\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="stereoprojsect.html#stereoprojsect-4" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Equivalence relations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-4.html#subsection-14" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Definitions</span></a></div></li>
-<li><div class="toc-item"><a href="section-4.html#subsection-15" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="section-4.html#subsection-16" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Facts</span></a></div></li>
-<li><div class="toc-item"><a href="section-4.html#exercises-4" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basics_chapter-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Equivalence relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-5.html#basics_chapter-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-5.html#basics_chapter-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Important example: the integers modulo an integer <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-5.html#basics_chapter-5-4" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Facts</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basics_chapter-5.html#basics_chapter-5-5" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="extra_topics_exercises_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">More preliminary topics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="extra_topics_exercises_section.html#subsection-17" class="internal"><span class="codenumber">1.5.1</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
-<li><div class="toc-item"><a href="extra_topics_exercises_section.html#exercises-5" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="extra_topics_exercises_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">More preliminary topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="extra_topics_exercises_section.html#extra_topics_exercises_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">A useful tool: commutative diagrams</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="extra_topics_exercises_section.html#extra_topics_exercises_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-18" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-19" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-21" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-22" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-23" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-24" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#subsection-25" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
-<li><div class="toc-item"><a href="groupintrosection.html#exercises-6" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="groupdefsection.html#subsection-26" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
-<li><div class="toc-item"><a href="groupdefsection.html#exercises-7" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li class="active">
-<div class="toc-item"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="subgroups_cosets_section.html#subsection-27" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
-<li><div class="toc-item"><a href="subgroups_cosets_section.html#exercises-8" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-9.html#subsection-28" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
-<li><div class="toc-item"><a href="section-9.html#exercises-9" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-10.html#subsection-29" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
-<li><div class="toc-item"><a href="section-10.html#subsection-30" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
-<li><div class="toc-item"><a href="section-10.html#exercises-10" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="groups_extra_exer_section.html#exercises-11" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
-<li><div class="toc-item"><a href="geomdefsect.html#subsection-32" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
-<li><div class="toc-item"><a href="geomdefsect.html#subsection-33" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
-<li><div class="toc-item"><a href="geomdefsect.html#exercises-12" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="groups_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groupintrosection.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Examples of groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-9" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-10" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-11" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-12" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-13.html#subsection-34" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#subsection-35" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Fundamental Theorem of Möbius Geometry</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#subsection-36" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Cross ratio</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#subsection-37" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Clines (generalized circles)</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#subsection-38" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#normalformssubsect" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Normal forms</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#subsection-40" class="internal"><span class="codenumber">3.2.7</span> <span class="title">Steiner circles</span></a></div></li>
-<li><div class="toc-item"><a href="section-13.html#exercises-13" class="internal"><span class="codenumber">3.2.8</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groupdefsection.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Definition of a group</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupdefsection.html#groupdefsection-2" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupdefsection.html#groupdefsection-3" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-14.html#subsection-41" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
-<li><div class="toc-item"><a href="section-14.html#subsection-42" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
-<li><div class="toc-item"><a href="section-14.html#subsection-43" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
-<li><div class="toc-item"><a href="section-14.html#subsection-44" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
-<li><div class="toc-item"><a href="section-14.html#subsection-45" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
-<li><div class="toc-item"><a href="section-14.html#exercises-14" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-2" class="internal"><span class="codenumber">2.3.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-3" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-46" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-49" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-50" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#subsection-51" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
-<li><div class="toc-item"><a href="elliptic_geometry_section.html#exercises-15" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups_chapter-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-2" class="internal"><span class="codenumber">2.4.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-3" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="section-16.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-16.html#subsection-52" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
-<li><div class="toc-item"><a href="section-16.html#subsection-53" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
-<li><div class="toc-item"><a href="section-16.html#subsection-54" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
-<li><div class="toc-item"><a href="section-16.html#subsection-55" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
-<li><div class="toc-item"><a href="section-16.html#exercises-16" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups_chapter-6.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-2" class="internal"><span class="codenumber">2.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-3" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-4" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="geometry_extra_exer_section.html#exercises-17" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_extra_exer_section.html#groups_extra_exer_section-2" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
-<li><div class="toc-item"><a href="references-2.html" class="internal"><span class="title">References</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
-<li><div class="toc-item"><a href="references-3.html" class="internal"><span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="geometry_chapter.html" class="internal"><span class="codenumber">3</span> <span class="title">Geometries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-6" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-7" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-8" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geometry_chapter-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Fundamental Theorem of Möbius Geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Cross ratio</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Clines (generalized circles)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-7" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Symmetry with respect to a cline</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#normalformssubsect" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Normal forms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-9" class="internal"><span class="codenumber">3.2.7</span> <span class="title">Steiner circles</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-10" class="internal"><span class="codenumber">3.2.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geometry_chapter-5.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Hyperbolic geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">The hyperbolic transformation group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Classification of clines in hyperbolic geometry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Normal forms for the hyperbolic group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-6" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Hyperbolic length and area</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-7" class="internal"><span class="codenumber">3.3.5</span> <span class="title">The upper-half plane model</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Circles in <span class="process-math">\(S^2\)</span> and clines in <span class="process-math">\(\extC\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-7" class="internal"><span class="codenumber">3.4.5</span> <span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-8" class="internal"><span class="codenumber">3.4.6</span> <span class="title">Elliptic length and area</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-9" class="internal"><span class="codenumber">3.4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geometry_chapter-7.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Projective geometry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-7.html#geometry_chapter-7-3" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Projective points, lines, and flats</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-7.html#geometry_chapter-7-4" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-7.html#geometry_chapter-7-5" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Freedom in projective transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-7.html#geometry_chapter-7-6" class="internal"><span class="codenumber">3.5.4</span> <span class="title">The real projective plane</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geometry_chapter-7.html#geometry_chapter-7-7" class="internal"><span class="codenumber">3.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="geometry_extra_exer_section.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geometry_extra_exer_section.html#geometry_extra_exer_section-2" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="algeom_text-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="algeom_text-6-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="algeom_text-6-2.html" class="internal"><span class="title">References</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="algeom_text-6-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="algeom_text-6-4.html" class="internal"><span class="title">Notation</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="subgroups_cosets_section"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">Subgroups and cosets</span>
 </h2>
-<section class="subsection" id="subsection-27"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title"></span>
+<section class="subsection" id="subgroups_cosets_section-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="space"> </span><span class="title"></span>
 </h3>
-<div class="para" id="p-204"><article class="definition definition-like" id="subgroupdefn"><h4 class="heading">
+<div class="para" id="subgroups_cosets_section-2-1"><article class="definition definition-like" id="subgroupdefn"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups and cosets.</span>
-</h4>  <div class="para logical" id="p-205">
+</h4>  <div class="para logical" id="subgroupdefn-2-3">
 <div class="para">A subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is called a <dfn class="terminology">subgroup</dfn> of <span class="process-math">\(G\)</span> if <span class="process-math">\(H\)</span> itself is a group under the group operation of <span class="process-math">\(G\)</span> restricted to <span class="process-math">\(H\text{.}\)</span> We write <span class="process-math">\(H\leq
 G\)</span> to indicate that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> Given a subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\text{,}\)</span> and given an element <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> the set</div>
 <div class="displaymath process-math">
@@ -431,59 +358,53 @@ G/H := \{gH\colon g\in G\}
 \end{equation*}
 </div>
 </div></article></div>
-<article class="exercise exercise-like" id="dihedral_subgroup_reading_exercise"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-dihedral_subgroup_reading_exercise"><h4 class="heading">
+<details id="dihedral_subgroup_reading_exercise" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-dihedral_subgroup_reading_exercise"><article class="exercise exercise-like"><div class="para logical" id="p-206">
-<div class="para">Consider <span class="process-math">\(D_4\)</span> as described in <a href="" class="xref" data-knowl="./knowl/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/dihedral-reading-exercise.html">
+</h4></summary><article class="exercise exercise-like"><div class="para logical" id="dihedral_subgroup_reading_exercise-1-1">
+<div class="para">Consider <span class="process-math">\(D_4\)</span> as described in <a href="" class="xref" data-knowl="./knowl/xref/dihedral-reading-exercise.html" title="Checkpoint 2.1.6">Checkpoint 2.1.6</a>.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/dihedral-reading-exercise.html">
 \begin{equation*}
 D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-150"><div class="para" id="p-derived-li-150">Is the subset <span class="process-math">\(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\)</span> of rotations a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</div></li>
-<li id="li-151"><div class="para" id="p-derived-li-151">Is the subset <span class="process-math">\(\{F_H,F_V,F_D,F_{D'}\}\)</span> of reflections a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</div></li>
+<li id="dihedral_subgroup_reading_exercise-1-1-4-1"><div class="para" id="p-derived-dihedral_subgroup_reading_exercise-1-1-4-1">Is the subset <span class="process-math">\(\{R_0,R_{1/4},R_{1/2},R_{3/4}\}\)</span> of rotations a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</div></li>
+<li id="dihedral_subgroup_reading_exercise-1-1-4-2"><div class="para" id="p-derived-dihedral_subgroup_reading_exercise-1-1-4-2">Is the subset <span class="process-math">\(\{F_H,F_V,F_D,F_{D'}\}\)</span> of reflections a subgroup of <span class="process-math">\(D_4\text{?}\)</span> Why or why not?</div></li>
 </ol>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><ol class="decimal">
-<li id="li-152"><div class="para" id="p-derived-li-152">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</div></li>
-<li id="li-153"><div class="para" id="p-derived-li-153">No. Just observe that <span class="process-math">\(F_H^2=R_0\)</span> is not a reflection. The group operation on <span class="process-math">\(D_4\)</span> does not restrict properly to the subset of reflections.</div></li>
-</ol></div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exercise-60"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-60"><h4 class="heading">
+<div class="solutions"><details id="dihedral_subgroup_reading_exercise-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><ol class="decimal">
+<li id="dihedral_subgroup_reading_exercise-2-1-1"><div class="para" id="p-derived-dihedral_subgroup_reading_exercise-2-1-1">Yes. The composition of any two rotations is a rotation, and every rotation has an inverse that is also a rotation.</div></li>
+<li id="dihedral_subgroup_reading_exercise-2-1-2"><div class="para" id="p-derived-dihedral_subgroup_reading_exercise-2-1-2">No. Just observe that <span class="process-math">\(F_H^2=R_0\)</span> is not a reflection. The group operation on <span class="process-math">\(D_4\)</span> does not restrict properly to the subset of reflections.</div></li>
+</ol></div></details></div></article></details><details id="subgroups_cosets_section-2-3" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-60"><article class="exercise exercise-like"><div class="para" id="p-207">Find <span class="process-math">\(G/H\)</span> for <span class="process-math">\(G=S_3\text{,}\)</span> <span class="process-math">\(H=\{e,(12)\}\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="subgroups_cosets_section-2-3-1-1">Find <span class="process-math">\(G/H\)</span> for <span class="process-math">\(G=S_3\text{,}\)</span> <span class="process-math">\(H=\{e,(12)\}\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="displaymath process-math" id="md-25">
+<div class="solutions"><details id="subgroups_cosets_section-2-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="displaymath process-math" id="subgroups_cosets_section-2-3-2-1">
 \begin{align*}
 G/H \amp =\{eH, (12)H, (13)H, (23)H, (123)H, (132)H\}\\
 \amp =
 \{\{e,(12)\},\{(12),e\},\{(13),(123)\},\{(23),(132)\},\{(13),(123)\},\{(132),(23)\}\}\\
 \amp = \{H,\{(13),(123)\},\{(23),(132)\}\}
 \end{align*}
-</div></div></div>
-</div></article></div>
-<article class="proposition theorem-like" id="subgrouptests"><h4 class="heading">
+</div></div></details></div></article></details><article class="proposition theorem-like" id="subgrouptests"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup tests.</span>
 </h4>
-<div class="para logical" id="p-208">
+<div class="para logical" id="subgrouptests-4-1">
 <div class="para">Let <span class="process-math">\(H\)</span> be a subset of a group <span class="process-math">\(G\text{.}\)</span> The following are equivalent.</div>
 <ol class="lower-roman">
-<li id="li-154"><div class="para" id="p-derived-li-154">
+<li id="subgrouptests-4-1-3-1"><div class="para" id="p-derived-subgrouptests-4-1-3-1">
 <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span>
 </div></li>
-<li id="li-155"><div class="para" id="p-derived-li-155">
+<li id="subgrouptests-4-1-3-2"><div class="para" id="p-derived-subgrouptests-4-1-3-2">
 <dfn class="terminology">(2-step subgroup test)</dfn> <span class="process-math">\(H\)</span> is nonempty, <span class="process-math">\(ab\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a,b\)</span> in <span class="process-math">\(H\)</span> (<span class="process-math">\(H\)</span> is closed under the group operation), and <span class="process-math">\(a^{-1}\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a\)</span> in <span class="process-math">\(H\)</span> (<span class="process-math">\(H\)</span> is closed under group inversion)</div></li>
-<li id="li-156"><div class="para" id="p-derived-li-156">
+<li id="subgrouptests-4-1-3-3"><div class="para" id="p-derived-subgrouptests-4-1-3-3">
 <dfn class="terminology">(1-step subgroup test)</dfn> <span class="process-math">\(H\)</span> is nonempty and <span class="process-math">\(ab^{-1}\)</span> is in <span class="process-math">\(H\)</span> for every <span class="process-math">\(a,b\)</span> in <span class="process-math">\(H\)</span>
 </div></li>
 </ol>
-</div></article><article class="proposition theorem-like" id="proposition-5"><h4 class="heading">
+</div></article><article class="proposition theorem-like" id="subgroups_cosets_section-2-5"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup generated by a set of elements.</span>
 </h4>
-<div class="para logical" id="p-209">
+<div class="para logical" id="subgroups_cosets_section-2-5-2-1">
 <div class="para">Let <span class="process-math">\(S\)</span> be a nonempty subset of a group <span class="process-math">\(G\text{,}\)</span> and let <span class="process-math">\(S^{-1}\)</span> denote the set <span class="process-math">\(S^{-1}=\{s^{-1}\colon s\in S\}\)</span> of inverses of elements in <span class="process-math">\(S\text{.}\)</span> We write <span class="process-math">\(\langle S\rangle\)</span> to denote the set  of all elements of <span class="process-math">\(G\)</span> of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -492,76 +413,70 @@ s_1s_2\cdots s_k
 </div>
 <div class="para">where <span class="process-math">\(k\)</span> ranges over all positive integers and each <span class="process-math">\(s_i\)</span> is in <span class="process-math">\(S\cup S^{-1}\)</span> for <span class="process-math">\(1\leq i\leq k\text{.}\)</span> The set <span class="process-math">\(\langle S\rangle\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> called the <dfn class="terminology">subgroup generated by the set <span class="process-math">\(S\)</span></dfn> , and the elements of <span class="process-math">\(S\)</span> are called the <dfn class="terminology">generators</dfn> of <span class="process-math">\(\langle S\rangle\text{.}\)</span>
 </div>
-</div></article><div class="para" id="p-210">
+</div></article><div class="para" id="subgroups_cosets_section-2-6">
 <em class="alert">Comment on notational convention:</em> If <span class="process-math">\(S=\{s_1,s_2,\ldots,s_k\}\)</span> is finite, we write <span class="process-math">\(\langle
 s_1,s_2,\ldots,s_k\rangle\)</span> for <span class="process-math">\(\langle S\rangle\text{,}\)</span> instead of the more cumbersome <span class="process-math">\(\langle \{s_1,s_2,\ldots,s_k\}\rangle\text{.}\)</span>
 </div>
-<article class="observation remark-like" id="observation-1"><h4 class="heading">
+<article class="observation remark-like" id="subgroups_cosets_section-2-7"><h4 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-211">If <span class="process-math">\(G\)</span> is a cyclic group with generator <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\(G=\langle g\rangle\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="subgpgenbysetexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-subgpgenbysetexer"><h4 class="heading">
+<div class="para" id="subgroups_cosets_section-2-7-1">If <span class="process-math">\(G\)</span> is a cyclic group with generator <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\(G=\langle g\rangle\text{.}\)</span>
+</div></article><details id="subgpgenbysetexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-subgpgenbysetexer"><article class="exercise exercise-like"><div class="para" id="p-212">Show that <span class="process-math">\(\langle S\rangle\)</span> is indeed a subgroup of <span class="process-math">\(G\text{.}\)</span> How would this fail if <span class="process-math">\(S\)</span> were empty?</div></article></div>
-<article class="exercise exercise-like" id="generators-reading-exer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-generators-reading-exer"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like"><div class="para" id="subgpgenbysetexer-1-1">Show that <span class="process-math">\(\langle S\rangle\)</span> is indeed a subgroup of <span class="process-math">\(G\text{.}\)</span> How would this fail if <span class="process-math">\(S\)</span> were empty?</div></article></details><details id="generators-reading-exer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-generators-reading-exer"><article class="exercise exercise-like"><div class="para logical" id="p-214"><ol class="decimal">
-<li id="li-157"><div class="para" id="p-derived-li-157">Find <span class="process-math">\(\langle F_H,F_V\rangle\subseteq D_4\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like"><div class="para logical" id="generators-reading-exer-1-1"><ol class="decimal">
+<li id="generators-reading-exer-1-1-1-1"><div class="para" id="p-derived-generators-reading-exer-1-1-1-1">Find <span class="process-math">\(\langle F_H,F_V\rangle\subseteq D_4\text{.}\)</span>
 </div></li>
-<li id="li-158"><div class="para" id="p-derived-li-158">Find <span class="process-math">\(\langle 6,8\rangle \subseteq \Z\text{.}\)</span>
+<li id="generators-reading-exer-1-1-1-2"><div class="para" id="p-derived-generators-reading-exer-1-1-1-2">Find <span class="process-math">\(\langle 6,8\rangle \subseteq \Z\text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
-<li id="li-159"><div class="para" id="p-derived-li-159"><span class="process-math">\(\displaystyle \langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}\)</span></div></li>
-<li id="li-160"><div class="para" id="p-derived-li-160"><span class="process-math">\(\displaystyle \langle 6,8\rangle =\langle 2\rangle = 2\Z\)</span></div></li>
-</ol></div></div>
-</div></article></div>
-<div class="para" id="p-216">
+<div class="solutions"><details id="generators-reading-exer-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><ol class="decimal">
+<li id="generators-reading-exer-2-1-1"><div class="para" id="p-derived-generators-reading-exer-2-1-1"><span class="process-math">\(\displaystyle \langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}\)</span></div></li>
+<li id="generators-reading-exer-2-1-2"><div class="para" id="p-derived-generators-reading-exer-2-1-2"><span class="process-math">\(\displaystyle \langle 6,8\rangle =\langle 2\rangle = 2\Z\)</span></div></li>
+</ol></div></details></div></article></details><div class="para" id="subgroups_cosets_section-2-12">
 <article class="proposition theorem-like" id="cosetspartition"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as equivalence classes.</span>
 </h4>
-<div class="para" id="p-217">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(\sim_H\)</span> be the relation on <span class="process-math">\(G\)</span> defined by <span class="process-math">\(x\sim_H y\)</span> if and only if <span class="process-math">\(x^{-1}y \in
+<div class="para" id="cosetspartition-2-1">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(\sim_H\)</span> be the relation on <span class="process-math">\(G\)</span> defined by <span class="process-math">\(x\sim_H y\)</span> if and only if <span class="process-math">\(x^{-1}y \in
 H\text{.}\)</span> The relation <span class="process-math">\(\sim_H\)</span> is an equivalence relation on <span class="process-math">\(G\text{,}\)</span> and the equivalence classes are the cosets of <span class="process-math">\(H\text{,}\)</span> that is, we have <span class="process-math">\(G/\!\!\sim_H= G/H\text{.}\)</span>
-</div></article> <article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
+</div></article> <article class="corollary theorem-like" id="subgroups_cosets_section-2-12-2"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets as a partition.</span>
 </h4>
-<div class="para" id="p-218">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> The set <span class="process-math">\(G/H\)</span> of cosets of <span class="process-math">\(H\)</span> form a partition of <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="subgroups_cosets_section-2-12-2-2-1">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> The set <span class="process-math">\(G/H\)</span> of cosets of <span class="process-math">\(H\)</span> form a partition of <span class="process-math">\(G\text{.}\)</span>
 </div></article>
-</div></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">2.3.2</span> <span class="title">Exercises</span>
+</div></section><section class="exercises" id="subgroups_cosets_section-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="subgrouptestsexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-219">Prove <a href="" class="xref" data-knowl="./knowl/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</div></article><article class="exercise exercise-like" id="exercise-64"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-221">Find all the subgroups of <span class="process-math">\(S_3\text{.}\)</span>
+<div class="para" id="subgrouptestsexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition 2.3.4</a>.</div></article><article class="exercise exercise-like" id="subgroups_cosets_section-3-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="subgroups_cosets_section-3-3-1-1">Find all the subgroups of <span class="process-math">\(S_3\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><div class="para" id="p-222">In the "list of values" permutation notation of <a href="" class="xref" data-knowl="./knowl/permutation-reading-exercise.html" title="Checkpoint 2.1.2">Checkpoint 2.1.2</a>, the subgroups of <span class="process-math">\(S_3\)</span> are <span class="process-math">\(\{[1,2,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,1,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[1,3,2]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[3,2,1]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\)</span> and <span class="process-math">\(S_3\text{.}\)</span> In cycle notation, the subgroups of <span class="process-math">\(S_3\)</span> (in the same order) are <span class="process-math">\(\{e\}\text{,}\)</span> <span class="process-math">\(\{e,(12)\}\text{,}\)</span> <span class="process-math">\(\{e,(23)\}\text{,}\)</span> <span class="process-math">\(\{e,(13)\}\text{,}\)</span> <span class="process-math">\(\{e,(123),(132)\}\text{,}\)</span> <span class="process-math">\(S_3\text{.}\)</span>
-</div></div></div>
-</div></article><article class="exercise exercise-like" id="d4cosetexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-223">Find all the cosets of the subgroup <span class="process-math">\(\{R_0,R_{1/2}\}\)</span> of  <span class="process-math">\(D_4\text{.}\)</span>
+<div class="solutions"><details id="subgroups_cosets_section-3-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="subgroups_cosets_section-3-3-2-1">In the "list of values" permutation notation of <a href="" class="xref" data-knowl="./knowl/xref/permutation-reading-exercise.html" title="Checkpoint 2.1.2">Checkpoint 2.1.2</a>, the subgroups of <span class="process-math">\(S_3\)</span> are <span class="process-math">\(\{[1,2,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,1,3]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[1,3,2]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[3,2,1]\}\text{,}\)</span> <span class="process-math">\(\{[1,2,3],[2,3,1],[3,1,2]\}\text{,}\)</span> and <span class="process-math">\(S_3\text{.}\)</span> In cycle notation, the subgroups of <span class="process-math">\(S_3\)</span> (in the same order) are <span class="process-math">\(\{e\}\text{,}\)</span> <span class="process-math">\(\{e,(12)\}\text{,}\)</span> <span class="process-math">\(\{e,(23)\}\text{,}\)</span> <span class="process-math">\(\{e,(13)\}\text{,}\)</span> <span class="process-math">\(\{e,(123),(132)\}\text{,}\)</span> <span class="process-math">\(S_3\text{.}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="d4cosetexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="d4cosetexer-1-1">Find all the cosets of the subgroup <span class="process-math">\(\{R_0,R_{1/2}\}\)</span> of  <span class="process-math">\(D_4\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="subgpsofzexer"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Z_n\)</span>.</span>
 </h4>
-<div class="para logical" id="p-225"><ol class="lower-alpha">
-<li id="li-161"><div class="para" id="p-derived-li-161">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span>
+<div class="para logical" id="subgpsofzexer-2-1"><ol class="lower-alpha">
+<li id="subgpsofzexer-2-1-1-1"><div class="para" id="p-derived-subgpsofzexer-2-1-1-1">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span>
 </div></li>
-<li id="li-162"><div class="para" id="p-derived-li-162">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z_n\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span>
+<li id="subgpsofzexer-2-1-1-2"><div class="para" id="p-derived-subgpsofzexer-2-1-1-2">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(\Z_n\text{.}\)</span> Show that either <span class="process-math">\(H=\{0\}\)</span> or <span class="process-math">\(H=\langle d\rangle\text{,}\)</span> where <span class="process-math">\(d\)</span> is the smallest positive element in <span class="process-math">\(H\text{.}\)</span>
 </div></li>
-<li id="li-163"><div class="para" id="p-derived-li-163">Let <span class="process-math">\(n_1,n_2,\ldots,n_r\)</span> be positive integers. Show that<div class="displaymath process-math">
+<li id="subgpsofzexer-2-1-1-3"><div class="para" id="p-derived-subgpsofzexer-2-1-1-3">Let <span class="process-math">\(n_1,n_2,\ldots,n_r\)</span> be positive integers. Show that<div class="displaymath process-math">
 \begin{equation*}
 \langle n_1,n_2,\ldots,n_r
 \rangle = \langle \gcd(n_1,n_2,\ldots,n_r)\rangle.
 \end{equation*}
 </div>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like">Suggestion: Do the case <span class="process-math">\(r=2\)</span> first.</div></div>
+<details id="subgpsofzexer-2-1-1-3-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Suggestion: Do the case <span class="process-math">\(r=2\)</span> first.</div></details>
 </div></li>
-</ol></div> <div class="para" id="p-226">
+</ol></div> <div class="para" id="subgpsofzexer-2-2">
 <em class="alert">Consequence of this exercise:</em> The greatest common divisor <span class="process-math">\(\gcd(a,b)\)</span> of integers <span class="process-math">\(a,b\)</span> is the smallest positive integer of the form <span class="process-math">\(sa+tb\)</span> over all integers <span class="process-math">\(s,t\text{.}\)</span> Two integers <span class="process-math">\(a,b\)</span> are relatively prime if and only if there exist integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(sa+tb=1\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="center"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Centralizers, Center of a group.</span>
 </h4>
-<div class="para logical" id="p-228">
+<div class="para logical" id="center-2-1">
 <div class="para">The <dfn class="terminology">centralizer</dfn> of an element <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(C(a)\text{,}\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -575,15 +490,15 @@ Z(G) = \{g\in G\colon ag=ga \;\; \forall a\in G\}.
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-167"><div class="para" id="p-derived-li-167">Show that the centralizer <span class="process-math">\(C(a)\)</span> of any element <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="center-2-1-14-1"><div class="para" id="p-derived-center-2-1-14-1">Show that the centralizer <span class="process-math">\(C(a)\)</span> of any element <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-168"><div class="para" id="p-derived-li-168">Show that the center <span class="process-math">\(Z(G)\)</span> of a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="center-2-1-14-2"><div class="para" id="p-derived-center-2-1-14-2">Show that the center <span class="process-math">\(Z(G)\)</span> of a group <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="orderofaneltexer"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a group element.</span>
 </h4>
-<div class="para logical" id="p-230">
+<div class="para logical" id="orderofaneltexer-2-1">
 <div class="para">Let <span class="process-math">\(g\)</span> be an element of a group <span class="process-math">\(G\text{.}\)</span> The <dfn class="terminology">order</dfn> of <span class="process-math">\(g\text{,}\)</span> denoted <span class="process-math">\(|g|\text{,}\)</span> is the smallest positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(g^n=e\text{,}\)</span> if such an integer exists. If there is no positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(g^n=e\text{,}\)</span> then <span class="process-math">\(g\)</span> is said to have <em class="emphasis">infinite</em> order. Show that, if the order of <span class="process-math">\(g\)</span> is finite, say <span class="process-math">\(|g|=n\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -591,36 +506,34 @@ Z(G) = \{g\in G\colon ag=ga \;\; \forall a\in G\}.
 \{g^0,g^1,g^2,\ldots,g^{n-1}\}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-231">
+</div> <div class="para" id="orderofaneltexer-2-2">
 <em class="alert">Consequence of this exercise:</em> If <span class="process-math">\(G\)</span> is cyclic with generator <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\(|G|=|g|\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="cosetspartitionexer"><h4 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets of a subgroup partition the group, Lagrange's Theorem.</span>
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets of a subgroup partition the group, Lagrange’s Theorem.</span>
 </h4>
-<div class="para logical" id="p-233"><ol class="lower-alpha">
-<li id="li-171"><div class="para" id="p-derived-li-171">Prove <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>.</div></li>
-<li id="li-172"><div class="para" id="p-derived-li-172">Now suppose that a group <span class="process-math">\(G\)</span> is finite. Show that all of the cosets of a subgroup <span class="process-math">\(H\)</span> have the same size.</div></li>
-<li id="li-173"><div class="para" id="p-derived-li-173">Prove the following. <article class="assemblage assemblage-like" id="assemblage-9"><h5 class="heading"><span class="title"><dfn class="terminology">Lagrange's Theorem</dfn>.</span></h5>
-<div class="para" id="p-234">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(H\)</span> is a subgroup, then the order of <span class="process-math">\(H\)</span> divides the order of <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical" id="cosetspartitionexer-2-1"><ol class="lower-alpha">
+<li id="cosetspartitionexer-2-1-1-1"><div class="para" id="p-derived-cosetspartitionexer-2-1-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>.</div></li>
+<li id="cosetspartitionexer-2-1-1-2"><div class="para" id="p-derived-cosetspartitionexer-2-1-1-2">Now suppose that a group <span class="process-math">\(G\)</span> is finite. Show that all of the cosets of a subgroup <span class="process-math">\(H\)</span> have the same size.</div></li>
+<li id="cosetspartitionexer-2-1-1-3"><div class="para" id="p-derived-cosetspartitionexer-2-1-1-3">Prove the following. <article class="assemblage assemblage-like" id="cosetspartitionexer-2-1-1-3-1"><h5 class="heading"><span class="title"><dfn class="terminology">Lagrange’s Theorem</dfn>.</span></h5>
+<div class="para" id="cosetspartitionexer-2-1-1-3-1-3">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(H\)</span> is a subgroup, then the order of <span class="process-math">\(H\)</span> divides the order of <span class="process-math">\(G\text{.}\)</span>
 </div></article>
 </div></li>
 </ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><div class="para" id="p-235">For part (b), let <span class="process-math">\(aH,bH\)</span> be cosets. Show that the function <span class="process-math">\(aH\to bH\)</span> given by <span class="process-math">\(x\to ba^{-1}x\)</span> is a bijection.</div></div></div>
-</div></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h4 class="heading">
-<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Consequences of Lagrange's Theorem.</span>
+<div class="solutions"><details id="cosetspartitionexer-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="cosetspartitionexer-3-1">For part (b), let <span class="process-math">\(aH,bH\)</span> be cosets. Show that the function <span class="process-math">\(aH\to bH\)</span> given by <span class="process-math">\(x\to ba^{-1}x\)</span> is a bijection.</div></div></details></div></article><article class="exercise exercise-like" id="lagrangeconseqexer"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Consequences of Lagrange’s Theorem.</span>
 </h4>
-<div class="para logical" id="p-237"><ol class="lower-alpha">
-<li id="li-177"><div class="para" id="p-derived-li-177">Show that the order of any element of a finite group divides the order of the group.</div></li>
-<li id="li-178"><div class="para" id="p-derived-li-178">Let <span class="process-math">\(G\)</span> be a finite group, and let <span class="process-math">\(g\in
+<div class="para logical" id="lagrangeconseqexer-2-1"><ol class="lower-alpha">
+<li id="lagrangeconseqexer-2-1-1-1"><div class="para" id="p-derived-lagrangeconseqexer-2-1-1-1">Show that the order of any element of a finite group divides the order of the group.</div></li>
+<li id="lagrangeconseqexer-2-1-1-2"><div class="para" id="p-derived-lagrangeconseqexer-2-1-1-2">Let <span class="process-math">\(G\)</span> be a finite group, and let <span class="process-math">\(g\in
 G\text{.}\)</span> Show that <span class="process-math">\(g^{|G|}=e\text{.}\)</span>
 </div></li>
-<li id="li-179"><div class="para" id="p-derived-li-179">Show that a group of prime order is cyclic.</div></li>
+<li id="lagrangeconseqexer-2-1-1-3"><div class="para" id="p-derived-lagrangeconseqexer-2-1-1-3">Show that a group of prime order is cyclic.</div></li>
 </ol></div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="groupdefsection.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-9.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="groupdefsection.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="groups_chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
+<div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>

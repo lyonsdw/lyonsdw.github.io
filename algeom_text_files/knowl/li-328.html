@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,18 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">a</span><span class="period">.</span>
-</h4>Start with the inverse of the desired transformation, then take the inverse using matrix methods.<div class="displaymath process-math">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">b</span><span class="period">.</span>
+</h4>Put together the pieces from the previous part.<div class="displaymath process-math">
 \begin{align*}
 [a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
 \frac{z-b}{z-c}\frac{a-c}{a-b}\right]\\
+[1\to d, 0\to e,\infty\to f]
+\amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]\\
+[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]\\
+\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
 \amp \leftrightarrow
-\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}\\
-[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
-\twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  \\
-[1\to a, 0\to b,\infty\to c]
-\amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+\twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
 \end{align*}
 </div></article><span class="incontext"><a href="section-13.html#li-328" class="internal">in-context</a></span>
 </body>

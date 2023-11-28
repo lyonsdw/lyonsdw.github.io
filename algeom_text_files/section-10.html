@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Group actions</title>
@@ -14,68 +14,97 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Groups and Geometries">
 <meta property="book:author" content="David W. Lyons">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://quantum.lvc.edu/lyons" target="_blank"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
 </h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
 <li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
 <ol class="hidden avatar">
 <li data-val="You!" tabindex="-1">
@@ -177,9 +206,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -220,7 +247,7 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
 <li>
 <div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural">
@@ -409,10 +436,10 @@ window.MathJax = {
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-10"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Group actions</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.5</span><span class="space"> </span><span class="title">Group actions</span>
 </h2>
 <section class="subsection" id="subsection-29"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title"></span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="space"> </span><span class="title"></span>
 </h3>
 <article class="definition definition-like" id="definition-18"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group action, orbit, stabilizer.</span>
@@ -441,28 +468,28 @@ window.MathJax = {
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-actionegexer"><article class="exercise exercise-like"><div class="para logical" id="p-296">
 <div class="para">Find the indicated orbits and stabilizers for each of the following group actions.</div>
 <ol class="decimal">
-<li id="li-226"><div class="para" id="p-derived-li-226">
+<li id="li-225"><div class="para" id="p-derived-li-225">
 <span class="process-math">\(D_4\)</span> acts on the square  <span class="process-math">\(X=\{(x,y)\in \R^2\colon
 -1\leq x,y\leq 1\}\)</span> by rotations and reflections. What is the orbit of <span class="process-math">\((1,1)\text{?}\)</span> What is the orbit of <span class="process-math">\((1,0)\text{?}\)</span> What is the stabilizer of <span class="process-math">\((1,1)\text{?}\)</span> What is the stabilizer of <span class="process-math">\((1,0)\text{?}\)</span>
 </div></li>
-<li id="li-227"><div class="para" id="p-derived-li-227">The circle group <span class="process-math">\(S^1\)</span> (see <a href="groupintrosection.html#s1grpdef" class="internal" title="Subsection 2.1.3: The norm 1 complex numbers">Subsection 2.1.3</a>) acts on the two-sphere <span class="process-math">\(S^2\)</span> by rotation about the <span class="process-math">\(z\)</span>-axis. Given an element <span class="process-math">\(e^{i\alpha}\)</span> in <span class="process-math">\(S^1\)</span> a point <span class="process-math">\((\theta,\phi)\)</span> in <span class="process-math">\(S^2\)</span> (in spherical coordinates), the action is given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/s1grpdef.html">
+<li id="li-226"><div class="para" id="p-derived-li-226">The circle group <span class="process-math">\(S^1\)</span> (see <a href="groupintrosection.html#s1grpdef" class="internal" title="Subsection 2.1.3: The norm 1 complex numbers">Subsection 2.1.3</a>) acts on the two-sphere <span class="process-math">\(S^2\)</span> by rotation about the <span class="process-math">\(z\)</span>-axis. Given an element <span class="process-math">\(e^{i\alpha}\)</span> in <span class="process-math">\(S^1\)</span> a point <span class="process-math">\((\theta,\phi)\)</span> in <span class="process-math">\(S^2\)</span> (in spherical coordinates), the action is given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/s1grpdef.html">
 \begin{equation*}
 e^{i\alpha}\cdot (\theta,\phi)=(\theta,\phi+\alpha).
 \end{equation*}
 </div>What is the orbit of <span class="process-math">\((\pi/4,\pi/6)\text{?}\)</span> What is the orbit of the north pole <span class="process-math">\((0,0)\text{?}\)</span> What is the stabilizer of <span class="process-math">\((\pi/4,\pi/6)\text{?}\)</span> What is the stabilizer of the north pole?</div></li>
-<li id="li-228"><div class="para" id="p-derived-li-228">Any group <span class="process-math">\(G\)</span> acts on itself by <em class="emphasis">conjugation</em>, that is, by <span class="process-math">\((\phi(g))(x)=gxg^{-1}=C_g(x)\)</span> (see <a href="" class="xref" data-knowl="./knowl/conjugationexer.html" title="Exercise 2.4.2.10: Conjugation">Exercise 2.4.2.10</a>). Describe the orbit and stabilizer of a group element <span class="process-math">\(x\text{.}\)</span>
+<li id="li-227"><div class="para" id="p-derived-li-227">Any group <span class="process-math">\(G\)</span> acts on itself by <em class="emphasis">conjugation</em>, that is, by <span class="process-math">\((\phi(g))(x)=gxg^{-1}=C_g(x)\)</span> (see <a href="" class="xref" data-knowl="./knowl/conjugationexer.html" title="Exercise 2.4.2.10: Conjugation">Exercise 2.4.2.10</a>). Describe the orbit and stabilizer of a group element <span class="process-math">\(x\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><ol class="decimal">
-<li id="li-229"><div class="para" id="p-derived-li-229">
+<li id="li-228"><div class="para" id="p-derived-li-228">
 <span class="process-math">\(\Orb((1,1))=\{(1,1),(1,-1),(-1,1),(-1,-1)\}\text{,}\)</span> <span class="process-math">\(\Orb((1,0))=\{(1,0),(-1,0),(0,1),(0,-1)\}\text{,}\)</span> <span class="process-math">\(\Stab((1,1))=  \{R_0,F_{D'}\}\text{,}\)</span> <span class="process-math">\(\Stab((1,0))=\{R_0,F_H\}\)</span>
 </div></li>
-<li id="li-230"><div class="para" id="p-derived-li-230">
+<li id="li-229"><div class="para" id="p-derived-li-229">
 <span class="process-math">\(\Orb(\pi/4,\pi/6)\)</span> is the horizontal circle on <span class="process-math">\(S^2\)</span> with "latitude" <span class="process-math">\(\pi/4\text{,}\)</span> <span class="process-math">\(\Orb(0,0)=\{(0,0)\}\text{,}\)</span> <span class="process-math">\(\Stab(\pi/4,\pi/6)=\{1\}\text{,}\)</span> <span class="process-math">\(\Stab{(0,0)}=S^1\)</span>
 </div></li>
-<li id="li-231"><div class="para" id="p-derived-li-231">
+<li id="li-230"><div class="para" id="p-derived-li-230">
 <span class="process-math">\(\Orb(x)=\{gxg^{-1}\colon g\in G\}\text{,}\)</span> <span class="process-math">\(\Stab(x)=C(x)\)</span> (the centralizer of <span class="process-math">\(x\)</span>)</div></li>
 </ol></div></div>
 </div></article></div>
@@ -470,7 +497,24 @@ e^{i\alpha}\cdot (\theta,\phi)=(\theta,\phi+\alpha).
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-showstabisgpexer"><article class="exercise exercise-like"><div class="para" id="p-297">Show that the stabilizer of an element <span class="process-math">\(x\)</span> in a <span class="process-math">\(G\)</span>-space <span class="process-math">\(X\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></article></div>
-<article class="proposition theorem-like" id="orbitspartition"><h4 class="heading">
+<article class="commentary" id="commentary-72"><h4 class="heading"><span class="title">Instructor’s solution for Checkpoint 2.5.3.</span></h4>
+<div class="para logical" id="p-298">
+<div class="para">We use the 2-step subgroup test. First, note that <span class="process-math">\(\Stab(x)\)</span> is not empty, because <span class="process-math">\(\Stab(x)\)</span> contains <span class="process-math">\(e_G\)</span> (the action <span class="process-math">\(G\to \Perm(X)\)</span> is a group homomorphism, so <span class="process-math">\(e_G\)</span> must go to the identity transformation on <span class="process-math">\(X\)</span> by Property 1 of <a href="" class="xref" data-knowl="./knowl/homismbasicproperties.html" title="Proposition 2.4.5: Basic properties of homomorphisms">Proposition 2.4.5</a>). Now suppose <span class="process-math">\(g,h\in
+\Stab(x)\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
+\begin{equation*}
+(gh)(x)=g(hx)=gx=x
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(gh\in \Stab(x)\text{.}\)</span> Also, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/homismbasicproperties.html">
+\begin{equation*}
+x=(g^{-1}g)x
+=g^{-1}(gx)=g^{-1}x\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(g^{-1}\in \Stab(x)\text{.}\)</span> This completes the proof.</div>
+</div></article><article class="proposition theorem-like" id="orbitspartition"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Orbits of a group action form a partition.</span>
 </h4>
 <div class="para logical" id="p-299">
@@ -482,8 +526,23 @@ X/G=\{\Orb(x)\colon x\in X\}
 </div>
 </div></article><article class="exercise exercise-like" id="orbitspaceexer"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-orbitspaceexer"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-orbitspaceexer"><article class="exercise exercise-like"><div class="para" id="p-300">Describe <span class="process-math">\(X/G\)</span> for each of the three group actions in <a href="" class="xref" data-knowl="./knowl/actionegexer.html" title="Checkpoint 2.5.2">Checkpoint 2.5.2</a>.</div></article></div></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title"></span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-orbitspaceexer"><article class="exercise exercise-like"><div class="para" id="p-300">Describe <span class="process-math">\(X/G\)</span> for each of the three group actions in <a href="" class="xref" data-knowl="./knowl/actionegexer.html" title="Checkpoint 2.5.2">Checkpoint 2.5.2</a>.</div></article></div>
+<article class="commentary" id="commentary-73"><h4 class="heading"><span class="title">Instructor’s solution for Checkpoint 2.5.5.</span></h4>
+<div class="para logical" id="p-301"><ol class="decimal">
+<li id="li-231"><div class="para logical" id="p-302">
+<div class="para">There are 3 types of orbits for the action of <span class="process-math">\(D_4\)</span> on the square.</div>
+<ul class="disc">
+<li id="li-232"><div class="para" id="p-derived-li-232">the 1-point set <span class="process-math">\(\{(0,0)\}\)</span> (a single orbit)</div></li>
+<li id="li-233"><div class="para" id="p-derived-li-233">a 4-point set, the vertices of a square, of the form <span class="process-math">\((\pm a,\pm a)\)</span> or <span class="process-math">\(\{(\pm a,0),(0\pm a)\}\)</span> (infinitely many orbits, one for each <span class="process-math">\(a\)</span> in the range <span class="process-math">\(0\lt a\leq 1)\)</span>
+</div></li>
+<li id="li-234"><div class="para" id="p-derived-li-234">an 8-point set of the form <span class="process-math">\(\{(\pm a,\pm b),(\pm b,\pm
+a)\}\)</span> (infinitely many orbits, one for each <span class="process-math">\(0\leq a\lt b\)</span>)</div></li>
+</ul>
+</div></li>
+<li id="li-235"><div class="para" id="p-derived-li-235">The orbits are all the latitude circles with latitude <span class="process-math">\(\theta\text{,}\)</span> for <span class="process-math">\(0\lt \theta\lt \pi/2\text{,}\)</span> and two 1-point orbits, the north and south poles.</div></li>
+<li id="li-236"><div class="para" id="p-derived-li-236">For the action of a group on itself by conjugation, the orbits are conjugacy classes. How many orbits and how they look depends on the group.</div></li>
+</ol></div></article></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="space"> </span><span class="title"></span>
 </h3>
 <article class="theorem theorem-like" id="orbitstabthm"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Orbit-Stabilizer Theorem.</span>
@@ -502,7 +561,7 @@ g\Stab(x) \leftrightarrow gx.
 \end{equation*}
 </div>
 </div></article></section><section class="exercises" id="exercises-10"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">2.5.3</span> <span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="gpselfactionexer"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Actions of a group on itself.</span>
@@ -529,14 +588,27 @@ g\to C_g
 <div class="para">where <span class="process-math">\(C_g\)</span> is given by <span class="process-math">\(C_g(h)=ghg^{-1}\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-238"><div class="para" id="p-derived-li-238">Show that, for <span class="process-math">\(g\in G\text{,}\)</span> the maps <span class="process-math">\(L_g,R_g,C_g\)</span> are elements of <span class="process-math">\(\Perm(G)\text{.}\)</span>
+<li id="li-237"><div class="para" id="p-derived-li-237">Show that, for <span class="process-math">\(g\in G\text{,}\)</span> the maps <span class="process-math">\(L_g,R_g,C_g\)</span> are elements of <span class="process-math">\(\Perm(G)\text{.}\)</span>
 </div></li>
-<li id="li-239"><div class="para" id="p-derived-li-239">Show that each of these maps <span class="process-math">\(L,R,C\)</span> is indeed a group action.</div></li>
-<li id="li-240"><div class="para" id="p-derived-li-240">Show that the map <span class="process-math">\(L\)</span> is injective, so that <span class="process-math">\(G\approx L(G)\text{.}\)</span>
+<li id="li-238"><div class="para" id="p-derived-li-238">Show that each of these maps <span class="process-math">\(L,R,C\)</span> is indeed a group action.</div></li>
+<li id="li-239"><div class="para" id="p-derived-li-239">Show that the map <span class="process-math">\(L\)</span> is injective, so that <span class="process-math">\(G\approx L(G)\text{.}\)</span>
 </div></li>
 </ol>
 </div> <div class="para" id="p-305">
-<em class="alert">Consequence of this exercise:</em> Every group is isomorphic to a subgroup of a permutation group.</div></article><article class="exercise exercise-like" id="cosetsrevisitedexer"><h4 class="heading">
+<em class="alert">Consequence of this exercise:</em> Every group is isomorphic to a subgroup of a permutation group.</div></article><article class="commentary" id="commentary-74"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.1.</span></h4>
+<div class="para logical" id="p-306"><ol class="lower-alpha">
+<li id="li-240"><div class="para" id="p-derived-li-240">We will show that <span class="process-math">\(L_g\)</span> is invertible. Similar arguments show that <span class="process-math">\(R_g,C_g\)</span> are invertible. We have<div class="displaymath process-math">
+\begin{equation*}
+L_{g^{-1}}(L_g(x))=g^{-1}gx=x
+\end{equation*}
+</div>for all <span class="process-math">\(x\in G\text{.}\)</span> A similar argument shows that <span class="process-math">\(L_g(L_{g^{-1}}(x))=x\)</span> for all <span class="process-math">\(x\text{.}\)</span> We conclude that <span class="process-math">\(L_g\)</span> is invertible, with inverse <span class="process-math">\((L_g)^{-1}=L_{g^{-1}}\text{.}\)</span> Thus <span class="process-math">\(L_g\)</span> is an element of <span class="process-math">\(\Perm(G)\text{,}\)</span> as desired.</div></li>
+<li id="li-241"><div class="para" id="p-derived-li-241">You just have to check that <span class="process-math">\(L_{gh}=L_g\circ
+L_h\text{,}\)</span> <span class="process-math">\(R_{gh}=R_g\circ R_h\)</span> (here you see why the inverse is needed!), and <span class="process-math">\(C_{gh}=C_g\circ C_h\text{.}\)</span> Here is the argument for <span class="process-math">\(L\text{.}\)</span> Similar arguments work for <span class="process-math">\(R,C\text{.}\)</span> Let <span class="process-math">\(g,h\in G\text{.}\)</span> We have <span class="process-math">\(L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)\)</span> for all <span class="process-math">\(x\in
+G\text{,}\)</span> so we have <span class="process-math">\(L_g\circ L_h = L_{gh}\text{.}\)</span>
+</div></li>
+<li id="li-242"><div class="para" id="p-derived-li-242">For injectivity, if <span class="process-math">\(L_g=L_h\text{,}\)</span> then <span class="process-math">\(g=L_g(e)=L_h(e)=h\text{.}\)</span> By the First Isomorphism Theorem, we conclude that <span class="process-math">\(G\approx L(G)\text{,}\)</span> which is subgroup of <span class="process-math">\(\Perm(G)\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="cosetsrevisitedexer"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets, revisited.</span>
 </h4>
 <div class="para logical" id="p-307">
@@ -547,7 +619,24 @@ R\colon H\to \Perm(G)
 \end{equation*}
 </div>
 <div class="para">given by <span class="process-math">\(h\to R_h\text{,}\)</span> where <span class="process-math">\(R_h(g)=gh^{-1}\)</span> (this is the restriction of right inverse multiplication action in <a href="" class="xref" data-knowl="./knowl/gpselfactionexer.html" title="Exercise 2.5.3.1: Actions of a group on itself">Exercise 2.5.3.1</a> to <span class="process-math">\(H\)</span>). Show that the orbits of this action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> are the same as the cosets of <span class="process-math">\(H\text{.}\)</span> This shows that the two potentially different meanings of <span class="process-math">\(G/H\)</span> (one is the set of cosets, the other is the set of orbits of the action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> via <span class="process-math">\(R\)</span>), are in fact in agreement.</div>
-</div> </article><article class="exercise exercise-like" id="gpactonvectspaceexer"><h4 class="heading">
+</div> </article><article class="commentary" id="commentary-75"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.2.</span></h4>
+<div class="para logical" id="p-308">
+<div class="para">An orbit of the group action <span class="process-math">\(H\to \Perm(G)\)</span> is a set of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Orb(g)=\{gh^{-1}\colon h\in H\}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(g\in
+G\text{.}\)</span> Consider the map <span class="process-math">\(x\to gx^{-1}g\text{.}\)</span> For <span class="process-math">\(x=gh^{-1}\in
+\Orb(g)\text{,}\)</span> we have <span class="process-math">\(i(gh^{-1})=g(gh^{-1})g=gh\text{,}\)</span> so the image of <span class="process-math">\(i\)</span> is contained in the coset <span class="process-math">\(gH\text{.}\)</span> The map <span class="process-math">\(i\)</span> is its own inverse:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(i(x))= i(gxg^{-1})= g(gxg^{-1})g=x\text{,}
+\end{equation*}
+</div>
+<div class="para">so we conclude that <span class="process-math">\(i\colon \Orb(g)\to gH\)</span> is bijective. Thus we have established that <span class="process-math">\(\Orb(g)=gH\text{,}\)</span> as desired.</div>
+</div></article><article class="exercise exercise-like" id="gpactonvectspaceexer"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The natural action of a matrix group on a vector space.</span>
 </h4>
 <div class="para logical" id="p-309">
@@ -558,41 +647,105 @@ g\to [v\to g\cdot v],
 \end{equation*}
 </div>
 <div class="para">where the "dot" in the expression <span class="process-math">\(g\cdot v\)</span> is ordinary multiplication of a matrix times a column vector. Show that this is indeed a group action.</div>
+</div></article><article class="commentary" id="commentary-76"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.3.</span></h4>
+<div class="para logical" id="p-310">
+<div class="para">Let <span class="process-math">\(\phi\)</span> denote the map <span class="process-math">\(\phi\colon G\to \Perm(X)\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g\to [v\to g\cdot v],
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\((\phi(g))(v)=gv\)</span> for <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(v\in X\text{.}\)</span> To see that <span class="process-math">\(\phi\)</span> is a homomorphism, we have,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\phi(gh))(v)=(gh)v = g(hv) =(\phi(g)\circ\phi(h))(v)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v\in X\text{.}\)</span> [Note: the equality <span class="process-math">\((gh)v=g(hv)\)</span> uses the fact that matrix multiplication is associative.] We conclude that <span class="process-math">\(\phi(gh)=\phi(g)\circ \phi(h)\text{,}\)</span> as required.</div>
 </div></article><article class="exercise exercise-like" id="orbitspartitionexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-311">Prove <a href="" class="xref" data-knowl="./knowl/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></article><article class="exercise exercise-like" id="orbitstabthmpfexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-313">Prove The Orbit-Stabilizer Theorem (<a href="" class="xref" data-knowl="./knowl/orbitstabthm.html" title="Theorem 2.5.6: The Orbit-Stabilizer Theorem">Theorem 2.5.6</a>).</div></article><article class="exercise exercise-like" id="projspaceandgroupexer"><h4 class="heading">
+<div class="para" id="p-311">Prove <a href="" class="xref" data-knowl="./knowl/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></article><article class="commentary" id="commentary-77"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.4 (proof of Proposition 2.5.4).</span></h4>
+<div class="para" id="p-312">First, we check that <span class="process-math">\(\sim_G\)</span> is an equivalence relation. For symmetry, we have <span class="process-math">\(x=e_Gx\)</span> for all <span class="process-math">\(x\in
+X\text{.}\)</span> For reflexivity, if <span class="process-math">\(y=gx\text{,}\)</span> then <span class="process-math">\(x=g^{-1}y\text{.}\)</span> For transitivity, if <span class="process-math">\(y=gx\)</span> and <span class="process-math">\(z=hy\text{,}\)</span> then <span class="process-math">\(z=hy=h(gx)=(hg)x\text{.}\)</span> It follows that the set of equivalence classes <span class="process-math">\(X/\!\!\sim_G\)</span> forms a partition of <span class="process-math">\(X\text{.}\)</span> Since <span class="process-math">\(X/G=X/\!\!\sim_G\)</span> by definition, it follows that orbits form a partition.</div></article><article class="exercise exercise-like" id="orbitstabthmpfexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-313">Prove The Orbit-Stabilizer Theorem (<a href="" class="xref" data-knowl="./knowl/orbitstabthm.html" title="Theorem 2.5.6: The Orbit-Stabilizer Theorem">Theorem 2.5.6</a>).</div></article><article class="commentary" id="commentary-78"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.5.</span></h4>
+<div class="para" id="p-314">Let <span class="process-math">\(x_0\in X\)</span> and consider the function <span class="process-math">\(f_{x_0}\colon G\to X\)</span> given by <span class="process-math">\(f_{x_0}(g)= gx_0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/constructequivrelpart.html" title="Fact 1.4.5: Construction of equivalence relations and partitions from functions">Fact 1.4.5</a> to <span class="process-math">\(f_{x_0}\text{,}\)</span> we have <span class="process-math">\(G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)\text{,}\)</span> and <span class="process-math">\(f_{x_0}(G)=\Orb(x_0)\text{.}\)</span>
+</div>
+<div class="para logical" id="p-315">
+<div class="para">Alternatively, one can check that the given map is well-defined, one-to-one, and onto. Let <span class="process-math">\(\pi\)</span> denote the map <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span>
+</div>
+<ul class="disc">
+<li id="li-243"><div class="para" id="p-derived-li-243">(<span class="process-math">\(\pi\)</span> is well-defined) Suppose <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cosetspartition.html" title="Proposition 2.3.9: Cosets as equivalence classes">Proposition 2.3.9</a>, we have <span class="process-math">\(g^{-1}h\in
+\Stab(x)\text{.}\)</span> Thus we have <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(gx=hx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
+<li id="li-244"><div class="para" id="p-derived-li-244">(<span class="process-math">\(\pi\)</span> is one-to-one) Suppose <span class="process-math">\(\pi(g\Stab(x))=gx=hx=\pi(h\Stab(x))\text{.}\)</span> Then <span class="process-math">\(g^{-1}hx=x\text{,}\)</span> so <span class="process-math">\(g^{-1}h\in \Stab(x)\text{,}\)</span> so <span class="process-math">\(g\Stab(x)=h\Stab(x)\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is one-to-one.</div></li>
+<li id="li-245"><div class="para" id="p-derived-li-245">(<span class="process-math">\(\pi\)</span> is onto) Given <span class="process-math">\(gx\in \Orb(x)\text{,}\)</span> we have <span class="process-math">\(\pi(g\Stab(x))=gx\text{.}\)</span> We conclude that <span class="process-math">\(\pi\)</span> is onto.</div></li>
+</ul>
+</div></article><article class="exercise exercise-like" id="projspaceandgroupexer"><h4 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The projective linear group action on projective space.</span>
 </h4>
 <div class="para logical" id="p-316">
 <div class="para">Let <span class="process-math">\(V\)</span> be a vector space over a field <span class="process-math">\(\F\)</span> (in this course, the base field <span class="process-math">\(\F\)</span> is either the real numbers <span class="process-math">\(\R\)</span> or the complex numbers <span class="process-math">\(\C\)</span>). The group <span class="process-math">\(\F^\ast\)</span> of nonzero elements in <span class="process-math">\(\F\)</span> acts on the set <span class="process-math">\(V\setminus \!\{0\}\)</span> of nonzero elements in <span class="process-math">\(V\)</span> by scalar multiplication, that is, by the map <span class="process-math">\(\alpha \to [v\to \alpha v]\text{.}\)</span> The set of orbits <span class="process-math">\((V\setminus\!\{0\})/\F^\ast\)</span> is called the <em class="emphasis">projectivization</em> of <span class="process-math">\(V\text{,}\)</span> or simply <dfn class="terminology">projective space</dfn>, and is denoted <span class="process-math">\(\Proj(V).\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-247"><div class="para" id="p-derived-li-247">Let <span class="process-math">\(\sim_{\text{proj}}\)</span> denote the equivalence relation that defines the orbits <span class="process-math">\((V\setminus \!\{0\})/\F^\ast\text{.}\)</span> Verify that <span class="process-math">\(\sim_{\text{proj}}\)</span> is given by <span class="process-math">\(x\sim_{\text{proj}} y\)</span> if and only if <span class="process-math">\(x=\alpha y\)</span> for some <span class="process-math">\(\alpha\in\F^\ast\text{.}\)</span>
+<li id="li-246"><div class="para" id="p-derived-li-246">Let <span class="process-math">\(\sim_{\text{proj}}\)</span> denote the equivalence relation that defines the orbits <span class="process-math">\((V\setminus \!\{0\})/\F^\ast\text{.}\)</span> Verify that <span class="process-math">\(\sim_{\text{proj}}\)</span> is given by <span class="process-math">\(x\sim_{\text{proj}} y\)</span> if and only if <span class="process-math">\(x=\alpha y\)</span> for some <span class="process-math">\(\alpha\in\F^\ast\text{.}\)</span>
 </div></li>
-<li id="li-248"><div class="para" id="p-derived-li-248">Verify that the group <span class="process-math">\(GL(V)\)</span> (the group of invertible linear transformations of <span class="process-math">\(V\)</span>) acts on <span class="process-math">\(\Proj(V)\)</span> by<div class="displaymath process-math" id="glnprojaction">
+<li id="li-247"><div class="para" id="p-derived-li-247">Verify that the group <span class="process-math">\(GL(V)\)</span> (the group of invertible linear transformations of <span class="process-math">\(V\)</span>) acts on <span class="process-math">\(\Proj(V)\)</span> by<div class="displaymath process-math" id="glnprojaction">
 \begin{equation}
 g\cdot [{v}] = [g({v})]\tag{2.5.1}
 \end{equation}
 </div>for <span class="process-math">\(g\in GL(V)\)</span> and <span class="process-math">\({v}\in V\setminus\!\{0\}\text{.}\)</span>
 </div></li>
-<li id="li-249"><div class="para" id="p-derived-li-249">Show that the kernel of the map <span class="process-math">\(GL(V)\to
+<li id="li-248"><div class="para" id="p-derived-li-248">Show that the kernel of the map <span class="process-math">\(GL(V)\to
 \Perm(\Proj(V))\)</span> given by  <a href="" class="xref" data-knowl="./knowl/glnprojaction.html" title="Equation 2.5.1">(2.5.1)</a> is the subgroup <span class="process-math">\(K=\{\alpha\Id\colon \alpha\in \F^\ast\}\text{.}\)</span>
 </div></li>
-<li id="li-250"><div class="para" id="p-derived-li-250">Conclude that the <dfn class="terminology">projective linear group</dfn>  <span class="process-math">\(PGL(V):=GL(V)/K\)</span> acts on <span class="process-math">\(\Proj(V)\text{.}\)</span>
+<li id="li-249"><div class="para" id="p-derived-li-249">Conclude that the <dfn class="terminology">projective linear group</dfn>  <span class="process-math">\(PGL(V):=GL(V)/K\)</span> acts on <span class="process-math">\(\Proj(V)\text{.}\)</span>
 </div></li>
-<li id="li-251"><div class="para" id="p-derived-li-251">Show that <span class="process-math">\(\F^\ast\)</span> acts on <span class="process-math">\(GL(V)\)</span> by <span class="process-math">\(\alpha\cdot T=\alpha T\text{,}\)</span> and that <span class="process-math">\(PGL(V)\approx GL(V)/\F^\ast\text{.}\)</span>
+<li id="li-250"><div class="para" id="p-derived-li-250">Show that <span class="process-math">\(\F^\ast\)</span> acts on <span class="process-math">\(GL(V)\)</span> by <span class="process-math">\(\alpha\cdot T=\alpha T\text{,}\)</span> and that <span class="process-math">\(PGL(V)\approx GL(V)/\F^\ast\text{.}\)</span>
 </div></li>
-<li id="li-252"><div class="para" id="p-derived-li-252">Let <span class="process-math">\(s\colon S^2 \to \extC\)</span> denote the stereographic projection (see <a href="" class="xref" data-knowl="./knowl/stereoprojdefn.html" title="Equation 1.3.6">(1.3.6)</a>). Show that the map <span class="process-math">\(\Proj(\C^2)\to S^2\)</span> given by <span class="process-math">\([(\alpha,\beta)]\to s^{-1}(\alpha/\beta)\)</span> if <span class="process-math">\(\beta\neq 0\)</span> and given by <span class="process-math">\([(\alpha,\beta)]\to (0,0,1)\)</span> if <span class="process-math">\(\beta=0\)</span> is  well-defined and is a bijection.</div></li>
+<li id="li-251"><div class="para" id="p-derived-li-251">Let <span class="process-math">\(s\colon S^2 \to \extC\)</span> denote the stereographic projection (see <a href="" class="xref" data-knowl="./knowl/stereoprojdefn.html" title="Equation 1.3.6">(1.3.6)</a>). Show that the map <span class="process-math">\(\Proj(\C^2)\to S^2\)</span> given by <span class="process-math">\([(\alpha,\beta)]\to s^{-1}(\alpha/\beta)\)</span> if <span class="process-math">\(\beta\neq 0\)</span> and given by <span class="process-math">\([(\alpha,\beta)]\to (0,0,1)\)</span> if <span class="process-math">\(\beta=0\)</span> is  well-defined and is a bijection.</div></li>
 </ol>
-</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Other notations for <span class="process-math">\((\phi(g))(x)\)</span> are <span class="process-math">\(g(x)\text{,}\)</span> <span class="process-math">\(g\cdot x\text{,}\)</span> and <span class="process-math">\(g.x\text{.}\)</span>
+</div></article><article class="commentary" id="commentary-79"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 2.5.3.6.</span></h4>
+<div class="para logical" id="p-317"><ol class="lower-alpha">
+<li id="li-252"><div class="para" id="p-derived-li-252">Apply <a href="" class="xref" data-knowl="./knowl/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></li>
+<li id="li-253"><div class="para" id="p-derived-li-253">Apply <a href="" class="xref" data-knowl="./knowl/welldefinedness.html" title="Fact 1.4.4: Construction of functions on sets of equivalence classes">Fact 1.4.4</a> (check that the action of <span class="process-math">\(g\)</span> is constant on projective equivalence classes of vectors).</div></li>
+<li id="li-254"><div class="para" id="p-derived-li-254">Let <span class="process-math">\(\phi\colon GL(V)\to \Perm(\Proj(V))\)</span> be the action defined by Equation <a href="" class="xref" data-knowl="./knowl/glnprojaction.html" title="Equation 2.5.1">(2.5.1)</a>. It is easy to check that <span class="process-math">\(K\subseteq \ker(\phi)\text{.}\)</span> Containment in the other direction requires a short linear algebra argument. Suppose <span class="process-math">\(g\in
+\ker(\phi)\text{.}\)</span> This means that for every <span class="process-math">\(v\in V\text{,}\)</span> there is a nonzero scalar <span class="process-math">\(\lambda_v\)</span> such that <span class="process-math">\(gv=\lambda_v
+v\)</span> (that is, every vector in <span class="process-math">\(V\)</span> is an eigenvector of the operator <span class="process-math">\(g\)</span>). If <span class="process-math">\(\dim(V)=1\text{,}\)</span> we are done. If <span class="process-math">\(\dim(V)\gt 1\text{,}\)</span> choose independent vectors <span class="process-math">\(v,w\in V\text{.}\)</span> We have <span class="process-math">\(\lambda_{v+w}(v+w)=g(v+w)=\lambda_v v+\lambda_w
+w\text{.}\)</span> Because <span class="process-math">\(v,w\)</span> are independent, it follows that <span class="process-math">\(\lambda_v=\lambda_w=\lambda_{v+w}\text{.}\)</span> Thus it must be that there is a single <span class="process-math">\(\lambda\in \F^\ast\)</span> such that <span class="process-math">\(gv=\lambda v\)</span> for all <span class="process-math">\(v\in V\text{,}\)</span> that is, <span class="process-math">\(g\)</span> is an element of <span class="process-math">\(K\text{.}\)</span>
+</div></li>
+<li id="li-255"><div class="para" id="p-derived-li-255">Apply the First Isomorphism Theorem (<a href="" class="xref" data-knowl="./knowl/firstisothm.html" title="Corollary 2.4.7: (First Isomorphism Theorem)">Corollary 2.4.7</a>) to <span class="process-math">\(\phi\colon GL(V)\to \Perm(\Proj(V))\)</span> to obtain<div class="displaymath process-math" data-contains-math-knowls="./knowl/firstisothm.html">
+\begin{equation*}
+GL(V)/K \approx \phi(G) \stackrel{\text{inclusion}}{\longrightarrow} \Perm(\Proj(V)).
+\end{equation*}
+</div>
+</div></li>
+<li id="li-256"><div class="para" id="p-derived-li-256">Given <span class="process-math">\(\alpha,\beta\)</span> in <span class="process-math">\(\F^\ast\)</span> and <span class="process-math">\(T\)</span> in <span class="process-math">\(GL(V)\text{,}\)</span> the fact that <span class="process-math">\((\alpha \beta)T=\alpha(\beta
+T)\)</span> verifies that the map <span class="process-math">\(\F^\ast \to \Perm(GL(V))\)</span> given by <span class="process-math">\(\alpha\to [T\to \alpha T]\)</span> is a homomorphism. The equivalence relation that corresponds to this action is given by <span class="process-math">\(T\sim_{\F^\ast} S\)</span> if and only if <span class="process-math">\(S=\alpha T\)</span> for some <span class="process-math">\(\alpha\in \F^\ast\text{.}\)</span> Because <span class="process-math">\(S=\alpha T\)</span> if and only if <span class="process-math">\(S=(\alpha \Id)T\text{,}\)</span> the equivalence classes that define <span class="process-math">\(PGL(V)\)</span> in the previous part of this problem are the same as the equivalence classes <span class="process-math">\(GL(V)/\F^\ast\text{.}\)</span>
+</div></li>
+<li id="li-257"><div class="para" id="p-derived-li-257">Factor the given map as <span class="process-math">\(\Proj(\C^2)\to \extC\to S^2\)</span> given by<div class="displaymath process-math">
+\begin{equation*}
+[(\alpha,\beta)] \to \alpha/\beta \to s^{-1}(\alpha/\beta).
+\end{equation*}
+</div>Let <span class="process-math">\(\mu\)</span> denote the map <span class="process-math">\([(\alpha,\beta)] \to \alpha/\beta \text{.}\)</span> That <span class="process-math">\(\mu\)</span> is well-defined follows from the observation that <span class="process-math">\((k\alpha)/(k\beta)=\alpha/\beta\)</span> for all <span class="process-math">\(k\in
+\F^\ast\text{.}\)</span> To see that <span class="process-math">\(\mu\)</span> is bijective, we will exhibit an inverse map. Let <span class="process-math">\(\nu\colon \extC\to
+\Proj(\C^2)\)</span> be given by <span class="process-math">\(\gamma \to [(\gamma,1)]\)</span> for <span class="process-math">\(\gamma \in \C\)</span> and <span class="process-math">\(\infty \to [(1,0)]\text{.}\)</span> To check that <span class="process-math">\(\nu\circ\mu=\Id\text{,}\)</span> for <span class="process-math">\(\beta\neq 0\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,\beta)])=\nu(\alpha/\beta) =
+[(\alpha/\beta,1)]=[(\alpha,\beta)]
+\end{equation*}
+</div>and for <span class="process-math">\(\beta=0\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+(\nu\circ \mu)([(\alpha,0)])=\nu(\infty) =
+[(1,0)]=[(\alpha,0)].
+\end{equation*}
+</div>Reading the two displayed equations from right to left establishes that <span class="process-math">\(\mu\circ \nu=\Id\text{.}\)</span> We conclude that <span class="process-math">\(\nu=\mu^{-1}\text{.}\)</span> Using the fact that stereographic projection <span class="process-math">\(s\)</span> is bijective, we have <span class="process-math">\(s^{-1}\circ \mu\)</span> is bijective, as desired.</div></li>
+</ol></div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Other notations for <span class="process-math">\((\phi(g))(x)\)</span> are <span class="process-math">\(g(x)\text{,}\)</span> <span class="process-math">\(g\cdot x\text{,}\)</span> and <span class="process-math">\(g.x\text{.}\)</span>
 </div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">It must be proved that <span class="process-math">\(\Stab(x)\)</span> is indeed a subgroup of <span class="process-math">\(G\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/showstabisgpexer.html" title="Checkpoint 2.5.3">Checkpoint 2.5.3</a> below.</div></div>
 </div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
+<div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
