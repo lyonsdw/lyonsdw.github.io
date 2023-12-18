@@ -117,7 +117,9 @@ window.MathJax = {
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
-\DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\Id}{Id}
+\def\expi{E}
+\def\wrap{W}
 \newcommand{\C}{\mathbb{C}} 
 \newcommand{\Quat}{\mathbb{H}} 
 \newcommand{\extC}{\hat{\C}} 
@@ -160,16 +162,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="basics_chapter-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex numbers</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-9" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Complex Plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-25" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
@@ -344,32 +338,46 @@ window.MathJax = {
 <th>Location</th>
 </tr>
 <tr>
-<td><span class="process-math">\(\C\)</span></td>
-<td>the complex numbers</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/basics_chapter-2-2-2.html" title="Paragraph">Paragraph</a></td>
+<td><span class="process-math">\(\re(z)\)</span></td>
+<td>real part of the complex number <span class="process-math">\(z\)</span>
+</td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-4.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
-<td><span class="process-math">\(\R\)</span></td>
-<td>the real numbers</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/basics_chapter-2-2-2.html" title="Paragraph">Paragraph</a></td>
+<td><span class="process-math">\(\im(z)\)</span></td>
+<td>imaginary part of the complex number <span class="process-math">\(z\)</span>
+</td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-4.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(|z|\)</span></td>
-<td>norm of the complex number <span class="process-math">\(|z|\)</span>
+<td>norm of the complex number <span class="process-math">\(z\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/basics_chapter-2-4-3.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-4.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\arg(z)\)</span></td>
 <td>argument of the complex number <span class="process-math">\(z\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/basics_chapter-2-4-3.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-4.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
-<td><span class="process-math">\(z^\ast\)</span></td>
+<td><span class="process-math">\(i\)</span></td>
+<td>the complex number <span class="process-math">\(i\)</span>
+</td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-5.html" title="Paragraph">Paragraph</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\(\overline{z}\)</span></td>
 <td>conjugate of the complex number <span class="process-math">\(z\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/basics_chapter-2-7-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-15.html" title="Paragraph">Paragraph</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\({z}^\ast\)</span></td>
+<td>conjugate of the complex number <span class="process-math">\(z\)</span>
+</td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/complex_plane_section-15.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\Quat\)</span></td>

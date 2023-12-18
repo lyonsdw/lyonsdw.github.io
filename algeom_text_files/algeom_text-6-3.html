@@ -120,7 +120,9 @@ window.MathJax = {
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
-\DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\Id}{Id}
+\def\expi{E}
+\def\wrap{W}
 \newcommand{\C}{\mathbb{C}} 
 \newcommand{\Quat}{\mathbb{H}} 
 \newcommand{\extC}{\hat{\C}} 
@@ -163,16 +165,8 @@ window.MathJax = {
 <div class="toc-title-box"><a href="basics_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="basics_chapter-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Complex numbers</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#complexrealimagsubsect" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Real and imaginary parts</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Modulus and argument</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Addition and multiplication of complex numbers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The complex exponential function</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-7" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Conjugation</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-8" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Circles and lines</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basics_chapter-2.html#basics_chapter-2-9" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Complex Plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-25" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="quaternionsection.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Quaternions</span></a></div>
@@ -364,7 +358,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">alternating group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/alternatinggpexer-2-1-1-2.html" title="Item 2.6.3.b">Item</a></span>
 </div>
-<div class="indexitem">argument of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-4-3.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">argument of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-4.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">associative binary operation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/groupdefsection-2-1.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -374,8 +368,6 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-c">
-<div class="indexitem">Cartesian form of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-6-4.html" title="Paragraph">Paragraph</a></span>
-</div>
 <div class="indexitem">Cartesian form of a quaternion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/quaternionsection-3-2.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">center (of a group)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/center.html" title="Exercise 2.3.2.5: Centralizers, Center of a group">Exercise</a></span>
@@ -392,15 +384,13 @@ window.MathJax = {
 </div>
 <div class="indexitem">commutative diagram<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/extra_topics_exercises_section-2-5.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">complex number<span class="indexknowl">, <a href="basics_chapter-2.html#complexrealimagsubsect" class="internal" title="Subsection 1.1.1: Real and imaginary parts">Subsection</a></span>
-</div>
 <div class="indexitem">conformal transformation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geomdefsect-6-2.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">congruence transformations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geometrydefn.html" title="Definition 3.1.1">Definition</a></span>
 </div>
 <div class="indexitem">congruent<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geometrydefn.html" title="Definition 3.1.1">Definition</a></span>
 </div>
-<div class="indexitem">conjugate of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-7-2.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">conjugate of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-15.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">conjugate of a quaternion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/quatconjnormsubsect-2.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -434,6 +424,8 @@ window.MathJax = {
 </div>
 <div class="indexitem">disjoint cyclic permutations<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/disjointcycleproductexer.html" title="Exercise 2.2.2.8">Exercise</a></span>
 </div>
+<div class="indexitem">distributive law for complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-11.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">doubly-asymptotic hyperbolic triangle<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/doubasymptriareaexer.html" title="Exercise 3.3.6.8: Area of a doubly-asymptotic triangle">Exercise</a></span>
 </div>
 </div>
@@ -461,7 +453,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">Euler phi function<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/unitsinzngpexer.html" title="Exercise 2.6.1: The group of units in \Z_n">Exercise</a></span>
 </div>
-<div class="indexitem">Euler’s formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-6-3.html" title="Assemblage: Euler’s formula">Assemblage</a></span>
+<div class="indexitem">Euler’s formula<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-21-13.html" title="Assemblage: Euler’s formula">Assemblage</a></span>
 </div>
 <div class="indexitem">extended complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/stereoprojsect-3-6.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -578,9 +570,7 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-i">
 <div class="indexitem">identity element<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/groupdefsection-2-1-12.html" title="Definition 2.2.3: Multiplicative notation">Definition</a></span>
 </div>
-<div class="indexitem">imaginary number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complexrealimagsubsect-3.html" title="Paragraph">Paragraph</a></span>
-</div>
-<div class="indexitem">imaginary part of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complexrealimagsubsect-3.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">imaginary part of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-4.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">inner automorphism<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/automorphismexer.html" title="Exercise 2.4.2.15: Automorphisms">Exercise</a></span>
 </div>
@@ -606,9 +596,11 @@ window.MathJax = {
 <div class="indexletter" id="indexletter-m">
 <div class="indexitem">model space<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geometrydefn.html" title="Definition 3.1.1">Definition</a></span>
 </div>
-<div class="indexitem">modulus of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-4-3.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">modulus of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-4.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">modulus of a quaternion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/quatconjnormsubsect-2.html" title="Paragraph">Paragraph</a></span>
+</div>
+<div class="indexitem">multiplicative inverse of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-14.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">multiplicative notation<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/groupdefsection-2-1-12.html" title="Definition 2.2.3: Multiplicative notation">Definition</a></span>
 </div>
@@ -620,7 +612,7 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-n">
-<div class="indexitem">norm of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-4-3.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">norm of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-4.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">normal form<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/normalformssubsect-2.html" title="Paragraph">Paragraph</a></span>
 </div>
@@ -664,11 +656,13 @@ window.MathJax = {
 </div>
 <div class="indexitem">Poincaré disk model of hyperbolic geometry<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geometry_chapter-5-2-2.html" title="Definition 3.3.1">Definition</a></span>
 </div>
-<div class="indexitem">polar form of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-6-4.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">polar form for a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-9.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">polar form of a quaternion<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/quatconjnormsubsect-3.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">product group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/productgroupexer.html" title="Exercise 2.2.2.5: Product Groups">Exercise</a></span>
+</div>
+<div class="indexitem">product of two complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-6.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">projective geometry<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/geomexamples-2-1-3.html" title="Item">Item</a></span>
 </div>
@@ -699,6 +693,8 @@ window.MathJax = {
 </div>
 <div class="indexitem">projective space<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/projspaceandgroupexer.html" title="Exercise 2.5.3.6: The projective linear group action on projective space">Exercise</a></span>
 </div>
+<div class="indexitem">pure imaginary number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-5.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">Pythagorean Theorem</div>
 <div class="subindexitem">Elliptic Pythagorean Theorem<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/pythagthmsexer-2-1-8-3.html" title="Item 3.6.7.c">Item</a></span>
 </div>
@@ -727,11 +723,13 @@ window.MathJax = {
 </div>
 <div class="indexitem">quotient group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/gmodkisgroup.html" title="Proposition 2.4.6: G/K is a group if and only if K is a kernel">Proposition</a></span>
 </div>
+<div class="indexitem">quotient of two complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-14.html" title="Paragraph">Paragraph</a></span>
+</div>
 </div>
 <div class="indexletter" id="indexletter-r">
-<div class="indexitem">real part of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complexrealimagsubsect-3.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">real part of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-4.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="indexitem">rectangular form of a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/basics_chapter-2-6-4.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">rectangular form for a complex number<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-9.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">reflection (in the plane)<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/groupintrosection-4-4-4.html" title="Assemblage: Reflections in the plane">Assemblage</a></span>
 </div>
@@ -761,6 +759,8 @@ window.MathJax = {
 </div>
 <div class="indexitem">subgroup generated by a set<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/subgroups_cosets_section-2-5.html" title="Proposition 2.3.5: Subgroup generated by a set of elements">Proposition</a></span>
 </div>
+<div class="indexitem">sum of two complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/complex_plane_section-6.html" title="Paragraph">Paragraph</a></span>
+</div>
 <div class="indexitem">symmetric group<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/permgpdef.html" title="Definition 2.1.1">Definition</a></span>
 </div>
 </div>
@@ -770,6 +770,8 @@ window.MathJax = {
 <div class="indexitem">transitive group action<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/groups_chapter-6-2-1.html" title="Definition 2.5.1: Group action, orbit, stabilizer">Definition</a></span>
 </div>
 <div class="indexitem">transposition<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/cyclicpermutations.html" title="Exercise 2.2.2.7: Cyclic permutations">Exercise</a></span>
+</div>
+<div class="indexitem">triangle inequality for complex numbers<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/triangleineqcomplexexer.html" title="Exercise 1.1.2: The triangle inequality">Exercise</a></span>
 </div>
 <div class="indexitem">two-step subgroup test<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/index/subgrouptests.html" title="Proposition 2.3.4: Subgroup tests">Proposition</a></span>
 </div>
