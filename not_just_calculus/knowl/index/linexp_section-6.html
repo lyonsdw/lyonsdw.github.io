@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">
+<em class="alert">Infinite geometric sums.</em> An infinite sum of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{equation*}
+a + ar + ar^2 + ar^3 + \cdots
+\end{equation*}
+</div>
+<div class="para">is called an <dfn class="terminology">infinite geometric series</dfn>, and is defined to mean <span class="process-math">\(\displaystyle \lim_{n\to\infty} s_n\)</span> (if the limit exists), where <span class="process-math">\(s_1,s_2,s_3,\ldots\)</span> is sequence of finite sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{align*}
+s_0 \amp = a\\
+s_1  \amp = a + ar\\
+s_2  \amp = a + ar + ar^2\\
+\amp \vdots \\
+s_n  \amp = a+ ar+ar^2 + \cdots + ar^n\\
+\amp \vdots
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(|r| \lt 1\text{,}\)</span> then <span class="process-math">\(|r|^n \to 0\)</span> as <span class="process-math">\(n\to \infty\text{.}\)</span> Using properties of limits from calculus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{equation*}
+a\left(\frac{1-r^{n+1}}{1-r}
+\right) \to a\left(\frac{1}{1-r}\right)
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(n\to \infty\text{.}\)</span> Putting this together with <a href="" class="xref" data-knowl="./knowl/xref/geompartialsum.html" title="Equation 1.3.2">(1.3.2)</a> above is the justification for the following formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{align}
+a + ar+ ar^2 + ar^3 + \cdots =
+a\left(\frac{1}{1-r}\right) \amp \amp \mbox{ for } |r|\lt 1\tag{1.3.3}
+\end{align}
+</div>
+</div>
+<span class="incontext"><a class="internal" href="linexp_section.html#linexp_section-6">in-context</a></span>
+</body>
+</html>

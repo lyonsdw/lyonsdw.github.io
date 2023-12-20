@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using Basic Tools</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Not Just Calculus">
+<meta property="book:author" content="David W. Lyons">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="linexp_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cartesian_plane_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
+      \DeclareMathOperator{\MOD}{\rm MOD}
+\DeclareMathOperator{\percent}{\%}      
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\One}{\Large\mathbb 1}
+\DeclareMathOperator{\proj}{proj}      
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+      #3 \amp #4 \end{array} \right]}
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="setsnfuns_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setsnfuns_section.html#setsnfuns_section-20" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="function_properties_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Properties of Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="function_properties_section.html#function_properties_section-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Divisibility and Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-18" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-8" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Basic Tools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Using Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-5" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.5.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cartesian_plane_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">The Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-13" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-12" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complex Plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-15" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="additional_exercises_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Planar Algebra and Geometry</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-2" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="not_just_calculus-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="not_just_calculus-6-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="not_just_calculus-6-2.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="basic_tools_problems_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Using Basic Tools</span>
+</h2>
+<section class="subsection" id="basic_tools_problems_section-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="space"> </span><span class="title">Using Linear and Exponential Growth</span>
+</h3>
+<section class="exercises" id="basic_tools_problems_section-2-2"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="basic_tools_problems_section-2-2-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-2-2-1-1-1">
+<div class="para">Consider the following true life situation. <blockquote class="blockquote" id="basic_tools_problems_section-2-2-1-1-1-1">"I want to rent this room for the month of July," he said.  The clerk wheezed.  He peered through the narrow slits of his bloodshot eyes, glaring through the murk of the humid dusty darkness of the fleabag lobby, and said, "for you—a deal."  "How much?" said the big guy, sweat trickling down his face, staining the collar of his dingy shirt which didn’t appear to have been washed in weeks.  Noticing the telltale bulge of a revolver under the stranger’s dirt stained jacket, the clerk replied, "First day—one cent.  Second day—two cents.  Third day—four.  Every day it doubles."  The stranger’s face drew into a knot as he scrutinized the greasy poker faced clerk.  He said, "That’s nothin’.  What’s the hitch?"</blockquote>
+</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-2-2-1-1-1-2-1"><div class="para" id="p-derived-basic_tools_problems_section-2-2-1-1-1-2-1">How much would the stranger pay on July 31st?</div></li>
+<li id="basic_tools_problems_section-2-2-1-1-1-2-2"><div class="para" id="p-derived-basic_tools_problems_section-2-2-1-1-1-2-2">What would the bill be for the month of July?</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-2-2-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-2-2-2-1-1">
+<div class="para">Gumby and Pokey decide to go on a diet together.  Gumby and Pokey both weigh <span class="process-math">\(10\)</span> ounces. Starting their diets on the same day, Gumby loses <span class="process-math">\(1/10\)</span> of an ounce each day, while Pokey loses half his body weight each day.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-2-2-2-1-1-3-1"><div class="para" id="p-derived-basic_tools_problems_section-2-2-2-1-1-3-1">Who wins the race to the body weight of 1 ounce?</div></li>
+<li id="basic_tools_problems_section-2-2-2-1-1-3-2"><div class="para" id="p-derived-basic_tools_problems_section-2-2-2-1-1-3-2">Explain how you know, without calculating, that Gumby will win the race to zero body weight.</div></li>
+<li id="basic_tools_problems_section-2-2-2-1-1-3-3"><div class="para" id="p-derived-basic_tools_problems_section-2-2-2-1-1-3-3">How much of Pokey is left when Gumby vanishes?</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-2-2-3"><h5 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Zeno’s Paradox.</span>
+</h5>
+<div class="para" id="basic_tools_problems_section-2-2-3-2-1">The Greek philosopher Zeno (ca. 450BC) considered the following motion problem.  A rabbit and a turtle agree to run a race.  Displaying good sportsmanship, the rabbit, who can run faster, gives the turtle a head start.  Zeno argued that the rabbit will never catch the turtle, as follows.  To catch the turtle, the rabbit must first travel from the starting point to the turtle’s starting point.  During this time, the turtle will advance.  Let’s call the turtle’s new location point 2.  Now the rabbit must travel to point 2, but during that time, the turtle advances to point 3.  And so on.  This process defines an infinite sequence of distinct points.  Traveling from each one to the next requires a positive amount of time.  Since an infinite sum of positive numbers must be infinite, Zeno concludes that the rabbit will never catch the turtle.  Of course, Zeno knew there must be some flaw in this argument, but was unable to resolve the paradox satisfactorily.</div> <div class="para logical" id="basic_tools_problems_section-2-2-3-2-2">
+<div class="para">Analyze Zeno’s paradox under the following assumptions: the rabbit travels at a constant speed of 5 feet per second; the turtle travels at a constant speed of 2 feet per second; and the head start distance is 10 feet.  Place coordinates on the race track with the rabbit beginning at 0 and the turtle beginning at 10, with both running in the positive direction.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-2-2-3-2-2-1-1"><div class="para" id="p-derived-basic_tools_problems_section-2-2-3-2-2-1-1">Using high school algebra and the formula<div class="displaymath process-math">
+\begin{equation*}
+(\text{distance}) = (\text{rate})(\text{time})
+\end{equation*}
+</div>find the location where the rabbit catches the turtle, and the time elapsed from the beginning of the race to the point where the rabbit catches the turtle.</div></li>
+<li id="basic_tools_problems_section-2-2-3-2-2-1-2"><div class="para" id="p-derived-basic_tools_problems_section-2-2-3-2-2-1-2">Find the sequence of distances traveled by the rabbit from the rabbit’s starting point to the turtle’s starting point, from there to point 2, from point 2 to point 3, etc.</div></li>
+<li id="basic_tools_problems_section-2-2-3-2-2-1-3"><div class="para" id="p-derived-basic_tools_problems_section-2-2-3-2-2-1-3">Find the sequence of times that elapse while the rabbit traveled the distance intervals in the previous part.</div></li>
+<li id="basic_tools_problems_section-2-2-3-2-2-1-4"><div class="para" id="p-derived-basic_tools_problems_section-2-2-3-2-2-1-4">Use the theory of geometric sequences to resolve Zeno’s paradox by reconciling your findings in the previous steps of this problem.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-2-2-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-2-2-4-1-1">The following problem is a modern version of Zeno’s paradox. It is taken from an article by George Andrews in the January 1998 issue of the <em class="emphasis">American Mathematical Monthly</em>, Vol. 105 No. 1 and is attributed to a Prof. Sleator.</div> <div class="para logical" id="basic_tools_problems_section-2-2-4-1-2">
+<div class="para">Two trees are one mile apart. A drib flies from one tree to the other and back, making the first trip at 10 miles per hour, the return at 20 miles per hour, the next at 40 and so on, each successive mile at twice the speed of the preceding.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-2-2-4-1-2-1-1"><div class="para" id="p-derived-basic_tools_problems_section-2-2-4-1-2-1-1">Write the first five terms of the sequence of velocities for trip numbers 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-4-1-2-1-2"><div class="para" id="p-derived-basic_tools_problems_section-2-2-4-1-2-1-2">Write the first five terms of the sequence times taken for trips 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-4-1-2-1-3"><div class="para" id="p-derived-basic_tools_problems_section-2-2-4-1-2-1-3">Write the first five terms of the sequence of how much time it takes the drib to travel 1 mile, 2 miles, 3 miles, etc.  Write an explicit formula for this sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-4-1-2-1-4"><div class="para" id="p-derived-basic_tools_problems_section-2-2-4-1-2-1-4">Where is the drib 12 minutes after the first trip begins?</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-2-2-5"><h5 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">The Snowflake Curve.</span>
+</h5>
+<div class="para" id="basic_tools_problems_section-2-2-5-2-1">
+<em class="emphasis">Koch’s snowflake</em> is a geometric figure built recursively, as follows.  Stage 1 is an equilateral triangle whose sides are 1 unit in length.  To produce Stage <span class="process-math">\(n\)</span> from Stage <span class="process-math">\(n-1\text{,}\)</span> perform the replacement of edges illustrated in <a href="" class="xref" data-knowl="./knowl/xref/snowflake_recursionfig.html" title="Figure 1.5.1">Figure 1.5.1</a>. <figure class="figure figure-like" id="snowflake_recursionfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/snowflake_recursion.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.1<span class="period">.</span></span><span class="space"> </span>Each edge at stage <span class="process-math">\(n-1\)</span> is replaced by four edges at stage <span class="process-math">\(n\)</span></figcaption></figure>
+</div> <div class="para logical" id="basic_tools_problems_section-2-2-5-2-2">
+<div class="para">The snowflake is the figure obtained after infinitely many stages. Stages 1, 2, 3 and the finished snowflake are shown in <a href="" class="xref" data-knowl="./knowl/xref/KochFlakefig.html" title="Figure 1.5.2">Figure 1.5.2</a>. <figure class="figure figure-like" id="KochFlakefig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/KochFlake.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.2<span class="period">.</span></span><span class="space"> </span>The first three stages and the finished snowflake (https://commons.wikimedia.org/wiki/File:KochFlake.png)</figcaption></figure>
+</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-2-2-5-2-2-3-1"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-1">Write the first 5 terms of the sequence of the number of edges in Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-2"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-2">Write the first 5 terms of the sequence of the lengths of each edge in Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-3"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-3">Write the first 5 terms of the sequence of the total perimeter of the figure for Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.  Hint: Multiply your results from the previous two parts.</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-4"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-4">Write the first 5 terms of the sequence of the number of new equilateral triangle "bumps" added at Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.  Hint: Adapt your result from part (a).</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-5"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-5">Write the first 5 terms of the sequence of areas of each new equilateral triangle "bump" added at Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.  Hint: The area of an equilateral triangle whose side measures <span class="process-math">\(s\)</span> units of length is <span class="process-math">\(s^2\sqrt{3}/4\text{.}\)</span> Hint: Use part (b).</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-6"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-6">Write the first 5 terms of the sequence of the new area added (total area of all the new "bumps") at Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.  Hint: Multiply your results from the previous two parts.</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-7"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-7">Write the first 5 terms of the sequence of total area for Stages 1, 2, 3, etc.  Write an explicit formula for this sequence. Hint: Sum the terms of the geometric sequence from the previous part. Watch out!  The first couple of terms may not fit the pattern of the sequence.</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-8"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-8">What is the perimeter of the snowflake?</div></li>
+<li id="basic_tools_problems_section-2-2-5-2-2-3-9"><div class="para" id="p-derived-basic_tools_problems_section-2-2-5-2-2-3-9">What is the area of the snowflake?</div></li>
+</ol>
+</div></article></section></section><section class="subsection" id="basic_tools_problems_section-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="space"> </span><span class="title">Rational and Irrational Numbers</span>
+</h3>
+<div class="para logical" id="basic_tools_problems_section-3-2">
+<div class="para">A <dfn class="terminology">rational number</dfn> is a number that can be written in the form <span class="process-math">\(a/b\)</span> for some integers <span class="process-math">\(a,b\text{.}\)</span> An <dfn class="terminology">irrational number</dfn> is a real number that is not rational. The standard symbol for the set of rational numbers is <span class="process-math">\(\Q\)</span>.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q=\left\{\frac{a}{b}\colon a,b\in \Z, b\neq 0\right\}
+\end{equation*}
+</div>
+<div class="para">The following is a classic proof by contradiction that proves that at least one irrational number exists.</div>
+</div>
+<div class="para" id="basic_tools_problems_section-3-3">
+<article class="proposition theorem-like" id="root2isirrat"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="root2isirrat-1-1">The number <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><details id="root2isirrat-2" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="root2isirrat-2-1">Suppose on the contrary that <span class="process-math">\(\sqrt{2}=a/b\)</span> is rational, where <span class="process-math">\(a,b\)</span> are integers. We may assume both <span class="process-math">\(a,b\)</span> are positive, and we may assume that the fraction <span class="process-math">\(a/b\)</span> is reduced, that is, that <span class="process-math">\(a,b\)</span> have no common factors other than 1. Squaring both sides of <span class="process-math">\(\sqrt{2}=a/b\)</span> and rearranging, we have <span class="process-math">\(2b^2=a^2\text{.}\)</span> This says that <span class="process-math">\(a^2\)</span> is even, so it must be that <span class="process-math">\(a\)</span> itself is even. That means we can write <span class="process-math">\(a=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Substituting <span class="process-math">\(2k\)</span> for <span class="process-math">\(a\)</span> in the equation <span class="process-math">\(2b^2=a^2\text{,}\)</span> we get <span class="process-math">\(2b^2=(2k)^2=4k^2\text{,}\)</span> which simplifies to <span class="process-math">\(b^2=2k^2\text{.}\)</span> Now we see that <span class="process-math">\(b^2\)</span> is even, so it must be that <span class="process-math">\(b\)</span> is even. But this means that <span class="process-math">\(a,b\)</span> are both divisible by 2, which contradicts the assumption that <span class="process-math">\(a,b\)</span> share no common factors. We conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></details>
+</div>
+<details id="basic_tools_problems_section-3-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="basic_tools_problems_section-3-4-1-1">Justify the statement in the proof above that says "so <span class="process-math">\(a\)</span> itself must be even". How would you convince your intelligent young cousin that "an odd times an odd must be odd"?</div></article></details><section class="exercises" id="basic_tools_problems_section-3-5"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="basic_tools_problems_section-3-5-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-3-5-1-1-1">Let <span class="process-math">\(n\)</span> be a positive integer. Show that either <span class="process-math">\(n\)</span> is a perfect square (that is, <span class="process-math">\(n=k^2\)</span> for some integer <span class="process-math">\(k\)</span>), or <span class="process-math">\(\sqrt{n}\)</span> is irrational.</div>
+<div class="solutions"><details id="basic_tools_problems_section-3-5-1-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Let <span class="process-math">\(n\)</span> be a positive integer, and suppose that <span class="process-math">\(\sqrt{n}=a/b\)</span> is rational, where <span class="process-math">\(a,b\)</span> are positive integers that share no common factors other than 1. Squaring and rearranging, we have <span class="process-math">\(nb^2=a^2\text{.}\)</span> Let <span class="process-math">\(p\)</span> be a prime factor of <span class="process-math">\(b\text{.}\)</span> Explain why it must be that <span class="process-math">\(p|a\text{.}\)</span> Explain why this implies that <span class="process-math">\(b=1\text{.}\)</span> Explain how this implies the desired conclusion.</div></details></div></article><article class="exercise exercise-like" id="basic_tools_problems_section-3-5-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-3-5-2-1-1">
+<div class="para">Choose an angle <span class="process-math">\(\theta_0\text{.}\)</span> Starting at the point <span class="process-math">\((1,0)\text{,}\)</span> walk around the unit circle in a counterclockwise direction, taking steps of size <span class="process-math">\(\theta_0\text{.}\)</span> What is the smallest whole number of steps you have to take until you come for the first time to a point that you’ve already stepped on? Where is this first repeated location?</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-3-5-2-1-1-4-1"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-1">Find the answer for <span class="process-math">\(\theta_0 = 20\)</span> degrees.</div></li>
+<li id="basic_tools_problems_section-3-5-2-1-1-4-2"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-2">Find the answer for <span class="process-math">\(\theta_0 = 27\)</span> degrees.</div></li>
+<li id="basic_tools_problems_section-3-5-2-1-1-4-3"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-3">Find the answer for <span class="process-math">\(\theta_0 = \sqrt{2}\)</span> degrees.</div></li>
+<li id="basic_tools_problems_section-3-5-2-1-1-4-4"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-4">Find the answer for <span class="process-math">\(\theta_0 = 3\pi/2\)</span> radians.</div></li>
+<li id="basic_tools_problems_section-3-5-2-1-1-4-5"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-5">Find the answer for <span class="process-math">\(\theta_0 = 1\)</span> radian.</div></li>
+<li id="basic_tools_problems_section-3-5-2-1-1-4-6"><div class="para" id="p-derived-basic_tools_problems_section-3-5-2-1-1-4-6">Find the answer for an arbitrary value of <span class="process-math">\(\theta_0\text{.}\)</span> Suggestion: Rather than degrees or radians, you might consider using <em class="emphasis">revolutions</em> for your angle units.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-3-5-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-3-5-3-1-1">Your intelligent younger cousin declares to you that <span class="process-math">\(1.\overline{9}=1.999\ldots \text{(infinitely repeating 9's)}\)</span> is less than 2. How do you explain that <span class="process-math">\(1.\overline{9}\)</span> is actually <em class="emphasis">equal</em> to 2?</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-3-5-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-3-5-4-1-1">Show that a number is rational if and only if it has a  decimal representation that eventually repeats or terminates.</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-3-5-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-3-5-5-1-1">
+<div class="para">Prove the following facts about terminating decimal expansions.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-3-5-5-1-1-1-1"><div class="para" id="p-derived-basic_tools_problems_section-3-5-5-1-1-1-1">Suppose that <span class="process-math">\(m=2^s5^t\)</span> for some nonnegative integers <span class="process-math">\(s,t\text{.}\)</span> Show that the rational number <span class="process-math">\(n/m\)</span> (<span class="process-math">\(n\)</span> also an integer) has a terminating decimal expansion.</div></li>
+<li id="basic_tools_problems_section-3-5-5-1-1-1-2"><div class="para" id="p-derived-basic_tools_problems_section-3-5-5-1-1-1-2">Suppose that the reduced rational number <span class="process-math">\(n/m\)</span> (<span class="process-math">\(n,m\)</span> integers with no common factors, <span class="process-math">\(m\neq 0\)</span>) has a terminating decimal expansion. Show that <span class="process-math">\(m=2^s5^t\)</span> for some nonnegative integers <span class="process-math">\(s,t\text{.}\)</span>
+</div></li>
+</ol>
+</div></article></section></section><section class="subsection" id="basic_tools_problems_section-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="space"> </span><span class="title">More Sets and Functions</span>
+</h3>
+<section class="exercises" id="basic_tools_problems_section-4-2"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="powersetproblem"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="powersetproblem-1-1">
+<div class="para">Given a set <span class="process-math">\(A\text{,}\)</span> the <dfn class="terminology">power set</dfn>  of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\({\mathcal
+P}(A)\)</span>, is defined to be the set of all subsets of <span class="process-math">\(A\text{.}\)</span> For example, for <span class="process-math">\(A=\{a,b,c\}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathcal P}(A) =
+\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}.
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="powersetproblem-1-1-10-1"><div class="para" id="p-derived-powersetproblem-1-1-10-1">Why is the empty set considered a subset of <span class="process-math">\(A\text{?}\)</span>
+</div></li>
+<li id="powersetproblem-1-1-10-2"><div class="para" id="p-derived-powersetproblem-1-1-10-2">Write out all of the possible functions from <span class="process-math">\(A\)</span> to <span class="process-math">\(\{0,1\}\text{.}\)</span> Hint: there are 8 in all.</div></li>
+<li id="powersetproblem-1-1-10-3"><div class="para" id="p-derived-powersetproblem-1-1-10-3">Can you see a natural one-to-one correspondence between the power set of <span class="process-math">\(A\)</span> and the list of functions you just wrote down?</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-2-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a set. An <dfn class="terminology">algebra of subsets</dfn> of <span class="process-math">\(S\)</span> is a subset <span class="process-math">\({\mathcal A}\subseteq {\mathcal P}(S)\)</span> of the power set of <span class="process-math">\(S\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/powersetproblem.html" title="Exercise 1.5.3.1">Exercise 1.5.3.1</a> above) for which the following properties hold. <blockquote class="blockquote" id="basic_tools_problems_section-4-2-2-1-1-8"><ol class="lower-roman">
+<li id="basic_tools_problems_section-4-2-2-1-1-8-1-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-8-1-1"><span class="process-math">\(\displaystyle \emptyset \in {\mathcal A}\)</span></div></li>
+<li id="basic_tools_problems_section-4-2-2-1-1-8-1-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-8-1-2">For every <span class="process-math">\(X,Y\in {\mathcal A}\text{,}\)</span> <span class="process-math">\(X\cap Y\in {\mathcal A}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-2-1-1-8-1-3"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-8-1-3">For every <span class="process-math">\(X,Y\in {\mathcal A}\text{,}\)</span> <span class="process-math">\(X\cup Y\in  {\mathcal A}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-2-1-1-8-1-4"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-8-1-4">For every <span class="process-math">\(X\in {\mathcal  A}\text{,}\)</span> <span class="process-math">\(S\setminus X \in {\mathcal A}\)</span>
+</div></li>
+</ol></blockquote>
+</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-2-1-1-9-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-9-1">Show that the power set <span class="process-math">\({\mathcal P}(S)\)</span> is an algebra of sets for any set <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-2-1-1-9-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-2-1-1-9-2">Given an example of a collection of sets of some set <span class="process-math">\(S\)</span> for which exactly  three of the four set algebra properties hold.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-3-1-1">
+<div class="para">Let <span class="process-math">\(f\colon S\to T\)</span> be a function. Define <span class="process-math">\(\overleftarrow{f}\colon {\mathcal P}(T)\to {\mathcal P}(S)\)</span> by <span class="process-math">\(\overleftarrow{f}(V)=f^{-1}(V)\)</span> for <span class="process-math">\(V\subseteq T\text{,}\)</span> where <span class="process-math">\({\mathcal P}\)</span> denotes the power set operator, defined in <a href="" class="xref" data-knowl="./knowl/xref/powersetproblem.html" title="Exercise 1.5.3.1">Exercise 1.5.3.1</a> above, and <span class="process-math">\(f^{-1}(V)\)</span> denotes the preimage of <span class="process-math">\(V\)</span> under <span class="process-math">\(f\text{.}\)</span> The function <span class="process-math">\(\overleftarrow{f}\)</span> is an <dfn class="terminology">algebra of sets mapping</dfn>, which means that the following properties hold for all <span class="process-math">\(U,V\in {\mathcal P}(T)\text{.}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/powersetproblem.html" id="basic_tools_problems_section-4-2-3-1-1-14">
+\begin{align}
+\overleftarrow{f}(U\cap V) \amp = \overleftarrow{f}(U) \cap
+\overleftarrow{f}(V)\tag{1.5.1}\\
+\overleftarrow{f}(U\cup V) \amp = \overleftarrow{f}(U) \cup
+\overleftarrow{f}(V)\tag{1.5.2}\\
+\overleftarrow{f}(T\setminus U) \amp = S\setminus
+\overleftarrow{f}(U)\tag{1.5.3}
+\end{align}
+</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-3-1-1-15-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-3-1-1-15-1">Demonstrate each of the properties of an algebra of sets mapping with an example in which none of the sets involved in the equations are empty.</div></li>
+<li id="basic_tools_problems_section-4-2-3-1-1-15-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-3-1-1-15-2">Choose one of the properties and show that it holds in general.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="charfunexer"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para logical" id="charfunexer-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be a set. Given a subset <span class="process-math">\(A\)</span> of <span class="process-math">\(S\text{,}\)</span> the <dfn class="terminology">characteristic function</dfn> for <span class="process-math">\(A\)</span> (relative to <span class="process-math">\(S\)</span>), denoted <span class="process-math">\(\chi_A\colon S\to \{0,1\}\)</span>, is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\chi_A(x) =\left\{
+\begin{array}{cc}
+1 \amp \mbox{if } x\in A\\
+0 \amp \mbox{if } x\not\in A\\
+\end{array}\right..
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(A,B\)</span> be subsets of <span class="process-math">\(S\text{.}\)</span> Prove the following. The symbol "<span class="process-math">\(\oplus\)</span>" denotes addition modulo 2.</div>
+<ol class="lower-alpha">
+<li id="charfunexer-1-1-14-1"><div class="para" id="p-derived-charfunexer-1-1-14-1">
+<span class="process-math">\(A=B\)</span> if and only if <span class="process-math">\(\chi_A=\chi_B\)</span>
+</div></li>
+<li id="charfunexer-1-1-14-2"><div class="para" id="p-derived-charfunexer-1-1-14-2"><span class="process-math">\(\displaystyle (\chi_A)^2 = \chi_A\)</span></div></li>
+<li id="charfunexer-1-1-14-3"><div class="para" id="p-derived-charfunexer-1-1-14-3"><span class="process-math">\(\displaystyle \chi_{A\cap B} = \chi_A\cdot \chi_B\)</span></div></li>
+<li id="charfunexer-1-1-14-4"><div class="para" id="p-derived-charfunexer-1-1-14-4"><span class="process-math">\(\displaystyle \chi_{A\cup B} = \chi_A \oplus \chi_B \oplus (\chi_A\cdot \chi_B)\)</span></div></li>
+<li id="charfunexer-1-1-14-5"><div class="para" id="p-derived-charfunexer-1-1-14-5"><span class="process-math">\(\displaystyle \chi_{S\setminus A} = 1\oplus \chi_A\)</span></div></li>
+<li id="charfunexer-1-1-14-6"><div class="para" id="p-derived-charfunexer-1-1-14-6"><span class="process-math">\(\displaystyle \chi_{S\setminus (A\cup B)} = (1 \oplus \chi_A)(1 \oplus \chi_B)\)</span></div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-5-1-1">
+<div class="para">Let <span class="process-math">\(A,B,C\)</span> be sets. Prove the following (the first two are <dfn class="terminology">distributive laws</dfn> for sets and the second two are <dfn class="terminology">De Morgan’s laws</dfn>). Hint: use characteristic functions from <a href="" class="xref" data-knowl="./knowl/xref/charfunexer.html" title="Exercise 1.5.3.4">Exercise 1.5.3.4</a> above.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-5-1-1-7-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-5-1-1-7-1"><span class="process-math">\(\displaystyle A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</span></div></li>
+<li id="basic_tools_problems_section-4-2-5-1-1-7-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-5-1-1-7-2"><span class="process-math">\(\displaystyle A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</span></div></li>
+<li id="basic_tools_problems_section-4-2-5-1-1-7-3"><div class="para" id="p-derived-basic_tools_problems_section-4-2-5-1-1-7-3"><span class="process-math">\(\displaystyle S\setminus{(A\cap B)} = (S\setminus A) \cup (S\setminus
+B)\)</span></div></li>
+<li id="basic_tools_problems_section-4-2-5-1-1-7-4"><div class="para" id="p-derived-basic_tools_problems_section-4-2-5-1-1-7-4"><span class="process-math">\(\displaystyle S\setminus{(A\cup B)} = (S\setminus A) \cap (S\setminus B)\)</span></div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-6-1-1">
+<div class="para">A <dfn class="terminology">partition</dfn>  of a set <span class="process-math">\(S\)</span> is a collection of nonempty subsets of <span class="process-math">\(S\)</span> whose union is all of <span class="process-math">\(S\)</span> and any two of which have empty intersection.</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-6-1-1-6-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-6-1-1-6-1">Let <span class="process-math">\(S=\{a,b,c\}\text{.}\)</span> Write out all possible partitions of <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-6-1-1-6-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-6-1-1-6-2">Give an example of a collection of subsets of <span class="process-math">\(S=\{a,b,c\}\)</span> whose union is all of <span class="process-math">\(S\text{,}\)</span> but some two of which have nonempty intersection.</div></li>
+<li id="basic_tools_problems_section-4-2-6-1-1-6-3"><div class="para" id="p-derived-basic_tools_problems_section-4-2-6-1-1-6-3">Give an example of a collection of subsets of <span class="process-math">\(S=\{a,b,c\}\text{,}\)</span> any two of which have empty intersection, but whose union is not all of <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-7-1-1">
+<div class="para">An <dfn class="terminology">equivalence relation</dfn> on a set  <span class="process-math">\(S\)</span> is a set  <span class="process-math">\(E\subseteq
+S\times S\)</span> of ordered pairs of elements of  <span class="process-math">\(S\)</span> that satisfies the following. <blockquote class="blockquote" id="basic_tools_problems_section-4-2-7-1-1-6"><ol class="lower-roman">
+<li id="basic_tools_problems_section-4-2-7-1-1-6-1-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-7-1-1-6-1-1">
+<span class="process-math">\((x,x)\in E\)</span> for every  <span class="process-math">\(x\in S\)</span> (the <dfn class="terminology">reflexive</dfn> property)</div></li>
+<li id="basic_tools_problems_section-4-2-7-1-1-6-1-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-7-1-1-6-1-2">if  <span class="process-math">\((x,y)\)</span> is in  <span class="process-math">\(E\)</span> then  <span class="process-math">\((y,x)\)</span> is in  <span class="process-math">\(E\)</span> (the <dfn class="terminology">symmetric</dfn> property)</div></li>
+<li id="basic_tools_problems_section-4-2-7-1-1-6-1-3"><div class="para" id="p-derived-basic_tools_problems_section-4-2-7-1-1-6-1-3">if  <span class="process-math">\((x,y)\)</span> is in  <span class="process-math">\(E\)</span> and  <span class="process-math">\((y,z)\)</span> is in  <span class="process-math">\(E\text{,}\)</span> then  <span class="process-math">\((x,z)\)</span> is in  <span class="process-math">\(E\)</span> (the <dfn class="terminology">transitive</dfn> property)</div></li>
+</ol></blockquote>
+</div>
+<ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-7-1-1-7-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-7-1-1-7-1">Write out all possible equivalence relations for  <span class="process-math">\(S=\{a,b,c\}\text{.}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-7-1-1-7-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-7-1-1-7-2">Give an example of a set  <span class="process-math">\(F\subseteq S\times S\)</span> of ordered pairs of  <span class="process-math">\(S=\{a,b,c\}\)</span> that satisfies exactly two of the three properties in the definition of equivalence relation.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-4-2-8"><h5 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Correspondence between partitions and equivalence relations.</span>
+</h5>
+<div class="para logical" id="basic_tools_problems_section-4-2-8-2-1"><ol class="lower-alpha">
+<li id="basic_tools_problems_section-4-2-8-2-1-1-1"><div class="para" id="p-derived-basic_tools_problems_section-4-2-8-2-1-1-1">Let <span class="process-math">\({\mathcal U}\)</span> be a partition on a set <span class="process-math">\(S\text{.}\)</span> Define a set <span class="process-math">\(E_{\mathcal U} \subseteq S\times S\)</span> of ordered pairs of <span class="process-math">\(S\)</span> by <span class="process-math">\((x,y)\in E_{\mathcal U}\)</span> if and only if there is some <span class="process-math">\(U\in
+{\mathcal U}\)</span> such that <span class="process-math">\(x,y\)</span> both lie in <span class="process-math">\(U\text{.}\)</span> Show that <span class="process-math">\(E_{\mathcal U}\)</span> is an equivalence relation on <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-8-2-1-1-2"><div class="para" id="p-derived-basic_tools_problems_section-4-2-8-2-1-1-2">Let <span class="process-math">\(E\subset S\times S\)</span> be an equivalence relation on <span class="process-math">\(S\text{.}\)</span> For each <span class="process-math">\(x\in S\text{,}\)</span> let <span class="process-math">\(U_x=\{y\in S\colon (x,y)\in E\}\)</span> Show that the collection of subsets <span class="process-math">\({\mathcal U}_E = \{U_x\colon x\in S\}\)</span> is a partition of <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="basic_tools_problems_section-4-2-8-2-1-1-3"><div class="para" id="p-derived-basic_tools_problems_section-4-2-8-2-1-1-3">Show that the mappings<div class="displaymath process-math" id="basic_tools_problems_section-4-2-8-2-1-1-3-1">
+\begin{align*}
+{\mathcal U} \amp \longrightarrow E_{\mathcal U}\\
+{\mathcal U}_E \amp \longleftarrow E
+\end{align*}
+</div>determine a one-to-one correspondence<div class="displaymath process-math">
+\begin{equation*}
+\{ \mbox{partitions of } S\} \longleftrightarrow \{ \mbox{equivalence
+relations on } S\}.
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article></section></section><section class="subsection" id="basic_tools_problems_section-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="space"> </span><span class="title">Pythagorean Triples</span>
+</h3>
+<div class="para" id="basic_tools_problems_section-5-2">A 3-tuple <span class="process-math">\((a,b,c)\)</span> of positive integers is called a <dfn class="terminology">Pythagorean triple</dfn> if there exists a right triangle with leg lengths <span class="process-math">\(a,b\)</span> and hypotenuse length <span class="process-math">\(c\text{.}\)</span> A Pythagorean triple is <dfn class="terminology">primitive</dfn> if <span class="process-math">\(a,b,c\)</span> have no common divisors (other than 1).</div>
+<div class="para logical" id="basic_tools_problems_section-5-3">
+<div class="para">A point <span class="process-math">\((p,q)\)</span> on the unit circle is called a <em class="emphasis">rational point</em> if both <span class="process-math">\(p,q\)</span> are rational numbers. Let <span class="process-math">\(Q\)</span> be the open first quadrant of the unit circle in the <span class="process-math">\(x,y\)</span>-plane (that is, points on the unit circle with both coordinates positive). The following exercises tell the story of one-to-one correspondences between the following sets.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\text{primitive Pythagorean triples}\} 
+\longleftrightarrow 
+\{\text{rational points on } Q\} \longleftrightarrow \{\text{rational
+numbers } a\gt 1\}
+\end{equation*}
+</div>
+</div>
+<figure class="figure figure-like" id="pythtrip2circptfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/pythtrip2circpt.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.5<span class="period">.</span></span><span class="space"> </span>Pythagorean triple <span class="process-math">\((a,b,c)\)</span> and associated unit circle point <span class="process-math">\((a/c,b/c)\)</span></figcaption></figure><section class="exercises" id="basic_tools_problems_section-5-5"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="basic_tools_problems_section-5-5-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-5-5-1-1-1">Given a Pythagorean triple <span class="process-math">\((a,b,c)\)</span> (not necessarily primitive), show that <span class="process-math">\((a/c,b/c)\)</span> is a rational point on <span class="process-math">\(Q\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/pythtrip2circptfig.html" title="Figure 1.5.5">Figure 1.5.5</a>).</div></article><article class="exercise exercise-like" id="pythripprimpairwisereduced"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="pythripprimpairwisereduced-1-1">Let <span class="process-math">\((a,b,c)\)</span> be a primitive Pythagorean triple. Show that <span class="process-math">\(a,c\)</span> share no common divisors other than 1.</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-5-5-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-5-5-3-1-1">
+<div class="para">Let <span class="process-math">\((p,q)\)</span> be a point in <span class="process-math">\(Q\)</span> with both <span class="process-math">\(p,q\)</span> rational. Show that there is a unique reduced Pythagorean triple that maps to <span class="process-math">\((p,q)\)</span> via <span class="process-math">\((a,b,c)\to (a/c,b/c)\text{.}\)</span> Use this to explain why there is a one-to-one correspondence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\text{primitive Pythagorean triples}\} \longleftrightarrow
+\{\mbox{rational points on } Q\}.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-5-5-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-5-5-4-1-1">Given a point <span class="process-math">\(P=(x,y)\)</span> on <span class="process-math">\(Q\text{,}\)</span> let <span class="process-math">\(L\)</span> be the line through <span class="process-math">\(P\)</span> and <span class="process-math">\((0,1)\text{.}\)</span>  Let <span class="process-math">\(s(P)\)</span> be the <span class="process-math">\(x\)</span>-coordinate of the intersection of <span class="process-math">\(L\)</span> with the <span class="process-math">\(x\)</span> axis.  See <a href="" class="xref" data-knowl="./knowl/xref/stereoprojfig.html" title="Figure 1.5.6">Figure 1.5.6</a>.  This defines a one-to-one correspondence <span class="process-math">\(s\colon Q\to (1,\infty)\)</span> called <dfn class="terminology">stereographic projection</dfn>. Show that <span class="process-math">\(s\)</span> is given by <span class="process-math">\(s(x,y) =
+\frac{x}{1-y}\text{.}\)</span> <figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5.6<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure>
+</div></article><article class="exercise exercise-like" id="inversestereoexer"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="inversestereoexer-1-1">Find a formula for <span class="process-math">\(s^{-1}\colon (1,\infty)\to Q\text{.}\)</span> Verify that your formula really gives an inverse for <span class="process-math">\(s\)</span> by showing that <span class="process-math">\(s^{-1}\of s=\One_{Q}\)</span> and <span class="process-math">\(s\of s^{-1}=\One_{(1,\infty)}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-5-5-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para logical" id="basic_tools_problems_section-5-5-6-1-1">
+<div class="para">Use the formulas for <span class="process-math">\(s,s^{-1}\)</span> to explain why there is a one-to-one correspondence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\mbox{rational points on } Q\} \longleftrightarrow
+\{\text{rational numbers } a\gt 1\}.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="basic_tools_problems_section-5-5-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="basic_tools_problems_section-5-5-7-1-1">From the correspondences established in this exercise, what is the rational number associated to the Pythagorean triple <span class="process-math">\((4,3,5)\text{?}\)</span> To <span class="process-math">\((5,12,13)\text{?}\)</span> What primitive Pythagorean triple corresponds to the rational number 3? To the rational number <span class="process-math">\(7/4\text{?}\)</span>
+</div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="linexp_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cartesian_plane_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

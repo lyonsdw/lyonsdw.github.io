@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear and Exponential Growth</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Not Just Calculus">
+<meta property="book:author" content="David W. Lyons">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="mod_arith_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="basic_tools_problems_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
+      \DeclareMathOperator{\MOD}{\rm MOD}
+\DeclareMathOperator{\percent}{\%}      
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\One}{\Large\mathbb 1}
+\DeclareMathOperator{\proj}{proj}      
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+      #3 \amp #4 \end{array} \right]}
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="setsnfuns_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setsnfuns_section.html#setsnfuns_section-20" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="function_properties_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Properties of Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="function_properties_section.html#function_properties_section-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Divisibility and Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-18" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-8" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Basic Tools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Using Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-5" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.5.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cartesian_plane_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">The Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-13" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-12" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complex Plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-15" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="additional_exercises_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Planar Algebra and Geometry</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-2" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="not_just_calculus-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="not_just_calculus-6-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="not_just_calculus-6-2.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linexp_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Linear and Exponential Growth</span>
+</h2>
+<div class="para logical" id="linexp_section-2">
+<div class="para">Let <span class="process-math">\(b,m\)</span> be real constants, and consider the linear function <span class="process-math">\(L(t)=b+mt\text{.}\)</span> The sequence of values <span class="process-math">\(L(0), L(1), L(2),\ldots\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b, b+m, b+2m,\ldots ,b+nm,\ldots
+\end{equation*}
+</div>
+<div class="para">is called an <dfn class="terminology">arithmetic sequence</dfn> <details class="ptx-footnote" aria-live="polite" id="linexp_section-2-7"><summary class="ptx-footnote__number" title="Footnote 1.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="linexp_section-2-7">The emphasis is on the third syllable "met" when the word "arithmetic" is used as an adjective rather than a noun. For example: "Addition is an operation of <span class="process-math">\(\mbox{a}\cdot \mbox{rith}'\cdot \mbox{metic}\text{.}\)</span> Repeated addition creates an <span class="process-math">\(\mbox{arith}\cdot \mbox{met}'\cdot \mbox{ic}\)</span> sequence."</div></details> with <dfn class="terminology">initial term</dfn> <span class="process-math">\(b\)</span> and <dfn class="terminology">common difference</dfn> <span class="process-math">\(m\text{.}\)</span> An arithmetic sequence is said to exhibit <dfn class="terminology">linear</dfn> growth or decay, according to whether <span class="process-math">\(m \gt 0\)</span> or <span class="process-math">\(m\lt 0\text{,}\)</span> respectively.</div>
+</div>
+<div class="para logical" id="linexp_section-3">
+<div class="para">Let <span class="process-math">\(a,r\)</span> be real constants with <span class="process-math">\(a\neq 0, r\gt 0, r\neq 1\text{,}\)</span> and consider the exponential function <span class="process-math">\(E(t) = ar^t\text{.}\)</span> The sequence of values <span class="process-math">\(E(0),E(1),E(2),\ldots\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a,ar,ar^2,\ldots,ar^n,\ldots
+\end{equation*}
+</div>
+<div class="para">is called a <dfn class="terminology">geometric sequence</dfn> with <dfn class="terminology">initial term</dfn> <span class="process-math">\(a\)</span> and <dfn class="terminology">common ratio</dfn> <span class="process-math">\(r\text{.}\)</span> A geometric sequence with <span class="process-math">\(a\gt 0\)</span> is said to exhibit <dfn class="terminology">exponential</dfn> growth or decay, according to whether <span class="process-math">\(r\gt 1\)</span> or <span class="process-math">\(r\lt 1\text{,}\)</span> respectively.</div>
+</div>
+<details id="linexp_section-4" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="linexp_section-4-1-1">
+<div class="para">Fill in the missing terms of the following arithmetic and geometric sequences.  Identify the initial term and the common difference or common ratio for each.</div>
+<ol class="decimal">
+<li id="linexp_section-4-1-1-1-1"><div class="para" id="p-derived-linexp_section-4-1-1-1-1"><span class="process-math">\(\displaystyle 5,2,-1, \underline{\rule{2ex}{0ex}},
+\underline{\rule{2ex}{0ex}},\underline{\rule{2ex}{0ex}},\ldots\)</span></div></li>
+<li id="linexp_section-4-1-1-1-2"><div class="para" id="p-derived-linexp_section-4-1-1-1-2"><span class="process-math">\(\displaystyle 5,2,0.8,\underline{\rule{2ex}{0ex}},
+\underline{\rule{2ex}{0ex}},\underline{\rule{2ex}{0ex}},\ldots\)</span></div></li>
+<li id="linexp_section-4-1-1-1-3"><div class="para" id="p-derived-linexp_section-4-1-1-1-3"><span class="process-math">\(\displaystyle \underline{\rule{2ex}{0ex}}, 2,
+\underline{\rule{2ex}{0ex}},5,\underline{\rule{2ex}{0ex}},8,\ldots\)</span></div></li>
+<li id="linexp_section-4-1-1-1-4"><div class="para" id="p-derived-linexp_section-4-1-1-1-4"><span class="process-math">\(\displaystyle \underline{\rule{2ex}{0ex}}, 2,
+\underline{\rule{2ex}{0ex}},4,\underline{\rule{2ex}{0ex}},8,\ldots\)</span></div></li>
+</ol>
+</div></article></details><div class="para logical" id="linexp_section-5">
+<div class="para">
+<em class="alert">Finite arithmetic and geometric sums.</em> Exercises at the end of this subsection outline the derivations of the following formulas.</div>
+<div class="displaymath process-math" id="linexp_section-5-2">
+\begin{align}
+b + (b+m) + (b+2m) + \cdots + (b+nm)
+\amp =  \frac{(n+1)(2b+nm)}{2} \tag{1.4.1}\\
+a + ar + ar^2 + \cdots + ar^n \amp
+= a\left(\frac{1-r^{n+1}}{1-r}\right)\tag{1.4.2}
+\end{align}
+</div>
+</div>
+<details id="linexp_section-6" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="linexp_section-6-1-1">
+<div class="para">Find the given sums of terms of arithmetic and geometric sequences.</div>
+<ol class="decimal">
+<li id="linexp_section-6-1-1-1-1"><div class="para" id="p-derived-linexp_section-6-1-1-1-1">Find the sum of the first 100 positive integers.</div></li>
+<li id="linexp_section-6-1-1-1-2"><div class="para" id="p-derived-linexp_section-6-1-1-1-2"><span class="process-math">\(\displaystyle 2 + 5 + 8 + 11 + \cdots + 302\)</span></div></li>
+<li id="linexp_section-6-1-1-1-3"><div class="para" id="p-derived-linexp_section-6-1-1-1-3"><span class="process-math">\(\displaystyle 2 + 5 + 8 + 11 + \cdots + 1571\)</span></div></li>
+<li id="linexp_section-6-1-1-1-4"><div class="para" id="p-derived-linexp_section-6-1-1-1-4"><span class="process-math">\(\displaystyle 2 + 6 + 18 + 54 + \cdots + 2(3^{100})\)</span></div></li>
+<li id="linexp_section-6-1-1-1-5"><div class="para" id="p-derived-linexp_section-6-1-1-1-5"><span class="process-math">\(\displaystyle 2 + 6 + 18 + 54 + \cdots + 9565938\)</span></div></li>
+</ol>
+</div></article></details><div class="para logical" id="linexp_section-7">
+<div class="para">
+<em class="alert">Infinite geometric sums.</em> An infinite sum of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{equation*}
+a + ar + ar^2 + ar^3 + \cdots
+\end{equation*}
+</div>
+<div class="para">is called an <dfn class="terminology">infinite geometric series</dfn>, and is defined to mean <span class="process-math">\(\displaystyle \lim_{n\to\infty} s_n\)</span> (if the limit exists), where <span class="process-math">\(s_1,s_2,s_3,\ldots\)</span> is sequence of finite sums</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html" id="linexp_section-7-7">
+\begin{align*}
+s_0 \amp = a\\
+s_1  \amp = a + ar\\
+s_2  \amp = a + ar + ar^2\\
+\amp \vdots \\
+s_n  \amp = a+ ar+ar^2 + \cdots + ar^n\\
+\amp \vdots
+\end{align*}
+</div>
+<div class="para">If <span class="process-math">\(|r| \lt 1\text{,}\)</span> then <span class="process-math">\(|r|^n \to 0\)</span> as <span class="process-math">\(n\to \infty\text{.}\)</span> Using properties of limits from calculus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html">
+\begin{equation*}
+a\left(\frac{1-r^{n+1}}{1-r}
+\right) \to a\left(\frac{1}{1-r}\right)
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(n\to \infty\text{.}\)</span> Putting this together with <a href="" class="xref" data-knowl="./knowl/xref/geompartialsum.html" title="Equation 1.4.2">(1.4.2)</a> above is the justification for the following formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/geompartialsum.html" id="linexp_section-7-14">
+\begin{align}
+a + ar+ ar^2 + ar^3 + \cdots =
+a\left(\frac{1}{1-r}\right) \amp \amp \mbox{ for } |r|\lt 1\tag{1.4.3}
+\end{align}
+</div>
+</div>
+<section class="exercises" id="linexp_section-8"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="linexp_section-8-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="linexp_section-8-1-1-1">Derive <a href="" class="xref" data-knowl="./knowl/xref/arithsum.html" title="Equation 1.4.1">(1.4.1)</a>.</div>
+<div class="solutions"><details id="linexp_section-8-1-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="linexp_section-8-1-3-1">Write the sum in reverse order <span class="process-math">\(L(n)+L(n-1) + \cdots + L(1) +
+L(0)\)</span> directly beneath <span class="process-math">\(L(0)+ L(1) + \cdots + L(n)\text{,}\)</span> in such a way that the terms are aligned vertically. Notice that each vertically aligned pair has the form <span class="process-math">\(L(k)\)</span> and <span class="process-math">\(L(n-k)\text{,}\)</span> and that <span class="process-math">\(L(k)+L(n-k) =
+2b+nm\)</span> (the <span class="process-math">\(k\)</span>’s cancel!). Now go from there.</div></div></details></div></article><article class="exercise exercise-like" id="linexp_section-8-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="linexp_section-8-2-1-1">Derive <a href="" class="xref" data-knowl="./knowl/xref/geompartialsum.html" title="Equation 1.4.2">(1.4.2)</a>.</div>
+<div class="solutions"><details id="linexp_section-8-2-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="linexp_section-8-2-3-1">Let <span class="process-math">\(s\)</span> be the desired sum <span class="process-math">\(a+ar+ar^2 + \cdots + ar^n\text{.}\)</span> Examine the expansion of <span class="process-math">\(s-rs\)</span> (many terms cancel!). Simplify and solve for <span class="process-math">\(s\text{.}\)</span>
+</div></div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="mod_arith_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="basic_tools_problems_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

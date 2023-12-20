@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Linear fractional transformations of the extended real numbers.</span>
+</h4>
+<div class="para logical">
+<div class="para">We call the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\extR=\R\cup \{\infty\}
+\end{equation*}
+</div>
+<div class="para">the <dfn class="terminology">extended real numbers</dfn>, where <span class="process-math">\(\infty\)</span> is an element that is not a real number. Let <span class="process-math">\(\alpha\neq 0\)</span> be a real number and let <span class="process-math">\(\beta\)</span> be any real number. We define functions <span class="process-math">\(\mu_\alpha,t_{\beta},r\colon \extR\to\extR\text{,}\)</span> as follows.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mu_{\alpha}(x)\amp = \begin{cases} \alpha x \amp x\in \R\\ \infty \amp x=\infty \end{cases}\\
+\tau_{\beta}(x) \amp = \begin{cases} x+\beta \amp x\in \R\\ \infty
+\amp x=\infty \end{cases}\\
+\rho(x) \amp = \begin{cases} 1/x \amp x\in \R,x\neq 0\\
+\infty \amp x=0\\ 0 \amp x=\infty \end{cases}
+\end{align*}
+</div>
+<div class="para">Any of these functions, and any possible composition of these types of functions (for all possible values of <span class="process-math">\(\alpha,\beta\)</span> with <span class="process-math">\(\alpha\neq 0\)</span>), is called a <dfn class="terminology">real linear fractional transformation</dfn> of the extended real numbers.</div>
+<ol class="lower-alpha">
+<li><div class="para">Show that <span class="process-math">\(\mu_{\alpha},\tau_{\beta},\rho\)</span> are invertible functions.</div></li>
+<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c\neq 0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that the composition<div class="displaymath process-math">
+\begin{equation*}
+\mu_{(1/c)}\of\tau_a\of \mu_{(bc-ad)}\of\rho\of \tau_d\of
+\mu_c
+\end{equation*}
+</div>is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+\extR\to\extR\)</span> is invertible.</div></li>
+<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c=0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that <span class="process-math">\(d\neq 0\)</span> and that the composition <span class="process-math">\(\tau_{(b/d)}\of \mu_{a/d}\)</span> is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+\extR\to\extR\)</span> is invertible.</div></li>
+<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> The function <span class="process-math">\(T\colon \extR\to \extR\)</span> given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\)</span> is called a <dfn class="terminology">linear fractional transformation</dfn> on the extended reals. Given a linear fractional transformation <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> let <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\text{.}\)</span> We will call <span class="process-math">\(M(T)\)</span> the <em class="emphasis">matrix of coefficients</em> of <span class="process-math">\(T\text{.}\)</span> Suppose that <span class="process-math">\(S\)</span> is another linear fractional transformation with <span class="process-math">\(M(S)=\twotwo{e}{f}{g}{h}\text{.}\)</span> Show that <span class="process-math">\(M(T\of
+S)=M(T)M(S)\)</span> and <span class="process-math">\(M(T^{-1})=(M(T))^{-1}\)</span> (the previous two parts of this problem show that <span class="process-math">\(T\)</span> is invertible).</div></li>
+<li><div class="para">Let <span class="process-math">\(s\colon S^1\to \extR\)</span> be the stereographic projection function, given by<div class="displaymath process-math">
+\begin{equation*}
+s(x,y)=\begin{cases}\frac{x}{1-y}\amp y\neq 1\\ \infty \amp
+y=1 \end{cases}.
+\end{equation*}
+</div>Show that <span class="process-math">\(s\)</span> is a bijection.</div></li>
+<li><div class="para">Given a function <span class="process-math">\(f\colon \extR\to\extR\text{,}\)</span> the <em class="emphasis">lift of <span class="process-math">\(f\)</span> by <span class="process-math">\(s\)</span></em> is the function <span class="process-math">\(s^{-1}\of f\of s\colon S^1\to S^1\text{.}\)</span> Show that the lift of the linear fractional transformation <span class="process-math">\(T(x)=1/x\)</span> is given by <span class="process-math">\((x,y)\to (-x,-y)\)</span> and that the lift of <span class="process-math">\(S(x)=-x\)</span> is given by <span class="process-math">\((x,y)\to (-x,y)\text{.}\)</span>
+</div></li>
+<li><div class="para">An element <span class="process-math">\(x\in A\)</span> is called a <dfn class="terminology">fixed point</dfn> of a function <span class="process-math">\(f\colon A\to A\)</span> if <span class="process-math">\(f(x)=x\text{.}\)</span> Find all the fixed points of the linear fractional transformation <span class="process-math">\(T(x)=\frac{6x+2}{3x+3}\text{,}\)</span> and find the fixed points of the lift <span class="process-math">\(s^{-1}\of T\of s\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(M\colon \R^2\to \R^2\)</span> be a linear map. A nonzero vector <span class="process-math">\(\mathbf{v}\in \R^2\)</span> is called an <dfn class="terminology">eigenvector</dfn> for <span class="process-math">\(M\)</span> with <dfn class="terminology">eigenvalue</dfn> <span class="process-math">\(\lambda\in \R\)</span> if if <span class="process-math">\(M\mathbf{v}=\lambda \mathbf{v}\text{.}\)</span> Show that if <span class="process-math">\(x\)</span> is a fixed point for <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> then <span class="process-math">\(\begin{bmatrix}x\\1\end{bmatrix}\)</span> is an eigenvector for <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\)</span> with eigenvalue <span class="process-math">\(cx+d\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="additional_exercises_section.html#additional_exercises_section-2-4">in-context</a></span>
+</body>
+</html>

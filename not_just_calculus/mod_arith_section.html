@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divisibility and Modular Arithmetic</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Not Just Calculus">
+<meta property="book:author" content="David W. Lyons">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="function_properties_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="linexp_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
+      \DeclareMathOperator{\MOD}{\rm MOD}
+\DeclareMathOperator{\percent}{\%}      
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\One}{\Large\mathbb 1}
+\DeclareMathOperator{\proj}{proj}      
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+      #3 \amp #4 \end{array} \right]}
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="setsnfuns_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setsnfuns_section.html#setsnfuns_section-20" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="function_properties_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Properties of Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="function_properties_section.html#function_properties_section-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Divisibility and Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-18" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-8" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Basic Tools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Using Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-5" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.5.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cartesian_plane_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">The Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-13" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-12" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complex Plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-15" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="additional_exercises_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Planar Algebra and Geometry</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-2" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="not_just_calculus-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="not_just_calculus-6-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="not_just_calculus-6-2.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="mod_arith_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Divisibility and Modular Arithmetic</span>
+</h2>
+<div class="para logical" id="mod_arith_section-2">
+<div class="para">The set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Z=\{ \ldots,-3,-2,-1,0,1,2,3,\ldots \}
+\end{equation*}
+</div>
+<div class="para"> of all the whole numbers is called the <dfn class="terminology">integers</dfn>. We say that an integer <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> an integer <span class="process-math">\(b\text{,}\)</span> written <span class="process-math">\(a|b\)</span>    , if <span class="process-math">\(b=ak\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>  If <span class="process-math">\(a|b\text{,}\)</span> we say that <span class="process-math">\(b\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(a\text{,}\)</span> and we say <span class="process-math">\(a\)</span> is a <dfn class="terminology">divisor</dfn> of <span class="process-math">\(b\text{.}\)</span>  We write <span class="process-math">\(a\nmid b\)</span>     to indicate that <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\text{.}\)</span> Given a positive integer <span class="process-math">\(m\text{,}\)</span> we say integers <span class="process-math">\(a,b\)</span> are <dfn class="terminology">equivalent modulo <span class="process-math">\(m\)</span></dfn>, written <span class="process-math">\(a\equiv b \pmod{m}\)</span>    , if <span class="process-math">\(m|(a-b)\text{.}\)</span> An integer <span class="process-math">\(p&gt;1\)</span> whose only positive divisors are <span class="process-math">\(1\)</span> and <span class="process-math">\(p\)</span> is called <dfn class="terminology">prime</dfn>.</div>
+</div>
+<details id="mod_arith_section-3" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="mod_arith_section-3-1-1">
+<div class="para">Say which of the following are true, or false, or neither. Explain.</div>
+<div class="displaymath process-math" id="mod_arith_section-3-1-1-1">
+\begin{align*}
+6|3 \amp \amp 3|6 \amp \amp 6/3 \\
+\amp 8\equiv 2\pmod{3}
+\amp \amp  7\equiv 2 \pmod{3}
+\end{align*}
+</div>
+</div></article></details><div class="para" id="mod_arith_section-4">Here are two important facts about divisibility and primes.</div>
+<article class="theorem theorem-like" id="divisionalgorithm"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
+</h3>
+<div class="para logical" id="divisionalgorithm-3-1">
+<div class="para">Let <span class="process-math">\(m\)</span> be a positive integer. For every integer <span class="process-math">\(n\)</span> there are unique integers <span class="process-math">\(q,r\)</span> that satisfy</div>
+<div class="displaymath process-math" id="divisionalgorithm-3-1-4">
+\begin{align*}
+n=mq + r, \amp \amp 0\leq r\lt m.
+\end{align*}
+</div>
+<div class="para">The number <span class="process-math">\(q\)</span> is called the <dfn class="terminology">quotient</dfn> and the number <span class="process-math">\(r\)</span> is called the <dfn class="terminology">remainder</dfn> for <dfn class="terminology">dividing <span class="process-math">\(n\)</span>  by <span class="process-math">\(m\)</span></dfn>.</div>
+</div></article><article class="theorem theorem-like" id="fundthmarith"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Arithmetic.</span>
+</h3>
+<div class="para logical" id="fundthmarith-3-1">
+<div class="para">Every positive integer <span class="process-math">\(n\)</span> can be written as a product of primes. Further, this prime factorization is unique. That means that if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n=p_1p_2\cdots p_k=q_1q_2\cdots q_\ell
+\end{equation*}
+</div>
+<div class="para">for primes <span class="process-math">\(p_i,q_j\text{,}\)</span> then <span class="process-math">\(k=\ell\)</span> and there is a rearrangement of the subscripts for which <span class="process-math">\(p_i=q_i\)</span> for <span class="process-math">\(1\leq i\leq k\text{.}\)</span>
+</div>
+</div></article><div class="para" id="mod_arith_section-7">Here is a useful corollary that relates divisibility to the Division Algorithm.</div>
+<article class="corollary theorem-like" id="dividesiffr0"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="dividesiffr0-1-1">Let <span class="process-math">\(m\)</span> be a positive integer, let <span class="process-math">\(n\)</span> be any integer, and let <span class="process-math">\(n=qm+r\text{,}\)</span> where <span class="process-math">\(q,r\)</span> are integers, with <span class="process-math">\(r\)</span> in the range <span class="process-math">\(0\leq r\lt
+m\text{,}\)</span> as guaranteed by the Division Algorithm. Then we have <span class="process-math">\(m|n\)</span> if and only if <span class="process-math">\(r=0\text{.}\)</span>
+</div></article><details id="dividesiffr0-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="dividesiffr0-2-1">Suppose <span class="process-math">\(r=0\text{.}\)</span> Then <span class="process-math">\(n=mq+r\)</span> reduces to <span class="process-math">\(n=mq\text{,}\)</span> so <span class="process-math">\(m|n\text{.}\)</span> Conversely, suppose that <span class="process-math">\(m|n\text{.}\)</span> Then we have <span class="process-math">\(n=mk\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> The Division algorithm says that <span class="process-math">\(n=mq+r\)</span> is the <em class="emphasis">only</em> possible way to write <span class="process-math">\(n\)</span> as a multiple of <span class="process-math">\(m\)</span> with a remainder in the range <span class="process-math">\(0\leq r\lt m\text{.}\)</span> Therefore we conclude that <span class="process-math">\(q=k\)</span> and <span class="process-math">\(r=0\text{.}\)</span>
+</div></article></details><div class="para logical" id="mod_arith_section-9">
+<div class="para">
+<em class="alert">Remark on the statement and proof of <a href="" class="xref" data-knowl="./knowl/xref/dividesiffr0.html" title="Corollary 1.3.4">Corollary 1.3.4</a>.</em> The phrase "if and only if" means that the following two statements hold.</div>
+<ol class="decimal">
+<li id="mod_arith_section-9-3-1"><div class="para" id="p-derived-mod_arith_section-9-3-1">If <span class="process-math">\(r=0\text{,}\)</span> then <span class="process-math">\(m|n\text{.}\)</span>
+</div></li>
+<li id="mod_arith_section-9-3-2"><div class="para" id="p-derived-mod_arith_section-9-3-2">If <span class="process-math">\(m|n\text{,}\)</span> then <span class="process-math">\(r=0\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">It is often a good idea to construct a proof for an "if and only if" statement in two parts, one part for each of the two "if-then" statements. Statement 1 is called the "if" part of the "if and only if" statement, and statement 2 is called the "only if" part of the if and only if statement.</div>
+</div>
+<div class="para" id="mod_arith_section-10">Here is a fact that demonstrates the power of the Division Algorithm and the Fundamental Theorem of Arithmetic.</div>
+<article class="proposition theorem-like" id="infprimeprop"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="infprimeprop-1-1">There are infinitely many prime numbers.</div></article><details id="infprimeprop-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="infprimeprop-2-1">We wish to show that there are infinitely many primes. Suppose, on the contrary, that there exist only finitely many primes, say <span class="process-math">\(p_1,p_2,\ldots,p_r\text{.}\)</span> Let <span class="process-math">\(s=p_1p_2\cdots
+p_r+1\text{.}\)</span> Using the division algorithm to divide <span class="process-math">\(s\)</span> by <span class="process-math">\(p_1\text{,}\)</span> we have <span class="process-math">\(s= p_1q+r\)</span> with <span class="process-math">\(q=p_2p_3\cdots p_r\)</span> and <span class="process-math">\(r=1\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/dividesiffr0.html" title="Corollary 1.3.4">Corollary 1.3.4</a>, the fact that <span class="process-math">\(r=1\)</span> means that <span class="process-math">\(p_1\)</span> does <em class="emphasis">not</em> divide <span class="process-math">\(s\text{,}\)</span> so <span class="process-math">\(p_1\)</span> cannot appear in the prime factorization of <span class="process-math">\(s\text{.}\)</span> A similar argument shows that none of the <span class="process-math">\(p_j\)</span>’s can appear in the prime factorization of <span class="process-math">\(s\text{.}\)</span> This contradicts the Fundamental Theorem of Arithmetic, that says <span class="process-math">\(s\)</span> can be expressed as a product of primes. We conclude that there are infinitely many primes.</div></article></details><div class="para" id="mod_arith_section-12">
+<em class="alert">Remark on the proof of <a href="" class="xref" data-knowl="./knowl/xref/infprimeprop.html" title="Proposition 1.3.5">Proposition 1.3.5</a>.</em> The proof uses a logic structure called <dfn class="terminology">proof by contradiction</dfn>. To show that a claim is true ("there are infinitely many primes"), a proof by contradiction begins by supposing that the opposite of the claim is true ("suppose there are only finitely many primes"). Next, we show that there is an impossible consequence ("the Fundamental Theorem of Arithmetic is false"). We conclude that the opposite claim ("there are only finitely many primes") must be false, so the original claim ("there are infinitely many primes") is true.</div>
+<div class="para logical" id="mod_arith_section-13">
+<div class="para">We write <span class="process-math">\(\Z_m\)</span> to denote the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Z_m = \{0,1,\ldots,m-1\}
+\end{equation*}
+</div>
+<div class="para"> of possible remainders obtained when dividing by a positive integer by <span class="process-math">\(m\text{.}\)</span> The function <span class="process-math">\(\Z \to \Z_m\)</span> that sends an input <span class="process-math">\(n\)</span> to its remainder when dividing by <span class="process-math">\(m\)</span> is called "reducing mod <span class="process-math">\(m\)</span>". Sometimes we write <span class="process-math">\(n \MOD m\)</span>, pronounced "<span class="process-math">\(n\)</span> modulo <span class="process-math">\(m\)</span>" or simply "<span class="process-math">\(n\)</span> mod <span class="process-math">\(m\)</span>", to denote this remainder.</div>
+</div>
+<div class="para logical" id="mod_arith_section-14">
+<div class="para">We define operations <span class="process-math">\(a+_m b\)</span> and <span class="process-math">\(a\cdot_m b\)</span> for elements <span class="process-math">\(a,b\)</span> in <span class="process-math">\(\Z_m\)</span> by</div>
+<div class="displaymath process-math" id="mod_arith_section-14-5">
+\begin{align*}
+a+_m b \amp = (a+b)\MOD m\\
+a\cdot_m b \amp = (ab)\MOD m
+\end{align*}
+</div>
+<div class="para">The operations <span class="process-math">\(+_m\text{,}\)</span> <span class="process-math">\(\cdot_m\)</span> are called <dfn class="terminology">addition modulo <span class="process-math">\(m\)</span></dfn> and <dfn class="terminology">multiplication modulo <span class="process-math">\(m\)</span></dfn>, respectively. The set <span class="process-math">\(\Z_m\)</span> is sometimes called the "<span class="process-math">\(m\)</span>-hour clock" and the operations <span class="process-math">\(+_m,\cdot_m\)</span> are called "clock arithmetic" or "arithmetic modulo <span class="process-math">\(m\)</span>".</div>
+</div>
+<details id="mod_arith_section-15" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="mod_arith_section-15-1-1">
+<div class="para">Find examples of integers <span class="process-math">\(m\gt
+1\text{,}\)</span> <span class="process-math">\(a,b\in \Z_m\)</span> such that</div>
+<ol class="decimal">
+<li id="mod_arith_section-15-1-1-3-1"><div class="para" id="p-derived-mod_arith_section-15-1-1-3-1"><span class="process-math">\(\displaystyle a+_m b = 0\)</span></div></li>
+<li id="mod_arith_section-15-1-1-3-2"><div class="para" id="p-derived-mod_arith_section-15-1-1-3-2">
+<span class="process-math">\(a \cdot_m b = 0\)</span> and <span class="process-math">\(a\neq 0\)</span> and <span class="process-math">\(b\neq 0\)</span>
+</div></li>
+<li id="mod_arith_section-15-1-1-3-3"><div class="para" id="p-derived-mod_arith_section-15-1-1-3-3">
+<span class="process-math">\(a \cdot_m b =1\)</span> and <span class="process-math">\(a\neq 1\)</span> and <span class="process-math">\(b\neq 1\)</span>
+</div></li>
+</ol>
+</div></article></details><div class="para" id="mod_arith_section-16">Here is a useful fact that connects equivalence modulo an integer <span class="process-math">\(m\)</span> with the operation that send an integer <span class="process-math">\(n\)</span> to <span class="process-math">\(n \MOD m\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="modMODequivprop"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="modMODequivprop-1-1">Let <span class="process-math">\(m&gt;1\)</span> be a positive integer, and let <span class="process-math">\(a,b\)</span> be integers. Then <span class="process-math">\(a\equiv b \pmod{m}\)</span> if and only if <span class="process-math">\(a\MOD m = b \MOD m\text{.}\)</span>
+</div></article><details id="modMODequivprop-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="modMODequivprop-2-1">
+<div class="para">Use the division algorithm to write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/aminusb.html ./knowl/xref/aminusb.html" id="modMODequivprop-2-1-1">
+\begin{align*}
+a \amp = qm + r\\
+b \amp = q'm + r'
+\end{align*}
+</div>
+<div class="para">for some integers <span class="process-math">\(q,q'\)</span> and <span class="process-math">\(r,r'\)</span> in the range <span class="process-math">\(0\leq r,r'\lt m\text{,}\)</span> so we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/aminusb.html ./knowl/xref/aminusb.html" id="aminusb">
+\begin{equation}
+a-b = (q-q')m + (r-r')\tag{1.3.1}
+\end{equation}
+</div>
+<div class="para">with <span class="process-math">\(r-r'\)</span> in the range <span class="process-math">\(-(m-1)\leq r-r'\leq m-1\text{.}\)</span> To establish the "if" part of the statement in the Proposition, suppose that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This means that <span class="process-math">\(r=r'\text{,}\)</span> so <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.3.1">(1.3.1)</a> becomes <span class="process-math">\(a-b=(q - q')m\text{.}\)</span> Thus we have <span class="process-math">\(m|(a-b)\text{,}\)</span> so we conclude that <span class="process-math">\(a\equiv b \pmod{m}\text{.}\)</span> To establish the "only if" part of the statement in the Proposition, suppose that <span class="process-math">\(a\equiv b \pmod{m}\text{,}\)</span> so we have that <span class="process-math">\(a-b\)</span> is a multiple of <span class="process-math">\(m\text{,}\)</span> say <span class="process-math">\(a-b=km\text{.}\)</span> Then <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.3.1">(1.3.1)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/aminusb.html ./knowl/xref/aminusb.html">
+\begin{equation*}
+r-r' = m(k-q+q').
+\end{equation*}
+</div>
+<div class="para">Because <span class="process-math">\(-(m-1)\leq r-r'\leq m-1\text{,}\)</span> we conclude that <span class="process-math">\(k-q+q'\)</span> must be zero. Thus we have <span class="process-math">\(r=r'\text{,}\)</span> which means that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This completes the proof.</div>
+</div></article></details><section class="exercises" id="mod_arith_section-18"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="primedividesexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="primedividesexer-1-1"></div>    Let <span class="process-math">\(p\)</span> be prime and suppose that <span class="process-math">\(p|(ab)\)</span> for some integers <span class="process-math">\(a,b\text{.}\)</span> Show that it must be the case that <span class="process-math">\(p|a\)</span> or <span class="process-math">\(p|b\)</span> (or both).</article><article class="exercise exercise-like" id="equivmodmisequivrel"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="equivmodmisequivrel-1-1">
+<div class="para">Let <span class="process-math">\(m\)</span> be a positive integer.</div>
+<ol class="lower-alpha">
+<li id="equivmodmisequivrel-1-1-2-1"><div class="para" id="p-derived-equivmodmisequivrel-1-1-2-1">Show that <span class="process-math">\(a\equiv a \pmod{m}\)</span> for every integer <span class="process-math">\(a\text{.}\)</span> (This is called the <em class="emphasis">reflexive</em> property of equivalence modulo <span class="process-math">\(m\text{.}\)</span>)</div></li>
+<li id="equivmodmisequivrel-1-1-2-2"><div class="para" id="p-derived-equivmodmisequivrel-1-1-2-2">Show that if <span class="process-math">\(a\equiv b \pmod{m}\)</span> then <span class="process-math">\(b\equiv a \pmod{m}\text{.}\)</span> (This is called the <em class="emphasis">symmetric</em> property of equivalence modulo <span class="process-math">\(m\text{.}\)</span>)</div></li>
+<li id="equivmodmisequivrel-1-1-2-3"><div class="para" id="p-derived-equivmodmisequivrel-1-1-2-3">Show that if <span class="process-math">\(a\equiv b \pmod{m}\)</span> and <span class="process-math">\(b\equiv c \pmod{m}\text{,}\)</span> then <span class="process-math">\(a\equiv c \pmod{m}\text{.}\)</span> (This is called the <em class="emphasis">transitive</em> property of equivalence modulo <span class="process-math">\(m\text{.}\)</span>)</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="modopswelldef"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="modopswelldef-1-1">
+<div class="para">Let <span class="process-math">\(m\)</span> be a positive integer. Show that if <span class="process-math">\(a_1\equiv b_1 \pmod{m}\)</span> and <span class="process-math">\(a_2\equiv b_2
+\pmod{m}\text{,}\)</span> then</div>
+<ol class="lower-alpha">
+<li id="modopswelldef-1-1-4-1"><div class="para" id="p-derived-modopswelldef-1-1-4-1">
+<span class="process-math">\(a_1+a_2\equiv b_1+b_2 \pmod{m}\text{,}\)</span> and</div></li>
+<li id="modopswelldef-1-1-4-2"><div class="para" id="p-derived-modopswelldef-1-1-4-2"><span class="process-math">\(a_1a_2\equiv b_1b_2 \pmod{m}\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="distlawmodarithexer"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The distributive law for modular arithmetic.</span>
+</h4>
+<div class="para logical" id="distlawmodarithexer-2-1">
+<div class="para">Prove the following property of modular arithmetic, called the <em class="emphasis">distributive law</em>. For any positive integer <span class="process-math">\(m\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="distlawmodarith">
+\begin{equation}
+a\cdot_m (b+_m c) = (a\cdot_m b)
++_m (a\cdot_m c)\tag{1.3.2}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(a,b,c\)</span> in <span class="process-math">\(\Z_m\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details id="distlawmodarithexer-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="distlawmodarithexer-4-1">
+<div class="para">By the ordinary distributive law for integers, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/modopswelldef.html">
+\begin{equation*}
+a(b+c)=ab+ac.
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/modopswelldef.html">
+\begin{equation*}
+a(b+c)\equiv ab+ac \pmod{m}
+\end{equation*}
+</div>
+<div class="para">Now use <a href="" class="xref" data-knowl="./knowl/xref/modopswelldef.html" title="Exercise 1.3.3">Exercise 1.3.3</a> to show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/modopswelldef.html">
+\begin{equation*}
+a(b+c)  \equiv  a\cdot_m (b+_m c) \pmod{m}.
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/modopswelldef.html">
+\begin{equation*}
+ab+ac  \equiv [(a\cdot_m b) +_m (a\cdot_m c)] \pmod{m}.
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="exercise exercise-like" id="mod_arith_section-18-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="mod_arith_section-18-5-1-1">Suppose that <span class="process-math">\(m\)</span> is not prime. Show that there exist nonzero elements <span class="process-math">\(a,b\)</span> in <span class="process-math">\(\Z_m\)</span> for which there exists <em class="emphasis">no</em> <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z_m\)</span> such that <span class="process-math">\(ax\equiv b \pmod{m}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="mod_arith_section-18-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="mod_arith_section-18-6-1-1">Let <span class="process-math">\(m\)</span> be a prime. Let <span class="process-math">\(a\)</span> be a nonzero element of <span class="process-math">\(\Z_m\)</span> and let <span class="process-math">\(b\)</span> be any element of <span class="process-math">\(\Z_m\text{.}\)</span> Show that there exists some <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z_m\)</span> such that <span class="process-math">\(ax\equiv b \pmod{m}\text{.}\)</span> Hint: consider the function <span class="process-math">\(\mu_a\colon \Z_m \to \Z_m\)</span> given by <span class="process-math">\(n\to an \MOD m\text{.}\)</span> Notice that <span class="process-math">\(ax\equiv b
+\pmod{m}\)</span> is the same thing as <span class="process-math">\(\mu_a(x)=b\)</span> (say why!). Show that <span class="process-math">\(\mu_a\)</span> is one-to-one, then cite an appropriate result from these Notes to conclude that <span class="process-math">\(\mu_a\)</span> is onto. Finally, explain how this solves the problem by guaranteeing the existence of the <span class="process-math">\(x\)</span> that you need.</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="function_properties_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="linexp_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
