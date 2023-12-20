@@ -370,14 +370,14 @@ rs(\cos(\theta+\phi),\sin(\theta+\phi)).\tag{1.1.2}
 <li id="complexmultfirstexer-1-1-1-3"><div class="para" id="p-derived-complexmultfirstexer-1-1-1-3">Use <a href="" class="xref" data-knowl="./knowl/xref/complexproduct.html" title="Equation 1.1.2">(1.1.2)</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/complexrealscaling.html" title="Equation 1.1.3">(1.1.3)</a>
 </div></li>
 </ol></div></article></details><div class="para logical" id="complex_plane_section-9">
-<div class="para">Next we establish two basic ways to represent complex numbers, called the <dfn class="terminology">rectangular form</dfn> (or the <dfn class="terminology">Cartesian form</dfn>) and the <dfn class="terminology">polar form</dfn>. Let <span class="process-math">\(\expi(\theta)\)</span> denote the complex number that corresponds to the point <span class="process-math">\(\wrap(\theta)=(\cos\theta,\sin\theta)\)</span> on the unit circle, and let <span class="process-math">\(z\leftrightarrow (a,b)=(r\cos\theta,r\sin\theta)\text{.}\)</span> We have the following.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zxyrthetafig.html" id="complex_plane_section-9-9">
+<div class="para">Next we establish two basic ways to represent complex numbers, called the <dfn class="terminology">rectangular form</dfn> (or the <dfn class="terminology">Cartesian form</dfn>) and the <dfn class="terminology">polar form</dfn>. Let <span class="process-math">\(\expi(\theta)\)</span> denote the complex number that corresponds to the point <span class="process-math">\((\cos\theta,\sin\theta)\)</span> on the unit circle, and let <span class="process-math">\(z\leftrightarrow (a,b)=(r\cos\theta,r\sin\theta)\text{,}\)</span> with <span class="process-math">\(r\geq 0\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zxyrthetafig.html" id="complex_plane_section-9-10">
 \begin{align}
 z\amp = a+bi \amp \amp (\text{rectangular form})\tag{1.1.4}\\
 z\amp = rE(\theta)\amp \amp (\text{polar form})\tag{1.1.5}
 \end{align}
 </div>
-<div class="para">In particular, we have the following expression for <span class="process-math">\(E(\theta)\)</span> in rectangular form.<details class="ptx-footnote" aria-live="polite" id="complex_plane_section-9-11"><summary class="ptx-footnote__number" title="Footnote 1.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="complex_plane_section-9-11">The function <span class="process-math">\(E\)</span> is also called the "cis" function (for "cosine <span class="process-math">\(i\)</span> sine"), implemented in many software libraries.</div></details> </div>
+<div class="para">In particular, we have the following expression for <span class="process-math">\(E(\theta)\)</span> in rectangular form.<details class="ptx-footnote" aria-live="polite" id="complex_plane_section-9-12"><summary class="ptx-footnote__number" title="Footnote 1.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="complex_plane_section-9-12">The function <span class="process-math">\(E\)</span> is also called the "cis" function (for "cosine <span class="process-math">\(i\)</span> sine"), implemented in many software libraries.</div></details> </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/zxyrthetafig.html" id="cisfndef">
 \begin{equation}
 \expi(\theta)=\cos\theta + i\sin\theta\tag{1.1.6}
@@ -462,24 +462,6 @@ r\expi(-\theta)\text{.}\)</span> Geometrically, <span class="process-math">\(z^\
 </ol>
 </div></article></details><div class="para logical" id="complex_plane_section-18">
 <div class="para">
-<em class="alert">Circles and Lines.</em> Let <span class="process-math">\(C\)</span> be the circle of radius <span class="process-math">\(r\gt 0\)</span> and with center <span class="process-math">\(a\in \C\text{.}\)</span> A point <span class="process-math">\(z\)</span> lies on <span class="process-math">\(C\)</span> if and only if the distance from <span class="process-math">\(z\)</span> to <span class="process-math">\(a\)</span> equals <span class="process-math">\(r\text{.}\)</span> In mathematical symbols, <span class="process-math">\(C\)</span> is the set of solutions <span class="process-math">\(z\)</span> for the following equation.</div>
-<div class="displaymath process-math" id="circleeqn">
-\begin{equation}
-|z-a|=r\tag{1.1.19}
-\end{equation}
-</div>
-</div>
-<div class="para logical" id="complex_plane_section-19">
-<div class="para">The real line <span class="process-math">\(\R\)</span> is the set of solutions <span class="process-math">\(z\)</span> of the equation <span class="process-math">\(\im(z)=0\text{.}\)</span> More generally, let <span class="process-math">\(L\)</span> be a line that contains the point <span class="process-math">\(p\in \C\)</span> and makes an angle <span class="process-math">\(\theta\)</span> with the real axis (set <span class="process-math">\(\theta=0\)</span> if <span class="process-math">\(L\)</span> is parallel to the real axis). If <span class="process-math">\(z\in L\text{,}\)</span> then <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, so <span class="process-math">\(\im(e^{-i\theta}(z-p))=0\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/lines_in_complex_plane_fig.html" title="Figure 1.1.5">Figure 1.1.5</a>. Conversely, if <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, then <span class="process-math">\(z\)</span> lies on <span class="process-math">\(L\text{.}\)</span> Multiplying by a positive constant <span class="process-math">\(k\text{,}\)</span> and setting <span class="process-math">\(a=ke^{-i\theta}\)</span> and <span class="process-math">\(b=-ke^{-i\theta}p\text{,}\)</span> we conclude that the line <span class="process-math">\(L\)</span> is the set of solutions to the following equation.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lines_in_complex_plane_fig.html" id="lineeqn">
-\begin{equation}
-\im(az+b)=0\tag{1.1.20}
-\end{equation}
-</div>
-</div>
-<figure class="figure figure-like" id="lines_in_complex_plane_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/lines_in_complex_plane.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.5<span class="period">.</span></span><span class="space"> </span>A line in the complex plane.</figcaption></figure><div class="para logical" id="complex_plane_section-21">
-<div class="para">
 <em class="alert">The complex exponential function.</em> The Taylor series for the real function <span class="process-math">\(y=e^x\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -499,27 +481,45 @@ e^z= 1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots .
 \end{equation*}
 </div>
 <div class="para">The complex exponential obeys familiar laws of the real exponential. For <span class="process-math">\(z,w\)</span> in <span class="process-math">\(\C\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="complex_plane_section-21-11">
+<div class="displaymath process-math" id="complex_plane_section-18-11">
 \begin{align*}
 e^ze^w \amp = e^{z+w}\\
 e^0 \amp =1
 \end{align*}
 </div>
-<div class="para">A key property of the complex exponential is the following, called <dfn class="terminology">Euler’s formula</dfn>. <article class="assemblage assemblage-like" id="complex_plane_section-21-13"><h3 class="heading"><span class="title">Euler’s formula.</span></h3>
-<div class="para logical" id="complex_plane_section-21-13-2"><div class="displaymath process-math" id="eulersformula">
+<div class="para">A key property of the complex exponential is the following, called <dfn class="terminology">Euler’s formula</dfn>. <article class="assemblage assemblage-like" id="complex_plane_section-18-13"><h3 class="heading"><span class="title">Euler’s formula.</span></h3>
+<div class="para logical" id="complex_plane_section-18-13-2"><div class="displaymath process-math" id="eulersformula">
 \begin{equation}
-e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}\tag{1.1.21}
+e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}\tag{1.1.19}
 \end{equation}
 </div></div></article>
 </div>
 </div>
-<div class="para" id="complex_plane_section-22">
+<div class="para" id="complex_plane_section-19">
 <em class="alert">Comment on usage:</em> Up to this point, we have used <span class="process-math">\(E(\theta)\)</span> in place of <span class="process-math">\(e^{i\theta}\)</span> for the complex number <span class="process-math">\(\cos \theta+i\sin\theta\)</span> because the definition of <span class="process-math">\(E(\theta)\)</span> does not require the theory of infinite series. Virtually all texts and reference materials use <span class="process-math">\(e^{i\theta}\)</span> instead of <span class="process-math">\(E(\theta)\text{.}\)</span> The fact that <span class="process-math">\(E(\theta)=e^{i\theta}\)</span> for all real values of <span class="process-math">\(\theta\)</span> means that it is not necessary to justify the details of the complex exponential function in order to use the complex algebra described in these notes. Nonetheless, from this point forward, we will use the exponential notation <span class="process-math">\(e^{it}\)</span> rather than <span class="process-math">\(E(t)\)</span> to denote the complex number <span class="process-math">\(\cos t + i\sin t\text{.}\)</span>
 </div>
 <details id="verifyeulersformulaexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para" id="verifyeulersformulaexer-1-1">Verify Euler’s formula by manipulating terms in the series <span class="process-math">\(\sum_{n=0}^{\infty} \frac{(it)^n}{n!}\text{.}\)</span>
-</div></article></details><section class="exercises" id="complex_plane_section-25"><h3 class="heading hide-type">
+</div></article></details><div class="para logical" id="complex_plane_section-22">
+<div class="para">
+<em class="alert">Circles and Lines.</em> Let <span class="process-math">\(C\)</span> be the circle of radius <span class="process-math">\(r\gt 0\)</span> and with center <span class="process-math">\(a\in \C\text{.}\)</span> A point <span class="process-math">\(z\)</span> lies on <span class="process-math">\(C\)</span> if and only if the distance from <span class="process-math">\(z\)</span> to <span class="process-math">\(a\)</span> equals <span class="process-math">\(r\text{.}\)</span> In mathematical symbols, <span class="process-math">\(C\)</span> is the set of solutions <span class="process-math">\(z\)</span> for the following equation.</div>
+<div class="displaymath process-math" id="circleeqn">
+\begin{equation}
+|z-a|=r\tag{1.1.20}
+\end{equation}
+</div>
+</div>
+<div class="para logical" id="complex_plane_section-23">
+<div class="para">The real line <span class="process-math">\(\R\)</span> is the set of solutions <span class="process-math">\(z\)</span> of the equation <span class="process-math">\(\im(z)=0\text{.}\)</span> More generally, let <span class="process-math">\(L\)</span> be a line that contains the point <span class="process-math">\(p\in \C\)</span> and makes an angle <span class="process-math">\(\theta\)</span> with the real axis (set <span class="process-math">\(\theta=0\)</span> if <span class="process-math">\(L\)</span> is parallel to the real axis). If <span class="process-math">\(z\in L\text{,}\)</span> then <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, so <span class="process-math">\(\im(e^{-i\theta}(z-p))=0\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/lines_in_complex_plane_fig.html" title="Figure 1.1.6">Figure 1.1.6</a>. Conversely, if <span class="process-math">\(e^{-i\theta}(z-p)\)</span> is real, then <span class="process-math">\(z\)</span> lies on <span class="process-math">\(L\text{.}\)</span> Multiplying by a positive constant <span class="process-math">\(k\text{,}\)</span> and setting <span class="process-math">\(a=ke^{-i\theta}\)</span> and <span class="process-math">\(b=-ke^{-i\theta}p\text{,}\)</span> we conclude that the line <span class="process-math">\(L\)</span> is the set of solutions to the following equation.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lines_in_complex_plane_fig.html" id="lineeqn">
+\begin{equation}
+\im(az+b)=0\tag{1.1.21}
+\end{equation}
+</div>
+</div>
+<figure class="figure figure-like" id="lines_in_complex_plane_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/lines_in_complex_plane.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.6<span class="period">.</span></span><span class="space"> </span>A line in the complex plane.</figcaption></figure><section class="exercises" id="complex_plane_section-25"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="justifyrectpolaraddmultexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
@@ -564,7 +564,7 @@ x^2-2ax = x^2-2ax +a^2 - a^2 = \left(x-a\right)^2
 \end{equation}
 </div>Write a derivation to justify this. Then use completing the square to find the center and radius of the circle given by the equation <span class="process-math">\(|z|^2 -iz +iz^\ast -5=0\text{.}\)</span>
 </div></li>
-<li id="complexcircleslines-2-1-1-2"><div class="para" id="p-derived-complexcircleslines-2-1-1-2">Write an alternative proof for the general form for the equation of a line <a href="" class="xref" data-knowl="./knowl/xref/lineeqn.html" title="Equation 1.1.20">(1.1.20)</a>, as follows. Let <span class="process-math">\(a=u+iv\text{,}\)</span> <span class="process-math">\(b=r+is\text{,}\)</span> <span class="process-math">\(z=x+iy\text{.}\)</span> Find the equation of the line <span class="process-math">\(\im(az+b)=0\)</span> in terms of the real variables <span class="process-math">\(x,y\)</span> and real constants <span class="process-math">\(u,v,r,s\text{.}\)</span> Explain why it is necessary that <span class="process-math">\(a\neq 0\text{.}\)</span>
+<li id="complexcircleslines-2-1-1-2"><div class="para" id="p-derived-complexcircleslines-2-1-1-2">Write an alternative proof for the general form for the equation of a line <a href="" class="xref" data-knowl="./knowl/xref/lineeqn.html" title="Equation 1.1.21">(1.1.21)</a>, as follows. Let <span class="process-math">\(a=u+iv\text{,}\)</span> <span class="process-math">\(b=r+is\text{,}\)</span> <span class="process-math">\(z=x+iy\text{.}\)</span> Find the equation of the line <span class="process-math">\(\im(az+b)=0\)</span> in terms of the real variables <span class="process-math">\(x,y\)</span> and real constants <span class="process-math">\(u,v,r,s\text{.}\)</span> Explain why it is necessary that <span class="process-math">\(a\neq 0\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="complexnosasrealmatalg"><h4 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Complex numbers as <span class="process-math">\(2\times 2\)</span> real matrices.</span>
