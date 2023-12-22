@@ -12,16 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h5 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
 </h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(A,B,C\)</span> be sets. Prove the following (the first two are <dfn class="terminology">distributive laws</dfn> for sets and the second two are <dfn class="terminology">De Morgan’s laws</dfn>). Hint: use characteristic functions from <a href="" class="xref" data-knowl="./knowl/xref/charfunexer.html" title="Exercise 1.5.3.4">Exercise 1.5.3.4</a> above.</div>
+<div class="para">Let <span class="process-math">\(f\colon S\to T\)</span> be a function. Define <span class="process-math">\(\overleftarrow{f}\colon {\mathcal P}(T)\to {\mathcal P}(S)\)</span> by <span class="process-math">\(\overleftarrow{f}(V)=f^{-1}(V)\)</span> for <span class="process-math">\(V\subseteq T\text{,}\)</span> where <span class="process-math">\({\mathcal P}\)</span> denotes the power set operator, defined in <a href="" class="xref" data-knowl="./knowl/xref/powersetproblem.html" title="Exercise 1.5.3.1">Exercise 1.5.3.1</a> above, and <span class="process-math">\(f^{-1}(V)\)</span> denotes the preimage of <span class="process-math">\(V\)</span> under <span class="process-math">\(f\text{.}\)</span> The function <span class="process-math">\(\overleftarrow{f}\)</span> is an <dfn class="terminology">algebra of sets mapping</dfn>, which means that the following properties hold for all <span class="process-math">\(U,V\in {\mathcal P}(T)\text{.}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/powersetproblem.html">
+\begin{align}
+\overleftarrow{f}(U\cap V) \amp = \overleftarrow{f}(U) \cap
+\overleftarrow{f}(V)\tag{1.5.1}\\
+\overleftarrow{f}(U\cup V) \amp = \overleftarrow{f}(U) \cup
+\overleftarrow{f}(V)\tag{1.5.2}\\
+\overleftarrow{f}(T\setminus U) \amp = S\setminus
+\overleftarrow{f}(U)\tag{1.5.3}
+\end{align}
+</div>
 <ol class="lower-alpha">
-<li><div class="para"><span class="process-math">\(\displaystyle A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle S\setminus{(A\cap B)} = (S\setminus A) \cup (S\setminus
-B)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle S\setminus{(A\cup B)} = (S\setminus A) \cap (S\setminus B)\)</span></div></li>
+<li><div class="para">Demonstrate each of the properties of an algebra of sets mapping with an example in which none of the sets involved in the equations are empty.</div></li>
+<li><div class="para">Choose one of the properties and show that it holds in general.</div></li>
 </ol>
 </div></article><span class="incontext"><a class="internal" href="basic_tools_problems_section.html#basic_tools_problems_section-4-2-5">in-context</a></span>
 </body>

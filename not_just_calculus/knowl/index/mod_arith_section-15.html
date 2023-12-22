@@ -13,15 +13,14 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">
-<em class="alert">Remark on the statement and proof of <a href="" class="xref" data-knowl="./knowl/xref/modMODequivprop.html" title="Proposition 1.2.6">Proposition 1.2.6</a>.</em> The phrase "if and only if" means that the following two statements hold.</div>
-<ol class="decimal">
-<li><div class="para">If <span class="process-math">\(a\equiv b \pmod{m}\text{,}\)</span> then <span class="process-math">\(a\MOD m = b \MOD m\text{.}\)</span>
-</div></li>
-<li><div class="para">If <span class="process-math">\(a\MOD m = b \MOD m\text{,}\)</span> then <span class="process-math">\(a\equiv b \pmod{m}\text{.}\)</span>
-</div></li>
-</ol>
-<div class="para">It is often a good idea to construct a proof for an "if and only if" statement in two parts, one part for each of the two "if-then" statements. Statement 1 is called the "only if" part of the "if and only if" statement, and statement 2 is called the "if" part of the if and only if statement.</div>
+<div class="para">We define operations <span class="process-math">\(a+_m b\)</span> and <span class="process-math">\(a\cdot_m b\)</span> for elements <span class="process-math">\(a,b\)</span> in <span class="process-math">\(\Z_m\)</span> by</div>
+<div class="displaymath process-math">
+\begin{align*}
+a+_m b \amp = (a+b)\MOD m\\
+a\cdot_m b \amp = (ab)\MOD m
+\end{align*}
+</div>
+<div class="para">The operations <span class="process-math">\(+_m\text{,}\)</span> <span class="process-math">\(\cdot_m\)</span> are called <dfn class="terminology">addition modulo <span class="process-math">\(m\)</span></dfn> and <dfn class="terminology">multiplication modulo <span class="process-math">\(m\)</span></dfn>, respectively. The set <span class="process-math">\(\Z_m\)</span> is sometimes called the "<span class="process-math">\(m\)</span>-hour clock" and the operations <span class="process-math">\(+_m,\cdot_m\)</span> are called "clock arithmetic" or "arithmetic modulo <span class="process-math">\(m\)</span>".</div>
 </div>
 <span class="incontext"><a class="internal" href="mod_arith_section.html#mod_arith_section-15">in-context</a></span>
 </body>
