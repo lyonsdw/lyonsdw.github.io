@@ -13,26 +13,14 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">The <dfn class="terminology">norm</dfn> or <dfn class="terminology">modulus</dfn> of an ordered pair <span class="process-math">\((a,b)\text{,}\)</span> denoted <span class="process-math">\(\left\Vert(a,b)\right\Vert\)</span>     , is defined by</div>
+<div class="para">Every point <span class="process-math">\(P\neq (0,0)\)</span> is a positive scalar multiple of a unique point <span class="process-math">\(\wrap(t)\)</span> on the unit circle, as follows. Given an arbitrary point <span class="process-math">\(P\in \R^2\)</span> with <span class="process-math">\(P\neq (0,0)\text{,}\)</span> let <span class="process-math">\(P'\)</span> be the intersection of the line segment <span class="process-math">\(\overline{OP}\)</span> with the unit circle, so that we have <span class="process-math">\(P'=\wrap(t)\)</span> for some real number <span class="process-math">\(t\text{.}\)</span> It is easy to check that <span class="process-math">\(P=rP'\)</span> where <span class="process-math">\(r=\left\Vert P\right\Vert\text{.}\)</span> The expression <span class="process-math">\(P=r\wrap(t)=(r\cos t,r\sin t)\)</span> is called the <dfn class="terminology">polar form</dfn>  for <span class="process-math">\(P\text{.}\)</span> The numbers <span class="process-math">\(r,t\)</span> are called <dfn class="terminology">polar coordinates</dfn>      for <span class="process-math">\(P\text{.}\)</span> The number <span class="process-math">\(r&gt;0\)</span> is the norm of <span class="process-math">\(P\text{,}\)</span> and the number <span class="process-math">\(t\)</span> is called (an) <dfn class="terminology">argument</dfn>      of <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\arg(P)\text{.}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation}
-\left\Vert(a,b)\right\Vert = \sqrt{(a,b)\cdot (a,b)} = \sqrt{a^2+b^2}.\tag{2.1.5}
+\arg(r\cos t, r\sin t) = t\tag{2.1.7}
 \end{equation}
 </div>
-<div class="para">The <dfn class="terminology">unit circle</dfn>, denoted <span class="process-math">\(S^1\)</span>     , is the set of all ordered pairs in the Cartesian plane with norm equal to one. Geometrically, <span class="process-math">\(S^1\)</span> is a circle with radius 1, centered at the origin <span class="process-math">\((0,0)\text{.}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}
-\end{equation*}
-</div>
-<div class="para">It is useful to navigate on the unit circle with a single real parameter, where the parameter value 0 corresponds to the point <span class="process-math">\((1,0)\text{.}\)</span> A parameter value <span class="process-math">\(t\gt 0\)</span> corresponds to the point <span class="process-math">\(W(t)\)</span> that lies at the end of a counterclockwise arc along <span class="process-math">\(S^1\)</span> that begins at <span class="process-math">\((1,0)\)</span> and has length <span class="process-math">\(t\text{.}\)</span> For <span class="process-math">\(t\lt 0\text{,}\)</span> the point <span class="process-math">\(W(t)\)</span> lies at the end of a <em class="emphasis">clockwise</em> arc that begins at <span class="process-math">\((1,0)\)</span> and has length <span class="process-math">\(|t|\text{.}\)</span> Another way to say this is that <span class="process-math">\(t\)</span> is the radian measure of the oriented angle <span class="process-math">\(\angle SOP\text{,}\)</span> where <span class="process-math">\(S=(1,0)\)</span> and <span class="process-math">\(O=(0,0)\text{,}\)</span> and <span class="process-math">\(P=\wrap(t)\text{.}\)</span> The function <span class="process-math">\(\wrap\colon \R\to S^1\)</span> (often called the <dfn class="terminology">wrapping function</dfn>) is given by</div>
-<div class="displaymath process-math">
-\begin{equation}
-\wrap(t)= (\cos t,\sin t)\tag{2.1.6}
-\end{equation}
-</div>
-<div class="para">where <span class="process-math">\(t\)</span> is in radians. Note that <span class="process-math">\(\wrap\)</span> is periodic: the circumference of the unit circle is <span class="process-math">\(2\pi\text{,}\)</span> so we have <span class="process-math">\(\wrap(t)=\wrap(t+2\pi k)\)</span> for every integer <span class="process-math">\(k\text{.}\)</span>
+<div class="para">Because <span class="process-math">\(\wrap\)</span> is periodic with period <span class="process-math">\(2\pi\text{,}\)</span> any number of the form <span class="process-math">\(t+2\pi k\text{,}\)</span> for all <span class="process-math">\(k\in \Z\text{,}\)</span> is also a value of <span class="process-math">\(\arg(P)\text{.}\)</span> In this usage, <span class="process-math">\(\arg\)</span> is not technically a function, because it has multiple possible values. A single-valued function may be defined by restricting the value of <span class="process-math">\(\arg(P)\text{,}\)</span> say, to the range <span class="process-math">\(-\pi \lt \arg(P)\leq \pi\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a class="internal" href="vector_operations_section.html#vector_operations_section-10">in-context</a></span>
