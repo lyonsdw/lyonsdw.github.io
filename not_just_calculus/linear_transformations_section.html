@@ -214,7 +214,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-18" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-19" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Complex Plane</span></a></div>
@@ -271,26 +271,30 @@ L(\alpha{\mathbf u}) \amp = \alpha L{\mathbf u}
 </ol>
 </div></article></details><div class="para logical" id="linear_transformations_section-5">
 <div class="para">If <span class="process-math">\(L\)</span> is linear, and <span class="process-math">\({\mathbf u}=(x,y)\)</span> is an arbitrary input value, then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linmapvalueislincomb.html" id="linear_transformations_section-5-3">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stdbasisexpansion.html ./knowl/xref/linsumprop.html ./knowl/xref/linscaleprop.html ./knowl/xref/linmapvalueislincomb.html ./knowl/xref/linvalueexpandform.html" id="linear_transformations_section-5-3">
 \begin{align}
-L{\mathbf u} \amp = L(x{\mathbf e}_1 + y{\mathbf e}_2)\tag{2.2.3}\\
-\amp = L(x{\mathbf e}_1) + L(y{\mathbf e}_2)\tag{2.2.4}\\
-\amp = xL{\mathbf e}_1 + yL{\mathbf e}_2.\tag{2.2.5}
+L{\mathbf u} \amp = L(x{\mathbf e}_1 + y{\mathbf e}_2)\amp
+\amp (\text{using } \knowl{./knowl/xref/stdbasisexpansion.html}{\text{(2.1.4)}})\tag{2.2.3}\\
+\amp = L(x{\mathbf e}_1) + L(y{\mathbf e}_2)\amp\amp
+(\text{by }\knowl{./knowl/xref/linsumprop.html}{\text{(2.2.1)}}) \tag{2.2.4}\\
+\amp = xL{\mathbf e}_1 + yL{\mathbf e}_2\amp\amp (\text{by }\knowl{./knowl/xref/linscaleprop.html}{\text{(2.2.2)}}).\tag{2.2.5}
 \end{align}
 </div>
 <div class="para">If we write <span class="process-math">\(L{\mathbf e_1} = (a_1,b_1)\)</span> and <span class="process-math">\(L{\mathbf e_2} =
 (a_2,b_2)\text{,}\)</span> then the last expression <a href="" class="xref" data-knowl="./knowl/xref/linmapvalueislincomb.html" title="Equation 2.2.5">(2.2.5)</a> above becomes</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linmapvalueislincomb.html">
-\begin{equation*}
-L{\mathbf u}=x(a_1,b_1)+y(a_2,b_2)=(a_1x+a_2y,b_1x+b_2y).
-\end{equation*}
-</div>
-<div class="para">Thus, a linear mapping has a particularly simple form, and is summarized by four real constants <span class="process-math">\(a_1,b_1,a_2,b_2\)</span> that are the components of the two values <span class="process-math">\(L{\mathbf e}_1,L{\mathbf e}_2\text{.}\)</span> The square array of numbers <span class="process-math">\(\twotwo{a_1}{a_2}{b_1}{b_2}\)</span> is called the <dfn class="terminology">matrix</dfn> for <span class="process-math">\(L\text{,}\)</span> and the array <span class="process-math">\(\begin{bmatrix}
-x\\y\end{bmatrix}\)</span> is called the <dfn class="terminology">column vector</dfn> that represents <span class="process-math">\({\mathbf u}=(x,y)\text{.}\)</span> We write</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linmapvalueislincomb.html" id="mattimescolvectdef">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stdbasisexpansion.html ./knowl/xref/linsumprop.html ./knowl/xref/linscaleprop.html ./knowl/xref/linmapvalueislincomb.html ./knowl/xref/linvalueexpandform.html" id="linvalueexpandform">
 \begin{equation}
-L{\mathbf u} = \twotwo{a_1}{a_2}{b_1}{b_2}\begin{bmatrix}
-x\\y\end{bmatrix} =(a_1x+a_2y,b_1x+b_2y).\tag{2.2.6}
+L{\mathbf u}=x(a_1,b_1)+y(a_2,b_2)=(a_1x+a_2y,b_1x+b_2y).\tag{2.2.6}
+\end{equation}
+</div>
+<div class="para">Thus, a linear mapping has a particularly simple form, and is summarized by four real constants <span class="process-math">\(a_1,b_1,a_2,b_2\)</span> that are the components of the two values <span class="process-math">\(L{\mathbf e}_1,L{\mathbf e}_2\text{.}\)</span> The square array of numbers <span class="process-math">\(\twotwo{a_1}{a_2}{b_1}{b_2}\)</span> is called the <dfn class="terminology">matrix</dfn> for <span class="process-math">\(L\text{,}\)</span> denoted <span class="process-math">\([L]\)</span>. The array <span class="process-math">\(\begin{bmatrix}
+x\\y\end{bmatrix}\)</span> is called the <dfn class="terminology">column vector</dfn> that represents <span class="process-math">\({\mathbf u}=(x,y)\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/xref/linvalueexpandform.html" title="Equation 2.2.6">(2.2.6)</a> motivates the following definition of the operation that multiplies a matrix times a column vector.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stdbasisexpansion.html ./knowl/xref/linsumprop.html ./knowl/xref/linscaleprop.html ./knowl/xref/linmapvalueislincomb.html ./knowl/xref/linvalueexpandform.html" id="mattimescolvectdef">
+\begin{equation}
+\twotwo{a_1}{a_2}{b_1}{b_2}\begin{bmatrix}
+x\\y\end{bmatrix} =
+\begin{bmatrix}
+a_1x+a_2y\\b_1x+b_2y\end{bmatrix}\tag{2.2.7}
 \end{equation}
 </div>
 </div>
@@ -307,9 +311,9 @@ x\\y\end{bmatrix} =(a_1x+a_2y,b_1x+b_2y).\tag{2.2.6}
 <div class="para">Given linear maps <span class="process-math">\(L,M\colon \R^2\to \R^2\)</span> and a real number <span class="process-math">\(\alpha\text{,}\)</span> we define linear maps <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\)</span> and <span class="process-math">\(LM\)</span> by</div>
 <div class="displaymath process-math" id="linear_transformations_section-10-6">
 \begin{align}
-(\alpha L){\mathbf u} \amp = \alpha (L{\mathbf u})\tag{2.2.7}\\
-(L+M){\mathbf u} \amp = L{\mathbf u} + M{\mathbf u}\tag{2.2.8}\\
-(LM){\mathbf u} \amp = (L\circ M){\mathbf u} = L(M{\mathbf u}).\tag{2.2.9}
+(\alpha L){\mathbf u} \amp = \alpha (L{\mathbf u})\tag{2.2.8}\\
+(L+M){\mathbf u} \amp = L{\mathbf u} + M{\mathbf u}\tag{2.2.9}\\
+(LM){\mathbf u} \amp = (L\circ M){\mathbf u} = L(M{\mathbf u}).\tag{2.2.10}
 \end{align}
 </div>
 </div>
@@ -317,64 +321,95 @@ x\\y\end{bmatrix} =(a_1x+a_2y,b_1x+b_2y).\tag{2.2.6}
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para" id="verifymatopslinearexer-1-1">Verify that <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are indeed linear maps, that is, that they satisfy properties <a href="" class="xref" data-knowl="./knowl/xref/linsumprop.html" title="Equation 2.2.1">(2.2.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/linscaleprop.html" title="Equation 2.2.2">(2.2.2)</a>.</div></article></details><div class="para logical" id="linear_transformations_section-13">
 <div class="para">If the matrix for <span class="process-math">\(L\)</span> is <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> and the matrix for <span class="process-math">\(M\)</span> is <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{,}\)</span> then the matrices (the plural of <em class="emphasis">matrix</em> is <em class="emphasis">matrices</em>) for the linear maps <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are given by</div>
-<div class="displaymath process-math" id="linear_transformations_section-13-10">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-13-10">
 \begin{align}
-(\text{matrix for } \alpha L) \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.10}\\
-(\text{matrix for } L+M) \amp = \twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.11}\\
-(\text{matrix for } LM) \amp = \twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.12}
+(\text{matrix for } \alpha L) \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.11}\\
+(\text{matrix for } L+M) \amp = \twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.12}\\
+(\text{matrix for } LM) \amp = \twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.13}
 \end{align}
 </div>
 <div class="para">These natural constructions motivate the following <dfn class="terminology">matrix operations</dfn>, called <dfn class="terminology">matrix scalar multiplication</dfn>, <dfn class="terminology">matrix addition</dfn>, and <dfn class="terminology">matrix multiplication</dfn>, respectively.</div>
-<div class="displaymath process-math" id="linear_transformations_section-13-18">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-13-18">
 \begin{align}
 \alpha
-\twotwo{a}{b}{c}{d} \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.13}\\
+\twotwo{a}{b}{c}{d} \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.14}\\
 \twotwo{a}{b}{c}{d} + \twotwo{e}{f}{g}{h} \amp =
-\twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.14}\\
+\twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.15}\\
 \twotwo{a}{b}{c}{d}\twotwo{e}{f}{g}{h} \amp =
-\twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.15}
+\twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.16}
 \end{align}
 </div>
-<div class="para">Here is a way to remember the matrix multiplication operation. Entries in a matrix are labeled by rows and columns, starting from the upper left and counting from 1 to 2. For example, <span class="process-math">\(c\)</span> is the row 2, column 1 entry in the matrix for <span class="process-math">\(L\text{,}\)</span> above. In the product of the matrices for <span class="process-math">\(L\)</span> and <span class="process-math">\(M\text{,}\)</span> the entry in row <span class="process-math">\(i\)</span> and column <span class="process-math">\(j\)</span> is the dot product of row <span class="process-math">\(i\)</span> in the matrix for <span class="process-math">\(L\)</span> with column <span class="process-math">\(j\)</span> in the matrix for <span class="process-math">\(M\text{.}\)</span> For example, the row 1, column 2 entry in the matrix for <span class="process-math">\(LM\)</span> is the dot product of row 1 in the matrix for <span class="process-math">\(L\)</span> and column 2 in the matrix for <span class="process-math">\(M\text{.}\)</span>
-</div>
-<div class="displaymath process-math">
+<div class="para">Notice that every entry in the matrix on the right side of <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a> is a dot product. For example, the entry <span class="process-math">\(af+bh\)</span> in the upper right corner (top row, right column) of the matrix on the right side of <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a> is the dot product</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html">
 \begin{equation*}
 (a,b)\cdot (f,h) = af+bh
 \end{equation*}
 </div>
+<div class="para">of the top row of <span class="process-math">\(\twotwo{a}{b}{c}{d}\)</span> with the right column of <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{.}\)</span> The row and column matching pattern works for every entry in the product matrix.</div>
 </div>
-<div class="para logical" id="linear_transformations_section-14">
-<div class="para">The identity function <span class="process-math">\(L{\mathbf u} = {\mathbf u}\)</span> is linear, and the matrix <span class="process-math">\(\twotwo{1}{0}{0}{1}\)</span> for the identity function is called the <dfn class="terminology">identity matrix</dfn>. It is easy to check that</div>
-<div class="displaymath process-math" id="bothsideinvcomp">
+<details id="matopsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para" id="matopsexer-1-1">Choose random integer values between <span class="process-math">\(-5\)</span> and <span class="process-math">\(+5\)</span> for the constants <span class="process-math">\(\alpha,a,b,c,d,e,f,g,h,x,y\text{.}\)</span> Set <span class="process-math">\(S=\twotwo{a}{b}{c}{d}\text{,}\)</span> let <span class="process-math">\(T=\twotwo{e}{f}{g}{h}\text{,}\)</span> and let <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\text{.}\)</span> Calculate <span class="process-math">\(\alpha
+S\text{,}\)</span> <span class="process-math">\(S+T\text{,}\)</span> <span class="process-math">\(ST\text{,}\)</span> <span class="process-math">\(TS\text{,}\)</span> <span class="process-math">\(S\mathbf{u}\text{,}\)</span> and <span class="process-math">\(T\mathbf{u}\text{.}\)</span> Check your answers with an online matrix algebra calculator. Repeat the exercise until you can do matrix multiplication quickly and accurately, without having to look at the formula <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a>.</div></article></details><div class="para logical" id="linear_transformations_section-15">
+<div class="para">The identity function <span class="process-math">\(\Id\colon \R^2\to\R^2\)</span> is linear, and the matrix <span class="process-math">\(\twotwo{1}{0}{0}{1}\)</span> for the identity function is called the <dfn class="terminology">identity matrix</dfn>. It is easy to check that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="bothsideinvcomp">
 \begin{equation}
 \twotwo{a}{b}{c}{d}\twotwo{d}{-b}{-c}{a} =
 \twotwo{d}{-b}{-c}{a}\twotwo{a}{b}{c}{d} =
-\twotwo{ad-bc}{0}{0}{ad-bc}.\tag{2.2.16}
+\twotwo{ad-bc}{0}{0}{ad-bc}.\tag{2.2.17}
 \end{equation}
 </div>
-<div class="para">It follows then, if <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> that a linear mapping <span class="process-math">\(L\)</span> with matrix <span class="process-math">\(\twotwo{a}{b}{c}{d}\)</span> is invertible, and that the matrix for <span class="process-math">\(L^{-1}\)</span> is <span class="process-math">\(\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{.}\)</span> This motivates the definition of the <dfn class="terminology">inverse</dfn>  of a matrix, denoted using the exponent <span class="process-math">\(-1\text{.}\)</span>
+<div class="para">If <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> then we can multiply <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.17">(2.2.17)</a> by <span class="process-math">\(\frac{1}{ad-bc}\)</span> to obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="bothsideinvcomprescaled">
+\begin{equation}
+\twotwo{a}{b}{c}{d}\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}} =
+\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}}\twotwo{a}{b}{c}{d} =
+\twotwo{1}{0}{0}{1}.\tag{2.2.18}
+\end{equation}
 </div>
-<div class="displaymath process-math" id="linear_transformations_section-14-14">
+<div class="para">If <span class="process-math">\(L,M\)</span> are linear mappings such that <span class="process-math">\([L] =
+\twotwo{a}{b}{c}{d}\)</span> and <span class="process-math">\([M] =
+\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{,}\)</span> then <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomprescaled.html" title="Equation 2.2.18">(2.2.18)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="rewrite1">
+\begin{equation}
+[L][M] = [M][L] = [\Id] \tag{2.2.19}
+\end{equation}
+</div>
+<div class="para">which is the same as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="rewrite2">
+\begin{equation}
+[LM] = [ML] = [\Id]. \tag{2.2.20}
+\end{equation}
+</div>
+<div class="para">From this, it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="rewrite3">
+\begin{equation}
+L\of M = M\of L = \Id \tag{2.2.21}
+\end{equation}
+</div>
+<div class="para">and we conclude that <span class="process-math">\(L,M\)</span> are inverses to one another. This shows that, if <span class="process-math">\([L]=\twotwo{a}{b}{c}{d}\)</span> and <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> then <span class="process-math">\([L^{-1}]=\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{,}\)</span> and motivates the following definition of the <dfn class="terminology">inverse</dfn>  of a matrix.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="linear_transformations_section-15-23">
 \begin{align}
 \twotwo{a}{b}{c}{d}^{-1}
-= \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)\tag{2.2.17}
+= \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)\tag{2.2.22}
 \end{align}
 </div>
 </div>
-<div class="para" id="linear_transformations_section-15">
+<div class="para" id="linear_transformations_section-16">
 <em class="alert">Comment:</em> The quantity <span class="process-math">\(ad-bc\)</span> is called the <dfn class="terminology">determinant</dfn> of the matrix <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> denoted <span class="process-math">\(\det\left(\twotwo{a}{b}{c}{d}\right)\)</span>.</div>
 <details id="idandinvcheckexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para logical" id="idandinvcheckexer-1-1"><ol class="decimal">
 <li id="idandinvcheckexer-1-1-1-1"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-1">Verify that the identity function <span class="process-math">\(\Id\colon \R^2\to \R^2\)</span> is linear, and that the matrix for the identity function is <span class="process-math">\(\twotwo{1}{0}{0}{1}\text{.}\)</span>
 </div></li>
-<li id="idandinvcheckexer-1-1-1-2"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-2">Verify each of the equalities in <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.16">(2.2.16)</a>.</div></li>
-<li id="idandinvcheckexer-1-1-1-3"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-3">Explain why "it follows that <span class="process-math">\(\ldots\)</span>" in the sentence immediately following <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.16">(2.2.16)</a>.</div></li>
-</ol></div></article></details><section class="exercises" id="linear_transformations_section-18"><h3 class="heading hide-type">
+<li id="idandinvcheckexer-1-1-1-2"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-2">Verify each of the equalities in <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.17">(2.2.17)</a>.</div></li>
+<li id="idandinvcheckexer-1-1-1-3"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-3">Explain each of the connecting phrases "which is the same as", "it follows that", and "we conclude that" immediately following immediately following equations <a href="" class="xref" data-knowl="./knowl/xref/rewrite1.html" title="Equation 2.2.19">(2.2.19)</a>, <a href="" class="xref" data-knowl="./knowl/xref/rewrite2.html" title="Equation 2.2.20">(2.2.20)</a>, and <a href="" class="xref" data-knowl="./knowl/xref/rewrite3.html" title="Equation 2.2.21">(2.2.21)</a>. <details id="idandinvcheckexer-1-1-1-3-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">For the last statement, use <a href="" class="xref" data-knowl="./knowl/xref/invertibilityconditions.html" title="Corollary 1.2.3: Characterization of invertibility">Corollary 1.2.3</a>.</div></details>
+</div></li>
+</ol></div></article></details><section class="exercises" id="linear_transformations_section-19"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="verifymatformatopsexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="verifymatformatopsexer-1-1">Verify the matrix formulas <a href="" class="xref" data-knowl="./knowl/xref/scalelintransfmat.html" title="Equation 2.2.10">(2.2.10)</a>, <a href="" class="xref" data-knowl="./knowl/xref/sumlintransfmat.html" title="Equation 2.2.11">(2.2.11)</a>, and <a href="" class="xref" data-knowl="./knowl/xref/composelintransfmat.html" title="Equation 2.2.12">(2.2.12)</a>
+<div class="para" id="verifymatformatopsexer-1-1">Verify the matrix formulas <a href="" class="xref" data-knowl="./knowl/xref/scalelintransfmat.html" title="Equation 2.2.11">(2.2.11)</a>, <a href="" class="xref" data-knowl="./knowl/xref/sumlintransfmat.html" title="Equation 2.2.12">(2.2.12)</a>, and <a href="" class="xref" data-knowl="./knowl/xref/composelintransfmat.html" title="Equation 2.2.13">(2.2.13)</a>
 </div>
 <div class="solutions"><details id="verifymatformatopsexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="verifymatformatopsexer-2-1">To obtain the matrix for a linear map <span class="process-math">\(L\text{,}\)</span> use the fact that the first column of the matrix is the column vector <span class="process-math">\(L\mathbf{e}_1\text{,}\)</span> and the second column is the column vector <span class="process-math">\(L\mathbf{e}_2\text{.}\)</span>
 </div></div></details></div></article><article class="exercise exercise-like" id="distlawlintransexer"><h4 class="heading">
@@ -384,7 +419,7 @@ x\\y\end{bmatrix} =(a_1x+a_2y,b_1x+b_2y).\tag{2.2.6}
 <div class="para">Prove the following property of linear mappings, called the <em class="emphasis">distributive law</em>. For linear mappings <span class="process-math">\(K,L,M\)</span> from <span class="process-math">\(\R^2\)</span> to  <span class="process-math">\(\R^2\text{,}\)</span> we have</div>
 <div class="displaymath process-math" id="distlawlinmaps">
 \begin{equation}
-K(L+M)=KL+KM.\tag{2.2.18}
+K(L+M)=KL+KM.\tag{2.2.23}
 \end{equation}
 </div>
 </div></article><article class="exercise exercise-like" id="solvelinsysexer"><h4 class="heading">
@@ -394,27 +429,27 @@ K(L+M)=KL+KM.\tag{2.2.18}
 <div class="para">A pair of equations of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="solvelinsysexer-2-1-1">
 \begin{align}
-ax + by \amp = r\tag{2.2.23}\\
+ax + by \amp = r\tag{2.2.28}\\
 cx + dy \amp = s\notag
 \end{align}
 </div>
-<div class="para">where <span class="process-math">\(a,b,c,d,r,s\)</span> are constants, and <span class="process-math">\(x,y\)</span> are unknowns, is called a <em class="emphasis">linear system of equations</em> in two unknowns. A <em class="emphasis">solution</em> is a pair of values for <span class="process-math">\(x,y\)</span> so that both equations in <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.23">(2.2.23)</a> hold. We can use matrix algebra to solve linear systems of equations, as follows. Using the notation defined in <a href="" class="xref" data-knowl="./knowl/xref/mattimescolvectdef.html" title="Equation 2.2.6">(2.2.6)</a>, here is the matrix version of <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.23">(2.2.23)</a>.</div>
+<div class="para">where <span class="process-math">\(a,b,c,d,r,s\)</span> are constants, and <span class="process-math">\(x,y\)</span> are unknowns, is called a <em class="emphasis">linear system of equations</em> in two unknowns. A <em class="emphasis">solution</em> is a pair of values for <span class="process-math">\(x,y\)</span> so that both equations in <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.28">(2.2.28)</a> hold. We can use matrix algebra to solve linear systems of equations, as follows. Using the notation defined in <a href="" class="xref" data-knowl="./knowl/xref/mattimescolvectdef.html" title="Equation 2.2.7">(2.2.7)</a>, here is the matrix version of <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.28">(2.2.28)</a>.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsysmatraw">
 \begin{equation}
 \twotwo{a}{b}{c}{d}\begin{bmatrix}x\\y\end{bmatrix}
-=\begin{bmatrix}r\\s\end{bmatrix}\tag{2.2.24}
+=\begin{bmatrix}r\\s\end{bmatrix}\tag{2.2.29}
 \end{equation}
 </div>
-<div class="para">The matrix <span class="process-math">\(A=\twotwo{a}{b}{c}{d}\)</span> is called the <em class="emphasis">matrix of coefficients</em> for the linear system. If we write <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\)</span> and  <span class="process-math">\(\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}\)</span> then we can write <a href="" class="xref" data-knowl="./knowl/xref/linsysmatraw.html" title="Equation 2.2.24">(2.2.24)</a> even more compactly as</div>
+<div class="para">The matrix <span class="process-math">\(A=\twotwo{a}{b}{c}{d}\)</span> is called the <em class="emphasis">matrix of coefficients</em> for the linear system. If we write <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\)</span> and  <span class="process-math">\(\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}\)</span> then we can write <a href="" class="xref" data-knowl="./knowl/xref/linsysmatraw.html" title="Equation 2.2.29">(2.2.29)</a> even more compactly as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsyscptform">
 \begin{equation}
-A\mathbf{u} = \mathbf{v}\tag{2.2.25}
+A\mathbf{u} = \mathbf{v}\tag{2.2.30}
 \end{equation}
 </div>
-<div class="para">If <span class="process-math">\(A\)</span> is invertible, we can multiply both sides of <a href="" class="xref" data-knowl="./knowl/xref/linsyscptform.html" title="Equation 2.2.25">(2.2.25)</a> by <span class="process-math">\(A^{-1}\)</span> on the left, and we have</div>
+<div class="para">If <span class="process-math">\(A\)</span> is invertible, we can multiply both sides of <a href="" class="xref" data-knowl="./knowl/xref/linsyscptform.html" title="Equation 2.2.30">(2.2.30)</a> by <span class="process-math">\(A^{-1}\)</span> on the left, and we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsystsol">
 \begin{equation}
-\mathbf{u} = A^{-1}A\mathbf{u} = A^{-1}\mathbf{v}.\tag{2.2.26}
+\mathbf{u} = A^{-1}A\mathbf{u} = A^{-1}\mathbf{v}.\tag{2.2.31}
 \end{equation}
 </div>
 <div class="para">Use this matrix method to solve the following linear system. Find <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A^{-1}\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span>
