@@ -427,39 +427,41 @@ K(L+M)=KL+KM.\tag{2.2.23}
 </h4>
 <div class="para logical" id="solvelinsysexer-2-1">
 <div class="para">A pair of equations of the form</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="solvelinsysexer-2-1-1">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html ./knowl/xref/matinvdef.html" id="solvelinsysexer-2-1-1">
 \begin{align}
 ax + by \amp = r\tag{2.2.28}\\
 cx + dy \amp = s\notag
 \end{align}
 </div>
 <div class="para">where <span class="process-math">\(a,b,c,d,r,s\)</span> are constants, and <span class="process-math">\(x,y\)</span> are unknowns, is called a <em class="emphasis">linear system of equations</em> in two unknowns. A <em class="emphasis">solution</em> is a pair of values for <span class="process-math">\(x,y\)</span> so that both equations in <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.28">(2.2.28)</a> hold. We can use matrix algebra to solve linear systems of equations, as follows. Using the notation defined in <a href="" class="xref" data-knowl="./knowl/xref/mattimescolvectdef.html" title="Equation 2.2.7">(2.2.7)</a>, here is the matrix version of <a href="" class="xref" data-knowl="./knowl/xref/linsystorig.html" title="Equation 2.2.28">(2.2.28)</a>.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsysmatraw">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html ./knowl/xref/matinvdef.html" id="linsysmatraw">
 \begin{equation}
 \twotwo{a}{b}{c}{d}\begin{bmatrix}x\\y\end{bmatrix}
 =\begin{bmatrix}r\\s\end{bmatrix}\tag{2.2.29}
 \end{equation}
 </div>
 <div class="para">The matrix <span class="process-math">\(A=\twotwo{a}{b}{c}{d}\)</span> is called the <em class="emphasis">matrix of coefficients</em> for the linear system. If we write <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\)</span> and  <span class="process-math">\(\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}\)</span> then we can write <a href="" class="xref" data-knowl="./knowl/xref/linsysmatraw.html" title="Equation 2.2.29">(2.2.29)</a> even more compactly as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsyscptform">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html ./knowl/xref/matinvdef.html" id="linsyscptform">
 \begin{equation}
 A\mathbf{u} = \mathbf{v}\tag{2.2.30}
 \end{equation}
 </div>
 <div class="para">If <span class="process-math">\(A\)</span> is invertible, we can multiply both sides of <a href="" class="xref" data-knowl="./knowl/xref/linsyscptform.html" title="Equation 2.2.30">(2.2.30)</a> by <span class="process-math">\(A^{-1}\)</span> on the left, and we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="linsystsol">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html ./knowl/xref/matinvdef.html" id="linsystsol">
 \begin{equation}
 \mathbf{u} = A^{-1}A\mathbf{u} = A^{-1}\mathbf{v}.\tag{2.2.31}
 \end{equation}
 </div>
-<div class="para">Use this matrix method to solve the following linear system. Find <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A^{-1}\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linsystorig.html ./knowl/xref/mattimescolvectdef.html ./knowl/xref/linsystorig.html ./knowl/xref/linsysmatraw.html ./knowl/xref/linsyscptform.html" id="solvelinsysexer-2-1-25">
+<ol class="lower-alpha">
+<li id="solvelinsysexer-2-1-21-1"><div class="para" id="p-derived-solvelinsysexer-2-1-21-1">Use this matrix method to solve the following linear system. Find <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A^{-1}\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{.}\)</span><div class="displaymath process-math" id="solvelinsysexer-2-1-21-1-5">
 \begin{align*}
 3x - y \amp = -2\\
 x + 2y \amp = 3
 \end{align*}
 </div>
+</div></li>
+<li id="solvelinsysexer-2-1-21-2"><div class="para" id="p-derived-solvelinsysexer-2-1-21-2">Choose random integer values between <span class="process-math">\(-5\)</span> and <span class="process-math">\(+5\)</span> for the constants <span class="process-math">\(a,b,c,d,r,s\text{.}\)</span> Let <span class="process-math">\(A=\twotwo{a}{b}{c}{d}\text{,}\)</span> let <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\text{,}\)</span> and let <span class="process-math">\(\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}\text{.}\)</span> Solve the linear system <span class="process-math">\(A\mathbf{u}=\mathbf{v}\)</span> for <span class="process-math">\(\mathbf{u}\text{.}\)</span> Check your answers with an online matrix algebra calculator. Repeat the exercise until you can do matrix inversion and solve the system quickly and accurately, without having to look at the formula <a href="" class="xref" data-knowl="./knowl/xref/matinvdef.html" title="Equation 2.2.22">(2.2.22)</a>.</div></li>
+</ol>
 </div></article><article class="exercise exercise-like" id="rotislinexer"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Rotations.</span>
 </h4>
