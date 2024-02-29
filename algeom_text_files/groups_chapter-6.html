@@ -106,7 +106,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groups_chapter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groups_chapter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="groups_extra_exer_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -422,8 +423,53 @@ g\Stab(x) \leftrightarrow gx.
 </div></article></section><section class="exercises" id="groups_chapter-6-4"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="gpselfactionexer"><h4 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Actions of a group on itself.</span>
+<article class="exercise exercise-like" id="signofpermexer"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">The sign of a permutation.</span>
+</h4>
+<div class="para logical" id="signofpermexer-2-1">
+<div class="para">In this exercise we establish a function <span class="process-math">\(\sgn\colon S_n\to
+\{-1,+1\}\text{,}\)</span> called the <dfn class="terminology">sign function</dfn>. We start by defining an action of the symmetric group <span class="process-math">\(S_n\)</span> on a set of two polynomials. Let <span class="process-math">\(\Delta\)</span> be the polynomial</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/normalsubgroupdefn.html ./knowl/xref/normalsubgroupcharacterization.html">
+\begin{equation*}
+\Delta = \prod_{1\leq i\lt j\leq n} (x_i-x_j)
+\end{equation*}
+</div>
+<div class="para">in the variables <span class="process-math">\(x_1,x_2,\ldots,x_n\text{.}\)</span> Let <span class="process-math">\(X\)</span> be the set <span class="process-math">\(X=\{\Delta,-\Delta\}\text{.}\)</span> Given a permutation <span class="process-math">\(\alpha\)</span> in <span class="process-math">\(S_n\text{,}\)</span> let <span class="process-math">\(\alpha \Delta\)</span> be the polynomial</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/normalsubgroupdefn.html ./knowl/xref/normalsubgroupcharacterization.html">
+\begin{equation*}
+\alpha \Delta = \prod_{1\leq i\lt j\leq n}
+(x_{\alpha(i)}-x_{\alpha(j)})
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(\alpha(-\Delta) = -\alpha \Delta\text{.}\)</span> In the exercises below, you will show that <span class="process-math">\(\alpha\Delta=\pm
+\Delta\)</span> for all <span class="process-math">\(\alpha\)</span> in <span class="process-math">\(S_n\text{.}\)</span> This allows us to define the sign of a permutation <span class="process-math">\(\alpha\)</span> to be <span class="process-math">\(+1\)</span> or <span class="process-math">\(-1\)</span> according to whether <span class="process-math">\(\alpha\Delta=\Delta\)</span> or <span class="process-math">\(\alpha\Delta=-\Delta\text{,}\)</span> respectively.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/normalsubgroupdefn.html ./knowl/xref/normalsubgroupcharacterization.html">
+\begin{equation*}
+\sgn(\alpha) = \begin{cases} +1 \amp \text{if }\amp
+\alpha\Delta = \Delta\\
+-1 \amp \text{if } \amp \alpha\Delta = -\Delta
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">We say that a permutation <span class="process-math">\(\alpha\)</span> is <dfn class="terminology">even</dfn> if <span class="process-math">\(\sgn(\alpha)=+1\text{,}\)</span> and we say <span class="process-math">\(\alpha\)</span> is <dfn class="terminology">odd</dfn> if <span class="process-math">\(\sgn(\alpha)=-1\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li id="signofpermexer-2-1-32-1"><div class="para" id="p-derived-signofpermexer-2-1-32-1">Write out <span class="process-math">\(\Delta\)</span> for <span class="process-math">\(n=4\)</span> variables without using the product notation symbol <span class="process-math">\(\prod\text{.}\)</span>
+</div></li>
+<li id="signofpermexer-2-1-32-2"><div class="para" id="p-derived-signofpermexer-2-1-32-2">Continuing with <span class="process-math">\(n=4\text{,}\)</span> write out <span class="process-math">\((134)\Delta\)</span> and <span class="process-math">\((1324)\Delta\text{.}\)</span> In both cases, match the factors with <span class="process-math">\(\Delta\)</span> and identify which factors experience a sign change. Use this calculation to find <span class="process-math">\(\sgn(134)\)</span> and <span class="process-math">\(\sgn(1324)\)</span> directly and explicitly from the definition.</div></li>
+<li id="signofpermexer-2-1-32-3"><div class="para" id="p-derived-signofpermexer-2-1-32-3">Show that <span class="process-math">\(\alpha \Delta = \pm \Delta\)</span> for all <span class="process-math">\(\alpha\)</span> in <span class="process-math">\(S_n\text{.}\)</span>
+</div></li>
+<li id="signofpermexer-2-1-32-4"><div class="para" id="p-derived-signofpermexer-2-1-32-4">Show that <span class="process-math">\(\tau\Delta=-\Delta\)</span> for any transposition <span class="process-math">\(\tau\)</span> in <span class="process-math">\(S_n\text{.}\)</span>
+</div></li>
+<li id="signofpermexer-2-1-32-5"><div class="para" id="p-derived-signofpermexer-2-1-32-5">Show that <span class="process-math">\(\phi\)</span> is a group action.</div></li>
+<li id="signofpermexer-2-1-32-6"><div class="para" id="p-derived-signofpermexer-2-1-32-6">Use the group action property <span class="process-math">\((\alpha\beta)\Delta =
+\alpha(\beta\Delta)\)</span> to explain why <span class="process-math">\(\sgn(\alpha\beta)=\sgn(\alpha)\sgn(\beta)\)</span> for all <span class="process-math">\(\alpha,\beta\)</span> in <span class="process-math">\(S_n\text{.}\)</span> In other words, the sign function is a homomorphism of groups <span class="process-math">\(S_n\to C_2\text{.}\)</span>
+</div></li>
+<li id="signofpermexer-2-1-32-7"><div class="para" id="p-derived-signofpermexer-2-1-32-7">Conclude that, if <span class="process-math">\(\alpha\)</span> is expressible as a product of an even number of permutations, then <span class="process-math">\(\alpha\)</span> is an even permutation, and that any product of permutations that equals <span class="process-math">\(\alpha\)</span> must have an even number of permutations. (A similar statement holds replacing the word "even" by the word "odd".)</div></li>
+<li id="signofpermexer-2-1-32-8"><div class="para" id="p-derived-signofpermexer-2-1-32-8">The subset of even permutations of <span class="process-math">\(S_n\)</span> is denoted <span class="process-math">\(A_n\text{.}\)</span> Give two arguments why <span class="process-math">\(A_n\)</span> is a normal subgroup of <span class="process-math">\(S_n\text{.}\)</span> Use (i) the 1-step or the 2-step subgroup test and definition <a href="" class="xref" data-knowl="./knowl/xref/normalsubgroupdefn.html" title="Definition 2.4.8: Normal subgroup">Definition 2.4.8</a>, and (ii) using criterion 1 of <a href="" class="xref" data-knowl="./knowl/xref/normalsubgroupcharacterization.html" title="Proposition 2.4.9: Characterization of normal subgroups">Proposition 2.4.9</a>. This group <span class="process-math">\(A_n\)</span> is called the <dfn class="terminology">alternating group</dfn>.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="gpselfactionexer"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Actions of a group on itself.</span>
 </h4>
 <div class="para logical" id="gpselfactionexer-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. Here are three actions <span class="process-math">\(G\to \Perm(G)\)</span> of <span class="process-math">\(G\)</span> on itself. <dfn class="terminology">Left multiplication</dfn> is given by</div>
@@ -455,7 +501,7 @@ g\to C_g
 </ol>
 </div> <div class="para" id="gpselfactionexer-2-2">
 <em class="alert">Consequence of this exercise:</em> Every group is isomorphic to a subgroup of a permutation group.</div></article><article class="exercise exercise-like" id="cosetsrevisitedexer"><h4 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets, revisited.</span>
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Cosets, revisited.</span>
 </h4>
 <div class="para logical" id="cosetsrevisitedexer-2-1">
 <div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{,}\)</span> and consider the map</div>
@@ -464,9 +510,9 @@ g\to C_g
 R\colon H\to \Perm(G)
 \end{equation*}
 </div>
-<div class="para">given by <span class="process-math">\(h\to R_h\text{,}\)</span> where <span class="process-math">\(R_h(g)=gh^{-1}\)</span> (this is the restriction of right inverse multiplication action in <a href="" class="xref" data-knowl="./knowl/xref/gpselfactionexer.html" title="Exercise 2.5.3.1: Actions of a group on itself">Exercise 2.5.3.1</a> to <span class="process-math">\(H\)</span>). Show that the orbits of this action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> are the same as the cosets of <span class="process-math">\(H\text{.}\)</span> This shows that the two potentially different meanings of <span class="process-math">\(G/H\)</span> (one is the set of cosets, the other is the set of orbits of the action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> via <span class="process-math">\(R\)</span>), are in fact in agreement.</div>
+<div class="para">given by <span class="process-math">\(h\to R_h\text{,}\)</span> where <span class="process-math">\(R_h(g)=gh^{-1}\)</span> (this is the restriction of right inverse multiplication action in <a href="" class="xref" data-knowl="./knowl/xref/gpselfactionexer.html" title="Exercise 2.5.3.2: Actions of a group on itself">Exercise 2.5.3.2</a> to <span class="process-math">\(H\)</span>). Show that the orbits of this action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> are the same as the cosets of <span class="process-math">\(H\text{.}\)</span> This shows that the two potentially different meanings of <span class="process-math">\(G/H\)</span> (one is the set of cosets, the other is the set of orbits of the action of <span class="process-math">\(H\)</span> on <span class="process-math">\(G\)</span> via <span class="process-math">\(R\)</span>), are in fact in agreement.</div>
 </div> </article><article class="exercise exercise-like" id="gpactonvectspaceexer"><h4 class="heading">
-<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The natural action of a matrix group on a vector space.</span>
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The natural action of a matrix group on a vector space.</span>
 </h4>
 <div class="para logical" id="gpactonvectspaceexer-2-1">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group whose elements are <span class="process-math">\(n\times n\)</span> matrices with entries in a field <span class="process-math">\(\F\)</span> and with the group operation of matrix multiplication. The <dfn class="terminology">natural action</dfn> <span class="process-math">\(G\to \Perm(X)\)</span> of <span class="process-math">\(G\)</span> on the vector space <span class="process-math">\(X=\F^n\)</span> is given by</div>
@@ -476,10 +522,10 @@ g\to [v\to g\cdot v],
 \end{equation*}
 </div>
 <div class="para">where the "dot" in the expression <span class="process-math">\(g\cdot v\)</span> is ordinary multiplication of a matrix times a column vector. Show that this is indeed a group action.</div>
-</div></article><article class="exercise exercise-like" id="orbitspartitionexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="orbitspartitionexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></article><article class="exercise exercise-like" id="orbitstabthmpfexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+</div></article><article class="exercise exercise-like" id="orbitspartitionexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="orbitspartitionexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/orbitspartition.html" title="Proposition 2.5.4: Orbits of a group action form a partition">Proposition 2.5.4</a>.</div></article><article class="exercise exercise-like" id="orbitstabthmpfexer"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para" id="orbitstabthmpfexer-1-1">Prove The Orbit-Stabilizer Theorem (<a href="" class="xref" data-knowl="./knowl/xref/orbitstabthm.html" title="Theorem 2.5.6: The Orbit-Stabilizer Theorem">Theorem 2.5.6</a>).</div></article><article class="exercise exercise-like" id="projspaceandgroupexer"><h4 class="heading">
-<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">The projective linear group action on projective space.</span>
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">The projective linear group action on projective space.</span>
 </h4>
 <div class="para logical" id="projspaceandgroupexer-2">
 <div class="para">Let <span class="process-math">\(V\)</span> be a vector space over a field <span class="process-math">\(\F\)</span> (in this course, the base field <span class="process-math">\(\F\)</span> is either the real numbers <span class="process-math">\(\R\)</span> or the complex numbers <span class="process-math">\(\C\)</span>). The group <span class="process-math">\(\F^\ast\)</span> of nonzero elements in <span class="process-math">\(\F\)</span> acts on the set <span class="process-math">\(V\setminus \!\{0\}\)</span> of nonzero elements in <span class="process-math">\(V\)</span> by scalar multiplication, that is, by the map <span class="process-math">\(\alpha \to [v\to \alpha v]\text{.}\)</span> The set of orbits <span class="process-math">\((V\setminus\!\{0\})/\F^\ast\)</span> is called the <em class="emphasis">projectivization</em> of <span class="process-math">\(V\text{,}\)</span> or simply <dfn class="terminology">projective space</dfn>, and is denoted <span class="process-math">\(\Proj(V).\)</span>

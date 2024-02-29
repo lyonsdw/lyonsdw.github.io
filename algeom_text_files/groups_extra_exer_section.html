@@ -106,7 +106,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groups_chapter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groups_chapter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -360,18 +361,43 @@ U_n = \{x\in \Z_n\colon \exists y, xy=1\pmod{n}\}.
 <div class="para" id="fermatslittlethmexer-2-1">For every integer <span class="process-math">\(x\)</span> and every prime <span class="process-math">\(p\text{,}\)</span> we have <span class="process-math">\(x^p = x \pmod{p}\text{.}\)</span>
 </div>
 <div class="solutions"><details id="fermatslittlethmexer-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="fermatslittlethmexer-3-1">First, reduce <span class="process-math">\(x\)</span> mod <span class="process-math">\(p\text{,}\)</span> that is, write <span class="process-math">\(x=qp+r\)</span> with <span class="process-math">\(0\leq r\leq p-1\text{.}\)</span> Now consider two cases. The case <span class="process-math">\(r=0\)</span> is trivial. If <span class="process-math">\(r\neq 0\text{,}\)</span> apply the fact <span class="process-math">\(r^{|G|}=e\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/lagrangeconseqexer.html" title="Exercise 2.3.2.8: Consequences of Lagrange’s Theorem">Exercise 2.3.2.8</a>) to the group <span class="process-math">\(G=U_p\text{.}\)</span>
-</div></div></details></div></article><article class="exercise exercise-like" id="alternatinggpexer"><h4 class="heading">
-<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">The alternating group.</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="permparityexer"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">An alternative approach to parity of permutations.</span>
 </h4>
-<div class="para logical" id="alternatinggpexer-2-1"><ol class="lower-alpha">
-<li id="alternatinggpexer-2-1-1-1"><div class="para" id="p-derived-alternatinggpexer-2-1-1-1">Show that, for <span class="process-math">\(n\geq 2\text{,}\)</span> half of the elements of <span class="process-math">\(S_n\)</span> are even, and half are odd.</div></li>
-<li id="alternatinggpexer-2-1-1-2"><div class="para" id="p-derived-alternatinggpexer-2-1-1-2">The set of even permutations in <span class="process-math">\(S_n\)</span> is called the <dfn class="terminology">alternating group</dfn>, denoted <span class="process-math">\(A_n\)</span>. Show that <span class="process-math">\(A_n\)</span> is indeed a subgroup of <span class="process-math">\(S_n\text{.}\)</span>
+<div class="para logical" id="permparityexer-2-1">
+<div class="para">This exercise gives a way to define even and odd permutations that is different from the method used in <a href="" class="xref" data-knowl="./knowl/xref/signofpermexer.html" title="Exercise 2.5.3.1: The sign of a permutation">Exercise 2.5.3.1</a>.</div>
+<ol class="lower-alpha">
+<li id="permparityexer-2-1-2-1"><div class="para" id="p-derived-permparityexer-2-1-2-1">Suppose that the identity permutation <span class="process-math">\(e\)</span> in <span class="process-math">\(S_n\)</span> is written as a product of transpositions<div class="displaymath process-math">
+\begin{equation*}
+e=\tau_1\tau_2\cdots \tau_r.
+\end{equation*}
+</div>Show that <span class="process-math">\(r\)</span> is even.</div></li>
+<li id="permparityexer-2-1-2-2"><div class="para" id="p-derived-permparityexer-2-1-2-2">Suppose that <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S_n\)</span> is written in two ways as a product of transpositions.<div class="displaymath process-math">
+\begin{equation*}
+\sigma = (a_1b_1)(a_2b_2)\cdots (a_sb_s) =
+(c_1d_1)(c_2d_2)\cdots (c_td_t)
+\end{equation*}
+</div>Show that <span class="process-math">\(s,t\)</span> are either both even or both odd. The common evenness or oddness of <span class="process-math">\(s,t\)</span> is called the <dfn class="terminology">parity</dfn> of the permutation <span class="process-math">\(\sigma\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="exercise exercise-like" id="orderofapermexer"><h4 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a permutation.</span>
+<li id="permparityexer-2-1-2-3"><div class="para" id="p-derived-permparityexer-2-1-2-3">Show that the parity of a <span class="process-math">\(k\)</span>-cycle is even if <span class="process-math">\(k\)</span> is odd, and the parity of a <span class="process-math">\(k\)</span>-cycle is odd if <span class="process-math">\(k\)</span> is even.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="permparityexer-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="permparityexer-3-1"><ol class="lower-alpha"><li id="permparityexer-3-1-1-1"><div class="para" id="p-derived-permparityexer-3-1-1-1">Consider the two rightmost transpositions <span class="process-math">\(\tau_{r-1}\tau_{r}\text{.}\)</span> They have one of the following forms, where <span class="process-math">\(a,b,c,d\)</span> are distinct.<div class="displaymath process-math">
+\begin{equation*}
+(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
+\end{equation*}
+</div>The first allows you to reduce the transposition count by two by cancelling. The remaining three can be rewritten.<div class="displaymath process-math">
+\begin{equation*}
+(ab)(bc), (ac)(cb), (ab)(cd)
+\end{equation*}
+</div>Notice that the index of the rightmost transposition in which the symbol <span class="process-math">\(a\)</span> occurs has been reduced by 1 (from <span class="process-math">\(r\)</span> to <span class="process-math">\(r-1\)</span>). Finish this reasoning with an inductive argument.</div></li></ol></div></div></details></div></article><article class="exercise exercise-like" id="alternatinggpsizeexer"><h4 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">The size of the alternating group.</span>
+</h4>
+<div class="para" id="alternatinggpsizeexer-2-1">Show that <span class="process-math">\(|A_n|=|S_n|/2\)</span> for <span class="process-math">\(n\geq 2\text{,}\)</span> that is, that half of the elements of <span class="process-math">\(S_n\)</span> are even, and half are odd.</div></article><article class="exercise exercise-like" id="orderofapermexer"><h4 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">The order of a permutation.</span>
 </h4>
 <div class="para" id="orderofapermexer-2-1">Let <span class="process-math">\(\sigma\in S_n\)</span> be written as a product of disjoint cycles. Show that the order <span class="process-math">\(\sigma\)</span> is the least common multiple of the lengths of those disjoint cycles.</div></article><article class="exercise exercise-like" id="alt_factor_gp_mult_exer"><h4 class="heading">
-<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative approach to multiplication in a factor group.</span>
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Alternative approach to multiplication in a factor group.</span>
 </h4>
 <div class="para logical" id="alt_factor_gp_mult_exer-2-1">
 <div class="para">Given subsets <span class="process-math">\(S,T\)</span> of a group <span class="process-math">\(G\text{,}\)</span> define the set <span class="process-math">\(ST\)</span> by</div>
@@ -383,7 +409,7 @@ ST = \{st\colon s\in S,t\in T\}.
 <div class="para">Now suppose that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> Show that <span class="process-math">\((xH)(yH)=xyH\)</span> for all <span class="process-math">\(x,y\)</span> in <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="semidirect_product_exer"><h4 class="heading">
-<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Semidirect product.</span>
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Semidirect product.</span>
 </h4>
 <div class="para logical" id="semidirect_product_exer-3-1">
 <div class="para">Let <span class="process-math">\(K,H\)</span> be groups, and let <span class="process-math">\(\phi\colon H\to \Aut(K)\)</span> be a homomorphism. The <dfn class="terminology">semidirect product</dfn>, denoted <span class="process-math">\(K\times_{\phi} H\text{,}\)</span> or <span class="process-math">\(K\rtimes H\)</span> if <span class="process-math">\(\phi\)</span> is understood, is the set consisting of all pairs <span class="process-math">\((k,h)\)</span> with <span class="process-math">\(k\in K\text{,}\)</span> <span class="process-math">\(h\in H\)</span><details class="ptx-footnote" aria-live="polite" id="semidirect_product_exer-3-1-10"><summary class="ptx-footnote__number" title="Footnote 2.6.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="semidirect_product_exer-3-1-10">The notation <span class="process-math">\(K\times H\)</span> is understood to be the <em class="emphasis">direct</em> product group, so we do not write use the Cartesian product notation to describe semidirect product, to avoid confusion, even though the underlying set for the direct product and the semidirect product are in fact the same Cartesian product <span class="process-math">\(K\times H\text{.}\)</span>
@@ -411,7 +437,7 @@ H\}\text{.}\)</span> Suppose that <span class="process-math">\(K\)</span> is a n
 <li id="semidirect_product_exer-3-1-36-5"><div class="para" id="p-derived-semidirect_product_exer-3-1-36-5">Suppose that <span class="process-math">\(\phi\colon H\to \Aut(K)\)</span> is the trivial homomorphism (that is, <span class="process-math">\(\phi(h)\)</span> is the identity homomorphism on <span class="process-math">\(K\text{,}\)</span> for all <span class="process-math">\(h\in H\)</span>). Show that <span class="process-math">\(K\times_{\phi} H\approx K\times H\)</span> in this case.</div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="gpactonfunspaceexer"><h4 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Group action on functions on a <span class="process-math">\(G\)</span>-space.</span>
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Group action on functions on a <span class="process-math">\(G\)</span>-space.</span>
 </h4>
 <div class="para logical" id="gpactonfunspaceexer-2-1">
 <div class="para">Suppose that a group <span class="process-math">\(G\)</span> acts on a set <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\({\mathcal F}(X,Y)\)</span> denote the set of functions</div>

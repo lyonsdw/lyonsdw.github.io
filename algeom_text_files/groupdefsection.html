@@ -106,7 +106,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groupintrosection.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="subgroups_cosets_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="groupintrosection.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="subgroups_cosets_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -449,35 +450,14 @@ n\text{.}\)</span><details class="ptx-footnote" aria-live="polite" id="cyclicper
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="disjointcycleproductexer"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="disjointcycleproductexer-1-1">Cycles <span class="process-math">\((a_1a_2\cdots a_k)\)</span> and <span class="process-math">\((b_1b_2\cdots b_\ell)\)</span> are called <dfn class="terminology">disjoint</dfn> if the sets <span class="process-math">\(\{a_1,a_2,\ldots,a_k\}\)</span> and <span class="process-math">\(\{b_1,b_2,\ldots,b_\ell\}\)</span> are disjoint, that is, if <span class="process-math">\(a_i\neq b_j\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> Show that every permutation in <span class="process-math">\(S_n\)</span> is a product of disjoint cycles.</div></article><article class="exercise exercise-like" id="permtransprodexer"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="permtransprodexer-1-1">Show that every permutation in <span class="process-math">\(S_n\)</span> can be written as a product of transpositions.</div></article><article class="exercise exercise-like" id="permparityexer"><h4 class="heading">
-<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Parity of a permutation.</span>
+<div class="para" id="disjointcycleproductexer-1-1">Cycles <span class="process-math">\((a_1a_2\cdots a_k)\)</span> and <span class="process-math">\((b_1b_2\cdots b_\ell)\)</span> are called <dfn class="terminology">disjoint</dfn> if the sets <span class="process-math">\(\{a_1,a_2,\ldots,a_k\}\)</span> and <span class="process-math">\(\{b_1,b_2,\ldots,b_\ell\}\)</span> are disjoint, that is, if <span class="process-math">\(a_i\neq b_j\)</span> for all <span class="process-math">\(i,j\text{.}\)</span> Show that every permutation in <span class="process-math">\(S_n\)</span> is a product of disjoint cycles.</div></article><article class="exercise exercise-like" id="permtransprodexer"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Every permutation is a product of transpositions.</span>
 </h4>
-<div class="para logical" id="permparityexer-3-1"><ol class="lower-alpha">
-<li id="permparityexer-3-1-1-1"><div class="para" id="p-derived-permparityexer-3-1-1-1">Suppose that the identity permutation <span class="process-math">\(e\)</span> in <span class="process-math">\(S_n\)</span> is written as a product of transpositions<div class="displaymath process-math">
-\begin{equation*}
-e=\tau_1\tau_2\cdots \tau_r.
-\end{equation*}
-</div>Show that <span class="process-math">\(r\)</span> is even.</div></li>
-<li id="permparityexer-3-1-1-2"><div class="para" id="p-derived-permparityexer-3-1-1-2">Suppose that <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S_n\)</span> is written in two ways as a product of transpositions.<div class="displaymath process-math">
-\begin{equation*}
-\sigma = (a_1b_1)(a_2b_2)\cdots (a_sb_s) =
-(c_1d_1)(c_2d_2)\cdots (c_td_t)
-\end{equation*}
-</div>Show that <span class="process-math">\(s,t\)</span> are either both even or both odd. The common evenness or oddness of <span class="process-math">\(s,t\)</span> is called the <dfn class="terminology">parity</dfn> of the permutation <span class="process-math">\(\sigma\text{.}\)</span>
-</div></li>
-<li id="permparityexer-3-1-1-3"><div class="para" id="p-derived-permparityexer-3-1-1-3">Show that the parity of a <span class="process-math">\(k\)</span>-cycle is even if <span class="process-math">\(k\)</span> is odd, and the parity of a <span class="process-math">\(k\)</span>-cycle is odd if <span class="process-math">\(k\)</span> is even.</div></li>
-</ol></div>
-<div class="solutions"><details id="permparityexer-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para logical" id="permparityexer-4-1"><ol class="lower-alpha"><li id="permparityexer-4-1-1-1"><div class="para" id="p-derived-permparityexer-4-1-1-1">Consider the two rightmost transpositions <span class="process-math">\(\tau_{r-1}\tau_{r}\text{.}\)</span> They have one of the following forms, where <span class="process-math">\(a,b,c,d\)</span> are distinct.<div class="displaymath process-math">
-\begin{equation*}
-(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)
-\end{equation*}
-</div>The first allows you to reduce the transposition count by two by cancelling. The remaining three can be rewritten.<div class="displaymath process-math">
-\begin{equation*}
-(ab)(bc), (ac)(cb), (ab)(cd)
-\end{equation*}
-</div>Notice that the index of the rightmost transposition in which the symbol <span class="process-math">\(a\)</span> occurs has been reduced by 1 (from <span class="process-math">\(r\)</span> to <span class="process-math">\(r-1\)</span>). Finish this reasoning with an inductive argument.</div></li></ol></div></div></details></div></article><article class="exercise exercise-like" id="cayleytable"><h4 class="heading">
-<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Cayley tables.</span>
+<div class="para logical" id="permtransprodexer-2-1"><ol class="lower-alpha">
+<li id="permtransprodexer-2-1-1-1"><div class="para" id="p-derived-permtransprodexer-2-1-1-1">Show that every permutation in <span class="process-math">\(S_n\)</span> can be written as a product of transpositions.</div></li>
+<li id="permtransprodexer-2-1-1-2"><div class="para" id="p-derived-permtransprodexer-2-1-1-2">Show that factoring a permutation into a product of transpositions is not unique by writing the identity permutation in <span class="process-math">\(S_3\)</span> as a product of transpositions in two different ways.</div></li>
+</ol></div></article><article class="exercise exercise-like" id="cayleytable"><h4 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Cayley tables.</span>
 </h4>
 <div class="para logical" id="cayleytable-2-1">
 <div class="para">The <dfn class="terminology">Cayley table</dfn> for a finite group <span class="process-math">\(G\)</span> is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry <span class="process-math">\(gh\)</span> in position with row label <span class="process-math">\(g\)</span> and column label <span class="process-math">\(h\text{.}\)</span> Partial Cayley tables for <span class="process-math">\(S_3\)</span> (<a href="" class="xref" data-knowl="./knowl/xref/s3cayleytablefig.html" title="Figure 2.2.7">Figure 2.2.7</a>) and <span class="process-math">\(D_4\)</span> (<a href="" class="xref" data-knowl="./knowl/xref/d4cayleytablefig.html" title="Figure 2.2.8">Figure 2.2.8</a>) are given below. <figure class="figure figure-like" id="s3cayleytablefig"><div class="displaymath process-math">
