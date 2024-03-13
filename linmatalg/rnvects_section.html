@@ -1,56 +1,110 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-30T11:54:34-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
-<head>
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The vector space \(\R^n\)</title>
+<title>The vector space \R^n</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    useLabelIds: true,
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="linmatalg-7-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linmatalg.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="lin_maps_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,190 +141,210 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="lin_maps_section.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="lin_maps_section.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
 </li>
-<li class="link active">
-<a href="rnvects_section.html" data-scroll="rnvects_section"><span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span></a><ul>
-<li><a href="rnvects_section.html#subsection-1" data-scroll="subsection-1">Vectors and vector operations</a></li>
-<li><a href="rnvects_section.html#subsection-2" data-scroll="subsection-2">Standard basis vectors</a></li>
-<li><a href="rnvects_section.html#subsection-3" data-scroll="subsection-3">Inner product</a></li>
-<li><a href="rnvects_section.html#exercises-1" data-scroll="exercises-1">Exercises</a></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="rnvects_section.html" class="internal"><span class="codenumber">1</span> <span class="title">The vector space <span class="process-math">\(\R^n\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-2" class="internal"><span class="codenumber">1.1</span> <span class="title">Vectors and vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-3" class="internal"><span class="codenumber">1.2</span> <span class="title">Standard basis vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-4" class="internal"><span class="codenumber">1.3</span> <span class="title">Inner product</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-5" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="lin_maps_section.html" data-scroll="lin_maps_section"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a><ul>
-<li><a href="lin_maps_section.html#linmapdefsubsect" data-scroll="linmapdefsubsect">Definition of a linear transformation</a></li>
-<li><a href="lin_maps_section.html#subsection-5" data-scroll="subsection-5">Why linear maps are easy to compute</a></li>
-<li><a href="lin_maps_section.html#subsection-6" data-scroll="subsection-6">Operations on linear transformations</a></li>
-<li><a href="lin_maps_section.html#exercises-2" data-scroll="exercises-2">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lin_maps_section.html" class="internal"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#linmapdefsubsect" class="internal"><span class="codenumber">2.1</span> <span class="title">Definition of a linear transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-3" class="internal"><span class="codenumber">2.2</span> <span class="title">Why linear maps are easy to compute</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-4" class="internal"><span class="codenumber">2.3</span> <span class="title">Operations on linear transformations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-5" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="matrices_section.html" data-scroll="matrices_section"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a><ul>
-<li><a href="matrices_section.html#subsection-7" data-scroll="subsection-7">Matrix notation</a></li>
-<li><a href="matrices_section.html#subsection-8" data-scroll="subsection-8">Matrices and vectors</a></li>
-<li><a href="matrices_section.html#subsection-9" data-scroll="subsection-9">Matrices and linear transformations</a></li>
-<li><a href="matrices_section.html#subsection-10" data-scroll="subsection-10">Matrix algebra</a></li>
-<li><a href="matrices_section.html#exercises-3" data-scroll="exercises-3">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices_section.html" class="internal"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-2" class="internal"><span class="codenumber">3.1</span> <span class="title">Matrix notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-3" class="internal"><span class="codenumber">3.2</span> <span class="title">Matrices and vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-4" class="internal"><span class="codenumber">3.3</span> <span class="title">Matrices and linear transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-5" class="internal"><span class="codenumber">3.4</span> <span class="title">Matrix algebra</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-6" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="linalgincalc3_section.html" data-scroll="linalgincalc3_section"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a><ul>
-<li><a href="linalgincalc3_section.html#diffdefsubsect" data-scroll="diffdefsubsect">Differentiability</a></li>
-<li><a href="linalgincalc3_section.html#subsection-12" data-scroll="subsection-12">The Chain Rule</a></li>
-<li><a href="linalgincalc3_section.html#exercises-4" data-scroll="exercises-4">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linalgincalc3_section.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linalgincalc3_section.html#diffdefsubsect" class="internal"><span class="codenumber">4.1</span> <span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linalgincalc3_section.html#linalgincalc3_section-3" class="internal"><span class="codenumber">4.2</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linalgincalc3_section.html#linalgincalc3_section-4" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="colophon-1.html" data-scroll="colophon-1"><span class="title">Colophon</span></a></li>
-<li class="link"><a href="biography-1.html" data-scroll="biography-1"><span class="title">About the author</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="rnvects_section"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="linmatalg-7.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="linmatalg-7-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="linmatalg-7-2.html" class="internal"><span class="title">About the author</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="linmatalg-7-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="linmatalg-7-4.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="rnvects_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">The vector space <span class="process-math">\(\R^n\)</span></span>
 </h2>
-<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Vectors and vector operations</span>
+<section class="subsection" id="rnvects_section-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Vectors and vector operations</span>
 </h3>
-<p id="p-7">A list \((x_1,x_2,\ldots,x_n)\) of real numbers, separated by commas and delimited by parentheses, denotes an <dfn class="terminology">\(n\)-tuple of real numbers</dfn>. The set of all \(n\)-tuples of real numbers, denoted \(\R^n\), is called <dfn class="terminology">\(n\)-dimensional (real) space</dfn>.</p>
-<div class="displaymath">
+<div class="para logical" id="rnvects_section-2-2">
+<div class="para">A list <span class="process-math">\((x_1,x_2,\ldots,x_n)\)</span> of real numbers, separated by commas and delimited by parentheses, denotes an <dfn class="terminology"><span class="process-math">\(n\)</span>-tuple of real numbers</dfn>. The set of all <span class="process-math">\(n\)</span>-tuples of real numbers, denoted <span class="process-math">\(\R^n\)</span>, is called <dfn class="terminology"><span class="process-math">\(n\)</span>-dimensional (real) space</dfn>.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \R^n=\{(x_1,x_2,\ldots,x_n)\colon x_i\in \R, 1\leq i\leq n\}
 \end{equation*}
 </div>
-<p id="p-8">The operation of <dfn class="terminology">vector addition</dfn>  of two \(n\)-tuples is defined by</p>
-<div class="displaymath">
+</div>
+<div class="para logical" id="rnvects_section-2-3">
+<div class="para">The operation of <dfn class="terminology">vector addition</dfn>  of two <span class="process-math">\(n\)</span>-tuples is defined by</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (x_1,x_2,\ldots,x_n) + (y_1,y_2,\ldots,y_n) = (x_1+y_1,x_2+y_2,\ldots,x_n+y_n)
 \end{equation*}
 </div>
-<p class="continuation">and <dfn class="terminology">scalar multiplication</dfn>  of an \(n\)-tuple \((x_1,x_2,\ldots,x_n)\) by a real number (or <dfn class="terminology">scalar</dfn>) \(\alpha\) is defined by</p>
-<div class="displaymath">
+<div class="para">and <dfn class="terminology">scalar multiplication</dfn>  of an <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((x_1,x_2,\ldots,x_n)\)</span> by a real number (or <dfn class="terminology">scalar</dfn>) <span class="process-math">\(\alpha\)</span> is defined by</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \alpha(x_1,x_2,\ldots,x_n) = (\alpha x_1,\alpha x_2,\ldots,\alpha x_n).
 \end{equation*}
 </div>
-<p class="continuation">With the operations of addition and scalar multiplication, called <dfn class="terminology">vector operations</dfn>, the set \(\R^n\) is a <dfn class="terminology">vector space</dfn> and \(n\)-tuples are <dfn class="terminology">vectors</dfn>.</p>
-<p id="p-9">Vectors are often denoted by lowercase letters in bold Roman font (better for typing), and sometimes italic font decorated with arrows (better for handwriting).  Here are examples.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></p>
-<div class="displaymath">
+<div class="para">With the operations of addition and scalar multiplication, called <dfn class="terminology">vector operations</dfn>, the set <span class="process-math">\(\R^n\)</span> is a <dfn class="terminology">vector space</dfn> and <span class="process-math">\(n\)</span>-tuples are <dfn class="terminology">vectors</dfn>.</div>
+</div>
+<div class="para logical" id="rnvects_section-2-4">
+<div class="para">Vectors are often denoted by lowercase letters in bold Roman font (better for typing), and sometimes italic font decorated with arrows (better for handwriting).  Here are examples.<details class="ptx-footnote" aria-live="polite" id="rnvects_section-2-4-1"><summary class="ptx-footnote__number" title="Footnote 1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rnvects_section-2-4-1">In many multivariable calculus and introductory physics texts, vectors are denoted using angle brackets, rather than parentheses, for delimiters. That is, these texts write <span class="process-math">\(\langle x_1,x_2,\ldots,x_n\rangle\)</span> instead of <span class="process-math">\((x_1,x_2,\ldots,x_n)\text{.}\)</span> In these notes, we do not observe this convention.</div></details>
+</div>
+<div class="displaymath process-math" id="rnvects_section-2-4-2">
 \begin{align*}
 \mathbf{x} \amp= (x_1,x_2,\ldots,x_n)\\
 \vec{x} \amp = (x_1,x_2,\ldots,x_n)
 \end{align*}
 </div>
-<p class="continuation">The vector \((0,0,\ldots,0)\) with all entries equal to 0 is called the <dfn class="terminology">zero vector</dfn> and is denoted \(\mathbf{0}\) or \(\vec{0}\).</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">In many multivariable calculus and introductory physics texts, vectors are denoted using angle brackets, rather than parentheses, for delimiters. That is, these texts write \(\langle x_1,x_2,\ldots,x_n\rangle\) instead of \((x_1,x_2,\ldots,x_n)\text{.}\) In these notes, we do not observe this convention.</div></div>
-<p id="p-10">A sum of the form</p>
-<div class="displaymath">
+<div class="para">The vector <span class="process-math">\((0,0,\ldots,0)\)</span> with all entries equal to 0 is called the <dfn class="terminology">zero vector</dfn> and is denoted <span class="process-math">\(\mathbf{0}\)</span> or <span class="process-math">\(\vec{0}\)</span>.</div>
+</div>
+<div class="para logical" id="rnvects_section-2-5">
+<div class="para">A sum of the form</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{i=1}^r c_i \mathbf{u}_i = c_1\mathbf{u}_1 + c_2\mathbf{u}_2
 + \cdots + c_r\mathbf{u}_r
 \end{equation*}
 </div>
-<p class="continuation">where \(c_1,c_2,\ldots,c_r\) are scalars and \(\mathbf{u}_1,\mathbf{u}_2,\ldots,\mathbf{u}_r\) are vectors is called a <dfn class="terminology">linear combination</dfn> of the vectors \(\mathbf{u}_i\text{.}\)</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Standard basis vectors</span>
+<div class="para">where <span class="process-math">\(c_1,c_2,\ldots,c_r\)</span> are scalars and <span class="process-math">\(\mathbf{u}_1,\mathbf{u}_2,\ldots,\mathbf{u}_r\)</span> are vectors is called a <dfn class="terminology">linear combination</dfn> of the vectors <span class="process-math">\(\mathbf{u}_i\text{.}\)</span>
+</div>
+</div></section><section class="subsection" id="rnvects_section-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Standard basis vectors</span>
 </h3>
-<p id="p-11">The vector \(\mathbf{e}_i=(0,\ldots,0,1,0,\ldots,0)\) with a single 1 in the \(i\)th position and zeroes in all other positions is called the <dfn class="terminology">\(i\)th  standard basis vector</dfn> in \(\R^n\text{.}\) In \(\R^2\text{,}\) the standard basis vectors \(\mathbf{e}_1=(1,0)\) and \(\mathbf{e}_2=(0,1)\) are also called \({\mathbf i}\) and \(\mathbf{j}\text{,}\) respectively. In \(\R^3\text{,}\) the standard basis vectors \(\mathbf{e}_1=(1,0,0)\text{,}\) \(\mathbf{e}_2=(0,1,0)\) and \(\mathbf{e}_3=(0,0,1)\) are also called \({\mathbf
-i}\text{,}\) \(\mathbf{j}\text{,}\) and \(\mathbf{k}\text{,}\) respectively.  Given a vector \(\mathbf{x}=(x_1,\ldots,x_n)\text{,}\) we have the following representation of \(\mathbf{x}\) as a sum of scalar multiples of the standard basis vectors (note that the summation sign indicates vector addition).</p>
-<div class="displaymath">
+<div class="para logical" id="rnvects_section-3-2">
+<div class="para">The vector <span class="process-math">\(\mathbf{e}_i=(0,\ldots,0,1,0,\ldots,0)\)</span> with a single 1 in the <span class="process-math">\(i\)</span>th position and zeroes in all other positions is called the <dfn class="terminology"><span class="process-math">\(i\)</span>th  standard basis vector</dfn> in <span class="process-math">\(\R^n\text{.}\)</span> In <span class="process-math">\(\R^2\text{,}\)</span> the standard basis vectors <span class="process-math">\(\mathbf{e}_1=(1,0)\)</span> and <span class="process-math">\(\mathbf{e}_2=(0,1)\)</span> are also called <span class="process-math">\({\mathbf i}\)</span> and <span class="process-math">\(\mathbf{j}\text{,}\)</span> respectively. In <span class="process-math">\(\R^3\text{,}\)</span> the standard basis vectors <span class="process-math">\(\mathbf{e}_1=(1,0,0)\text{,}\)</span> <span class="process-math">\(\mathbf{e}_2=(0,1,0)\)</span> and <span class="process-math">\(\mathbf{e}_3=(0,0,1)\)</span> are also called <span class="process-math">\({\mathbf
+i}\text{,}\)</span> <span class="process-math">\(\mathbf{j}\text{,}\)</span> and <span class="process-math">\(\mathbf{k}\text{,}\)</span> respectively.  Given a vector <span class="process-math">\(\mathbf{x}=(x_1,\ldots,x_n)\text{,}\)</span> we have the following representation of <span class="process-math">\(\mathbf{x}\)</span> as a sum of scalar multiples of the standard basis vectors (note that the summation sign indicates vector addition).</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sumofcomps.html" id="sumofcomps">
 \begin{equation}
-\mathbf{x} = \sum_{i=1}^n x_i\mathbf{e}_i\label{sumofcomps}\tag{1.1}
+\mathbf{x} = \sum_{i=1}^n x_i\mathbf{e}_i\tag{1.1}
 \end{equation}
 </div>
-<p class="continuation">Equation <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a> says that every vector is a linear combination of standard basis vectors.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Inner product</span>
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/xref/sumofcomps.html" title="Equation 1.1">(1.1)</a> says that every vector is a linear combination of standard basis vectors.</div>
+</div></section><section class="subsection" id="rnvects_section-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Inner product</span>
 </h3>
-<p id="p-12">The <dfn class="terminology">inner product</dfn> or <dfn class="terminology">dot product</dfn> of two vectors \(\mathbf{x}=(x_1,\ldots,x_n)\) and \(\mathbf{y}=(y_1,\ldots,y_n)\) is defined to be the real number</p>
-<div class="displaymath">
+<div class="para logical" id="rnvects_section-4-2">
+<div class="para">The <dfn class="terminology">inner product</dfn> or <dfn class="terminology">dot product</dfn> of two vectors <span class="process-math">\(\mathbf{x}=(x_1,\ldots,x_n)\)</span> and <span class="process-math">\(\mathbf{y}=(y_1,\ldots,y_n)\)</span> is defined to be the real number</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sumofcomps.html">
 \begin{equation*}
 \mathbf{x}\cdot \mathbf{y} = x_1y_1+x_2y_2 + \cdots +x_ny_n.      
 \end{equation*}
 </div>
-<p class="continuation">In terms of inner product, the \(i\)th coordinate \(x_i\) of the vector \(\mathbf{x}=(x_1,\ldots,x_n)\) is given by</p>
-<div class="displaymath">
+<div class="para">In terms of inner product, the <span class="process-math">\(i\)</span>th coordinate <span class="process-math">\(x_i\)</span> of the vector <span class="process-math">\(\mathbf{x}=(x_1,\ldots,x_n)\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sumofcomps.html" id="ithentry">
 \begin{equation}
-x_i = \mathbf{e}_i\cdot \mathbf{x}      \label{ithentry}\tag{1.2}
+x_i = \mathbf{e}_i\cdot \mathbf{x}      \tag{1.2}
 \end{equation}
 </div>
-<p class="continuation">and <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a> becomes</p>
-<div class="displaymath">
+<div class="para">and <a href="" class="xref" data-knowl="./knowl/xref/sumofcomps.html" title="Equation 1.1">(1.1)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sumofcomps.html" id="sumofstandprojs">
 \begin{equation}
-\mathbf{x} = \sum_{i=1}^n \left(\mathbf{e}_i\cdot \mathbf{x}\right)\mathbf{e}_i.      \label{sumofstandprojs}\tag{1.3}
+\mathbf{x} = \sum_{i=1}^n \left(\mathbf{e}_i\cdot \mathbf{x}\right)\mathbf{e}_i.      \tag{1.3}
 \end{equation}
-</div></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">1.4</span> <span class="title">Exercises</span>
+</div>
+</div></section><section class="exercises" id="rnvects_section-5"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="vectnotationexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-13">Write each of the following vectors \(\mathbf{x}\) in the form \((x_1,x_2,\ldots,x_n)\) and \(\sum_i x_i\mathbf{e}_i\text{.}\)  For \(n=2,3\text{,}\) also write \(\mathbf{x}\) using \(\mathbf{i},\mathbf{j},\mathbf{k}\) notation. Example: Given \(\mathbf{x}=3(2,4,-1)\text{,}\) write \(x=(6,12,-3)=6\mathbf{e}_1+12\mathbf{e}_2-3\mathbf{e}_3=6{\mathbf
-i}+12{\mathbf j}-3{\mathbf k}\text{.}\)</p>
+<article class="exercise exercise-like" id="vectnotationexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="vectnotationexer-1">
+<div class="para">Write each of the following vectors <span class="process-math">\(\mathbf{x}\)</span> in the form <span class="process-math">\((x_1,x_2,\ldots,x_n)\)</span> and <span class="process-math">\(\sum_i x_i\mathbf{e}_i\text{.}\)</span>  For <span class="process-math">\(n=2,3\text{,}\)</span> also write <span class="process-math">\(\mathbf{x}\)</span> using <span class="process-math">\(\mathbf{i},\mathbf{j},\mathbf{k}\)</span> notation. Example: Given <span class="process-math">\(\mathbf{x}=3(2,4,-1)\text{,}\)</span> write <span class="process-math">\(x=(6,12,-3)=6\mathbf{e}_1+12\mathbf{e}_2-3\mathbf{e}_3=6{\mathbf
+i}+12{\mathbf j}-3{\mathbf k}\text{.}\)</span>
+</div>
 <ol class="lower-alpha">
-<li id="li-3">\(\displaystyle \mathbf{x}=(3,2)-(5,-2)\)</li>
-<li id="li-4">\(\displaystyle \mathbf{x}=2(-1,2,1) + 3(2,-2,0)\)</li>
-<li id="li-5">\(\displaystyle \mathbf{x}=2\mathbf{e}_1-3\mathbf{e}_2+4\mathbf{e}_4 -(\mathbf{e}_1-\mathbf{e}_2 +\mathbf{e}_3)\)</li>
+<li id="vectnotationexer-1-9-1"><div class="para" id="p-derived-vectnotationexer-1-9-1"><span class="process-math">\(\displaystyle \mathbf{x}=(3,2)-(5,-2)\)</span></div></li>
+<li id="vectnotationexer-1-9-2"><div class="para" id="p-derived-vectnotationexer-1-9-2"><span class="process-math">\(\displaystyle \mathbf{x}=2(-1,2,1) + 3(2,-2,0)\)</span></div></li>
+<li id="vectnotationexer-1-9-3"><div class="para" id="p-derived-vectnotationexer-1-9-3"><span class="process-math">\(\displaystyle \mathbf{x}=2\mathbf{e}_1-3\mathbf{e}_2+4\mathbf{e}_4 -(\mathbf{e}_1-\mathbf{e}_2 +\mathbf{e}_3)\)</span></div></li>
 </ol>
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol id="p-14" class="lower-alpha">
-<li id="li-6">\(\displaystyle \mathbf{x}=(-2,4)=-2\mathbf{e}_1 + 4\mathbf{e}_2 = -2\mathbf{i} + 4\mathbf{j}\)</li>
-<li id="li-7">\(\displaystyle \mathbf{x}=(4,-2,2)= 4\mathbf{e}_1 - 2\mathbf{e}_2 +
-2\mathbf{e}_3 = 4\mathbf{i} - 2\mathbf{j} +2 \mathbf{k}\)</li>
-<li id="li-8">\(\displaystyle \mathbf{x}=(1, -2, -1, 4) = \mathbf{e}_1 - 2\mathbf{e}_2- \mathbf{e}_3 + 4\mathbf{e}_4\)</li>
-</ol></div></div></article><article class="exercise exercise-like" id="sumofcompsexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-15">Verify equation <a class="xref" data-knowl="./knowl/sumofcomps.html" title="Equation 1.1">(1.1)</a>.</p></article><article class="exercise exercise-like" id="ithentryexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-17">Verify equation <a class="xref" data-knowl="./knowl/ithentry.html" title="Equation 1.2">(1.2)</a>.</p></article><article class="exercise exercise-like" id="eidotejexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-19">Show that</p>
-<div class="displaymath">
+</div>
+<details id="vectnotationexer-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para logical" id="vectnotationexer-2-1"><ol class="lower-alpha">
+<li id="vectnotationexer-2-1-1-1"><div class="para" id="p-derived-vectnotationexer-2-1-1-1"><span class="process-math">\(\displaystyle \mathbf{x}=(-2,4)=-2\mathbf{e}_1 + 4\mathbf{e}_2 = -2\mathbf{i} + 4\mathbf{j}\)</span></div></li>
+<li id="vectnotationexer-2-1-1-2"><div class="para" id="p-derived-vectnotationexer-2-1-1-2"><span class="process-math">\(\displaystyle \mathbf{x}=(4,-2,2)= 4\mathbf{e}_1 - 2\mathbf{e}_2 +
+2\mathbf{e}_3 = 4\mathbf{i} - 2\mathbf{j} +2 \mathbf{k}\)</span></div></li>
+<li id="vectnotationexer-2-1-1-3"><div class="para" id="p-derived-vectnotationexer-2-1-1-3"><span class="process-math">\(\displaystyle \mathbf{x}=(1, -2, -1, 4) = \mathbf{e}_1 - 2\mathbf{e}_2- \mathbf{e}_3 + 4\mathbf{e}_4\)</span></div></li>
+</ol></div></div></details></article><article class="exercise exercise-like" id="sumofcompsexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="sumofcompsexer-1">Verify equation <a href="" class="xref" data-knowl="./knowl/xref/sumofcomps.html" title="Equation 1.1">(1.1)</a>.</div></article><article class="exercise exercise-like" id="ithentryexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="ithentryexer-1">Verify equation <a href="" class="xref" data-knowl="./knowl/xref/ithentry.html" title="Equation 1.2">(1.2)</a>.</div></article><article class="exercise exercise-like" id="eidotejexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="eidotejexer-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \mathbf{e}_i\cdot \mathbf{e}_j = \delta_{ij}
 \end{equation*}
 </div>
-<p class="continuation">where \(\delta_{ij}\), called the <dfn class="terminology">Kronecker delta</dfn>, is given by</p>
-<div class="displaymath">
+<div class="para">where <span class="process-math">\(\delta_{ij}\)</span>, called the <dfn class="terminology">Kronecker delta</dfn>, is given by</div>
+<div class="displaymath process-math" id="eidotejexer-1-6">
 \begin{equation}
-\delta_{ij}=\left\{ \begin{array}{cc}
-1 \amp \mbox{if $i=j$}\\
-0 \amp \mbox{if $i\neq j$}
-\end{array}
-\right.\tag{1.4}
+\delta_{ij}=\begin{cases}
+1 \amp \text{ if } i=j\\
+0 \amp \text{ if } i\neq j.
+\end{cases}\tag{1.4}
 \end{equation}
-</div></article><article class="exercise exercise-like" id="vectnormexer"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-21">The <dfn class="terminology">length</dfn> or <dfn class="terminology">norm</dfn> of vector \(\mathbf{x}=(x_1,x_2,\ldots,x_n)\text{,}\) denoted \(\left\|\mathbf{x}\right\|\), is defined by</p>
-<div class="displaymath">
+</div>
+</div></article><article class="exercise exercise-like" id="vectnormexer"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="vectnormexer-1">
+<div class="para">The <dfn class="terminology">length</dfn> or <dfn class="terminology">norm</dfn> of vector <span class="process-math">\(\mathbf{x}=(x_1,x_2,\ldots,x_n)\text{,}\)</span> denoted <span class="process-math">\(\left\|\mathbf{x}\right\|\)</span>, is defined by</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \left\|\mathbf{x}\right\|^2 = \mathbf{x}\cdot \mathbf{x} = x_1^2 + x_2^2 + \cdots
 + x_n^2.
 \end{equation*}
 </div>
-<p class="continuation">A vector \(\mathbf{x}\) is said be be <dfn class="terminology">normalized</dfn> or <dfn class="terminology">have norm 1</dfn> if \(\left\|\mathbf{x}\right\|=1\text{.}\)</p>
+<div class="para">A vector <span class="process-math">\(\mathbf{x}\)</span> is said be be <dfn class="terminology">normalized</dfn> or <dfn class="terminology">have norm 1</dfn> if <span class="process-math">\(\left\|\mathbf{x}\right\|=1\text{.}\)</span>
+</div>
 <ol class="lower-alpha">
-<li id="li-9">Show that, for any vector \(\mathbf{x}\) and any real \(\alpha\text{,}\) we have<div class="displaymath">
+<li id="vectnormexer-1-15-1"><div class="para" id="p-derived-vectnormexer-1-15-1">Show that, for any vector <span class="process-math">\(\mathbf{x}\)</span> and any real <span class="process-math">\(\alpha\text{,}\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
 \left\|\alpha\mathbf{x}\right\|=|\alpha| \left\|\mathbf{x}\right\|.
 \end{equation*}
 </div>
-</li>
-<li id="li-10">Show that, for any nonzero vector \(\mathbf{x}\text{,}\) the vector \(\frac{\mathbf{x}}{\left\|\mathbf{x}\right\|}\) has norm 1.</li>
-</ol></article></section></section></div></main>
+</div></li>
+<li id="vectnormexer-1-15-2"><div class="para" id="p-derived-vectnormexer-1-15-2">Show that, for any nonzero vector <span class="process-math">\(\mathbf{x}\text{,}\)</span> the vector <span class="process-math">\(\frac{\mathbf{x}}{\left\|\mathbf{x}\right\|}\)</span> has norm 1.</div></li>
+</ol>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="lin_maps_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

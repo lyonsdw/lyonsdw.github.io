@@ -1,56 +1,110 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-30T11:54:34-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
-<head>
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Linear algebra in multivariable calculus</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    useLabelIds: true,
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore",
-    processHtmlClass: "has_am",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(      \DeclareMathOperator{\Inn}{Inn}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="linmatalg-7-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="matrices_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linmatalg.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="linmatalg-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -87,152 +141,163 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
-<p class="byline">David W. Lyons</p>
-</div>
-</div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="matrices_section.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="matrices_section.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="linmatalg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul><li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li></ul>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
 </li>
-<li class="link">
-<a href="rnvects_section.html" data-scroll="rnvects_section"><span class="codenumber">1</span> <span class="title">The vector space \(\R^n\)</span></a><ul>
-<li><a href="rnvects_section.html#subsection-1" data-scroll="subsection-1">Vectors and vector operations</a></li>
-<li><a href="rnvects_section.html#subsection-2" data-scroll="subsection-2">Standard basis vectors</a></li>
-<li><a href="rnvects_section.html#subsection-3" data-scroll="subsection-3">Inner product</a></li>
-<li><a href="rnvects_section.html#exercises-1" data-scroll="exercises-1">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rnvects_section.html" class="internal"><span class="codenumber">1</span> <span class="title">The vector space <span class="process-math">\(\R^n\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-2" class="internal"><span class="codenumber">1.1</span> <span class="title">Vectors and vector operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-3" class="internal"><span class="codenumber">1.2</span> <span class="title">Standard basis vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-4" class="internal"><span class="codenumber">1.3</span> <span class="title">Inner product</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rnvects_section.html#rnvects_section-5" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="lin_maps_section.html" data-scroll="lin_maps_section"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a><ul>
-<li><a href="lin_maps_section.html#linmapdefsubsect" data-scroll="linmapdefsubsect">Definition of a linear transformation</a></li>
-<li><a href="lin_maps_section.html#subsection-5" data-scroll="subsection-5">Why linear maps are easy to compute</a></li>
-<li><a href="lin_maps_section.html#subsection-6" data-scroll="subsection-6">Operations on linear transformations</a></li>
-<li><a href="lin_maps_section.html#exercises-2" data-scroll="exercises-2">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lin_maps_section.html" class="internal"><span class="codenumber">2</span> <span class="title">Linear transformations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#linmapdefsubsect" class="internal"><span class="codenumber">2.1</span> <span class="title">Definition of a linear transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-3" class="internal"><span class="codenumber">2.2</span> <span class="title">Why linear maps are easy to compute</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-4" class="internal"><span class="codenumber">2.3</span> <span class="title">Operations on linear transformations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="lin_maps_section.html#lin_maps_section-5" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="matrices_section.html" data-scroll="matrices_section"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a><ul>
-<li><a href="matrices_section.html#subsection-7" data-scroll="subsection-7">Matrix notation</a></li>
-<li><a href="matrices_section.html#subsection-8" data-scroll="subsection-8">Matrices and vectors</a></li>
-<li><a href="matrices_section.html#subsection-9" data-scroll="subsection-9">Matrices and linear transformations</a></li>
-<li><a href="matrices_section.html#subsection-10" data-scroll="subsection-10">Matrix algebra</a></li>
-<li><a href="matrices_section.html#exercises-3" data-scroll="exercises-3">Exercises</a></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrices_section.html" class="internal"><span class="codenumber">3</span> <span class="title">Matrix algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-2" class="internal"><span class="codenumber">3.1</span> <span class="title">Matrix notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-3" class="internal"><span class="codenumber">3.2</span> <span class="title">Matrices and vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-4" class="internal"><span class="codenumber">3.3</span> <span class="title">Matrices and linear transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-5" class="internal"><span class="codenumber">3.4</span> <span class="title">Matrix algebra</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrices_section.html#matrices_section-6" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link active">
-<a href="linalgincalc3_section.html" data-scroll="linalgincalc3_section"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a><ul>
-<li><a href="linalgincalc3_section.html#diffdefsubsect" data-scroll="diffdefsubsect">Differentiability</a></li>
-<li><a href="linalgincalc3_section.html#subsection-12" data-scroll="subsection-12">The Chain Rule</a></li>
-<li><a href="linalgincalc3_section.html#exercises-4" data-scroll="exercises-4">Exercises</a></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="linalgincalc3_section.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linalgincalc3_section.html#diffdefsubsect" class="internal"><span class="codenumber">4.1</span> <span class="title">Differentiability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="linalgincalc3_section.html#linalgincalc3_section-3" class="internal"><span class="codenumber">4.2</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linalgincalc3_section.html#linalgincalc3_section-4" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="colophon-1.html" data-scroll="colophon-1"><span class="title">Colophon</span></a></li>
-<li class="link"><a href="biography-1.html" data-scroll="biography-1"><span class="title">About the author</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Notation</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="linalgincalc3_section"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">Linear algebra in multivariable calculus</span>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="linmatalg-7.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="linmatalg-7-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="linmatalg-7-2.html" class="internal"><span class="title">About the author</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="linmatalg-7-3.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="linmatalg-7-4.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="linalgincalc3_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">Linear algebra in multivariable calculus</span>
 </h2>
 <section class="subsection" id="diffdefsubsect"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.1</span> <span class="title">Differentiability</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Differentiability</span>
 </h3>
-<p id="p-57">A function \(f\colon \R^n\to \R^m\) is <dfn class="terminology">differentiable</dfn> at the point \(\mathbf{x}_0\) if there exists a linear transformation \(L\colon \R^n\to \R^m\) such that</p>
-<div class="displaymath">
+<div class="para logical" id="diffdefsubsect-2">
+<div class="para">A function <span class="process-math">\(f\colon \R^n\to \R^m\)</span> is <dfn class="terminology">differentiable</dfn> at the point <span class="process-math">\(\mathbf{x}_0\)</span> if there exists a linear transformation <span class="process-math">\(L\colon \R^n\to \R^m\)</span> such that</div>
+<div class="displaymath process-math" id="diffabilitydef">
 \begin{equation}
 \lim_{\mathbf{h}\to 0} \frac{f(\mathbf{x}_0+ \mathbf{h}) - f(\mathbf{x}_0)-
-L\mathbf{h}}{\|\mathbf{h}\|} = 0.\label{diffabilitydef}\tag{4.1}
+L\mathbf{h}}{\|\mathbf{h}\|} = 0.\tag{4.1}
 \end{equation}
 </div>
-<p class="continuation">If \(L\) exists, it is called the <dfn class="terminology">derivative of \(f\) at \(\mathbf{x}_0\)</dfn> denoted \(Df(\mathbf{x_0})\).</p>
-<p id="p-58">To understand the definition of the derivative, start with the case \(n=m=1\text{.}\) The derivative of \(f\) at \(x_0\) is a number \(f'(x_0)\) such that</p>
-<div class="displaymath">
+<div class="para">If <span class="process-math">\(L\)</span> exists, it is called the <dfn class="terminology">derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(\mathbf{x}_0\)</span></dfn> denoted <span class="process-math">\(Df(\mathbf{x_0})\)</span>.</div>
+</div>
+<div class="para logical" id="diffdefsubsect-3">
+<div class="para">To understand the definition of the derivative, start with the case <span class="process-math">\(n=m=1\text{.}\)</span> The derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(x_0\)</span> is a number <span class="process-math">\(f'(x_0)\)</span> such that</div>
+<div class="displaymath process-math">
 \begin{equation*}
 f(x_0 + h) -f(x_0) \approx f'(x_0)h
 \end{equation*}
 </div>
-<p class="continuation">for \(h\) near \(0\text{.}\) The meaning of "approximately equals \(\ldots\) for \(h\) near \(0\)" is made precise by using a limit. To generalize to higher dimensions, interpret \(f'(x_0)h\) as the value of a linear transformation that sends \(h\) to \(f'(x_0)h\text{.}\) The derivative \(Df(\mathbf{x}_0)\) of \(f\) at \(\mathbf{x_0}\) is a linear transformation such that</p>
-<div class="displaymath">
+<div class="para">for <span class="process-math">\(h\)</span> near <span class="process-math">\(0\text{.}\)</span> The meaning of "approximately equals <span class="process-math">\(\ldots\)</span> for <span class="process-math">\(h\)</span> near <span class="process-math">\(0\)</span>" is made precise by using a limit. To generalize to higher dimensions, interpret <span class="process-math">\(f'(x_0)h\)</span> as the value of a linear transformation that sends <span class="process-math">\(h\)</span> to <span class="process-math">\(f'(x_0)h\text{.}\)</span> The derivative <span class="process-math">\(Df(\mathbf{x}_0)\)</span> of <span class="process-math">\(f\)</span> at <span class="process-math">\(\mathbf{x_0}\)</span> is a linear transformation such that</div>
+<div class="displaymath process-math">
 \begin{equation*}
 f(\mathbf{x}_0 + \mathbf{h}) -f(\mathbf{x}_0) \approx Df(\mathbf{x}_0)\mathbf{h}
 \end{equation*}
 </div>
-<p class="continuation">for \(\mathbf{h}\) near \(\mathbf{0}\text{.}\) Putting \(\mathbf{h} = t\mathbf{e}_j\text{,}\) this reads</p>
-<div class="displaymath">
+<div class="para">for <span class="process-math">\(\mathbf{h}\)</span> near <span class="process-math">\(\mathbf{0}\text{.}\)</span> Putting <span class="process-math">\(\mathbf{h} = t\mathbf{e}_j\text{,}\)</span> this reads</div>
+<div class="displaymath process-math">
 \begin{equation*}
 f(\mathbf{x}_0 + t\mathbf{e}_j) -f(\mathbf{x}_0) \approx Df(\mathbf{x}_0)t\mathbf{e}_j
 \end{equation*}
 </div>
-<p class="continuation">for \(t\) near \(0\text{.}\) Dividing both sides by \(t\) and taking a limit, we get an expression for \(Df(\mathbf{x}_0)\mathbf{e}_j\text{.}\)</p>
-<div class="displaymath">
+<div class="para">for <span class="process-math">\(t\)</span> near <span class="process-math">\(0\text{.}\)</span> Dividing both sides by <span class="process-math">\(t\)</span> and taking a limit, we get an expression for <span class="process-math">\(Df(\mathbf{x}_0)\mathbf{e}_j\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="dfofej">
 \begin{equation}
 Df(\mathbf{x}_0)\mathbf{e}_j = \lim_{t\to 0}
 \frac{f(\mathbf{x}_0 + t\mathbf{e}_j) -f(\mathbf{x}_0)}{t} =
 \left(\frac{\partial y_1}{\partial x_j}, \frac{\partial y_2}{\partial
-x_j},\ldots, \frac{\partial y_m}{\partial x_j}\right)\label{dfofej}\tag{4.2}
+x_j},\ldots, \frac{\partial y_m}{\partial x_j}\right)\tag{4.2}
 \end{equation}
 </div>
-<p class="continuation">where \(\mathbf{y}=(y_1,y_2,\ldots,y_m) = f(x_1,x_2,\ldots,x_n) =
-f(\mathbf{x})\text{.}\) From this it follows that \(Df(\mathbf{x}_0)\text{,}\) if it exists, is represented by the matrix \(\left[\frac{\partial
-y_i}{\partial x_j}\right]\text{.}\)</p>
-<div class="displaymath">
+<div class="para">where <span class="process-math">\(\mathbf{y}=(y_1,y_2,\ldots,y_m) = f(x_1,x_2,\ldots,x_n) =
+f(\mathbf{x})\text{.}\)</span> From this it follows that <span class="process-math">\(Df(\mathbf{x}_0)\text{,}\)</span> if it exists, is represented by the matrix <span class="process-math">\(\left[\frac{\partial
+y_i}{\partial x_j}\right]\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="dfmat">
 \begin{equation}
-[Df(\mathbf{x}_0)] = \left[\frac{\partial y_i}{\partial x_j}\right]\label{dfmat}\tag{4.3}
+[Df(\mathbf{x}_0)] = \left[\frac{\partial y_i}{\partial x_j}\right]\tag{4.3}
 \end{equation}
-</div></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.2</span> <span class="title">The Chain Rule</span>
+</div>
+</div></section><section class="subsection" id="linalgincalc3_section-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">The Chain Rule</span>
 </h3>
-<p id="p-59">Consider the composition of functions</p>
-<div class="displaymath">
+<div class="para logical" id="linalgincalc3_section-3-2">
+<div class="para">Consider the composition of functions</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \R^p \stackrel{g}{\longrightarrow} \R^n
 \stackrel{f}{\longrightarrow} \R^m
 \end{equation*}
 </div>
-<p class="continuation">and suppose \(g\) is differentiable at \(\mathbf{t}_0\) and \(f\) is differentiable at \(\mathbf{x}_0=g(\mathbf{t}_0)\text{.}\) The <dfn class="terminology">chain rule</dfn> says that \(f\circ g\) is differentiable at \(\mathbf{t}_0\text{,}\) and that the derivative of the composition is the composition of the derivatives.</p>
-<div class="displaymath">
+<div class="para">and suppose <span class="process-math">\(g\)</span> is differentiable at <span class="process-math">\(\mathbf{t}_0\)</span> and <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(\mathbf{x}_0=g(\mathbf{t}_0)\text{.}\)</span> The <dfn class="terminology">chain rule</dfn> says that <span class="process-math">\(f\circ g\)</span> is differentiable at <span class="process-math">\(\mathbf{t}_0\text{,}\)</span> and that the derivative of the composition is the composition of the derivatives.</div>
+<div class="displaymath process-math" id="chainrule">
 \begin{equation}
-D(f\circ g)(\mathbf{t}_0) = Df(\mathbf{x}_0) Dg(\mathbf{t}_0)\label{chainrule}\tag{4.4}
+D(f\circ g)(\mathbf{t}_0) = Df(\mathbf{x}_0) Dg(\mathbf{t}_0)\tag{4.4}
 \end{equation}
 </div>
-<p class="continuation">This explains the "tree diagram rule" given in most multivariate calculus texts. The partial derivative \(\frac{\partial y_i}{\partial t_j}\) is just the \(i,j\) entry of the product of the derivative matrices for \(f\) and \(g\text{.}\)</p>
-<div class="displaymath">
+<div class="para">This explains the "tree diagram rule" given in most multivariate calculus texts. The partial derivative <span class="process-math">\(\frac{\partial y_i}{\partial t_j}\)</span> is just the <span class="process-math">\(i,j\)</span> entry of the product of the derivative matrices for <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="chainrulematrixmult">
 \begin{equation}
-\frac{\partial y_i}{\partial t_j} = \sum_{k=1}^n \frac{\partial y_i}{\partial x_k}\frac{\partial x_k}{\partial t_j}\label{chainrulematrixmult}\tag{4.5}
+\frac{\partial y_i}{\partial t_j} = \sum_{k=1}^n \frac{\partial y_i}{\partial x_k}\frac{\partial x_k}{\partial t_j}\tag{4.5}
 \end{equation}
-</div></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">4.3</span> <span class="title">Exercises</span>
+</div>
+</div></section><section class="exercises" id="linalgincalc3_section-4"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="nm1diffexer"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-60">Verify the definition of differentiable function <a class="xref" data-knowl="./knowl/diffabilitydef.html" title="Equation 4.1">(4.1)</a> given in is equivalent to the usual definition for \(n=m=1\) from Calculus 1.</p></article><article class="exercise exercise-like" id="partialderivlimitexer"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-63">Explain equation <a class="xref" data-knowl="./knowl/dfofej.html" title="Equation 4.2">(4.2)</a>. <em class="emphasis">Why</em> does the limit on the left equal the vector on the right?</p>
-<div class="displaymath">
+<article class="exercise exercise-like" id="nm1diffexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="nm1diffexer-1">Verify the definition of differentiable function <a href="" class="xref" data-knowl="./knowl/xref/diffabilitydef.html" title="Equation 4.1">(4.1)</a> given in is equivalent to the usual definition for <span class="process-math">\(n=m=1\)</span> from Calculus 1.</div></article><article class="exercise exercise-like" id="partialderivlimitexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="partialderivlimitexer-1">
+<div class="para">Explain equation <a href="" class="xref" data-knowl="./knowl/xref/dfofej.html" title="Equation 4.2">(4.2)</a>. <em class="emphasis">Why</em> does the limit on the left equal the vector on the right?</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/dfofej.html">
 \begin{equation*}
 \lim_{t\to 0} \frac{f(\mathbf{x}_0 +
 t\mathbf{e}_j) -f(\mathbf{x}_0)}{t}=
 \left(\frac{\partial y_1}{\partial x_j}, \frac{\partial
 y_2}{\partial x_j},\ldots, \frac{\partial y_m}{\partial x_j}\right)
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="dfmatexer"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-65">Explain equation <a class="xref" data-knowl="./knowl/dfmat.html" title="Equation 4.3">(4.3)</a>. <em class="emphasis">How</em> does this equation follow from the previous?</p></article><article class="exercise exercise-like" id="chainrulereconcilexer"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-67">Explain equation <a class="xref" data-knowl="./knowl/chainrulematrixmult.html" title="Equation 4.5">(4.5)</a>. How is it the same as the chain rule <a class="xref" data-knowl="./knowl/chainrule.html" title="Equation 4.4">(4.4)</a>?</p></article></section></section></div></main>
+</div>
+</div></article><article class="exercise exercise-like" id="dfmatexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="dfmatexer-1">Explain equation <a href="" class="xref" data-knowl="./knowl/xref/dfmat.html" title="Equation 4.3">(4.3)</a>. <em class="emphasis">How</em> does this equation follow from the previous?</div></article><article class="exercise exercise-like" id="chainrulereconcilexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="chainrulereconcilexer-1">Explain equation <a href="" class="xref" data-knowl="./knowl/xref/chainrulematrixmult.html" title="Equation 4.5">(4.5)</a>. How is it the same as the chain rule <a href="" class="xref" data-knowl="./knowl/xref/chainrule.html" title="Equation 4.4">(4.4)</a>?</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="matrices_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="linmatalg-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
