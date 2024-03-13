@@ -321,10 +321,10 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Elliptic geometry</span>
 </h2>
 <section class="introduction" id="elliptic_geometry_section-2"><div class="para" id="elliptic_geometry_section-2-1">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</div> <div class="para logical" id="elliptic_geometry_section-2-2">
-<div class="para">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions.</div>
+<div class="para">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions, that is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}
+S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}.
 \end{equation*}
 </div>
 <div class="para">We begin by establishing some basic facts about the relevant transformation groups.</div>
@@ -343,15 +343,15 @@ S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}
 a-bi\end{array}\right]\text{.}
 \end{equation*}
 </div>
-<div class="para">The image of <span class="process-math">\(U(\Quat)\)</span> under <span class="process-math">\(M\)</span> is the matrix group <span class="process-math">\(SU(2)\)</span> , called the <em class="emphasis">special unitary</em> group.</div>
+<div class="para">The image of <span class="process-math">\(U(\Quat)\)</span> under <span class="process-math">\(M\)</span> is the matrix group</div>
 <div class="displaymath process-math" id="su2def">
 \begin{equation}
 SU(2)= \left\{\left[\begin{array}{cc} a \amp b\\ -b^\ast \amp
 a^\ast\end{array}\right]\colon a,b\in \C,
-|a|^2+|b|^2=1\right\}\tag{3.4.1}
+|a|^2+|b|^2=1\right\},\tag{3.4.1}
 \end{equation}
 </div>
-<div class="para"> Restricting the domain of <span class="process-math">\(M\)</span> to <span class="process-math">\(U(\Quat)\)</span> and restricting the codomain of <span class="process-math">\(M\)</span> to <span class="process-math">\(M(U(\Quat))=SU(2)\)</span> is an isomorphism of groups</div>
+<div class="para"> called the <em class="emphasis">special unitary</em> group. Restricting the domain of <span class="process-math">\(M\)</span> to <span class="process-math">\(U(\Quat)\)</span> and restricting the codomain of <span class="process-math">\(M\)</span> to <span class="process-math">\(M(U(\Quat))=SU(2)\)</span> is an isomorphism of groups</div>
 <div class="displaymath process-math">
 \begin{equation*}
 U(\Quat)\approx SU(2).
@@ -378,14 +378,14 @@ r \to \left[ v\to rvr^\ast \right]
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation <span class="process-math">\(R_{v,\theta}\)</span> about the vector <span class="process-math">\(v\)</span> by the angle <span class="process-math">\(\theta\)</span></figcaption></figure><div class="para" id="rotgp-4">
 <em class="alert">Notation convention:</em> For readability and convenience, we write <span class="process-math">\(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\)</span> to denote rotations by <span class="process-math">\(\theta\)</span> radians about the standard basis vectors <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively.</div>
 <div class="para logical" id="rotgp-5">
-<div class="para">We will write <span class="process-math">\(\Rot(S^2)\)</span> to denote the set of all rotations.</div>
+<div class="para">We will write <span class="process-math">\(\Rot(S^2)\)</span> to denote the set</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html">
 \begin{equation*}
 \Rot(S^2)=\{R_{{v},\theta}\colon
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<div class="para">To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<details class="ptx-footnote" aria-live="polite" id="rotgp-5-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rotgp-5-4">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></details> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="" class="xref" data-knowl="./knowl/xref/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/quatrotcompinvexer.html" title="Exercise 1.2.6.2">Exercise 1.2.6.2</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
+<div class="para">of all rotations. To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<details class="ptx-footnote" aria-live="polite" id="rotgp-5-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rotgp-5-4">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></details> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="" class="xref" data-knowl="./knowl/xref/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/quatrotcompinvexer.html" title="Exercise 1.2.6.2">Exercise 1.2.6.2</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
@@ -434,14 +434,14 @@ C\to R(C) \to C' \to C''\to C.
 </h3>
 <div class="para" id="ellipticsubgpssubsec-2"></div>
 <div class="para logical" id="ellipticsubgpssubsec-3">
-<div class="para">Let <span class="process-math">\(\S\)</span> denote the group of transformations of <span class="process-math">\(\extC\)</span> that are conjugate to rotations of <span class="process-math">\(S^2\)</span> via the stereographic projection.</div>
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \S=\{s\circ R\circ s^{-1} \;\;\colon \;\;R\in
 \Rot(S^2)\}
 \end{equation*}
 </div>
-<div class="para">The group <span class="process-math">\(\S\)</span> is called the <dfn class="terminology">elliptic group</dfn>. It is easy to check that the map <span class="process-math">\(\Rot(S^2)\to
+<div class="para"> denote the group of transformations of <span class="process-math">\(\extC\)</span> that are conjugate to rotations of <span class="process-math">\(S^2\)</span> via the stereographic projection. The group <span class="process-math">\(\S\)</span> is called the <dfn class="terminology">elliptic group</dfn>. It is easy to check that the map <span class="process-math">\(\Rot(S^2)\to
 \S\)</span> given by <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is an isomorphism of groups, so we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
