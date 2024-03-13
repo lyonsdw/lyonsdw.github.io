@@ -210,7 +210,7 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-16" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-19" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
@@ -316,29 +316,23 @@ S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}
 <details id="vector_operations_section-10" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para" id="vector_operations_section-10-1-1">Draw a figure that illustrates the points <span class="process-math">\(P=W(t),S,O\text{,}\)</span> the angle <span class="process-math">\(\angle SOP\text{,}\)</span> and the oriented arc from <span class="process-math">\(S\)</span> to <span class="process-math">\(P\)</span> on <span class="process-math">\(S^1\text{.}\)</span> Draw one figure for a positive value of <span class="process-math">\(t\text{,}\)</span> and draw another figure for a negative value of <span class="process-math">\(t\text{.}\)</span>
-</div></article></details><div class="para logical" id="vector_operations_section-11">
-<div class="para">Every point <span class="process-math">\(P\neq (0,0)\)</span> is a positive scalar multiple of a unique point <span class="process-math">\(\wrap(t)\)</span> on the unit circle, as follows. Given an arbitrary point <span class="process-math">\(P\in \R^2\)</span> with <span class="process-math">\(P\neq (0,0)\text{,}\)</span> let <span class="process-math">\(P'\)</span> be the intersection of the line segment <span class="process-math">\(\overline{OP}\)</span> with the unit circle, so that we have <span class="process-math">\(P'=\wrap(t)\)</span> for some real number <span class="process-math">\(t\text{.}\)</span> It is easy to check that <span class="process-math">\(P=rP'\)</span> where <span class="process-math">\(r=\left\Vert P\right\Vert\text{.}\)</span> The expression <span class="process-math">\(P=r\wrap(t)\)</span> is called the <dfn class="terminology">polar form</dfn>  for <span class="process-math">\(P\text{.}\)</span> The numbers <span class="process-math">\(r,t\)</span> are called <dfn class="terminology">polar coordinates</dfn>      for <span class="process-math">\(P\text{.}\)</span> (By contrast, the numbers <span class="process-math">\(a,b\)</span> are called the <dfn class="terminology">Cartesian coordinates</dfn> or the <dfn class="terminology">rectangular coordinates</dfn> for <span class="process-math">\(P=(a,b)\text{.}\)</span>) The number <span class="process-math">\(r&gt;0\)</span> is the norm of <span class="process-math">\(P\text{,}\)</span> and the number <span class="process-math">\(t\)</span> is called (an) <dfn class="terminology">argument</dfn>      of <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\arg(P)\text{.}\)</span>
-</div>
-<div class="displaymath process-math" id="r2arg">
-\begin{equation}
-\arg(r\cos t, r\sin t) = t\tag{2.1.7}
-\end{equation}
-</div>
-<div class="para">Because <span class="process-math">\(\wrap\)</span> is periodic with period <span class="process-math">\(2\pi\text{,}\)</span> any number of the form <span class="process-math">\(t+2\pi k\text{,}\)</span> for all <span class="process-math">\(k\in \Z\text{,}\)</span> is also a value of <span class="process-math">\(\arg(P)\text{.}\)</span> In this usage, <span class="process-math">\(\arg\)</span> is not technically a function, because it has multiple possible values. A single-valued function may be defined by restricting the value of <span class="process-math">\(\arg(P)\text{,}\)</span> say, to the range <span class="process-math">\(-\pi \lt \arg(P)\leq \pi\text{.}\)</span>
-</div>
+</div></article></details><div class="para" id="vector_operations_section-11">Every point <span class="process-math">\(P\neq (0,0)\)</span> is a positive scalar multiple of a unique point <span class="process-math">\(\wrap(t)\)</span> on the unit circle, as follows. Given an arbitrary point <span class="process-math">\(P\in \R^2\)</span> with <span class="process-math">\(P\neq (0,0)\text{,}\)</span> let <span class="process-math">\(P'\)</span> be the intersection of the line segment <span class="process-math">\(\overline{OP}\)</span> with the unit circle, so that we have <span class="process-math">\(P'=\wrap(t)\)</span> for some real number <span class="process-math">\(t\text{.}\)</span> It is easy to check that <span class="process-math">\(P=rP'\)</span> where <span class="process-math">\(r=\left\Vert P\right\Vert\text{.}\)</span> The expression <span class="process-math">\(P=r\wrap(t)\)</span> is called the <dfn class="terminology">polar form</dfn>  for <span class="process-math">\(P\text{.}\)</span> The number <span class="process-math">\(t\)</span> is called (an) <dfn class="terminology">argument</dfn>  of <span class="process-math">\(P\text{,}\)</span> denoted <span class="process-math">\(\arg(P)\text{.}\)</span> Because <span class="process-math">\(\wrap\)</span> is periodic with period <span class="process-math">\(2\pi\text{,}\)</span> any number of the form <span class="process-math">\(t+2\pi k\text{,}\)</span> for all <span class="process-math">\(k\in \Z\text{,}\)</span> is also a value of <span class="process-math">\(\arg(P)\text{.}\)</span> In this usage, <span class="process-math">\(\arg\)</span> is not technically a function, because it has multiple possible values. A single-valued function may be defined by restricting the value of <span class="process-math">\(\arg(P)\text{,}\)</span> say, to the range <span class="process-math">\(-\pi \lt \arg(P)\leq \pi\text{.}\)</span>
 </div>
 <details id="allptsscaledfroms1exer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
-</h3></summary><article class="exercise exercise-like"><div class="para" id="allptsscaledfroms1exer-1-1">Show that "it is easy to check" that <span class="process-math">\(P=rP'\)</span> by checking it.</div></article></details><div class="para logical" id="vector_operations_section-14">
+</h3></summary><article class="exercise exercise-like"><div class="para" id="allptsscaledfroms1exer-1-1">Draw a sketch that includes <span class="process-math">\(P,P',O,r,t\text{.}\)</span> Show that "it is easy to check" that <span class="process-math">\(P=rP'\)</span> by checking it.</div></article></details><div class="para" id="vector_operations_section-14">If we have a point <span class="process-math">\(A=(u,v)=(k\cos \theta,k\sin\theta)\text{,}\)</span> we say that the numbers <span class="process-math">\(u,v\)</span> are the <dfn class="terminology">Cartesian coordinates</dfn> or the <dfn class="terminology">rectangular coordinates</dfn> for <span class="process-math">\(A\text{,}\)</span> and we say that the numbers <span class="process-math">\(k,\theta\)</span> are <dfn class="terminology">polar coordinates</dfn>  for <span class="process-math">\(A\text{.}\)</span> </div>
+<details id="polarnonuniqueexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para" id="polarnonuniqueexer-1-1">Show that polar coordinates are not unique by finding three different pairs of polar coordinates <span class="process-math">\(r,t\)</span> for the point <span class="process-math">\(A=(1,1)\text{.}\)</span> How many different values of <span class="process-math">\(r\)</span> are possible? What are they? How many different values of <span class="process-math">\(t\)</span> are possible? What are they?</div></article></details><div class="para logical" id="vector_operations_section-17">
 <div class="para">Rotations about a point in the plane combine in a simple way: a rotation by <span class="process-math">\(t\)</span> radians, followed by a rotation by <span class="process-math">\(s\)</span> radians, results in a combined rotation by <span class="process-math">\(t+s\)</span> radians. It is useful to encode the composition of rotations in a multiplication operation on <span class="process-math">\(S^1\text{.}\)</span> Given points <span class="process-math">\(\wrap(t),\wrap(s)\)</span> on the unit circle, let <span class="process-math">\(\wrap(t)\odot \wrap(s)\)</span> be defined by</div>
 <div class="displaymath process-math" id="s1mult">
 \begin{equation}
-\wrap(t)\odot \wrap(s) = \wrap(t+s).\tag{2.1.8}
+\wrap(t)\odot \wrap(s) = \wrap(t+s).\tag{2.1.7}
 \end{equation}
 </div>
 </div>
-<div class="para" id="vector_operations_section-15"></div>
-<section class="exercises" id="vector_operations_section-16"><h3 class="heading hide-type">
+<div class="para" id="vector_operations_section-18"></div>
+<section class="exercises" id="vector_operations_section-19"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="scalarmultisradialexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
@@ -356,8 +350,8 @@ S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}
 <div class="displaymath process-math" id="scalingislinearexer-1-1-3">
 \begin{align}
 \alpha({\mathbf x}+{\mathbf y}) \amp = \alpha{\mathbf x} +
-\alpha{\mathbf y}\tag{2.1.9}\\
-(\alpha \mathbf{x})\cdot (\beta \mathbf{y}) \amp = (\alpha \beta) (\mathbf{x}\cdot\mathbf{y})\tag{2.1.10}
+\alpha{\mathbf y}\tag{2.1.8}\\
+(\alpha \mathbf{x})\cdot (\beta \mathbf{y}) \amp = (\alpha \beta) (\mathbf{x}\cdot\mathbf{y})\tag{2.1.9}
 \end{align}
 </div>
 </div></article><article class="exercise exercise-like" id="normpropnonpropexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
@@ -390,7 +384,7 @@ S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}
 <div class="displaymath process-math" id="dotprodgeom">
 \begin{equation}
 {\mathbf x} \cdot {\mathbf y} = \left\Vert{\mathbf
-x}\right\Vert \left\Vert{\mathbf y}\right\Vert \cos \theta\tag{2.1.11}
+x}\right\Vert \left\Vert{\mathbf y}\right\Vert \cos \theta\tag{2.1.10}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(\theta\)</span> is the measure of the angle <span class="process-math">\(\angle POQ\text{.}\)</span> Hint: Start by writing <span class="process-math">\(P,Q\)</span> in polar form, then use previous exercises.</div>
