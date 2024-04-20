@@ -16,13 +16,13 @@
 </h4>
 <div class="para logical">
 <div class="para">We call the set</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linfractransformcneq0.html ./knowl/xref/linfractransformceq0.html">
 \begin{equation*}
 \extR=\R\cup \{\infty\}
 \end{equation*}
 </div>
 <div class="para">the <dfn class="terminology">extended real numbers</dfn>, where <span class="process-math">\(\infty\)</span> is an element that is not a real number. Let <span class="process-math">\(\alpha\neq 0\)</span> be a real number and let <span class="process-math">\(\beta\)</span> be any real number. We define functions <span class="process-math">\(\mu_\alpha,\tau_{\beta},\rho\colon \extR\to\extR\text{,}\)</span> as follows.</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linfractransformcneq0.html ./knowl/xref/linfractransformceq0.html">
 \begin{align*}
 \mu_{\alpha}(x)\amp = \begin{cases} \alpha x \amp x\in \R\\ \infty \amp x=\infty \end{cases}\\
 \tau_{\beta}(x) \amp = \begin{cases} x+\beta \amp x\in \R\\ \infty
@@ -39,11 +39,27 @@
 \mu_{(1/c)}\of\tau_a\of \mu_{(bc-ad)}\of\rho\of \tau_d\of
 \mu_c
 \end{equation*}
-</div>is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+</div>is given by<div class="displaymath process-math">
+\begin{equation}
+T(x)=\begin{cases}
+\frac{ax+b}{cx+d} \amp \text{ if }x\in  \R,x\neq -d/c\\
+\infty \amp \text{ if } x= -d/c\\
+a/c \amp \text{ if }x=\infty.
+\end{cases}\tag{2.4.1}
+\end{equation}
+</div>Conclude that <span class="process-math">\(T\colon
 \extR\to\extR\)</span> is invertible.</div></li>
-<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c=0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that <span class="process-math">\(d\neq 0\)</span> and that the composition <span class="process-math">\(\tau_{(b/d)}\of \mu_{a/d}\)</span> is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c=0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that <span class="process-math">\(d\neq 0\)</span> and that the composition <span class="process-math">\(\tau_{(b/d)}\of \mu_{a/d}\)</span> is given by<div class="displaymath process-math">
+\begin{equation}
+T(x)=\begin{cases}
+\frac{ax+b}{cx+d} \amp \text{ if } x\neq \infty\\
+\infty \amp \text{ if } x= \infty.
+\end{cases}\tag{2.4.2}
+\end{equation}
+</div>Conclude that <span class="process-math">\(T\colon
 \extR\to\extR\)</span> is invertible.</div></li>
-<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> The function <span class="process-math">\(T\colon \extR\to \extR\)</span> given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\)</span> is called a <dfn class="terminology">linear fractional transformation</dfn> on the extended reals. Given a linear fractional transformation <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> let <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\text{.}\)</span> We will call <span class="process-math">\(M(T)\)</span> the <em class="emphasis">matrix of coefficients</em> of <span class="process-math">\(T\text{.}\)</span> Suppose that <span class="process-math">\(S\)</span> is another linear fractional transformation with <span class="process-math">\(M(S)=\twotwo{e}{f}{g}{h}\text{.}\)</span> Show that <span class="process-math">\(M(T\of
+<li><div class="para">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> The function <span class="process-math">\(T\colon \extR\to \extR\)</span> given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> with exceptional values specified by <a href="" class="xref" data-knowl="./knowl/xref/linfractransformcneq0.html" title="Equation 2.4.1">(2.4.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/linfractransformceq0.html" title="Equation 2.4.2">(2.4.2)</a> for the cases <span class="process-math">\(c\neq
+0\text{,}\)</span> <span class="process-math">\(c=0\text{,}\)</span> respectively, is called a <dfn class="terminology">linear fractional transformation</dfn> on the extended reals. Given a linear fractional transformation <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> let <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\text{.}\)</span> We will call <span class="process-math">\(M(T)\)</span> the <em class="emphasis">matrix of coefficients</em> of <span class="process-math">\(T\text{.}\)</span> Suppose that <span class="process-math">\(S\)</span> is another linear fractional transformation with <span class="process-math">\(M(S)=\twotwo{e}{f}{g}{h}\text{.}\)</span> Show that <span class="process-math">\(M(T\of
 S)=M(T)M(S)\)</span> and <span class="process-math">\(M(T^{-1})=(M(T))^{-1}\)</span> (the previous two parts of this problem show that <span class="process-math">\(T\)</span> is invertible).</div></li>
 <li><div class="para">Let <span class="process-math">\(s\colon S^1\to \extR\)</span> be the stereographic projection function, given by<div class="displaymath process-math">
 \begin{equation*}

@@ -183,10 +183,10 @@ window.MathJax = {
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Basic Tools</span></a></div>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Using Linear and Exponential Growth</span></a></div>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
@@ -210,7 +210,7 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-19" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-20" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
@@ -297,13 +297,13 @@ z^\ast\text{.}\)</span>
 </h4>
 <div class="para logical" id="linfractransexer-2-1">
 <div class="para">We call the set</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linfractransformcneq0.html ./knowl/xref/linfractransformceq0.html">
 \begin{equation*}
 \extR=\R\cup \{\infty\}
 \end{equation*}
 </div>
 <div class="para">the <dfn class="terminology">extended real numbers</dfn>, where <span class="process-math">\(\infty\)</span> is an element that is not a real number. Let <span class="process-math">\(\alpha\neq 0\)</span> be a real number and let <span class="process-math">\(\beta\)</span> be any real number. We define functions <span class="process-math">\(\mu_\alpha,\tau_{\beta},\rho\colon \extR\to\extR\text{,}\)</span> as follows.</div>
-<div class="displaymath process-math" id="linfractransexer-2-1-8">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/linfractransformcneq0.html ./knowl/xref/linfractransformceq0.html" id="linfractransexer-2-1-8">
 \begin{align*}
 \mu_{\alpha}(x)\amp = \begin{cases} \alpha x \amp x\in \R\\ \infty \amp x=\infty \end{cases}\\
 \tau_{\beta}(x) \amp = \begin{cases} x+\beta \amp x\in \R\\ \infty
@@ -320,11 +320,27 @@ z^\ast\text{.}\)</span>
 \mu_{(1/c)}\of\tau_a\of \mu_{(bc-ad)}\of\rho\of \tau_d\of
 \mu_c
 \end{equation*}
-</div>is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+</div>is given by<div class="displaymath process-math" id="linfractransformcneq0">
+\begin{equation}
+T(x)=\begin{cases}
+\frac{ax+b}{cx+d} \amp \text{ if }x\in  \R,x\neq -d/c\\
+\infty \amp \text{ if } x= -d/c\\
+a/c \amp \text{ if }x=\infty.
+\end{cases}\tag{2.4.1}
+\end{equation}
+</div>Conclude that <span class="process-math">\(T\colon
 \extR\to\extR\)</span> is invertible.</div></li>
-<li id="linfractransexer-2-1-9-3"><div class="para" id="p-derived-linfractransexer-2-1-9-3">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c=0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that <span class="process-math">\(d\neq 0\)</span> and that the composition <span class="process-math">\(\tau_{(b/d)}\of \mu_{a/d}\)</span> is given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{.}\)</span> Conclude that <span class="process-math">\(T\colon
+<li id="linfractransexer-2-1-9-3"><div class="para" id="p-derived-linfractransexer-2-1-9-3">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(c=0\)</span> and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that <span class="process-math">\(d\neq 0\)</span> and that the composition <span class="process-math">\(\tau_{(b/d)}\of \mu_{a/d}\)</span> is given by<div class="displaymath process-math" id="linfractransformceq0">
+\begin{equation}
+T(x)=\begin{cases}
+\frac{ax+b}{cx+d} \amp \text{ if } x\neq \infty\\
+\infty \amp \text{ if } x= \infty.
+\end{cases}\tag{2.4.2}
+\end{equation}
+</div>Conclude that <span class="process-math">\(T\colon
 \extR\to\extR\)</span> is invertible.</div></li>
-<li id="linfractransexer-2-1-9-4"><div class="para" id="p-derived-linfractransexer-2-1-9-4">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> The function <span class="process-math">\(T\colon \extR\to \extR\)</span> given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\)</span> is called a <dfn class="terminology">linear fractional transformation</dfn> on the extended reals. Given a linear fractional transformation <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> let <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\text{.}\)</span> We will call <span class="process-math">\(M(T)\)</span> the <em class="emphasis">matrix of coefficients</em> of <span class="process-math">\(T\text{.}\)</span> Suppose that <span class="process-math">\(S\)</span> is another linear fractional transformation with <span class="process-math">\(M(S)=\twotwo{e}{f}{g}{h}\text{.}\)</span> Show that <span class="process-math">\(M(T\of
+<li id="linfractransexer-2-1-9-4"><div class="para" id="p-derived-linfractransexer-2-1-9-4">Let <span class="process-math">\(a,b,c,d\)</span> be real numbers with <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> The function <span class="process-math">\(T\colon \extR\to \extR\)</span> given by <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> with exceptional values specified by <a href="" class="xref" data-knowl="./knowl/xref/linfractransformcneq0.html" title="Equation 2.4.1">(2.4.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/linfractransformceq0.html" title="Equation 2.4.2">(2.4.2)</a> for the cases <span class="process-math">\(c\neq
+0\text{,}\)</span> <span class="process-math">\(c=0\text{,}\)</span> respectively, is called a <dfn class="terminology">linear fractional transformation</dfn> on the extended reals. Given a linear fractional transformation <span class="process-math">\(T(x)=\frac{ax+b}{cx+d}\text{,}\)</span> let <span class="process-math">\(M(T)=\twotwo{a}{b}{c}{d}\text{.}\)</span> We will call <span class="process-math">\(M(T)\)</span> the <em class="emphasis">matrix of coefficients</em> of <span class="process-math">\(T\text{.}\)</span> Suppose that <span class="process-math">\(S\)</span> is another linear fractional transformation with <span class="process-math">\(M(S)=\twotwo{e}{f}{g}{h}\text{.}\)</span> Show that <span class="process-math">\(M(T\of
 S)=M(T)M(S)\)</span> and <span class="process-math">\(M(T^{-1})=(M(T))^{-1}\)</span> (the previous two parts of this problem show that <span class="process-math">\(T\)</span> is invertible).</div></li>
 <li id="linfractransexer-2-1-9-5"><div class="para" id="p-derived-linfractransexer-2-1-9-5">Let <span class="process-math">\(s\colon S^1\to \extR\)</span> be the stereographic projection function, given by<div class="displaymath process-math">
 \begin{equation*}
