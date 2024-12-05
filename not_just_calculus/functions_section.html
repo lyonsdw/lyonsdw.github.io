@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Not Just Calculus">
+<meta property="book:author" content="David W. Lyons">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sets_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="inj_and_surj_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
+      \DeclareMathOperator{\MOD}{\rm MOD}
+\DeclareMathOperator{\percent}{\%}      
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+      \DeclareMathOperator{\realify}{realify}
+      \DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\One}{\Large\mathbb 1}
+\DeclareMathOperator{\proj}{proj}      
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}            
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} 
+\newcommand{\E}{{\rm \bf E}} 
+\renewcommand{\H}{{\rm \bf H}} 
+\newcommand{\HU}{\H_{\U}} 
+\renewcommand{\S}{{\rm \bf S}} 
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+      #3 \amp #4 \end{array} \right]}
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_section.html#sets_section-12" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="functions_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions_section.html#functions_section-18" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="inj_and_surj_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Injectivity and Surjectivity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="inj_and_surj_section.html#inj_and_surj_section-13" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="partitions_and_counting_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Partitions and Counting</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="partitions_and_counting_section.html#partitions_and_counting_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="divisibility_and_primes_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Divisibility and Primes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility_and_primes_section.html#divisibility_and_primes_section-18" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-14" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cartesian_plane_chapter.html" class="internal"><span class="codenumber">2</span> <span class="title">The Plane</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-20" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-23" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="additional_exercises_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="additional_exercises_section.html#basicplanarconceptssubsec" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Some basic algebra and geometry in the plane</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#basicplanarconceptssubsec-2" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-3" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Roots of unity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-3-3" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="additional_exercises_section.html#linfracttranssubsect" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Linear fractional transformations of the extended real numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#linfracttranssubsect-3" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-5" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Integral points on the unit circle</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-5-8" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="not_just_calculus-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="not_just_calculus-6-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="not_just_calculus-6-2.html" class="internal"><span class="title">Notation</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="functions_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Functions</span>
+</h2>
+<div class="para logical" id="functions_section-2">
+<div class="para"> Given objects <span class="process-math">\(x,y\text{,}\)</span> an ordered list of the form <span class="process-math">\((x,y)\)</span> is called an <dfn class="terminology">ordered pair</dfn>. To say that the pair is ordered means that the pairs <span class="process-math">\((x,y)\)</span> and <span class="process-math">\((y,x)\)</span> are different if <span class="process-math">\(x\neq y\text{.}\)</span> The object <span class="process-math">\(x\)</span> is called the <dfn class="terminology">first entry</dfn> (or the <dfn class="terminology">left entry</dfn>) of the ordered pair <span class="process-math">\((x,y)\text{,}\)</span> and the object <span class="process-math">\(y\)</span> is called the <dfn class="terminology">second entry</dfn> (or the <dfn class="terminology">right entry</dfn>). The <dfn class="terminology">(Cartesian) product</dfn> of the set <span class="process-math">\(A\)</span> with the set <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A\times B\)</span> is the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\times B = \{(a,b)\colon a\in A \text{ and } b\in B\}
+\end{equation*}
+</div>
+<div class="para">of all ordered pairs of the form <span class="process-math">\((a,b)\text{,}\)</span> where <span class="process-math">\(a\)</span> is an element of set <span class="process-math">\(A\)</span> and <span class="process-math">\(b\)</span> is an element of set <span class="process-math">\(B\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="functions_section-3">A subset <span class="process-math">\(R\subseteq S\times T\)</span> of the product of sets <span class="process-math">\(S,T\)</span> is called a <dfn class="terminology">relation from <span class="process-math">\(S\)</span> to <span class="process-math">\(T\)</span></dfn>. A relation <span class="process-math">\(f\subseteq S\times T\)</span> is called a <dfn class="terminology">function from <span class="process-math">\(S\)</span> to <span class="process-math">\(T\)</span></dfn> if every element <span class="process-math">\(s\)</span> in <span class="process-math">\(S\)</span> is the left entry of exactly one element in <span class="process-math">\(f\text{.}\)</span> We write <span class="process-math">\(f\colon S\to T\)</span> to indicate that the relation <span class="process-math">\(f\subseteq S\times T\)</span> is a function. The set <span class="process-math">\(S\)</span> is called the <dfn class="terminology">domain</dfn>, the set <span class="process-math">\(T\)</span> is called the <dfn class="terminology">codomain</dfn>, and the set <span class="process-math">\(f\subseteq S\times T\)</span> is called the <dfn class="terminology">graph</dfn> of the function <span class="process-math">\(f\colon S\to T\text{.}\)</span> We write <span class="process-math">\(f(s)=t\)</span>  to indicate that <span class="process-math">\((s,t)\)</span> is an element of <span class="process-math">\(f\text{.}\)</span> If <span class="process-math">\(f(s)=t\text{,}\)</span> we say that <span class="process-math">\(t\)</span> is the <dfn class="terminology">image of <span class="process-math">\(s\)</span> under <span class="process-math">\(f\)</span></dfn> and that <span class="process-math">\(s\)</span> is a <dfn class="terminology">preimage of <span class="process-math">\(t\)</span> under <span class="process-math">\(f\)</span></dfn>. Informally, we may refer to a function a <em class="emphasis">process</em> that transforms <em class="emphasis">inputs</em> (elements of the domain set) to <em class="emphasis">outputs</em> in the codomain set. When the sets <span class="process-math">\(S,T\)</span> are understood or implied by context, it is common usage to refer to the function <span class="process-math">\(f\colon S\to T\)</span> simply as "the function <span class="process-math">\(f\)</span>".</div>
+<div class="para" id="functions_section-4">To express that a relation <span class="process-math">\(R\subseteq S\times T\)</span> consists of <em class="emphasis">three</em> parts, namely, the sets <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\text{,}\)</span> and <span class="process-math">\(T\text{,}\)</span> we say that a relation is a <em class="emphasis">triple</em> <span class="process-math">\((R,S,T)\text{.}\)</span> To say that relations <span class="process-math">\((R,S,T)\)</span> and <span class="process-math">\((R',S',T')\)</span> are equal means that <span class="process-math">\(R=R'\text{,}\)</span> <span class="process-math">\(S=S'\text{,}\)</span> and <span class="process-math">\(T=T'\text{.}\)</span> In particular, to say that two functions are equal means that they have not only the same graph, but also the same domain and the	same codomain.</div>
+<details id="writeoutrelsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="writeoutrelsexer-1-1"><ol class="decimal">
+<li id="writeoutrelsexer-1-1-1-1"><div class="para" id="p-derived-writeoutrelsexer-1-1-1-1">Write all 16 relations from <span class="process-math">\(S=\{a,b\}\)</span> to <span class="process-math">\(T=\{x,y\}\text{.}\)</span>
+</div></li>
+<li id="writeoutrelsexer-1-1-1-2"><div class="para" id="p-derived-writeoutrelsexer-1-1-1-2">Which of the relations in the previous part are functions?</div></li>
+</ol></div></article></details><details id="writeoutfunsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="writeoutfunsexer-1-1"><ol class="decimal">
+<li id="writeoutfunsexer-1-1-1-1"><div class="para" id="p-derived-writeoutfunsexer-1-1-1-1">Write the graphs of all possible functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{A,B\}\text{.}\)</span> Suggestion: The graph <span class="process-math">\(\{(x,f(x)),(y,f(y)),(z,f(x))\}\)</span> of a function <span class="process-math">\(f\colon \{x,y,z\}\to\{A,B\}\)</span> can be shown in an "input/output" table like this:<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|ccc}u\amp x\amp y\amp z\\
+\hline f(u) \amp f(x) \amp f(y) \amp f(z) \end{array}.
+\end{equation*}
+</div>If we agree on the ordering of the elements in the top row, then we can fully describe the graph of <span class="process-math">\(f\)</span> using only the second row. For example, <span class="process-math">\(f=[A,A,B]\)</span> denotes<details class="ptx-footnote" aria-live="polite" id="writeoutfunsexer-1-1-1-1-8"><summary class="ptx-footnote__number" title="Footnote 1.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="writeoutfunsexer-1-1-1-1-8">This shorthand notation for functions is not standard, but we will use it here for convenience. When writing mathematics, it is a good idea to use standard notation by default. But you are allowed to define your own special-purpose notation when you have a good reason.</div></details> the graph <span class="process-math">\(f=\{(x,A),(y,A),(z,B)\}\text{.}\)</span>
+</div></li>
+<li id="writeoutfunsexer-1-1-1-2"><div class="para" id="p-derived-writeoutfunsexer-1-1-1-2">Write the graphs of all possible functions from <span class="process-math">\(\{A,B\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{.}\)</span>
+</div></li>
+<li id="writeoutfunsexer-1-1-1-3"><div class="para" id="p-derived-writeoutfunsexer-1-1-1-3">Write the graphs of all possible functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{.}\)</span>
+</div></li>
+<li id="writeoutfunsexer-1-1-1-4"><div class="para" id="p-derived-writeoutfunsexer-1-1-1-4">Suppose that the graph of <span class="process-math">\(f\colon S\to T\)</span> is given by<div class="displaymath process-math">
+\begin{equation*}
+f=\{(u,1), (v,3), (w,1)\}
+\end{equation*}
+</div>Is it possible to identify the set <span class="process-math">\(S\text{?}\)</span> Is it possible to identify the set <span class="process-math">\(T\text{?}\)</span>
+</div></li>
+</ol></div></article></details><div class="para" id="functions_section-9">Given functions <span class="process-math">\(f\colon S\to T\)</span> and <span class="process-math">\(g\colon T\to U\text{,}\)</span> the function <span class="process-math">\(g\of f\colon S\to U\)</span>, called the <dfn class="terminology">composition</dfn> of <span class="process-math">\(g\)</span> with <span class="process-math">\(f\text{,}\)</span> is defined by <span class="process-math">\((g\of f)(s) = g(f(s))\)</span> for all <span class="process-math">\(s\in S\text{.}\)</span> This means that if <span class="process-math">\((s,t)\)</span> is an element of <span class="process-math">\(f\)</span> and <span class="process-math">\((t,u)\)</span> is an element of <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\((s,u)\)</span> is an element of <span class="process-math">\(g\of f\text{.}\)</span>
+</div>
+<div class="para" id="functions_section-10">Given a set <span class="process-math">\(S\text{,}\)</span> the function <span class="process-math">\(f\colon S\to S\)</span> defined by <span class="process-math">\(f(s)=s\)</span> for every <span class="process-math">\(s\in S\)</span> is called the <dfn class="terminology">identity function on <span class="process-math">\(S\)</span></dfn>. The identity function on <span class="process-math">\(S\)</span> is sometimes denoted <span class="process-math">\(I_S\)</span> , <span class="process-math">\(\Id_S\)</span>, or <span class="process-math">\(\One_S\)</span>, and the subscript <span class="process-math">\(S\)</span> may be omitted when the context is clear.</div>
+<div class="para logical" id="functions_section-11">
+<div class="para"> Given a relation <span class="process-math">\(R\subseteq S\times T\text{,}\)</span> the <dfn class="terminology">inverse relation to <span class="process-math">\(R\)</span></dfn>, denoted <span class="process-math">\(R^{-1}\text{,}\)</span> is the relation from <span class="process-math">\(T\)</span> to <span class="process-math">\(S\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bijectiveimpliestwosidedinverse.html">
+\begin{equation*}
+R^{-1}=\{(t,s)\colon (s,t)\in R\}\subseteq T\times S.
+\end{equation*}
+</div>
+<div class="para">In general, the inverse relation <span class="process-math">\(f^{-1}\subseteq T\times S\)</span> of a function <span class="process-math">\(f\colon S\to T\)</span> is <em class="emphasis">not</em> a function. To say that the inverse relation <span class="process-math">\(f^{-1}\subseteq T\times S\)</span> is a function, it must be true that every <span class="process-math">\(t\)</span> in <span class="process-math">\(T\)</span> is the left entry of exactly one element in <span class="process-math">\(f^{-1}\text{.}\)</span> This is the same as saying that every <span class="process-math">\(t\)</span> in <span class="process-math">\(T\)</span> is the <em class="emphasis">right</em> entry of exactly one element in <span class="process-math">\(f\text{,}\)</span> or, to say in another way, every element in the codomain of <span class="process-math">\(f\colon S\to T\)</span> has exactly one preimage under <span class="process-math">\(f\text{.}\)</span> In this case, <span class="process-math">\(f\colon S\to T\)</span> is said to be <dfn class="terminology">invertible</dfn> with <dfn class="terminology">inverse function</dfn> <span class="process-math">\(f^{-1}\colon T\to S\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/xref/bijectiveimpliestwosidedinverse.html" title="Proposition 1.2.3">Proposition 1.2.3</a> records an important basic property of the relationship between an invertible function and its inverse function.</div>
+</div>
+<article class="proposition theorem-like" id="bijectiveimpliestwosidedinverse"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="bijectiveimpliestwosidedinverse-1-1">Let <span class="process-math">\(f\colon
+S\to T\)</span> be a function, and suppose that the inverse relation <span class="process-math">\(f^{-1}\subseteq T\times S\)</span> is a function <span class="process-math">\(f^{-1}\colon T\to S\text{.}\)</span> Then we have <span class="process-math">\(f^{-1}\of f=\One_S\)</span> and <span class="process-math">\(f\of f^{-1}=\One_T\text{.}\)</span>
+</div></article><details id="bijectiveimpliestwosidedinverseproofexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para" id="bijectiveimpliestwosidedinverseproofexer-1">Fill in the blanks in the following proof of <a href="" class="xref" data-knowl="./knowl/xref/bijectiveimpliestwosidedinverse.html" title="Proposition 1.2.3">Proposition 1.2.3</a>. Let <span class="process-math">\(s\in S\text{,}\)</span> and let <span class="process-math">\(t=f(s)\)</span> so that we have <span class="process-math">\(\fillinmath{XXX}\in f\text{.}\)</span> By the definition of <span class="process-math">\(\fillinmath{XXX}\text{,}\)</span> we have that <span class="process-math">\((t,s)\in \fillinmath{XXX}
+\text{.}\)</span> By the definition of <span class="process-math">\(\fillinmath{XXX}\text{,}\)</span> we have <span class="process-math">\((s,s)  \in f^{-1}\of
+f\text{.}\)</span> This holds for all <span class="process-math">\(s\in S\text{,}\)</span> so we conclude that <span class="process-math">\(\fillinmath{XXX}\text{.}\)</span> Similarly, let <span class="process-math">\(t\in T\text{,}\)</span> and let <span class="process-math">\(s=f^{-1}(t)\text{,}\)</span> so that we have <span class="process-math">\(\fillinmath{XXX}\in f^{-1}\text{.}\)</span> It follows that <span class="process-math">\(\fillinmath{XXX}
+\in f\text{.}\)</span> By the definition of composition, we have <span class="process-math">\((t,t)\in \fillinmath{XXX}
+\text{.}\)</span> This holds for all <span class="process-math">\(t\in T\text{,}\)</span> so we conclude that <span class="process-math">\(f\of f^{-1}=\One_T\text{.}\)</span>
+</div></article></details><div class="para logical" id="functions_section-15">
+<div class="para">
+<em class="alert">Image sets and preimage sets.</em> Let <span class="process-math">\(f\colon S\to T\)</span> be a function, let <span class="process-math">\(U\subseteq S\)</span> be a subset of the domain <span class="process-math">\(S\)</span> and let <span class="process-math">\(V\subseteq T\)</span> be a subset of the codomain <span class="process-math">\(T\text{.}\)</span> The <dfn class="terminology">image of <span class="process-math">\(U\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f(U)\)</span>, is defined to be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(U)=\{f(s)\colon s\in U\}.
+\end{equation*}
+</div>
+<div class="para">The set <span class="process-math">\(f(S)\)</span> is called the <dfn class="terminology">image of the function <span class="process-math">\(f\)</span></dfn>.<details class="ptx-footnote" aria-live="polite" id="functions_section-15-15"><summary class="ptx-footnote__number" title="Footnote 1.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="functions_section-15-15"><div class="para" id="functions_section-15-15-1">The term "range" is used in many texts, sometimes to refer to the image of a function, and sometimes to refer to the codomain. Because the ambiguity, we do not use the term "range" in these notes.</div></div></details> The <dfn class="terminology">preimage of <span class="process-math">\(V\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f^{-1}(V)\)</span>, is defined to be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(V)=\{s\in S\colon f(s)\in V\}.
+\end{equation*}
+</div>
+<div class="para">Note that we do <em class="emphasis">not</em> assume that <span class="process-math">\(f^{-1}\)</span> is a function to make this definition. If <span class="process-math">\(V\)</span> contains only one point, say <span class="process-math">\(V=\{t_0\}\text{,}\)</span> it is customary to omit the set brackets and write <span class="process-math">\(f^{-1}(t_0)\)</span> instead of <span class="process-math">\(f^{-1}(\{t_0\})\text{.}\)</span>
+</div>
+</div>
+<details id="writeoutfunsexercontd" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para logical" id="writeoutfunsexercontd-1-1">
+<div class="para">This exercise refers to the collections of function in <a href="" class="xref" data-knowl="./knowl/xref/writeoutfunsexer.html" title="Checkpoint 1.2.2">Checkpoint 1.2.2</a>.</div>
+<ol class="decimal">
+<li id="writeoutfunsexercontd-1-1-2-1"><div class="para" id="p-derived-writeoutfunsexercontd-1-1-2-1">Of the collection of functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{A,B\}\text{,}\)</span> which ones are invertible? For each function, give the preimage of <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li id="writeoutfunsexercontd-1-1-2-2"><div class="para" id="p-derived-writeoutfunsexercontd-1-1-2-2">Of the collection of functions from  <span class="process-math">\(\{A,B\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{.}\)</span> Which are invertible? For each function, give the preimage of the set <span class="process-math">\(\{x,y\}\text{.}\)</span>
+</div></li>
+<li id="writeoutfunsexercontd-1-1-2-3"><div class="para" id="p-derived-writeoutfunsexercontd-1-1-2-3">Of the collection of functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{.}\)</span>  Which are invertible?</div></li>
+</ol>
+</div></article></details><section class="exercises" id="functions_section-18"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="fnsetalgfirstexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="fnsetalgfirstexer-1-1">
+<div class="para">Let <span class="process-math">\(f\colon S\to
+T\)</span> be a function that is not invertible. One of the following statements is always true, and the other statement is sometimes true, and sometimes false. Determine which is which. Demonstrate the "sometimes true" statement by giving two specific examples — one example for which the statement is true, and one example for which the statement is false. "Specific" means that you will write all of the sets <span class="process-math">\(S,T,A,B\)</span> or <span class="process-math">\(S,T,V,W\)</span> as lists of elements inside curly brackets, and write your functions as lists of ordered pairs in curly brackets.</div>
+<ol class="lower-alpha">
+<li id="fnsetalgfirstexer-1-1-5-1"><div class="para" id="p-derived-fnsetalgfirstexer-1-1-5-1">For any subsets <span class="process-math">\(A,B\)</span> of <span class="process-math">\(S\text{,}\)</span> we have <span class="process-math">\(f(A
+\cap B) = f(A) \cap f(B)\text{.}\)</span>
+</div></li>
+<li id="fnsetalgfirstexer-1-1-5-2"><div class="para" id="p-derived-fnsetalgfirstexer-1-1-5-2">For any subsets <span class="process-math">\(V,W\)</span> of <span class="process-math">\(T\text{,}\)</span> we have <span class="process-math">\(f^{-1}(V\cap W) = f^{-1}(V)\cap
+f^{-1}(W)\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="permsexer"><h4 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Permutations.</span>
+</h4>
+<div class="para logical" id="permsexer-2-1">
+<div class="para">A <dfn class="terminology">permutation</dfn> of a set <span class="process-math">\(X\)</span> is an invertible function from <span class="process-math">\(X\)</span> to itself.</div>
+<ol class="lower-alpha">
+<li id="permsexer-2-1-4-1"><div class="para" id="p-derived-permsexer-2-1-4-1">Using the notation explained in <a href="" class="xref" data-knowl="./knowl/xref/writeoutfunsexer.html" title="Checkpoint 1.2.2">Checkpoint 1.2.2</a>, write all 24 of the permutations of <span class="process-math">\(X=\{a,b,c,d\}\text{.}\)</span> (For example, write <span class="process-math">\([d,b,a,c]\)</span> to denote the permutation whose graph is <span class="process-math">\(\{(a,d),(b,b),(c,a),(d,c)\}\text{.}\)</span>)</div></li>
+<li id="permsexer-2-1-4-2"><div class="para" id="p-derived-permsexer-2-1-4-2">Let <span class="process-math">\(f=[d,b,a,c]\)</span> and <span class="process-math">\(g=[a,c,d,b]\)</span> be permutations of the set <span class="process-math">\(X=\{a,b,c,d\}\text{,}\)</span> using the notation from part a above. Find the permutations <span class="process-math">\(f\of
+g\text{,}\)</span> <span class="process-math">\(g\of f\text{,}\)</span> and <span class="process-math">\(f^{-1}\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="projectionfirstexer"><h4 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Projection.</span>
+</h4>
+<div class="para logical" id="projectionfirstexer-2-1">
+<div class="para">Let <span class="process-math">\(\R\)</span> denote the set of real numbers, and let <span class="process-math">\(\R^2\)</span> denote the set <span class="process-math">\(\R^2= \R\times \R\)</span> of ordered pairs of real numbers. Let <span class="process-math">\(X\subseteq \R^2\)</span> denote the line <span class="process-math">\(X=\{(x,1)\colon x\in \R\}\text{,}\)</span> and let <span class="process-math">\({O}\in \R^2\)</span> denote the point <span class="process-math">\({O}=(0,0)\text{.}\)</span> Given a point <span class="process-math">\(P\)</span> in <span class="process-math">\(\R^2\text{,}\)</span> let <span class="process-math">\(L\)</span> denote the line <span class="process-math">\(L=\overline{OP}\)</span> that passes through <span class="process-math">\(0\)</span> and <span class="process-math">\(P\text{.}\)</span> If <span class="process-math">\(L\)</span> and <span class="process-math">\(X\)</span> have a point of intersection, say at <span class="process-math">\(Q=(x_0,0)\text{,}\)</span> we will write <span class="process-math">\(\pi(P)\)</span> to denote the <span class="process-math">\(x\)</span>-coordinate <span class="process-math">\(x_0\)</span> of <span class="process-math">\(Q\text{.}\)</span> Let <span class="process-math">\(D\subseteq \R^2\)</span> the set of all points <span class="process-math">\(P\)</span> for which <span class="process-math">\(\pi(P)\)</span> exists, and let <span class="process-math">\(\pi\colon D\to \R\)</span> denote the function that sends <span class="process-math">\(P\in
+D\)</span> to <span class="process-math">\(\pi(P)\in \R\text{.}\)</span> The function <span class="process-math">\(\pi\)</span> is called a <em class="emphasis">1-point projection</em> from <span class="process-math">\(O\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li id="projectionfirstexer-2-1-30-1"><div class="para" id="p-derived-projectionfirstexer-2-1-30-1">Find <span class="process-math">\(D\text{.}\)</span>
+</div></li>
+<li id="projectionfirstexer-2-1-30-2"><div class="para" id="p-derived-projectionfirstexer-2-1-30-2">Find <span class="process-math">\(\pi(3,4)\text{,}\)</span> <span class="process-math">\(\pi(2,1/2)\text{,}\)</span> and <span class="process-math">\(\pi(6,1)\text{.}\)</span>
+</div></li>
+<li id="projectionfirstexer-2-1-30-3"><div class="para" id="p-derived-projectionfirstexer-2-1-30-3">Find <span class="process-math">\(\pi^{-1}(3)\text{.}\)</span>
+</div></li>
+<li id="projectionfirstexer-2-1-30-4"><div class="para" id="p-derived-projectionfirstexer-2-1-30-4">Let <span class="process-math">\(T\subseteq D\)</span> be the line segment with endpoints <span class="process-math">\((1,2)\)</span> and <span class="process-math">\((4,-1)\text{.}\)</span> Find <span class="process-math">\(\pi(T)\text{.}\)</span>
+</div></li>
+<li id="projectionfirstexer-2-1-30-5"><div class="para" id="p-derived-projectionfirstexer-2-1-30-5">Let <span class="process-math">\(U\subseteq \R\)</span> be the interval <span class="process-math">\(U=\{x\colon
+-2\leq x \leq 7\}\text{.}\)</span> Find <span class="process-math">\(\pi^{-1}(U)\text{.}\)</span>
+</div></li>
+</ol>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sets_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="inj_and_surj_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

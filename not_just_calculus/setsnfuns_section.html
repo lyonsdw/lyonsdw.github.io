@@ -110,6 +110,7 @@ window.MathJax = {
       \DeclareMathOperator{\MOD}{\rm MOD}
 \DeclareMathOperator{\percent}{\%}      
       \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\realify}{realify}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -131,6 +132,7 @@ window.MathJax = {
 \newcommand{\F}{\mathbb{F}} 
 \newcommand{\extF}{\hat{\F}} 
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}      
 \newcommand{\Proj}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
@@ -214,7 +216,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-19" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
@@ -297,7 +299,22 @@ A\text{.}\)</span> Conversely, if <span class="process-math">\(A\subseteq B\)</s
 </div></li>
 <li id="setnotationparseexer-1-1-1-4"><div class="para" id="p-derived-setnotationparseexer-1-1-1-4">Write out all of the subsets of <span class="process-math">\(\{x,y,z\}\text{.}\)</span>
 </div></li>
-</ol></div></article></details><div class="para logical" id="setsnfuns_section-9">
+</ol></div></article></details><article class="commentary" id="setsnfuns_section-8"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.1.1.</span></h3>
+<div class="para logical" id="setsnfuns_section-8-2"><ol class="decimal">
+<li id="setsnfuns_section-8-2-1-1"><div class="para" id="p-derived-setsnfuns_section-8-2-1-1">The expression on the right is correct. It says the object <span class="process-math">\(2\)</span> is an element of the set consisting of objects <span class="process-math">\(1,2,3\text{.}\)</span> The expression on the left is incorrect. The object <span class="process-math">\(2\)</span> is not a subset of the set consisting of objects <span class="process-math">\(1,2,3\text{.}\)</span> Instead it would be correct to say<div class="displaymath process-math">
+\begin{equation*}
+\{2\}\subseteq \{1,2,3\}.
+\end{equation*}
+</div>
+</div></li>
+<li id="setsnfuns_section-8-2-1-2"><div class="para" id="p-derived-setsnfuns_section-8-2-1-2">The expression on the left is correct. Since every element in the empty set is also an element of <span class="process-math">\(\{1,2,3\}\)</span> (we say this is "vacuously true"), the empty set is a subset of <span class="process-math">\(\{1,2,3\}\text{.}\)</span> The expression on the right is not correct. The set <span class="process-math">\(\{1,2,3\}\)</span> has exactly three members, and the empty set is not one of them.</div></li>
+<li id="setsnfuns_section-8-2-1-3"><div class="para" id="p-derived-setsnfuns_section-8-2-1-3">The last two things on the right are the same. Both symbols <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\{\}\)</span> denote a set with no members. The two sets on the left are not empty: they each contain one member. But the number 0 and the empty set are not the same thing, so two sets on the left are different.</div></li>
+<li id="setsnfuns_section-8-2-1-4"><div class="para" id="p-derived-setsnfuns_section-8-2-1-4"><div class="displaymath process-math">
+\begin{equation*}
+\emptyset,\{x\},\{y\},\{z\},\{x,y\},\{x,z\},\{y,z\},\{x,y,z\}
+\end{equation*}
+</div></div></li>
+</ol></div></article><div class="para logical" id="setsnfuns_section-9">
 <div class="para">The <dfn class="terminology">intersection</dfn> of sets <span class="process-math">\(A,B\text{,}\)</span> denoted <span class="process-math">\(A\cap B\)</span>, is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -330,7 +347,15 @@ B\text{,}\)</span> <span class="process-math">\(T=A\setminus B\text{,}\)</span> 
 <li id="setopspuzzleexer-1-1-6-2"><div class="para" id="p-derived-setopspuzzleexer-1-1-6-2">Give an example for which <span class="process-math">\(R,S,T,U\)</span> are exactly two different sets.</div></li>
 <li id="setopspuzzleexer-1-1-6-3"><div class="para" id="p-derived-setopspuzzleexer-1-1-6-3">Give an example for which <span class="process-math">\(R,S,T,U\)</span> are all the same set.</div></li>
 </ol>
-</div></article></details><div class="para logical" id="setsnfuns_section-12">
+</div></article></details><article class="commentary" id="setsnfuns_section-11"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.1.2.</span></h3>
+<div class="para logical" id="setsnfuns_section-11-2">
+<div class="para">(There are many correct answers. These are just a sample.)</div>
+<ol class="decimal">
+<li id="setsnfuns_section-11-2-1-1"><div class="para" id="p-derived-setsnfuns_section-11-2-1-1">Let <span class="process-math">\(A=\{x,y\}\)</span> and let <span class="process-math">\(B=\{y,z\}\text{.}\)</span> Then <span class="process-math">\(R=\{y\}\text{,}\)</span> <span class="process-math">\(S=\{x,y,z\}\text{,}\)</span> <span class="process-math">\(T=\{x\}\text{,}\)</span> and <span class="process-math">\(U=\{z\}\)</span> are all different.</div></li>
+<li id="setsnfuns_section-11-2-1-2"><div class="para" id="p-derived-setsnfuns_section-11-2-1-2">Let <span class="process-math">\(A=\{x,y\}\)</span> and let <span class="process-math">\(B=\{x,y\}\text{.}\)</span> Then <span class="process-math">\(R=S=\{x,y\}\)</span> and  <span class="process-math">\(T=U=\emptyset\)</span> are exactly two different sets.</div></li>
+<li id="setsnfuns_section-11-2-1-3"><div class="para" id="p-derived-setsnfuns_section-11-2-1-3">Let <span class="process-math">\(A\)</span> and let <span class="process-math">\(B\)</span> be empty. Then <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(T\text{,}\)</span> and <span class="process-math">\(U=\)</span> are all the same set (the empty set).</div></li>
+</ol>
+</div></article><div class="para logical" id="setsnfuns_section-12">
 <div class="para"> Given objects <span class="process-math">\(x,y\text{,}\)</span> an ordered list of the form <span class="process-math">\((x,y)\)</span> is called an <dfn class="terminology">ordered pair</dfn>. To say that the pair is ordered means that the pairs <span class="process-math">\((x,y)\)</span> and <span class="process-math">\((y,x)\)</span> are different if <span class="process-math">\(x\neq y\text{.}\)</span> The object <span class="process-math">\(x\)</span> is called the <dfn class="terminology">first entry</dfn> (or the <dfn class="terminology">left entry</dfn>) of the ordered pair <span class="process-math">\((x,y)\text{,}\)</span> and the object <span class="process-math">\(y\)</span> is called the <dfn class="terminology">second entry</dfn> (or the <dfn class="terminology">right entry</dfn>). The <dfn class="terminology">(Cartesian) product</dfn> of the set <span class="process-math">\(A\)</span> with the set <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A\times B\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -359,7 +384,28 @@ f=\{(u,1), (v,3), (w,1)\}
 </div></li>
 </ol></div>
 <div class="solutions"><details id="writeoutfunsexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Consider using this shortcut for writing a graph: For part 1, write <span class="process-math">\((f(x),f(y),f(z))\)</span> to represent the graph <span class="process-math">\(\{(x,f(x)),(y,f(y)),(z,f(x))\}\text{.}\)</span> For example, <span class="process-math">\((A,A,B)\)</span> represents the function <span class="process-math">\(\{(x,A),(y,A),(z,B)\}\text{.}\)</span>
-</div></details></div></article></details><div class="para" id="setsnfuns_section-17">Given functions <span class="process-math">\(f\colon S\to T\)</span> and <span class="process-math">\(g\colon T\to U\text{,}\)</span> the function <span class="process-math">\(g\of f\colon S\to U\)</span>, called the <dfn class="terminology">composition</dfn> of <span class="process-math">\(g\)</span> with <span class="process-math">\(f\text{,}\)</span> is defined by <span class="process-math">\((g\of f)(s) = g(f(s))\)</span> for all <span class="process-math">\(s\in S\text{.}\)</span> This means that if <span class="process-math">\((s,t)\)</span> is an element of <span class="process-math">\(f\)</span> and <span class="process-math">\((t,u)\)</span> is an element of <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\((s,u)\)</span> is an element of <span class="process-math">\(g\of f\text{.}\)</span>
+</div></details></div></article></details><article class="commentary" id="setsnfuns_section-16"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.1.3.</span></h3>
+<div class="para logical" id="setsnfuns_section-16-2"><ol class="decimal">
+<li id="setsnfuns_section-16-2-1-1"><div class="para" id="p-derived-setsnfuns_section-16-2-1-1">We will write functions in the following list form.<div class="displaymath process-math">
+\begin{equation*}
+(f(x),f(y),f(z))
+\end{equation*}
+</div>The collection of all 8 possible functions is<div class="displaymath process-math">
+\begin{equation*}
+(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B).
+\end{equation*}
+</div>
+</div></li>
+<li id="setsnfuns_section-16-2-1-2"><div class="para" id="p-derived-setsnfuns_section-16-2-1-2">We will write functions in list form <span class="process-math">\((f(A),f(B))\text{,}\)</span> as for the previous problem. The 9 possible functions are<div class="displaymath process-math">
+\begin{equation*}
+(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z).
+\end{equation*}
+</div>
+</div></li>
+<li id="setsnfuns_section-16-2-1-3"><div class="para" id="p-derived-setsnfuns_section-16-2-1-3">Using list form, as in the previous two problems, there are 27 functions.</div></li>
+<li id="setsnfuns_section-16-2-1-4"><div class="para" id="p-derived-setsnfuns_section-16-2-1-4">It must be that <span class="process-math">\(S=\{u,v,w\}\text{,}\)</span> because every element in <span class="process-math">\(S\)</span> must appear as the left entry in exactly one element of <span class="process-math">\(f\text{.}\)</span> It is not possible to say what <span class="process-math">\(T\)</span> is, except to say that <span class="process-math">\(T\)</span> must contain the set <span class="process-math">\(\{1,3\}\text{.}\)</span>
+</div></li>
+</ol></div></article><div class="para" id="setsnfuns_section-17">Given functions <span class="process-math">\(f\colon S\to T\)</span> and <span class="process-math">\(g\colon T\to U\text{,}\)</span> the function <span class="process-math">\(g\of f\colon S\to U\)</span>, called the <dfn class="terminology">composition</dfn> of <span class="process-math">\(g\)</span> with <span class="process-math">\(f\text{,}\)</span> is defined by <span class="process-math">\((g\of f)(s) = g(f(s))\)</span> for all <span class="process-math">\(s\in S\text{.}\)</span> This means that if <span class="process-math">\((s,t)\)</span> is an element of <span class="process-math">\(f\)</span> and <span class="process-math">\((t,u)\)</span> is an element of <span class="process-math">\(g\text{,}\)</span> then <span class="process-math">\((s,u)\)</span> is an element of <span class="process-math">\(g\of f\text{.}\)</span>
 </div>
 <div class="para" id="setsnfuns_section-18">Given a set <span class="process-math">\(S\text{,}\)</span> the function <span class="process-math">\(f\colon S\to S\)</span> defined by <span class="process-math">\(f(s)=s\)</span> for every <span class="process-math">\(s\in S\)</span> is called the <dfn class="terminology">identity function on <span class="process-math">\(S\)</span></dfn>. The identity function on <span class="process-math">\(S\)</span> is sometimes denoted <span class="process-math">\(I_S\)</span> , <span class="process-math">\(\Id_S\)</span>, or <span class="process-math">\(\One_S\)</span>, and the subscript <span class="process-math">\(S\)</span> may be omitted when the context is clear.</div>
 <div class="para logical" id="setsnfuns_section-19">
@@ -383,7 +429,17 @@ S\to T\)</span> be a function, and suppose that the inverse relation <span class
 f\text{.}\)</span> This holds for all <span class="process-math">\(s\in S\text{,}\)</span> so we conclude that <span class="process-math">\(\fillinmath{XXX}\text{.}\)</span> Similarly, let <span class="process-math">\(t\in T\text{,}\)</span> and let <span class="process-math">\(s=f^{-1}(t)\text{,}\)</span> so that we have <span class="process-math">\(\fillinmath{XXX}\in f^{-1}\text{.}\)</span> It follows that <span class="process-math">\(\fillinmath{XXX}
 \in f\text{.}\)</span> By the definition of composition, we have <span class="process-math">\((t,t)\in \fillinmath{XXX}
 \text{.}\)</span> This holds for all <span class="process-math">\(t\in T\text{,}\)</span> so we conclude that <span class="process-math">\(f\of f^{-1}=\One_T\text{.}\)</span>
-</div></article></details><div class="para logical" id="setsnfuns_section-23">
+</div></article></details><article class="commentary" id="setsnfuns_section-22"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.1.5.</span></h3>
+<div class="para logical" id="setsnfuns_section-22-2"><ol class="decimal">
+<li id="setsnfuns_section-22-2-1-1"><div class="para" id="p-derived-setsnfuns_section-22-2-1-1"><span class="process-math">\(\displaystyle (s,t)\)</span></div></li>
+<li id="setsnfuns_section-22-2-1-2"><div class="para" id="p-derived-setsnfuns_section-22-2-1-2">inverse relation</div></li>
+<li id="setsnfuns_section-22-2-1-3"><div class="para" id="p-derived-setsnfuns_section-22-2-1-3"><span class="process-math">\(\displaystyle f^{-1}\)</span></div></li>
+<li id="setsnfuns_section-22-2-1-4"><div class="para" id="p-derived-setsnfuns_section-22-2-1-4">composition</div></li>
+<li id="setsnfuns_section-22-2-1-5"><div class="para" id="p-derived-setsnfuns_section-22-2-1-5"><span class="process-math">\(\displaystyle f^{-1}\of f=\One_S\)</span></div></li>
+<li id="setsnfuns_section-22-2-1-6"><div class="para" id="p-derived-setsnfuns_section-22-2-1-6"><span class="process-math">\(\displaystyle (t,s)\)</span></div></li>
+<li id="setsnfuns_section-22-2-1-7"><div class="para" id="p-derived-setsnfuns_section-22-2-1-7"><span class="process-math">\(\displaystyle (s,t)\)</span></div></li>
+<li id="setsnfuns_section-22-2-1-8"><div class="para" id="p-derived-setsnfuns_section-22-2-1-8"><span class="process-math">\(\displaystyle f\circ f^{-1}\)</span></div></li>
+</ol></div></article><div class="para logical" id="setsnfuns_section-23">
 <div class="para">
 <em class="alert">Image sets and preimage sets.</em> Let <span class="process-math">\(f\colon S\to T\)</span> be a function, let <span class="process-math">\(U\subseteq S\)</span> be a subset of the domain <span class="process-math">\(S\)</span> and let <span class="process-math">\(V\subseteq T\)</span> be a subset of the codomain <span class="process-math">\(T\text{.}\)</span> The <dfn class="terminology">image of <span class="process-math">\(U\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f(U)\)</span>, is defined to be</div>
 <div class="displaymath process-math">
@@ -411,11 +467,55 @@ f^{-1}(V)=\{s\in S\colon f(s)\in V\}.
 </div></li>
 <li id="writeoutfunsexercontd-1-1-2-3"><div class="para" id="p-derived-writeoutfunsexercontd-1-1-2-3">Of the collection of functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{.}\)</span>  Which are invertible?</div></li>
 </ol>
-</div></article></details><section class="exercises" id="setsnfuns_section-26"><h3 class="heading hide-type">
+</div></article></details><article class="commentary" id="setsnfuns_section-25"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.1.6.</span></h3>
+<div class="para logical" id="setsnfuns_section-25-2"><ol class="decimal">
+<li id="setsnfuns_section-25-2-1-1"><div class="para" id="p-derived-setsnfuns_section-25-2-1-1">None of the 8 functions<div class="displaymath process-math">
+\begin{equation*}
+(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B)
+\end{equation*}
+</div>is invertible. The preimages of <span class="process-math">\(A\)</span> for the 8 functions are, in order:<div class="displaymath process-math">
+\begin{equation*}
+\{x,y,z\},\{x,y\},\{x,z\},\{x\},\{y,z\},\{y\},\{z\},\emptyset.
+\end{equation*}
+</div>
+</div></li>
+<li id="setsnfuns_section-25-2-1-2"><div class="para" id="p-derived-setsnfuns_section-25-2-1-2">None of the 9 functions<div class="displaymath process-math">
+\begin{equation*}
+(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z)
+\end{equation*}
+</div>The preimages of the set <span class="process-math">\(\{x,y\}\)</span> for the 9 functions are, in order:<div class="displaymath process-math">
+\begin{equation*}
+\{A,B\},\{A,B\},\{A\},\{A,B\},\{A,B\},\{A\},\{B\},\{B\},\emptyset.
+\end{equation*}
+</div>
+</div></li>
+<li id="setsnfuns_section-25-2-1-3"><div class="para" id="p-derived-setsnfuns_section-25-2-1-3">Of the 27 functions, 6 are invertible. Here are those 6.<div class="displaymath process-math">
+\begin{equation*}
+(x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><section class="exercises" id="setsnfuns_section-26"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="hypergraphegexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para" id="hypergraphegexer-1-1">A <em class="emphasis">hypergraph</em> is a pair of sets <span class="process-math">\((V,E)\text{,}\)</span> where <span class="process-math">\(V\)</span> is a set and <span class="process-math">\(E\)</span> is a set of nonempty subsets of <span class="process-math">\(V\text{.}\)</span> Write out all of the hypergraphs <span class="process-math">\((V,E)\)</span> for <span class="process-math">\(V=\{a,b\}\text{.}\)</span>
+</div></article><article class="commentary" id="setsnfuns_section-26-2"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.1.1.</span></h4>
+<div class="para logical" id="setsnfuns_section-26-2-2">
+<div class="para">Here are the 8 hypergraphs of the form <span class="process-math">\((\{a,b\},E)\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="setsnfuns_section-26-2-2-2">
+\begin{align*}
+E\amp = \emptyset\\
+E\amp = \{\{a\}\}\\
+E\amp = \{\{b\}\}\\
+E\amp = \{\{a,b\}\}\\
+E\amp = \{\{a\},\{b\}\}\\
+E\amp = \{\{a\},\{a,b\}\}\\
+E\amp = \{\{b\},\{a,b\}\}\\
+E\amp = \{\{a\},\{b\},\{a,b\}\}
+\end{align*}
+</div>
 </div></article><article class="exercise exercise-like" id="setalgfirstexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para logical" id="setalgfirstexer-1-1">
 <div class="para">Let <span class="process-math">\(f\colon S\to
@@ -428,6 +528,18 @@ T\)</span> be a function that is not invertible. One of the following statements
 f^{-1}(W)\text{.}\)</span>
 </div></li>
 </ol>
+</div></article><article class="commentary" id="setsnfuns_section-26-4"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.1.2.</span></h4>
+<div class="para" id="setsnfuns_section-26-4-2">Statement a is sometimes true and sometimes false. To see that statement a is sometimes true, consider the example <span class="process-math">\(S=T=A=B=\{\ast\}\text{,}\)</span> with <span class="process-math">\(f\)</span> given by <span class="process-math">\(f=\{(\ast,\ast)\}\text{.}\)</span> It is clear that <span class="process-math">\(f(A\cap B)=f(A)\cap f(B) = \{\ast\}\text{.}\)</span> To see that statement a is sometimes false, consider the example <span class="process-math">\(S=\{a,b\}\text{,}\)</span> <span class="process-math">\(T=\{\ast\}\text{,}\)</span> <span class="process-math">\(A=\{a\}\text{,}\)</span> <span class="process-math">\(B=\{b\}\text{,}\)</span> and <span class="process-math">\(f=\{(a,\ast),(b,\ast)\}\text{.}\)</span> Then we have <span class="process-math">\(f(A\cap B)=f(\emptyset)=\emptyset\text{,}\)</span> but <span class="process-math">\(f(A)\cap f(B) =
+\{\ast\}\neq \emptyset\text{.}\)</span>
+</div>
+<div class="para" id="setsnfuns_section-26-4-3">A direct proof that statement b is always true is not required; proof technique for equality of sets is not expected at this point. Nonetheless, here is a sample proof, in case there is interest, that attempts to rely only on the intuitive notion of "equivalent statements". <blockquote class="blockquote" id="setsnfuns_section-26-4-3-1">To say that <span class="process-math">\(x\)</span> is an element in the set <span class="process-math">\(f^{-1}(V\cap W)\)</span> means that <span class="process-math">\(f(x)\)</span> is in the set <span class="process-math">\(V\cap W\text{.}\)</span> This is the same as saying that <span class="process-math">\(f(x)\in V\)</span> and <span class="process-math">\(f(x)\in W\text{.}\)</span> This, in turn, is the same as saying that <span class="process-math">\(x\in f^{-1}(V)\)</span> and <span class="process-math">\(x\in
+f^{-1}(W)\text{,}\)</span> which is the same as saying <span class="process-math">\(x\in f^{-1}(V)\cap
+f^{-1}(W)\text{.}\)</span> This chain of equivalent statements shows that<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(V\cap W)=f^{-1}(V)\cap
+f^{-1}(W),
+\end{equation*}
+</div>as desired.</blockquote>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="basic_tools_chapter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="function_properties_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

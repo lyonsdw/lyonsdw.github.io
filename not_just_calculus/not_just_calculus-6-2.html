@@ -118,7 +118,8 @@ window.MathJax = {
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-\DeclareMathOperator{\img}{image}
+      \DeclareMathOperator{\realify}{realify}
+      \DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\One}{\Large\mathbb 1}
@@ -131,6 +132,7 @@ window.MathJax = {
 \newcommand{\F}{\mathbb{F}} 
 \newcommand{\extF}{\hat{\F}} 
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}            
 \newcommand{\Proj}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
@@ -167,39 +169,51 @@ window.MathJax = {
 <div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="setsnfuns_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets and Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setsnfuns_section.html#setsnfuns_section-26" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sets_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_section.html#sets_section-12" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="function_properties_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Properties of Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="function_properties_section.html#function_properties_section-15" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="functions_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions_section.html#functions_section-18" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Divisibility and Modular Arithmetic</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-27" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="inj_and_surj_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Injectivity and Surjectivity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="inj_and_surj_section.html#inj_and_surj_section-13" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Linear and Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="partitions_and_counting_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Partitions and Counting</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="partitions_and_counting_section.html#partitions_and_counting_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Problems</span></a></div>
+<div class="toc-title-box"><a href="divisibility_and_primes_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Divisibility and Primes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility_and_primes_section.html#divisibility_and_primes_section-18" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-14" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.5.3</span> <span class="title">More Sets and Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.8.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Pythagorean Triples</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -214,7 +228,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-19" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
@@ -265,24 +279,24 @@ window.MathJax = {
 <td>
 <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(A\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\not\in\)</span></td>
 <td>
 <span class="process-math">\(x\)</span> is not an element of <span class="process-math">\(A\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\{\ldots\}\)</span></td>
 <td>curly brackets</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-3.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-3.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\emptyset\)</span></td>
 <td>the empty set</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-5.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-5.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A
@@ -290,118 +304,124 @@ window.MathJax = {
 <td>
 <span class="process-math">\(A\)</span> is a subset of <span class="process-math">\(B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-6.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-6.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A \not\subseteq B\)</span></td>
 <td>
 <span class="process-math">\(A\)</span> is not a subset of <span class="process-math">\(B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-6.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-6.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A \cap B\)</span></td>
 <td>intersection of sets <span class="process-math">\(A,B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-9.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-9.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A \cup B\)</span></td>
 <td>union of sets <span class="process-math">\(A,B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-9.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-9.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A \setminus B\)</span></td>
 <td>difference of sets <span class="process-math">\(A,B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-9.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/sets_section-9.html" title="Paragraph">Paragraph</a></td>
+</tr>
+<tr>
+<td><span class="process-math">\({\mathcal P}(A)\)</span></td>
+<td>power set of a set <span class="process-math">\(A\)</span>
+</td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/powersetproblem.html" title="Exercise 1.1.2">Exercise 1.1.2</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\((x,y)\)</span></td>
 <td>ordered pair</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-12.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(A\times
 B\)</span></td>
 <td>the (Cartesian) product of sets <span class="process-math">\(A,B\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-12.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(f\colon S\to T\)</span></td>
 <td>a function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(S\)</span> and codomain <span class="process-math">\(T\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-13.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-3.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(f(s)=t\)</span></td>
 <td>
 <span class="process-math">\((s,t)\)</span> is an element of <span class="process-math">\(f\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-13.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-3.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(g\of f\)</span></td>
 <td>composition of functions <span class="process-math">\(g,f\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-17.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-9.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(I_S\)</span></td>
 <td>identity function on a set <span class="process-math">\(S\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-18.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-10.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\Id_S\)</span></td>
 <td>identity function on a set <span class="process-math">\(S\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-18.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-10.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\One_S\)</span></td>
 <td>identity function on a set <span class="process-math">\(S\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-18.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-10.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(f(U)\)</span></td>
 <td>the image of the set <span class="process-math">\(U\)</span> under the function <span class="process-math">\(f\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-23.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-15.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(f^{-1}(V)\)</span></td>
 <td>the preimage of the set <span class="process-math">\(V\)</span> under the function <span class="process-math">\(f\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/setsnfuns_section-23.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/functions_section-15.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(|S|\)</span></td>
 <td>size of a finite set <span class="process-math">\(S\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/function_properties_section-13.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/partitions_and_counting_section-7.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\Z\)</span></td>
 <td>the set of integers</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/divisibility_and_primes_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(a|b\)</span></td>
 <td>
 <span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/divisibility_and_primes_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(a\nmid b\)</span></td>
 <td>
 <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-2.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/divisibility_and_primes_section-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(a\equiv b \pmod{m}\)</span></td>
@@ -414,14 +434,14 @@ B\)</span></td>
 <td><span class="process-math">\(\Z_m\)</span></td>
 <td>the set <span class="process-math">\(\{0,1,\ldots,m-1\}\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-18.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-5.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(n \MOD m\)</span></td>
 <td>
 <span class="process-math">\(n\)</span> modulo <span class="process-math">\(m\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-18.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/mod_arith_section-5.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\Q\)</span></td>
@@ -429,16 +449,10 @@ B\)</span></td>
 <td><a href="" class="xref" data-knowl="./knowl/notation/basic_tools_problems_section-3-2.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
-<td><span class="process-math">\({\mathcal P}(A)\)</span></td>
-<td>power set of a set <span class="process-math">\(A\)</span>
-</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/powersetproblem.html" title="Exercise 1.5.3.1">Exercise 1.5.3.1</a></td>
-</tr>
-<tr>
 <td><span class="process-math">\(\chi_A\)</span></td>
 <td>characteristic function for the set <span class="process-math">\(A\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/charfunexer.html" title="Exercise 1.5.3.3">Exercise 1.5.3.3</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/charfunexer.html" title="Exercise 1.8.3.1">Exercise 1.8.3.1</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\({\mathbf e}_1,{\mathbf e}_2\)</span></td>
@@ -466,7 +480,7 @@ B\)</span></td>
 <tr>
 <td><span class="process-math">\(\det\)</span></td>
 <td>determinant of a matrix</td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/linear_transformations_section-16.html" title="Paragraph">Paragraph</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/linear_transformations_section-18.html" title="Paragraph">Paragraph</a></td>
 </tr>
 <tr>
 <td><span class="process-math">\(\re(z)\)</span></td>
@@ -514,7 +528,7 @@ B\)</span></td>
 <td><span class="process-math">\(\proj_{\mathbf{u}}\mathbf{v}\)</span></td>
 <td>orthogonal projection of vector <span class="process-math">\(\mathbf{v}\)</span> onto vector <span class="process-math">\(\mathbf{u}\)</span>
 </td>
-<td><a href="" class="xref" data-knowl="./knowl/notation/orthprojexer.html" title="Exercise 2.4.1.2: Orthogonal projections onto lines">Exercise 2.4.1.2</a></td>
+<td><a href="" class="xref" data-knowl="./knowl/notation/orthprojexer.html" title="Exercise 2.4.1.3: Orthogonal projections onto lines">Exercise 2.4.1.3</a></td>
 </tr>
 </table></section></div>
 <div class="ptx-content-footer">

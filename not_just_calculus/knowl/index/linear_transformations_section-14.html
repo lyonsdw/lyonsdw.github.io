@@ -13,22 +13,32 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">The identity function <span class="process-math">\(\Id\colon \R^2\to\R^2\)</span> is linear, and the matrix <span class="process-math">\(\twotwo{1}{0}{0}{1}\)</span> for the identity function is called the <dfn class="terminology">identity matrix</dfn>. It is easy to check that</div>
-<div class="displaymath process-math">
-\begin{equation}
-\twotwo{a}{b}{c}{d}\twotwo{d}{-b}{-c}{a} =
-\twotwo{d}{-b}{-c}{a}\twotwo{a}{b}{c}{d} =
-\twotwo{ad-bc}{0}{0}{ad-bc}.\tag{2.2.17}
-\end{equation}
-</div>
-<div class="para">It follows then, if <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> that a linear mapping <span class="process-math">\(L\)</span> with matrix <span class="process-math">\(\twotwo{a}{b}{c}{d}\)</span> is invertible, and that the matrix for <span class="process-math">\(L^{-1}\)</span> is <span class="process-math">\(\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{.}\)</span> This motivates the definition of the <dfn class="terminology">inverse</dfn>  of a matrix, denoted using the exponent <span class="process-math">\(-1\text{.}\)</span>
-</div>
-<div class="displaymath process-math">
+<div class="para">If the matrix for <span class="process-math">\(L\)</span> is <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> and the matrix for <span class="process-math">\(M\)</span> is <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{,}\)</span> then the matrices (the plural of <em class="emphasis">matrix</em> is <em class="emphasis">matrices</em>) for the linear maps <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are given by the following.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html">
 \begin{align}
-\twotwo{a}{b}{c}{d}^{-1}
-= \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)\tag{2.2.18}
+(\text{matrix for } \alpha L) \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.11}\\
+(\text{matrix for } L+M) \amp = \twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.12}\\
+(\text{matrix for } LM) \amp = \twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.13}
 \end{align}
 </div>
+<div class="para">These natural constructions motivate the following <dfn class="terminology">matrix operations</dfn>, called <dfn class="terminology">matrix scalar multiplication</dfn>, <dfn class="terminology">matrix addition</dfn>, and <dfn class="terminology">matrix multiplication</dfn>, respectively.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html">
+\begin{align}
+\alpha
+\twotwo{a}{b}{c}{d} \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.14}\\
+\twotwo{a}{b}{c}{d} + \twotwo{e}{f}{g}{h} \amp =
+\twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.15}\\
+\twotwo{a}{b}{c}{d}\twotwo{e}{f}{g}{h} \amp =
+\twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}\tag{2.2.16}
+\end{align}
+</div>
+<div class="para">Notice that every entry in the matrix on the right side of <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a> is a dot product. For example, the entry <span class="process-math">\(af+bh\)</span> in the upper right corner (top row, right column) of the matrix on the right side of <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a> is the dot product</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html">
+\begin{equation*}
+(a,b)\cdot (f,h) = af+bh
+\end{equation*}
+</div>
+<div class="para">of the top row of <span class="process-math">\(\twotwo{a}{b}{c}{d}\)</span> with the right column of <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{.}\)</span> The row and column matching pattern works for every entry in the product matrix.</div>
 </div>
 <span class="incontext"><a class="internal" href="linear_transformations_section.html#linear_transformations_section-14">in-context</a></span>
 </body>

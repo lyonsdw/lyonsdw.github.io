@@ -118,7 +118,8 @@ window.MathJax = {
 \DeclareMathOperator{\Rot}{Rot}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-\DeclareMathOperator{\img}{image}
+      \DeclareMathOperator{\realify}{realify}
+      \DeclareMathOperator{\img}{image}
 \DeclareMathOperator{\conj}{conj}
 \DeclareMathOperator{\Id}{Id}
 \DeclareMathOperator{\One}{\Large\mathbb 1}
@@ -131,6 +132,7 @@ window.MathJax = {
 \newcommand{\F}{\mathbb{F}} 
 \newcommand{\extF}{\hat{\F}} 
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}            
 \newcommand{\Proj}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
@@ -167,39 +169,51 @@ window.MathJax = {
 <div class="toc-title-box"><a href="basic_tools_chapter.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Tools</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="setsnfuns_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets and Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setsnfuns_section.html#setsnfuns_section-26" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sets_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_section.html#sets_section-12" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="function_properties_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Properties of Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="function_properties_section.html#function_properties_section-15" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="functions_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions_section.html#functions_section-18" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Divisibility and Modular Arithmetic</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-27" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="inj_and_surj_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Injectivity and Surjectivity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="inj_and_surj_section.html#inj_and_surj_section-13" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Linear and Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="partitions_and_counting_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Partitions and Counting</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="partitions_and_counting_section.html#partitions_and_counting_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Problems</span></a></div>
+<div class="toc-title-box"><a href="divisibility_and_primes_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Divisibility and Primes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility_and_primes_section.html#divisibility_and_primes_section-18" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-14" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.5.3</span> <span class="title">More Sets and Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">More Sets and Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4-2" class="internal"><span class="codenumber">1.8.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Pythagorean Triples</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-5-5" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -214,7 +228,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-19" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
@@ -325,9 +339,24 @@ a_1x+a_2y\\b_1x+b_2y\end{bmatrix}\tag{2.2.7}
 </div></li>
 </ol></div></article></details><details id="findthematexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
-</h3></summary><article class="exercise exercise-like"><div class="para" id="findthematexer-1-1">Find the matrix for each of the linear functions in <a href="" class="xref" data-knowl="./knowl/xref/isitlinearexer.html" title="Checkpoint 2.2.1">Checkpoint 2.2.1</a>.</div></article></details><div class="para logical" id="linear_transformations_section-10">
+</h3></summary><article class="exercise exercise-like"><div class="para" id="findthematexer-1-1">Find the matrix for each of the linear functions in <a href="" class="xref" data-knowl="./knowl/xref/isitlinearexer.html" title="Checkpoint 2.2.1">Checkpoint 2.2.1</a>.</div></article></details><div class="para" id="linear_transformations_section-10">Putting together <a href="" class="xref" data-knowl="./knowl/xref/linvalueexpandform.html" title="Equation 2.2.6">(2.2.6)</a> and part 1 of <a href="" class="xref" data-knowl="./knowl/xref/usemattoevalexer.html" title="Checkpoint 2.2.2">Checkpoint 2.2.2</a>, we have the following.</div>
+<div class="para" id="linear_transformations_section-11"><article class="proposition theorem-like" id="characterizatonlinmapsprop"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of linear maps.</span>
+</h3>
+<div class="para logical" id="characterizatonlinmapsprop-2-1">
+<div class="para">A map <span class="process-math">\(L\colon \R^2\to
+\R^2\)</span> is linear if and only if it has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(x,y)=(ax+by,cx+dy)
+\end{equation*}
+</div>
+<div class="para">for some real constants <span class="process-math">\(a,b,c,d\text{.}\)</span>
+</div>
+</div></article></div>
+<div class="para logical" id="linear_transformations_section-12">
 <div class="para">Given linear maps <span class="process-math">\(L,M\colon \R^2\to \R^2\)</span> and a real number <span class="process-math">\(\alpha\text{,}\)</span> we define linear maps <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\)</span> and <span class="process-math">\(LM\)</span> by</div>
-<div class="displaymath process-math" id="linear_transformations_section-10-6">
+<div class="displaymath process-math" id="linear_transformations_section-12-6">
 \begin{align}
 (\alpha L){\mathbf u} \amp = \alpha (L{\mathbf u})\tag{2.2.8}\\
 (L+M){\mathbf u} \amp = L{\mathbf u} + M{\mathbf u}\tag{2.2.9}\\
@@ -336,10 +365,10 @@ a_1x+a_2y\\b_1x+b_2y\end{bmatrix}\tag{2.2.7}
 </div>
 </div>
 <details id="verifymatopslinearexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
-</h3></summary><article class="exercise exercise-like"><div class="para" id="verifymatopslinearexer-1-1">Verify that <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are indeed linear maps, that is, that they satisfy properties <a href="" class="xref" data-knowl="./knowl/xref/linsumprop.html" title="Equation 2.2.1">(2.2.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/linscaleprop.html" title="Equation 2.2.2">(2.2.2)</a>.</div></article></details><div class="para logical" id="linear_transformations_section-13">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like"><div class="para" id="verifymatopslinearexer-1-1">Verify that <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are indeed linear maps, that is, that they satisfy properties <a href="" class="xref" data-knowl="./knowl/xref/linsumprop.html" title="Equation 2.2.1">(2.2.1)</a> and <a href="" class="xref" data-knowl="./knowl/xref/linscaleprop.html" title="Equation 2.2.2">(2.2.2)</a>.</div></article></details><div class="para logical" id="linear_transformations_section-15">
 <div class="para">If the matrix for <span class="process-math">\(L\)</span> is <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> and the matrix for <span class="process-math">\(M\)</span> is <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{,}\)</span> then the matrices (the plural of <em class="emphasis">matrix</em> is <em class="emphasis">matrices</em>) for the linear maps <span class="process-math">\(\alpha L\text{,}\)</span> <span class="process-math">\(L+M\text{,}\)</span> and <span class="process-math">\(LM\)</span> are given by the following.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-13-10">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-15-10">
 \begin{align}
 (\text{matrix for } \alpha L) \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.11}\\
 (\text{matrix for } L+M) \amp = \twotwo{a+e}{b+f}{c+g}{d+h}\tag{2.2.12}\\
@@ -347,7 +376,7 @@ a_1x+a_2y\\b_1x+b_2y\end{bmatrix}\tag{2.2.7}
 \end{align}
 </div>
 <div class="para">These natural constructions motivate the following <dfn class="terminology">matrix operations</dfn>, called <dfn class="terminology">matrix scalar multiplication</dfn>, <dfn class="terminology">matrix addition</dfn>, and <dfn class="terminology">matrix multiplication</dfn>, respectively.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-13-18">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matmultdef.html ./knowl/xref/matmultdef.html" id="linear_transformations_section-15-18">
 \begin{align}
 \alpha
 \twotwo{a}{b}{c}{d} \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}\tag{2.2.14}\\
@@ -366,13 +395,13 @@ a_1x+a_2y\\b_1x+b_2y\end{bmatrix}\tag{2.2.7}
 <div class="para">of the top row of <span class="process-math">\(\twotwo{a}{b}{c}{d}\)</span> with the right column of <span class="process-math">\(\twotwo{e}{f}{g}{h}\text{.}\)</span> The row and column matching pattern works for every entry in the product matrix.</div>
 </div>
 <details id="matopsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para logical" id="matopsexer-1-1"><ol class="decimal">
 <li id="matopsexer-1-1-1-1"><div class="para" id="p-derived-matopsexer-1-1-1-1">Choose random integer values between <span class="process-math">\(-5\)</span> and <span class="process-math">\(+5\)</span> for the constants <span class="process-math">\(\alpha,a,b,c,d,e,f,g,h,x,y\text{.}\)</span> Set <span class="process-math">\(S=\twotwo{a}{b}{c}{d}\text{,}\)</span> let <span class="process-math">\(T=\twotwo{e}{f}{g}{h}\text{,}\)</span> and let <span class="process-math">\(\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}\text{.}\)</span> Calculate <span class="process-math">\(\alpha
 S\text{,}\)</span> <span class="process-math">\(S+T\text{,}\)</span> <span class="process-math">\(ST\text{,}\)</span> <span class="process-math">\(TS\text{,}\)</span> <span class="process-math">\(S\mathbf{u}\text{,}\)</span> and <span class="process-math">\(T\mathbf{u}\text{.}\)</span> Check your answers with an online matrix algebra calculator. Repeat the exercise until you can do matrix multiplication quickly and accurately, without having to look at the formula <a href="" class="xref" data-knowl="./knowl/xref/matmultdef.html" title="Equation 2.2.16">(2.2.16)</a>.</div></li>
 <li id="matopsexer-1-1-1-2"><div class="para" id="p-derived-matopsexer-1-1-1-2">Find a set of values for <span class="process-math">\(a,b,c,d,e,f,g,h\)</span> for which <span class="process-math">\(ST\neq TS\text{.}\)</span> Find another set of values for <span class="process-math">\(a,b,c,d,e,f,g,h\text{,}\)</span> all of them nonzero, for which <span class="process-math">\(ST=TS\text{.}\)</span>
 </div></li>
-</ol></div></article></details><div class="para logical" id="linear_transformations_section-15">
+</ol></div></article></details><div class="para logical" id="linear_transformations_section-17">
 <div class="para">The identity function <span class="process-math">\(\Id\colon \R^2\to\R^2\)</span> is linear, and the matrix <span class="process-math">\(\twotwo{1}{0}{0}{1}\)</span> for the identity function is called the <dfn class="terminology">identity matrix</dfn>. It is easy to check that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="bothsideinvcomp">
 \begin{equation}
@@ -410,24 +439,24 @@ L\of M = M\of L = \Id \tag{2.2.21}
 \end{equation}
 </div>
 <div class="para">and we conclude that <span class="process-math">\(L,M\)</span> are inverses to one another. This shows that, if <span class="process-math">\([L]=\twotwo{a}{b}{c}{d}\)</span> and <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> then <span class="process-math">\([L^{-1}]=\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{,}\)</span> and motivates the following definition of the <dfn class="terminology">inverse</dfn>  of a matrix.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="linear_transformations_section-15-23">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html" id="linear_transformations_section-17-23">
 \begin{align}
 \twotwo{a}{b}{c}{d}^{-1}
 = \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)\tag{2.2.22}
 \end{align}
 </div>
 </div>
-<div class="para" id="linear_transformations_section-16">
+<div class="para" id="linear_transformations_section-18">
 <em class="alert">Comment:</em> The quantity <span class="process-math">\(ad-bc\)</span> is called the <dfn class="terminology">determinant</dfn> of the matrix <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> denoted <span class="process-math">\(\det\left(\twotwo{a}{b}{c}{d}\right)\)</span>.</div>
 <details id="idandinvcheckexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para logical" id="idandinvcheckexer-1-1"><ol class="decimal">
 <li id="idandinvcheckexer-1-1-1-1"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-1">Verify that the identity function <span class="process-math">\(\Id\colon \R^2\to \R^2\)</span> is linear, and that the matrix for the identity function is <span class="process-math">\(\twotwo{1}{0}{0}{1}\text{.}\)</span>
 </div></li>
 <li id="idandinvcheckexer-1-1-1-2"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-2">Verify each of the equalities in <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.17">(2.2.17)</a>.</div></li>
-<li id="idandinvcheckexer-1-1-1-3"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-3">Explain each of the connecting phrases "which is the same as", "it follows that", and "we conclude that" immediately following equations <a href="" class="xref" data-knowl="./knowl/xref/rewrite1.html" title="Equation 2.2.19">(2.2.19)</a>, <a href="" class="xref" data-knowl="./knowl/xref/rewrite2.html" title="Equation 2.2.20">(2.2.20)</a>, and <a href="" class="xref" data-knowl="./knowl/xref/rewrite3.html" title="Equation 2.2.21">(2.2.21)</a>. <details id="idandinvcheckexer-1-1-1-3-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">For the last statement, use <a href="" class="xref" data-knowl="./knowl/xref/invertibilityconditions.html" title="Corollary 1.2.4: Characterization of invertibility">Corollary 1.2.4</a>.</div></details>
+<li id="idandinvcheckexer-1-1-1-3"><div class="para" id="p-derived-idandinvcheckexer-1-1-1-3">Explain each of the connecting phrases "which is the same as", "it follows that", and "we conclude that" immediately following equations <a href="" class="xref" data-knowl="./knowl/xref/rewrite1.html" title="Equation 2.2.19">(2.2.19)</a>, <a href="" class="xref" data-knowl="./knowl/xref/rewrite2.html" title="Equation 2.2.20">(2.2.20)</a>, and <a href="" class="xref" data-knowl="./knowl/xref/rewrite3.html" title="Equation 2.2.21">(2.2.21)</a>. <details id="idandinvcheckexer-1-1-1-3-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">For the last statement, use <a href="" class="xref" data-knowl="./knowl/xref/invertibilityconditions.html" title="Corollary 1.3.4: Characterization of invertibility">Corollary 1.3.4</a>.</div></details>
 </div></li>
-</ol></div></article></details><section class="exercises" id="linear_transformations_section-19"><h3 class="heading hide-type">
+</ol></div></article></details><section class="exercises" id="linear_transformations_section-21"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="verifymatformatopsexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>

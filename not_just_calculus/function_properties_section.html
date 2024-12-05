@@ -110,6 +110,7 @@ window.MathJax = {
       \DeclareMathOperator{\MOD}{\rm MOD}
 \DeclareMathOperator{\percent}{\%}      
       \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\realify}{realify}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
 \DeclareMathOperator{\Perm}{Perm}
@@ -131,6 +132,7 @@ window.MathJax = {
 \newcommand{\F}{\mathbb{F}} 
 \newcommand{\extF}{\hat{\F}} 
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}      
 \newcommand{\Proj}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\M}{{\rm \bf M}} 
@@ -214,7 +216,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-19" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
@@ -264,7 +266,8 @@ g=\One_T\text{,}\)</span> the last expression simplifies to <span class="process
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="leftinvimpliesinjective-1-1">Let <span class="process-math">\(f\colon S\to T\)</span> be a function, and suppose that there exists a function <span class="process-math">\(g\colon T\to S\)</span> such that <span class="process-math">\(g\of f =
-\One_S\text{.}\)</span> Then <span class="process-math">\(f\)</span> is injective.</div></article><details id="leftinvimpliesinjective-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="leftinvimpliesinjective-2-1">Let <span class="process-math">\(t_0\)</span> be an element of <span class="process-math">\(T\text{,}\)</span> and let <span class="process-math">\(s_0=g(t_0)\text{.}\)</span> If <span class="process-math">\(s_1\)</span> is a preimage of <span class="process-math">\(t_0\)</span> under <span class="process-math">\(f\text{,}\)</span> then <span class="process-math">\(f(s_1)=t_0\text{.}\)</span> Applying <span class="process-math">\(g\)</span> to both sides of <span class="process-math">\(f(s_1)=t_0\text{,}\)</span> we have <span class="process-math">\(g(f(s_1))=g(t_0)\text{.}\)</span> On the right side, we have <span class="process-math">\(g(t_0)=s_0\text{.}\)</span> On the left, we have <span class="process-math">\(g(f(s_1))=(g\circ f)(s_1)=\One(s_1)=s_1\text{.}\)</span> Therefore we have <span class="process-math">\(s_1=s_0\text{.}\)</span> This shows that any preimage of <span class="process-math">\(t_0\)</span> under <span class="process-math">\(f\)</span> must be equal to <span class="process-math">\(s_0\text{.}\)</span> Because <span class="process-math">\(t_0\)</span> was an arbitrary choice, we conclude that every element in <span class="process-math">\(T\)</span> has at most one preimage under <span class="process-math">\(f\text{.}\)</span> Therefore <span class="process-math">\(f\)</span> is injective.</div></article></details><details id="onesidedinvproofsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
+\One_S\text{.}\)</span> Then <span class="process-math">\(f\)</span> is injective.</div></article><details id="leftinvimpliesinjective-2" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="leftinvimpliesinjective-2-1">Let <span class="process-math">\(t_0\)</span> be an element of <span class="process-math">\(T\text{,}\)</span> and let <span class="process-math">\(s_0=g(t_0)\text{.}\)</span> If <span class="process-math">\(s_1\)</span> is a preimage of <span class="process-math">\(t_0\)</span> under <span class="process-math">\(f\text{,}\)</span> then <span class="process-math">\(f(s_1)=t_0\text{.}\)</span> Applying <span class="process-math">\(g\)</span> to both sides of <span class="process-math">\(f(s_1)=t_0\text{,}\)</span> we have <span class="process-math">\(g(f(s_1))=g(t_0)\text{.}\)</span> On the right side, we have <span class="process-math">\(g(t_0)=s_0\text{.}\)</span> On the left, we have <span class="process-math">\(g(f(s_1))=(g\circ f)(s_1)=\One(s_1)=s_1\text{.}\)</span> Therefore we have <span class="process-math">\(s_1=s_0\text{.}\)</span> This shows that any preimage of <span class="process-math">\(t_0\)</span> under <span class="process-math">\(f\)</span> must be equal to <span class="process-math">\(s_0\text{.}\)</span> Because <span class="process-math">\(t_0\)</span> was an arbitrary choice, we conclude that every element in <span class="process-math">\(T\)</span> has at most one preimage under <span class="process-math">\(f\text{.}\)</span> Therefore <span class="process-math">\(f\)</span> is injective.</div></article></details><article class="commentary" id="function_properties_section-5"><h3 class="heading"><span class="title">Comment on Proposition 1.2.1 and Proposition 1.2.2 and the Axiom of Choice.</span></h3>
+<div class="para" id="function_properties_section-5-2">The converse of <a href="" class="xref" data-knowl="./knowl/xref/rightinvimpliessurjective.html" title="Proposition 1.2.1">Proposition 1.2.1</a> is equivalent to the Axiom of Choice. The Axiom of Choice is not used in the facts that appear in this section. By contrast, the converse of <a href="" class="xref" data-knowl="./knowl/xref/leftinvimpliesinjective.html" title="Proposition 1.2.2">Proposition 1.2.2</a> does not require the Axiom of Choice.</div></article><details id="onesidedinvproofsexer" class="exercise exercise-like born-hidden-knowl"><summary><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like"><div class="para logical" id="onesidedinvproofsexer-1-1">
 <div class="para">The proofs for the two previous propositions both begin with the sentence "Let <span class="process-math">\(t_0\)</span> be an element of <span class="process-math">\(T\text{,}\)</span> and let <span class="process-math">\(s_0=g(t_0)\text{.}\)</span>"</div>
@@ -274,7 +277,14 @@ g=\One_T\text{,}\)</span> the last expression simplifies to <span class="process
 </ol>
 <div class="para">"Explicit" means you must list all the elements of the sets <span class="process-math">\(S,T\)</span> and all the ordered pairs in the functions <span class="process-math">\(f,g\text{.}\)</span>
 </div>
-</div> <details id="onesidedinvproofsexer-1-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="onesidedinvproofsexer-1-2-1">The answer to both questions is indeed "no". Use small finite sets for your examples.</div></div></details></article></details><div class="para" id="function_properties_section-8">Putting together <a href="" class="xref" data-knowl="./knowl/xref/bijectiveimpliestwosidedinverse.html" title="Proposition 1.1.4">Proposition 1.1.4</a>, <a href="" class="xref" data-knowl="./knowl/xref/rightinvimpliessurjective.html" title="Proposition 1.2.1">Proposition 1.2.1</a>, and <a href="" class="xref" data-knowl="./knowl/xref/leftinvimpliesinjective.html" title="Proposition 1.2.2">Proposition 1.2.2</a> we have the following.</div>
+</div> <details id="onesidedinvproofsexer-1-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="onesidedinvproofsexer-1-2-1">The answer to both questions is indeed "no". Use small finite sets for your examples.</div></div></details></article></details><article class="commentary" id="function_properties_section-7"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.2.3.</span></h3>
+<div class="para logical" id="function_properties_section-7-2"><ol class="decimal">
+<li id="function_properties_section-7-2-1-1"><div class="para" id="p-derived-function_properties_section-7-2-1-1">No. It is possible that <span class="process-math">\(t_0\)</span> could have 0 preimages under <span class="process-math">\(f\text{.}\)</span> The second proof shows that <em class="emphasis">if</em> <span class="process-math">\(t_0\)</span> has a preimage, then in has only one preimage. Example: let <span class="process-math">\(S=\{a\}\text{,}\)</span> <span class="process-math">\(T=\{x,y\}\text{,}\)</span> <span class="process-math">\(f=\{(a,x)\}\text{,}\)</span> <span class="process-math">\(g=\{(x,a),(y,a)\}\text{,}\)</span> and <span class="process-math">\(t_0=y\text{.}\)</span> The hypotheses of the second proof are satisfied, that is, we have <span class="process-math">\(g\of f = \{(a,a)\}= \One_S\text{,}\)</span> but <span class="process-math">\(a\)</span> is not a preimage of <span class="process-math">\(t_0=y\text{.}\)</span>
+</div></li>
+<li id="function_properties_section-7-2-1-2"><div class="para" id="p-derived-function_properties_section-7-2-1-2">No. It is possible for <span class="process-math">\(t_0\)</span> to have many preimages under <span class="process-math">\(f\text{.}\)</span> The proof shows that <span class="process-math">\(t_0\)</span> has <em class="emphasis">at least one</em> preimage. Example: let <span class="process-math">\(S=\{a,b\}\text{,}\)</span> <span class="process-math">\(T=\{x\}\text{,}\)</span> <span class="process-math">\(f=\{(a,x),(b,x)\}\text{,}\)</span> <span class="process-math">\(g=\{(x,a)\}\text{,}\)</span> and <span class="process-math">\(t_0=x\text{.}\)</span> The hypotheses of the first proof are satisfied, that is, we have <span class="process-math">\(f\of g =
+\{(x,x)\}=\One_T\text{,}\)</span> but <span class="process-math">\(a=g(x)\)</span> is not the only preimage of <span class="process-math">\(t_0=x\text{.}\)</span>
+</div></li>
+</ol></div></article><div class="para" id="function_properties_section-8">Putting together <a href="" class="xref" data-knowl="./knowl/xref/bijectiveimpliestwosidedinverse.html" title="Proposition 1.1.4">Proposition 1.1.4</a>, <a href="" class="xref" data-knowl="./knowl/xref/rightinvimpliessurjective.html" title="Proposition 1.2.1">Proposition 1.2.1</a>, and <a href="" class="xref" data-knowl="./knowl/xref/leftinvimpliesinjective.html" title="Proposition 1.2.2">Proposition 1.2.2</a> we have the following.</div>
 <article class="corollary theorem-like" id="invertibilityconditions"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Characterization of invertibility.</span>
 </h3>
@@ -298,7 +308,27 @@ g=\One_T\text{,}\)</span> the last expression simplifies to <span class="process
 <li id="writeoutfunsexeragain-1-1-2-2"><div class="para" id="p-derived-writeoutfunsexeragain-1-1-2-2">Of all the functions from <span class="process-math">\(\{A,B\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{,}\)</span> which are injective? Which are surjective?</div></li>
 <li id="writeoutfunsexeragain-1-1-2-3"><div class="para" id="p-derived-writeoutfunsexeragain-1-1-2-3">Of all the functions from <span class="process-math">\(\{x,y,z\}\)</span> to <span class="process-math">\(\{x,y,z\}\text{,}\)</span> which are injective? Which are surjective?</div></li>
 </ol>
-</div></article></details><div class="para" id="function_properties_section-13">
+</div></article></details><article class="commentary" id="function_properties_section-12"><h3 class="heading"><span class="title">Instructor’s solution for Checkpoint 1.2.5.</span></h3>
+<div class="para logical" id="function_properties_section-12-2"><ol class="decimal">
+<li id="function_properties_section-12-2-1-1"><div class="para" id="p-derived-function_properties_section-12-2-1-1">Of the 8 functions<div class="displaymath process-math">
+\begin{equation*}
+(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B),
+\end{equation*}
+</div>none are injective because each function list contains two occurrences of at least one of the two output values. All of the functions are surjective except for <span class="process-math">\((A,A,A)\)</span> and <span class="process-math">\((B,B,B)\text{.}\)</span>
+</div></li>
+<li id="function_properties_section-12-2-1-2"><div class="para" id="p-derived-function_properties_section-12-2-1-2">Of the 9 functions<div class="displaymath process-math">
+\begin{equation*}
+(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z),
+\end{equation*}
+</div>6 are injective, that is, all but <span class="process-math">\((x,x), (y,y),(z,z)\text{.}\)</span> None are surjective because none of the lists contains all three letters <span class="process-math">\(x,y,z\text{.}\)</span>
+</div></li>
+<li id="function_properties_section-12-2-1-3"><div class="para" id="p-derived-function_properties_section-12-2-1-3">Of the 27 functions, 6 are injective, and the same 6 are surjective Here are those 6.<div class="displaymath process-math">
+\begin{equation*}
+(x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><div class="para" id="function_properties_section-13">
 <em class="alert">Some counting.</em> A set is called <dfn class="terminology">finite</dfn> if it contains a finite number of elements. A set that is not finite is called <dfn class="terminology">infinite</dfn>. The number of elements in a finite set <span class="process-math">\(S\)</span> is called the <dfn class="terminology">size</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(|S|\)</span>  . Formally, we say <span class="process-math">\(|S|=n\text{,}\)</span> where <span class="process-math">\(n\)</span> is a positive integer, if there exists a one-to-one correspondence <span class="process-math">\(\{1,2,\ldots,n\} \to S\text{.}\)</span>
 </div>
 <article class="proposition theorem-like" id="function_properties_section-14"><h3 class="heading">
@@ -321,8 +351,30 @@ g=\One_T\text{,}\)</span> the last expression simplifies to <span class="process
 <li id="surjinjegexer-1-1-1-1"><div class="para" id="p-derived-surjinjegexer-1-1-1-1">Give an example of a one-to-one function <span class="process-math">\(g\colon T\to T\)</span> that is not onto.</div></li>
 <li id="surjinjegexer-1-1-1-2"><div class="para" id="p-derived-surjinjegexer-1-1-1-2">Give an example of an onto function <span class="process-math">\(g\colon T\to T\)</span> that is not one-to-one.</div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="socksnshoesexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="socksnshoesexer-1-1">Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both invertible, and that the composition <span class="process-math">\(g\of f\)</span> is defined. Show that <span class="process-math">\(g\of f\)</span> is invertible and that <span class="process-math">\((g\of f)^{-1} = f^{-1} \of g^{-1}\text{.}\)</span> This fact is referred to as the "socks and shoes" property.</div></article><article class="exercise exercise-like" id="setsizecompareexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+</div></article><article class="commentary" id="function_properties_section-15-2"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.2.1.</span></h4>
+<div class="para logical" id="function_properties_section-15-2-2"><ol class="lower-alpha">
+<li id="function_properties_section-15-2-2-1-1"><div class="para" id="p-derived-function_properties_section-15-2-2-1-1">Let <span class="process-math">\(T=\{1,2,3,\ldots\}\)</span> and consider <span class="process-math">\(g\colon T \to T\)</span> defined by <span class="process-math">\(g(n)=n+1\text{.}\)</span> It is clear that <span class="process-math">\(g\)</span> is one-to-one  but not onto.</div></li>
+<li id="function_properties_section-15-2-2-1-2"><div class="para" id="p-derived-function_properties_section-15-2-2-1-2">Let <span class="process-math">\(T=\{0,1,2,3,\ldots\}\)</span> and let <span class="process-math">\(g\)</span> be given by <span class="process-math">\(g(n)=\lfloor n/2\rfloor\text{.}\)</span> It is clear that <span class="process-math">\(g\)</span> is onto but not one-to-one.</div></li>
+</ol></div></article><article class="exercise exercise-like" id="socksnshoesexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="socksnshoesexer-1-1">Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both invertible, and that the composition <span class="process-math">\(g\of f\)</span> is defined. Show that <span class="process-math">\(g\of f\)</span> is invertible and that <span class="process-math">\((g\of f)^{-1} = f^{-1} \of g^{-1}\text{.}\)</span> This fact is referred to as the "socks and shoes" property.</div></article><article class="commentary" id="function_properties_section-15-4"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.2.2.</span></h4>
+<div class="para logical" id="function_properties_section-15-4-2">
+<div class="para">Let <span class="process-math">\(h=f^{-1} \of g^{-1}\text{.}\)</span> Let <span class="process-math">\(s\)</span> be in the domain of <span class="process-math">\(f\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="function_properties_section-15-4-2-4">
+\begin{align*}
+(h \of (g\of f))(s)
+\amp= h(g(f(s)) \amp \amp \text{(definition of composition)}\\
+\amp= f^{-1}(g^{-1}(g(f(s)))) \amp \amp (\text{definition of } h)\\
+\amp= f^{-1}((g^{-1}\of g)(f(s))) \amp \amp (\text{(associativity of
+function composition})\\
+\amp= f^{-1}(f(s)) \amp \amp (g^{-1}\of g \text{ is the identity
+function})\\
+\amp= s\amp \amp (f^{-1}\of f \text{ is the identity
+function})                
+\end{align*}
+</div>
+<div class="para">This establishes that <span class="process-math">\(h\of (g\of f)\)</span> is the identity function on the domain of <span class="process-math">\(f\text{.}\)</span> A similar derivation shows that <span class="process-math">\((g\of f)\of h\)</span> is the identity function on the codomain of <span class="process-math">\(g\text{.}\)</span> We conclude that <span class="process-math">\((g\of f)\)</span> is invertible, with inverse <span class="process-math">\((g\of f)^{-1} = h = f^{-1}
+\of g^{-1}\text{,}\)</span> as desired.</div>
+</div></article><article class="exercise exercise-like" id="setsizecompareexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para logical" id="setsizecompareexer-1-1">
 <div class="para">Let <span class="process-math">\(f\colon S\to T\)</span> be a function, where <span class="process-math">\(S,T\)</span> are finite sets. Use <a href="" class="xref" data-knowl="./knowl/xref/domainsizepartition.html" title="Equation 1.2.1">(1.2.1)</a> to show the following.</div>
 <ol class="lower-alpha">
@@ -331,14 +383,44 @@ g=\One_T\text{,}\)</span> the last expression simplifies to <span class="process
 <li id="setsizecompareexer-1-1-4-2"><div class="para" id="p-derived-setsizecompareexer-1-1-4-2">Suppose that <span class="process-math">\(f\)</span> is surjective. Show that <span class="process-math">\(|S|\geq |T|\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="exercise exercise-like" id="intoisontofinite"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+</div></article><article class="commentary" id="function_properties_section-15-6"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.2.3.</span></h4>
+<div class="para logical" id="function_properties_section-15-6-2"><ol class="lower-alpha">
+<li id="function_properties_section-15-6-2-1-1"><div class="para" id="p-derived-function_properties_section-15-6-2-1-1">If <span class="process-math">\(f\)</span> is injective, we have <span class="process-math">\(|f^{-1}(t)|\)</span> is zero or one for all <span class="process-math">\(t\in
+T\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/domainsizepartition.html" title="Equation 1.2.1">(1.2.1)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/domainsizepartition.html">
+\begin{equation*}
+|S| = \sum_{t\in T} |f^{-1}(t)| \leq \sum_{t\in T} 1 = |T|.
+\end{equation*}
+</div>
+</div></li>
+<li id="function_properties_section-15-6-2-1-2"><div class="para" id="p-derived-function_properties_section-15-6-2-1-2">If <span class="process-math">\(f\)</span> is surjective, we have <span class="process-math">\(|f^{-1}(t)|\geq 1\)</span> for all <span class="process-math">\(t\in
+T\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/domainsizepartition.html" title="Equation 1.2.1">(1.2.1)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/domainsizepartition.html">
+\begin{equation*}
+|S| = \sum_{t\in T} |f^{-1}(t)| \geq \sum_{t\in T} 1 = |T|.
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><article class="exercise exercise-like" id="intoisontofinite"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="para logical" id="intoisontofinite-1-1">
 <div class="para">Let <span class="process-math">\(f\colon S\to T\)</span> be a function, where <span class="process-math">\(S,T\)</span> are finite sets.</div>
 <ol class="lower-alpha">
 <li id="intoisontofinite-1-1-3-1"><div class="para" id="p-derived-intoisontofinite-1-1-3-1">Show that if <span class="process-math">\(f\)</span> is injective and <span class="process-math">\(|S|=|T|\text{,}\)</span> then <span class="process-math">\(f\)</span> is surjective.</div></li>
 <li id="intoisontofinite-1-1-3-2"><div class="para" id="p-derived-intoisontofinite-1-1-3-2">Show that if <span class="process-math">\(f\)</span> is surjective and <span class="process-math">\(|S|=|T|\text{,}\)</span> then <span class="process-math">\(f\)</span> is injective.</div></li>
 </ol>
-</div></article></section></section></div>
+</div></article><article class="commentary" id="function_properties_section-15-8"><h4 class="heading"><span class="title">Instructor’s solution for Exercise 1.2.4.</span></h4>
+<div class="para logical" id="function_properties_section-15-8-2"><ol class="lower-alpha">
+<li id="function_properties_section-15-8-2-1-1"><div class="para" id="p-derived-function_properties_section-15-8-2-1-1">If <span class="process-math">\(f\)</span> is injective, we have <span class="process-math">\(|f^{-1}(t)|\)</span> is zero or one for all <span class="process-math">\(t\in
+T\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/domainsizepartition.html" title="Equation 1.2.1">(1.2.1)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/domainsizepartition.html">
+\begin{equation*}
+|S| = \sum_{t\in T} |f^{-1}(t)| \leq \sum_{t\in T} 1 = |T|.
+\end{equation*}
+</div>The only way that the sum <span class="process-math">\(\sum_{t\in T} |f^{-1}(t)|\)</span> can be equal to <span class="process-math">\(\sum_{t\in T} 1 \)</span> is for every preimage set <span class="process-math">\(f^{-1}(t)\)</span> to have exactly one element, never zero elements. This means that if <span class="process-math">\(|S|=|T|\text{,}\)</span> then <span class="process-math">\(f\)</span> must be surjective.</div></li>
+<li id="function_properties_section-15-8-2-1-2"><div class="para" id="p-derived-function_properties_section-15-8-2-1-2">If <span class="process-math">\(f\)</span> is surjective, we have <span class="process-math">\(|U_t|\geq 1\)</span> for all <span class="process-math">\(t\in
+T\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/xref/domainsizepartition.html" title="Equation 1.2.1">(1.2.1)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/domainsizepartition.html">
+\begin{equation*}
+|S| = \sum_{t\in T} |f^{-1}(t)| \geq \sum_{t\in T} 1 = |T|.
+\end{equation*}
+</div>The only way that the sum <span class="process-math">\(\sum_{t\in T} |f^{-1}(t)|\)</span> can be equal to <span class="process-math">\(\sum_{t\in T} 1 \)</span> is for every preimage set <span class="process-math">\(f^{-1}(t)\)</span> to have exactly one element, never more than one element. This means that if <span class="process-math">\(|S|=|T|\text{,}\)</span> then <span class="process-math">\(f\)</span> must be injective.</div></li>
+</ol></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="setsnfuns_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="mod_arith_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

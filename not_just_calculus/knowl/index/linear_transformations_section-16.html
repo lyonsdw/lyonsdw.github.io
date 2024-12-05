@@ -12,8 +12,51 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">
-<em class="alert">Comment:</em> The quantity <span class="process-math">\(ad-bc\)</span> is called the <dfn class="terminology">determinant</dfn> of the matrix <span class="process-math">\(\twotwo{a}{b}{c}{d}\text{,}\)</span> denoted <span class="process-math">\(\det\left(\twotwo{a}{b}{c}{d}\right)\)</span>.</div>
+<div class="para logical">
+<div class="para">The identity function <span class="process-math">\(\Id\colon \R^2\to\R^2\)</span> is linear, and the matrix <span class="process-math">\(\twotwo{1}{0}{0}{1}\)</span> for the identity function is called the <dfn class="terminology">identity matrix</dfn>. It is easy to check that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{equation}
+\twotwo{a}{b}{c}{d}\twotwo{d}{-b}{-c}{a} =
+\twotwo{d}{-b}{-c}{a}\twotwo{a}{b}{c}{d} =
+\twotwo{ad-bc}{0}{0}{ad-bc}.\tag{2.2.17}
+\end{equation}
+</div>
+<div class="para">If <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> then we can multiply <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomp.html" title="Equation 2.2.17">(2.2.17)</a> by <span class="process-math">\(\frac{1}{ad-bc}\)</span> to obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{equation}
+\twotwo{a}{b}{c}{d}\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}} =
+\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}}\twotwo{a}{b}{c}{d} =
+\twotwo{1}{0}{0}{1}.\tag{2.2.18}
+\end{equation}
+</div>
+<div class="para">If <span class="process-math">\(L,M\)</span> are linear mappings such that <span class="process-math">\([L] =
+\twotwo{a}{b}{c}{d}\)</span> and <span class="process-math">\([M] =
+\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{,}\)</span> then <a href="" class="xref" data-knowl="./knowl/xref/bothsideinvcomprescaled.html" title="Equation 2.2.18">(2.2.18)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{equation}
+[L][M] = [M][L] = [\Id] \tag{2.2.19}
+\end{equation}
+</div>
+<div class="para">which is the same as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{equation}
+[LM] = [ML] = [\Id]. \tag{2.2.20}
+\end{equation}
+</div>
+<div class="para">From this, it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{equation}
+L\of M = M\of L = \Id \tag{2.2.21}
+\end{equation}
+</div>
+<div class="para">and we conclude that <span class="process-math">\(L,M\)</span> are inverses to one another. This shows that, if <span class="process-math">\([L]=\twotwo{a}{b}{c}{d}\)</span> and <span class="process-math">\(ad-bc\neq 0\text{,}\)</span> then <span class="process-math">\([L^{-1}]=\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}\text{,}\)</span> and motivates the following definition of the <dfn class="terminology">inverse</dfn>  of a matrix.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/bothsideinvcomp.html ./knowl/xref/bothsideinvcomprescaled.html">
+\begin{align}
+\twotwo{a}{b}{c}{d}^{-1}
+= \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)\tag{2.2.22}
+\end{align}
+</div>
+</div>
 <span class="incontext"><a class="internal" href="linear_transformations_section.html#linear_transformations_section-16">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="proposition theorem-like"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.6.2</span><span class="period">.</span>
 </h3>
 <div class="para">Let <span class="process-math">\(m&gt;1\)</span> be a positive integer, and let <span class="process-math">\(a,b\)</span> be integers. Then <span class="process-math">\(a\equiv b \pmod{m}\)</span> if and only if <span class="process-math">\(a\MOD m = b \MOD m\text{.}\)</span>
 </div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
@@ -26,16 +26,16 @@ b \amp = q'm + r'
 <div class="para">for some integers <span class="process-math">\(q,q'\)</span> and <span class="process-math">\(r,r'\)</span> in the range <span class="process-math">\(0\leq r,r'\lt m\text{,}\)</span> so we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/aminusb.html ./knowl/xref/aminusb.html">
 \begin{equation}
-a-b = (q-q')m + (r-r')\tag{1.3.1}
+a-b = (q-q')m + (r-r')\tag{1.6.1}
 \end{equation}
 </div>
-<div class="para">with <span class="process-math">\(r-r'\)</span> in the range <span class="process-math">\(-(m-1)\leq r-r'\leq m-1\text{.}\)</span> To establish the "if" part of the statement in the Proposition, suppose that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This means that <span class="process-math">\(r=r'\text{,}\)</span> so <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.3.1">(1.3.1)</a> becomes <span class="process-math">\(a-b=(q - q')m\text{.}\)</span> Thus we have <span class="process-math">\(m|(a-b)\text{,}\)</span> so we conclude that <span class="process-math">\(a\equiv b \pmod{m}\text{.}\)</span> To establish the "only if" part of the statement in the Proposition, suppose that <span class="process-math">\(a\equiv b \pmod{m}\text{,}\)</span> so we have that <span class="process-math">\(a-b\)</span> is a multiple of <span class="process-math">\(m\text{,}\)</span> say <span class="process-math">\(a-b=km\text{.}\)</span> Then <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.3.1">(1.3.1)</a> becomes</div>
+<div class="para">with <span class="process-math">\(|r-r'|\leq m-1\text{.}\)</span> To establish the "if" part of the statement in the Proposition, suppose that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This means that <span class="process-math">\(r=r'\text{,}\)</span> so <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.6.1">(1.6.1)</a> becomes <span class="process-math">\(a-b=(q - q')m\text{.}\)</span> Thus we have <span class="process-math">\(m|(a-b)\text{,}\)</span> so we conclude that <span class="process-math">\(a\equiv b \pmod{m}\text{.}\)</span> To establish the "only if" part of the statement in the Proposition, suppose that <span class="process-math">\(a\equiv b \pmod{m}\text{,}\)</span> so we have that <span class="process-math">\(a-b\)</span> is a multiple of <span class="process-math">\(m\text{,}\)</span> say <span class="process-math">\(a-b=km\text{.}\)</span> Then <a href="" class="xref" data-knowl="./knowl/xref/aminusb.html" title="Equation 1.6.1">(1.6.1)</a> becomes</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/aminusb.html ./knowl/xref/aminusb.html">
 \begin{equation*}
 r-r' = m(k-q+q').
 \end{equation*}
 </div>
-<div class="para">Because <span class="process-math">\(-(m-1)\leq r-r'\leq m-1\text{,}\)</span> we conclude that <span class="process-math">\(k-q+q'\)</span> must be zero. Thus we have <span class="process-math">\(r=r'\text{,}\)</span> which means that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This completes the proof.</div>
+<div class="para">Because <span class="process-math">\(|r-r'|\leq m-1\text{,}\)</span> we conclude that <span class="process-math">\(k-q+q'\)</span> must be zero. Thus we have <span class="process-math">\(r=r'\text{,}\)</span> which means that <span class="process-math">\(a \MOD m = b\MOD m\text{.}\)</span> This completes the proof.</div>
 </div></article></details><span class="incontext"><a class="internal" href="mod_arith_section.html#modMODequivprop">in-context</a></span>
 </body>
 </html>
