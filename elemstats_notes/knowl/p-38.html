@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-28T22:33:21-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,33 +10,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Armed with the facts and formulas above, here is the skeleton of the basic prediction problem.</p>
-<ul class="disc">
-<li>Given: a description of a chance process</li>
-<li>Question: find the probability that a sample (with a sufficiently large number of draws) from a box model for the chance process produces a sum or average in a given range</li>
-</ul>
-<p class="continuation">The procedure to solve the problem has these steps:</p>
-<ul class="disc">
-<li>Construct the box model that matches the question. How many tickets are in the box? What numbers are on the tickets? How many draws?  Are the draws taken with or without replacement? Is the question about the sum or the average of the draws?</li>
-<li>
-<p>Perform calculations.</p>
-<ul class="circle">
-<li>ave(box)</li>
-<li>SD(box)</li>
-<li>expected(sum,ave,%1's) (using <a class="xref" data-knowl="./knowl/expectedsumformula.html" title="Equation 4.1">(4.1)</a>)</li>
-<li>SE(sum,ave,%1's) (using <a class="xref" data-knowl="./knowl/sesumformula.html" title="Equation 4.2">(4.2)</a> and also <a class="xref" data-knowl="./knowl/sewithcorrfact.html" title="Equation 4.3">(4.3)</a> if draws are without replacement)</li>
-</ul>
-</li>
-<li>Sketch a normal curve (justified by the Central Limit Theorem) and shade an area that answers the question. The center of the horizontal axis is expected(sum,ave,%1's)) (depending on the question). Find the \(z\) values needed for your shaded area.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">In a box model, an <dfn class="terminology">outcome</dfn> is a sequence of tickets obtained by random draws, either with or without replacement. For example, here are the 12 possible outcomes for 2 draws, without replacement, from the box <span class="process-math">\(\{A,K,Q,J\}\text{.}\)</span> (This is a box model for "two cards are dealt from a 4-card deck containing an ace, a king, a queen, and a jack".)</div>
+<div class="displaymath process-math">
 \begin{equation*}
-z =  \frac{\text{(sum,ave,%1's in the question)} - (\text{expected(sum,ave,%1's)})}{\text{SE(sum,ave,%1's)}}
+\text{set of all outcomes} = \{AK,AQ,AJ,KA,KQ,KJ,QA,QK,QJ,JA,JK,JQ\}
 \end{equation*}
 </div>
-</li>
-<li>Finally, use the normal distribution table to find the area that answers the given question.</li>
-</ul>
-<span class="incontext"><a href="sampling_section.html#p-38">in-context</a></span>
+<div class="para">In this notation, <span class="process-math">\(AK\)</span> means the ace is drawn first, and the king second, while <span class="process-math">\(KA\)</span> means the king is first and the ace is second.</div>
+</div>
+<span class="incontext"><a href="basic_probability.html#p-38" class="internal">in-context</a></span>
 </body>
 </html>

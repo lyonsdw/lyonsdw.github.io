@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-28T22:33:21-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,17 +10,51 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The box model has (1) 1 and (5) 0's.</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">In a box model, with random draws (taken with replacement), we have</div>
+<div class="displaymath process-math">
 \begin{align*}
-\AVE(\text{box}) \amp = 1/6\\
-\SD(\text{box}) \amp = \sqrt{\frac{1}{6}\cdot \frac{5}{6}} \approx .373\\
-\text{expected(sum) } \amp = 100\\
-\text{SE(sum) }\amp \approx 9.13
+\text{ expected(sum of draws) }\amp = (\text{average of the box}) \cdot (\text{number of draws})\\
+\text{ SE(sum of draws) } \amp  = (\text{SD of the box}) \sqrt{\text{number of draws}}.
 \end{align*}
 </div>
-<span class="incontext"><a href="sampling_section.html#p-50">in-context</a></span>
+<div class="para">The absolute error and the relative error are</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{ absolute error }\amp = (\text{actual sum of draws)} -(\text{expected(sum of draws)})\\
+\text{ relative error } \amp  = \frac{ \text{absolute error}
+}{\text{number of draws}}.
+\end{align*}
+</div>
+<div class="para">The absolute error is estimated by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{ absolute error }\approx
+\text{ SE(sum of draws) }=(\text{SD of the box}) \sqrt{\text{number of draws}}. 
+\end{equation*}
+</div>
+<div class="para">Dividing both sides of the last equation by <span class="process-math">\(\text{(number of
+draws)}\text{,}\)</span> we have<a href="" class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Footnote 1.8.1"><sup> 1 </sup></a>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{ relative error }\approx \frac{(\text{SD of the
+box})\sqrt{\text{number of draws}} }{\text{number of draws}} = \frac{(\text{SD of the
+box}) }{\sqrt{\text{number of draws}}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Summarizing, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{ absolute error }\amp \approx (\text{SD of the box}) \sqrt{\text{number of draws}}\\
+\text{ relative error }\amp \approx \frac{(\text{SD of the
+box}) }{\sqrt{\text{number of draws}}}.
+\end{align*}
+</div>
+<div class="para">From the last two equations, we can see clearly that the absolute error goes up and the relative error goes down as the number of draws increases.</div>
+</div>
+<span class="incontext"><a href="basic_sampling.html#p-50" class="internal">in-context</a></span>
 </body>
 </html>

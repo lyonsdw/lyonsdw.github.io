@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-08-28T22:33:21-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,15 +10,40 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Perform calculations.</p>
-<ul class="circle">
-<li>ave(box)</li>
-<li>SD(box)</li>
-<li>expected(sum,ave,%1's) (using <a class="xref" data-knowl="./knowl/expectedsumformula.html" title="Equation 4.1">(4.1)</a>)</li>
-<li>SE(sum,ave,%1's) (using <a class="xref" data-knowl="./knowl/sesumformula.html" title="Equation 4.2">(4.2)</a> and also <a class="xref" data-knowl="./knowl/sewithcorrfact.html" title="Equation 4.3">(4.3)</a> if draws are without replacement)</li>
-</ul>
-<span class="incontext"><a href="sampling_section.html#p-39">in-context</a></span>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">An <dfn class="terminology">event</dfn> is a set of outcomes. For example, the events "get a queen" and "get a king on the first draw" are</div>
+<div class="displaymath process-math">
+\begin{align*}
+\text{"get a queen"} \amp = \{QA,QK,QJ,AQ,KQ,JQ\}\\
+\text{"get a king on draw 1"} \amp = \{KA,KQ,KJ\}.
+\end{align*}
+</div>
+<div class="para">Another example is the event "get the hand ace-king". In a "hand", it does not matter what order the cards are dealt in, so we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{"get the hand ace-king"} = \{AK,KA\}.
+\end{equation*}
+</div>
+<div class="para">To say that two events <span class="process-math">\(E\)</span> and <span class="process-math">\(F\)</span> "both happen" can be rephrased "<span class="process-math">\(E \AND F\)</span>". To say that "at least one of the events <span class="process-math">\(E,F\)</span> happens" can be rephrased "<span class="process-math">\(E \OR F\)</span>". For example, for the events</div>
+<div class="displaymath process-math">
+\begin{gather*}
+E = \text{"get an ace"} = \{AK,AQ,AJ,KA,QA,JA\}\\
+F = \text{"get a king"} = \{KA,KQ,KJ,AK,QK,JK\}
+\end{gather*}
+</div>
+<div class="para">we have the following.</div>
+<div class="displaymath process-math">
+\begin{align*}
+E \AND F \amp = \text{"get a hand with an ace and a king"} = \{AK,KA\}\\
+E \OR F \amp = \text{"get a hand with an ace or a king (or
+both)"}\\
+\amp = \{AK,AQ,AJ,KA,QA,JA,KQ,KJ,QK,JK\}
+\end{align*}
+</div>
+<div class="para">[Comment for students who know about intersection and union of sets: the event "<span class="process-math">\(E \AND F\)</span> " is the same thing as the intersection of the sets <span class="process-math">\(E,F\text{,}\)</span> and the event "<span class="process-math">\(E \OR F\)</span> " is the same thing as the union of the sets <span class="process-math">\(E,F\text{.}\)</span>]</div>
+</div>
+<span class="incontext"><a href="basic_probability.html#p-39" class="internal">in-context</a></span>
 </body>
 </html>
