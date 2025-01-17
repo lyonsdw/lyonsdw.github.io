@@ -57,7 +57,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -69,25 +69,218 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.87cabc2515250052.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97f3ae4f7a71ba18.css">
+<style>
+#setnotationparseexer-1-1-1 { counter-set: setnotationparseexer-1-1-1 0; }
+#setnotationparseexer-1-1-1 > li::marker { content: ""counter(setnotationparseexer-1-1-1,decimal)"."; }
+#setnotationparseexer-1-1-1 > li { counter-increment: setnotationparseexer-1-1-1; }
+#setopspuzzleexer-1-1-6 { counter-set: setopspuzzleexer-1-1-6 0; }
+#setopspuzzleexer-1-1-6 > li::marker { content: ""counter(setopspuzzleexer-1-1-6,decimal)"."; }
+#setopspuzzleexer-1-1-6 > li { counter-increment: setopspuzzleexer-1-1-6; }
+#setalgfirstexer-1-1-3 { counter-set: setalgfirstexer-1-1-3 0; }
+#setalgfirstexer-1-1-3 > li::marker { content: "("counter(setalgfirstexer-1-1-3,lower-alpha)")"; }
+#setalgfirstexer-1-1-3 > li { counter-increment: setalgfirstexer-1-1-3; }
+#powersetproblem-1-1-8 { counter-set: powersetproblem-1-1-8 0; }
+#powersetproblem-1-1-8 > li::marker { content: "("counter(powersetproblem-1-1-8,lower-alpha)")"; }
+#powersetproblem-1-1-8 > li { counter-increment: powersetproblem-1-1-8; }
+#algofsetsexer-1-1-7-1 { counter-set: algofsetsexer-1-1-7-1 0; }
+#algofsetsexer-1-1-7-1 > li::marker { content: ""counter(algofsetsexer-1-1-7-1,lower-roman)""; }
+#algofsetsexer-1-1-7-1 > li { counter-increment: algofsetsexer-1-1-7-1; }
+#algofsetsexer-1-1-8 { counter-set: algofsetsexer-1-1-8 0; }
+#algofsetsexer-1-1-8 > li::marker { content: "("counter(algofsetsexer-1-1-8,lower-alpha)")"; }
+#algofsetsexer-1-1-8 > li { counter-increment: algofsetsexer-1-1-8; }
+#writeoutrelsexer-1-1-1 { counter-set: writeoutrelsexer-1-1-1 0; }
+#writeoutrelsexer-1-1-1 > li::marker { content: ""counter(writeoutrelsexer-1-1-1,decimal)"."; }
+#writeoutrelsexer-1-1-1 > li { counter-increment: writeoutrelsexer-1-1-1; }
+#writeoutfunsexer-1-1-1 { counter-set: writeoutfunsexer-1-1-1 0; }
+#writeoutfunsexer-1-1-1 > li::marker { content: ""counter(writeoutfunsexer-1-1-1,decimal)"."; }
+#writeoutfunsexer-1-1-1 > li { counter-increment: writeoutfunsexer-1-1-1; }
+#writeoutfunsexercontd-1-1-2 { counter-set: writeoutfunsexercontd-1-1-2 0; }
+#writeoutfunsexercontd-1-1-2 > li::marker { content: ""counter(writeoutfunsexercontd-1-1-2,decimal)"."; }
+#writeoutfunsexercontd-1-1-2 > li { counter-increment: writeoutfunsexercontd-1-1-2; }
+#fnsetalgfirstexer-1-1-5 { counter-set: fnsetalgfirstexer-1-1-5 0; }
+#fnsetalgfirstexer-1-1-5 > li::marker { content: "("counter(fnsetalgfirstexer-1-1-5,lower-alpha)")"; }
+#fnsetalgfirstexer-1-1-5 > li { counter-increment: fnsetalgfirstexer-1-1-5; }
+#permsexer-2-1-4 { counter-set: permsexer-2-1-4 0; }
+#permsexer-2-1-4 > li::marker { content: "("counter(permsexer-2-1-4,lower-alpha)")"; }
+#permsexer-2-1-4 > li { counter-increment: permsexer-2-1-4; }
+#projectionfirstexer-2-1-30 { counter-set: projectionfirstexer-2-1-30 0; }
+#projectionfirstexer-2-1-30 > li::marker { content: "("counter(projectionfirstexer-2-1-30,lower-alpha)")"; }
+#projectionfirstexer-2-1-30 > li { counter-increment: projectionfirstexer-2-1-30; }
+#onesidedinvproofsexer-1-1-4 { counter-set: onesidedinvproofsexer-1-1-4 0; }
+#onesidedinvproofsexer-1-1-4 > li::marker { content: ""counter(onesidedinvproofsexer-1-1-4,decimal)"."; }
+#onesidedinvproofsexer-1-1-4 > li { counter-increment: onesidedinvproofsexer-1-1-4; }
+#invertibilityconditions-2-1-2 { counter-set: invertibilityconditions-2-1-2 0; }
+#invertibilityconditions-2-1-2 > li::marker { content: ""counter(invertibilityconditions-2-1-2,decimal)"."; }
+#invertibilityconditions-2-1-2 > li { counter-increment: invertibilityconditions-2-1-2; }
+#writeoutfunsexeragain-1-1-2 { counter-set: writeoutfunsexeragain-1-1-2 0; }
+#writeoutfunsexeragain-1-1-2 > li::marker { content: ""counter(writeoutfunsexeragain-1-1-2,decimal)"."; }
+#writeoutfunsexeragain-1-1-2 > li { counter-increment: writeoutfunsexeragain-1-1-2; }
+#surjinjegexer-1-1-3 { counter-set: surjinjegexer-1-1-3 0; }
+#surjinjegexer-1-1-3 > li::marker { content: "("counter(surjinjegexer-1-1-3,lower-alpha)")"; }
+#surjinjegexer-1-1-3 > li { counter-increment: surjinjegexer-1-1-3; }
+#partitionexer-1-1-2 { counter-set: partitionexer-1-1-2 0; }
+#partitionexer-1-1-2 > li::marker { content: ""counter(partitionexer-1-1-2,decimal)"."; }
+#partitionexer-1-1-2 > li { counter-increment: partitionexer-1-1-2; }
+#partitionfromfunexer-1-1-4 { counter-set: partitionfromfunexer-1-1-4 0; }
+#partitionfromfunexer-1-1-4 > li::marker { content: ""counter(partitionfromfunexer-1-1-4,decimal)"."; }
+#partitionfromfunexer-1-1-4 > li { counter-increment: partitionfromfunexer-1-1-4; }
+#partitionfromfunegexer-1-1-9 { counter-set: partitionfromfunegexer-1-1-9 0; }
+#partitionfromfunegexer-1-1-9 > li::marker { content: "("counter(partitionfromfunegexer-1-1-9,lower-alpha)")"; }
+#partitionfromfunegexer-1-1-9 > li { counter-increment: partitionfromfunegexer-1-1-9; }
+#setsizecompareexer-1-1-4 { counter-set: setsizecompareexer-1-1-4 0; }
+#setsizecompareexer-1-1-4 > li::marker { content: "("counter(setsizecompareexer-1-1-4,lower-alpha)")"; }
+#setsizecompareexer-1-1-4 > li { counter-increment: setsizecompareexer-1-1-4; }
+#intoisontofinite-1-1-3 { counter-set: intoisontofinite-1-1-3 0; }
+#intoisontofinite-1-1-3 > li::marker { content: "("counter(intoisontofinite-1-1-3,lower-alpha)")"; }
+#intoisontofinite-1-1-3 > li { counter-increment: intoisontofinite-1-1-3; }
+#divisibility_and_primes_section-9-3 { counter-set: divisibility_and_primes_section-9-3 0; }
+#divisibility_and_primes_section-9-3 > li::marker { content: ""counter(divisibility_and_primes_section-9-3,decimal)"."; }
+#divisibility_and_primes_section-9-3 > li { counter-increment: divisibility_and_primes_section-9-3; }
+#consolidatingprimefactorsexer-2-1-3 { counter-set: consolidatingprimefactorsexer-2-1-3 0; }
+#consolidatingprimefactorsexer-2-1-3 > li::marker { content: "("counter(consolidatingprimefactorsexer-2-1-3,lower-alpha)")"; }
+#consolidatingprimefactorsexer-2-1-3 > li { counter-increment: consolidatingprimefactorsexer-2-1-3; }
+#zmegexer-1-1-3 { counter-set: zmegexer-1-1-3 0; }
+#zmegexer-1-1-3 > li::marker { content: ""counter(zmegexer-1-1-3,decimal)"."; }
+#zmegexer-1-1-3 > li { counter-increment: zmegexer-1-1-3; }
+#equivmodmisequivrel-1-1-2 { counter-set: equivmodmisequivrel-1-1-2 0; }
+#equivmodmisequivrel-1-1-2 > li::marker { content: "("counter(equivmodmisequivrel-1-1-2,lower-alpha)")"; }
+#equivmodmisequivrel-1-1-2 > li { counter-increment: equivmodmisequivrel-1-1-2; }
+#modopswelldef-1-1-4 { counter-set: modopswelldef-1-1-4 0; }
+#modopswelldef-1-1-4 > li::marker { content: "("counter(modopswelldef-1-1-4,lower-alpha)")"; }
+#modopswelldef-1-1-4 > li { counter-increment: modopswelldef-1-1-4; }
+#missingtermslinexpexer-1-1-1 { counter-set: missingtermslinexpexer-1-1-1 0; }
+#missingtermslinexpexer-1-1-1 > li::marker { content: ""counter(missingtermslinexpexer-1-1-1,decimal)"."; }
+#missingtermslinexpexer-1-1-1 > li { counter-increment: missingtermslinexpexer-1-1-1; }
+#linexpsumexer-1-1-1 { counter-set: linexpsumexer-1-1-1 0; }
+#linexpsumexer-1-1-1 > li::marker { content: ""counter(linexpsumexer-1-1-1,decimal)"."; }
+#linexpsumexer-1-1-1 > li { counter-increment: linexpsumexer-1-1-1; }
+#hotelbilldoubleexer-1-1-2 { counter-set: hotelbilldoubleexer-1-1-2 0; }
+#hotelbilldoubleexer-1-1-2 > li::marker { content: "("counter(hotelbilldoubleexer-1-1-2,lower-alpha)")"; }
+#hotelbilldoubleexer-1-1-2 > li { counter-increment: hotelbilldoubleexer-1-1-2; }
+#investmentvalueexer-1-1-8 { counter-set: investmentvalueexer-1-1-8 0; }
+#investmentvalueexer-1-1-8 > li::marker { content: "("counter(investmentvalueexer-1-1-8,lower-alpha)")"; }
+#investmentvalueexer-1-1-8 > li { counter-increment: investmentvalueexer-1-1-8; }
+#rabbitturtleraceexer-2-2-1 { counter-set: rabbitturtleraceexer-2-2-1 0; }
+#rabbitturtleraceexer-2-2-1 > li::marker { content: "("counter(rabbitturtleraceexer-2-2-1,lower-alpha)")"; }
+#rabbitturtleraceexer-2-2-1 > li { counter-increment: rabbitturtleraceexer-2-2-1; }
+#dribpuzzleexer-1-2-1 { counter-set: dribpuzzleexer-1-2-1 0; }
+#dribpuzzleexer-1-2-1 > li::marker { content: "("counter(dribpuzzleexer-1-2-1,lower-alpha)")"; }
+#dribpuzzleexer-1-2-1 > li { counter-increment: dribpuzzleexer-1-2-1; }
+#snowflakecurveexer-2-2-3 { counter-set: snowflakecurveexer-2-2-3 0; }
+#snowflakecurveexer-2-2-3 > li::marker { content: "("counter(snowflakecurveexer-2-2-3,lower-alpha)")"; }
+#snowflakecurveexer-2-2-3 > li { counter-increment: snowflakecurveexer-2-2-3; }
+#parseratsdenseexer-1-1-1 { counter-set: parseratsdenseexer-1-1-1 0; }
+#parseratsdenseexer-1-1-1 > li::marker { content: ""counter(parseratsdenseexer-1-1-1,decimal)"."; }
+#parseratsdenseexer-1-1-1 > li { counter-increment: parseratsdenseexer-1-1-1; }
+#walkarounds1exer-1-1-4 { counter-set: walkarounds1exer-1-1-4 0; }
+#walkarounds1exer-1-1-4 > li::marker { content: "("counter(walkarounds1exer-1-1-4,lower-alpha)")"; }
+#walkarounds1exer-1-1-4 > li { counter-increment: walkarounds1exer-1-1-4; }
+#termdecexer-1-1-1 { counter-set: termdecexer-1-1-1 0; }
+#termdecexer-1-1-1 > li::marker { content: "("counter(termdecexer-1-1-1,lower-alpha)")"; }
+#termdecexer-1-1-1 > li { counter-increment: termdecexer-1-1-1; }
+#charfunexer-1-1-14 { counter-set: charfunexer-1-1-14 0; }
+#charfunexer-1-1-14 > li::marker { content: "("counter(charfunexer-1-1-14,lower-alpha)")"; }
+#charfunexer-1-1-14 > li { counter-increment: charfunexer-1-1-14; }
+#distdemorganlawsexer-1-1-7 { counter-set: distdemorganlawsexer-1-1-7 0; }
+#distdemorganlawsexer-1-1-7 > li::marker { content: "("counter(distdemorganlawsexer-1-1-7,lower-alpha)")"; }
+#distdemorganlawsexer-1-1-7 > li { counter-increment: distdemorganlawsexer-1-1-7; }
+#equivrelnexer-1-1-6-1 { counter-set: equivrelnexer-1-1-6-1 0; }
+#equivrelnexer-1-1-6-1 > li::marker { content: ""counter(equivrelnexer-1-1-6-1,lower-roman)""; }
+#equivrelnexer-1-1-6-1 > li { counter-increment: equivrelnexer-1-1-6-1; }
+#equivrelnexer-1-1-13 { counter-set: equivrelnexer-1-1-13 0; }
+#equivrelnexer-1-1-13 > li::marker { content: "("counter(equivrelnexer-1-1-13,lower-alpha)")"; }
+#equivrelnexer-1-1-13 > li { counter-increment: equivrelnexer-1-1-13; }
+#normpropnonpropexer-1-1-1 { counter-set: normpropnonpropexer-1-1-1 0; }
+#normpropnonpropexer-1-1-1 > li::marker { content: "("counter(normpropnonpropexer-1-1-1,lower-alpha)")"; }
+#normpropnonpropexer-1-1-1 > li { counter-increment: normpropnonpropexer-1-1-1; }
+#wrappingfnpropexer-2-1-1 { counter-set: wrappingfnpropexer-2-1-1 0; }
+#wrappingfnpropexer-2-1-1 > li::marker { content: "("counter(wrappingfnpropexer-2-1-1,lower-alpha)")"; }
+#wrappingfnpropexer-2-1-1 > li { counter-increment: wrappingfnpropexer-2-1-1; }
+#polygonvertexexer-1-1-6 { counter-set: polygonvertexexer-1-1-6 0; }
+#polygonvertexexer-1-1-6 > li::marker { content: "("counter(polygonvertexexer-1-1-6,lower-alpha)")"; }
+#polygonvertexexer-1-1-6 > li { counter-increment: polygonvertexexer-1-1-6; }
+#conventionsaboutptsandvects-2-2-1 { counter-set: conventionsaboutptsandvects-2-2-1 0; }
+#conventionsaboutptsandvects-2-2-1 > li::marker { content: "("counter(conventionsaboutptsandvects-2-2-1,lower-alpha)")"; }
+#conventionsaboutptsandvects-2-2-1 > li { counter-increment: conventionsaboutptsandvects-2-2-1; }
+#conventionsaboutptsandvects-2-2-1-1-1-1 { counter-set: conventionsaboutptsandvects-2-2-1-1-1-1 0; }
+#conventionsaboutptsandvects-2-2-1-1-1-1 > li::marker { content: ""counter(conventionsaboutptsandvects-2-2-1-1-1-1,lower-roman)"."; }
+#conventionsaboutptsandvects-2-2-1-1-1-1 > li { counter-increment: conventionsaboutptsandvects-2-2-1-1-1-1; }
+#conventionsaboutptsandvects-2-2-1-2-1-6 { counter-set: conventionsaboutptsandvects-2-2-1-2-1-6 0; }
+#conventionsaboutptsandvects-2-2-1-2-1-6 > li::marker { content: ""counter(conventionsaboutptsandvects-2-2-1-2-1-6,lower-roman)"."; }
+#conventionsaboutptsandvects-2-2-1-2-1-6 > li { counter-increment: conventionsaboutptsandvects-2-2-1-2-1-6; }
+#isitlinearexer-1-1-5 { counter-set: isitlinearexer-1-1-5 0; }
+#isitlinearexer-1-1-5 > li::marker { content: ""counter(isitlinearexer-1-1-5,decimal)"."; }
+#isitlinearexer-1-1-5 > li { counter-increment: isitlinearexer-1-1-5; }
+#usemattoevalexer-1-1-1 { counter-set: usemattoevalexer-1-1-1 0; }
+#usemattoevalexer-1-1-1 > li::marker { content: ""counter(usemattoevalexer-1-1-1,decimal)"."; }
+#usemattoevalexer-1-1-1 > li { counter-increment: usemattoevalexer-1-1-1; }
+#matopsexer-1-1-1 { counter-set: matopsexer-1-1-1 0; }
+#matopsexer-1-1-1 > li::marker { content: ""counter(matopsexer-1-1-1,decimal)"."; }
+#matopsexer-1-1-1 > li { counter-increment: matopsexer-1-1-1; }
+#idandinvcheckexer-1-1-1 { counter-set: idandinvcheckexer-1-1-1 0; }
+#idandinvcheckexer-1-1-1 > li::marker { content: ""counter(idandinvcheckexer-1-1-1,decimal)"."; }
+#idandinvcheckexer-1-1-1 > li { counter-increment: idandinvcheckexer-1-1-1; }
+#solvelinsysexer-2-1-21 { counter-set: solvelinsysexer-2-1-21 0; }
+#solvelinsysexer-2-1-21 > li::marker { content: "("counter(solvelinsysexer-2-1-21,lower-alpha)")"; }
+#solvelinsysexer-2-1-21 > li { counter-increment: solvelinsysexer-2-1-21; }
+#reflectislinearexer-2-1-1 { counter-set: reflectislinearexer-2-1-1 0; }
+#reflectislinearexer-2-1-1 > li::marker { content: "("counter(reflectislinearexer-2-1-1,lower-alpha)")"; }
+#reflectislinearexer-2-1-1 > li { counter-increment: reflectislinearexer-2-1-1; }
+#complexmultfirstexer-1-1-1 { counter-set: complexmultfirstexer-1-1-1 0; }
+#complexmultfirstexer-1-1-1 > li::marker { content: ""counter(complexmultfirstexer-1-1-1,decimal)"."; }
+#complexmultfirstexer-1-1-1 > li { counter-increment: complexmultfirstexer-1-1-1; }
+#complexalg2ndexer-1-1-1 { counter-set: complexalg2ndexer-1-1-1 0; }
+#complexalg2ndexer-1-1-1 > li::marker { content: ""counter(complexalg2ndexer-1-1-1,decimal)"."; }
+#complexalg2ndexer-1-1-1 > li { counter-increment: complexalg2ndexer-1-1-1; }
+#complexdivisionexer-1-1-1 { counter-set: complexdivisionexer-1-1-1 0; }
+#complexdivisionexer-1-1-1 > li::marker { content: ""counter(complexdivisionexer-1-1-1,decimal)"."; }
+#complexdivisionexer-1-1-1 > li { counter-increment: complexdivisionexer-1-1-1; }
+#twosqrootsexer-2-1-1 { counter-set: twosqrootsexer-2-1-1 0; }
+#twosqrootsexer-2-1-1 > li::marker { content: "("counter(twosqrootsexer-2-1-1,lower-alpha)")"; }
+#twosqrootsexer-2-1-1 > li { counter-increment: twosqrootsexer-2-1-1; }
+#linfractransdefexer-1-1-19 { counter-set: linfractransdefexer-1-1-19 0; }
+#linfractransdefexer-1-1-19 > li::marker { content: "("counter(linfractransdefexer-1-1-19,lower-alpha)")"; }
+#linfractransdefexer-1-1-19 > li { counter-increment: linfractransdefexer-1-1-19; }
+#intptsdenseins1prop-2-11 { counter-set: intptsdenseins1prop-2-11 0; }
+#intptsdenseins1prop-2-11 > li::marker { content: ""counter(intptsdenseins1prop-2-11,decimal)"."; }
+#intptsdenseins1prop-2-11 > li { counter-increment: intptsdenseins1prop-2-11; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -95,7 +288,8 @@ window.MathJax = {
 <h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -106,7 +300,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="linexp_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cartesian_plane_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="linexp_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basic_tools_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cartesian_plane_chapter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \def\of{\mathbin{\circ}}
       \DeclareMathOperator{\MOD}{\rm MOD}
 \DeclareMathOperator{\percent}{\%}      
       \DeclareMathOperator{\Inn}{Inn}
@@ -156,13 +351,13 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -170,42 +365,42 @@ window.MathJax = {
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets_section.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Sets</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_section.html#sets_section-12" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_section.html#sets_section-10" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="functions_section.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions_section.html#functions_section-18" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions_section.html#functions_section-14" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="inj_and_surj_section.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Injectivity and Surjectivity</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="inj_and_surj_section.html#inj_and_surj_section-13" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="inj_and_surj_section.html#inj_and_surj_section-10" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="partitions_and_counting_section.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Partitions and Counting</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="partitions_and_counting_section.html#partitions_and_counting_section-10" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="partitions_and_counting_section.html#partitions_and_counting_section-9" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="divisibility_and_primes_section.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Divisibility and Primes</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility_and_primes_section.html#divisibility_and_primes_section-18" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="divisibility_and_primes_section.html#divisibility_and_primes_section-15" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="mod_arith_section.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Modular Arithmetic</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-14" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="mod_arith_section.html#mod_arith_section-11" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linexp_section.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Linear and Exponential Growth</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-10" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linexp_section.html#linexp_section-8" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="basic_tools_problems_section.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Problems</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Linear and Exponential Growth</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-2-2" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Rational and Irrational Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-10" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-3-8" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="basic_tools_problems_section.html#basic_tools_problems_section-4" class="internal"><span class="codenumber">1.8.3</span> <span class="title">More Sets and Functions</span></a></div>
@@ -224,15 +419,15 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="vector_operations_section.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Cartesian Plane</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-20" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vector_operations_section.html#vector_operations_section-16" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="linear_transformations_section.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Linear Mappings</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-21" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="linear_transformations_section.html#linear_transformations_section-16" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="complex_plane_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Complex Numbers</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-23" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="complex_plane_section.html#complex_plane_section-18" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="additional_exercises_section.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Problems</span></a></div>
@@ -251,7 +446,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-5" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Integral points on the unit circle</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-5-8" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="additional_exercises_section.html#additional_exercises_section-5-7" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -276,16 +471,16 @@ window.MathJax = {
 </h4>
 <article class="exercise exercise-like" id="hotelbilldoubleexer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para logical" id="hotelbilldoubleexer-1-1">
-<div class="para">Consider the following true-life situation. <blockquote class="blockquote" id="hotelbilldoubleexer-1-1-1">"I want to rent this room for the month of July," he said.  The clerk wheezed.  He peered through the narrow slits of his bloodshot eyes, glaring through the murk of the humid dusty darkness of the fleabag lobby, and said, "for you—a deal."  "How much?" said the big guy, sweat trickling down his face, staining the collar of his dingy shirt which didn’t appear to have been washed in weeks.  Noticing the telltale bulge of a revolver under the stranger’s dirt-stained jacket, the clerk replied, "First day—one cent.  Second day—two cents.  Third day—four.  Every day it doubles."  The stranger’s face drew into a knot as he scrutinized the greasy poker-faced clerk.  He said, "That’s nothin’.  What’s the hitch?"</blockquote>
+<div class="para">Consider the following true-life situation. <blockquote class="blockquote" id="hotelbilldoubleexer-1-1-1">————</blockquote>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="hotelbilldoubleexer-1-1-2">
 <li id="hotelbilldoubleexer-1-1-2-1"><div class="para" id="p-derived-hotelbilldoubleexer-1-1-2-1">How much would the stranger pay on July 31st?</div></li>
 <li id="hotelbilldoubleexer-1-1-2-2"><div class="para" id="p-derived-hotelbilldoubleexer-1-1-2-2">What would the bill be for the month of July?</div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="investmentvalueexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="investmentvalueexer-1-1">
 <div class="para">An investment portfolio has holdings in instruments <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{.}\)</span> At a certain moment, both instruments have a value of <span class="process-math">\(100\)</span> dollars. Beginning at that same moment, the value of <span class="process-math">\(X\)</span> drops exactly <span class="process-math">\(10\)</span> dollars every day, and the value of <span class="process-math">\(Y\)</span> loses <span class="process-math">\(20\)</span> percent of its value every day.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="investmentvalueexer-1-1-8">
 <li id="investmentvalueexer-1-1-8-1"><div class="para" id="p-derived-investmentvalueexer-1-1-8-1">Assuming that the values of both investments are continuous functions of time, Which of <span class="process-math">\(X,Y\)</span> is the first to reach a value of 20 dollars?</div></li>
 <li id="investmentvalueexer-1-1-8-2"><div class="para" id="p-derived-investmentvalueexer-1-1-8-2">Explain how you know, without calculating, which investment is the first to reach a value of zero.</div></li>
 </ol>
@@ -294,7 +489,7 @@ window.MathJax = {
 </h5>
 <div class="para" id="rabbitturtleraceexer-2-1">The Greek philosopher Zeno (ca. 450BC) considered the following motion problem.  A rabbit and a turtle agree to run a race.  Displaying good sportsmanship, the rabbit, who can run faster, gives the turtle a head start.  Zeno argued that the rabbit will never catch the turtle, as follows.  To catch the turtle, the rabbit must first travel from the starting point to the turtle’s starting point.  During this time, the turtle will advance.  Let’s call the turtle’s new location point 2.  Now the rabbit must travel to point 2, but during that time, the turtle advances to point 3.  And so on.  This process defines an infinite sequence of distinct points.  Traveling from each one to the next requires a positive amount of time.  Since an infinite sum of positive numbers must be infinite, Zeno concludes that the rabbit will never catch the turtle.  Of course, Zeno knew there must be some flaw in this argument, but was unable to resolve the paradox satisfactorily.</div> <div class="para logical" id="rabbitturtleraceexer-2-2">
 <div class="para">Analyze Zeno’s paradox under the following assumptions: the rabbit travels at a constant speed of 5 feet per second; the turtle travels at a constant speed of 2 feet per second; and the head start distance is 10 feet.  Place coordinates on the race track with the rabbit beginning at 0 and the turtle beginning at 10, with both running in the positive direction.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="rabbitturtleraceexer-2-2-1">
 <li id="rabbitturtleraceexer-2-2-1-1"><div class="para" id="p-derived-rabbitturtleraceexer-2-2-1-1">Using high school algebra and the formula<div class="displaymath process-math">
 \begin{equation*}
 (\text{distance}) = (\text{rate})(\text{time})
@@ -307,7 +502,7 @@ window.MathJax = {
 </div></article><article class="exercise exercise-like" id="dribpuzzleexer"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="para" id="dribpuzzleexer-1-1">The following problem is a modern version of Zeno’s paradox. It is taken from an article by George Andrews in the January 1998 issue of the <em class="emphasis">American Mathematical Monthly</em>, Vol. 105 No. 1 and is attributed to a Prof. Sleator.</div> <div class="para logical" id="dribpuzzleexer-1-2">
 <div class="para">Two trees are one mile apart. A drib flies from one tree to the other and back, making the first trip at 10 miles per hour, the return at 20 miles per hour, the next at 40 and so on, each successive mile at twice the speed of the preceding.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="dribpuzzleexer-1-2-1">
 <li id="dribpuzzleexer-1-2-1-1"><div class="para" id="p-derived-dribpuzzleexer-1-2-1-1">Write the first five terms of the sequence of velocities for trip numbers 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
 <li id="dribpuzzleexer-1-2-1-2"><div class="para" id="p-derived-dribpuzzleexer-1-2-1-2">Write the first five terms of the sequence times taken for trips 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
 <li id="dribpuzzleexer-1-2-1-3"><div class="para" id="p-derived-dribpuzzleexer-1-2-1-3">Write the first five terms of the sequence of how much time it takes the drib to travel 1 mile, 2 miles, 3 miles, etc.  Write an explicit formula for this sequence.</div></li>
@@ -317,13 +512,13 @@ window.MathJax = {
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">The Snowflake Curve.</span>
 </h5>
 <div class="para" id="snowflakecurveexer-2-1">
-<em class="emphasis">Koch’s snowflake</em> is a geometric figure built recursively, as follows.  Stage 1 is an equilateral triangle whose sides are 1 unit in length.  To produce Stage <span class="process-math">\(n\)</span> from Stage <span class="process-math">\(n-1\text{,}\)</span> perform the replacement of edges illustrated in <a href="" class="xref" data-knowl="./knowl/xref/snowflake_recursionfig.html" title="Figure 1.8.1">Figure 1.8.1</a>. <figure class="figure figure-like" id="snowflake_recursionfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/snowflake_recursion.png" class="contained"></div>
+<em class="emphasis">Koch’s snowflake</em> is a geometric figure built recursively, as follows.  Stage 1 is an equilateral triangle whose sides are 1 unit in length.  To produce Stage <span class="process-math">\(n\)</span> from Stage <span class="process-math">\(n-1\text{,}\)</span> perform the replacement of edges illustrated in <a href="basic_tools_problems_section.html#snowflake_recursionfig" class="xref" data-knowl="./knowl/xref/snowflake_recursionfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.8.1">Figure 1.8.1</a>. <figure class="figure figure-like" id="snowflake_recursionfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/snowflake_recursion.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.1<span class="period">.</span></span><span class="space"> </span>Each edge at stage <span class="process-math">\(n-1\)</span> is replaced by four edges at stage <span class="process-math">\(n\)</span></figcaption></figure>
 </div> <div class="para logical" id="snowflakecurveexer-2-2">
-<div class="para">The snowflake is the figure obtained after infinitely many stages. Stages 1, 2, 3 and the finished snowflake are shown in <a href="" class="xref" data-knowl="./knowl/xref/KochFlakefig.html" title="Figure 1.8.2">Figure 1.8.2</a>. <figure class="figure figure-like" id="KochFlakefig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/KochFlake.png" class="contained"></div>
+<div class="para">The snowflake is the figure obtained after infinitely many stages. Stages 1, 2, 3 and the finished snowflake are shown in <a href="basic_tools_problems_section.html#KochFlakefig" class="xref" data-knowl="./knowl/xref/KochFlakefig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.8.2">Figure 1.8.2</a>. <figure class="figure figure-like" id="KochFlakefig"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/KochFlake.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span>The first three stages and the finished snowflake (https://commons.wikimedia.org/wiki/File:KochFlake.png)</figcaption></figure>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="snowflakecurveexer-2-2-3">
 <li id="snowflakecurveexer-2-2-3-1"><div class="para" id="p-derived-snowflakecurveexer-2-2-3-1">Write the first 5 terms of the sequence of the number of edges in Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
 <li id="snowflakecurveexer-2-2-3-2"><div class="para" id="p-derived-snowflakecurveexer-2-2-3-2">Write the first 5 terms of the sequence of the lengths of each edge in Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</div></li>
 <li id="snowflakecurveexer-2-2-3-3"><div class="para" id="p-derived-snowflakecurveexer-2-2-3-3">Write the first 5 terms of the sequence of the total perimeter of the figure for Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.  Hint: Multiply your results from the previous two parts.</div></li>
@@ -350,11 +545,11 @@ window.MathJax = {
 <article class="proposition theorem-like" id="root2isirrat"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.8.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="root2isirrat-1-1">The number <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><details id="root2isirrat-2" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="root2isirrat-2-1">Suppose on the contrary that <span class="process-math">\(\sqrt{2}=a/b\)</span> is rational, where <span class="process-math">\(a,b\)</span> are integers. We may assume both <span class="process-math">\(a,b\)</span> are positive, and we may assume that the fraction <span class="process-math">\(a/b\)</span> is reduced, that is, that <span class="process-math">\(a,b\)</span> have no common factors other than 1. Squaring both sides of <span class="process-math">\(\sqrt{2}=a/b\)</span> and rearranging, we have <span class="process-math">\(2b^2=a^2\text{.}\)</span> This says that <span class="process-math">\(a^2\)</span> is even, so it must be that <span class="process-math">\(a\)</span> itself is even. That means we can write <span class="process-math">\(a=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Substituting <span class="process-math">\(2k\)</span> for <span class="process-math">\(a\)</span> in the equation <span class="process-math">\(2b^2=a^2\text{,}\)</span> we get <span class="process-math">\(2b^2=(2k)^2=4k^2\text{,}\)</span> which simplifies to <span class="process-math">\(b^2=2k^2\text{.}\)</span> Now we see that <span class="process-math">\(b^2\)</span> is even, so it must be that <span class="process-math">\(b\)</span> is even. But this means that <span class="process-math">\(a,b\)</span> are both divisible by 2, which contradicts the assumption that <span class="process-math">\(a,b\)</span> share no common factors. We conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></details>
+<div class="para" id="root2isirrat-1-1">The number <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><details id="root2isirrat-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="root2isirrat-2-1">Suppose on the contrary that <span class="process-math">\(\sqrt{2}=a/b\)</span> is rational, where <span class="process-math">\(a,b\)</span> are integers. We may assume both <span class="process-math">\(a,b\)</span> are positive, and we may assume that the fraction <span class="process-math">\(a/b\)</span> is reduced, that is, that <span class="process-math">\(a,b\)</span> have no common factors other than 1. Squaring both sides of <span class="process-math">\(\sqrt{2}=a/b\)</span> and rearranging, we have <span class="process-math">\(2b^2=a^2\text{.}\)</span> This says that <span class="process-math">\(a^2\)</span> is even, so it must be that <span class="process-math">\(a\)</span> itself is even. That means we can write <span class="process-math">\(a=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Substituting <span class="process-math">\(2k\)</span> for <span class="process-math">\(a\)</span> in the equation <span class="process-math">\(2b^2=a^2\text{,}\)</span> we get <span class="process-math">\(2b^2=(2k)^2=4k^2\text{,}\)</span> which simplifies to <span class="process-math">\(b^2=2k^2\text{.}\)</span> Now we see that <span class="process-math">\(b^2\)</span> is even, so it must be that <span class="process-math">\(b\)</span> is even. But this means that <span class="process-math">\(a,b\)</span> are both divisible by 2, which contradicts the assumption that <span class="process-math">\(a,b\)</span> share no common factors. We conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></details>
 </div>
-<details id="parseroot2irratproofexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="parseroot2irratproofexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.4</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="parseroot2irratproofexer-1-1">Justify the statement in the proof above that says "so <span class="process-math">\(a\)</span> itself must be even". Give a proof that uses the results of <a href="" class="xref" data-knowl="./knowl/xref/evenoddexer.html" title="Exercise 1.5.1">Exercise 1.5.1</a>. Give another proof that uses only the Fundamental Theorem of Arithmetic.</div></article></details><div class="para logical" id="basic_tools_problems_section-3-6">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="parseroot2irratproofexer-1-1">Justify the statement in the proof above that says "so <span class="process-math">\(a\)</span> itself must be even". Give a proof that uses the results of <a href="divisibility_and_primes_section.html#evenoddexer" class="xref" data-knowl="./knowl/xref/evenoddexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.5.1">Exercise 1.5.1</a>. Give another proof that uses only the Fundamental Theorem of Arithmetic.</div></article></details><div class="para logical" id="basic_tools_problems_section-3-5">
 <div class="para">It turns out that irrational numbers are not rare or isolated among the real numbers; the rational numbers and irrational numbers are "everywhere" in the real line. The following proposition makes this statement precise.  Recall that an <em class="emphasis">open interval</em> of the real line is a set of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -364,37 +559,41 @@ window.MathJax = {
 <div class="para">for some real numbers <span class="process-math">\(a,b\)</span> with <span class="process-math">\(a\lt b\text{.}\)</span> We say that a subset <span class="process-math">\(X\subseteq \R\)</span> is <dfn class="terminology">dense</dfn> in <span class="process-math">\(\R\)</span> if every open interval  contains an element of <span class="process-math">\(X\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="basic_tools_problems_section-3-7">
+<div class="para" id="basic_tools_problems_section-3-6">
 <article class="proposition theorem-like" id="ratsirratsdenseinrealsprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.8.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="ratsirratsdenseinrealsprop-1-1">The set <span class="process-math">\(\Q\)</span> of rational numbers is dense in <span class="process-math">\(\R\text{.}\)</span> The set <span class="process-math">\(\R\setminus \Q\)</span> of irrational numbers is dense in <span class="process-math">\(\R\text{.}\)</span>
-</div></article><details id="ratsirratsdenseinrealsprop-2" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">(This is an outline of the main points of the proof that <span class="process-math">\(\Q\)</span> is dense in <span class="process-math">\(\R\text{.}\)</span> In exercises below, you will complete the details of the proof of the density of the rationals, and you will also prove the density of the irrationals.) Let <span class="process-math">\(a,b\)</span> be given, with <span class="process-math">\(a\lt b\text{,}\)</span> and let <span class="process-math">\(\epsilon=b-a\text{.}\)</span> Choose an integer <span class="process-math">\(n\)</span> large enough so that <span class="process-math">\(1/n \lt \epsilon\text{.}\)</span> We claim that there is some integer multiple of <span class="process-math">\(1/n\)</span> that lies between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> that is, there is some integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(a\lt m/n \lt b\text{.}\)</span> If not, then there exist consecutive integer multiples <span class="process-math">\(k/n,(k+1)/n\)</span> of <span class="process-math">\(1/n\)</span> so that<div class="displaymath process-math">
+</div></article><details id="ratsirratsdenseinrealsprop-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(\Q\)</span><span class="process-math">\(\R\text{.}\)</span><span class="process-math">\(a,b\)</span><span class="process-math">\(a\lt b\text{,}\)</span><span class="process-math">\(\epsilon=b-a\text{.}\)</span><span class="process-math">\(n\)</span><span class="process-math">\(1/n \lt \epsilon\text{.}\)</span><span class="process-math">\(1/n\)</span><span class="process-math">\(a\)</span><span class="process-math">\(b\text{,}\)</span><span class="process-math">\(m\)</span><span class="process-math">\(a\lt m/n \lt b\text{.}\)</span><span class="process-math">\(k/n,(k+1)/n\)</span><span class="process-math">\(1/n\)</span><div class="displaymath process-math">
 \begin{equation*}
 k/n \leq a \lt b\leq (k+1)/n.
 \end{equation*}
-</div>But then we would have <span class="process-math">\(b-a\leq (k+1)/n -k/n = 1/n\text{,}\)</span> a contradiction. Thus we have shown that the open interval <span class="process-math">\((a,b)\)</span> contains a rational number. We conclude that <span class="process-math">\(\Q\)</span> is dense in <span class="process-math">\(\R\text{.}\)</span></article></details>
 </div>
-<details id="parseratsdenseexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="process-math">\(b-a\leq (k+1)/n -k/n = 1/n\text{,}\)</span><span class="process-math">\((a,b)\)</span><span class="process-math">\(\Q\)</span><span class="process-math">\(\R\text{.}\)</span></article></details>
+</div>
+<details id="parseratsdenseexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.6</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical" id="parseratsdenseexer-1-1"><ol class="decimal">
-<li id="parseratsdenseexer-1-1-1-1"><div class="para" id="p-derived-parseratsdenseexer-1-1-1-1">In the proof outline of <a href="" class="xref" data-knowl="./knowl/xref/ratsirratsdenseinrealsprop.html" title="Proposition 1.8.5">Proposition 1.8.5</a> above, how do we know that we can "choose an integer <span class="process-math">\(n\)</span> large enough"?</div></li>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="parseratsdenseexer-1-1"><ol class="decimal" id="parseratsdenseexer-1-1-1">
+<li id="parseratsdenseexer-1-1-1-1"><div class="para" id="p-derived-parseratsdenseexer-1-1-1-1">In the proof outline of <a href="basic_tools_problems_section.html#ratsirratsdenseinrealsprop" class="xref" data-knowl="./knowl/xref/ratsirratsdenseinrealsprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.8.5">Proposition 1.8.5</a> above, how do we know that we can "choose an integer <span class="process-math">\(n\)</span> large enough"?</div></li>
 <li id="parseratsdenseexer-1-1-1-2"><div class="para" id="p-derived-parseratsdenseexer-1-1-1-2">Explain why it is that "then we would have <span class="process-math">\(b-a\leq
 1/n\)</span>" (immediately after the displayed equation).</div></li>
 <li id="parseratsdenseexer-1-1-1-3"><div class="para" id="p-derived-parseratsdenseexer-1-1-1-3">What does that contradict?</div></li>
 <li id="parseratsdenseexer-1-1-1-4"><div class="para" id="p-derived-parseratsdenseexer-1-1-1-4">What allows us to "conclude that <span class="process-math">\(\Q\)</span> is dense in <span class="process-math">\(\R\)</span>"?</div></li>
-</ol></div></article></details><section class="exercises" id="basic_tools_problems_section-3-10"><h4 class="heading hide-type">
+</ol></div></article></details><section class="exercises" id="basic_tools_problems_section-3-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h4>
 <article class="exercise exercise-like" id="rootnisirratorintexer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para" id="rootnisirratorintexer-1-1">Let <span class="process-math">\(n\)</span> be a positive integer. Show that either <span class="process-math">\(n\)</span> is a perfect square (that is, <span class="process-math">\(n=k^2\)</span> for some integer <span class="process-math">\(k\)</span>), or <span class="process-math">\(\sqrt{n}\)</span> is irrational.</div>
-<div class="solutions"><details id="rootnisirratorintexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Let <span class="process-math">\(n\)</span> be a positive integer, and suppose that <span class="process-math">\(\sqrt{n}=a/b\)</span> is rational, where <span class="process-math">\(a,b\)</span> are positive integers that share no common factors other than 1. Squaring and rearranging, we have <span class="process-math">\(nb^2=a^2\text{.}\)</span> Let <span class="process-math">\(p\)</span> be a prime factor of <span class="process-math">\(b\text{.}\)</span> Explain why it must be that <span class="process-math">\(p|a\text{.}\)</span> Explain why this implies that <span class="process-math">\(b=1\text{.}\)</span> Explain how this implies the desired conclusion.</div></details></div></article><article class="exercise exercise-like" id="irratsdenseexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="irratsdenseexer-1-1">Complete the proof of <a href="" class="xref" data-knowl="./knowl/xref/ratsirratsdenseinrealsprop.html" title="Proposition 1.8.5">Proposition 1.8.5</a> by showing that the irrationals are dense in the reals.</div>
-<div class="solutions"><details id="irratsdenseexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Apply the density of <span class="process-math">\(\Q\)</span> to the interval <span class="process-math">\((a/\sqrt{2},b/\sqrt{2})\text{.}\)</span>
+<div class="solutions"><details id="rootnisirratorintexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(n\)</span><span class="process-math">\(\sqrt{n}=a/b\)</span><span class="process-math">\(a,b\)</span><span class="process-math">\(nb^2=a^2\text{.}\)</span><span class="process-math">\(p\)</span><span class="process-math">\(b\text{.}\)</span><span class="process-math">\(p|a\text{.}\)</span><span class="process-math">\(b=1\text{.}\)</span>
+</div></details></div></article><article class="exercise exercise-like" id="irratsdenseexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="irratsdenseexer-1-1">Complete the proof of <a href="basic_tools_problems_section.html#ratsirratsdenseinrealsprop" class="xref" data-knowl="./knowl/xref/ratsirratsdenseinrealsprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.8.5">Proposition 1.8.5</a> by showing that the irrationals are dense in the reals.</div>
+<div class="solutions"><details id="irratsdenseexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(\Q\)</span><span class="process-math">\((a/\sqrt{2},b/\sqrt{2})\text{.}\)</span>
 </div></details></div></article><article class="exercise exercise-like" id="walkarounds1exer"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="walkarounds1exer-1-1">
 <div class="para">Choose an angle <span class="process-math">\(\theta_0\text{.}\)</span> Starting at the point <span class="process-math">\((1,0)\text{,}\)</span> walk around the unit circle in a counterclockwise direction, taking steps of size <span class="process-math">\(\theta_0\text{.}\)</span> What is the smallest whole number of steps you have to take until you come for the first time to a point that you’ve already stepped on? Where is this first repeated location?</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="walkarounds1exer-1-1-4">
 <li id="walkarounds1exer-1-1-4-1"><div class="para" id="p-derived-walkarounds1exer-1-1-4-1">Find the answer for <span class="process-math">\(\theta_0 = 20\)</span> degrees.</div></li>
 <li id="walkarounds1exer-1-1-4-2"><div class="para" id="p-derived-walkarounds1exer-1-1-4-2">Find the answer for <span class="process-math">\(\theta_0 = 27\)</span> degrees.</div></li>
 <li id="walkarounds1exer-1-1-4-3"><div class="para" id="p-derived-walkarounds1exer-1-1-4-3">Find the answer for <span class="process-math">\(\theta_0 = \sqrt{2}\)</span> degrees.</div></li>
@@ -407,7 +606,7 @@ k/n \leq a \lt b\leq (k+1)/n.
 <div class="para" id="ratiffdecrepeatexer-1-1">Show that a number is rational if and only if it has a  decimal representation that eventually repeats or terminates.</div></article><article class="exercise exercise-like" id="termdecexer"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
 <div class="para logical" id="termdecexer-1-1">
 <div class="para">Prove the following facts about terminating decimal expansions.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="termdecexer-1-1-1">
 <li id="termdecexer-1-1-1-1"><div class="para" id="p-derived-termdecexer-1-1-1-1">Suppose that <span class="process-math">\(m=2^s5^t\)</span> for some nonnegative integers <span class="process-math">\(s,t\text{.}\)</span> Show that the rational number <span class="process-math">\(n/m\)</span> (<span class="process-math">\(n\)</span> also an integer) has a terminating decimal expansion.</div></li>
 <li id="termdecexer-1-1-1-2"><div class="para" id="p-derived-termdecexer-1-1-1-2">Suppose that the reduced rational number <span class="process-math">\(n/m\)</span> (<span class="process-math">\(n,m\)</span> integers with no common factors, <span class="process-math">\(m\neq 0\)</span>) has a terminating decimal expansion. Show that <span class="process-math">\(m=2^s5^t\)</span> for some nonnegative integers <span class="process-math">\(s,t\text{.}\)</span>
 </div></li>
@@ -431,7 +630,7 @@ k/n \leq a \lt b\leq (k+1)/n.
 \end{equation*}
 </div>
 <div class="para">Let <span class="process-math">\(A,B\)</span> be subsets of <span class="process-math">\(S\text{.}\)</span> Prove the following. The symbol "<span class="process-math">\(\oplus\)</span>" denotes addition modulo 2.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="charfunexer-1-1-14">
 <li id="charfunexer-1-1-14-1"><div class="para" id="p-derived-charfunexer-1-1-14-1">
 <span class="process-math">\(A=B\)</span> if and only if <span class="process-math">\(\chi_A=\chi_B\)</span>
 </div></li>
@@ -443,8 +642,8 @@ k/n \leq a \lt b\leq (k+1)/n.
 </ol>
 </div></article><article class="exercise exercise-like" id="distdemorganlawsexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="distdemorganlawsexer-1-1">
-<div class="para">Let <span class="process-math">\(A,B,C\)</span> be sets. Prove the following (the first two are <dfn class="terminology">distributive laws</dfn> for sets and the second two are <dfn class="terminology">De Morgan’s laws</dfn>). Hint: use characteristic functions from <a href="" class="xref" data-knowl="./knowl/xref/charfunexer.html" title="Exercise 1.8.3.1">Exercise 1.8.3.1</a> above.</div>
-<ol class="lower-alpha">
+<div class="para">Let <span class="process-math">\(A,B,C\)</span> be sets. Prove the following (the first two are <dfn class="terminology">distributive laws</dfn> for sets and the second two are <dfn class="terminology">De Morgan’s laws</dfn>). Hint: use characteristic functions from <a href="basic_tools_problems_section.html#charfunexer" class="xref" data-knowl="./knowl/xref/charfunexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.8.3.1">Exercise 1.8.3.1</a> above.</div>
+<ol class="lower-alpha" id="distdemorganlawsexer-1-1-7">
 <li id="distdemorganlawsexer-1-1-7-1"><div class="para" id="p-derived-distdemorganlawsexer-1-1-7-1"><span class="process-math">\(\displaystyle A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</span></div></li>
 <li id="distdemorganlawsexer-1-1-7-2"><div class="para" id="p-derived-distdemorganlawsexer-1-1-7-2"><span class="process-math">\(\displaystyle A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</span></div></li>
 <li id="distdemorganlawsexer-1-1-7-3"><div class="para" id="p-derived-distdemorganlawsexer-1-1-7-3"><span class="process-math">\(\displaystyle S\setminus{(A\cap B)} = (S\setminus A) \cup (S\setminus
@@ -454,7 +653,7 @@ B)\)</span></div></li>
 </div></article><article class="exercise exercise-like" id="equivrelnexer"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="equivrelnexer-1-1">
 <div class="para">An <dfn class="terminology">equivalence relation</dfn> on a set  <span class="process-math">\(S\)</span> is a set  <span class="process-math">\(E\subseteq
-S\times S\)</span> of ordered pairs of elements of  <span class="process-math">\(S\)</span> that satisfies the following. <blockquote class="blockquote" id="equivrelnexer-1-1-6"><ol class="lower-roman">
+S\times S\)</span> of ordered pairs of elements of  <span class="process-math">\(S\)</span> that satisfies the following. <blockquote class="blockquote" id="equivrelnexer-1-1-6"><ol class="lower-roman" id="equivrelnexer-1-1-6-1">
 <li id="equivrelnexer-1-1-6-1-1"><div class="para" id="p-derived-equivrelnexer-1-1-6-1-1">
 <span class="process-math">\((x,x)\in E\)</span> for every  <span class="process-math">\(x\in S\)</span> (the <dfn class="terminology">reflexive</dfn> property)</div></li>
 <li id="equivrelnexer-1-1-6-1-2"><div class="para" id="p-derived-equivrelnexer-1-1-6-1-2">if  <span class="process-math">\((x,y)\)</span> is in  <span class="process-math">\(E\)</span> then  <span class="process-math">\((y,x)\)</span> is in  <span class="process-math">\(E\)</span> (the <dfn class="terminology">symmetric</dfn> property)</div></li>
@@ -467,11 +666,11 @@ U_s = \{t\in S\colon (s,t)\in E\}
 </div>
 <div class="para">where <span class="process-math">\(s\)</span> is an element of <span class="process-math">\(S\text{.}\)</span>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="equivrelnexer-1-1-13">
 <li id="equivrelnexer-1-1-13-1"><div class="para" id="p-derived-equivrelnexer-1-1-13-1">Write out all possible equivalence relations for  <span class="process-math">\(S=\{a,b,c\}\text{.}\)</span>
 </div></li>
 <li id="equivrelnexer-1-1-13-2"><div class="para" id="p-derived-equivrelnexer-1-1-13-2">Write out all of the equivalence classes for each of the equivalence relations in part a.</div></li>
-<li id="equivrelnexer-1-1-13-3"><div class="para" id="p-derived-equivrelnexer-1-1-13-3">In <a href="" class="xref" data-knowl="./knowl/xref/equivmodmisequivrel.html" title="Exercise 1.6.1">Exercise 1.6.1</a>, you showed that equivalence modulo an integer <span class="process-math">\(m\)</span> is an equivalence relation on the integers <span class="process-math">\(\Z\text{.}\)</span> Write out all of the equivalence classes for this equivalence relation.</div></li>
+<li id="equivrelnexer-1-1-13-3"><div class="para" id="p-derived-equivrelnexer-1-1-13-3">In <a href="mod_arith_section.html#equivmodmisequivrel" class="xref" data-knowl="./knowl/xref/equivmodmisequivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.6.1">Exercise 1.6.1</a>, you showed that equivalence modulo an integer <span class="process-math">\(m\)</span> is an equivalence relation on the integers <span class="process-math">\(\Z\text{.}\)</span> Write out all of the equivalence classes for this equivalence relation.</div></li>
 <li id="equivrelnexer-1-1-13-4"><div class="para" id="p-derived-equivrelnexer-1-1-13-4">Give an example of a set  <span class="process-math">\(F\subseteq S\times S\)</span> of ordered pairs of  <span class="process-math">\(S=\{a,b,c\}\)</span> that satisfies exactly two of the three properties in the definition of equivalence relation.</div></li>
 </ol>
 </div></article></section></section><section class="subsection" id="basic_tools_problems_section-5"><h3 class="heading hide-type">
@@ -489,12 +688,12 @@ numbers } a\gt 1\}.
 \end{equation*}
 </div>
 </div>
-<figure class="figure figure-like" id="pythtrip2circptfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/pythtrip2circpt.png" class="contained"></div>
+<figure class="figure figure-like" id="pythtrip2circptfig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/pythtrip2circpt.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.7<span class="period">.</span></span><span class="space"> </span>Pythagorean triple <span class="process-math">\((a,b,c)\)</span> and associated unit circle point <span class="process-math">\((a/c,b/c)\)</span></figcaption></figure><section class="exercises" id="basic_tools_problems_section-5-5"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h4>
 <article class="exercise exercise-like" id="pythtriptoratptexer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="pythtriptoratptexer-1-1">Given a Pythagorean triple <span class="process-math">\((a,b,c)\)</span> (not necessarily primitive), show that <span class="process-math">\((a/c,b/c)\)</span> is a rational point on <span class="process-math">\(Q\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/pythtrip2circptfig.html" title="Figure 1.8.7">Figure 1.8.7</a>).</div></article><article class="exercise exercise-like" id="pythripprimpairwisereduced"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="pythtriptoratptexer-1-1">Given a Pythagorean triple <span class="process-math">\((a,b,c)\)</span> (not necessarily primitive), show that <span class="process-math">\((a/c,b/c)\)</span> is a rational point on <span class="process-math">\(Q\)</span> (see <a href="basic_tools_problems_section.html#pythtrip2circptfig" class="xref" data-knowl="./knowl/xref/pythtrip2circptfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.8.7">Figure 1.8.7</a>).</div></article><article class="exercise exercise-like" id="pythripprimpairwisereduced"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para" id="pythripprimpairwisereduced-1-1">Let <span class="process-math">\((a,b,c)\)</span> be a primitive Pythagorean triple. Show that <span class="process-math">\(a,c\)</span> share no common divisors other than 1.</div></article><article class="exercise exercise-like" id="ratpthasuniqueprimitivepreimageexer"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="ratpthasuniqueprimitivepreimageexer-1-1">
 <div class="para">Let <span class="process-math">\((p,q)\)</span> be a point in <span class="process-math">\(Q\)</span> with both <span class="process-math">\(p,q\)</span> rational. Show that there is a unique reduced Pythagorean triple that maps to <span class="process-math">\((p,q)\)</span> via <span class="process-math">\((a,b,c)\to (a/c,b/c)\text{.}\)</span> Use this to explain why there is a one-to-one correspondence</div>
@@ -505,8 +704,8 @@ numbers } a\gt 1\}.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="stereoprojformulaexer"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="stereoprojformulaexer-1-1">Given a point <span class="process-math">\(P=(x,y)\)</span> on <span class="process-math">\(Q\text{,}\)</span> let <span class="process-math">\(L\)</span> be the line through <span class="process-math">\(P\)</span> and <span class="process-math">\((0,1)\text{.}\)</span>  Let <span class="process-math">\(s(P)\)</span> be the <span class="process-math">\(x\)</span>-coordinate of the intersection of <span class="process-math">\(L\)</span> with the <span class="process-math">\(x\)</span> axis.  See <a href="" class="xref" data-knowl="./knowl/xref/stereoprojfig.html" title="Figure 1.8.8">Figure 1.8.8</a>.  This defines a one-to-one correspondence <span class="process-math">\(s\colon Q\to (1,\infty)\)</span> called <dfn class="terminology">stereographic projection</dfn>. Show that <span class="process-math">\(s\)</span> is given by <span class="process-math">\(s(x,y) =
-\frac{x}{1-y}\text{.}\)</span> <figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereoproj.png" class="contained"></div>
+<div class="para" id="stereoprojformulaexer-1-1">Given a point <span class="process-math">\(P=(x,y)\)</span> on <span class="process-math">\(Q\text{,}\)</span> let <span class="process-math">\(L\)</span> be the line through <span class="process-math">\(P\)</span> and <span class="process-math">\((0,1)\text{.}\)</span>  Let <span class="process-math">\(s(P)\)</span> be the <span class="process-math">\(x\)</span>-coordinate of the intersection of <span class="process-math">\(L\)</span> with the <span class="process-math">\(x\)</span> axis.  See <a href="basic_tools_problems_section.html#stereoprojfig" class="xref" data-knowl="./knowl/xref/stereoprojfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.8.8">Figure 1.8.8</a>.  This defines a one-to-one correspondence <span class="process-math">\(s\colon Q\to (1,\infty)\)</span> called <dfn class="terminology">stereographic projection</dfn>. Show that <span class="process-math">\(s\)</span> is given by <span class="process-math">\(s(x,y) =
+\frac{x}{1-y}\text{.}\)</span> <figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/stereoproj.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.8<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure>
 </div></article><article class="exercise exercise-like" id="inversestereoexer"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
 <div class="para" id="inversestereoexer-1-1">Find a formula for <span class="process-math">\(s^{-1}\colon (1,\infty)\to Q\text{.}\)</span> Verify that your formula really gives an inverse for <span class="process-math">\(s\)</span> by showing that <span class="process-math">\(s^{-1}\of s=\One_{Q}\)</span> and <span class="process-math">\(s\of s^{-1}=\One_{(1,\infty)}\text{.}\)</span>
@@ -527,7 +726,7 @@ numbers } a\gt 1\}.
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
