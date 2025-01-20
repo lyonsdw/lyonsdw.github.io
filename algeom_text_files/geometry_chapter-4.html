@@ -57,7 +57,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -69,33 +69,248 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8b270ccf5298bad1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.d966d31a41778c59.css">
+<style>
+#solvecomplexquadraticsexer-2-1 { counter-set: solvecomplexquadraticsexer-2-1 0; }
+#solvecomplexquadraticsexer-2-1 > li::marker { content: "("counter(solvecomplexquadraticsexer-2-1,lower-alpha)")"; }
+#solvecomplexquadraticsexer-2-1 > li { counter-increment: solvecomplexquadraticsexer-2-1; }
+#complexcircleslines-2-1-1 { counter-set: complexcircleslines-2-1-1 0; }
+#complexcircleslines-2-1-1 > li::marker { content: "("counter(complexcircleslines-2-1-1,lower-alpha)")"; }
+#complexcircleslines-2-1-1 > li { counter-increment: complexcircleslines-2-1-1; }
+#complexnosasrealmatalg-2-1-18 { counter-set: complexnosasrealmatalg-2-1-18 0; }
+#complexnosasrealmatalg-2-1-18 > li::marker { content: "("counter(complexnosasrealmatalg-2-1-18,lower-alpha)")"; }
+#complexnosasrealmatalg-2-1-18 > li { counter-increment: complexnosasrealmatalg-2-1-18; }
+#quaternionsection-5-6-1-1 { counter-set: quaternionsection-5-6-1-1 0; }
+#quaternionsection-5-6-1-1 > li::marker { content: ""counter(quaternionsection-5-6-1-1,decimal)"."; }
+#quaternionsection-5-6-1-1 > li { counter-increment: quaternionsection-5-6-1-1; }
+#quatpolarformdetailsexer-1-1-1 { counter-set: quatpolarformdetailsexer-1-1-1 0; }
+#quatpolarformdetailsexer-1-1-1 > li::marker { content: ""counter(quatpolarformdetailsexer-1-1-1,decimal)"."; }
+#quatpolarformdetailsexer-1-1-1 > li { counter-increment: quatpolarformdetailsexer-1-1-1; }
+#quatrotpropexer-1-1-4 { counter-set: quatrotpropexer-1-1-4 0; }
+#quatrotpropexer-1-1-4 > li::marker { content: "("counter(quatrotpropexer-1-1-4,lower-alpha)")"; }
+#quatrotpropexer-1-1-4 > li { counter-increment: quatrotpropexer-1-1-4; }
+#quatrotcompinvexer-1-2 { counter-set: quatrotcompinvexer-1-2 0; }
+#quatrotcompinvexer-1-2 > li::marker { content: "("counter(quatrotcompinvexer-1-2,lower-alpha)")"; }
+#quatrotcompinvexer-1-2 > li { counter-increment: quatrotcompinvexer-1-2; }
+#equivmodnisequivrelnexer-1-1-1 { counter-set: equivmodnisequivrelnexer-1-1-1 0; }
+#equivmodnisequivrelnexer-1-1-1 > li::marker { content: ""counter(equivmodnisequivrelnexer-1-1-1,decimal)"."; }
+#equivmodnisequivrelnexer-1-1-1 > li { counter-increment: equivmodnisequivrelnexer-1-1-1; }
+#rationalsequivrelnexer-2-1-12 { counter-set: rationalsequivrelnexer-2-1-12 0; }
+#rationalsequivrelnexer-2-1-12 > li::marker { content: "("counter(rationalsequivrelnexer-2-1-12,lower-alpha)")"; }
+#rationalsequivrelnexer-2-1-12 > li { counter-increment: rationalsequivrelnexer-2-1-12; }
+#extra_topics_exercises_section-2-5-3 { counter-set: extra_topics_exercises_section-2-5-3 0; }
+#extra_topics_exercises_section-2-5-3 > li::marker { content: ""counter(extra_topics_exercises_section-2-5-3,decimal)"."; }
+#extra_topics_exercises_section-2-5-3 > li { counter-increment: extra_topics_exercises_section-2-5-3; }
+#diagramexer-2-1-1 { counter-set: diagramexer-2-1-1 0; }
+#diagramexer-2-1-1 > li::marker { content: "("counter(diagramexer-2-1-1,lower-alpha)")"; }
+#diagramexer-2-1-1 > li { counter-increment: diagramexer-2-1-1; }
+#dihedral-reading-exercise-1-3-3 { counter-set: dihedral-reading-exercise-1-3-3 0; }
+#dihedral-reading-exercise-1-3-3 > li::marker { content: ""counter(dihedral-reading-exercise-1-3-3,decimal)"."; }
+#dihedral-reading-exercise-1-3-3 > li { counter-increment: dihedral-reading-exercise-1-3-3; }
+#dihedral-reading-exercise-2-1 { counter-set: dihedral-reading-exercise-2-1 0; }
+#dihedral-reading-exercise-2-1 > li::marker { content: ""counter(dihedral-reading-exercise-2-1,decimal)"."; }
+#dihedral-reading-exercise-2-1 > li { counter-increment: dihedral-reading-exercise-2-1; }
+#rootsofunitygpfacts-1-1-1 { counter-set: rootsofunitygpfacts-1-1-1 0; }
+#rootsofunitygpfacts-1-1-1 > li::marker { content: ""counter(rootsofunitygpfacts-1-1-1,decimal)"."; }
+#rootsofunitygpfacts-1-1-1 > li { counter-increment: rootsofunitygpfacts-1-1-1; }
+#commutativeornotexer-1-1-5 { counter-set: commutativeornotexer-1-1-5 0; }
+#commutativeornotexer-1-1-5 > li::marker { content: "("counter(commutativeornotexer-1-1-5,lower-alpha)")"; }
+#commutativeornotexer-1-1-5 > li { counter-increment: commutativeornotexer-1-1-5; }
+#inverseeltexer-1-1-7 { counter-set: inverseeltexer-1-1-7 0; }
+#inverseeltexer-1-1-7 > li::marker { content: "("counter(inverseeltexer-1-1-7,lower-alpha)")"; }
+#inverseeltexer-1-1-7 > li { counter-increment: inverseeltexer-1-1-7; }
+#cyclicgroups-3-1-8 { counter-set: cyclicgroups-3-1-8 0; }
+#cyclicgroups-3-1-8 > li::marker { content: "("counter(cyclicgroups-3-1-8,lower-alpha)")"; }
+#cyclicgroups-3-1-8 > li { counter-increment: cyclicgroups-3-1-8; }
+#cyclicpermutations-3-1-45 { counter-set: cyclicpermutations-3-1-45 0; }
+#cyclicpermutations-3-1-45 > li::marker { content: "("counter(cyclicpermutations-3-1-45,lower-alpha)")"; }
+#cyclicpermutations-3-1-45 > li { counter-increment: cyclicpermutations-3-1-45; }
+#permtransprodexer-2-1-1 { counter-set: permtransprodexer-2-1-1 0; }
+#permtransprodexer-2-1-1 > li::marker { content: "("counter(permtransprodexer-2-1-1,lower-alpha)")"; }
+#permtransprodexer-2-1-1 > li { counter-increment: permtransprodexer-2-1-1; }
+#cayleytable-2-1-12 { counter-set: cayleytable-2-1-12 0; }
+#cayleytable-2-1-12 > li::marker { content: "("counter(cayleytable-2-1-12,lower-alpha)")"; }
+#cayleytable-2-1-12 > li { counter-increment: cayleytable-2-1-12; }
+#dihedral_subgroup_reading_exercise-1-1-4 { counter-set: dihedral_subgroup_reading_exercise-1-1-4 0; }
+#dihedral_subgroup_reading_exercise-1-1-4 > li::marker { content: ""counter(dihedral_subgroup_reading_exercise-1-1-4,decimal)"."; }
+#dihedral_subgroup_reading_exercise-1-1-4 > li { counter-increment: dihedral_subgroup_reading_exercise-1-1-4; }
+#dihedral_subgroup_reading_exercise-2-1 { counter-set: dihedral_subgroup_reading_exercise-2-1 0; }
+#dihedral_subgroup_reading_exercise-2-1 > li::marker { content: ""counter(dihedral_subgroup_reading_exercise-2-1,decimal)"."; }
+#dihedral_subgroup_reading_exercise-2-1 > li { counter-increment: dihedral_subgroup_reading_exercise-2-1; }
+#subgrouptests-4-1-3 { counter-set: subgrouptests-4-1-3 0; }
+#subgrouptests-4-1-3 > li::marker { content: ""counter(subgrouptests-4-1-3,lower-roman)""; }
+#subgrouptests-4-1-3 > li { counter-increment: subgrouptests-4-1-3; }
+#generators-reading-exer-1-1-1 { counter-set: generators-reading-exer-1-1-1 0; }
+#generators-reading-exer-1-1-1 > li::marker { content: ""counter(generators-reading-exer-1-1-1,decimal)"."; }
+#generators-reading-exer-1-1-1 > li { counter-increment: generators-reading-exer-1-1-1; }
+#generators-reading-exer-2-1 { counter-set: generators-reading-exer-2-1 0; }
+#generators-reading-exer-2-1 > li::marker { content: ""counter(generators-reading-exer-2-1,decimal)"."; }
+#generators-reading-exer-2-1 > li { counter-increment: generators-reading-exer-2-1; }
+#subgpsofzexer-2-1-1 { counter-set: subgpsofzexer-2-1-1 0; }
+#subgpsofzexer-2-1-1 > li::marker { content: "("counter(subgpsofzexer-2-1-1,lower-alpha)")"; }
+#subgpsofzexer-2-1-1 > li { counter-increment: subgpsofzexer-2-1-1; }
+#center-2-1-14 { counter-set: center-2-1-14 0; }
+#center-2-1-14 > li::marker { content: "("counter(center-2-1-14,lower-alpha)")"; }
+#center-2-1-14 > li { counter-increment: center-2-1-14; }
+#cosetspartitionexer-2-1-1 { counter-set: cosetspartitionexer-2-1-1 0; }
+#cosetspartitionexer-2-1-1 > li::marker { content: "("counter(cosetspartitionexer-2-1-1,lower-alpha)")"; }
+#cosetspartitionexer-2-1-1 > li { counter-increment: cosetspartitionexer-2-1-1; }
+#lagrangeconseqexer-2-1-1 { counter-set: lagrangeconseqexer-2-1-1 0; }
+#lagrangeconseqexer-2-1-1 > li::marker { content: "("counter(lagrangeconseqexer-2-1-1,lower-alpha)")"; }
+#lagrangeconseqexer-2-1-1 > li { counter-increment: lagrangeconseqexer-2-1-1; }
+#kerneldefegexer-2-1 { counter-set: kerneldefegexer-2-1 0; }
+#kerneldefegexer-2-1 > li::marker { content: ""counter(kerneldefegexer-2-1,decimal)"."; }
+#kerneldefegexer-2-1 > li { counter-increment: kerneldefegexer-2-1; }
+#homismbasicproperties-2-1-4 { counter-set: homismbasicproperties-2-1-4 0; }
+#homismbasicproperties-2-1-4 > li::marker { content: ""counter(homismbasicproperties-2-1-4,decimal)"."; }
+#homismbasicproperties-2-1-4 > li { counter-increment: homismbasicproperties-2-1-4; }
+#normalsubgroupcharacterization-2-1-3 { counter-set: normalsubgroupcharacterization-2-1-3 0; }
+#normalsubgroupcharacterization-2-1-3 > li::marker { content: ""counter(normalsubgroupcharacterization-2-1-3,decimal)"."; }
+#normalsubgroupcharacterization-2-1-3 > li { counter-increment: normalsubgroupcharacterization-2-1-3; }
+#zmodnascnexer-2-1-5 { counter-set: zmodnascnexer-2-1-5 0; }
+#zmodnascnexer-2-1-5 > li::marker { content: "("counter(zmodnascnexer-2-1-5,lower-alpha)")"; }
+#zmodnascnexer-2-1-5 > li { counter-increment: zmodnascnexer-2-1-5; }
+#conjugationexer-2-12 { counter-set: conjugationexer-2-12 0; }
+#conjugationexer-2-12 > li::marker { content: "("counter(conjugationexer-2-12,lower-alpha)")"; }
+#conjugationexer-2-12 > li { counter-increment: conjugationexer-2-12; }
+#morenormalcharexer-2-1-2 { counter-set: morenormalcharexer-2-1-2 0; }
+#morenormalcharexer-2-1-2 > li::marker { content: "("counter(morenormalcharexer-2-1-2,lower-alpha)")"; }
+#morenormalcharexer-2-1-2 > li { counter-increment: morenormalcharexer-2-1-2; }
+#automorphismexer-2-1-11 { counter-set: automorphismexer-2-1-11 0; }
+#automorphismexer-2-1-11 > li::marker { content: "("counter(automorphismexer-2-1-11,lower-alpha)")"; }
+#automorphismexer-2-1-11 > li { counter-increment: automorphismexer-2-1-11; }
+#actionegexer-1-1-1 { counter-set: actionegexer-1-1-1 0; }
+#actionegexer-1-1-1 > li::marker { content: ""counter(actionegexer-1-1-1,decimal)"."; }
+#actionegexer-1-1-1 > li { counter-increment: actionegexer-1-1-1; }
+#actionegexer-2-1 { counter-set: actionegexer-2-1 0; }
+#actionegexer-2-1 > li::marker { content: ""counter(actionegexer-2-1,decimal)"."; }
+#actionegexer-2-1 > li { counter-increment: actionegexer-2-1; }
+#signofpermexer-2-1-32 { counter-set: signofpermexer-2-1-32 0; }
+#signofpermexer-2-1-32 > li::marker { content: "("counter(signofpermexer-2-1-32,lower-alpha)")"; }
+#signofpermexer-2-1-32 > li { counter-increment: signofpermexer-2-1-32; }
+#gpselfactionexer-2-1-17 { counter-set: gpselfactionexer-2-1-17 0; }
+#gpselfactionexer-2-1-17 > li::marker { content: "("counter(gpselfactionexer-2-1-17,lower-alpha)")"; }
+#gpselfactionexer-2-1-17 > li { counter-increment: gpselfactionexer-2-1-17; }
+#orbitspartitionexer-1-1-2 { counter-set: orbitspartitionexer-1-1-2 0; }
+#orbitspartitionexer-1-1-2 > li::marker { content: "("counter(orbitspartitionexer-1-1-2,lower-alpha)")"; }
+#orbitspartitionexer-1-1-2 > li { counter-increment: orbitspartitionexer-1-1-2; }
+#projspaceandgroupexer-2-18 { counter-set: projspaceandgroupexer-2-18 0; }
+#projspaceandgroupexer-2-18 > li::marker { content: "("counter(projspaceandgroupexer-2-18,lower-alpha)")"; }
+#projspaceandgroupexer-2-18 > li { counter-increment: projspaceandgroupexer-2-18; }
+#unitsinzngpexer-2-1-4 { counter-set: unitsinzngpexer-2-1-4 0; }
+#unitsinzngpexer-2-1-4 > li::marker { content: "("counter(unitsinzngpexer-2-1-4,lower-alpha)")"; }
+#unitsinzngpexer-2-1-4 > li { counter-increment: unitsinzngpexer-2-1-4; }
+#permparityexer-2-1-2 { counter-set: permparityexer-2-1-2 0; }
+#permparityexer-2-1-2 > li::marker { content: "("counter(permparityexer-2-1-2,lower-alpha)")"; }
+#permparityexer-2-1-2 > li { counter-increment: permparityexer-2-1-2; }
+#permparityexer-3-1-1 { counter-set: permparityexer-3-1-1 0; }
+#permparityexer-3-1-1 > li::marker { content: "("counter(permparityexer-3-1-1,lower-alpha)")"; }
+#permparityexer-3-1-1 > li { counter-increment: permparityexer-3-1-1; }
+#semidirect_product_exer-3-1-36 { counter-set: semidirect_product_exer-3-1-36 0; }
+#semidirect_product_exer-3-1-36 > li::marker { content: "("counter(semidirect_product_exer-3-1-36,lower-alpha)")"; }
+#semidirect_product_exer-3-1-36 > li { counter-increment: semidirect_product_exer-3-1-36; }
+#geomdefwarmupexer-2-1-1 { counter-set: geomdefwarmupexer-2-1-1 0; }
+#geomdefwarmupexer-2-1-1 > li::marker { content: "("counter(geomdefwarmupexer-2-1-1,lower-alpha)")"; }
+#geomdefwarmupexer-2-1-1 > li { counter-increment: geomdefwarmupexer-2-1-1; }
+#mobiustransinvertcriterionexer-1-1-1 { counter-set: mobiustransinvertcriterionexer-1-1-1 0; }
+#mobiustransinvertcriterionexer-1-1-1 > li::marker { content: ""counter(mobiustransinvertcriterionexer-1-1-1,decimal)"."; }
+#mobiustransinvertcriterionexer-1-1-1 > li { counter-increment: mobiustransinvertcriterionexer-1-1-1; }
+#littlemobiusexer-1-1-1 { counter-set: littlemobiusexer-1-1-1 0; }
+#littlemobiusexer-1-1-1 > li::marker { content: ""counter(littlemobiusexer-1-1-1,decimal)"."; }
+#littlemobiusexer-1-1-1 > li { counter-increment: littlemobiusexer-1-1-1; }
+#mobiusdecompexer-2-1-1 { counter-set: mobiusdecompexer-2-1-1 0; }
+#mobiusdecompexer-2-1-1 > li::marker { content: "("counter(mobiusdecompexer-2-1-1,lower-alpha)")"; }
+#mobiusdecompexer-2-1-1 > li { counter-increment: mobiusdecompexer-2-1-1; }
+#mobiustargetpracticeexer-1-1-1 { counter-set: mobiustargetpracticeexer-1-1-1 0; }
+#mobiustargetpracticeexer-1-1-1 > li::marker { content: "("counter(mobiustargetpracticeexer-1-1-1,lower-alpha)")"; }
+#mobiustargetpracticeexer-1-1-1 > li { counter-increment: mobiustargetpracticeexer-1-1-1; }
+#symmetricpointexer-2-1-1 { counter-set: symmetricpointexer-2-1-1 0; }
+#symmetricpointexer-2-1-1 > li::marker { content: "("counter(symmetricpointexer-2-1-1,lower-alpha)")"; }
+#symmetricpointexer-2-1-1 > li { counter-increment: symmetricpointexer-2-1-1; }
+#symmetricpointexer-2-1-1-1-2 { counter-set: symmetricpointexer-2-1-1-1-2 0; }
+#symmetricpointexer-2-1-1-1-2 > li::marker { content: ""counter(symmetricpointexer-2-1-1-1-2,lower-roman)"."; }
+#symmetricpointexer-2-1-1-1-2 > li { counter-increment: symmetricpointexer-2-1-1-1-2; }
+#normalformegexer-1-1-1 { counter-set: normalformegexer-1-1-1 0; }
+#normalformegexer-1-1-1 > li::marker { content: "("counter(normalformegexer-1-1-1,lower-alpha)")"; }
+#normalformegexer-1-1-1 > li { counter-increment: normalformegexer-1-1-1; }
+#geometry_chapter-5-5-4-5 { counter-set: geometry_chapter-5-5-4-5 0; }
+#geometry_chapter-5-5-4-5 > li::marker { content: ""counter(geometry_chapter-5-5-4-5,decimal)"."; }
+#geometry_chapter-5-5-4-5 > li { counter-increment: geometry_chapter-5-5-4-5; }
+#hyperbolicmetricprop-1-1-7 { counter-set: hyperbolicmetricprop-1-1-7 0; }
+#hyperbolicmetricprop-1-1-7 > li::marker { content: ""counter(hyperbolicmetricprop-1-1-7,decimal)"."; }
+#hyperbolicmetricprop-1-1-7 > li { counter-increment: hyperbolicmetricprop-1-1-7; }
+#hyperbolictransformulaexer-1-1-2 { counter-set: hyperbolictransformulaexer-1-1-2 0; }
+#hyperbolictransformulaexer-1-1-2 > li::marker { content: "("counter(hyperbolictransformulaexer-1-1-2,lower-alpha)")"; }
+#hyperbolictransformulaexer-1-1-2 > li { counter-increment: hyperbolictransformulaexer-1-1-2; }
+#hyperbolictriangleineqexer-2-1-4 { counter-set: hyperbolictriangleineqexer-2-1-4 0; }
+#hyperbolictriangleineqexer-2-1-4 > li::marker { content: "("counter(hyperbolictriangleineqexer-2-1-4,lower-alpha)")"; }
+#hyperbolictriangleineqexer-2-1-4 > li { counter-increment: hyperbolictriangleineqexer-2-1-4; }
+#upperhalfplanelengthexer-2-1-8 { counter-set: upperhalfplanelengthexer-2-1-8 0; }
+#upperhalfplanelengthexer-2-1-8 > li::marker { content: "("counter(upperhalfplanelengthexer-2-1-8,lower-alpha)")"; }
+#upperhalfplanelengthexer-2-1-8 > li { counter-increment: upperhalfplanelengthexer-2-1-8; }
+#doubasymptriareaexer-2-1-8 { counter-set: doubasymptriareaexer-2-1-8 0; }
+#doubasymptriareaexer-2-1-8 > li::marker { content: "("counter(doubasymptriareaexer-2-1-8,lower-alpha)")"; }
+#doubasymptriareaexer-2-1-8 > li { counter-increment: doubasymptriareaexer-2-1-8; }
+#elliptic_triangle_area_exer-2-1-5 { counter-set: elliptic_triangle_area_exer-2-1-5 0; }
+#elliptic_triangle_area_exer-2-1-5 > li::marker { content: "("counter(elliptic_triangle_area_exer-2-1-5,lower-alpha)")"; }
+#elliptic_triangle_area_exer-2-1-5 > li { counter-increment: elliptic_triangle_area_exer-2-1-5; }
+#projcrossratioexer-2-1-22 { counter-set: projcrossratioexer-2-1-22 0; }
+#projcrossratioexer-2-1-22 > li::marker { content: "("counter(projcrossratioexer-2-1-22,lower-alpha)")"; }
+#projcrossratioexer-2-1-22 > li { counter-increment: projcrossratioexer-2-1-22; }
+#quadricsexer-2-1-8 { counter-set: quadricsexer-2-1-8 0; }
+#quadricsexer-2-1-8 > li::marker { content: "("counter(quadricsexer-2-1-8,lower-alpha)")"; }
+#quadricsexer-2-1-8 > li { counter-increment: quadricsexer-2-1-8; }
+#rotreconcileexer-2-3-3 { counter-set: rotreconcileexer-2-3-3 0; }
+#rotreconcileexer-2-3-3 > li::marker { content: "("counter(rotreconcileexer-2-3-3,lower-alpha)")"; }
+#rotreconcileexer-2-3-3 > li { counter-increment: rotreconcileexer-2-3-3; }
+#pythagthmsexer-2-1-8 { counter-set: pythagthmsexer-2-1-8 0; }
+#pythagthmsexer-2-1-8 > li::marker { content: "("counter(pythagthmsexer-2-1-8,lower-alpha)")"; }
+#pythagthmsexer-2-1-8 > li { counter-increment: pythagthmsexer-2-1-8; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href="http://quantum.lvc.edu/lyons"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href="http://quantum.lvc.edu/lyons"><img src="external/images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="algeom_text-6-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="algeom_text-6-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -106,7 +321,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="geomdefsect.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="geomdefsect.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
       \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
@@ -160,13 +376,13 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -183,8 +399,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-8" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-9" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -223,12 +439,12 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-9" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-10" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-11" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-12" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-7" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-8" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-9" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-10" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-11" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -237,15 +453,15 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-14" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-12" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_chapter-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-12" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-11" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_chapter-6.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-11" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-9" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
@@ -260,14 +476,14 @@ window.MathJax = {
 <div class="toc-title-box"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-7" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-8" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-9" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-5" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-6" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-7" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="geometry_chapter-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Möbius geometry</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Möbius transformations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Fundamental Theorem of Möbius Geometry</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geometry_chapter-4.html#geometry_chapter-4-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Cross ratio</span></a></div></li>
@@ -343,27 +559,27 @@ f(z)= \frac{az+b}{cz+d}\tag{3.2.1}
 <div class="para">where <span class="process-math">\(z\)</span> is a complex variable, <span class="process-math">\(a,b,c,d\)</span> are complex constants, and <span class="process-math">\(ad-bc\neq 0\text{.}\)</span>
 </div>
 </div>
-<details id="mobiustransinvertcriterionexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="mobiustransinvertcriterionexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical" id="mobiustransinvertcriterionexer-1-1"><ol class="decimal">
-<li id="mobiustransinvertcriterionexer-1-1-1-1"><div class="para" id="p-derived-mobiustransinvertcriterionexer-1-1-1-1">Show that if <span class="process-math">\(c=0\text{,}\)</span> then <a href="" class="xref" data-knowl="./knowl/xref/stdlinfractransf.html" title="Equation 3.2.1">(3.2.1)</a> defines a one-to-one and onto map <span class="process-math">\(f\colon \C\to \C\)</span> by finding an explicit inverse <span class="process-math">\(g\)</span> for <span class="process-math">\(f\)</span> and showing that <span class="process-math">\(f\circ g\)</span> and <span class="process-math">\(g\circ f\)</span> are both the identity function on <span class="process-math">\(\C\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="mobiustransinvertcriterionexer-1-1"><ol class="decimal" id="mobiustransinvertcriterionexer-1-1-1">
+<li id="mobiustransinvertcriterionexer-1-1-1-1"><div class="para" id="p-derived-mobiustransinvertcriterionexer-1-1-1-1">Show that if <span class="process-math">\(c=0\text{,}\)</span> then <a href="geometry_chapter-4.html#stdlinfractransf" class="xref" data-knowl="./knowl/xref/stdlinfractransf.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> defines a one-to-one and onto map <span class="process-math">\(f\colon \C\to \C\)</span> by finding an explicit inverse <span class="process-math">\(g\)</span> for <span class="process-math">\(f\)</span> and showing that <span class="process-math">\(f\circ g\)</span> and <span class="process-math">\(g\circ f\)</span> are both the identity function on <span class="process-math">\(\C\text{.}\)</span>
 </div></li>
-<li id="mobiustransinvertcriterionexer-1-1-1-2"><div class="para" id="p-derived-mobiustransinvertcriterionexer-1-1-1-2">Show that if <span class="process-math">\(c\neq 0\text{,}\)</span> then  <a href="" class="xref" data-knowl="./knowl/xref/stdlinfractransf.html" title="Equation 3.2.1">(3.2.1)</a> defines a one-to-one and onto map <span class="process-math">\(f\colon \C\setminus \{-d/c\}\to \C\setminus\{a/c\}\)</span> by finding an explicit inverse <span class="process-math">\(g\)</span> for <span class="process-math">\(f\)</span> and showing that <span class="process-math">\(f\circ g\)</span> is the identity function on <span class="process-math">\(\C\setminus\{a/c\}\)</span> and and <span class="process-math">\(g\circ f\)</span> is the identity function on <span class="process-math">\(\C\setminus \{-d/c\}\text{.}\)</span>
+<li id="mobiustransinvertcriterionexer-1-1-1-2"><div class="para" id="p-derived-mobiustransinvertcriterionexer-1-1-1-2">Show that if <span class="process-math">\(c\neq 0\text{,}\)</span> then  <a href="geometry_chapter-4.html#stdlinfractransf" class="xref" data-knowl="./knowl/xref/stdlinfractransf.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> defines a one-to-one and onto map <span class="process-math">\(f\colon \C\setminus \{-d/c\}\to \C\setminus\{a/c\}\)</span> by finding an explicit inverse <span class="process-math">\(g\)</span> for <span class="process-math">\(f\)</span> and showing that <span class="process-math">\(f\circ g\)</span> is the identity function on <span class="process-math">\(\C\setminus\{a/c\}\)</span> and and <span class="process-math">\(g\circ f\)</span> is the identity function on <span class="process-math">\(\C\setminus \{-d/c\}\text{.}\)</span>
 </div></li>
 <li id="mobiustransinvertcriterionexer-1-1-1-3"><div class="para" id="p-derived-mobiustransinvertcriterionexer-1-1-1-3">For both cases 1 and 2 above, identify precisely where you use the condition <span class="process-math">\(ad-bc\neq 0\text{.}\)</span> Show that, in fact, <span class="process-math">\(f\)</span> is invertible if and only if <span class="process-math">\(ad-bc\neq 0\text{.}\)</span>
 </div></li>
-</ol></div></article></details><div class="para" id="geometry_chapter-4-3-5">A Möbius transformation <span class="process-math">\(f(z)=\frac{az+b}{cz+d}\)</span> determines a one-to-one and onto map of the extended complex plane <span class="process-math">\(\extC\)</span> to itself with the following assignments: if <span class="process-math">\(c=0\text{,}\)</span> we define <span class="process-math">\(f(\infty)=\infty\text{;}\)</span> if <span class="process-math">\(c\neq 0\text{,}\)</span> we define <span class="process-math">\(f(-d/c)=\infty\)</span> and <span class="process-math">\(f(\infty)=a/c\text{.}\)</span>
+</ol></div></article></details><div class="para" id="geometry_chapter-4-3-4">A Möbius transformation <span class="process-math">\(f(z)=\frac{az+b}{cz+d}\)</span> determines a one-to-one and onto map of the extended complex plane <span class="process-math">\(\extC\)</span> to itself with the following assignments: if <span class="process-math">\(c=0\text{,}\)</span> we define <span class="process-math">\(f(\infty)=\infty\text{;}\)</span> if <span class="process-math">\(c\neq 0\text{,}\)</span> we define <span class="process-math">\(f(-d/c)=\infty\)</span> and <span class="process-math">\(f(\infty)=a/c\text{.}\)</span>
 </div>
-<details id="mobiustranscomposeexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="mobiustranscomposeexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="mobiustranscomposeexer-1-1">Show that the composition of two Möbius transformations is a Möbius transformation. Suggestion: First show that the composition has the form <span class="process-math">\(z\to \frac{rz+s}{tz+u}\text{.}\)</span> Next, instead of a brute force calculation to check that <span class="process-math">\(ru-ts\neq 0\text{,}\)</span> use <a href="" class="xref" data-knowl="./knowl/xref/mobiustransinvertcriterionexer.html" title="Checkpoint 3.2.1">Checkpoint 3.2.1</a>.</div></article></details><div class="para" id="geometry_chapter-4-3-8"><article class="definition definition-like" id="mobiusgeomdef"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="mobiustranscomposeexer-1-1">Show that the composition of two Möbius transformations is a Möbius transformation. Suggestion: First show that the composition has the form <span class="process-math">\(z\to \frac{rz+s}{tz+u}\text{.}\)</span> Next, instead of a brute force calculation to check that <span class="process-math">\(ru-ts\neq 0\text{,}\)</span> use <a href="geometry_chapter-4.html#mobiustransinvertcriterionexer" class="xref" data-knowl="./knowl/xref/mobiustransinvertcriterionexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 3.2.1">Checkpoint 3.2.1</a>.</div></article></details><div class="para" id="geometry_chapter-4-3-6"><article class="definition definition-like" id="mobiusgeomdef"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="mobiusgeomdef-1-1">The definitions and Checkpoint exercises above show that the set of all Möbius transformations forms a group under the operation of composition of functions. This group, denoted <span class="process-math">\(\M\)</span>, is called the <dfn class="terminology">Möbius group</dfn>.  <dfn class="terminology">Möbius geometry</dfn> is the pair <span class="process-math">\((\extC,\M)\text{.}\)</span>
 </div></article></div>
-<div class="para" id="geometry_chapter-4-3-9">
+<div class="para" id="geometry_chapter-4-3-7">
 <em class="alert">Note on notational convention:</em> It is customary to use capital letters such as <span class="process-math">\(S,T,U\)</span> to denote Möbius transformations. It is also customary to omit the parentheses, and to write <span class="process-math">\(Tz\)</span> instead of <span class="process-math">\(T(z)\)</span> to denote the value of a Möbius transformation.</div>
-<div class="para logical" id="geometry_chapter-4-3-10">
+<div class="para logical" id="geometry_chapter-4-3-8">
 <div class="para">There is a natural relationship between Möbius group operations and matrix group operations. The map <span class="process-math">\({\mathcal T}\colon
 GL(2,\C)\to \M\)</span> given by</div>
 <div class="displaymath process-math" id="gl2tomobgp">
@@ -388,9 +604,9 @@ PGL(2,\C)\approx \M\text{.}
 \end{equation*}
 </div>
 </div>
-<details id="mobiusgpaspgl2exer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="mobiusgpaspgl2exer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical" id="mobiusgpaspgl2exer-1-1">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="mobiusgpaspgl2exer-1-1">
 <div class="para">Show that the map <span class="process-math">\({\mathcal T}\)</span> is a group homomorphism. Show that the kernel of <span class="process-math">\({\mathcal T}\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -399,22 +615,22 @@ PGL(2,\C)\approx \M\text{.}
 k\neq 0\right\}\text{.}
 \end{equation*}
 </div>
-</div></article></details><div class="para" id="geometry_chapter-4-3-13">Homotheties, rotations, translations, and inversions (see <a href="" class="xref" data-knowl="./knowl/xref/basicplanartrans.html" title="Table 3.1.4: Basic types of transformations \C\to \C">Table 3.1.4</a> in <a href="geomdefsect.html" class="internal" title="Section 3.1: Geometries and models">Section 3.1</a>) are special cases of Möbius transformations. These basic transformations can be viewed as building blocks for general Möbius transformations, as follows. <article class="proposition theorem-like" id="mobiusdecompbasic"><h4 class="heading">
+</div></article></details><div class="para" id="geometry_chapter-4-3-10">Homotheties, rotations, translations, and inversions (see <a href="geomdefsect.html#basicplanartrans" class="xref" data-knowl="./knowl/xref/basicplanartrans.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.1.4: Basic types of transformations \C\to \C">Table 3.1.4</a> in <a href="geomdefsect.html" class="internal" title="Section 3.1: Geometries and models">Section 3.1</a>) are special cases of Möbius transformations. These basic transformations can be viewed as building blocks for general Möbius transformations, as follows. <article class="proposition theorem-like" id="mobiusdecompbasic"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="mobiusdecompbasic-1-1">Every Möbius transformation is a composition of homotheties, rotations, translations, and inversions.</div></article>
 </div>
-<details id="littlemobiusexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="littlemobiusexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para logical" id="littlemobiusexer-1-1"><ol class="decimal">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="littlemobiusexer-1-1"><ol class="decimal" id="littlemobiusexer-1-1-1">
 <li id="littlemobiusexer-1-1-1-1"><div class="para" id="p-derived-littlemobiusexer-1-1-1-1">Identify the values of the coefficients <span class="process-math">\(a,b,c,d\)</span> in a Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> that is a homothety, rotation, translation, and inversion, respectively.</div></li>
 <li id="littlemobiusexer-1-1-1-2"><div class="para" id="p-derived-littlemobiusexer-1-1-1-2">Write a Möbius transformation that does "clockwise rotation by one-quarter rotation about the point <span class="process-math">\(2-i\)</span>".</div></li>
 </ol></div></article></details><article class="corollary theorem-like" id="mobtransconformal"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="mobtransconformal-1-1">Möbius transformations are conformal.</div></article><details id="mobtransconformalexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="para" id="mobtransconformal-1-1">Möbius transformations are conformal.</div></article><details id="mobtransconformalexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="mobtransconformalexer-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/mobiusdecompbasic.html" title="Proposition 3.2.5">Proposition 3.2.5</a> and <a href="" class="xref" data-knowl="./knowl/xref/basictransconformalexer.html" title="Exercise Group 3.1.4.2–5: Angles and conformal transformations.">Exercise Group 3.1.4.2–5</a> to prove <a href="" class="xref" data-knowl="./knowl/xref/mobtransconformal.html" title="Corollary 3.2.7">Corollary 3.2.7</a>.</div></article></details></section><section class="subsection" id="geometry_chapter-4-4"><h3 class="heading hide-type">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="mobtransconformalexer-1-1">Apply <a href="geometry_chapter-4.html#mobiusdecompbasic" class="xref" data-knowl="./knowl/xref/mobiusdecompbasic.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.5">Proposition 3.2.5</a> and <a href="geomdefsect.html#basictransconformalexer" class="xref" data-knowl="./knowl/xref/basictransconformalexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise Group 3.1.4.2–5: Angles and conformal transformations.">Exercise Group 3.1.4.2–5</a> to prove <a href="geometry_chapter-4.html#mobtransconformal" class="xref" data-knowl="./knowl/xref/mobtransconformal.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.2.7">Corollary 3.2.7</a>.</div></article></details></section><section class="subsection" id="geometry_chapter-4-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius Geometry</span>
 </h3>
 <div class="para logical" id="geometry_chapter-4-4-2">
@@ -427,20 +643,20 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 <div class="para">satisfies <span class="process-math">\(Tz_1=1,Tz_2=0,Tz_3=\infty\text{.}\)</span>
 </div>
 </div>
-<details id="basecasemob10inftyformexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="basecasemob10inftyformexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="basecasemob10inftyformexer-1-1">Verify that <a href="" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" title="Equation 3.2.3">(3.2.3)</a> satisfies <span class="process-math">\(Tz_1=1,Tz_2=0,Tz_3=\infty\text{.}\)</span>
-</div></article></details><div class="para" id="geometry_chapter-4-4-4">It is easy to adapt <a href="" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" title="Equation 3.2.3">(3.2.3)</a> to the extended complex plane, where one of the <span class="process-math">\(z_i\)</span> may be the point at infinity.</div>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="basecasemob10inftyformexer-1-1">Verify that <a href="geometry_chapter-4.html#mob10inftyform" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.3">(3.2.3)</a> satisfies <span class="process-math">\(Tz_1=1,Tz_2=0,Tz_3=\infty\text{.}\)</span>
+</div></article></details><div class="para" id="geometry_chapter-4-4-4">It is easy to adapt <a href="geometry_chapter-4.html#mob10inftyform" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.3">(3.2.3)</a> to the extended complex plane, where one of the <span class="process-math">\(z_i\)</span> may be the point at infinity.</div>
 <div class="para" id="geometry_chapter-4-4-5"><article class="lemma theorem-like" id="std3ptsetlemma"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Any three-point set is congruent to <span class="process-math">\(\{1,0,\infty\}\)</span>.</span>
 </h4>
 <div class="para" id="std3ptsetlemma-2-1">Let <span class="process-math">\(z_1,z_2,z_3\)</span> be distinct points in the extended complex plane. There exists a Möbius transformation <span class="process-math">\(T\)</span> such that <span class="process-math">\(Tz_1=1,Tz_2=0,Tz_3=\infty\text{.}\)</span>
 </div></article></div>
-<details id="std3ptsetlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="std3ptsetlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="std3ptsetlemmaexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/std3ptsetlemma.html" title="Lemma 3.2.10: Any three-point set is congruent to \{1,0,\infty\}">Lemma 3.2.10</a> by finding explicit formulas for <span class="process-math">\(T\)</span> for each of the three cases <span class="process-math">\(z_1=\infty\text{,}\)</span> <span class="process-math">\(z_2=\infty\)</span> and <span class="process-math">\(z_3=\infty\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="std3ptsetlemmaexer-1-1">Prove <a href="geometry_chapter-4.html#std3ptsetlemma" class="xref" data-knowl="./knowl/xref/std3ptsetlemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.10: Any three-point set is congruent to \{1,0,\infty\}">Lemma 3.2.10</a> by finding explicit formulas for <span class="process-math">\(T\)</span> for each of the three cases <span class="process-math">\(z_1=\infty\text{,}\)</span> <span class="process-math">\(z_2=\infty\)</span> and <span class="process-math">\(z_3=\infty\text{.}\)</span>
 </div>
-<div class="solutions"><details id="std3ptsetlemmaexer-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para logical" id="std3ptsetlemmaexer-2-1"><div class="displaymath process-math" id="std3ptsetlemmaexer-2-1-1">
+<div class="solutions"><details id="std3ptsetlemmaexer-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="std3ptsetlemmaexer-2-1"><div class="displaymath process-math" id="std3ptsetlemmaexer-2-1-1">
 \begin{align*}
 (z_1=\infty) \amp \hspace{.2in}\amp Tz=  \frac{z-z_2}{z-z_3}\\
 (z_2=\infty) \amp \amp Tz=  \frac{z_1-z_3}{z-z_3}\\
@@ -451,10 +667,10 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span>
 </h4>
 <div class="para" id="threefixptsisidlemma-1-1">If a Möbius transformation has more than two fixed points, then it is the identity transformation.</div></article></div>
-<details id="threefixptsisidlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="threefixptsisidlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="threefixptsisidlemmaexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/threefixptsisidlemma.html" title="Lemma 3.2.12">Lemma 3.2.12</a>.</div>
-<div class="solutions"><details id="threefixptsisidlemmaexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="threefixptsisidlemmaexer-2-1">Solve <span class="process-math">\(z=\frac{az+b}{cz+d}\text{.}\)</span> You will need to consider cases.</div></div></details></div></article></details><div class="para" id="geometry_chapter-4-4-11"><article class="proposition theorem-like" id="ftomg"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="threefixptsisidlemmaexer-1-1">Prove <a href="geometry_chapter-4.html#threefixptsisidlemma" class="xref" data-knowl="./knowl/xref/threefixptsisidlemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.12">Lemma 3.2.12</a>.</div>
+<div class="solutions"><details id="threefixptsisidlemmaexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="threefixptsisidlemmaexer-2-1">Solve <span class="process-math">\(z=\frac{az+b}{cz+d}\text{.}\)</span> You will need to consider cases.</div></div></details></div></article></details><div class="para" id="geometry_chapter-4-4-10"><article class="proposition theorem-like" id="ftomg"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius Geometry.</span>
 </h4>
 <div class="para" id="ftomg-3-1">A Möbius transformation is completely determined by any three input-output pairs. This means that for any triple of distinct input values <span class="process-math">\(z_1,z_2,z_3\)</span> in <span class="process-math">\(\extC\)</span> and any triple of distinct output values <span class="process-math">\(w_1,w_2,w_3\)</span> in <span class="process-math">\(\extC\text{,}\)</span> there is a unique <span class="process-math">\(T\in \M\)</span> such that <span class="process-math">\(Tz_i=w_i\)</span> for <span class="process-math">\(i=1,2,3\text{.}\)</span>
@@ -463,7 +679,7 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 </h3>
 <div class="para logical" id="geometry_chapter-4-5-2">
 <div class="para">Given three distinct points <span class="process-math">\(z_1,z_2,z_3\)</span> in <span class="process-math">\(\extC\text{,}\)</span> we write <span class="process-math">\((\cdot,z_1,z_2,z_3)\)</span> to denote the unique Möbius transformation that satisfies <span class="process-math">\(z_1\to
-1\text{,}\)</span> <span class="process-math">\(z_2\to 0\text{,}\)</span> and <span class="process-math">\(z_3\to \infty\)</span> (the existence and uniqueness of this transformation is guaranteed by the Fundamental Theorem of Möbius Geometry). We write <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> to denote the image of <span class="process-math">\(z_0\)</span> under <span class="process-math">\((\cdot,z_1,z_2,z_3)\text{.}\)</span> The expression <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> is called the <dfn class="terminology">cross ratio</dfn> of the 4-tuple <span class="process-math">\(z_0,z_1,z_2,z_3\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" title="Equation 3.2.3">(3.2.3)</a>, we have the following explicit formula for the cross ratio.</div>
+1\text{,}\)</span> <span class="process-math">\(z_2\to 0\text{,}\)</span> and <span class="process-math">\(z_3\to \infty\)</span> (the existence and uniqueness of this transformation is guaranteed by the Fundamental Theorem of Möbius Geometry). We write <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> to denote the image of <span class="process-math">\(z_0\)</span> under <span class="process-math">\((\cdot,z_1,z_2,z_3)\text{.}\)</span> The expression <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> is called the <dfn class="terminology">cross ratio</dfn> of the 4-tuple <span class="process-math">\(z_0,z_1,z_2,z_3\text{.}\)</span> By <a href="geometry_chapter-4.html#mob10inftyform" class="xref" data-knowl="./knowl/xref/mob10inftyform.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.3">(3.2.3)</a>, we have the following explicit formula for the cross ratio.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mob10inftyform.html" id="crossratiofracform">
 \begin{equation}
 (z_0,z_1,z_2,z_3) = \frac{z_0-z_2}{z_0-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.4}
@@ -481,7 +697,7 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 (z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).
 \end{equation*}
 </div>
-</div></article><details id="crossratioinvariant-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">The transformations <span class="process-math">\((\cdot,z_1,z_2,z_3)\)</span> and <span class="process-math">\((\cdot,Tz_1,Tz_2,Tz_3)\circ T\)</span> both send <span class="process-math">\(z_1\to 1\text{,}\)</span> <span class="process-math">\(z_2\to 0\text{,}\)</span> and <span class="process-math">\(z_3\to \infty\text{,}\)</span> so they must be equal, by the Fundamental Theorem. Now apply both transformations to <span class="process-math">\(z_0\text{.}\)</span></article></details></section><section class="subsection" id="geometry_chapter-4-6"><h3 class="heading hide-type">
+</div></article><details id="crossratioinvariant-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\((\cdot,z_1,z_2,z_3)\)</span><span class="process-math">\((\cdot,Tz_1,Tz_2,Tz_3)\circ T\)</span><span class="process-math">\(z_1\to 1\text{,}\)</span><span class="process-math">\(z_2\to 0\text{,}\)</span><span class="process-math">\(z_3\to \infty\text{,}\)</span><span class="process-math">\(z_0\text{.}\)</span></article></details></section><section class="subsection" id="geometry_chapter-4-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="space"> </span><span class="title">Clines (generalized circles)</span>
 </h3>
 <div class="para" id="geometry_chapter-4-6-2">A Euclidean circle or straight line is called a <dfn class="terminology">cline</dfn> (pronounced "kline") or <dfn class="terminology">generalized circle</dfn>. The propositions and corollaries in this subsection show that the set of all clines is a single congruence class of figures in Möbius geometry.</div>
@@ -492,21 +708,24 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 </div></article><article class="corollary theorem-like" id="crossratiorealcriterion"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="crossratiorealcriterion-1-1">The cross ratio <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> is real if and only if <span class="process-math">\(z_0,z_1,z_2,z_3\)</span> lie on a Euclidean circle or straight line.</div></article><details id="crossratiorealcriterionexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="para" id="crossratiorealcriterion-1-1">The cross ratio <span class="process-math">\((z_0,z_1,z_2,z_3)\)</span> is real if and only if <span class="process-math">\(z_0,z_1,z_2,z_3\)</span> lie on a Euclidean circle or straight line.</div></article><details id="crossratiorealcriterionexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.18</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="crossratiorealcriterionexer-1-1">Explain how <a href="" class="xref" data-knowl="./knowl/xref/crossratiorealcriterion.html" title="Corollary 3.2.17">Corollary 3.2.17</a> follows from <a href="" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div></article></details><article class="corollary theorem-like" id="clinesinvariant"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="crossratiorealcriterionexer-1-1">Explain how <a href="geometry_chapter-4.html#crossratiorealcriterion" class="xref" data-knowl="./knowl/xref/crossratiorealcriterion.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.2.17">Corollary 3.2.17</a> follows from <a href="geometry_chapter-4.html#mobinvrealisclineprop" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div></article></details><article class="corollary theorem-like" id="clinesinvariant"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.19</span><span class="period">.</span>
 </h4>
-<div class="para" id="clinesinvariant-1-1">Let <span class="process-math">\(C\)</span> be a Euclidean circle or straight line in <span class="process-math">\(\extC\)</span> and let <span class="process-math">\(T\)</span> be any Möbius transformation. Then <span class="process-math">\(T(C)\)</span> is a Euclidean circle or straight line.</div></article><details id="clinesinvariantexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="para" id="clinesinvariant-1-1">Let <span class="process-math">\(C\)</span> be a Euclidean circle or straight line in <span class="process-math">\(\extC\)</span> and let <span class="process-math">\(T\)</span> be any Möbius transformation. Then <span class="process-math">\(T(C)\)</span> is a Euclidean circle or straight line.</div></article><details id="clinesinvariantexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.20</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="clinesinvariantexer-1-1">Explain how <a href="" class="xref" data-knowl="./knowl/xref/clinesinvariant.html" title="Corollary 3.2.19">Corollary 3.2.19</a> follows from <a href="" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div>
-<div class="solutions"><details id="clinesinvariantexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Let <span class="process-math">\(z_1,z_2,z_3\)</span> be three points on <span class="process-math">\(C\)</span> and let <span class="process-math">\(w_1=Tz_1,w_2=Tz_2,w_3=Tz_3\text{.}\)</span> Let <span class="process-math">\(U=(\cdot,z_1,z_2,z_3)\)</span> and let <span class="process-math">\(V=(\cdot,w_1,w_2,w_3)\text{.}\)</span> Explain why <span class="process-math">\(T=V^{-1}U\)</span> and hence that <span class="process-math">\(T(C)=V^{-1}U(C)=V^{-1}(\extR)\)</span> must be a cline.</div></details></div></article></details><article class="corollary theorem-like" id="clinescongruent"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="clinesinvariantexer-1-1">Explain how <a href="geometry_chapter-4.html#clinesinvariant" class="xref" data-knowl="./knowl/xref/clinesinvariant.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.2.19">Corollary 3.2.19</a> follows from <a href="geometry_chapter-4.html#mobinvrealisclineprop" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div>
+<div class="solutions"><details id="clinesinvariantexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(z_1,z_2,z_3\)</span><span class="process-math">\(C\)</span><span class="process-math">\(w_1=Tz_1,w_2=Tz_2,w_3=Tz_3\text{.}\)</span><span class="process-math">\(U=(\cdot,z_1,z_2,z_3)\)</span><span class="process-math">\(V=(\cdot,w_1,w_2,w_3)\text{.}\)</span><span class="process-math">\(T=V^{-1}U\)</span><span class="process-math">\(T(C)=V^{-1}U(C)=V^{-1}(\extR)\)</span>
+</div></details></div></article></details><article class="corollary theorem-like" id="clinescongruent"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="clinescongruent-1-1">All clines are congruent in Möbius geometry.</div></article><details id="clinescongruentexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<div class="para" id="clinescongruent-1-1">All clines are congruent in Möbius geometry.</div></article><details id="clinescongruentexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.22</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="clinescongruentexer-1-1">Explain how <a href="" class="xref" data-knowl="./knowl/xref/clinescongruent.html" title="Corollary 3.2.21">Corollary 3.2.21</a> follows from <a href="" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div>
-<div class="solutions"><details id="clinescongruentexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Start here: Let <span class="process-math">\(C,D\)</span> be two clines. Let <span class="process-math">\(z_1,z_2,z_3\)</span> be three points on <span class="process-math">\(C\)</span> and let <span class="process-math">\(w_1,w_2,w_3\)</span> be three points on <span class="process-math">\(D\text{.}\)</span> Let <span class="process-math">\(U=(\cdot,z_1,z_2,z_3)\)</span> and let <span class="process-math">\(V=(\cdot,w_1,w_2,w_3)\text{,}\)</span> and let <span class="process-math">\(T=V^{-1}U\text{.}\)</span> Explain why <span class="process-math">\(T\)</span> takes <span class="process-math">\(C\)</span> to <span class="process-math">\(D\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="clinescongruentexer-1-1">Explain how <a href="geometry_chapter-4.html#clinescongruent" class="xref" data-knowl="./knowl/xref/clinescongruent.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 3.2.21">Corollary 3.2.21</a> follows from <a href="geometry_chapter-4.html#mobinvrealisclineprop" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.16">Proposition 3.2.16</a>.</div>
+<div class="solutions"><details id="clinescongruentexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(C,D\)</span><span class="process-math">\(z_1,z_2,z_3\)</span><span class="process-math">\(C\)</span><span class="process-math">\(w_1,w_2,w_3\)</span><span class="process-math">\(D\text{.}\)</span><span class="process-math">\(U=(\cdot,z_1,z_2,z_3)\)</span><span class="process-math">\(V=(\cdot,w_1,w_2,w_3)\text{,}\)</span><span class="process-math">\(T=V^{-1}U\text{.}\)</span><span class="process-math">\(T\)</span><span class="process-math">\(C\)</span><span class="process-math">\(D\text{.}\)</span>
 </div></details></div></article></details></section><section class="subsection" id="geometry_chapter-4-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="space"> </span><span class="title">Symmetry with respect to a cline</span>
 </h3>
@@ -517,16 +736,16 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\tag{3.2.5}
 \end{equation}
 </div>
-<div class="para">where <span class="process-math">\(\conj\colon \extC\to \extC\)</span> is the extension of the conjugation map to the extended complex plane that sends <span class="process-math">\(\infty\to \infty^\ast=\infty\text{.}\)</span> The idea is to map <span class="process-math">\(C\)</span> to the real line via <span class="process-math">\(T\text{,}\)</span> then conjugate, then map the real line back to <span class="process-math">\(C\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/symmetric_pt_fig.html" title="Figure 3.2.23">Figure 3.2.23</a>.</div>
+<div class="para">where <span class="process-math">\(\conj\colon \extC\to \extC\)</span> is the extension of the conjugation map to the extended complex plane that sends <span class="process-math">\(\infty\to \infty^\ast=\infty\text{.}\)</span> The idea is to map <span class="process-math">\(C\)</span> to the real line via <span class="process-math">\(T\text{,}\)</span> then conjugate, then map the real line back to <span class="process-math">\(C\text{.}\)</span> See <a href="geometry_chapter-4.html#symmetric_pt_fig" class="xref" data-knowl="./knowl/xref/symmetric_pt_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.23">Figure 3.2.23</a>.</div>
 </div>
-<figure class="figure figure-like" id="symmetric_pt_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/symmetric_pt2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.23<span class="period">.</span></span><span class="space"> </span>Symmetric points <span class="process-math">\(z,z^{\ast C}\)</span> with respect to the circle <span class="process-math">\(C\)</span></figcaption></figure><details id="geometry_chapter-4-7-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<figure class="figure figure-like" id="symmetric_pt_fig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/symmetric_pt2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.23<span class="period">.</span></span><span class="space"> </span>Symmetric points <span class="process-math">\(z,z^{\ast C}\)</span> with respect to the circle <span class="process-math">\(C\)</span></figcaption></figure><details id="geometry_chapter-4-7-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.24</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that the symmetric point of a symmetric point is the point you started with. That is, show that <span class="process-math">\((z^{\ast C})^{\ast C}=z\text{.}\)</span> This allows us to speak of "a pair of symmetric points" without ambiguity.<div class="solutions"><details id="geometry_chapter-4-7-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><span class="process-math">\((T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
+</h4></summary><article class="exercise exercise-like knowl__content">Show that the symmetric point of a symmetric point is the point you started with. That is, show that <span class="process-math">\((z^{\ast C})^{\ast C}=z\text{.}\)</span> This allows us to speak of "a pair of symmetric points" without ambiguity.<div class="solutions"><details id="geometry_chapter-4-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><span class="process-math">\((T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
 \conj\circ T) = \Id\)</span></div></details></div></article></details><article class="proposition theorem-like" id="symmptindeppts"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="symmptindeppts-1-1">The definition <a href="" class="xref" data-knowl="./knowl/xref/symmptdef.html" title="Equation 3.2.5">(3.2.5)</a> of <span class="process-math">\(z^{\ast C}\)</span> depends only on the cline <span class="process-math">\(C\text{,}\)</span> and not on the three points <span class="process-math">\(z_1,z_2,z_3\text{.}\)</span>
+<div class="para" id="symmptindeppts-1-1">The definition <a href="geometry_chapter-4.html#symmptdef" class="xref" data-knowl="./knowl/xref/symmptdef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.5">(3.2.5)</a> of <span class="process-math">\(z^{\ast C}\)</span> depends only on the cline <span class="process-math">\(C\text{,}\)</span> and not on the three points <span class="process-math">\(z_1,z_2,z_3\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="symmptinvariantprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.26</span><span class="period">.</span>
 </h4>
@@ -537,11 +756,12 @@ z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\tag{3.2.5}
 (Sz)^{\ast S(C)} = S(z^{\ast C}).
 \end{equation*}
 </div>
-</div></article><details id="symmptinvariantprop-2" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Let <span class="process-math">\(z_1,z_2,z_3\)</span> be three points on <span class="process-math">\(C\text{,}\)</span> so that <span class="process-math">\(Sz_1,Sz_2,Sz_3\)</span> are three points on <span class="process-math">\(S(C)\text{.}\)</span> Let <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\)</span> and let <span class="process-math">\(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\)</span> By invariance of the cross ratio, we have<div class="displaymath process-math">
+</div></article><details id="symmptinvariantprop-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(z_1,z_2,z_3\)</span><span class="process-math">\(C\text{,}\)</span><span class="process-math">\(Sz_1,Sz_2,Sz_3\)</span><span class="process-math">\(S(C)\text{.}\)</span><span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\)</span><span class="process-math">\(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\)</span><div class="displaymath process-math">
 \begin{equation*}
 (U\circ S)z=Tz\text{.}
 \end{equation*}
-</div>Thus we have<div class="displaymath process-math" id="symmptinvariantprop-2-8">
+</div>
+<div class="displaymath process-math" id="symmptinvariantprop-2-8">
 \begin{align*}
 (Sz)^{\ast S(C)} \amp = (U^{-1}\circ \conj\circ
 U)(Sz) \;\; \text{(by definition)}\\
@@ -552,7 +772,7 @@ U\circ S)(z)\\
 \amp = S(T^{-1}\circ \conj \circ T)(z)\\
 \amp = S(z^{\ast C})
 \end{align*}
-</div>as desired.</article></details></section><section class="subsection" id="normalformssubsect"><h3 class="heading hide-type">
+</div></article></details></section><section class="subsection" id="normalformssubsect"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="space"> </span><span class="title">Normal forms</span>
 </h3>
 <div class="para" id="normalformssubsect-2">We conclude this section on Möbius geometry with a discussion of the <dfn class="terminology">normal form</dfn> of a Möbius transformation. We begin with a Lemma.</div>
@@ -562,7 +782,7 @@ U\circ S)(z)\\
 <div class="para" id="normalformlemma-1-1">If a Möbius transformation has exactly two fixed points <span class="process-math">\(0\)</span> and <span class="process-math">\(\infty\text{,}\)</span> then it has the form <span class="process-math">\(z\to \alpha z\)</span> for some nonzero <span class="process-math">\(\alpha\in
 \C\text{.}\)</span> If a Möbius transformation has a single fixed point at <span class="process-math">\(\infty\text{,}\)</span> then it has the form <span class="process-math">\(z\to z+\beta\)</span> for some nonzero <span class="process-math">\(\beta\in \C\text{.}\)</span>
 </div></article><div class="para logical" id="normalformssubsect-4">
-<div class="para">Now suppose that a Möbius transformation <span class="process-math">\(T\)</span> has two fixed points, <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> Let <span class="process-math">\(S\)</span> be given by <span class="process-math">\(Sz = \frac{z-p}{z-q}\text{.}\)</span> Let <span class="process-math">\(w=Sz\)</span> and let <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> be the transformation of the <span class="process-math">\(w\)</span>-plane that is  conjugate to <span class="process-math">\(T\)</span> via <span class="process-math">\(S\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/stereolifts.html" title="Exercise Group 1.3.4.3–6: Transformations that are conjugate via stereographic projection">Exercise Group 1.3.4.3–6</a>). It is easy to check that <span class="process-math">\(U\)</span> has exactly two fixed points <span class="process-math">\(0\)</span> and <span class="process-math">\(\infty\text{.}\)</span> Applying the previous Lemma, we have <span class="process-math">\(Uw=\alpha w\)</span> for some nonzero <span class="process-math">\(\alpha\in
+<div class="para">Now suppose that a Möbius transformation <span class="process-math">\(T\)</span> has two fixed points, <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> Let <span class="process-math">\(S\)</span> be given by <span class="process-math">\(Sz = \frac{z-p}{z-q}\text{.}\)</span> Let <span class="process-math">\(w=Sz\)</span> and let <span class="process-math">\(U=S\circ T\circ S^{-1}\)</span> be the transformation of the <span class="process-math">\(w\)</span>-plane that is  conjugate to <span class="process-math">\(T\)</span> via <span class="process-math">\(S\)</span> (see <a href="stereoprojsect.html#stereolifts" class="xref" data-knowl="./knowl/xref/stereolifts.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise Group 1.3.4.3–6: Transformations that are conjugate via stereographic projection">Exercise Group 1.3.4.3–6</a>). It is easy to check that <span class="process-math">\(U\)</span> has exactly two fixed points <span class="process-math">\(0\)</span> and <span class="process-math">\(\infty\text{.}\)</span> Applying the previous Lemma, we have <span class="process-math">\(Uw=\alpha w\)</span> for some nonzero <span class="process-math">\(\alpha\in
 \C\text{.}\)</span> Applying both sides of <span class="process-math">\(S\circ T=U\circ S\)</span> to <span class="process-math">\(z\text{,}\)</span> we have the following <em class="emphasis">normal form</em> for <span class="process-math">\(T\text{.}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stereolifts.html" id="normalform2fixedpts">
@@ -622,14 +842,14 @@ U\circ S)(z)\\
 </table></div></figure></div></section><section class="subsection" id="geometry_chapter-4-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="space"> </span><span class="title">Steiner circles</span>
 </h3>
-<figure class="figure figure-like" id="twofixedptgrid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/2fixedptgrid.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.29<span class="period">.</span></span><span class="space"> </span>The polar coordinate grid and Steiner circle coordinate grid</figcaption></figure><figure class="figure figure-like" id="degenerate_grid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/degenerate_grid_lines.png" class="contained"></div>
+<figure class="figure figure-like" id="twofixedptgrid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/2fixedptgrid.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.29<span class="period">.</span></span><span class="space"> </span>The polar coordinate grid and Steiner circle coordinate grid</figcaption></figure><figure class="figure figure-like" id="degenerate_grid_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/degenerate_grid_lines.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.30<span class="period">.</span></span><span class="space"> </span>Degenerate coordinate grid lines and degenerate Steiner circles</figcaption></figure><div class="para" id="geometry_chapter-4-9-4">The discussion of normal forms show that any non-identity Möbius transformation is conjugate to one of two basic forms, <span class="process-math">\(w\to \alpha w\)</span> or <span class="process-math">\(w\to w+\beta\text{.}\)</span> The natural coordinate system for depicting the action of <span class="process-math">\(w\to
-\alpha w\)</span> is standard polar coordinates. See <a href="" class="xref" data-knowl="./knowl/xref/twofixedptgrid_fig.html" title="Figure 3.2.29">Figure 3.2.29</a>. A homothety is a flow along radial lines and a rotation is a flow around polar circles. The natural "degenerate" coordinate system for depicting a translation <span class="process-math">\(w\to
-w+\beta\)</span> is a family of lines parallel to the line that contains the origin and <span class="process-math">\(\beta\text{.}\)</span> A translation by <span class="process-math">\(\beta\)</span> is a flow along these parallel lines. See <a href="" class="xref" data-knowl="./knowl/xref/degenerate_grid_fig.html" title="Figure 3.2.30">Figure 3.2.30</a>.</div>
-<div class="para" id="geometry_chapter-4-9-5">Pulling the polar and degenerate coordinate grids back to the <span class="process-math">\(z\)</span>-plane by <span class="process-math">\(S^{-1}\)</span> leads to coordinate grids called <dfn class="terminology">Steiner circles</dfn>.<details class="ptx-footnote" aria-live="polite" id="geometry_chapter-4-9-5-5"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="geometry_chapter-4-9-5-5">The convention for which Steiner circles are considered "first" or "second" kinds is not universal. Here we follow the convention used by Ahlfors <a href="" class="xref" data-knowl="./knowl/xref/ahlfors_complex_analysis.html" title="Bibliographic Entry 1: Complex Analysis: An Introduction to the Theory of Analytic Functions of One Complex Variable">[1]</a> and Henle <a href="" class="xref" data-knowl="./knowl/xref/henle_modern_geometries.html" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.</div></details> In the case where <span class="process-math">\(T\)</span> has two fixed points <span class="process-math">\(p,q\text{,}\)</span> the conjugating map <span class="process-math">\(Sz=\frac{z-p}{z-q}\)</span> takes <span class="process-math">\(p\to 0\text{,}\)</span> <span class="process-math">\(q\to
-\infty\text{.}\)</span> Therefore <span class="process-math">\(S^{-1}\)</span> maps <span class="process-math">\(0\to p\)</span> and <span class="process-math">\(\infty \to q\text{.}\)</span> The transformation <span class="process-math">\(S^{-1}\)</span> maps radial lines in the <span class="process-math">\(w\)</span>-plane to clines in the <span class="process-math">\(z\)</span>-plane that contain <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> called <dfn class="terminology">Steiner circles of the first kind</dfn> and <span class="process-math">\(S^{-1}\)</span> maps polar circles in the <span class="process-math">\(w\)</span>-plane to clines in the <span class="process-math">\(z\)</span>-plane called <dfn class="terminology">Steiner circles of the second kind</dfn> or <dfn class="terminology">circles of Apollonius</dfn>. See <a href="" class="xref" data-knowl="./knowl/xref/twofixedptgrid_fig.html" title="Figure 3.2.29">Figure 3.2.29</a>.</div>
-<div class="para" id="geometry_chapter-4-9-6">In the case where <span class="process-math">\(T\)</span> has one fixed point <span class="process-math">\(p\text{,}\)</span> the conjugating map <span class="process-math">\(Sz=\frac{1}{z-p}\)</span> sends <span class="process-math">\(p\to \infty\text{,}\)</span> so <span class="process-math">\(S^{-1}\)</span> maps <span class="process-math">\(\infty \to p\text{,}\)</span> and <span class="process-math">\(S^{-1}\)</span> maps lines in the <span class="process-math">\(w\)</span>-plane that are parallel to the line through <span class="process-math">\(0\)</span> and <span class="process-math">\(\beta\)</span> to clines in the <span class="process-math">\(z\)</span>-plane that contain <span class="process-math">\(p\text{.}\)</span> Every cline in this family is tangent to every other cline in this family at exactly the one point <span class="process-math">\(p\text{.}\)</span> Clines in this family are called <dfn class="terminology">degenerate Steiner circles</dfn>. See <a href="" class="xref" data-knowl="./knowl/xref/degenerate_grid_fig.html" title="Figure 3.2.30">Figure 3.2.30</a>. <a href="" class="xref" data-knowl="./knowl/xref/steinercirclesummary.html" title="Table 3.2.31: Summary of Steiner circle pictures of Möbius transformations">Table 3.2.31</a> summarizes the graphical depiction of Möbius transformations.</div>
+\alpha w\)</span> is standard polar coordinates. See <a href="geometry_chapter-4.html#twofixedptgrid_fig" class="xref" data-knowl="./knowl/xref/twofixedptgrid_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.29">Figure 3.2.29</a>. A homothety is a flow along radial lines and a rotation is a flow around polar circles. The natural "degenerate" coordinate system for depicting a translation <span class="process-math">\(w\to
+w+\beta\)</span> is a family of lines parallel to the line that contains the origin and <span class="process-math">\(\beta\text{.}\)</span> A translation by <span class="process-math">\(\beta\)</span> is a flow along these parallel lines. See <a href="geometry_chapter-4.html#degenerate_grid_fig" class="xref" data-knowl="./knowl/xref/degenerate_grid_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.30">Figure 3.2.30</a>.</div>
+<div class="para" id="geometry_chapter-4-9-5">Pulling the polar and degenerate coordinate grids back to the <span class="process-math">\(z\)</span>-plane by <span class="process-math">\(S^{-1}\)</span> leads to coordinate grids called <dfn class="terminology">Steiner circles</dfn>.<details class="ptx-footnote" aria-live="polite" id="geometry_chapter-4-9-5-5"><summary class="ptx-footnote__number" title="Footnote 3.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="geometry_chapter-4-9-5-5">The convention for which Steiner circles are considered "first" or "second" kinds is not universal. Here we follow the convention used by Ahlfors <a href="algeom_text-6-2.html#ahlfors_complex_analysis" class="xref" data-knowl="./knowl/xref/ahlfors_complex_analysis.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 1: Complex Analysis: An Introduction to the Theory of Analytic Functions of One Complex Variable">[1]</a> and Henle <a href="algeom_text-6-2.html#henle_modern_geometries" class="xref" data-knowl="./knowl/xref/henle_modern_geometries.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4: Modern Geometries: Non-Euclidean, Projective, and Discrete">[4]</a>.</div></details> In the case where <span class="process-math">\(T\)</span> has two fixed points <span class="process-math">\(p,q\text{,}\)</span> the conjugating map <span class="process-math">\(Sz=\frac{z-p}{z-q}\)</span> takes <span class="process-math">\(p\to 0\text{,}\)</span> <span class="process-math">\(q\to
+\infty\text{.}\)</span> Therefore <span class="process-math">\(S^{-1}\)</span> maps <span class="process-math">\(0\to p\)</span> and <span class="process-math">\(\infty \to q\text{.}\)</span> The transformation <span class="process-math">\(S^{-1}\)</span> maps radial lines in the <span class="process-math">\(w\)</span>-plane to clines in the <span class="process-math">\(z\)</span>-plane that contain <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> called <dfn class="terminology">Steiner circles of the first kind</dfn> and <span class="process-math">\(S^{-1}\)</span> maps polar circles in the <span class="process-math">\(w\)</span>-plane to clines in the <span class="process-math">\(z\)</span>-plane called <dfn class="terminology">Steiner circles of the second kind</dfn> or <dfn class="terminology">circles of Apollonius</dfn>. See <a href="geometry_chapter-4.html#twofixedptgrid_fig" class="xref" data-knowl="./knowl/xref/twofixedptgrid_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.29">Figure 3.2.29</a>.</div>
+<div class="para" id="geometry_chapter-4-9-6">In the case where <span class="process-math">\(T\)</span> has one fixed point <span class="process-math">\(p\text{,}\)</span> the conjugating map <span class="process-math">\(Sz=\frac{1}{z-p}\)</span> sends <span class="process-math">\(p\to \infty\text{,}\)</span> so <span class="process-math">\(S^{-1}\)</span> maps <span class="process-math">\(\infty \to p\text{,}\)</span> and <span class="process-math">\(S^{-1}\)</span> maps lines in the <span class="process-math">\(w\)</span>-plane that are parallel to the line through <span class="process-math">\(0\)</span> and <span class="process-math">\(\beta\)</span> to clines in the <span class="process-math">\(z\)</span>-plane that contain <span class="process-math">\(p\text{.}\)</span> Every cline in this family is tangent to every other cline in this family at exactly the one point <span class="process-math">\(p\text{.}\)</span> Clines in this family are called <dfn class="terminology">degenerate Steiner circles</dfn>. See <a href="geometry_chapter-4.html#degenerate_grid_fig" class="xref" data-knowl="./knowl/xref/degenerate_grid_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.30">Figure 3.2.30</a>. <a href="geometry_chapter-4.html#steinercirclesummary" class="xref" data-knowl="./knowl/xref/steinercirclesummary.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.2.31: Summary of Steiner circle pictures of Möbius transformations">Table 3.2.31</a> summarizes the graphical depiction of Möbius transformations.</div>
 <figure class="table table-like" id="steinercirclesummary"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.31<span class="period">.</span></span><span class="space"> </span>Summary of Steiner circle pictures of Möbius transformations</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b3 r1 l1 t1 lines">normal form type</td>
@@ -657,9 +877,9 @@ w+\beta\)</span> is a family of lines parallel to the line that contains the ori
 <article class="exercise exercise-like" id="mobiusdecompexer"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Decomposition of Möbius transformations into four basic types.</span>
 </h4>
-<div class="para logical" id="mobiusdecompexer-2-1"><ol class="lower-alpha">
+<div class="para logical" id="mobiusdecompexer-2-1"><ol class="lower-alpha" id="mobiusdecompexer-2-1-1">
 <li id="mobiusdecompexer-2-1-1-1"><div class="para" id="p-derived-mobiusdecompexer-2-1-1-1">Explain why a transformation of the form <span class="process-math">\(z\to az\text{,}\)</span> with <span class="process-math">\(a\)</span> any nonzero complex constant, is a composition of a homothety and a rotation.</div></li>
-<li id="mobiusdecompexer-2-1-1-2"><div class="para" id="p-derived-mobiusdecompexer-2-1-1-2">Explicitly identify each homothety, rotation, translation, and inversion in <a href="" class="xref" data-knowl="./knowl/xref/mobiusdecompfirst.html" title="Equation 3.2.8">(3.2.8)</a> to <a href="" class="xref" data-knowl="./knowl/xref/mobiusdecomplast.html" title="Equation 3.2.11">(3.2.11)</a> in the derivation below for the case <span class="process-math">\(c\neq 0\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mobiusdecompfirst.html ./knowl/xref/mobiusdecomplast.html" id="mobiusdecompexer-2-1-1-2-4">
+<li id="mobiusdecompexer-2-1-1-2"><div class="para" id="p-derived-mobiusdecompexer-2-1-1-2">Explicitly identify each homothety, rotation, translation, and inversion in <a href="geometry_chapter-4.html#mobiusdecompexer-2-1-1-2-4" class="xref" data-knowl="./knowl/xref/mobiusdecompfirst.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.8">(3.2.8)</a> to <a href="geometry_chapter-4.html#mobiusdecompexer-2-1-1-2-4" class="xref" data-knowl="./knowl/xref/mobiusdecomplast.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.11">(3.2.11)</a> in the derivation below for the case <span class="process-math">\(c\neq 0\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/mobiusdecompfirst.html ./knowl/xref/mobiusdecomplast.html" id="mobiusdecompexer-2-1-1-2-4">
 \begin{align}
 z \amp \to cz+d\tag{3.2.8}\\
 \amp\to \frac{1}{cz+d}\tag{3.2.9}\\
@@ -673,32 +893,34 @@ z \amp \to cz+d\tag{3.2.8}\\
 <li id="mobiusdecompexer-2-1-1-3"><div class="para" id="p-derived-mobiusdecompexer-2-1-1-3">Write your own decomposition for the case <span class="process-math">\(c=0\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="ftomgexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="ftomgexer-1-1">Prove the Fundamental Theorem of Möbius Geometry (<a href="" class="xref" data-knowl="./knowl/xref/ftomg.html" title="Proposition 3.2.14: The Fundamental Theorem of Möbius Geometry">Proposition 3.2.14</a>).</div>
-<div class="solutions"><details id="ftomgexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="ftomgexer-2-1">Start by using <a href="" class="xref" data-knowl="./knowl/xref/std3ptsetlemma.html" title="Lemma 3.2.10: Any three-point set is congruent to \{1,0,\infty\}">Lemma 3.2.10</a> to get a Möbius transformation <span class="process-math">\(U\)</span> that maps <span class="process-math">\(z_1,z_2,z_3\)</span> to <span class="process-math">\(1,0,\infty\text{,}\)</span> and there is a Möbius transformation <span class="process-math">\(V\)</span> that maps <span class="process-math">\(w_1,w_2,w_3\)</span> to <span class="process-math">\(1,0,\infty\text{.}\)</span>
+<div class="para" id="ftomgexer-1-1">Prove the Fundamental Theorem of Möbius Geometry (<a href="geometry_chapter-4.html#ftomg" class="xref" data-knowl="./knowl/xref/ftomg.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.14: The Fundamental Theorem of Möbius Geometry">Proposition 3.2.14</a>).</div>
+<div class="solutions"><details id="ftomgexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ftomgexer-2-1">Start by using <a href="geometry_chapter-4.html#std3ptsetlemma" class="xref" data-knowl="./knowl/xref/std3ptsetlemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.10: Any three-point set is congruent to \{1,0,\infty\}">Lemma 3.2.10</a> to get a Möbius transformation <span class="process-math">\(U\)</span> that maps <span class="process-math">\(z_1,z_2,z_3\)</span> to <span class="process-math">\(1,0,\infty\text{,}\)</span> and there is a Möbius transformation <span class="process-math">\(V\)</span> that maps <span class="process-math">\(w_1,w_2,w_3\)</span> to <span class="process-math">\(1,0,\infty\text{.}\)</span>
 </div></div></details></div></article><article class="exercise exercise-like" id="mobiustargetpracticeexer"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para logical" id="mobiustargetpracticeexer-1-1">
 <div class="para">Find Möbius transformations that make the following assignments.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="mobiustargetpracticeexer-1-1-1">
 <li id="mobiustargetparta"><div class="para" id="p-derived-mobiustargetparta"><span class="process-math">\(\displaystyle 1\to a, 0\to b, \infty\to c\)</span></div></li>
 <li id="mobiustargetpartb"><div class="para" id="p-derived-mobiustargetpartb"><span class="process-math">\(\displaystyle a\to d, b\to e, c\to f\)</span></div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="mobinvrealisclineexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="mobinvrealisclineexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" title="Proposition 3.2.16">Proposition 3.2.16</a>. Suggestion: Let <span class="process-math">\(Tz=\frac{az+b}{cz+d}\text{,}\)</span> then manipulate <span class="process-math">\(Tz=(Tz)^\ast\)</span> to an equation with <span class="process-math">\(|z|^2,z,z^\ast\)</span> terms and coefficients involving <span class="process-math">\(a,b,c,d\)</span> and their conjugates. For the case when the coefficient of <span class="process-math">\(|z|^2\)</span> is not zero, use "complex completing the square" (see <a href="" class="xref" data-knowl="./knowl/xref/complexcompletesquare.html" title="Equation 1.1.3">(1.1.3)</a>) to derive the equation of a circle. Peek at the first part hint below if you need to, and use it to work partially forwards from <span class="process-math">\(Tz=(Tz)^\ast\text{,}\)</span> and partially backwards from the equation in the hint. For the case when the coefficient of <span class="process-math">\(|z|^2\)</span> is zero, derive the equation for a line. For the "furthermore" statement, you will need to show that any three points in the plane determine a unique circle or straight line. This is a Euclidean statement, and it is straightforward to prove this using Euclidean methods (peek at the second part of the hint below if you need to).</div>
-<div class="solutions"><details id="mobinvrealisclineexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Equation for the circle:<div class="displaymath process-math">
+<div class="para" id="mobinvrealisclineexer-1-1">Prove <a href="geometry_chapter-4.html#mobinvrealisclineprop" class="xref" data-knowl="./knowl/xref/mobinvrealisclineprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.16">Proposition 3.2.16</a>. Suggestion: Let <span class="process-math">\(Tz=\frac{az+b}{cz+d}\text{,}\)</span> then manipulate <span class="process-math">\(Tz=(Tz)^\ast\)</span> to an equation with <span class="process-math">\(|z|^2,z,z^\ast\)</span> terms and coefficients involving <span class="process-math">\(a,b,c,d\)</span> and their conjugates. For the case when the coefficient of <span class="process-math">\(|z|^2\)</span> is not zero, use "complex completing the square" (see <a href="complex_plane_section.html#complexcompletesquare" class="xref" data-knowl="./knowl/xref/complexcompletesquare.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1.3">(1.1.3)</a>) to derive the equation of a circle. Peek at the first part hint below if you need to, and use it to work partially forwards from <span class="process-math">\(Tz=(Tz)^\ast\text{,}\)</span> and partially backwards from the equation in the hint. For the case when the coefficient of <span class="process-math">\(|z|^2\)</span> is zero, derive the equation for a line. For the "furthermore" statement, you will need to show that any three points in the plane determine a unique circle or straight line. This is a Euclidean statement, and it is straightforward to prove this using Euclidean methods (peek at the second part of the hint below if you need to).</div>
+<div class="solutions"><details id="mobinvrealisclineexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="displaymath process-math">
 \begin{equation*}
 \left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
 c}\right)\right|^2 = \left|\frac{ad-bc}{ac^\ast -a^\ast
 c}\right|^2
 \end{equation*}
-</div>Why do three noncollinear points <span class="process-math">\(P,Q,R\)</span> determine a unique circle? The center <span class="process-math">\(C\)</span> of the circle must be the intersection of the perpendicular bisectors of segments <span class="process-math">\(PQ\text{,}\)</span> <span class="process-math">\(QR\text{.}\)</span> The radius must be the distance from <span class="process-math">\(C\)</span> to any one of <span class="process-math">\(P,Q,R\text{.}\)</span>
-</div></details></div></article><figure class="figure figure-like" id="symmptsfig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/symmpts.png" class="contained"></div>
+</div>
+<span class="process-math">\(P,Q,R\)</span><span class="process-math">\(C\)</span><span class="process-math">\(PQ\text{,}\)</span><span class="process-math">\(QR\text{.}\)</span><span class="process-math">\(C\)</span><span class="process-math">\(P,Q,R\text{.}\)</span>
+</div></details></div></article><figure class="figure figure-like" id="symmptsfig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/symmpts.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.32<span class="period">.</span></span><span class="space"> </span>Geometry for symmetric points <span class="process-math">\(z,z^{\ast C}\)</span> with respect to the cline <span class="process-math">\(C\)</span></figcaption></figure><article class="exercise exercise-like" id="symmetricpointexer"><h4 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Symmetry with respect to a cline.</span>
 </h4>
-<div class="para logical" id="symmetricpointexer-2-1"><ol class="lower-alpha">
+<div class="para logical" id="symmetricpointexer-2-1"><ol class="lower-alpha" id="symmetricpointexer-2-1-1">
 <li id="symmetricpointexer-2-1-1-1">
-<div class="para" id="symmetricpointexer-2-1-1-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/symmptindeppts.html" title="Proposition 3.2.25">Proposition 3.2.25</a> by completing the details in the following outline. Let <span class="process-math">\(C=T^{-1}(\extR)\)</span> be a cline that contains points <span class="process-math">\(z_1,z_2,z_3\text{,}\)</span> where <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\text{.}\)</span> First, consider the case when <span class="process-math">\(C\)</span> is a circle, say, with equation <span class="process-math">\(|z-a|=r\text{,}\)</span> where <span class="process-math">\(a,r\)</span> are the center and radius, respectively, of <span class="process-math">\(C\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/circleeqn.html" title="Equation 1.1.1">(1.1.1)</a>).</div>
-<ol class="lower-roman">
+<div class="para" id="symmetricpointexer-2-1-1-1-1">Prove <a href="geometry_chapter-4.html#symmptindeppts" class="xref" data-knowl="./knowl/xref/symmptindeppts.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.25">Proposition 3.2.25</a> by completing the details in the following outline. Let <span class="process-math">\(C=T^{-1}(\extR)\)</span> be a cline that contains points <span class="process-math">\(z_1,z_2,z_3\text{,}\)</span> where <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\text{.}\)</span> First, consider the case when <span class="process-math">\(C\)</span> is a circle, say, with equation <span class="process-math">\(|z-a|=r\text{,}\)</span> where <span class="process-math">\(a,r\)</span> are the center and radius, respectively, of <span class="process-math">\(C\)</span> (see <a href="complex_plane_section.html#circleeqn" class="xref" data-knowl="./knowl/xref/circleeqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1.1">(1.1.1)</a>).</div>
+<ol class="lower-roman" id="symmetricpointexer-2-1-1-1-2">
 <li id="symmetricpointexer-2-1-1-1-2-1"><div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-1">Square both sides of <span class="process-math">\(|z-a|=r\)</span> and solve for <span class="process-math">\(z^\ast\)</span> to get<div class="displaymath process-math">
 \begin{equation*}
 z^\ast = \frac{r^2}{z-a}+a^\ast\text{.}
@@ -720,7 +942,7 @@ T\left(\frac{r^2}{(z-a)^\ast}+a\right).
 <li id="symmetricpointexer-2-1-1-1-2-3"><div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-3">Explain how we can conclude that <span class="process-math">\(z^{\ast C}=
 \frac{r^2}{(z-a)^\ast}+a\text{,}\)</span> and that indeed this does not depend on the choice of  <span class="process-math">\(z_1,z_2,z_3\text{.}\)</span>
 </div></li>
-<li id="symmetricpointexer-2-1-1-1-2-4"><div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-4">Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/lineeqn.html" title="Equation 1.1.2">(1.1.2)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lineeqn.html">
+<li id="symmetricpointexer-2-1-1-1-2-4"><div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-4">Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="complex_plane_section.html#lineeqn" class="xref" data-knowl="./knowl/xref/lineeqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1.2">(1.1.2)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lineeqn.html">
 \begin{equation*}
 z^\ast = \frac{az+b-b^\ast}{a^\ast}.
 \end{equation*}
@@ -743,24 +965,24 @@ a^\ast + b^\ast - b}{a}\text{,}\)</span> and that indeed this does not depend on
 </div></li>
 </ol>
 </li>
-<li id="symmetricpointexer-2-1-1-2"><div class="para" id="p-derived-symmetricpointexer-2-1-1-2">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a circle <span class="process-math">\(C\)</span> with center <span class="process-math">\(a\)</span> and radius <span class="process-math">\(r\)</span> if and only if <span class="process-math">\(|z-a||z'-a|=r^2\)</span> and  <span class="process-math">\(z,z'\)</span> lie on the same ray emanating from <span class="process-math">\(a\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/symmptsfig.html" title="Figure 3.2.32">Figure 3.2.32</a>. <details id="symmetricpointexer-2-1-1-2-9" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="symmetricpointexer-2-1-1-2-9-1">The equation for <span class="process-math">\(z^{\ast C}\)</span> in part iii gives <span class="process-math">\((z'-a)(z-a)^\ast = r^2\text{.}\)</span> For the first statement, take the norm of both sides. For the second statement, take the argument of both sides.</div></div></details>
+<li id="symmetricpointexer-2-1-1-2"><div class="para" id="p-derived-symmetricpointexer-2-1-1-2">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a circle <span class="process-math">\(C\)</span> with center <span class="process-math">\(a\)</span> and radius <span class="process-math">\(r\)</span> if and only if <span class="process-math">\(|z-a||z'-a|=r^2\)</span> and  <span class="process-math">\(z,z'\)</span> lie on the same ray emanating from <span class="process-math">\(a\text{.}\)</span> See <a href="geometry_chapter-4.html#symmptsfig" class="xref" data-knowl="./knowl/xref/symmptsfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.32">Figure 3.2.32</a>. <details id="symmetricpointexer-2-1-1-2-9" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="symmetricpointexer-2-1-1-2-9-1">The equation for <span class="process-math">\(z^{\ast C}\)</span> in part iii gives <span class="process-math">\((z'-a)(z-a)^\ast = r^2\text{.}\)</span> For the first statement, take the norm of both sides. For the second statement, take the argument of both sides.</div></div></details>
 </div></li>
-<li id="symmetricpointexer-2-1-1-3"><div class="para" id="p-derived-symmetricpointexer-2-1-1-3">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a line <span class="process-math">\(C\)</span> if and only if <span class="process-math">\(z,z'\)</span> are reflections of one another across <span class="process-math">\(C\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/symmptsfig.html" title="Figure 3.2.32">Figure 3.2.32</a>.</div></li>
-</ol></div></article><div class="exercisegroup" id="geometry_chapter-4-10-13">
+<li id="symmetricpointexer-2-1-1-3"><div class="para" id="p-derived-symmetricpointexer-2-1-1-3">Show that <span class="process-math">\(z,z'\)</span> are symmetric with respect to a line <span class="process-math">\(C\)</span> if and only if <span class="process-math">\(z,z'\)</span> are reflections of one another across <span class="process-math">\(C\text{.}\)</span> See <a href="geometry_chapter-4.html#symmptsfig" class="xref" data-knowl="./knowl/xref/symmptsfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.32">Figure 3.2.32</a>.</div></li>
+</ol></div></article><div class="exercisegroup" id="geometry_chapter-4-10-7">
 <h4 class="heading"><span class="title">Normal forms and Steiner circles.</span></h4>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="normalformlemmaexer"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="normalformlemmaexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/normalformlemma.html" title="Lemma 3.2.27">Lemma 3.2.27</a>.</div></article><article class="exercise exercise-like" id="normalformegexer"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="normalformlemmaexer-1-1">Prove <a href="geometry_chapter-4.html#normalformlemma" class="xref" data-knowl="./knowl/xref/normalformlemma.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.2.27">Lemma 3.2.27</a>.</div></article><article class="exercise exercise-like" id="normalformegexer"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
 <div class="para logical" id="normalformegexer-1-1">
 <div class="para">Find the normal form and sketch a graph using Steiner circles for the following transformations.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="normalformegexer-1-1-1">
 <li id="normalformegexer-1-1-1-1"><div class="para" id="p-derived-normalformegexer-1-1-1-1"><span class="process-math">\(\displaystyle z\to \frac{1}{z}\)</span></div></li>
 <li id="normalformegexer-1-1-1-2"><div class="para" id="p-derived-normalformegexer-1-1-1-2"><span class="process-math">\(\displaystyle z\to \frac{3z-1}{z+1}\)</span></div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="degneratenormalformexer"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
 <div class="para" id="degneratenormalformexer-1-1">Let <span class="process-math">\(p\)</span> be the single fixed point of a Möbius transformation that is conjugate to <span class="process-math">\(w\to w+\beta\)</span> via <span class="process-math">\(Sz=\frac{1}{z-p}\text{.}\)</span> Show that the single line in the degenerate Steiner clines through <span class="process-math">\(p\)</span> is parallel to the direction given by <span class="process-math">\(\beta^\ast\text{.}\)</span>
 </div>
-<div class="solutions"><details id="degneratenormalformexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="degneratenormalformexer-2-1">Show that <span class="process-math">\(S^{-1}w=\frac{pw+1}{w}\text{,}\)</span> so <span class="process-math">\(S^{-1}\)</span> takes <span class="process-math">\(0,\beta,\infty\)</span> to <span class="process-math">\(\infty,\frac{p\beta+1}{\beta},p\text{.}\)</span> Thus the single degenerate Steiner straight line through <span class="process-math">\(p\)</span> is in the direction given by  <span class="process-math">\(\frac{p\beta+1}{\beta}-p
+<div class="solutions"><details id="degneratenormalformexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="degneratenormalformexer-2-1">Show that <span class="process-math">\(S^{-1}w=\frac{pw+1}{w}\text{,}\)</span> so <span class="process-math">\(S^{-1}\)</span> takes <span class="process-math">\(0,\beta,\infty\)</span> to <span class="process-math">\(\infty,\frac{p\beta+1}{\beta},p\text{.}\)</span> Thus the single degenerate Steiner straight line through <span class="process-math">\(p\)</span> is in the direction given by  <span class="process-math">\(\frac{p\beta+1}{\beta}-p
 =\frac{1}{\beta}\propto \beta^\ast\text{.}\)</span>
 </div></div></details></div></article><article class="exercise exercise-like" id="apolloniuscircexer"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
 <div class="para logical" id="apolloniuscircexer-1-1">
@@ -780,7 +1002,7 @@ C=\left\{P\in \C\colon \frac{d(P,A)}{d(P,B)}=k\right\}
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

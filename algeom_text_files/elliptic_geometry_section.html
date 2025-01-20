@@ -57,7 +57,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -69,33 +69,248 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8b270ccf5298bad1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.d966d31a41778c59.css">
+<style>
+#solvecomplexquadraticsexer-2-1 { counter-set: solvecomplexquadraticsexer-2-1 0; }
+#solvecomplexquadraticsexer-2-1 > li::marker { content: "("counter(solvecomplexquadraticsexer-2-1,lower-alpha)")"; }
+#solvecomplexquadraticsexer-2-1 > li { counter-increment: solvecomplexquadraticsexer-2-1; }
+#complexcircleslines-2-1-1 { counter-set: complexcircleslines-2-1-1 0; }
+#complexcircleslines-2-1-1 > li::marker { content: "("counter(complexcircleslines-2-1-1,lower-alpha)")"; }
+#complexcircleslines-2-1-1 > li { counter-increment: complexcircleslines-2-1-1; }
+#complexnosasrealmatalg-2-1-18 { counter-set: complexnosasrealmatalg-2-1-18 0; }
+#complexnosasrealmatalg-2-1-18 > li::marker { content: "("counter(complexnosasrealmatalg-2-1-18,lower-alpha)")"; }
+#complexnosasrealmatalg-2-1-18 > li { counter-increment: complexnosasrealmatalg-2-1-18; }
+#quaternionsection-5-6-1-1 { counter-set: quaternionsection-5-6-1-1 0; }
+#quaternionsection-5-6-1-1 > li::marker { content: ""counter(quaternionsection-5-6-1-1,decimal)"."; }
+#quaternionsection-5-6-1-1 > li { counter-increment: quaternionsection-5-6-1-1; }
+#quatpolarformdetailsexer-1-1-1 { counter-set: quatpolarformdetailsexer-1-1-1 0; }
+#quatpolarformdetailsexer-1-1-1 > li::marker { content: ""counter(quatpolarformdetailsexer-1-1-1,decimal)"."; }
+#quatpolarformdetailsexer-1-1-1 > li { counter-increment: quatpolarformdetailsexer-1-1-1; }
+#quatrotpropexer-1-1-4 { counter-set: quatrotpropexer-1-1-4 0; }
+#quatrotpropexer-1-1-4 > li::marker { content: "("counter(quatrotpropexer-1-1-4,lower-alpha)")"; }
+#quatrotpropexer-1-1-4 > li { counter-increment: quatrotpropexer-1-1-4; }
+#quatrotcompinvexer-1-2 { counter-set: quatrotcompinvexer-1-2 0; }
+#quatrotcompinvexer-1-2 > li::marker { content: "("counter(quatrotcompinvexer-1-2,lower-alpha)")"; }
+#quatrotcompinvexer-1-2 > li { counter-increment: quatrotcompinvexer-1-2; }
+#equivmodnisequivrelnexer-1-1-1 { counter-set: equivmodnisequivrelnexer-1-1-1 0; }
+#equivmodnisequivrelnexer-1-1-1 > li::marker { content: ""counter(equivmodnisequivrelnexer-1-1-1,decimal)"."; }
+#equivmodnisequivrelnexer-1-1-1 > li { counter-increment: equivmodnisequivrelnexer-1-1-1; }
+#rationalsequivrelnexer-2-1-12 { counter-set: rationalsequivrelnexer-2-1-12 0; }
+#rationalsequivrelnexer-2-1-12 > li::marker { content: "("counter(rationalsequivrelnexer-2-1-12,lower-alpha)")"; }
+#rationalsequivrelnexer-2-1-12 > li { counter-increment: rationalsequivrelnexer-2-1-12; }
+#extra_topics_exercises_section-2-5-3 { counter-set: extra_topics_exercises_section-2-5-3 0; }
+#extra_topics_exercises_section-2-5-3 > li::marker { content: ""counter(extra_topics_exercises_section-2-5-3,decimal)"."; }
+#extra_topics_exercises_section-2-5-3 > li { counter-increment: extra_topics_exercises_section-2-5-3; }
+#diagramexer-2-1-1 { counter-set: diagramexer-2-1-1 0; }
+#diagramexer-2-1-1 > li::marker { content: "("counter(diagramexer-2-1-1,lower-alpha)")"; }
+#diagramexer-2-1-1 > li { counter-increment: diagramexer-2-1-1; }
+#dihedral-reading-exercise-1-3-3 { counter-set: dihedral-reading-exercise-1-3-3 0; }
+#dihedral-reading-exercise-1-3-3 > li::marker { content: ""counter(dihedral-reading-exercise-1-3-3,decimal)"."; }
+#dihedral-reading-exercise-1-3-3 > li { counter-increment: dihedral-reading-exercise-1-3-3; }
+#dihedral-reading-exercise-2-1 { counter-set: dihedral-reading-exercise-2-1 0; }
+#dihedral-reading-exercise-2-1 > li::marker { content: ""counter(dihedral-reading-exercise-2-1,decimal)"."; }
+#dihedral-reading-exercise-2-1 > li { counter-increment: dihedral-reading-exercise-2-1; }
+#rootsofunitygpfacts-1-1-1 { counter-set: rootsofunitygpfacts-1-1-1 0; }
+#rootsofunitygpfacts-1-1-1 > li::marker { content: ""counter(rootsofunitygpfacts-1-1-1,decimal)"."; }
+#rootsofunitygpfacts-1-1-1 > li { counter-increment: rootsofunitygpfacts-1-1-1; }
+#commutativeornotexer-1-1-5 { counter-set: commutativeornotexer-1-1-5 0; }
+#commutativeornotexer-1-1-5 > li::marker { content: "("counter(commutativeornotexer-1-1-5,lower-alpha)")"; }
+#commutativeornotexer-1-1-5 > li { counter-increment: commutativeornotexer-1-1-5; }
+#inverseeltexer-1-1-7 { counter-set: inverseeltexer-1-1-7 0; }
+#inverseeltexer-1-1-7 > li::marker { content: "("counter(inverseeltexer-1-1-7,lower-alpha)")"; }
+#inverseeltexer-1-1-7 > li { counter-increment: inverseeltexer-1-1-7; }
+#cyclicgroups-3-1-8 { counter-set: cyclicgroups-3-1-8 0; }
+#cyclicgroups-3-1-8 > li::marker { content: "("counter(cyclicgroups-3-1-8,lower-alpha)")"; }
+#cyclicgroups-3-1-8 > li { counter-increment: cyclicgroups-3-1-8; }
+#cyclicpermutations-3-1-45 { counter-set: cyclicpermutations-3-1-45 0; }
+#cyclicpermutations-3-1-45 > li::marker { content: "("counter(cyclicpermutations-3-1-45,lower-alpha)")"; }
+#cyclicpermutations-3-1-45 > li { counter-increment: cyclicpermutations-3-1-45; }
+#permtransprodexer-2-1-1 { counter-set: permtransprodexer-2-1-1 0; }
+#permtransprodexer-2-1-1 > li::marker { content: "("counter(permtransprodexer-2-1-1,lower-alpha)")"; }
+#permtransprodexer-2-1-1 > li { counter-increment: permtransprodexer-2-1-1; }
+#cayleytable-2-1-12 { counter-set: cayleytable-2-1-12 0; }
+#cayleytable-2-1-12 > li::marker { content: "("counter(cayleytable-2-1-12,lower-alpha)")"; }
+#cayleytable-2-1-12 > li { counter-increment: cayleytable-2-1-12; }
+#dihedral_subgroup_reading_exercise-1-1-4 { counter-set: dihedral_subgroup_reading_exercise-1-1-4 0; }
+#dihedral_subgroup_reading_exercise-1-1-4 > li::marker { content: ""counter(dihedral_subgroup_reading_exercise-1-1-4,decimal)"."; }
+#dihedral_subgroup_reading_exercise-1-1-4 > li { counter-increment: dihedral_subgroup_reading_exercise-1-1-4; }
+#dihedral_subgroup_reading_exercise-2-1 { counter-set: dihedral_subgroup_reading_exercise-2-1 0; }
+#dihedral_subgroup_reading_exercise-2-1 > li::marker { content: ""counter(dihedral_subgroup_reading_exercise-2-1,decimal)"."; }
+#dihedral_subgroup_reading_exercise-2-1 > li { counter-increment: dihedral_subgroup_reading_exercise-2-1; }
+#subgrouptests-4-1-3 { counter-set: subgrouptests-4-1-3 0; }
+#subgrouptests-4-1-3 > li::marker { content: ""counter(subgrouptests-4-1-3,lower-roman)""; }
+#subgrouptests-4-1-3 > li { counter-increment: subgrouptests-4-1-3; }
+#generators-reading-exer-1-1-1 { counter-set: generators-reading-exer-1-1-1 0; }
+#generators-reading-exer-1-1-1 > li::marker { content: ""counter(generators-reading-exer-1-1-1,decimal)"."; }
+#generators-reading-exer-1-1-1 > li { counter-increment: generators-reading-exer-1-1-1; }
+#generators-reading-exer-2-1 { counter-set: generators-reading-exer-2-1 0; }
+#generators-reading-exer-2-1 > li::marker { content: ""counter(generators-reading-exer-2-1,decimal)"."; }
+#generators-reading-exer-2-1 > li { counter-increment: generators-reading-exer-2-1; }
+#subgpsofzexer-2-1-1 { counter-set: subgpsofzexer-2-1-1 0; }
+#subgpsofzexer-2-1-1 > li::marker { content: "("counter(subgpsofzexer-2-1-1,lower-alpha)")"; }
+#subgpsofzexer-2-1-1 > li { counter-increment: subgpsofzexer-2-1-1; }
+#center-2-1-14 { counter-set: center-2-1-14 0; }
+#center-2-1-14 > li::marker { content: "("counter(center-2-1-14,lower-alpha)")"; }
+#center-2-1-14 > li { counter-increment: center-2-1-14; }
+#cosetspartitionexer-2-1-1 { counter-set: cosetspartitionexer-2-1-1 0; }
+#cosetspartitionexer-2-1-1 > li::marker { content: "("counter(cosetspartitionexer-2-1-1,lower-alpha)")"; }
+#cosetspartitionexer-2-1-1 > li { counter-increment: cosetspartitionexer-2-1-1; }
+#lagrangeconseqexer-2-1-1 { counter-set: lagrangeconseqexer-2-1-1 0; }
+#lagrangeconseqexer-2-1-1 > li::marker { content: "("counter(lagrangeconseqexer-2-1-1,lower-alpha)")"; }
+#lagrangeconseqexer-2-1-1 > li { counter-increment: lagrangeconseqexer-2-1-1; }
+#kerneldefegexer-2-1 { counter-set: kerneldefegexer-2-1 0; }
+#kerneldefegexer-2-1 > li::marker { content: ""counter(kerneldefegexer-2-1,decimal)"."; }
+#kerneldefegexer-2-1 > li { counter-increment: kerneldefegexer-2-1; }
+#homismbasicproperties-2-1-4 { counter-set: homismbasicproperties-2-1-4 0; }
+#homismbasicproperties-2-1-4 > li::marker { content: ""counter(homismbasicproperties-2-1-4,decimal)"."; }
+#homismbasicproperties-2-1-4 > li { counter-increment: homismbasicproperties-2-1-4; }
+#normalsubgroupcharacterization-2-1-3 { counter-set: normalsubgroupcharacterization-2-1-3 0; }
+#normalsubgroupcharacterization-2-1-3 > li::marker { content: ""counter(normalsubgroupcharacterization-2-1-3,decimal)"."; }
+#normalsubgroupcharacterization-2-1-3 > li { counter-increment: normalsubgroupcharacterization-2-1-3; }
+#zmodnascnexer-2-1-5 { counter-set: zmodnascnexer-2-1-5 0; }
+#zmodnascnexer-2-1-5 > li::marker { content: "("counter(zmodnascnexer-2-1-5,lower-alpha)")"; }
+#zmodnascnexer-2-1-5 > li { counter-increment: zmodnascnexer-2-1-5; }
+#conjugationexer-2-12 { counter-set: conjugationexer-2-12 0; }
+#conjugationexer-2-12 > li::marker { content: "("counter(conjugationexer-2-12,lower-alpha)")"; }
+#conjugationexer-2-12 > li { counter-increment: conjugationexer-2-12; }
+#morenormalcharexer-2-1-2 { counter-set: morenormalcharexer-2-1-2 0; }
+#morenormalcharexer-2-1-2 > li::marker { content: "("counter(morenormalcharexer-2-1-2,lower-alpha)")"; }
+#morenormalcharexer-2-1-2 > li { counter-increment: morenormalcharexer-2-1-2; }
+#automorphismexer-2-1-11 { counter-set: automorphismexer-2-1-11 0; }
+#automorphismexer-2-1-11 > li::marker { content: "("counter(automorphismexer-2-1-11,lower-alpha)")"; }
+#automorphismexer-2-1-11 > li { counter-increment: automorphismexer-2-1-11; }
+#actionegexer-1-1-1 { counter-set: actionegexer-1-1-1 0; }
+#actionegexer-1-1-1 > li::marker { content: ""counter(actionegexer-1-1-1,decimal)"."; }
+#actionegexer-1-1-1 > li { counter-increment: actionegexer-1-1-1; }
+#actionegexer-2-1 { counter-set: actionegexer-2-1 0; }
+#actionegexer-2-1 > li::marker { content: ""counter(actionegexer-2-1,decimal)"."; }
+#actionegexer-2-1 > li { counter-increment: actionegexer-2-1; }
+#signofpermexer-2-1-32 { counter-set: signofpermexer-2-1-32 0; }
+#signofpermexer-2-1-32 > li::marker { content: "("counter(signofpermexer-2-1-32,lower-alpha)")"; }
+#signofpermexer-2-1-32 > li { counter-increment: signofpermexer-2-1-32; }
+#gpselfactionexer-2-1-17 { counter-set: gpselfactionexer-2-1-17 0; }
+#gpselfactionexer-2-1-17 > li::marker { content: "("counter(gpselfactionexer-2-1-17,lower-alpha)")"; }
+#gpselfactionexer-2-1-17 > li { counter-increment: gpselfactionexer-2-1-17; }
+#orbitspartitionexer-1-1-2 { counter-set: orbitspartitionexer-1-1-2 0; }
+#orbitspartitionexer-1-1-2 > li::marker { content: "("counter(orbitspartitionexer-1-1-2,lower-alpha)")"; }
+#orbitspartitionexer-1-1-2 > li { counter-increment: orbitspartitionexer-1-1-2; }
+#projspaceandgroupexer-2-18 { counter-set: projspaceandgroupexer-2-18 0; }
+#projspaceandgroupexer-2-18 > li::marker { content: "("counter(projspaceandgroupexer-2-18,lower-alpha)")"; }
+#projspaceandgroupexer-2-18 > li { counter-increment: projspaceandgroupexer-2-18; }
+#unitsinzngpexer-2-1-4 { counter-set: unitsinzngpexer-2-1-4 0; }
+#unitsinzngpexer-2-1-4 > li::marker { content: "("counter(unitsinzngpexer-2-1-4,lower-alpha)")"; }
+#unitsinzngpexer-2-1-4 > li { counter-increment: unitsinzngpexer-2-1-4; }
+#permparityexer-2-1-2 { counter-set: permparityexer-2-1-2 0; }
+#permparityexer-2-1-2 > li::marker { content: "("counter(permparityexer-2-1-2,lower-alpha)")"; }
+#permparityexer-2-1-2 > li { counter-increment: permparityexer-2-1-2; }
+#permparityexer-3-1-1 { counter-set: permparityexer-3-1-1 0; }
+#permparityexer-3-1-1 > li::marker { content: "("counter(permparityexer-3-1-1,lower-alpha)")"; }
+#permparityexer-3-1-1 > li { counter-increment: permparityexer-3-1-1; }
+#semidirect_product_exer-3-1-36 { counter-set: semidirect_product_exer-3-1-36 0; }
+#semidirect_product_exer-3-1-36 > li::marker { content: "("counter(semidirect_product_exer-3-1-36,lower-alpha)")"; }
+#semidirect_product_exer-3-1-36 > li { counter-increment: semidirect_product_exer-3-1-36; }
+#geomdefwarmupexer-2-1-1 { counter-set: geomdefwarmupexer-2-1-1 0; }
+#geomdefwarmupexer-2-1-1 > li::marker { content: "("counter(geomdefwarmupexer-2-1-1,lower-alpha)")"; }
+#geomdefwarmupexer-2-1-1 > li { counter-increment: geomdefwarmupexer-2-1-1; }
+#mobiustransinvertcriterionexer-1-1-1 { counter-set: mobiustransinvertcriterionexer-1-1-1 0; }
+#mobiustransinvertcriterionexer-1-1-1 > li::marker { content: ""counter(mobiustransinvertcriterionexer-1-1-1,decimal)"."; }
+#mobiustransinvertcriterionexer-1-1-1 > li { counter-increment: mobiustransinvertcriterionexer-1-1-1; }
+#littlemobiusexer-1-1-1 { counter-set: littlemobiusexer-1-1-1 0; }
+#littlemobiusexer-1-1-1 > li::marker { content: ""counter(littlemobiusexer-1-1-1,decimal)"."; }
+#littlemobiusexer-1-1-1 > li { counter-increment: littlemobiusexer-1-1-1; }
+#mobiusdecompexer-2-1-1 { counter-set: mobiusdecompexer-2-1-1 0; }
+#mobiusdecompexer-2-1-1 > li::marker { content: "("counter(mobiusdecompexer-2-1-1,lower-alpha)")"; }
+#mobiusdecompexer-2-1-1 > li { counter-increment: mobiusdecompexer-2-1-1; }
+#mobiustargetpracticeexer-1-1-1 { counter-set: mobiustargetpracticeexer-1-1-1 0; }
+#mobiustargetpracticeexer-1-1-1 > li::marker { content: "("counter(mobiustargetpracticeexer-1-1-1,lower-alpha)")"; }
+#mobiustargetpracticeexer-1-1-1 > li { counter-increment: mobiustargetpracticeexer-1-1-1; }
+#symmetricpointexer-2-1-1 { counter-set: symmetricpointexer-2-1-1 0; }
+#symmetricpointexer-2-1-1 > li::marker { content: "("counter(symmetricpointexer-2-1-1,lower-alpha)")"; }
+#symmetricpointexer-2-1-1 > li { counter-increment: symmetricpointexer-2-1-1; }
+#symmetricpointexer-2-1-1-1-2 { counter-set: symmetricpointexer-2-1-1-1-2 0; }
+#symmetricpointexer-2-1-1-1-2 > li::marker { content: ""counter(symmetricpointexer-2-1-1-1-2,lower-roman)"."; }
+#symmetricpointexer-2-1-1-1-2 > li { counter-increment: symmetricpointexer-2-1-1-1-2; }
+#normalformegexer-1-1-1 { counter-set: normalformegexer-1-1-1 0; }
+#normalformegexer-1-1-1 > li::marker { content: "("counter(normalformegexer-1-1-1,lower-alpha)")"; }
+#normalformegexer-1-1-1 > li { counter-increment: normalformegexer-1-1-1; }
+#geometry_chapter-5-5-4-5 { counter-set: geometry_chapter-5-5-4-5 0; }
+#geometry_chapter-5-5-4-5 > li::marker { content: ""counter(geometry_chapter-5-5-4-5,decimal)"."; }
+#geometry_chapter-5-5-4-5 > li { counter-increment: geometry_chapter-5-5-4-5; }
+#hyperbolicmetricprop-1-1-7 { counter-set: hyperbolicmetricprop-1-1-7 0; }
+#hyperbolicmetricprop-1-1-7 > li::marker { content: ""counter(hyperbolicmetricprop-1-1-7,decimal)"."; }
+#hyperbolicmetricprop-1-1-7 > li { counter-increment: hyperbolicmetricprop-1-1-7; }
+#hyperbolictransformulaexer-1-1-2 { counter-set: hyperbolictransformulaexer-1-1-2 0; }
+#hyperbolictransformulaexer-1-1-2 > li::marker { content: "("counter(hyperbolictransformulaexer-1-1-2,lower-alpha)")"; }
+#hyperbolictransformulaexer-1-1-2 > li { counter-increment: hyperbolictransformulaexer-1-1-2; }
+#hyperbolictriangleineqexer-2-1-4 { counter-set: hyperbolictriangleineqexer-2-1-4 0; }
+#hyperbolictriangleineqexer-2-1-4 > li::marker { content: "("counter(hyperbolictriangleineqexer-2-1-4,lower-alpha)")"; }
+#hyperbolictriangleineqexer-2-1-4 > li { counter-increment: hyperbolictriangleineqexer-2-1-4; }
+#upperhalfplanelengthexer-2-1-8 { counter-set: upperhalfplanelengthexer-2-1-8 0; }
+#upperhalfplanelengthexer-2-1-8 > li::marker { content: "("counter(upperhalfplanelengthexer-2-1-8,lower-alpha)")"; }
+#upperhalfplanelengthexer-2-1-8 > li { counter-increment: upperhalfplanelengthexer-2-1-8; }
+#doubasymptriareaexer-2-1-8 { counter-set: doubasymptriareaexer-2-1-8 0; }
+#doubasymptriareaexer-2-1-8 > li::marker { content: "("counter(doubasymptriareaexer-2-1-8,lower-alpha)")"; }
+#doubasymptriareaexer-2-1-8 > li { counter-increment: doubasymptriareaexer-2-1-8; }
+#elliptic_triangle_area_exer-2-1-5 { counter-set: elliptic_triangle_area_exer-2-1-5 0; }
+#elliptic_triangle_area_exer-2-1-5 > li::marker { content: "("counter(elliptic_triangle_area_exer-2-1-5,lower-alpha)")"; }
+#elliptic_triangle_area_exer-2-1-5 > li { counter-increment: elliptic_triangle_area_exer-2-1-5; }
+#projcrossratioexer-2-1-22 { counter-set: projcrossratioexer-2-1-22 0; }
+#projcrossratioexer-2-1-22 > li::marker { content: "("counter(projcrossratioexer-2-1-22,lower-alpha)")"; }
+#projcrossratioexer-2-1-22 > li { counter-increment: projcrossratioexer-2-1-22; }
+#quadricsexer-2-1-8 { counter-set: quadricsexer-2-1-8 0; }
+#quadricsexer-2-1-8 > li::marker { content: "("counter(quadricsexer-2-1-8,lower-alpha)")"; }
+#quadricsexer-2-1-8 > li { counter-increment: quadricsexer-2-1-8; }
+#rotreconcileexer-2-3-3 { counter-set: rotreconcileexer-2-3-3 0; }
+#rotreconcileexer-2-3-3 > li::marker { content: "("counter(rotreconcileexer-2-3-3,lower-alpha)")"; }
+#rotreconcileexer-2-3-3 > li { counter-increment: rotreconcileexer-2-3-3; }
+#pythagthmsexer-2-1-8 { counter-set: pythagthmsexer-2-1-8 0; }
+#pythagthmsexer-2-1-8 > li::marker { content: "("counter(pythagthmsexer-2-1-8,lower-alpha)")"; }
+#pythagthmsexer-2-1-8 > li { counter-increment: pythagthmsexer-2-1-8; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href="http://quantum.lvc.edu/lyons"><img src="images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href="http://quantum.lvc.edu/lyons"><img src="external/images/durerperspective.jpg" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="algeom_text-6-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="algeom_text-6-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -106,7 +321,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="geometry_chapter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="geometry_chapter-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="geometry_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="geometry_chapter-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
       \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
@@ -160,13 +376,13 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li>
-<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">About the author</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">About the author</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -183,8 +399,8 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Correspondence with complex matrices</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Addition and multiplication</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quatconjnormsubsect" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Conjugate, modulus, and polar form</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-8" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-9" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quaternionsection.html#quaternionsection-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -223,12 +439,12 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Permutations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Symmetries of regular polygons</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#s1grpdef" class="internal"><span class="codenumber">2.1.3</span> <span class="title">The norm 1 complex numbers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-7" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-8" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-9" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-10" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-11" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-12" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">The <span class="process-math">\(n\)</span>-th roots of unity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-7" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-8" class="internal"><span class="codenumber">2.1.6</span> <span class="title">Invertible matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-9" class="internal"><span class="codenumber">2.1.7</span> <span class="title">Nonzero elements in a field</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-10" class="internal"><span class="codenumber">2.1.8</span> <span class="title">Unit quaternions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groupintrosection.html#groupintrosection-11" class="internal"><span class="codenumber">2.1.9</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -237,15 +453,15 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subgroups_cosets_section.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Subgroups and cosets</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-14" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="subgroups_cosets_section.html#subgroups_cosets_section-12" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_chapter-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Group homomorphisms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-12" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-5.html#groups_chapter-5-11" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_chapter-6.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Group actions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-11" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups_chapter-6.html#groups_chapter-6-9" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups_extra_exer_section.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Additional exercises</span></a></div>
@@ -260,9 +476,9 @@ window.MathJax = {
 <div class="toc-title-box"><a href="geomdefsect.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Geometries and models</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomexamples" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Examples of geometries</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-7" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-8" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-9" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-5" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Planar geometries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-6" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Subgeometries and equivalent geometries</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geomdefsect.html#geomdefsect-7" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -289,9 +505,9 @@ window.MathJax = {
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="geometry_chapter-5.html#geometry_chapter-5-8" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="elliptic_geometry_section.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Elliptic geometry</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#elliptic_geometry_section-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">The group of unit quaternions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#rotgp" class="internal"><span class="codenumber">3.4.2</span> <span class="title">The group of rotations of the 2-sphere</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="elliptic_geometry_section.html#ellipticsubgpssubsec" class="internal"><span class="codenumber">3.4.3</span> <span class="title">The elliptic subgroup of the Möbius group</span></a></div></li>
@@ -330,7 +546,8 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="elliptic_geometry_section"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Elliptic geometry</span>
 </h2>
-<section class="introduction" id="elliptic_geometry_section-2"><div class="para" id="elliptic_geometry_section-2-1">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</div> <div class="para logical" id="elliptic_geometry_section-2-2">
+<section class="introduction" id="elliptic_geometry_section-2"><div class="para" id="elliptic_geometry_section-2-1">Elliptic geometry is the geometry of the sphere (the 2-dimensional surface of a 3-dimensional solid ball), where congruence transformations are the rotations of the sphere about its center.</div>
+<div class="para logical" id="elliptic_geometry_section-2-2">
 <div class="para">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions, that is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -342,9 +559,9 @@ S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}.
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="space"> </span><span class="title">The group of unit quaternions</span>
 </h3>
 <div class="para" id="elliptic_geometry_section-3-2">Recall from <a href="quaternionsection.html" class="internal" title="Section 1.2: Quaternions">Section 1.2</a> that <span class="process-math">\(U(\Quat)\)</span> is the set of quaternions of modulus 1. In fact, <span class="process-math">\(U(\Quat)\)</span> is a group.</div>
-<details id="unitquatisgpexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="unitquatisgpexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that <span class="process-math">\(U(\Quat)\)</span> is a group.</article></details><div class="para logical" id="elliptic_geometry_section-3-5">
+</h4></summary><article class="exercise exercise-like knowl__content">Show that <span class="process-math">\(U(\Quat)\)</span> is a group.</article></details><div class="para logical" id="elliptic_geometry_section-3-4">
 <div class="para">Recall that the map <span class="process-math">\(M\colon \Quat \to
 {\mathcal M}_{\Quat}\)</span> sends <span class="process-math">\(r=a+bi+cj+dk\)</span> to the matrix</div>
 <div class="displaymath process-math">
@@ -368,14 +585,17 @@ U(\Quat)\approx SU(2).
 \end{equation*}
 </div>
 </div>
-<details id="su2isgpisounitquitexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="su2isgpisounitquitexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that <span class="process-math">\(SU(2)\)</span> is a group. Show that <span class="process-math">\(M\colon U(\Quat)\to SU(2)\)</span> is a homomorphism.<div class="solutions"><details id="su2isgpisounitquitexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">It is not necessary to perform any new computation to show that <span class="process-math">\(M\)</span> is a homomorphism. Instead, use <a href="" class="xref" data-knowl="./knowl/xref/quatmultdef.html" title="Equation 1.2.5">(1.2.5)</a>.</div></details></div></article></details><div class="para" id="elliptic_geometry_section-3-8">The action of a unit quaternion as a rotation on <span class="process-math">\(\R^3_\Quat\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>) takes the sphere <span class="process-math">\(S^2_\Quat\)</span> to itself. The action of the group <span class="process-math">\(U(\Quat)\)</span> on <span class="process-math">\(S^2_\Quat\)</span> defines a model of elliptic geometry.</div>
-<article class="definition definition-like" id="elliptic_geometry_section-3-9"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content">Show that <span class="process-math">\(SU(2)\)</span> is a group. Show that <span class="process-math">\(M\colon U(\Quat)\to SU(2)\)</span> is a homomorphism.<div class="solutions"><details id="su2isgpisounitquitexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(M\)</span><a href="quaternionsection.html#quaternionsection-5-2-3" class="xref" data-knowl="./knowl/xref/quatmultdef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.5">(1.2.5)</a>
+</div></details></div></article></details><div class="para" id="elliptic_geometry_section-3-6">The action of a unit quaternion as a rotation on <span class="process-math">\(\R^3_\Quat\)</span> (see <a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>) takes the sphere <span class="process-math">\(S^2_\Quat\)</span> to itself. The action of the group <span class="process-math">\(U(\Quat)\)</span> on <span class="process-math">\(S^2_\Quat\)</span> defines a model of elliptic geometry.</div>
+<article class="definition definition-like" id="elliptic_geometry_section-3-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
-</h4>The <dfn class="terminology">quaternion model</dfn>  of elliptic geometry is <span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span></article><details id="unitquatactionons2exer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4>
+<dfn class="terminology">quaternion model</dfn><span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span></article><details id="unitquatactionons2exer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that the map <span class="process-math">\(U(\Quat)\to
+</h4></summary><article class="exercise exercise-like knowl__content">Show that the map <span class="process-math">\(U(\Quat)\to
 \Perm(S^2_\Quat)\)</span> given by<div class="displaymath process-math">
 \begin{equation*}
 r \to \left[ v\to rvr^\ast \right]
@@ -383,8 +603,8 @@ r \to \left[ v\to rvr^\ast \right]
 </div>is a group action.</article></details></section><section class="subsection" id="rotgp"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="space"> </span><span class="title">The group of rotations of the 2-sphere</span>
 </h3>
-<div class="para" id="rotgp-2">Let <span class="process-math">\(R_{{v},\theta}\)</span> denote the rotation of <span class="process-math">\(\R^3\)</span> about the axis given by a unit vector <span class="process-math">\({v}\)</span> by an angle <span class="process-math">\(\theta\text{.}\)</span> We use the standard orientation, so that a positive value of <span class="process-math">\(\theta\)</span> is a counterclockwise rotation of the plane orthogonal to <span class="process-math">\({v}\text{,}\)</span> as viewed from "above" where <span class="process-math">\({v}\)</span> points in the "up" direction. See <a href="" class="xref" data-knowl="./knowl/xref/vectangrot_fig.html" title="Figure 3.4.5">Figure 3.4.5</a>.</div>
-<figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/vectangrot.png" class="contained"></div>
+<div class="para" id="rotgp-2">Let <span class="process-math">\(R_{{v},\theta}\)</span> denote the rotation of <span class="process-math">\(\R^3\)</span> about the axis given by a unit vector <span class="process-math">\({v}\)</span> by an angle <span class="process-math">\(\theta\text{.}\)</span> We use the standard orientation, so that a positive value of <span class="process-math">\(\theta\)</span> is a counterclockwise rotation of the plane orthogonal to <span class="process-math">\({v}\text{,}\)</span> as viewed from "above" where <span class="process-math">\({v}\)</span> points in the "up" direction. See <a href="elliptic_geometry_section.html#vectangrot_fig" class="xref" data-knowl="./knowl/xref/vectangrot_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.5">Figure 3.4.5</a>.</div>
+<figure class="figure figure-like" id="vectangrot_fig"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/images/vectangrot.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.5<span class="period">.</span></span><span class="space"> </span>The rotation <span class="process-math">\(R_{v,\theta}\)</span> about the vector <span class="process-math">\(v\)</span> by the angle <span class="process-math">\(\theta\)</span></figcaption></figure><div class="para" id="rotgp-4">
 <em class="alert">Notation convention:</em> For readability and convenience, we write <span class="process-math">\(R_{X,\theta},R_{Y,\theta},R_{Z,\theta}\)</span> to denote rotations by <span class="process-math">\(\theta\)</span> radians about the standard basis vectors <span class="process-math">\((1,0,0), (0,1,0), (0,0,1)\text{,}\)</span> respectively.</div>
 <div class="para logical" id="rotgp-5">
@@ -395,50 +615,55 @@ r \to \left[ v\to rvr^\ast \right]
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
-<div class="para">of all rotations. To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<details class="ptx-footnote" aria-live="polite" id="rotgp-5-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rotgp-5-4">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></details> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="" class="xref" data-knowl="./knowl/xref/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/quatrotcompinvexer.html" title="Exercise 1.2.6.2">Exercise 1.2.6.2</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
+<div class="para">of all rotations. To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<details class="ptx-footnote" aria-live="polite" id="rotgp-5-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rotgp-5-4">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></details> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="quaternionsection.html#quatrotcompinvexer" class="xref" data-knowl="./knowl/xref/quatrotcompinvexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.2.6.2">Exercise 1.2.6.2</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
 </div>
 </div>
-<details id="s2rotisgpexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="s2rotisgpexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Complete the details to show that <span class="process-math">\(\Rot(S^2)\)</span> is a group. Show that the kernel of the homomorphism <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to
-R_r\)</span> is <span class="process-math">\(\{\pm 1\}\text{.}\)</span><div class="solutions"><details id="s2rotisgpexer-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">Use <a href="" class="xref" data-knowl="./knowl/xref/quatrotprop.html" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>.</div></details></div></article></details><article class="definition definition-like" id="rotgp-8"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content">Complete the details to show that <span class="process-math">\(\Rot(S^2)\)</span> is a group. Show that the kernel of the homomorphism <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to
+R_r\)</span> is <span class="process-math">\(\{\pm 1\}\text{.}\)</span><div class="solutions"><details id="s2rotisgpexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a></div></details></div></article></details><article class="definition definition-like" id="rotgp-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
-</h4>The <dfn class="terminology">spherical model</dfn>  of elliptic geometry is <span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span></article><div class="para" id="rotgp-9">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</div>
-<article class="lemma theorem-like" id="rotgp-10"><h4 class="heading">
+</h4>
+<dfn class="terminology">spherical model</dfn><span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span></article><div class="para" id="rotgp-8">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</div>
+<article class="lemma theorem-like" id="rotgp-9"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Rotations about the <span class="process-math">\(y\)</span>-axis.</span>
 </h4>An arbitrary rotation about the <span class="process-math">\(y\)</span>-axis is a composition of a rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians with a rotation about the <span class="process-math">\(z\)</span>-axis. Specifically, we have the following.<div class="displaymath process-math" id="yrotdecomp">
 \begin{equation}
 R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\tag{3.4.2}
 \end{equation}
-</div></article><details id="rotgp-10-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Visualize! You can also verify by checking that both sides of <a href="" class="xref" data-knowl="./knowl/xref/yrotdecomp.html" title="Equation 3.4.2">(3.4.2)</a> yield the same result when evaluated on the three standard basis vectors. Yet another proof is to do a quaternion computation.</article></details><article class="proposition theorem-like" id="rotgenprop"><h4 class="heading">
+</div></article><details id="rotgp-9-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><a href="elliptic_geometry_section.html#yrotdecomp" class="xref" data-knowl="./knowl/xref/yrotdecomp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a></article></details><article class="proposition theorem-like" id="rotgenprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Generators for <span class="process-math">\(\Rot(S^2)\)</span>.</span>
 </h4>The set<div class="displaymath process-math">
 \begin{equation*}
 \{R_{Z,\theta}\colon \theta\in
 \R\}\cup \{R_{X,\pi/2}\}
 \end{equation*}
-</div>is a generating set for <span class="process-math">\(\Rot(S^2)\text{.}\)</span> This means that any rotation may be written as a composition of rotations about the <span class="process-math">\(z\)</span>-axis and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians.</article><details id="rotgenprop-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the <span class="process-math">\(x,z\)</span>-plane. The sphere in the upper left of <a href="" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> depicts this "start" position of the north pole <span class="process-math">\(N\text{,}\)</span> Greenwich <span class="process-math">\(G\text{,}\)</span> and the great circle <span class="process-math">\(C\)</span> that is the intersection of the sphere with the <span class="process-math">\(x,z\)</span>-plane (<span class="process-math">\(C\)</span> is shown in red in all four spheres for reference). Now let <span class="process-math">\(R\)</span> be an arbitrary rotation. The sphere in the upper right of <a href="" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" title="Figure 3.4.10">Figure 3.4.10</a> shows how <span class="process-math">\(\)</span> <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(C\)</span> are transformed by <span class="process-math">\(R\text{.}\)</span> The rest of the diagram shows how we can write <span class="process-math">\(R^{-1}\)</span> as a composition of rotations by "putting the north pole back on top" and "putting zero degrees back in place", as follows. From the upper right in the diagram, we "put the north pole back" by first performing a rotation <span class="process-math">\(R_{Z,\theta_1}\)</span> about the <span class="process-math">\(z\)</span>-axis that brings the north pole into the <span class="process-math">\(x,z\)</span>-plane. Next, we perform the rotation <span class="process-math">\(R_{Y,\theta_2}\)</span> about the <span class="process-math">\(y\)</span>-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation <span class="process-math">\(R_{Z,\theta_3}\)</span> to bring Greenwich back home in the <span class="process-math">\(x,z\)</span>-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+</div>is a generating set for <span class="process-math">\(\Rot(S^2)\text{.}\)</span> This means that any rotation may be written as a composition of rotations about the <span class="process-math">\(z\)</span>-axis and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians.</article><details id="rotgenprop-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(x,z\)</span><a href="elliptic_geometry_section.html#rotation_decomposition_fig" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.10">Figure 3.4.10</a><span class="process-math">\(N\text{,}\)</span><span class="process-math">\(G\text{,}\)</span><span class="process-math">\(C\)</span><span class="process-math">\(x,z\)</span><span class="process-math">\(C\)</span><span class="process-math">\(R\)</span><a href="elliptic_geometry_section.html#rotation_decomposition_fig" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.10">Figure 3.4.10</a><span class="process-math">\(\)</span><span class="process-math">\(N\text{,}\)</span><span class="process-math">\(G\text{,}\)</span><span class="process-math">\(C\)</span><span class="process-math">\(R\text{.}\)</span><span class="process-math">\(R^{-1}\)</span><span class="process-math">\(R_{Z,\theta_1}\)</span><span class="process-math">\(z\)</span><span class="process-math">\(x,z\)</span><span class="process-math">\(R_{Y,\theta_2}\)</span><span class="process-math">\(y\)</span><span class="process-math">\(R_{Z,\theta_3}\)</span><span class="process-math">\(x,z\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
 \begin{equation*}
 R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}
 \end{equation*}
-</div>takes the north pole <span class="process-math">\(N\)</span> through the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+</div>
+<span class="process-math">\(N\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
 \begin{equation*}
 N\to R(N)\to N' \to N''=N\to N\text{.}
 \end{equation*}
-</div>Meanwhile, <span class="process-math">\(G\)</span> traces the path<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+</div>
+<span class="process-math">\(G\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
 \begin{equation*}
 G\to R(G)\to
 G'\to G''\to G 
 \end{equation*}
-</div>while the great circle <span class="process-math">\(C\)</span> is transformed in the sequence<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+</div>
+<span class="process-math">\(C\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
 \begin{equation*}
 C\to R(C) \to C' \to C''\to C.
 \end{equation*}
-</div>This leads to the decomposition <span class="process-math">\(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\)</span> <figure class="figure figure-like" id="rotation_decomposition_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/rot_decomp2.png" class="contained"></div>
+</div>
+<span class="process-math">\(R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}\text{.}\)</span><figure class="figure figure-like" id="rotation_decomposition_fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/rot_decomp2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.10<span class="period">.</span></span><span class="space"> </span>Decomposition of the rotation <span class="process-math">\(R\)</span></figcaption></figure></article></details></section><section class="subsection" id="ellipticsubgpssubsec"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="space"> </span><span class="title">The elliptic subgroup of the Möbius group</span>
 </h3>
@@ -459,18 +684,19 @@ C\to R(C) \to C' \to C''\to C.
 \end{equation*}
 </div>
 </div>
-<details id="ellipticgpisgpexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="ellipticgpisgpexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.11</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that <span class="process-math">\(\S\)</span> is indeed a group. Show that <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is a group isomorphism <span class="process-math">\(\Rot(S^2)\to \S\text{.}\)</span></article></details><div class="para" id="ellipticsubgpssubsec-6">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that <span class="process-math">\(s\circ
-R_{Z,\theta}\circ s^{-1}\)</span> the Möbius transformation <span class="process-math">\(T_{Z,\theta}\)</span> given by <span class="process-math">\(z\to e^{i\theta}z\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/mobiuszrotations.html" title="Exercise 1.3.4.4">Exercise 1.3.4.4</a>) and that <span class="process-math">\(s\circ
-R_{X,\pi/2}\circ s^{-1}\)</span> is the Möbius transformation <span class="process-math">\(T_{X,\pi/2}\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/mobiusxpiby2rotations.html" title="Exercise 1.3.4.6">Exercise 1.3.4.6</a>). The fact (<a href="" class="xref" data-knowl="./knowl/xref/rotgenprop.html" title="Proposition 3.4.9: Generators for \Rot(S^2)">Proposition 3.4.9</a>) that rotations of the form <span class="process-math">\(R_{Z,\theta},R_{X,\pi/2}\)</span> generate <span class="process-math">\(\Rot(S^2)\)</span>  implies that the Möbius transformations <span class="process-math">\(T_{Z,\theta}\)</span> and <span class="process-math">\(T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{.}\)</span> Therefore <span class="process-math">\(\S\)</span> is in fact a subgroup of the Möbius group.</div>
-<article class="definition definition-like" id="ellipticsubgpssubsec-7"><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content">Show that <span class="process-math">\(\S\)</span> is indeed a group. Show that <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is a group isomorphism <span class="process-math">\(\Rot(S^2)\to \S\text{.}\)</span></article></details><div class="para" id="ellipticsubgpssubsec-5">Exercises in <a href="stereoprojsect.html" class="internal" title="Section 1.3: Stereographic projection">Section 1.3</a> show that <span class="process-math">\(s\circ
+R_{Z,\theta}\circ s^{-1}\)</span> the Möbius transformation <span class="process-math">\(T_{Z,\theta}\)</span> given by <span class="process-math">\(z\to e^{i\theta}z\)</span> (see <a href="stereoprojsect.html#mobiuszrotations" class="xref" data-knowl="./knowl/xref/mobiuszrotations.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.3.4.4">Exercise 1.3.4.4</a>) and that <span class="process-math">\(s\circ
+R_{X,\pi/2}\circ s^{-1}\)</span> is the Möbius transformation <span class="process-math">\(T_{X,\pi/2}\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> (see <a href="stereoprojsect.html#mobiusxpiby2rotations" class="xref" data-knowl="./knowl/xref/mobiusxpiby2rotations.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.3.4.6">Exercise 1.3.4.6</a>). The fact (<a href="elliptic_geometry_section.html#rotgenprop" class="xref" data-knowl="./knowl/xref/rotgenprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.9: Generators for \Rot(S^2)">Proposition 3.4.9</a>) that rotations of the form <span class="process-math">\(R_{Z,\theta},R_{X,\pi/2}\)</span> generate <span class="process-math">\(\Rot(S^2)\)</span>  implies that the Möbius transformations <span class="process-math">\(T_{Z,\theta}\)</span> and <span class="process-math">\(T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{.}\)</span> Therefore <span class="process-math">\(\S\)</span> is in fact a subgroup of the Möbius group.</div>
+<article class="definition definition-like" id="ellipticsubgpssubsec-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span>
-</h4>The <dfn class="terminology">Möbius subgeometry model</dfn>  of elliptic geometry is <span class="process-math">\((\extC,\S)\text{.}\)</span></article><div class="para logical" id="ellipticsubgpssubsec-8">
+</h4>
+<dfn class="terminology">Möbius subgeometry model</dfn><span class="process-math">\((\extC,\S)\text{.}\)</span></article><div class="para logical" id="ellipticsubgpssubsec-7">
 <div class="para">We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
 T}\colon GL(2,\C)\to \M\)</span> that sends the matrix <span class="process-math">\(\left[\begin{array}{cc} a\amp b\\ c\amp
-d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/gl2tomobgp.html" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/gl2tomobgp.html ./knowl/xref/su2def.html" id="ellipticsubgpssubsec-8-6">
+d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="geometry_chapter-4.html#gl2tomobgp" class="xref" data-knowl="./knowl/xref/gl2tomobgp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/gl2tomobgp.html ./knowl/xref/su2def.html" id="ellipticsubgpssubsec-7-6">
 \begin{align}
 T_{Z,\theta} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
 e^{i\theta/2} \amp 0\\ 0 \amp
@@ -480,19 +706,19 @@ T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
 \frac{i}{\sqrt{2}}\amp \frac{1}{\sqrt{2}}\end{array}\right]\right)\tag{3.4.4}
 \end{align}
 </div>
-<div class="para">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/su2def.html" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span>
+<div class="para">are images of elements of the group <span class="process-math">\(SU(2)\)</span> (see <a href="elliptic_geometry_section.html#su2def" class="xref" data-knowl="./knowl/xref/su2def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.1">(3.4.1)</a>). Because <span class="process-math">\(T_{Z,\theta},T_{X,\pi/2}\)</span> generate <span class="process-math">\(\S\text{,}\)</span> it follows that every element of <span class="process-math">\(\S\)</span> is the image under <span class="process-math">\({\mathcal T}\)</span> of an element of <span class="process-math">\(SU(2)\text{.}\)</span>
 </div>
 </div>
-<details id="ellipticgpgenexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="ellipticgpgenexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.13</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Let <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> denote the matrices <span class="process-math">\(\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
-\twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}\text{,}\)</span> respectively.  Verify that <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> are indeed elements of <span class="process-math">\(SU(2)\text{.}\)</span> Verify <a href="" class="xref" data-knowl="./knowl/xref/tzthetaassu2image.html" title="Equation 3.4.3">(3.4.3)</a> and <a href="" class="xref" data-knowl="./knowl/xref/txpiby2assu2image.html" title="Equation 3.4.4">(3.4.4)</a>.  Explain the final comment in the paragraph above. Why does it follow that every element of <span class="process-math">\(\S\)</span> is the image of an element of <span class="process-math">\(SU(2)\text{?}\)</span></article></details><div class="para" id="ellipticsubgpssubsec-11">Thus we have proved the following explicit formula for elements of <span class="process-math">\(\S\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content">Let <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> denote the matrices <span class="process-math">\(\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
+\twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}\text{,}\)</span> respectively.  Verify that <span class="process-math">\(M_{Z,\theta},M_{X,\pi/2}\)</span> are indeed elements of <span class="process-math">\(SU(2)\text{.}\)</span> Verify <a href="elliptic_geometry_section.html#ellipticsubgpssubsec-7-6" class="xref" data-knowl="./knowl/xref/tzthetaassu2image.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.3">(3.4.3)</a> and <a href="elliptic_geometry_section.html#ellipticsubgpssubsec-7-6" class="xref" data-knowl="./knowl/xref/txpiby2assu2image.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.4">(3.4.4)</a>.  Explain the final comment in the paragraph above. Why does it follow that every element of <span class="process-math">\(\S\)</span> is the image of an element of <span class="process-math">\(SU(2)\text{?}\)</span></article></details><div class="para" id="ellipticsubgpssubsec-9">Thus we have proved the following explicit formula for elements of <span class="process-math">\(\S\text{.}\)</span>
 </div>
 <article class="proposition theorem-like" id="ellipticgpissu2imageprop"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">Formula for transformations in the elliptic group.</span>
 </h4>
 <div class="para" id="ellipticgpissu2imageprop-2-1">A map <span class="process-math">\(T\)</span> is an element of <span class="process-math">\(\S\)</span> if and only if <span class="process-math">\(T\)</span> may be written in the form <span class="process-math">\(Tz=\frac{az+b}{-b^\ast z+a^\ast}\)</span> for some <span class="process-math">\(a,b\in \C\)</span> with <span class="process-math">\(|a|^2+|b|^2=1\text{.}\)</span>
-</div></article><div class="para logical" id="ellipticsubgpssubsec-13">
+</div></article><div class="para logical" id="ellipticsubgpssubsec-11">
 <div class="para">Setting <span class="process-math">\(e^{i\theta}=\frac{a}{a^\ast}\)</span> and <span class="process-math">\(z_0=\frac{-b}{a}\text{,}\)</span> we have the following alternative form for <span class="process-math">\(T\in \S\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="ellipticgp0inftyform">
@@ -506,17 +732,17 @@ Tz=e^{i\theta}\frac{z-z_0}{z_0^\ast z+1}\tag{3.4.5}
 <div class="para" id="elliptic_geometry_section-6-2">A <em class="emphasis">circle</em> in <span class="process-math">\(S^2\)</span> is a circle in a plane intersecting <span class="process-math">\(S^2\text{.}\)</span> A <dfn class="terminology">great circle</dfn> is the intersection of <span class="process-math">\(S^2\)</span> with a plane through the origin. In elliptic geometry, a great circle is called an <dfn class="terminology">elliptic straight line</dfn> because the path of shortest length connecting two given points in <span class="process-math">\(S^2\)</span> is an arc of a great circle. Circles in <span class="process-math">\(S^2\)</span> that are not great circles are called <dfn class="terminology">elliptic cycles</dfn>. Elliptic straight lines and elliptic cycles in the Möbius subgeometry model <span class="process-math">\((\extC,\S)\)</span> are stereographic projections of elliptic straight lines and elliptic cycles in the spherical model. It turns out that elliptic straight lines and elliptic cycles in <span class="process-math">\(\extC\)</span> are in fact clines. Here is the statement and proof.</div>
 <article class="proposition theorem-like" id="elliptic_geometry_section-6-3"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection takes circles to clines.</span>
-</h4>Let <span class="process-math">\(C\)</span> be a circle that is the intersection of <span class="process-math">\(S^2\)</span> with a plane in <span class="process-math">\(\R^3\text{.}\)</span> If <span class="process-math">\(C\)</span> contains the north pole <span class="process-math">\((0,0,1)\)</span> of <span class="process-math">\(S^2\text{,}\)</span> then <span class="process-math">\(s(C\setminus\{(0,0,1)\})\)</span> is a Euclidean straight line in <span class="process-math">\(\C\text{.}\)</span> Otherwise, <span class="process-math">\(s(C)\)</span> is a circle in <span class="process-math">\(\C\text{.}\)</span></article><details id="elliptic_geometry_section-6-3-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Proof sketch: The statement about the case when <span class="process-math">\(C\)</span> contains the north pole is geometrically clear. For the case when <span class="process-math">\(C\)</span> does not contain <span class="process-math">\((0,0,1)\text{,}\)</span> choose a rotation <span class="process-math">\(R\)</span> of <span class="process-math">\(S^2\)</span> that takes some point on <span class="process-math">\(C\)</span> to the north pole. Again, let <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> be the conjugate element in <span class="process-math">\(\S\text{.}\)</span> It is clear that <span class="process-math">\(R\)</span> takes <span class="process-math">\(C\)</span> to a circle, that <span class="process-math">\(s\)</span> takes <span class="process-math">\(R(C)\)</span> to a Euclidean straight line, and that <span class="process-math">\(T^{-1}\)</span> takes <span class="process-math">\(s(R(C))\)</span> to a cline (because <span class="process-math">\(T^{-1}\)</span> is a Möbius transformation!). Thus <span class="process-math">\(s(C)=(T^{-1}\circ s\circ R)(C)\)</span> is a cline. Because <span class="process-math">\((0,0,1)\)</span> is not on <span class="process-math">\(C\text{,}\)</span> it must be that <span class="process-math">\(\infty\)</span> is not on <span class="process-math">\(s(C)\text{,}\)</span> so <span class="process-math">\(s(C)\)</span> is a circle in <span class="process-math">\(\C\text{.}\)</span></article></details></section><section class="subsection" id="elliptic_geometry_section-7"><h3 class="heading hide-type">
+</h4>Let <span class="process-math">\(C\)</span> be a circle that is the intersection of <span class="process-math">\(S^2\)</span> with a plane in <span class="process-math">\(\R^3\text{.}\)</span> If <span class="process-math">\(C\)</span> contains the north pole <span class="process-math">\((0,0,1)\)</span> of <span class="process-math">\(S^2\text{,}\)</span> then <span class="process-math">\(s(C\setminus\{(0,0,1)\})\)</span> is a Euclidean straight line in <span class="process-math">\(\C\text{.}\)</span> Otherwise, <span class="process-math">\(s(C)\)</span> is a circle in <span class="process-math">\(\C\text{.}\)</span></article><details id="elliptic_geometry_section-6-3-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(C\)</span><span class="process-math">\(C\)</span><span class="process-math">\((0,0,1)\text{,}\)</span><span class="process-math">\(R\)</span><span class="process-math">\(S^2\)</span><span class="process-math">\(C\)</span><span class="process-math">\(T=s\circ R\circ s^{-1}\)</span><span class="process-math">\(\S\text{.}\)</span><span class="process-math">\(R\)</span><span class="process-math">\(C\)</span><span class="process-math">\(s\)</span><span class="process-math">\(R(C)\)</span><span class="process-math">\(T^{-1}\)</span><span class="process-math">\(s(R(C))\)</span><span class="process-math">\(T^{-1}\)</span><span class="process-math">\(s(C)=(T^{-1}\circ s\circ R)(C)\)</span><span class="process-math">\((0,0,1)\)</span><span class="process-math">\(C\text{,}\)</span><span class="process-math">\(\infty\)</span><span class="process-math">\(s(C)\text{,}\)</span><span class="process-math">\(s(C)\)</span><span class="process-math">\(\C\text{.}\)</span></article></details></section><section class="subsection" id="elliptic_geometry_section-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="space"> </span><span class="title">Angles and orientation on <span class="process-math">\(S^2\)</span></span>
 </h3>
-<div class="para" id="elliptic_geometry_section-7-2">The standard orientation for angles on <span class="process-math">\(S^2\)</span> (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a href="" class="xref" data-knowl="./knowl/xref/two_orientations_fig.html" title="Figure 3.4.16">Figure 3.4.16</a>.</div>
-<figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/2orientations.png" class="contained"></div>
+<div class="para" id="elliptic_geometry_section-7-2">The standard orientation for angles on <span class="process-math">\(S^2\)</span> (see <a href="elliptic_geometry_section.html#rotgp" class="internal" title="Subsection 3.4.2: The group of rotations of the 2-sphere">Subsection 3.4.2</a>) is also called the <em class="emphasis">outward-pointing normal</em> orientation. The standard orientation measures angles from the viewpoint of an observer standing on the <em class="emphasis">outside</em> of the sphere. The <em class="emphasis">inward-pointing normal</em> orientation is the reverse orientation that measures angles from the viewpoint of an observer walking on the inside of the sphere. See <a href="elliptic_geometry_section.html#two_orientations_fig" class="xref" data-knowl="./knowl/xref/two_orientations_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.16">Figure 3.4.16</a>.</div>
+<figure class="figure figure-like" id="two_orientations_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/2orientations.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.16<span class="period">.</span></span><span class="space"> </span>Two orientations on the sphere: oriented angle <span class="process-math">\(\angle
 PQR\)</span> is positive viewed from the outward-pointing normal vector <span class="process-math">\(v\text{,}\)</span> but is negative viewed from the inward-pointing vector <span class="process-math">\(-v\text{.}\)</span></figcaption></figure><article class="corollary theorem-like" id="elliptic_geometry_section-7-4"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Stereographic projection is conformal.</span>
 </h4>
-<div class="para" id="elliptic_geometry_section-7-4-2-1">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</div></article><details id="elliptic_geometry_section-7-4-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Proof sketch: Begin with the special case of curves <span class="process-math">\(C_1,C_2\)</span> that intersect at the south pole <span class="process-math">\(S=(0,0,-1)\text{.}\)</span> The lines <span class="process-math">\(L_1,L_2\)</span> that are tangent to <span class="process-math">\(C_1,C_2\)</span> at <span class="process-math">\(S\)</span> lie in planes <span class="process-math">\(\Pi_1,\Pi_2\)</span> that contain the south pole and the origin. The tangents <span class="process-math">\(L_1,L_2\)</span> also lie in the plane <span class="process-math">\(z=-1\)</span> tangent to the sphere at the south pole. It is clear that the lines <span class="process-math">\(L_1',L_2'\)</span> tangent to <span class="process-math">\(s(C_1),s(C_2)\)</span> at <span class="process-math">\(s(S)=0\)</span> are straight lines that intersect at the origin. The angle made by <span class="process-math">\(L_1,L_2\)</span> is the same as the angle made by the planes <span class="process-math">\(\Pi_1,\Pi_2\text{,}\)</span> but with inward-normal orientation! See <a href="" class="xref" data-knowl="./knowl/xref/stereo_conformal_fig.html" title="Figure 3.4.18">Figure 3.4.18</a>. Now suppose two curves intersect at <span class="process-math">\(P\text{.}\)</span> Choose a rotation <span class="process-math">\(R\)</span> of <span class="process-math">\(S^2\)</span> that takes <span class="process-math">\(P\)</span> to the south pole, and let <span class="process-math">\(T=s\circ R\circ s^{-1}\)</span> be the conjugate element in <span class="process-math">\(\S\text{.}\)</span> It is clear that <span class="process-math">\(R\)</span> and <span class="process-math">\(T\)</span> are conformal (because <span class="process-math">\(T\)</span> is a Möbius transformation!). Now the fact that <span class="process-math">\(s\)</span> is conformal at <span class="process-math">\((0,0,-1)\)</span> implies that <span class="process-math">\(s=T^{-1}\circ s\circ
-R\)</span> is conformal at <span class="process-math">\(P\text{.}\)</span> <figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/stereo_conformal.png" class="contained"></div>
+<div class="para" id="elliptic_geometry_section-7-4-2-1">Stereographic projection preserves oriented angles with respect to the inward-pointing normal orientation.</div></article><details id="elliptic_geometry_section-7-4-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(C_1,C_2\)</span><span class="process-math">\(S=(0,0,-1)\text{.}\)</span><span class="process-math">\(L_1,L_2\)</span><span class="process-math">\(C_1,C_2\)</span><span class="process-math">\(S\)</span><span class="process-math">\(\Pi_1,\Pi_2\)</span><span class="process-math">\(L_1,L_2\)</span><span class="process-math">\(z=-1\)</span><span class="process-math">\(L_1',L_2'\)</span><span class="process-math">\(s(C_1),s(C_2)\)</span><span class="process-math">\(s(S)=0\)</span><span class="process-math">\(L_1,L_2\)</span><span class="process-math">\(\Pi_1,\Pi_2\text{,}\)</span><a href="elliptic_geometry_section.html#stereo_conformal_fig" class="xref" data-knowl="./knowl/xref/stereo_conformal_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.18">Figure 3.4.18</a><span class="process-math">\(P\text{.}\)</span><span class="process-math">\(R\)</span><span class="process-math">\(S^2\)</span><span class="process-math">\(P\)</span><span class="process-math">\(T=s\circ R\circ s^{-1}\)</span><span class="process-math">\(\S\text{.}\)</span><span class="process-math">\(R\)</span><span class="process-math">\(T\)</span><span class="process-math">\(T\)</span><span class="process-math">\(s\)</span><span class="process-math">\((0,0,-1)\)</span><span class="process-math">\(s=T^{-1}\circ s\circ
+R\)</span><span class="process-math">\(P\text{.}\)</span><figure class="figure figure-like" id="stereo_conformal_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/stereo_conformal.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.18<span class="period">.</span></span><span class="space"> </span>Stereographic projection is conformal at <span class="process-math">\(S=(0,0,-1)\text{.}\)</span></figcaption></figure></article></details></section><section class="subsection" id="elliptic_geometry_section-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="space"> </span><span class="title">Elliptic length and area</span>
 </h3>
@@ -538,7 +764,7 @@ d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\rig
 </div>
 </div>
 <div class="para logical" id="elliptic_geometry_section-8-3">
-<div class="para">To "transfer" the metric <a href="" class="xref" data-knowl="./knowl/xref/s2metric.html" title="Equation 3.4.6">(3.4.6)</a> to <span class="process-math">\(\extC\)</span> by stereographic projection means that we define the elliptic metric <span class="process-math">\(d_{\extC}\)</span> on <span class="process-math">\(\extC\)</span> by the following.</div>
+<div class="para">To "transfer" the metric <a href="elliptic_geometry_section.html#s2metric" class="xref" data-knowl="./knowl/xref/s2metric.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.6">(3.4.6)</a> to <span class="process-math">\(\extC\)</span> by stereographic projection means that we define the elliptic metric <span class="process-math">\(d_{\extC}\)</span> on <span class="process-math">\(\extC\)</span> by the following.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/s2metric.html" id="elliptic_metric_def">
 \begin{equation}
 d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))\tag{3.4.7}
@@ -549,7 +775,7 @@ d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))\tag{3.4.7}
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.19</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="elliptic_metric_is_invariant-1-1">
-<div class="para">The elliptic metric <a href="" class="xref" data-knowl="./knowl/xref/elliptic_metric_def.html" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</div>
+<div class="para">The elliptic metric <a href="elliptic_geometry_section.html#elliptic_metric_def" class="xref" data-knowl="./knowl/xref/elliptic_metric_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.7">(3.4.7)</a> is invariant under the action of the elliptic group. That is, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_metric_def.html" id="elliptic_metric_is_invariant-1-1-2">
 \begin{equation}
 d_{\extC}(p,q) = d_{\extC}(Tp,Tq)\tag{3.4.8}
@@ -560,18 +786,18 @@ d_{\extC}(p,q) = d_{\extC}(Tp,Tq)\tag{3.4.8}
 </div></article><div class="para logical" id="elliptic_geometry_section-8-5">
 <div class="para">In order to obtain a formula for computing <span class="process-math">\(d_{\extC}(p,q)\text{,}\)</span> we follow the same procedure for hyperbolic distance. First, we find the distance <span class="process-math">\(d_{\extC}(0,u)\text{,}\)</span> where <span class="process-math">\(0\leq u\leq
 1\text{.}\)</span> Let <span class="process-math">\(S=(0,0,-1)=s^{-1}(0)\)</span> and let <span class="process-math">\(U=s^{-1}(u)\text{.}\)</span> Let <span class="process-math">\(0=(0,0,0)\text{,}\)</span> let <span class="process-math">\(N=(0,0,1)\text{,}\)</span> let <span class="process-math">\(\alpha =
-\angle SNU\)</span> and let <span class="process-math">\(\theta = \angle SOU\)</span> (see <a href="" class="xref" data-knowl="./knowl/xref/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that <span class="process-math">\(\alpha = \theta/2\text{,}\)</span> so that we have</div>
+\angle SNU\)</span> and let <span class="process-math">\(\theta = \angle SOU\)</span> (see <a href="elliptic_geometry_section.html#elliptic_distance_fig" class="xref" data-knowl="./knowl/xref/elliptic_distance_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.20">Figure 3.4.20</a>). It is a simple exercise to show that <span class="process-math">\(\alpha = \theta/2\text{,}\)</span> so that we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_distance_fig.html" id="ellipticdist0u">
 \begin{equation}
 d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. \tag{3.4.9}
 \end{equation}
 </div>
 </div>
-<figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/elliptic_distance.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on <span class="process-math">\(S^2\)</span> to <span class="process-math">\(\extC\)</span> via stereographic projection.</figcaption></figure><details id="ellipticdistlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<figure class="figure figure-like" id="elliptic_distance_fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/elliptic_distance.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.20<span class="period">.</span></span><span class="space"> </span>Transferring the natural metric on <span class="process-math">\(S^2\)</span> to <span class="process-math">\(\extC\)</span> via stereographic projection.</figcaption></figure><details id="ellipticdistlemmaexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.21</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that <span class="process-math">\(\theta/2=\alpha=\arctan u\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/elliptic_distance_fig.html" title="Figure 3.4.20">Figure 3.4.20</a>.</article></details><div class="para logical" id="elliptic_geometry_section-8-9">
-<div class="para">For the general case, let <span class="process-math">\(z_1,z_2\in \extC\text{.}\)</span> Because and let <span class="process-math">\(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\)</span> be the transformation in <span class="process-math">\(\S\)</span> (using the form <a href="" class="xref" data-knowl="./knowl/xref/ellipticgp0inftyform.html" title="Equation 3.4.5">(3.4.5)</a>) that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to u\geq 0\text{.}\)</span> Applying <a href="" class="xref" data-knowl="./knowl/xref/ellipticdist0u.html" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in <span class="process-math">\(\extC\text{.}\)</span>
+</h4></summary><article class="exercise exercise-like knowl__content">Show that <span class="process-math">\(\theta/2=\alpha=\arctan u\)</span> in <a href="elliptic_geometry_section.html#elliptic_distance_fig" class="xref" data-knowl="./knowl/xref/elliptic_distance_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.20">Figure 3.4.20</a>.</article></details><div class="para logical" id="elliptic_geometry_section-8-8">
+<div class="para">For the general case, let <span class="process-math">\(z_1,z_2\in \extC\text{.}\)</span> Because and let <span class="process-math">\(Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}\)</span> be the transformation in <span class="process-math">\(\S\)</span> (using the form <a href="elliptic_geometry_section.html#ellipticgp0inftyform" class="xref" data-knowl="./knowl/xref/ellipticgp0inftyform.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a>) that sends <span class="process-math">\(z_1\to 0\)</span> and <span class="process-math">\(z_2\to u\geq 0\text{.}\)</span> Applying <a href="elliptic_geometry_section.html#ellipticdist0u" class="xref" data-knowl="./knowl/xref/ellipticdist0u.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.9">(3.4.9)</a>, we have the elliptic distance formula in <span class="process-math">\(\extC\text{.}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ellipticgp0inftyform.html ./knowl/xref/ellipticdist0u.html ./knowl/xref/hyperboliclengthformula.html" id="ellipticdist">
 \begin{equation}
@@ -579,19 +805,19 @@ d_{\extC}(z_1,z_2)=2\arctan
 \left|\frac{z_2-z_1}{z_1^\ast z_2 + 1}\right|\tag{3.4.10}
 \end{equation}
 </div>
-<div class="para">Now let <span class="process-math">\(\gamma\)</span> be a parametric curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> in <span class="process-math">\(\extC\text{.}\)</span> Using the same argument as in the paragraph preceding the hyperbolic length integral formula <a href="" class="xref" data-knowl="./knowl/xref/hyperboliclengthformula.html" title="Equation 3.3.6">(3.3.6)</a>, using the first order Taylor approximation <span class="process-math">\(\arctan u \approx u\)</span> and making the appropriate changes, we arrive at the elliptic length integral formula.</div>
+<div class="para">Now let <span class="process-math">\(\gamma\)</span> be a parametric curve <span class="process-math">\(z(t)=x(t)+iy(t)\)</span> in <span class="process-math">\(\extC\text{.}\)</span> Using the same argument as in the paragraph preceding the hyperbolic length integral formula <a href="geometry_chapter-5.html#hyperboliclengthformula" class="xref" data-knowl="./knowl/xref/hyperboliclengthformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.6">(3.3.6)</a>, using the first order Taylor approximation <span class="process-math">\(\arctan u \approx u\)</span> and making the appropriate changes, we arrive at the elliptic length integral formula.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ellipticgp0inftyform.html ./knowl/xref/ellipticdist0u.html ./knowl/xref/hyperboliclengthformula.html" id="ellipticlengthformula">
 \begin{equation}
 \text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt\tag{3.4.11}
 \end{equation}
 </div>
 </div>
-<details id="ellipticdsexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="ellipticdsexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.22</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like">Show that the first order Taylor approximation for <span class="process-math">\(\arctan u\)</span> is <span class="process-math">\(u\text{.}\)</span> Complete the details of modifying the derivation of the hyperbolic length integral formula to obtain the elliptic length integral formula.</article></details><details id="ellipticcircumexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content">Show that the first order Taylor approximation for <span class="process-math">\(\arctan u\)</span> is <span class="process-math">\(u\text{.}\)</span> Complete the details of modifying the derivation of the hyperbolic length integral formula to obtain the elliptic length integral formula.</article></details><details id="ellipticcircumexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.23</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="ellipticcircumexer-1">Find the length of the elliptic cycle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\leq 1\)</span> .</div></article></details><div class="para logical" id="elliptic_geometry_section-8-14">
-<div class="para">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a href="" class="xref" data-knowl="./knowl/xref/hyperbolicareaintformula.html" title="Equation 3.3.10">(3.3.10)</a>, using the elliptic length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</div>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ellipticcircumexer-1">Find the length of the elliptic cycle parameterized by <span class="process-math">\(z(t) = \alpha e^{it}\)</span> for <span class="process-math">\(0\leq t\leq 2\pi\text{,}\)</span> where <span class="process-math">\(0\lt \alpha\leq 1\)</span> .</div></article></details><div class="para logical" id="elliptic_geometry_section-8-11">
+<div class="para">Using the same argument as in the paragraph preceding the hyperbolic area integral formula <a href="geometry_chapter-5.html#hyperbolicareaintformula" class="xref" data-knowl="./knowl/xref/hyperbolicareaintformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.7">(3.3.7)</a>, using the elliptic length differential <span class="process-math">\(ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}\)</span> in place of the hyperbolic length differential and making the appropriate changes, we obtain the elliptic area integral formula.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/hyperbolicareaintformula.html" id="ellipticareaintformula">
 \begin{equation}
 \text{Area}(R)=\iint_R
@@ -599,37 +825,37 @@ dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.\tag{3.4.12}
 \end{equation}
 </div>
 </div>
-<details id="ellipticdiskareaexer" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="ellipticdiskareaexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.24</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like"><div class="para" id="ellipticdiskareaexer-1">Find the area of the elliptic disk <span class="process-math">\(\{|z|\leq
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ellipticdiskareaexer-1">Find the area of the elliptic disk <span class="process-math">\(\{|z|\leq
 \alpha\}\text{,}\)</span> for <span class="process-math">\(0\lt \alpha\lt 1\text{.}\)</span>
 </div></article></details></section><section class="exercises" id="elliptic_geometry_section-9"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="threeellipticmodelssameexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>Show that the three models of elliptic geometry are equivalent.</article><article class="exercise exercise-like" id="ellipticmetinvexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="ellipticmetinvexer-1-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/elliptic_metric_is_invariant.html" title="Proposition 3.4.19">Proposition 3.4.19</a>.</div></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
+<div class="para" id="ellipticmetinvexer-1-1">Prove <a href="elliptic_geometry_section.html#elliptic_metric_is_invariant" class="xref" data-knowl="./knowl/xref/elliptic_metric_is_invariant.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.19">Proposition 3.4.19</a>.</div></article><div class="exercisegroup" id="elliptic_triangle_area_exergroup">
 <h4 class="heading"><span class="title">Area of an elliptic triangle.</span></h4>
-<div class="introduction" id="elliptic_triangle_area_exergroup-2">The following sequence of exercises establishes the area formula for elliptic triangles.</div>
+<div class="introduction" id="elliptic_triangle_area_exergroup-2"></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="twogonareaexer"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic 2-gon.</span>
 </h5>
 <div class="para" id="twogonareaexer-2-1">An <dfn class="terminology">elliptic 2-gon</dfn> is a figure with two vertices connected by two elliptic line segments. In <span class="process-math">\(\extC\text{,}\)</span> any 2-gon is congruent to a set of the form <span class="process-math">\(R_{\alpha} :=\{z\in \C\colon
 0\leq \arg z \leq \alpha\}\cup \{\infty\}\)</span> for some <span class="process-math">\(\alpha\)</span> in the range <span class="process-math">\(0\leq \alpha\lt
-2\pi\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/xref/two_gon_fig.html" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in <span class="process-math">\(\extC\)</span> to show that the area of <span class="process-math">\(R_{\alpha}\)</span> is <span class="process-math">\(2\alpha\text{.}\)</span> Verify that this is the right answer using a picture of <span class="process-math">\(S^2\text{.}\)</span> <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/2gon.png" class="contained"></div>
+2\pi\text{.}\)</span> See <a href="elliptic_geometry_section.html#two_gon_fig" class="xref" data-knowl="./knowl/xref/two_gon_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.25">Figure 3.4.25</a>. Use an area integral in <span class="process-math">\(\extC\)</span> to show that the area of <span class="process-math">\(R_{\alpha}\)</span> is <span class="process-math">\(2\alpha\text{.}\)</span> Verify that this is the right answer using a picture of <span class="process-math">\(S^2\text{.}\)</span> <figure class="figure figure-like" id="two_gon_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/2gon.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.25<span class="period">.</span></span><span class="space"> </span>2-gons in <span class="process-math">\(\extC\)</span> and <span class="process-math">\(S^2\text{.}\)</span></figcaption></figure>
 </div></article><article class="exercise exercise-like" id="elliptic_triangle_area_exer"><h5 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Area of an elliptic triangle.</span>
 </h5>
 <div class="para logical" id="elliptic_triangle_area_exer-2-1">
 <div class="para">Let <span class="process-math">\(\triangle ABC\)</span> be an elliptic triangle. Let <span class="process-math">\({\mathcal C}_{AB},{\mathcal
-C}_{AC},{\mathcal C}_{BC}\)</span> denote the great circles that extend the sides <span class="process-math">\(AB,AC,BC\)</span> of the triangle. See <a href="" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>.</div>
-<ol class="lower-alpha">
+C}_{AC},{\mathcal C}_{BC}\)</span> denote the great circles that extend the sides <span class="process-math">\(AB,AC,BC\)</span> of the triangle. See <a href="elliptic_geometry_section.html#elliptic_triangle_area_fig" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.26">Figure 3.4.26</a>.</div>
+<ol class="lower-alpha" id="elliptic_triangle_area_exer-2-1-5">
 <li id="elliptic_triangle_area_exer-2-1-5-1"><div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-1">Explain why <span class="process-math">\(A,A'\)</span> are endpoints of the same diameter, that is, endpoints of a diameter of <span class="process-math">\(S^2\)</span> or their stereographic projections in <span class="process-math">\(\extC\text{.}\)</span>
 </div></li>
 <li id="elliptic_triangle_area_exer-2-1-5-2"><div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-2">Explain why <span class="process-math">\(\triangle A'B'C'\)</span> has the same area as <span class="process-math">\(\triangle ABC\text{,}\)</span> even though the two triangles are not necessarily congruent! (Note that the interior of <span class="process-math">\(\triangle A'B'C'\)</span> is the <em class="emphasis">exterior</em> of the three great circles, that is, on the side that contains the point <span class="process-math">\(\infty\text{.}\)</span>) Hint: What does part (a) of this problem imply about the relationship between points <span class="process-math">\(X\)</span> and <span class="process-math">\(X'\)</span> on <span class="process-math">\(S^2\)</span> for <span class="process-math">\(X=A,B,C\text{?}\)</span>
 </div></li>
-<li id="elliptic_triangle_area_exer-2-1-5-3"><div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-3">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_triangle_area_fig.html">
+<li id="elliptic_triangle_area_exer-2-1-5-3"><div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-3">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="elliptic_geometry_section.html#elliptic_triangle_area_fig" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_triangle_area_fig.html">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 ABC).
@@ -650,7 +876,7 @@ C)-\pi.\tag{3.4.13}
 </div>
 </div></li>
 </ol>
-<div class="para"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/elliptic_triangle_area.png" class="contained"></div>
+<div class="para"><figure class="figure figure-like" id="elliptic_triangle_area_fig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/elliptic_triangle_area.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
 </div></article>
 </div>
@@ -660,7 +886,7 @@ C)-\pi.\tag{3.4.13}
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
