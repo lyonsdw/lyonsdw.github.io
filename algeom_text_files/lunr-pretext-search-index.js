@@ -781,34 +781,61 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Definition of a group",
-  "body": " Definition of a group  We will use the notation to denote a binary operation on a set that sends the pair to . Recall that a binary operation is associative means that for all . associative binary operation   Group   A group group is a set , together with a binary operation with the following properties.  The operation is associative.  There exists an element in , called an identity element, such that for all .  For every , there exists an element , called an inverse element for , such that .       Immediate consequences of the definition of group   Let be a group. The element in the second property of is unique. Given , the element in the third property of is unique.     Multiplicative notation   Let be a group. By , we may speak of an identity element as the identity element for . identity element Given , we may refer to an inverse element for as the inverse of , and we write to denote this element. inverse of a group element In practice, we often omit the operator , and simply write to denote . We adopt the convention that is the identity element. For , we write to denote and we write to denote . This set of notational conventions is called multiplicative notation multiplicative notation .    Abelian group, additive notation  In general, group operations are not commutative. Recall that a binary operation on a set is called commutative commutative binary operation if for all . A group with a commutative operation is called Abelian .  Abelian group For some Abelian groups, such as the group of integers, the group operation is called addition , and we write instead of using the multiplicative notation . We write to denote the identity element, we write to denote the inverse of , and we write to denote for positive integers . This set of notational conventions is called additive notation additive notation .    Order of a group The number of elements in a finite group is called the order order of a group of the group. A group with infinitely many elements is said to be of infinite order . We write  order of the group   to denote the order of the group .  The trivial group  A group with a single element (which is necessarily the identity element) is called a trivial group groups, list of trivial group  . In multiplicative notation, one might write , and in additive notation, one might write , to denote a trivial group.    Uniqueness of the identity element  Let be a group. Suppose that both satisfy the second property of the , that is, suppose for all . Show that .   Uniqueness of inverse elements  Let be a group with identity element . Let and suppose that . Show that .   The cancellation law  Suppose that for some elements in a group . Show that . [Note that the same proof, mutatis mutandis, shows that if , then .]   The \"socks and shoes\" property  Let be elements of a group . Show that .   Product Groups product group Given two groups with group operations , the Cartesian product is a group with the operation given by Show that this operation satisfies the definition of a group.   Cyclic groups cyclic group A group is called cyclic if there exists an element in , called a generator , such that the sequence contains all of the elements in .  Suppose that a group is finite, and cyclic, with generator . Show that   The group of integers is cyclic. Find all of the generators.  The group is cyclic. Find all of the generators.  The group is cyclic. Find all of the generators.  Show that the group is not cyclic.      For part a, let be the least positive integer such that (explain why exists!). Given an arbitrary element , write for some , then use the Division Algorithm.   Cyclic permutations cyclic permutations   Let be a positive integer and let be an integer in the range . A permutation (see ) is called a -cycle permutation -cycle  if there is a -element set such that for and , and for . We use cycle notation cycle notation  permutation cycle notation   to denote the -cycle that acts as on the distinct positive integers . For example, the element is a 3-cycle in because acts on the set by and acts on as the identity. A -cycle is defined to be the identity permutation, and may be written as in cycle notation, for any . Note that cycle notation is not unique. For example, in we have and . A permutation is called cyclic cyclic permutation  permutation cyclic permutation  if it is a -cycle for some , . There are two conventions about whether the identity permutation is considered cyclic. According to the definition in this text, the identity is cyclic because it is a 1-cycle. Another convention, not used here, is that a permutation is cyclic if it is a -cycle for some . According to this convention, the identity is not cyclic. A 2-cycle is called a transposition transposition  permutation transposition  .  Find all of the cyclic permutations in . Find their inverses.  Find all of the cyclic permutations in .     Cycles and are called disjoint disjoint cyclic permutations  if the sets and are disjoint, that is, if for all . Show that every permutation in is a product of disjoint cycles.   Every permutation is a product of transpositions  Show that every permutation in can be written as a product of transpositions.  Show that factoring a permutation into a product of transpositions is not unique by writing the identity permutation in as a product of transpositions in two different ways.     Cayley tables  The Cayley table for a finite group is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry in position with row label and column label . Partial Cayley tables for ( ) and ( ) are given below.   (Partial) Cayley table for . The symbol denotes the identity permutation.     (Partial) Cayley table for . (See for notation for the elements of .)   Fill in the remaining entries in the Cayley tables for and .  Prove that the Cayley table for any group is a Latin square . This means that every element of the group appears exactly once in each row and in each column.          "
-},
-{
-  "id": "groupdefsection-2",
-  "level": "2",
-  "url": "groupdefsection.html#groupdefsection-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "group identity inverse multiplicative notation Abelian additive notation "
+  "body": " Definition of a group  We will use the notation to denote a binary operation on a set that sends the pair to . Recall that a binary operation is associative means that for all . associative binary operation     Group   A group group is a set , together with a binary operation with the following properties.  The operation is associative.  There exists an element in , called an identity element, such that for all .  For every , there exists an element , called an inverse element for , such that .        Immediate consequences of the definition of group   Let be a group. The element in the second property of is unique. Given , the element in the third property of is unique.      Multiplicative notation   Let be a group. By , we may speak of an identity element as the identity element for . identity element Given , we may refer to an inverse element for as the inverse of , and we write to denote this element. inverse of a group element In practice, we often omit the operator , and simply write to denote . We adopt the convention that is the identity element. For , we write to denote and we write to denote . This set of notational conventions is called multiplicative notation multiplicative notation .     Abelian group, additive notation  In general, group operations are not commutative. Recall that a binary operation on a set is called commutative commutative binary operation if for all . A group with a commutative operation is called Abelian .  Abelian group For some Abelian groups, such as the group of integers, the group operation is called addition , and we write instead of using the multiplicative notation . We write to denote the identity element, we write to denote the inverse of , and we write to denote for positive integers . This set of notational conventions is called additive notation additive notation .     Order of a group  The number of elements in a finite group is called the order order of a group of the group. A group with infinitely many elements is said to be of infinite order . We write  order of the group   to denote the order of the group .      The trivial group  A group with a single element (which is necessarily the identity element) is called a trivial group groups, list of trivial group  . In multiplicative notation, one might write , and in additive notation, one might write , to denote a trivial group.     Uniqueness of the identity element  Let be a group. Suppose that both satisfy the second property of the , that is, suppose for all . Show that .   Uniqueness of inverse elements  Let be a group with identity element . Let and suppose that . Show that .   The cancellation law  Suppose that for some elements in a group . Show that . [Note that the same proof, mutatis mutandis, shows that if , then .]   The \"socks and shoes\" property  Let be elements of a group . Show that .   Product Groups product group Given two groups with group operations , the Cartesian product is a group with the operation given by Show that this operation satisfies the definition of a group.   Cyclic groups cyclic group A group is called cyclic if there exists an element in , called a generator , such that the sequence contains all of the elements in .  Suppose that a group is finite, and cyclic, with generator . Show that   The group of integers is cyclic. Find all of the generators.  The group is cyclic. Find all of the generators.  The group is cyclic. Find all of the generators.  Show that the group is not cyclic.      For part a, let be the least positive integer such that (explain why exists!). Given an arbitrary element , write for some , then use the Division Algorithm.   Cyclic permutations cyclic permutations   Let be a positive integer and let be an integer in the range . A permutation (see ) is called a -cycle permutation -cycle  if there is a -element set such that for and , and for . We use cycle notation cycle notation  permutation cycle notation   to denote the -cycle that acts as on the distinct positive integers . For example, the element is a 3-cycle in because acts on the set by and acts on as the identity. A -cycle is defined to be the identity permutation, and may be written as in cycle notation, for any . Note that cycle notation is not unique. For example, in we have and . A permutation is called cyclic cyclic permutation  permutation cyclic permutation  if it is a -cycle for some , . There are two conventions about whether the identity permutation is considered cyclic. According to the definition in this text, the identity is cyclic because it is a 1-cycle. Another convention, not used here, is that a permutation is cyclic if it is a -cycle for some . According to this convention, the identity is not cyclic. A 2-cycle is called a transposition transposition  permutation transposition  .  Find all of the cyclic permutations in . Find their inverses.  Find all of the cyclic permutations in .     Cycles and are called disjoint disjoint cyclic permutations  if the sets and are disjoint, that is, if for all . Show that every permutation in is a product of disjoint cycles.   Every permutation is a product of transpositions  Show that every permutation in can be written as a product of transpositions.  Show that factoring a permutation into a product of transpositions is not unique by writing the identity permutation in as a product of transpositions in two different ways.     Cayley tables  The Cayley table for a finite group is a two-dimensional array with rows and columns labeled by the elements of the group, and with entry in position with row label and column label . Partial Cayley tables for ( ) and ( ) are given below.   (Partial) Cayley table for . The symbol denotes the identity permutation.     (Partial) Cayley table for . (See for notation for the elements of .)   Fill in the remaining entries in the Cayley tables for and .  Prove that the Cayley table for any group is a Latin square . This means that every element of the group appears exactly once in each row and in each column.          "
 },
 {
   "id": "groupdefsection-3",
   "level": "2",
   "url": "groupdefsection.html#groupdefsection-3",
-  "type": "Definition",
-  "number": "2.2.5",
-  "title": "Order of a group.",
-  "body": "Order of a group The number of elements in a finite group is called the order order of a group of the group. A group with infinitely many elements is said to be of infinite order . We write  order of the group   to denote the order of the group . "
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "group identity inverse "
 },
 {
-  "id": "groupdefsection-4",
+  "id": "groupdefnprop",
   "level": "2",
-  "url": "groupdefsection.html#groupdefsection-4",
-  "type": "Definition",
-  "number": "2.2.6",
-  "title": "The trivial group.",
-  "body": "The trivial group  A group with a single element (which is necessarily the identity element) is called a trivial group groups, list of trivial group  . In multiplicative notation, one might write , and in additive notation, one might write , to denote a trivial group.  "
+  "url": "groupdefsection.html#groupdefnprop",
+  "type": "Proposition",
+  "number": "2.2.2",
+  "title": "Immediate consequences of the definition of group.",
+  "body": " Immediate consequences of the definition of group   Let be a group. The element in the second property of is unique. Given , the element in the third property of is unique.   "
+},
+{
+  "id": "groupdefsection-5",
+  "level": "2",
+  "url": "groupdefsection.html#groupdefsection-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "multiplicative notation "
+},
+{
+  "id": "groupdefsection-6",
+  "level": "2",
+  "url": "groupdefsection.html#groupdefsection-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Abelian additive notation "
+},
+{
+  "id": "groupdefsection-7",
+  "level": "2",
+  "url": "groupdefsection.html#groupdefsection-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "order "
+},
+{
+  "id": "groupdefsection-8",
+  "level": "2",
+  "url": "groupdefsection.html#groupdefsection-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "trivial group "
 },
 {
   "id": "idunique",
