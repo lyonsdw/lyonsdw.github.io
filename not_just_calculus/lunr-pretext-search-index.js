@@ -1,27 +1,27 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "front-colophon",
+  "id": "frontmatter-2",
   "level": "1",
-  "url": "front-colophon.html",
+  "url": "frontmatter-2.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
-  "body": ""
+  "body": "  "
 },
 {
-  "id": "frontmatter-5",
+  "id": "frontmatter-4",
   "level": "1",
-  "url": "frontmatter-5.html",
+  "url": "frontmatter-4.html",
   "type": "Preface",
   "number": "",
   "title": "Preface",
   "body": " Preface  The purpose of this text is to provide a first-year introduction to upper-level mathematics in the undergraduate curriculum. Not Just Calculus acknowledges that a single course on proof writing in the second year is too little, too late. Using topics that will be useful in later courses, this book accelerates the process of \"mathematical maturity\" through active reading, reasoning, problem solving, and writing.  This text can be used for a one-semester course, or for two half-credit courses spread over two semesters in the first year. This text is not intended to replace a formal introduction to proof writing. It is intended to widen students' perspectives beyond high school mathematics and introductory calculus courses.  The exposition is overtly designed for active reading. There are almost no examples, and almost no illustrating figures. Embedded reading exercises (\"Checkpoints\") require the reader to construct examples and make drawings. End-of-section problems (\"Exercises\") guide students in constructing short arguments to prove if-then propositions. An overall theme is that a few carefully chosen, powerful abstractions (such as sets and functions, modular arithmetic, linear transformations of the plane, and complex numbers, to name a few) form the basis for widely various applications.  Many thanks to my readers and problem checkers! Sydney Manning, Kailynn Bardo, MacKenzie Carr, Anthony Ciaravino, Ashleigh Rogers, Justin DeShong, Evan Czlapinski, Eric Estes    "
 },
 {
-  "id": "frontmatter-6",
+  "id": "frontmatter-5",
   "level": "1",
-  "url": "frontmatter-6.html",
+  "url": "frontmatter-5.html",
   "type": "Author Biography",
   "number": "",
   "title": "About the author",
