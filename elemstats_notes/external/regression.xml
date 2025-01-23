@@ -1,0 +1,264 @@
+<section xml:id="regression_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Regression
+</title>
+
+<introduction>This section is coordinated with Freedman, <em>Statistics</em>
+  <xref ref="freedman_statistics"/>, Chapters 8<ndash/>12.
+</introduction>
+
+<subsection>
+  <title>RMS Error of Fit</title>
+  <p>
+    Given two lists of numbers <m>X,Y</m>
+    with the same number of entries, and given a linear function
+    <m>y=L(x)=ax+b</m>
+    (<m>a</m>
+    and <m>b</m>
+    are constants), the <term>rms error for the line <m>L</m></term><idx><h>rms
+	  error for a line</h></idx>
+    is the
+    rms of the list <m>Y-L(X)</m>. (For example, if <m>A</m>
+    is an entry in the list <m>X</m>
+    and
+    <m>B</m>
+    is the corresponding entry in the list <m>Y</m>, then the corresponding entry
+    in the list <m>Y-L(X)</m>
+    is <m>B-(aA+b)</m>.) We interpret the rms error for a line
+    as a measure of how well <m>L</m>
+    performs as a tool for predicting the <m>Y</m>
+    value
+    that corresponds to a given <m>X</m>
+    value. Given an <m>X</m>
+    value <m>A</m>, the value
+    <m>B=L(A)</m>
+    has a "prediction error" equal to <m>B-L(A)</m>. The line <m>L</m>
+    is a good prediction tool if the rms error for <m>L</m> is low, and the line <m>L</m> is a bad prediction
+    tool if the rms error for <m>L</m> is high. We interpret the rms
+    error for a line <m>L</m>
+    as the
+    size of the typical error that we would observe if we used <m>L</m>
+    to predict
+    an unknown <m>Y</m>
+    value for a given <m>X</m>
+    value.
+  </p>
+
+</subsection>
+
+<subsection><title>The Regression Line</title>
+  <p>
+Among all possible lines, there is one single line with the least
+possible rms error, called the <term>regression line for <m>Y</m>
+      on
+      <m>X</m>
+</term><idx><h>the regression line</h></idx>. This means
+that the regression line is the best possible line to use as a
+prediction tool to guess an unknown corresponding <m>Y</m>
+value for a given <m>X</m>
+value. The regression line passes through the
+point <m>(\AVE(X),\AVE(Y))</m>,
+called the <term>point of averages</term><idx><h>point of averages</h>
+</idx>
+for the lists <m>X,Y</m>, and has slope equal to 
+<m>r\cdot \SD(Y)/\SD(X)</m>, where <m>r</m>
+is the number
+<me>  r = \AVE\left(\left(\frac{X-\AVE(X)}{\SD(X)}\right) \left(\frac{Y-\AVE(Y)}{\SD(Y)}\right)\right)
+</me>
+called the <term>correlation coefficient</term><idx><h>correlation coefficient</h>
+</idx>
+for the pair of lists <m>X,Y</m>. The rms
+error for the regression line is
+<me>  \text{rms error for regression line } = \SD(Y) \cdot \sqrt{1-r^2}.</me>
+  </p>
+</subsection>
+
+<subsection>
+  <title>The Scatter Diagram</title>
+  
+  <p>  The list <m>(X,Y)</m>
+    of pairs of points from the lists <m>X,Y</m>
+    is called the
+    <term>scatter diagram</term><idx><h>scatter diagram</h>
+    </idx>
+    of the lists <m>X,Y</m>. The scatter diagram is said to show
+    <term>linear association</term><idx><h>linear association</h>
+    </idx>
+    if the points are scattered roughly symmetrically
+about a linear axis. The size of the correlation coefficient determines
+    the tightness or looseness of scattering of points <m>(X,Y)</m>
+    about the
+    regression line. For <m>|r|</m>
+    near 1, points in the scatter diagram are
+    tightly clustered about the regression line. As <m>|r|</m>
+    approaches 0, the
+scatter diagram is more and more loosely clustered about the regression
+    line.
+    <!-- figure here -->
+</p>
+
+  <p>A <term>thin vertical strip</term><idx><h>thin vertical strip</h>
+    </idx>
+    in the scatter diagram is a set of points <m>(X,Y)</m>
+    whose <m>X</m>-coordinate lies in a range from <m>A\pm e</m>,
+    where <m>A</m>
+    is a number
+    within the range of entries of the list <m>X</m>
+    and <m>e</m>
+    is a small increment. If
+    the various sets of <m>Y</m>
+    values in thin vertical strips (for various values
+    of <m>A</m>) has a similar SD as <m>A</m>
+    varies, the scatter diagram is said to be
+    <term>homoscedastic</term><idx><h>homoscedastic</h></idx>. Otherwise, the scatter diagram is said to be
+    <term>heteroscedastic</term><idx><h>heteroscedastic</h></idx>.
+    <!-- figure(s) here -->
+</p>
+
+</subsection>
+
+<subsection>
+  <title>More on Prediction and Error</title>
+
+
+  <p>  Let's write <m>\REGR(A)</m>
+    for the <m>y</m>-coordinate of a point on the regression
+    line for the <m>x</m>-value <m>A</m>. Here's a formula<fn>The
+      notation <m>\REGR</m> is not a standard notation. We use it here
+    merely for convenience.</fn>.
+    <me>  \REGR(A) = r \cdot \left(\frac{A-\AVE(X)}{\SD(X)}\right) \cdot \SD(Y) + \AVE(Y)</me>
+    A <term>residual</term><idx><h>residual</h></idx>
+    is another name for a vertical error <m>Y-\REGR(X)</m>
+    for a data
+    point <m>(X,Y)</m>. The graph of residuals is the set of points
+    <m>(X,Y-\REGR(X))</m>. You can see linear association and homoscedasticity (or
+the lack of either one) very plainly in the graph of residuals: data
+    lists <m>X,Y</m>
+    have a linear association if the graph of residuals is roughly
+    symmetric across the <m>X</m>-axis; and the <m>X,Y</m>
+    data are homoscedastic if the
+graph of residuals has fairly even densities and vertical ranges in thin
+    vertical strips across the horizontal range of <m>X</m>.
+    <!-- figure(s) here -->
+</p>
+
+
+<p><xref ref="linescomparetable"/> shows a comparison of three lines and their rms
+errors. All three lines pass through the point of averages. The SD line
+  is defined to have positive slope if <m>r\gt 0</m>
+  and negative slope if <m>r\lt 0</m>.
+     <table xml:id="linescomparetable">
+     <title>Comparison of Lines and Prediction Errors</title>
+	    <tabular top="minor"
+		     left="minor" halign="center">
+	      <col right="minor"/><col right="minor"/><col right="minor"/>
+
+       	      <row bottom="major"><cell>line
+		</cell>
+		<cell>slope</cell>
+		<cell>rms error
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>regression line
+		</cell>
+		<cell><m>r\cdot \SD(Y)/\SD(X)</m>
+		</cell>
+		<cell><m>\SD(Y) \sqrt{1-r^2}</m>
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>SD line<fn>see <xref ref="freedman_statistics"/> p.147</fn>
+		</cell>
+		<cell><m>\pm \SD(Y)/\SD(X)</m>
+		</cell>
+		<cell><m>\SD(Y)  \sqrt{2(1-|r|)}</m>
+		</cell>
+	      </row>	      
+
+       	      <row bottom="minor"><cell>average line
+		</cell>
+		<cell><m>0</m>
+		</cell>
+		<cell><m>\SD(Y)</m>
+		</cell>
+	      </row>	      
+	      
+	      </tabular>
+ </table>
+
+
+</p>
+
+</subsection>
+
+<subsection>
+  <title>Facts about the correlation coefficient <m>r</m></title>
+
+  <p>
+    <ul><li>The value of <m>r</m>
+	is in the range <m>-1</m>
+	to <m>1</m>. The value of <m>|r|</m>
+	is 1
+	precisely when all the points <m>(X,Y)</m>
+	on the scatter diagram lie on a
+	straight line.</li>
+
+      <li>The correlation coefficient is unitless. The value of <m>r</m>
+	does not
+	change if you rescale <m>X</m>
+	or <m>Y</m>.</li>
+
+<li>It is tempting to summarize data using averages, but this has a
+  misleading effect on correlation. Suppose that the points in a scatter
+  diagram are subdivided into subsets, and that each subset is replaced
+  by a single point
+  <me>   \text{(average of the } X \text{ values in the subset, average
+  of the } Y \text{ values in the subset)}.</me>
+  The correlation for this smaller data set of average points is usually
+  higher (in absolute value) than the correlation for the original
+  scatter diagram. This phenomenon is called <term>ecological
+    correlation</term><idx><h>ecological correlation</h></idx>.
+</li>
+
+<li>A strong correlation provides no evidence of a causal link between the
+  variables <m>X</m>
+  and <m>Y</m>.</li>
+    </ul>
+</p>
+</subsection>
+
+<subsection>
+  <title>The Regression Effect and the Regression Fallacy</title>
+
+  <p>Start with an <m>X</m>-value <m>A</m>, somewhere above or below the
+    value <m>\AVE(X)</m>. Use
+    the regression line for <m>Y</m>
+    on <m>X</m>
+    to predict the average <m>Y</m>
+    value for data
+    points whose <m>X</m>
+    value is near <m>A</m>. Call this prediction <m>B</m>. Now use the
+    regression line for <m>X</m>
+    on <m>Y</m>
+    to predict the average <m>X</m>
+    value for data
+    points whose <m>Y</m>
+    value is near <m>B</m>. Call this prediction <m>C</m>. It will always
+    turn out that <m>C</m>
+    is between <m>\AVE(X)</m>
+    and <m>A</m>. This is due simply to the fact
+    that, for real data, the value of <m>|r|</m>
+    is less than 1. This is called the
+    <term>regression effect</term><idx><h>regression
+	effect</h></idx>. Any attempt to explain why <m>C</m>
+    is between <m>\AVE(X)</m>
+    and <m>A</m>
+    by any other reason than simply the fact that <m>|r|\lt 1</m>
+							  is called a
+    <term>regression fallacy</term><idx><h>regression fallacy</h></idx>.
+    <!-- figure here -->
+						    </p>
+						    </subsection>
+</section>
+

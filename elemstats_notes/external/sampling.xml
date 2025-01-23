@@ -1,0 +1,324 @@
+<section xml:id="sampling_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Sampling Theory
+</title>
+
+<introduction>This section is coordinated with Freedman, <em>Statistics</em>
+  <xref ref="freedman_statistics"/>, Chapters 16<ndash/>21,23.
+</introduction>
+
+<subsection>
+  <title>Sampling Vocabulary and Formulas</title>
+  
+  <p>
+    A sequence of random draws from a box model is
+    called a <term>sample</term><idx><h>sample</h>
+    </idx>
+    from the box. A sequence of random draws taken without
+    replacement is called a <term>simple random
+      sample</term><idx><h>simple random
+	sample</h></idx>. The <term>sample sum</term><idx><h>sample sum</h></idx>
+    is the sum
+    of the draws. The <term>sample average</term><idx><h>sample average</h>
+    </idx>
+    is the average of the draws. For a box
+whose tickets are labeled with 0's and 1's, the percentage of 1's drawn
+    in a sample is called the <term>sample
+      percentage of 1's</term><idx><h>sample percentage of 1's</h>
+    </idx>.
+</p>
+
+  <example xml:id="samplingeg1">
+<p>      Box contents:
+  <me>1,2,3</me>
+
+  All possible samples of size 2, with replacement:
+  <me>    (1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3)</me>
+
+  All possible sample sums:
+  <me>  2,3,4,3,4,5,4,5,6</me>
+
+  All possible sample averages:
+  <me>    1,1.5,2,1.5,2,2.5,2,2.5,3</me>
+</p>
+  </example>
+
+<p>  The sample sum, the sample average, and the sample percentage of 1's are
+  examples
+  of <term>statistics</term>. A <term>statistic</term><idx><h>statistic</h>
+  </idx>
+  is any number that is computed from
+a sample. Another important statistic is the sample SD (the SD of the
+list of draws). By contrast, any number that can be computed from the
+  numbers in the box is called a <term>parameter</term><idx><h>parameter</h></idx>. For example, the average and
+the SD of the numbers in the box are parameters. Sampling theory is the
+art of exploiting the relationships between parameters and statistics to
+do these two kinds of tasks.
+
+  <ul>  <li><term>Prediction:</term><idx><h>prediction</h>
+      </idx>
+      If you know what is in a given box, calculate the probability
+    that a given statistic will fall in a given range of values.</li>
+
+    <li>  <term>Inference:</term><idx><h>inference</h>
+      </idx>
+      If you do not know all the details of the contents of a
+  box, but you have access to one or more samples from the box, make
+  educated guesses about the parameters of the box.
+</li>
+</ul>
+</p>
+
+<p>Sampling theory relies on the key formulas
+  <xref ref="expectedsumformula"/> and <xref ref="sesumformula"/> below that
+express the fundamental relationships between the contents of a box
+model and samples coming out of the box. First we have to introduce the
+quantities involved. The average of the list of all possible sample sums
+  is called the <term>expected sum</term><idx><h>expected sum (of sample
+      draws)</h></idx> of the sample draws, which we will denote by
+  "expected(sum)"<notation><usage><m>\text{expected(sum)}</m>
+    </usage><description>expected
+      sum of sample draws</description>
+  </notation>. The
+  SD of the list of all sample sums is called the <term>standard error
+    (SE) for the
+    sum</term><idx><h>standard error (SE) for the sum (of sample
+      draws)</h></idx> of the sample draws, which we
+  will denote by
+  "SE(sum)"<notation><usage><m>\text{SE(sum)}</m>
+    </usage><description>standard
+  error for the sum of sample draws</description>
+  </notation>. Similarly, the average of the list of all
+  sample averages is called the <term>expected
+    average</term><idx><h>expected average (of sample draws)</h>
+  </idx> of the sample draws (denoted "expected(ave)"<notation><usage><m>\text{expected(average)}</m>
+    </usage><description>expected
+  average of sample draws</description></notation>)
+and the SD of the list of all sample averages is called the <term>SE for the
+    average</term><idx><h>standard error (SE) for the average (of sample
+  draws)</h> </idx> of the sample draws (denoted
+  "SE(ave)"<notation><usage><m>\text{SE(ave)}</m>
+    </usage><description>standard
+  error for the average of sample draws</description>
+  </notation>). For a box containing only 0's and 1's, the
+average of all the sample percentages of 1's is called the <term>expected
+    percentage of 1's</term><idx><h>expected percentage of 1's (of
+      sample draws)</h></idx>
+  (denoted
+  "expected(%1's)"<notation><usage><m>\text{expected(%1's)}</m>
+    </usage><description>expected
+      percentage of 1's for sample draws</description></notation>) and the SD of the list of
+  all sample percentages of 1's is called the <term>SE for the
+    percentage of 1's</term><idx><h>standard error (SE) for the percentage
+      of 1's (of sample draws)</h></idx>
+  (denoted
+  "SE(%1s)"<notation><usage><m>\text{SE(%1's)}</m>
+    </usage><description>standard
+      error for the percentage of 1's (of sample draws)</description></notation>).
+</p>
+
+<example>For <xref ref="samplingeg1"/>, we have the following.
+
+  <md>  <mrow>\text{expected(sum) } \amp = (2+3+3+4+4+4+5+5+6)/9 = 4</mrow>
+    <mrow>  \text{SE(sum) } \amp = \sqrt{ (-2)^2 + 2(-1)^2 + 3(0^2) + 2(1)^2 + 2^2)/9}
+          \approx 1.15</mrow>
+    <mrow>\text{expected(average) } = 2</mrow>
+    <mrow>\text{SE(average) } \approx 0.58</mrow>
+  </md>
+</example>
+
+<p>For samples with replacement, we have the following
+  formulas. Equation <xref ref="sesumformula"/> is called
+  the <term>Square Root Law</term><idx><h>Square Root Law</h></idx>.
+
+<mdn>
+  <mrow xml:id="expectedsumformula">\text{ expected(sum) }\amp = (\text{average of the box}) \cdot (\text{number of draws})</mrow>
+  <mrow number="no">\text{expected(ave) } \amp  = \text{average of the box}</mrow>
+  <mrow number="no">\text{expected(%1's) }\amp = \text{percent 1's in the box}</mrow>
+</mdn>
+
+<mdn>
+  <mrow xml:id="sesumformula">\text{ SE(sum) } \amp  = (\text{SD of the box}) \sqrt{\text{number of draws}}</mrow>
+  <mrow number="no">\text{SE(ave) }\amp =
+  \frac{\text{SE(sum)}}{{\text{number of draws}}} = \frac{\text{SD of
+  the box}}{\sqrt{\text{number of draws}}} </mrow>
+  <mrow number="no">\text{SE(%1's) }\amp =
+  \frac{\text{SE(sum)}}{{\text{number of draws}}} \cdot 100\% =
+  \frac{\text{SD of the box}}{\sqrt{\text{number of draws}}} \cdot 100\%</mrow>
+</mdn>
+For samples without replacement, there is no change in formula <xref ref="expectedsumformula"/>, but
+each of the equations in <xref ref="sesumformula"/> is replaced by
+
+<men xml:id="sewithcorrfact"> \text{SE(without replacement) }= \text{SE(with replacement) } \cdot (\text{correction factor})</men>
+
+where the <term>correction factor</term><idx><h>correction factor</h>
+</idx>
+is given by the following.
+<men>  \text{correction factor } = \sqrt{ \frac{N - n}{N - 1} },</men>
+where
+<md>
+  <mrow>N \amp = \text{the number of tickets in the box}</mrow>
+  <mrow>n \amp = \text{the number of draws in the sample}.</mrow>
+</md>
+</p>
+
+<p>
+  The reason we say that <xref ref="expectedsumformula"/> and
+<xref ref="sesumformula"/> are just two equations and not six is because
+of the simple relationships between sum, average, and percentage of
+1's. The average of a list of numbers is the sum of that list of numbers
+divided by the number of items in the list; the percentage of 1's (in a
+list of 0's and 1's) is the average of that same list of 0's and 1's
+times 100%. Applying these simple relationships (summarized in equation
+<xref ref="avesumpctrelation"/>, below) to the first of the three
+equations in each of <xref ref="expectedsumformula"/> and <xref ref="sesumformula"/>
+produces the rest of the equations in <xref ref="expectedsumformula"/> and <xref ref="sesumformula"/>.
+
+<mdn>
+  <mrow xml:id="avesumpctrelation">\text{average(list) }\amp = \frac{\text{sum(list)}}{\text{#items in the list}}</mrow>
+  <mrow number="no">\text{percent 1's in a list of 0's and 1's }\amp = (\text{average of the list}) \cdot 100\%</mrow>
+</mdn>
+</p>
+
+<p>Many sampling problems use a box model with only two different values on
+  the tickets contained in the box. In this case, it is useful to have
+  the following "short-cut" SD formula.
+</p>
+
+</subsection>
+
+<!-- moved to section 1 10/27/2023
+<subsection>
+  <title>The Law of Averages</title>
+  <p>The "law of averages" is an intuitive statement, confirmed by the
+  SE formulas <xref ref="sesumformula"/>, that the sample percentage of
+  1's becomes a more and more accurate approximation of the percentage of
+  1's in a box as the number of draws increases. In statistics terms,
+  "more accurate" means a smaller SE. [The summary at the
+  end of Chapter 16 of our text is stated for the special case of a
+  fair coin box, that is, a box containing half 0's and half
+  1's. Despite this restriction in the exposition, the authors expect
+  the student to apply the law of averages for arbitrary 0-1 boxes. It
+  should be noted that no SE formulas appear in the text before or in
+  Chapter 16. The authors use the term "absolute error" to refer to the
+  SE for the sum of draws, and use the term "relative error" to mean the
+  fraction SE(sum)/(number of draws). In these terms, the law of
+  averages says that absolute error increases as the number of draws
+  increases, and relative error decreases as the number of draws
+  increases. The authors imply that the law of averages is intuitively
+  clear, whether you are aware of SE formulas or not.]</p>
+</subsection>
+-->
+
+<subsection><title>The Central Limit Theorem</title>
+<p>
+  Sampling theory derives its power from a fact called the <term>Central
+    Limit Theorem</term><idx><h>Central Limit Theorem</h></idx>. The
+    Central Limit Theorem says that, no matter what numbers are in a box
+    model, the histogram of all possible (standardized) sample sums
+    (which is the same as the standardized sample average or the
+    standardized sample percentage of 1's) is close to the standard
+    normal distribution, as long as the number of draws is sufficiently
+    large. [Our textbook is vague about how large is "sufficiently
+    large". For a box with a uniform distribution (that is, a histogram
+    for which all the blocks are close to even in height), 25 draws or
+    more is sufficiently large. For a box that is very uneven (that is,
+    a histogram with blocks of very different heights), sufficiently
+    large might be 100 or more draws.]
+</p>
+
+</subsection>
+
+<subsection>
+  <title>Basic prediction problem</title>
+<p>Armed with the facts and formulas above, here is the skeleton of the basic
+prediction problem.
+
+  <ul> <li> Given: a description of a chance process</li>
+<li>  Question: find the probability that a sample (with a sufficiently
+            large number of draws) from a box model for the chance
+            process produces a sum or average in a given range
+</li>
+  </ul>
+The procedure to solve the problem has these steps:
+
+<ul><li>Construct the box model that matches the question. How many
+        tickets are in the box? What numbers are on the tickets? How
+        many draws?  Are the draws taken with or without replacement? Is
+    the question about the sum or the average of the draws?</li>
+
+  <li><p>Perform calculations.  
+    <ul>
+      <li>ave(box)</li>
+      <li>SD(box)</li>
+      <li>expected(sum,ave,%1's) (using <xref ref="expectedsumformula"/>)</li>
+      <li>SE(sum,ave,%1's) (using <xref ref="sesumformula"/> and also
+      <xref ref="sewithcorrfact"/> if draws are without replacement)</li>
+    </ul></p>
+</li>
+  
+<li>Sketch a normal curve (justified by the Central Limit Theorem)
+        and shade an area that answers the question. The center of the
+        horizontal axis is expected(sum,ave,%1's)) (depending on
+  the question). Find the <m>z</m>
+  values needed for your shaded area.
+<me>      
+z =  \frac{\text{(sum,ave,%1's in the question)} - (\text{expected(sum,ave,%1's)})}{\text{SE(sum,ave,%1's)}}
+</me>
+</li>
+<li>Finally, use the normal distribution table to find the area that
+answers the given question.
+</li>
+</ul>
+</p>
+</subsection>
+
+<subsection>
+  <title>Basic Inference Problem</title>
+
+<p>The basic inferential statistics problem in our text goes like this: you
+are given information about a sample from a box with unknown
+contents. You are asked to estimate the average of the box, and to make
+an educated statement about how far off that estimate might be from the
+actual value.
+</p>
+
+<p>Let's write ave(observed) and SD(observed) to denote the average and SD
+of the list of numbers in the given sample. By virtue of Equation <xref ref="expectedsumformula"/>, it is
+intuitively reasonable to use ave(observed) to estimate ave(box). It is
+not so clear, but it turns out to be okay for large enough samples, to
+use SD(observed) to estimate SD(box). By <xref ref="sesumformula"/>, it makes sense that our actual
+ave(observed) will be off from the ave(box) by SE(ave), which we can
+estimate by
+  <men xml:id="bootstrap"> \text{SE(ave) } \approx
+    \frac{\text{SD(observed)}}{\sqrt{\text{number of draws}}} \;\;\text{(estimated)}</men>
+(times the correction factor, if sampling without replacement). Equation
+  <xref ref="bootstrap"/> is called the <term>bootstrap
+    estimate</term><idx><h>bootstrap estimate</h></idx> for the SE of
+    the sample average.
+</p>
+
+<p>It makes intuitive sense to report our estimate of ave(box) as follows.
+  <me>  \text{ave(observed)} \pm \text{(estimated SE(ave))}</me>
+  For a positive number <m>z</m>, let's write Area(<m>z</m>) to denote the area under
+  the normal curve in the range <m>-z</m>
+  to <m>+z</m>. The interval 
+  <men xml:id="confinterval"> \text{ave(observed)} \pm z\cdot \text{(estimated SE(ave))}</men>
+  is called an <term>Area(<m>z</m>) confidence interval for
+    ave(box)</term><idx><h>confidence interval</h></idx>. For example, a
+95% confidence interval for the average of the box is the observed
+sample average plus or minus 2 times the estimated SE for the sample
+average. 
+</p>
+
+<p>By virtue of the Central Limit Theorem, we can make a precise
+probability statement about the interval <xref ref="confinterval"/>. We can say that
+  approximately Area(<m>z</m>) (time 100 percent) of all Area(<m>z</m>) confidence intervals
+(imagine many samples of the given sample size) will contain the average
+of the box. For example, approximately 95% of all 95% confidence
+intervals (calculated from many samples) will contain the box average.
+</p>
+</subsection>
+
+</section>
+

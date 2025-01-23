@@ -1,0 +1,280 @@
+<section xml:id="basic_sampling"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sampling</title>
+
+  <subsection>
+    <title>The Law of Averages (Ch 16,17)</title>
+    <p>In Chapter 16, the text says that with repeated chance processes,
+    the absolute error goes up as the number of draws increases, and the
+    relative error goes down as the number of draws increases. The
+    authors call this statement the "Law of Averages". The
+    language is vague, but the authors presume that the statements
+    are intuitive, and the reader is supposed to get the meaning
+    through examples in the reading. Using the square root law from
+    Chapter 17, we can clarify the meaning of the Law of Averages.
+    </p>
+
+    <p>In a box model, with random draws (taken with replacement), we have
+<md>
+  <mrow>\text{ expected(sum of draws) }\amp = (\text{average of the box}) \cdot (\text{number of draws})</mrow>
+  <mrow>\text{ SE(sum of draws) } \amp  = (\text{SD of the box}) \sqrt{\text{number of draws}}.</mrow>
+</md>
+      The absolute error and the relative error are 
+<md>
+  <mrow>\text{ absolute error }\amp = (\text{actual sum of draws)} -(\text{expected(sum of draws)})</mrow>
+  <mrow>\text{ relative error } \amp  = \frac{ \text{absolute error}
+  }{\text{number of draws}}.</mrow>
+</md>
+The absolute error is estimated by
+<me>\text{ absolute error }\approx
+  \text{ SE(sum of draws) }=(\text{SD of the box}) \sqrt{\text{number of draws}}. </me>
+Dividing both sides of the last equation by <m>\text{(number of
+  draws)}</m>, we have<fn>For the final "equals" on the right, use this algebra
+  fact: <me>\frac{1}{\sqrt{A}}=\frac{1}{\sqrt{A}}\frac{\sqrt{A}}{\sqrt{A}}=\frac{\sqrt{A}}{A}.</me>
+  Apply this fact to <m>A=\text{(number of draws)}</m>.
+</fn>
+<me>\text{ relative error }\approx \frac{(\text{SD of the
+  box})\sqrt{\text{number of draws}} }{\text{number of draws}} = \frac{(\text{SD of the
+  box}) }{\sqrt{\text{number of draws}}}</me>. Summarizing, we have
+<md>
+  <mrow>\text{ absolute error }\amp \approx (\text{SD of the box}) \sqrt{\text{number of draws}}</mrow>
+  <mrow>\text{ relative error }\amp \approx \frac{(\text{SD of the
+  box}) }{\sqrt{\text{number of draws}}}.</mrow>
+</md>
+From the last two equations, we can see clearly that the absolute error
+goes up and the relative error goes down as the number of draws increases.
+    </p>
+
+    
+
+  </subsection>
+
+<subsection>  <title>A special case SD formula (Ch 17)</title>
+  <p>
+    Suppose that all of the entries of a list <me>X=A,A,A,\ldots,A,B,B,B,\ldots, B</me>
+  are one of two values <m>A</m> and <m>B</m>, with <m>A\lt B</m>, and
+  suppose there are <m>r</m> entries with value <m>A</m> and <m>s</m>
+  entries with value <m>B</m>, so that the total number of entries in
+  the list <m>X</m> is <m>r+s</m>. The SD of the list <m>X</m> is given by
+  the following formula.
+  <men>\text{SD}(X)=
+  (B-A)\sqrt{\left(\frac{r}{r+s}\right)\left(\frac{s}{r+s}\right)} =
+    (B-A)\frac{\sqrt{rs}}{r+s}</men>
+  In the Freedman text (p.298), the number <m>B</m> is called the "big number",
+  the number <m>A</m> is called the "small number", the
+  fraction <m>s/(r+s)</m> is called the "fraction with the big number"
+  and the fraction <m>r/(r+s)</m> is called the "fraction with the small number".
+  </p>
+
+  <p><alert>Recommendation:</alert> Using the words "big" and "small" to
+    refer to the values <m>B</m> and <m>A</m> can be misleading (the
+    negative number <m>-10</m> is "bigger", in the sense of absolute
+    size, than the positive number <m>+2</m>). Instead, use the words
+    "higher" and "lower", to refer to numbers that are further to the
+    right or further to the left, respectively, on the number line.
+  </p>
+</subsection>
+  
+<subsection>  <title>Sum of Draws Practice Problems (Ch 16<ndash/>18)</title>
+  <exercises xml:id="sum_of_draws_practice_exer">
+
+  <introduction><p>Problems 1<ndash/>10 below are about the following game. A fair die is rolled
+600 times.  On each roll, you win $4 if you get a 6.  You lose $1 if you
+get something different from a 6.
+</p>
+  </introduction>
+
+  <exercise><p>The total winnings will be about $<fillin/> give or take
+      $<fillin/> or so.</p>
+    <answer>
+      <p>
+	  <m>-100, 45.64</m>
+	</p>
+    </answer>
+  </exercise>
+
+
+  <exercise><p>The chance of breaking even or better is about
+      <fillin/>.</p>
+    <answer><p>
+      <m>1.5\%</m></p>
+  </answer>
+  </exercise>
+
+<exercise><p>The number of sixes rolled will be about <fillin/> give or take
+    <fillin/>. </p>
+  <answer><p>
+      <m>100, 9.13</m>
+    </p>
+  </answer>
+</exercise>
+
+<exercise><p> The chance that the number of sixes will be ten or more above the
+    expected number is about <fillin/>.</p>
+  <answer><p>
+      <m>14\%</m> (<m>15\%</m> using the continuity correction)
+    </p>
+  </answer></exercise>
+
+<exercise><p> The sum of the numbers on the die face on all the rolls will be about
+    <fillin/> give or take <fillin/>.</p>
+  <answer><p>
+      <m>2100,  41.83</m>
+    </p>
+  </answer>
+</exercise>
+  
+
+<exercise><p> The chance that the sum will be in the range 2050<ndash/>2150 is about
+    <fillin/>.</p>
+  <answer><p>
+      <m>77\%</m>
+    </p>
+  </answer>
+</exercise>
+
+<exercise><p> There is about a 50% chance that the sum will be in the range 2100
+    plus or minus <fillin/>.</p>
+  <answer><p>
+  <m>28</m>
+    </p>
+  </answer>
+</exercise>
+
+<exercise><p> The total number of even rolls will be about <fillin/> give or take
+    <fillin/>.</p>
+  <answer><p>
+      <m>300, 12.25</m>
+    </p>
+  </answer>
+</exercise>
+
+<exercise><p> The chance that the number of even rolls will be off by 20 or more
+    from the expected number is about <fillin/>.</p>
+  <answer><p>
+      <m>10\%</m> (<m>11\%</m> using the continuity correction)
+    </p>
+  </answer>
+</exercise>
+
+<exercise>
+  <p>On every 6th roll (that is, on roll numbers 6, 12, 18, etc) you
+  win a blue marble if exactly half of the last 6 rolls came up
+  even. The chance that you win 35 or more blue marbles in 600 rolls
+  is <fillin/>. Use the continuity correction to be as precise as
+    possible.</p>
+  <answer><p>
+      <m>24\%</m> (<m>21\%</m> without the continuity correction)
+    </p>
+  </answer>
+</exercise>
+  
+
+  </exercises>
+
+  <commentary component="instructor"><title>Instructor's solution for
+<xref ref="sum_of_draws_practice_exer"/></title>
+    <p>
+      <ol>
+	<li>
+      <p>The box model has six tickets: (1) 4 and (5) <m>-1</m>'s.  
+	<md>
+	  <mrow>\AVE(\text{box}) \amp = -1/6</mrow>
+	  <mrow>\SD(\text{box}) \amp = 5\sqrt{\frac{1}{6}\cdot \frac{5}{6}} \approx 1.86</mrow>
+	  <mrow>\text{expected(sum) }\amp = -100</mrow>
+	  <mrow>\text{SE(sum) } \amp \approx 45.64</mrow>
+      </md>
+	</p>
+</li>
+	<li> <p>
+	<md> <mrow>z \amp \approx \frac{0 - (-100)}{45.64} \approx 2.19</mrow>
+      <mrow>P\amp \approx 1.5\%</mrow></md> With the continuity
+	correction, we get <m>z\approx 2.18</m>, with no noticeable
+	change in <m>P</m>.
+	  </p>
+</li>
+	<li>  <p>
+      The box model has (1) 1 and (5) 0's.  
+<md>   
+  <mrow>\AVE(\text{box}) \amp = 1/6</mrow>
+  <mrow>\SD(\text{box}) \amp = \sqrt{\frac{1}{6}\cdot \frac{5}{6}} \approx .373</mrow>
+  <mrow>\text{expected(sum) } \amp = 100</mrow>
+  <mrow>\text{SE(sum) }\amp \approx 9.13</mrow>
+</md>
+    </p>
+</li>
+	<li> <p>
+      <md> 
+<mrow>  z \amp \approx \frac{110 - 100}{9.13} \approx 1.1</mrow>
+  <mrow>   P \amp \approx 14\%</mrow>
+      </md>
+      With the continuity correction, we get <m>z\approx 1.04</m>,
+      and <m>P\approx 15\%</m>.
+    </p>
+  </li>
+	<li> <p>
+The box model has the tickets 1,2,3,4,5,6.
+<md>
+  <mrow>   \AVE(\text{box}) \amp = 3.5</mrow>
+  <mrow>   \SD(\text{box}) \amp \approx 1.71 \text{ (no shortcut!!)}</mrow>
+  <mrow>  \text{expected(sum) } \amp = 2100</mrow>
+  <mrow>   \text{SE(sum) } \amp \approx 41.83</mrow>
+</md>
+    </p>
+</li>
+	<li> <p>
+      <md>
+ <mrow>z \amp \approx \frac{2150 - 2100}{41.83} \approx 1.2</mrow>
+ <mrow>   P \amp \approx 77\%</mrow>
+</md> Using the continuity correction makes no noticeable difference in the
+      value of <m>z</m> or <m>P</m>.
+    </p>
+</li>
+	<li><p>
+<md>
+  <mrow> z \text{ for 50% is about } .67</mrow>
+  <mrow>   \text{range is } 2100 \pm 28</mrow>
+</md>
+    </p>
+</li>
+	<li><p>
+One possible box model has (3) 1's and (3) 0's.  A simpler box model
+   has (1) 1 and (1) 0 with equal probabilities of 1/2 each.
+<md>
+  <mrow>   \AVE(\text{box}) \amp = 1/2</mrow>
+  <mrow>   \SD(\text{box})\amp = 1/2</mrow>
+  <mrow>   \text{expected(sum) } \amp = 300</mrow>
+  <mrow>   \text{SE(sum) } \amp \approx 12.25</mrow>
+</md>
+    </p>
+</li>
+	<li><p>
+<md>
+  <mrow> z \amp \approx \frac{320 - 300}{12.25} \approx 1.63</mrow>
+  <mrow>P \amp \approx 10\%</mrow>
+</md>
+With the continuity correction, we get <m>z\approx 1.59</m>
+and  <m>P\approx 11\%</m>.
+    </p>
+</li>
+	<li><p>
+      The probability of exactly 3 evens in 6 rolls is <m>{6 \choose
+      3}\left(\frac{1}{2}\right)^6 = 31.25\%</m> (using the binomial
+      probability formula). A box model has 3125 1's and 6875 0's, with
+      100 draws. The average of the box is <m>.3125</m> and the SD of
+      the box is <m>\sqrt{.3125\cdot .6875} \approx .464</m>. The
+      expected sum is <m>31.25</m> and the SE for the sum
+      is <m>4.64</m>. The <m>z</m> value for 35 blues is
+      <me>z = \frac{34.5-31.25}{4.64}\approx .70.</me> The
+      normal curve table has an area of about <m>52\%</m>
+      for <m>z=.70</m>, so
+      the probability is about <m>(100-52)/2=24\%</m> (if you do not use
+      the continuity correction, you get <m>z=.81</m> and a probability
+      of about <m>21\%</m>).
+    </p>
+</li>	
+      </ol>
+    </p>
+    </commentary>
+
+</subsection>
+</section>

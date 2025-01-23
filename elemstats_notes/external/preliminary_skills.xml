@@ -1,0 +1,199 @@
+<section xml:id="basic_lines_algebra" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>
+  Algebra 
+</title>
+
+
+
+  
+<subsection xml:id="lines_subsection">
+  <title>Basics for lines
+  </title>
+
+  <p>Let <m>L</m> be a line in the <m>x,y</m>-plane that is not vertical 
+    (that is, not parallel to the <m>y</m>-axis). Visualize traveling
+    along the line <m>L</m> from a starting point <m>(A,B)</m> to a final
+    point <m>(P,Q)</m>. From start to finish, your position along the <m>x</m>-axis
+    will change from <m>A</m> to <m>P</m>. The deviation of
+    <m>P</m> from <m>A</m> (also called the <term>horizontal displacement</term>
+    from <m>(A,B)</m> to <m>(P,Q)</m>) is 
+    called the <term>run</term> of your trip.
+    <me>\text{ run } = P-A</me>
+    Likewise, your position along the <m>y</m>-axis
+    will change from <m>B</m> to <m>Q</m>. The deviation of
+    <m>Q</m> from <m>B</m> (also called the <term>vertical displacement</term>) is
+    called the <term>rise</term> of your trip. See Figure <xref ref="rise_run_fig"/>.
+    <me>\text{ rise } = Q-B</me>
+    The fraction rise/run is called the <term>slope</term> of the
+    line <m>L</m>.
+    <men xml:id="slopeisriseoverrun">\text{ slope } = \frac{ \text{ rise }}{\text{ run }}=\frac{Q-B}{P-A}</men>
+    Solving <xref ref="slopeisriseoverrun"/> for rise, we have
+    <me>\text{ rise } = { \text{ (slope)}}{\text{(run) }}</me>
+    and solving <xref ref="slopeisriseoverrun"/> for <m>Q</m>, we have
+    <men xml:id="linesolvefory2"> Q=\text{ (slope)(run)} + B = \text{ (slope)}(P-A)+B.</men>
+  </p>
+
+      	         <figure xml:id="rise_run_fig">
+       <caption>Rise and run.
+      </caption>
+            <image width="80%" source="images/rise_run.png"></image>
+           </figure>
+
+
+  <p>Here is a basic problem involving lines: You are given a
+    line <m>L</m>, the slope <m>m</m> of <m>L</m>,
+    a starting point <m>(A,B)</m> on <m>L</m>, and
+    the <m>x</m>-coordinate <m>P</m> of a final
+    point <m>(P,Q)</m> on <m>L</m>. Your task is to
+    find <m>Q</m>.
+  </p>
+
+  <p>The solution uses <xref ref="linesolvefory2"/> broken into three
+    these steps:
+<!--    <fn>If you are comfortable with doing
+  several steps of algebra at once, you can combine these three steps in
+      the single formula <me>Q = m(P-A) + B.</me>
+    </fn>-->
+    <ol>
+      <li>Find the run using <m>\text{ run } = P-A</m>.
+      </li>
+      <li>Find the rise using <m>\text{ rise } = \text{ (slope)(run)}</m>.
+      </li>
+      <li>Find <m>Q</m> using <m>Q=\text{ rise } + B</m>.
+      </li>
+    </ol>
+  </p>
+
+</subsection>
+
+<exercises><title>Algebra practice problems</title>
+  <exercise><p>Consider the equation <m>A = \frac{BC + D}{E}</m>.
+      <ol><li>Solve for <m>D</m>.
+	</li>
+	<li>Solve for <m>B</m>.
+	</li>
+	<li>Solve for <m>E</m>.
+	</li>	
+      </ol>
+    </p>
+    <answer>
+      <p><ol><li><m>D=AE-BC</m>
+	  </li><li><m>B=\frac{AE-D}{C}</m>
+	  </li>
+	  <li><m>E=\frac{BC+D}{A}</m>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise><p>Names of quantities in the top row of the table below
+      match <xref ref="lines_subsection"/>. Find the values of run,
+      rise, and <m>Q</m> for each row of the table.
+            <md>
+	<mrow>	  A
+	  \amp\spacer\amp B
+	  \amp\spacer\amp
+	  \text{slope}
+	  \amp\spacer\amp P
+	</mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	       \rule{.5in}{.1ex} \amp \amp \rule{.5in}{.1ex} \amp \amp
+	       \rule{.5in}{.1ex} \amp \amp \rule{.5in}{.1ex}
+	    </mrow>
+	    <!-- insert new stuff here -->
+	<mrow>
+	  20.13
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp  1.1
+	  \amp\spacer\amp 24.8
+	</mrow>
+        <mrow>
+	  20.13
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 1.1
+	  \amp\spacer\amp 17.5
+	</mrow>
+        <mrow>
+	  103.20
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp -0.65
+	  \amp\spacer\amp 110.0
+	</mrow>
+        <mrow>
+	  103.20
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp -0.65
+	  \amp\spacer\amp  95.0
+	</mrow>
+      </md>
+    </p>
+    <answer><p>
+      <md>
+	<mrow>	  A
+	  \amp\spacer\amp B
+	  \amp\spacer\amp
+	  \text{slope}
+	  \amp\spacer\amp P
+	  \amp\spacer\amp \text{run}
+	  \amp\spacer\amp \text{rise} \amp\spacer\amp  Q
+	</mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}	      
+	    </mrow>
+	<mrow>
+	  20.13
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp  1.1
+	  \amp\spacer\amp 24.8
+	  \amp\spacer\amp 4.67
+	  \amp\spacer\amp 5.14
+	  \amp\spacer\amp 20.10
+	</mrow>
+        <mrow>
+	  20.13
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 1.1
+	  \amp\spacer\amp 17.5
+	  \amp\spacer\amp -2.63
+	  \amp\spacer\amp -2.89
+	  \amp\spacer\amp 12.97
+	</mrow>
+        <mrow>
+	  103.20
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp -0.65
+	  \amp\spacer\amp 110.0
+	  \amp\spacer\amp 6.80
+	  \amp\spacer\amp -4.42
+	  \amp\spacer\amp 22.36
+	</mrow>
+        <mrow>
+	  103.20
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp -0.65
+	  \amp\spacer\amp  95.0
+	  \amp\spacer\amp -8.20
+	  \amp\spacer\amp 5.33
+	  \amp\spacer\amp 32.11
+	</mrow>
+      </md>
+    </p></answer>
+    </exercise>
+    
+</exercises>
+
+
+
+</section>
+
+

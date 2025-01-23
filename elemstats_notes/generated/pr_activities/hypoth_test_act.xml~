@@ -1,0 +1,95 @@
+ <section xml:id="hypoth_test_act" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Intuition for Hypothesis Testing</title>
+
+  <p><alert>Problem 1, part 1.</alert>
+    Your first assignment in your new lab job is to perform 
+    measurements of a check weight. The average of 50 weighings
+    is <m>100.432</m> grams and the SD of those weighings is <m>0.04</m>
+    grams. Use your data to find a <m>95\%</m>-confidence interval for the true value of the
+    mass of the check weight.
+  </p>
+
+  <p><alert>Problem 2 part 1.</alert> Your first assignment in your new job
+  with the Gambling Inspection Commission is to test a particular roulette wheel
+  for fairness. In 250 test spins, the outcome is red 110 times. Use
+    this data to find a <m>95\%</m>-confidence interval for the probability that
+  a spin of this wheel will land red.
+  </p>
+
+  <p>
+    <alert>Problem 1, part 2.</alert> After your 50 measurements in
+    Problem 1, part 1, your coworker gives you more data about this
+    check weight, obtained with the same apparatus and the same methods
+    that you used for your measurements. The coworker's data claims
+    that, over many weighings, the average value is <m>100.413</m> grams,
+    and the SD is <m>0.038</m> grams. It occurs to you to perform a
+    reality check on your own work. Supposing that the coworker's claims
+    are correct, what is the chance that 50 measurements would have an
+    average of <m>100.432</m> grams (your observed average) or higher?
+  </p>
+
+  <p>
+    <alert>Problem 2, part 2.</alert> After your 250 test spins in
+    Problem 2, part 1, a coworker tells you that this same wheel has
+    been tested many times, and it is fair. In particular, this wheel
+    lands red the expected percentage of the time. Supposing that this coworker
+    is right, what is the chance that 250 spins would produce 110 reds
+    or fewer?
+  </p>
+
+  <p>
+    <alert>Both Problems, part 3.</alert> Perform a hypothesis test to
+    determine whether the difference between your observed experimental values and the
+    values expected by the coworker's claims are significant. Using one
+    or more complete sentences, state a
+    null hypothesis, find the observed level of significance, and state
+    your conclusion.
+  </p>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="hypoth_test_act"/></title>
+  <p>
+    <alert>Problem 1.</alert>
+    The estimated SE for the sample average
+    is <m>.04/\sqrt{50}\approx .00566</m>. The <m>95\%</m>-confidence
+    interval is
+    <me>100.432 \pm .011.</me>
+    The coworkers claimed true value is <m>100.413</m> is outside of the
+    confidence interval. Supposing the coworker's data is correct, we
+    assume a Gauss measurement box with average <m>100.413</m> and
+    SD of <m>.038</m>. The SE for the sample average
+    is <m>.038/\sqrt{50}\approx .0054</m>
+    The observed sample average has a <m>z</m>-value of
+    <me>z=\frac{100.432-100.413}{.0054}\approx 3.52.</me>
+    The chance of obtaining this observed sample average or higher (in
+    50 measurements) is less than <m>0.025\%</m>. Null hypothesis: the
+    coworker's values are correct; the observed data is due to chance
+    variation. The observed level of significance
+    is <m>P=.025\%</m>. The difference is highly significant. We reject
+    the null hypothesis.
+  </p>
+
+  <p><alert>Problem 2.</alert> Your <m>95\%</m>-confidence interval is
+    <md>
+      <mrow>\frac{110}{250} \pm 2\frac{\sqrt{110/250 \cdot
+	140/250}}{\sqrt{250}}</mrow>
+      <mrow>44\% \pm 6.28\%.</mrow>
+    </md>
+    The probability that a fair wheel lands red is <m>18/38 \approx
+    47.37\%</m>. This is within the confidence interval. Supposing the
+    coworkers claim is correct, we assume a 0-1 box with 18 1's and 20
+    0's. The SE for the sum is <m>\sqrt{18/38\cdot
+    20/38}\sqrt{250}\approx 7.89</m>.
+    The chance that 250 spins would have 110 or more reds is the area to
+    the left of 110.5 (using the correction for
+    continuity). The <m>z</m>-value is
+    <m>z=\frac{110.5-118.42}{7.89}\approx -1.0</m>, so the probability
+    is <m>P\approx 16\%</m>. Null hypothesis: the
+    coworker's claims of fairness are correct; the observed data is due to chance
+    variation. The observed level of significance
+    is <m>P=16\%</m>. The difference is not significant. We do not
+    reject the null hypothesis.
+  </p>
+</commentary>
+
+</section>

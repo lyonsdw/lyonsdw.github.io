@@ -1,0 +1,98 @@
+ <section xml:id="ave_sd_act" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Intuition for Average and SD</title>
+
+  <p>A <alert>data list</alert> is a sequence of numbers, called
+    the <alert>entries</alert> in the list. For example, the sequence <m>X=1,2,2,7</m> is a data list with four
+    entries. The sum of a list is the total of all the entries.
+    The average of a list is the
+    sum of the list divided by the number of entries. For a given number <m>a</m>,
+    the <alert>deviations</alert> of a list <m>X</m> from <m>a</m> is
+    the list <m>X</m>
+    with <m>a</m>
+    subtracted from each value in X. We write the sum, average, and
+    deviations like this for <m>X=1,2,2,7</m>.
+    <md>
+      <mrow>\SUM(X)\amp  = 1+2+2+7=12</mrow>
+      <mrow>\AVE(X) \amp =12/4 = 3 </mrow>
+      <mrow>(\text{deviations of } X \text{ from } 2) \amp =
+	-1,0,0,5 </mrow>
+      <mrow>(\text{deviations of } X \text{ from } 3) \amp = -2,-1,-1,4 </mrow>      
+    </md>    
+  </p>
+
+  <p>Here are two useful concepts to visualize a data list <m>X</m>.
+    <ul>
+      <li>A <alert>box model</alert> for <m>X</m> is a box that
+      contains tickets with the entries of the list printed on the
+	tickets. We imagine a lottery game, taking <alert>random draws</alert> <alert>with
+      replacement</alert> from the box. This means that every ticket in the
+	box has the same chance to be selected on every draw.
+      </li>
+      <li>
+	A <alert>dot plot</alert> for <m>X</m>
+	is a number line with dots placed at locations given by the
+	entries in the list. We imagine that the
+	number line is a see-saw and that the dots are small, identical
+	weights stuck to the see-saw. Physics says that the see-saw is
+	balanced on a fulcrum at the point <m>a</m>
+	if the sum of the deviations of <m>X</m>
+	from <m>a</m> is zero.
+      </li>
+    </ul>
+  </p>
+
+        <figure xml:id="box_dots_fig">
+	  <caption>Box model and dot plot for <m>X=1,2,2,7</m>
+      </caption>
+            <image width="80%" source="images/box_dots.png"></image>
+           </figure>
+
+  <p>
+    <alert>Problems:</alert>
+    Let <m>X</m>
+    be the data list <m>X=1,2,2,7</m>, and suppose we take <m>100</m>
+    random draws with replacement from the box model for <m>X</m>.
+    <ol>
+      <li>Among the <m>100</m>
+	random draws, what is the expected number
+	of <m>1</m>’s that will be drawn? The expected number
+	of <m>2</m>’s? The expected
+	number of <m>7</m>’s?</li>
+      <li>What is the expected sum total of all <m>100</m>
+	draws?</li>
+      <li>Suppose you win the amount of money, in dollars, that is equal
+	to the sum total of the <m>100</m> random draws. What is the
+	amount of your per-game winning? (Your per-game winning is the
+	amount <m>A</m>, such that if you won the amount <m>A</m>
+	<m>100</m> times in a
+	row, would give you the same total as the <m>100</m> 
+	draws from the box model for <m>X</m>?)</li>
+      <li>Does the see-saw for the dot plot of <m>X</m> balance at the
+	point <m>2</m>? At the point <m>4</m>? At the point <m>3</m>?
+      </li>
+      <li>Suppose that, for every one of the <m>100</m> draws, you have
+      to guess a number before the draw (your guess does not have to be
+	one of the values in the list <m>X</m>). After the number is
+	drawn, you have to pay the <em>square</em> of the amount by
+	which your guess is off, in dollars. For example, if you
+	guess <m>4.5</m> and then a <m>2</m> is drawn, you have to
+      pay <m>2.5^2= \$6.25</m>. It is not obvious, but it turns out that
+      the best strategy for making your total cost as low as possible is
+	to guess the average value of <m>X</m> every time. Try it out!
+	Play the game <m>10</m> times, say, guessing <m>2</m> every
+	time, and keep track of the total cost. Play another <m>10</m>
+	times, guessing however you like. Then play <m>10</m> times,
+	guessing the average of <m>X</m> every time. Now compare the
+      total costs. Which one is best?
+      </li>
+    </ol>
+  </p>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="ave_sd_act"/></title>
+  <p>
+    <em>(some comments, sample solutions here)</em>
+  </p>
+</aside>
+
+</section>

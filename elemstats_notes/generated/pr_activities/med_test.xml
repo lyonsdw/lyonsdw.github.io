@@ -1,0 +1,130 @@
+ <section xml:id="med_test_act" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Activity on Medical Testing</title>
+
+<p>A naturally occuring random genetic mutation called M is found at a
+  rate of <m>1</m>
+  in <m>100,000</m>
+  people. A test called T detects mutation M with
+  <m>95\%</m>
+  accuracy. This means that <m>5\%</m>
+  of people with mutation M will test
+  negative, and <m>5\%</m>
+  of people who do not have mutation M will test
+  positive. As part of a medical study with randomly selected
+  participants, Skylar takes test T and the result is positive (that is,
+  the test indicates that Skylar has mutation M).  Before getting the
+  positive test result, the best estimate of the chance that Skylar has
+  mutation M is <m>1</m>
+  in <m>100,000</m>
+  , which is <m>0.00001=0.001\%</m>. How does the
+  positive test result change this estimate?</p>
+
+<p><alert>Problem</alert>
+  : Estimate the chance that Skylar has mutation M, knowing that
+Skylar tested positive for mutation M.</p>
+
+
+<p>To solve the problem, consider what would happen if everyone in a
+  population of <m>100</m>
+  million people got the test for mutation M? Let’s name
+these subgroups of the population.
+
+<ul>
+  <li><m>A</m>
+    : people who have mutation M</li>
+  <li><m>B</m>
+    : people who do not have mutation M</li>
+  <li><m>P</m>
+    : people whose test result is positive</li>
+  <li>  <m>N</m>
+    : people whose test result is negative</li>
+  </ul>
+
+
+  It will be helpful to consider further subdivisions of these groups of
+people.
+<ul>
+  <li>  <m>AP</m>
+    : people in group A who test positive</li>
+  <li>  <m>AN</m>
+    : people in group A who test negative</li>
+  <li>  <m>BP</m>
+    : people in group B who test positive</li>
+  <li>  <m>BN</m>
+    : people in group B who test negative</li>
+</ul>
+</p>
+
+<p><alert>Solve the problem.</alert>
+  <ol>
+    <li>Estimate how many people are in each group. Hint: start with groups <m>A</m>
+      and <m>B</m>
+      , then do <m>AP</m>
+      , <m>AN</m>
+      , <m>BP</m>
+      , <m>BN</m>
+      , then do <m>P</m>
+       and <m>N</m>
+      last.</li>
+  <li>Now solve the Problem using the numbers from part 1. Give your solution as a
+    percent, and write a sentence or two to express your reasoning.</li>
+  <li>Would your answer change if you thought about a population of <m>10</m>
+    million instead of <m>100</m>
+    million?</li>
+  <li>Would your answer change if mutation M occurs in <m>10\%</m>
+    of the
+    population, instead of <m>1</m>
+    in <m>100,000</m>
+    ?</li>
+  </ol>
+</p>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="med_test_act"/></title>
+  <p>
+  <ol>
+    <li>
+      <md>
+	<mrow>|A| \amp = (1/100000) \cdot 100,000,000 = 1000</mrow>
+	<mrow>|B| \amp = 100,000,000 - 1000 = 99,999,000</mrow>
+	<mrow>|AP| \amp = .95 \cdot 1000 = 950</mrow>
+	<mrow>|BP| \amp  = .05 \cdot  99,999,000 = 4,999,950</mrow>
+	<mrow>|P|  \amp = |AP| + |BP| = 5,000,900</mrow>
+	<mrow>|AN| \amp = .05 \cdot 1000 = 50</mrow>
+	<mrow>|BN| \amp = .95 \cdot 99,999,000 = 94,999,050</mrow>
+	<mrow>|N| \amp = |AN| + |BN| = 94,999,100</mrow>
+      </md>
+    </li>
+
+    <li>  <me>|AP| / |P| = 950 / 5,000,900 \approx .00019 = .019\%</me>
+      (about <m>200</m>
+      times <m>1/100000</m>
+      )</li>
+
+    <li><p>  No change. Both results are equal to
+      <md>
+	<mrow>P( \text{mut} | \text{pos}) \amp = \frac{P( \text{mut} \AND \text{pos})}{P(\text{pos})}</mrow>
+	<mrow>  \amp = \frac{P( \text{mut} \AND \text{pos})}{P( \text{pos} \AND \text{mut}) + P( \text{pos} \AND \text{nomut})}</mrow>
+	<mrow>\amp = \frac{P( \text{pos} | \text{mut})  P(\text{mut})}{P(\text{pos} | \text{mut})  P(\text{mut}) + P(\text{pos} |  \text{nomut})  P(\text{nomut})}</mrow>
+	<mrow>\amp =    \frac{ .95  \cdot 1/1000000}{.95 \cdot 1/1000000  +  .05  \cdot 99999/1000000}</mrow>
+	<mrow>\amp \approx .00019 = .019\%</mrow>
+      </md>
+      where events “mut”, “nomut”, and “pos” are
+      <ul>
+	<li>mut     = “a randomly selected individual has mutation M”</li>
+	<li>nomut = “a randomly selected individual does not have mutation M”</li>
+  <li>pos     = “a randomly selected individual tests positive”.</li>
+    </ul></p>
+    </li>
+
+    
+<li>  Answer becomes
+  <me>( .95  \cdot 1/10) / ( .95 \cdot 1/10  +  .05 \cdot 9/10)
+     \approx .679 = 67.9\%.</me>
+</li>
+
+</ol>
+</p>
+  </aside>
+  
+</section>

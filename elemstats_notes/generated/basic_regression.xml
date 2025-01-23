@@ -1,0 +1,392 @@
+<section xml:id="basic_regression"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Regression</title>
+
+
+<subsection>
+  <title>Terminology: the term "football-shaped"</title>
+
+  <!-- first use in Chapter 8, p.120 -->
+<p>The text uses the term "football-shaped" or "shaped like a football"
+very loosely throughout Ch 8<ndash/>12 to describe a scatter diagram
+that has linear association. Worse, the term "football-shaped" is
+sometimes used to imply homoscedasticity. Even worse, "football-shaped"
+is used to imply that data in thin vertical strips in the scatter
+diagram is normally distributed (see the box on p.197). Because of this
+vagueness and ambiguity, we will instead use the terms "shows linear
+association", "homoscedastic", and "data in thin vertical strips is
+normally distributed" for these various attributes that may or may not
+apply to 2-variable data. In particular, in the box on p.197, and also
+in item 7 of the Ch 11 summary on p.201, replace the first sentence with
+"Suppose that a scatter diagram shows linear association, is
+homoscedastic, and data in thin vertical strips is normally
+distributed."</p>
+</subsection>
+
+
+  <subsection><title>Examples</title>
+    
+    <p>
+    Here are some basic problem types about regression.
+    <ol>
+      <li><p>(Ch 10) The scatter diagram for data called <m>X,Y</m> shows a linear
+	association, with the following summary statistics.
+	<md>
+	  <mrow>\AVE(X)\amp =20.13 \amp \amp \amp  \AVE(Y)\amp =15.86</mrow>
+	  <mrow>\SD(X)\amp =3.65  \amp  \amp \amp \SD(Y)\amp
+	    =4.90</mrow>
+	  <mrow>\amp  \amp r\amp=.82 \amp  \amp</mrow>	  
+	</md></p>
+	<p><ol><li>	Estimate the average <m>Y</m> value for data whose <m>X</m>
+	      value is near <m>24.8</m>.</li>
+	    <li>	Estimate the average <m>X</m>
+	value for data whose <m>Y</m> value is near <m>21.0</m>.</li>
+	  </ol>
+	</p>
+      </li>
+      <li>(Ch 10) Suppose that data called <m>V,W</m> have a linear association
+      with a correlation of <m>r=.65</m>, and that  <m>V,W</m> are both approximately normally distributed.
+	Estimate the average percentile rank for <m>W</m> data
+      whose <m>V</m> value is close to 80th percentile.
+      </li>
+	<li>(Ch 11) Continuing problem 1, suppose now that
+	the <m>Y</m> data is normally distributed within each thin
+	vertical strip, and that the scatter diagram is
+	  homoscedastic. For data whose <m>X</m> value is
+	  near <m>24.8</m>, estimate the percent of <m>Y</m> data in the
+	  range <m>15.86</m> and higher.
+	</li>
+    </ol>
+  </p>
+
+  
+<p>Here are the
+  solutions. Here are
+  the <url href="images/regression_sample_solutions.pdf">drawing
+  method</url> solution steps taught in the textbook. 
+    <ol>
+      <li>
+	<p><ol><li>Use the
+  facts that the regression line passes close to vertical centers of
+  thin vertical strips, that the regression line passes through the
+    point of averages <m>(\AVE(X),\AVE(Y))</m>, and has slope equal
+  to <m>r\frac{\SD(Y)}{\SD(X)}</m>.
+Let <m>(A,B)=(\AVE(X),\AVE(Y))</m> be the point of
+	      averages and let <m>(P,Q)</m> be the point on the
+	      regression line with <m>P=24.8</m>, so that <m>Q</m> is
+	      the <m>Y</m>-coordinate we are looking for. The run
+	      is <m>P-A=4.67</m>, the rise
+	      is <m>\text{(slope)(run)}=.82\frac{4.90}{3.65}(4.67)\approx
+	      5.137</m>, and <m>Q=\text{rise } + B \approx
+		21.0</m>.</li>
+	    <li>We switch the horizontal and vertical roles of <m>X</m>
+	      and <m>Y</m> so that we can find the desired <m>X</m>
+	      value as the center of a thin vertical strip. Use the
+	      point of averages <m>(\AVE(Y),\AVE(X))</m> and the
+	      slope <m>r\frac{\SD(X)}{\SD(Y)}\approx .611</m>. The run
+	      is <m>21.0-15.86= 5.14</m>, the rise
+	      is <m>\text{(slope)(run)} =(.611)(5.14)\approx 3.14 </m>,
+	      and the desired prediction is <m>20.13+3.14= 23.27</m>.
+	    </li>
+	  </ol>
+	</p>
+      </li>
+      <li>First, find the <m>z</m> value for the 80th percentile of the
+	normal data <m>V</m>. Let's call this value <m>A</m>.
+	There is <m>20\%</m> of the <m>V</m> data
+	to the right of <m>A</m>, so there is <m>100-2(20)=60\%</m> of
+	the <m>V</m> data between <m>-A</m> and <m>+A</m>. The normal
+	table gives <m>A\approx .84</m>, so the horizontal run
+	from <m>\AVE(V)</m> to the 80th percentile <m>V</m> value
+	is <m>.84</m> standard units for <m>V</m>. The vertical rise along the regression line
+	is <m>r(.84)=0.65(.84)\approx .55</m> standard units
+	for <m>W</m>. Now convert the <m>z</m> value <m>.55</m> to
+	percentile. The normal table shows that the area
+	between <m>-.55</m> and <m>+.55</m> is about <m>42\%</m>, so the
+	area to the left of <m>.55</m> is about <m>50+42/2\approx
+	71\%</m>. 
+      </li>
+      <li>This question is about the <m>Y</m>
+	data in the thin vertical strip
+	that corresponds to <m>X=24.8</m>. Let's call this data <m>U</m>.
+	From the previous problem, we have the
+	estimate <m>\AVE(U)=21.0</m>. From the assumption of
+	homoscedasticity, the rms error <m>4.90\sqrt{1-.82^2}\approx 2.80</m>
+	for the regression line is a good estimate
+	for <m>\SD(U)</m>. Using the fact that <m>U</m> is normally
+	distributed, we are looking for the area under a normal curve
+	that lies to the right of <m>z=\frac{15.86-21.0}{2.80}\approx -1.83</m>. The
+	normal table value for <m>z=1.83</m> is about <m>93\%</m>, so
+	the area to the right of <m>z=-1.83</m> is
+	about <m>50+93/2\approx 96.5\%</m> or about <m>97\%</m>.
+
+	</li>
+    </ol>
+</p>
+
+</subsection>
+
+<subsection>  <title>Regression practice problems</title>
+
+  <exercises>
+      <exercise><p>(Ch 10) The scatter diagram for data called <m>X</m>
+      and <m>Y</m> shows linear association. For each row in the table
+	  below, use the regression method to estimate the <m>Y</m>
+	  value for data whose <m>X</m> value is near the number in the
+	  column called <m>P</m>. The first row is complete, and shows
+      the results of the sample problem 1a above. Fill in the remaining
+	  values in the column labeled "<m>Y\text{ est.}</m>".
+        <md>
+	  <mrow>
+	                  \AVE(X)
+	  \amp\spacer\amp \SD(X)
+	  \amp\spacer\amp \AVE(Y)
+	  \amp\spacer\amp \SD(Y)
+	  \amp\spacer\amp r	  	  
+	  \amp\spacer\amp P
+	  \amp\spacer\amp Y\text{ est.}			  
+	  </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}	      
+	    </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 24.8
+	  \amp\spacer\amp 21.00
+	  </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 17.5
+	  \amp\spacer\amp 
+	  </mrow>
+	  <mrow>
+	                  103.20
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 110.0
+	  \amp\spacer\amp 
+	  </mrow>
+	  <mrow>
+	                  103.20
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 95.0
+	  \amp\spacer\amp 
+	  </mrow>
+	</md>
+	</p>
+	<answer>
+	  <p>
+        <md>
+	  <mrow>
+	                  \AVE(X)
+	  \amp\spacer\amp \SD(X)
+	  \amp\spacer\amp \AVE(Y)
+	  \amp\spacer\amp \SD(Y)
+	  \amp\spacer\amp r	  	  
+	  \amp\spacer\amp P
+	  \amp\spacer\amp Y\text{ est.}
+	  </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}	      
+	    </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 24.8
+	  \amp\spacer\amp 21.0
+	  </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 17.5
+	  \amp\spacer\amp 12.97
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 110.0
+	  \amp\spacer\amp 22.36
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 95.0
+	  \amp\spacer\amp 32.11
+	</mrow>
+	</md>
+	</p>
+	</answer>
+      </exercise>
+
+      <exercise>
+	<p>(Ch 11) Continuing the previous problem, suppose now that
+	the <m>Y</m> data is normally distributed within each thin
+	vertical strip, and that the scatter diagram is
+	  homoscedastic. For data whose <m>X</m> value is
+	  near the value in the column <m>P</m>, estimate the percent of <m>Y</m> data in the
+	  range <m>\AVE(Y)</m> and higher. The first row is complete, and shows
+      the results of the sample problem 2 above. Fill in the remaining
+	  values in the column labeled "<m>\text{est. percent}</m>".
+        <md>
+	  <mrow>
+	                  \AVE(X)
+	  \amp\spacer\amp \SD(X)
+	  \amp\spacer\amp \AVE(Y)
+	  \amp\spacer\amp \SD(Y)
+	  \amp\spacer\amp r	  	  
+	  \amp\spacer\amp P
+	  \amp\spacer\amp \text{ est. percent}
+	  </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.9in}{.1ex}	      
+	    </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 24.8
+	  \amp\spacer\amp 97\%
+	</mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 17.5
+	  \amp\spacer\amp 
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 110.0
+	  \amp\spacer\amp 
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 95.0
+	  \amp\spacer\amp 
+	</mrow>
+	</md>
+	  
+	</p>
+	<answer><p>
+        <md>
+	  <mrow>
+	                  \AVE(X)
+	  \amp\spacer\amp \SD(X)
+	  \amp\spacer\amp \AVE(Y)
+	  \amp\spacer\amp \SD(Y)
+	  \amp\spacer\amp r	  	  
+	  \amp\spacer\amp P
+	  \amp\spacer\amp \text{ est. percent}
+	  </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.7in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.5in}{.1ex}
+	      \amp \amp \rule{.9in}{.1ex}	      
+	    </mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 24.8
+	  \amp\spacer\amp 97\%
+	</mrow>
+	  <mrow>
+	                  20.13
+	  \amp\spacer\amp 3.65
+	  \amp\spacer\amp 15.86
+	  \amp\spacer\amp 4.90
+	  \amp\spacer\amp .82	  	  
+	  \amp\spacer\amp 17.5
+	  \amp\spacer\amp 15\%
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 110.0
+	  \amp\spacer\amp 18\%
+	</mrow>
+	  <mrow>
+	                  103.2
+	  \amp\spacer\amp 4.71
+	  \amp\spacer\amp 26.78
+	  \amp\spacer\amp 5.78
+	  \amp\spacer\amp -.53	  	  
+	  \amp\spacer\amp 95.0
+	  \amp\spacer\amp 86\%
+	</mrow>
+	</md>
+	  </p>
+	</answer>
+      </exercise>
+  </exercises>
+
+</subsection>
+</section>
+

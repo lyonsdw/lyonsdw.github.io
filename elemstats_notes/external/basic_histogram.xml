@@ -1,0 +1,281 @@
+<section xml:id="basic_histogram"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Histograms</title>
+
+
+  <subsection><title>Examples</title>
+    <p>
+    Here are some basic problem types about histograms.
+    <ol>
+      <li>The base of a block in a histogram sits on the interval from
+	15 to 40 in the horizontal axis, and has height <m>2.3</m>. How
+	much data lies in the range from 15 to 40?
+      </li>
+            <li>The base of a block in a histogram sits on the interval from
+	15 to 40 in the horizontal axis, and has height <m>2.3</m>, and
+	the data is evenly spread within the block. How
+	much data lies in the range from 15 to 20? 
+      </li>
+	    <li>26 percent of data values in a data set called <m>X</m>
+	      lie in the range <m>34.7</m> to <m>40.8</m>. What is the
+	      height of the block in a histogram for <m>X</m> whose base
+	      sits on the interval from <m>34.7</m> to <m>40.8</m>?
+	    </li>
+    </ol>
+
+    The solutions use the equation <m>\text{ area } = \text{
+    (base)(height)}</m> and the fact that the area of a block in a
+    histogram is the percent of data in the range along the base of the
+    block. Here are the solutions.
+    <ol>
+      <li>
+		<md>
+	  <mrow>\text{ area } \amp = \text{ (base)(height)}</mrow>
+	  <mrow> \amp = (40-15)(2.3)</mrow>
+	  <mrow>\amp = 57.5\%</mrow>
+	</md>
+      </li>
+      <li>
+	<md>
+	  <mrow>\text{ area } \amp = \text{ (base)(height)}</mrow>
+	  <mrow> \amp = (20-15)(2.3)</mrow>
+	  <mrow>\amp = 11.5\%</mrow>
+	</md>
+      </li>
+      <li>
+	<md>
+	  <mrow>\text{ height } \amp = \frac{\text{area}}{\text{base}}</mrow>
+	  <mrow> \amp = \frac{26}{40.8-34.7}</mrow>
+	  <mrow>\amp \approx 4.26\text{ percent per unit}</mrow>
+	</md>
+      </li>
+    </ol>
+    
+  </p>
+</subsection>
+
+  <subsection>
+  <title>Percentile </title>
+
+  <p>The <term>percentile rank</term>
+    of a data value <m>A</m>
+    is the percent of all data whose value is less than or equal to
+    <m>A</m>.
+    <!--In terms of a histogram, the percentile rank of a data
+    value <m>A</m> is the total area of all the blocks in the histogram
+    to the left of <m>A</m>. (If <m>A</m> falls within a class interval,
+    say, from <m>U</m> to <m>V</m>, then subdivide the block whose base
+    is the interval from <m>U</m> to <m>V</m> into two
+    blocks<endash/>one whose base is the interval from <m>U</m>
+    to <m>A</m>, and the other whose base is the interval from <m>A</m>
+    to <m>V</m>.)-->
+    If the percent of data less than or equal to <m>A</m>
+    is <m>p</m>, then <m>A</m>
+    has <m>p</m>-th percentile. In picture form, the percentile rank of
+    a data value <m>A</m>
+    is the area contained in the histogram to the left of a vertical
+    line drawn through the point <m>A</m> on the horizontal axis. The text
+    introduces percentile and percentile rank in the context of normally
+    distributed data (Chapter 5, pp.90<ndash/>91), but the terms percentile and percentile rank apply
+    to all types of data, whether it is normally distributed or not.
+</p>
+</subsection>
+  
+  
+  <subsection><title>Histogram practice problems</title>
+    <exercises>
+    <exercise><p>    
+	  Each row in the table below gives three of the four
+	  values <m>A</m>, <m>B</m>, <m>p</m>, and height
+	  for a rectangle in a histogram on the class interval
+	  from <m>A</m> to <m>B</m>, where <m>p</m> percent of the data
+	  lies in the class interval. Find the missing entry in each
+	  row.
+	  <md>
+	    <mrow>
+	      A
+	      \amp\spacer\amp B
+	      \amp\spacer\amp p
+	      \amp\spacer\amp \text{height}	      
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	       \rule{.3in}{.1ex} \amp \amp \rule{.3in}{.1ex} \amp \amp
+	       \rule{.3in}{.1ex} \amp \amp \rule{.5in}{.1ex}
+	    </mrow>
+	    <mrow>
+	      25
+	      \amp\spacer\amp 43
+	      \amp\spacer\amp 15\%
+	      \amp\spacer\amp 
+	    </mrow>
+	    <mrow>
+	      42
+	      \amp\spacer\amp 61
+	      \amp\spacer\amp 
+	      \amp\spacer\amp 3.5
+	    </mrow>
+	    <mrow>
+	      15
+	      \amp\spacer\amp 
+	      \amp\spacer\amp 18.4\%
+	      \amp\spacer\amp 4.6
+	    </mrow>
+	    <mrow>
+	      
+	      \amp\spacer\amp 90
+	      \amp\spacer\amp 18\%
+	      \amp\spacer\amp 6.0
+	    </mrow>
+	  </md>
+      </p>
+      <answer><p>
+	  <md>
+	    <mrow>
+	      A
+	      \amp\spacer\amp B
+	      \amp\spacer\amp p
+	      \amp\spacer\amp \text{height}	      
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	       \rule{.3in}{.1ex} \amp \amp \rule{.3in}{.1ex} \amp \amp
+	       \rule{.3in}{.1ex} \amp \amp \rule{.5in}{.1ex}
+	    </mrow>
+	    <mrow>
+	      25
+	      \amp\spacer\amp 43
+	      \amp\spacer\amp 15\%
+	      \amp\spacer\amp .83
+	    </mrow>
+	    <mrow>
+	      42
+	      \amp\spacer\amp 61
+	      \amp\spacer\amp 66.5\%
+	      \amp\spacer\amp 3.5
+	    </mrow>
+	    <mrow>
+	      15
+	      \amp\spacer\amp 19
+	      \amp\spacer\amp 18.4\%
+	      \amp\spacer\amp 4.6
+	    </mrow>
+	    <mrow>
+	      87
+	      \amp\spacer\amp 90
+	      \amp\spacer\amp 18\%
+	      \amp\spacer\amp 6.0
+	    </mrow>
+	  </md>
+	</p>
+      </answer>
+    </exercise>
+
+    <exercise><title>Percentiles and histograms</title>
+      <!-- working here -->
+      <p>The distribution of data called <m>X</m> is given in <xref ref="histpctileexertable"/>
+	below. The data within each class interval is evenly
+	distributed.
+	   <table xml:id="histpctileexertable">
+	     <title>Distribution table for data <m>X</m>
+	     </title>
+	    <tabular  halign="center">
+	      <col right="minor"/><col/>
+
+       	      <row bottom="minor">
+		<cell>class interval</cell>
+		<cell>percent of data</cell>
+	      </row>
+
+       	      <row>
+		<cell>0<mdash/>10
+		</cell>
+		<cell><m>20\%</m>
+		</cell>
+	      </row>
+
+       	      <row>
+		<cell>10<mdash/>30
+		</cell>
+		<cell><m>50\%</m>
+		</cell>
+	      </row>
+
+       	      <row>
+		<cell>30<mdash/>50
+		</cell>
+		<cell><m>30\%</m>
+		</cell>
+	      </row>
+	      
+
+	      </tabular>
+ </table>
+	   Each row in the table below gives either the <m>X</m> value
+	  or the percentile rank for an <m>X</m> value. Find the missing
+	  entry in each row. Hint: draw the histogram first. Find the
+	  heights of the three blocks. Then use "area equals base times height".
+	  <md>
+	    <mrow>
+	      X \amp\spacer\amp \text{percentile rank}
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      	       \rule{.3in}{.1ex} \amp \amp \rule{1.2in}{.1ex}
+	    </mrow>
+    	    <mrow>
+	      8.0 \amp\spacer\amp 
+		    </mrow>
+    	    <mrow>
+	      25.0 \amp\spacer\amp
+	    </mrow>
+   	    <mrow>
+	     42.0 \amp\spacer\amp 
+	    </mrow>
+    	    <mrow>
+	       \amp\spacer\amp 40\text{th percentile}
+	    </mrow>
+    	    <mrow>
+	       \amp\spacer\amp 80\text{th percentile}
+	    </mrow>
+	  </md>
+	</p>
+	<answer>
+	  <p> Using "height equals area divided by base", the heights of the three blocks
+	    are <m>2.0=20/(10-0)</m>, <m>2.5=50/(30-10)</m>,
+	    and <m>1.5=30/(50-30)</m>, respectively. The percentile rank
+	    for <m>X=8.0</m> is the total area to the left
+	    of <m>X=8.0</m>, which is <m>8\cdot 2 =
+	    16\%</m>. The <m>X</m> value with 80th percentile must be
+	    somewhere between 30 and 50 (because 30 is given to be 70th
+	    percentile). Solve <m>(X-30)\cdot 1.5 = 10</m> to
+	    get <m>X\approx 36.7</m>.
+	  <md>
+	    <mrow>
+	      X \amp\spacer\amp \text{percentile rank}
+	    </mrow>
+	    <mrow>
+	      	       \rule{.3in}{.1ex} \amp \amp \rule{1.2in}{.1ex}
+	    </mrow>
+    	    <mrow>
+	      8.0 \amp\spacer\amp 16\text{th percentile}
+		    </mrow>
+    	    <mrow>
+	      25.0 \amp\spacer\amp 58\text{th percentile}
+	    </mrow>
+   	    <mrow>
+	     42.0 \amp\spacer\amp 88\text{rd percentile}
+	    </mrow>
+    	    <mrow>
+	      18.0 \amp\spacer\amp 40\text{th percentile}
+	    </mrow>
+    	    <mrow>
+	      36.7 \amp\spacer\amp 80\text{th percentile}
+	    </mrow>
+	  </md>
+	  </p>
+	</answer>
+    </exercise>
+    </exercises>
+  </subsection>
+</section>
+

@@ -1,0 +1,69 @@
+<section xml:id="basics_general"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  General
+</title>
+
+
+<subsection xml:id="usualroundoffrules"> 
+  <title>Rounding in calculations
+</title>
+
+<p>Roundoff errors made at intermediate steps of a multi-step
+  calculation tend to become magnified. For this reason, do not round
+  off numbers until the final step of a calculation, unless
+  you are simply making a rough estimate. If you must round, keep lots
+  of digits. A rule of thumb is to round to the nearest <m>0.001</m>,
+  that is, to the nearest 3rd digit to the right of the decimal point.
+</p>
+ 
+</subsection>
+
+
+<subsection>
+  <title>Solving equations
+  </title>
+
+  <p>To solve a given equation for a particular quantity <m>X</m> means to
+    manipulate the given equation into a new equation where <m>X</m> is
+    all by itself on one side. For example, the equation <m>A=BC</m> can
+    be solved for <m>C</m> by dividing both sides of the equation
+    by <m>B</m> (this is valid as long as <m>B</m> is not zero). This
+    manipulation results in the new equation <m>C=\frac{A}{B}</m> which
+    is solved for <m>C</m>.
+    </p>
+
+  <p>
+    To solve the
+    equation <me>Z=\frac{X-M}{S}</me> for <m>X</m>, first multiply both
+    sides of the equation by <m>S</m> to obtain
+    <me>ZS = X-M</me>
+    then add <m>M</m> to both sides to obtain
+    <me>X=ZS+M.</me>
+  </p>
+</subsection>
+
+<exercises><title>Solving equations practice problems</title>
+  <exercise><p>Consider the equation <m>A = \frac{BC + D}{E}</m>.
+      <ol><li>Solve for <m>D</m>.
+	</li>
+	<li>Solve for <m>B</m>.
+	</li>
+	<li>Solve for <m>E</m>.
+	</li>	
+      </ol>
+    </p>
+    <answer>
+      <p><ol><li><m>D=AE-BC</m>
+	  </li><li><m>B=\frac{AE-D}{C}</m>
+	  </li>
+	  <li><m>E=\frac{BC+D}{A}</m>
+	  </li>
+	</ol>
+      </p>
+    </answer>
+  </exercise>
+</exercises>
+
+</section>
+
+

@@ -1,0 +1,326 @@
+<section xml:id="basic_probability"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Probability</title>
+
+<subsection xml:id="prob_clarif">
+  <title>Probability terminology (Ch 13<ndash/>15)</title>
+
+  <p>[Note: The symbols given in this section appear in Friedman's text in a
+note on p.227 at the end of Exercise Set B.]
+</p>
+
+  <p>In a box model, an <term>outcome</term>
+    is a sequence of tickets obtained by random
+draws, either with or without replacement. For example, here are the 12
+possible outcomes for 2 draws, without replacement, from the box
+  <m>\{A,K,Q,J\}</m>. (This is a box model for "two cards are dealt from a 4-card
+  deck containing an ace, a king, a queen, and a jack".)
+  <me> \text{set of all outcomes} = \{AK,AQ,AJ,KA,KQ,KJ,QA,QK,QJ,JA,JK,JQ\}</me>
+  In this notation, <m>AK</m> means the ace is drawn first, and the king
+  second, while <m>KA</m> means the king is first and the ace is second.
+</p>
+
+<p>
+  An <term>event</term>
+  is a set of outcomes. For example, the events "get a queen" and
+  "get a king on the first draw" are 
+<md>
+  <mrow>\text{"get a queen"} \amp = \{QA,QK,QJ,AQ,KQ,JQ\}</mrow>
+  <mrow>\text{"get a king on draw 1"} \amp = \{KA,KQ,KJ\}.</mrow>
+</md>
+Another example is the event "get the hand ace-king". In a "hand", it does
+not matter what order the cards are dealt in, so we have
+<me>  \text{"get the hand ace-king"} = \{AK,KA\}.</me>
+To say that two events <m>E</m>
+and <m>F</m>
+"both happen" can be rephrased <m>\text{"}E \AND F\text{"}</m>. To say that "at least one of the events <m>E,F</m>
+happens" can be
+rephrased <m>\text{"}E \OR F\text{"}</m>. For example, for the events
+<md>
+  <mrow>  E = \text{"get an ace"} = \{AK,AQ,AJ,KA,QA,JA\}</mrow>
+  <mrow>  F = \text{"get a king"} = \{KA,KQ,KJ,AK,QK,JK\}</mrow>
+</md>
+we have the following.
+<md>
+  <mrow>  E \AND F \amp = \text{"get a hand with an ace and a king"} = \{AK,KA\}</mrow>
+  <mrow>E \OR F \amp = \text{"get a hand with an ace or a king (or
+    both)"}</mrow>
+  <mrow> \amp = \{AK,AQ,AJ,KA,QA,JA,KQ,KJ,QK,JK\}</mrow>
+</md>
+[Comment for students who know about intersection and union of sets: the
+event <m>\text{"}E \AND F\text{"}</m> is the same thing as the intersection of the sets <m>E,F</m>,
+and the event <m>\text{"}E \OR F\text{"}</m> is the same thing as the union of the sets <m>E,F</m>.]
+</p>
+
+<p>We will use the correct terms "outcome" and "event" instead of the vague
+term "thing" used in the text in Ch 13.
+</p>
+
+<p>We will write <m>P(E)</m>
+  to denote the probability for an event <m>E</m>. For
+  example, in the game of 2 draws, with replacement, from the box
+  <m>\{A,K,Q,J\}</m>,
+  the probability of the single outcome <m>AK</m>
+  is
+<me>
+  P(AK) = 1/12 \approx 8.3\%
+</me>
+because there are 12 equally likely outcomes for the 2 draws. The
+probability for getting the hand ace-king is
+<me>
+  P(\text{get the hand ace-king}) = 2/12 \approx 16.7\%
+</me>
+because there are 2 equally likely outcomes in the event "get the hand
+ace-king", and there are 12 equally likely outcomes in all for the 2
+draws. The probability of getting a queen is
+<me>
+  P(\text{get a queen}) = 6/12 = 50\%
+</me>
+because there are 6 equally likely outcomes in the event "get a queen". The
+probability of getting king on the first draw is
+<me>
+  P(\text{get a king on draw 1}) = 3/12 = 25\%
+</me>
+because there are 3 equally likely outcomes in the event "get a king on draw 1".
+</p>
+
+<p>The textbook does not give a definition of the term conditional
+probability; instead, they explain by example in Ch 13 Sec. 2
+  (p.226). Here is the definition: The <term>conditional
+    probability</term>
+  of event <m>E</m>
+  given that event <m>F</m>
+  has happened, denoted <m>P(E|F)</m>, is
+<men xml:id="condprobdefbasic">
+   P(E|F) = \frac{P(E \AND F)}{P(F)}
+</men>
+where the event "<m>E \AND F</m>" is the set of all outcomes that belong to both
+events <m>E</m> and <m>F</m>. For example, in 2 draws with replacement from the box
+<m>\{A,K,Q,J\}</m>, we have
+<me>
+  P(\text{get a queen | get a king on draw 1}) = 1/3 \approx 33.3\%
+</me>
+because there is 1 outcome, namely <m>KQ</m>, that has a <m>Q</m>,
+among the 3 outcomes that have <m>K</m> on draw 1. We also have
+<me>
+  P(\text{get a king on draw 1 | get a queen}) = 1/6 \approx 16.7\%
+</me>
+because there is 1 outcome, namely <m>KQ</m>, for which draw 1 is a <m>K</m>, among
+the 6 outcomes that have a <m>Q</m>.
+</p>
+
+<p>The definitions of independent and dependent events (box on p.230)
+  should be replaced by the following: "Two events <m>E,F</m>
+  are <term>independent</term>
+  if
+  <m>P(F|E) = P(F)</m>. Otherwise, the events <m>E,F</m>
+  are <term>dependent</term>." Or in words,
+  "Two events <m>E,F</m>
+  are independent if the probability of <m>F</m>
+  given that <m>E</m>
+  has
+  happened is equal to the probability of <m>F</m>. Otherwise, the
+  events <m>E,F</m>
+  are dependent." 
+</p>
+</subsection>
+  
+
+<subsection>  <title>Probability Practice Problems</title>
+<exercises>
+  <introduction>
+    <p>Problems 1 and 2 are about the following situation: A box contains seven tickets, labeled <m>a,b,c,d,e,f,g</m>. In Game 1,
+    tickets are drawn from the box with replacement. In Game 2, tickets
+    are drawn without replacement. On any given draw, every ticket
+    remaining in the box is equally likely to be selected on the next
+      draw.
+      Consider the following events.
+      <md>
+	<mrow>E \amp= \text{get the ticket } a \text{ on draw 1}
+	</mrow>
+	<mrow>F \amp= \text{get the ticket } b \text{ on draw 2}
+	</mrow>	
+	<mrow>G \amp= \text{get two vowels in the first two draws}
+	</mrow>
+	<mrow>H \amp= \text{get exactly two vowels in the first seven draws}
+	</mrow>
+      </md>
+          </p>
+  </introduction>
+  
+<exercise> <p>     Find the probabilities in the table below. Give your answer as a
+      percent, correct to the nearest <m>0.01</m> (that is, rounded to
+      the two decimal places). Two entries have been filled in as
+      examples.
+      <md>
+	<mrow>\amp\spacer\amp
+	  \amp\spacer\amp \text{Game 1}
+	  \amp\spacer\amp \text{Game 2}	  
+	</mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \amp \amp
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	    </mrow>
+	<mrow> (i) \text{ (Ch 13)} \amp\spacer\amp
+	  P(E)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>
+	<mrow>(ii) \text{ (Ch 13)} \amp\spacer\amp
+	  P(F)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>
+	<mrow>(iii) \text{ (Ch 13)} \amp\spacer\amp
+	  P(G)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>
+	<mrow>(iv) \text{ (Ch 13)} \amp\spacer\amp
+	  P(F|E)
+	  \amp\spacer\amp 1/7 = 14.29\%
+	  \amp\spacer\amp 1/6 = 16.67\%
+	</mrow>
+	<mrow>(v) \text{ (Ch 13)} \amp\spacer\amp
+	  P(E|F)
+	  \amp\spacer\amp 
+	  \amp\spacer\amp 
+	</mrow>		
+	<mrow>(vi) \text{ (Ch 13)} \amp\spacer\amp
+	  P(E \AND F)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>
+      	<mrow>(vii) \text{ (Ch 14)} \amp\spacer\amp
+	  P(F \OR G)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>
+	<mrow>(viii) \text{ (Ch 15)} \amp\spacer\amp
+	  P(H)
+	  \amp\spacer\amp
+	  \amp\spacer\amp
+	</mrow>		
+  </md></p>
+      
+      <answer><p>
+      <md>
+	<mrow>
+	  \amp\spacer\amp \text{Game 1}
+	  \amp\spacer\amp \text{Game 2}	  
+	</mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      \amp \amp \rule{.6in}{.1ex}
+	      \amp \amp \rule{.6in}{.1ex}
+	    </mrow>
+	
+	<mrow>
+	  P(E)
+	  \amp\spacer\amp 1/7 = 14.29\%
+	  \amp\spacer\amp  1/7 = 14.29\%
+	</mrow>
+	<mrow>
+	  P(F)
+	  \amp\spacer\amp 1/7 = 14.29\%
+	  \amp\spacer\amp 1/7 = 14.29\%
+	</mrow>
+	<mrow>
+	  P(G)
+	  \amp\spacer\amp (2/7)^2 = 8.16\%
+	  \amp\spacer\amp (2/7)\cdot (1/6) = 4.76\%
+	</mrow>
+	<mrow>
+	  P(F|E)
+	  \amp\spacer\amp 1/7 = 14.29\%
+	  \amp\spacer\amp 1/6 = 16.67\%
+	</mrow>
+	<mrow>
+	  P(E|F)
+	  \amp\spacer\amp 1/7 = 14.29\%
+	  \amp\spacer\amp 1/6 = 16.67\%
+	</mrow>		
+	<mrow>
+	  P(E \AND F)
+	  \amp\spacer\amp (1/7)^2 = 2.04\%
+	  \amp\spacer\amp (1/7)\cdot (1/6) = 2.38\%
+	</mrow>
+      	<mrow>
+	  P(F \OR G)
+	  \amp\spacer\amp (1/7) + (2/7)^2 = 22.45\%
+	  \amp\spacer\amp (1/7) + (2/7)\cdot (1/6) = 19.05\%
+	</mrow>
+	<mrow>
+	  P(H)
+	  \amp\spacer\amp {7 \choose 2} (2/7)^2 (5/7)^5 = 31.87\%
+	  \amp\spacer\amp 100.00\%
+	</mrow>		
+      </md>
+	</p>
+      </answer>
+</exercise>
+
+<exercise><p>Use the definitions of independent and dependent events
+    given in <xref ref="prob_clarif"/> to answer the following questions.
+    <ol>
+      <li>(Ch 13)    Are events <m>E,F</m> independent or dependent in Game 1?
+    In Game 2? Explain.
+      </li>
+      <li>(Ch 13)    Are events <m>E,G</m> independent or dependent in Game 1?
+    In Game 2? Explain.
+      </li>
+      <li>(Ch 15)    Are events <m>G,H</m> independent or dependent in Game 1?
+    In Game 2? Explain.
+      </li>      
+    </ol>
+  </p>
+  <answer><p>
+      <ol>
+	<li>In Game 1, we have <m>P(F)=1/7=P(F|E)</m>, so <m>E,F</m> are
+	independent. In Game 2, we have <m>P(F)=1/7\neq 1/6=P(F|E)</m>, so <m>E,F</m> are
+	dependent.
+	</li>
+	<li>In Game 1, we have <m>P(G)=4/49</m>,
+	  while <m>P(G|E)=2/7</m>. Since <m>P(G)\neq P(G|E)</m>, we
+	  conclude that <m>E,G</m> are dependent in Game 1.
+In Game 2, we have <m>P(G)=2/42</m>,
+	  while <m>P(G|E)=1/6</m>. Since <m>P(G)\neq P(G|E)</m>, we
+	  conclude that <m>E,G</m> are dependent in Game 2.
+	</li>
+	<li>      In Game 1, we have <m>P(H)={7\choose 2} (2/7)^2
+	    (5/7)^5\approx 31.87\%</m>, while
+	  <md>
+	    <mrow>P(H|G) \amp = P(\text{get non-vowels on draws 3,4,5,6,
+	    and 7})
+	    </mrow>
+	    <mrow>\amp = (5/7)^5 \approx 18.59\%.</mrow>
+	  </md>
+	  Since <m>P(H)\neq P(H|G)</m><fn>Another way to think
+	  about <m>P(H|G)</m> is to use the definition
+	  <xref ref="condprobdefbasic"/> of conditional probability. We have
+	  <md>
+	    <mrow>P(H|G)\amp =\frac{P(H \AND G)}{P(G)}
+	    </mrow>
+	    <mrow>\amp = \frac{P(\text{two vowels in 1st 2
+	draws} \AND \text{no vowels in last 5 draws})}{P(G)}
+	    </mrow>
+	    <mrow>\amp = \frac{(2/7)^2(5/7)^5}{(2/7)^2}
+	    </mrow>
+	    <mrow>\amp (5/7)^5.
+	    </mrow>
+	  </md></fn>, we conclude that <m>G,H</m> are
+	  <em>dependent</em> in Game 1. 
+      In Game 2, we
+      have <m>P(H)=100\% =P(H|G)</m>. We conclude
+      that <m>G,H</m> are <em>independent</em>
+      in Game 2.
+	</li>	
+      </ol>
+    </p>
+  </answer>
+</exercise>
+</exercises>
+</subsection>
+</section>
+

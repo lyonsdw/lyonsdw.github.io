@@ -1,0 +1,201 @@
+<section xml:id="descriptive_stats_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Descriptive Statistics
+</title>
+
+<introduction>This section is coordinated with
+  Freedman, <em>Statistics</em> <xref ref="freedman_statistics"/>,
+  Chapters 3<ndash/>6.
+</introduction>
+
+<subsection>
+  <title>The Histogram</title>
+
+  <p>
+    A <term>histogram</term><idx><h>histogram</h>
+    </idx>
+    for a list of numbers <m>X</m>
+    is a drawing with a collection
+    of rectangles. The base of each rectangle is an interval, called a <term>class
+      interval</term><idx><h>class interval</h>
+    </idx>, of a horizontal axis whose units are the same
+    as <m>X</m>
+    (that is,
+    if the numbers in <m>X</m>
+    are dollars, or years, then the units of the
+horizontal axis are dollars or years, etc). The area of a rectangle
+    whose base is the class interval from <m>A</m>
+    to <m>B</m>
+    is the fraction of the
+    numbers in the list <m>X</m>
+    that lie between <m>A</m>
+    and <m>B</m>. For example, if <m>40\%</m>
+    of
+    the numbers in the list <m>X</m>
+    are in the range 10 to 30, then a rectangle in
+    a histogram for <m>X</m>
+    whose base is the class interval from 10 to 30 has
+    area <m>0.4 = 40\%</m>, and therefore has a height of <m>.4/(30-10) = .02 = 2</m>
+    percent per <m>X</m>
+    unit.
+The vertical axis in a histogram has units called
+    <term>density</term><idx><h>density units</h>
+    </idx>
+    units. Rectangles in a histogram must be non-overlapping, and the
+    total area of all the rectangles must be <m>100\%</m>. [See Example
+    1 on p.40 of <xref ref="freedman_statistics"/> for an illustration.]
+</p>
+
+
+
+</subsection>
+
+<subsection>
+  <title>Average, Median, Percentiles</title>
+
+  <p>
+    The <term>average</term><idx><h>average</h>
+    </idx>
+    (also called
+    the <term>mean</term><idx><h>mean</h>
+    </idx>)
+    of a list of numbers is the sum of all the numbers divided
+    by the number of entries in the list. We
+    write <m>\AVE(X)</m><notation><usage><m>\AVE(X)</m>
+      </usage><description>the
+	average of the list <m>X</m>
+      </description>
+    </notation>
+    to denote the
+    average of a list <m>X</m>. The average of the list <m>X</m>
+    turns out to be the
+    balance point of a histogram for <m>X</m>, in the following sense. Imagine the
+rectangles of the histogram are made of uniformly thick clay. Glue the
+rectangles together along the edges where they meet. This solid clay
+histogram balances on a fulcrum placed at the average point on the
+base. <fn>Technical assumption: the numbers that fall within each rectangle
+base interval must be close to evenly distributed within that interval
+      for this balance point interpretation to be valid.</fn> [See
+    Figure 6 on p.63 of <xref ref="freedman_statistics"/> for an illustration.]
+  </p>
+
+  <p>
+    Now suppose we have a histogram for a list <m>X</m>
+    that has no rectangles of
+    height zero. Suppose that <m>L</m>
+    is the location, along the horizontal axis,
+    of the left edge of the left-most rectangle in the histogram,
+    and <m>R</m>
+    is
+    the location of the right edge of the right-most rectangle. A number <m>A</m>
+in the range
+    <me>  L \leq A \leq R</me>
+    is said to
+    have <m>p</m>-th <term>percentile rank</term><idx><h>percentile rank</h></idx>
+    if the area of the histogram on the
+    interval from <m>L</m>
+    to <m>A</m>
+    is <m>p</m>
+    percent. The <term>median</term><idx><h>median</h></idx>
+    of the list <m>X</m>
+    is the
+    number with 50th percentile rank. The <term>interquartile
+      range</term><idx><h>interquartile range</h></idx>
+    of a list <m>X</m>
+    is
+    the length of the interval from <m>A</m>
+    to <m>B</m>, where <m>A</m>
+    has 25th percentile rank and <m>B</m>
+    has
+75th percentile rank.<fn>Note: these definitions of percentile and median are
+      dependent on the histogram that is chosen.</fn>
+[See Example 10 on p. 90 of <xref ref="freedman_statistics"/> for an illustration.]
+    </p>
+
+</subsection>
+
+<subsection>
+  <title>Operations on Lists</title>
+  
+  <p>
+    Given lists <m>X,Y</m>
+    with the same number of entries, and given constants <m>a,b</m>, we can form
+    new lists <m>X^2</m>, <m>aX+b</m>, and <m>XY</m>
+    by doing the obvious operations on the
+    entries of the list(s). For example, if <m>X = -2,1,3</m>
+    and <m>Y = 1,4,0</m>, then
+we have the following lists.
+
+    <md>
+      <mrow>X \amp = -2,1,3</mrow>
+      <mrow>Y \amp = 1,4,0</mrow>
+      <mrow>X^2 \amp = (-2)^2,1^2,3^3 = 4,1,9</mrow>
+      <mrow>2X - 3 \amp = 2(-2)-3, 2(1)-3, 2(3)-3 = -7,-1,3</mrow>
+      <mrow>XY \amp = (-2)(1),(1)(4),(3)(0) = -2,4,0</mrow>
+</md>
+</p>
+  
+  <p>  The <term>root mean square</term><idx><h>root mean square</h>
+    </idx>
+    of a list <m>X</m>,
+    denoted <m>\rms(X)</m><notation><usage><m>\rms(X)</m>
+      </usage><description>root
+	mean square of the list <m>X</m>
+      </description>
+    </notation>, is the square root of
+    the average of the list <m>X^2</m>. Here is <m>\rms(X)</m>
+    in symbols.
+
+    <me>  \rms(X) = \sqrt{\AVE(X^2)}</me>
+    
+</p>
+</subsection>
+
+<subsection><title>Standard Deviation and Standard Units</title>
+  <p>
+    The <term>standard deviation</term><idx><h>standard deviation</h>
+    </idx>
+    of a list <m>X</m>,
+    denoted <m>\SD(X)</m><notation><usage><m>\SD(X)</m>
+      </usage><description>standard
+	deviation of the list <m>X</m>
+      </description>
+    </notation>, is the rms of the
+    list <m>X-\AVE(X)</m>. The list <m>X-\AVE(X)</m>
+    is called the list of <term>deviations from
+      average</term>. Here is <m>\SD(X)</m>
+    in symbols.
+    <me>  \SD(X) = \rms(X-\AVE(X))</me>
+
+The standard deviation is interpreted as a the (absolute) size of a
+typical error, that is, distance from average, in a game of chance where
+    you draw entries from the list <m>X</m>
+    at random.
+</p>
+
+  <p>The list <m>X</m>
+    in <term>standard units</term><idx><h>standard units</h>
+    </idx>
+    is the list <m>\frac{X-\AVE(X)}{\SD(X)}</m>.</p>
+
+</subsection>
+
+<subsection>
+  <title>The Standard Normal Distribution</title>
+
+  <p>
+    A list <m>X</m>
+    is said to follow a <term>normal distribution</term><idx><h>normal distribution</h>
+    </idx>
+    if the percent of entries
+between pairs of numbers
+    <me>  -z=-\frac{A-\AVE(X)}{\SD(X)},\;\;+z=+\frac{A-\AVE(X)}{\SD(X)} </me>
+    in the list <m>(X-\AVE(X))/\SD(X)</m>
+    is close to the numbers given in the
+    standard normal table in the Appendix of the textbook, for every entry <m>A</m>
+    in the list <m>X</m>.
+</p>
+</subsection>
+
+</section>
+
