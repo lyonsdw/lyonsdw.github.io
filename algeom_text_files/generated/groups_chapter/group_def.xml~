@@ -1,0 +1,589 @@
+  <section xml:id="groupdefsection">
+    <title>Definition of a group
+    </title>
+  
+    <p>
+      We will use the notation <m>\ast \colon S\times S\to S</m> to denote a
+      binary operation on a set <m>S</m> that sends the
+      pair <m>(x,y)</m> to <m>x\ast y</m>. Recall that a binary
+      operation <m>\ast</m> is <em>associative</em> means
+      that <m>x\ast(y\ast z)= (x\ast y)\ast z</m> for all <m>x,y,z\in
+	S</m>.
+      	    	        <idx><h>associative binary operation</h></idx>
+      <definition xml:id="groupdefn">
+	<title>Group</title>
+	<statement>
+	  <p>A <term>group</term><idx><h>group</h></idx> is a set <m>G</m>, together with a
+	    binary operation <m>\ast\colon G\times G \to G</m> with the
+	    following properties.
+	    <ul>
+	      <li>The operation <m>\ast</m> is associative. </li>
+      	      <li>There exists an element <m>e</m> in <m>G</m>, called
+      		an <term>identity</term> element, such
+      		that <m>e\ast g=g\ast e=g</m> for all <m>g\in
+      		  G</m>. </li>
+	      <li>For every <m>g\in G</m>, there exists an
+		element <m>h\in G</m>, called an <term>inverse</term>
+		element for <m>g</m>, such that <m>g\ast h=h \ast g=e</m>.</li>
+	    </ul>
+	  </p>
+	</statement>
+      </definition>
+
+      <proposition xml:id="groupdefnprop">
+	<title>Immediate consequences of the definition of group
+	</title>
+	<statement>
+	  <p>Let <m>G</m> be a group. The element <m>e</m> in the second
+	    property of <xref ref="groupdefn" /> is
+	    unique. Given <m>g\in G</m>, the element <m>h</m> in the
+	    third property of <xref ref="groupdefn" /> is unique.
+	  </p>
+	</statement>
+<!--	<proof><p>See <xref ref="idunique" /> and <xref ref="invunique" />.</p></proof>-->
+      </proposition>
+
+      <definition>
+	<title>Multiplicative notation</title>
+	<statement>
+	  <p>Let <m>G</m> be a group. By <xref ref="groupdefnprop" />,
+      we may speak of an identity element as <em>the</em> identity element
+	    for <m>G</m>.
+	    <idx>identity element</idx>
+	    Given <m>g\in G</m>, we may refer to an inverse element
+	    for <m>g</m> as <em>the</em> inverse of <m>g</m>, and we
+	    write <m>g^{-1}</m> to denote this element.
+	    <idx>inverse of a group element</idx>
+	    In practice, we
+      often omit the operator <m>\ast</m>, and simply
+	    write <m>gh</m> to denote <m>g\ast h</m>. We adopt the convention that <m>g^0</m> is
+	    the identity element. For <m>k\geq
+	    1</m>, we write <m>g^k</m>
+      to denote <m>\underbrace{g\ast g\ast \cdots \ast g}_{k \text{
+	      factors}}</m>
+	    and we write <m>g^{-k}</m>
+      to denote <m>\left(g^{k}\right)^{-1}</m>. This set of notational conventions is
+	    called <term>multiplicative
+	    notation</term><idx>multiplicative notation</idx>
+	    .
+	  </p>
+	  	</statement>
+      </definition>
+
+      <definition><title>Abelian group, additive notation</title><statement>
+	  <p>In general, group operations are not commutative.<fn>Recall that a binary
+	      operation <m>\ast</m> on a set <m>S</m> is
+	      called <em>commutative</em><idx>commutative binary operation</idx>
+	      if <m>x \ast y = y\ast
+		x</m> for all <m>x,y\in S</m>.
+	    </fn>	     A group with a commutative
+	    operation is called <term>Abelian</term>.</p>
+	  <idx>Abelian group</idx>
+	  	  	    	 	    For some Abelian groups, such as the group of integers, the
+      group operation is called <em>addition</em>, and we
+	    write <m>a+b</m> instead of using the multiplicative
+					notation <m>a\ast b</m>. We
+	    write <m>0</m> to denote the identity element, we
+      write <m>-a</m> to denote the inverse of <m>a</m>, and we
+      write <m>ka</m> to denote <m>\underbrace{a+ a+ \cdots +a}_{k
+					  \text{ summands}}</m> for
+					positive integers <m>k</m>. This
+					set of notational conventions is
+					called <term>additive
+					  notation</term><idx>additive
+	    notation</idx>
+					. 
+	</statement>
+      </definition>
+    </p>
+
+		<definition><title>Order of a group</title> The number
+		  of elements in a finite group
+		  is called
+		  the <term>order</term><idx>order of a group</idx>
+		  of the group. A group
+		  with infinitely many elements is said to
+		  be of <em>infinite order</em>. We
+		  write <m>|G|</m><notation><usage><m>|G|</m>
+		    </usage><description>order
+		      of the group <m>G</m>
+		    </description>
+		  </notation>
+		  to
+		  denote the order of the group <m>G</m>. 
+		</definition>
+
+		<definition><title>The trivial group</title>
+		  <p>A group with a single element (which is
+		    necessarily the identity element) is called
+		    a <term>trivial
+		    group</term><idx><h>groups, list of</h><h>trivial group</h>
+		    </idx>. In multiplicative notation, one might
+		    write <m>\{1\}</m>, and in additive notation, one
+		    might write <m>\{0\}</m>, to denote a trivial group.
+		  </p>
+		</definition>
+
+
+  <exercises>
+
+        <exercise xml:id="idunique">
+      <title>Uniqueness of the identity element</title>
+      <statement>
+	<p>Let <m>G</m> be a group. Suppose
+	  that <m>e,e'</m> both satisfy the second property of the
+	  <xref ref="groupdefn" />, that is, suppose <m>e\ast x=x\ast e = e'\ast x=x\ast e'=x</m> for
+	  all <m>x\in G</m>. Show that <m>e=e'</m>.
+	</p>
+      </statement>
+	</exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for <xref ref="idunique"/></title>
+	  <p>Let <m>e,e'</m> satisfy the requirement for an identity
+	    element. Then <m>e'\ast e=e</m> (because <m>e'</m> is an
+	    identity) and also <m>e'\ast e=e'</m> (because <m>e</m> is
+	    an identity). So <m>e=e'</m>.
+	  </p>
+	</commentary>
+	
+
+        <exercise xml:id="invunique">
+      <title>Uniqueness of inverse elements</title>
+      <statement>
+	<p>Let <m>G</m> be a group with identity element <m>e</m>. Let <m>g\in G</m>
+	  and suppose that <m>g\ast h = h\ast g = g\ast h' = h'\ast g =
+	    e</m>. Show that <m>h=h'</m>.
+	</p>
+      </statement>
+    </exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for <xref ref="invunique"/></title>
+	  <p>Let <m>h,h'</m> be inverses for <m>g</m>. Then we
+	    have <m>e=gh=gh'</m>. Multiplying on the left by <m>h</m>,
+	    we have <m>hgh = hgh'</m>. Since <m>hg=e</m>, we
+	    have <m>eh=eh'</m>, so <m>h=h'</m>.
+	  </p>
+	</commentary>
+
+        <exercise xml:id="cancellation">
+      <title>The cancellation law</title>
+      <statement>
+	<p>Suppose that <m>gx=hx</m> for some elements <m>g,h,x</m> in a
+	  group <m>G</m>. Show that <m>g=h</m>. [Note that the same
+	  proof, mutatis mutandis, shows that if <m>xg=xh</m>, then <m>g=h</m>.]
+	</p>
+      </statement>
+	</exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for
+	    <xref ref="cancellation"/></title>
+	  <p>Multiply both sides of <m>gx=hx</m> by <m>x^{-1}</m> on the right.
+	  </p>
+	</commentary>
+
+	<exercise xml:id="socksandshoes">
+      <title>The "socks and shoes" property</title>
+      <statement>
+	<p>Let <m>g,h</m> be elements of a group <m>G</m>. Show
+	that <m>(gh)^{-1} = h^{-1}g^{-1}</m>.
+	</p>
+      </statement>
+	</exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for
+	    <xref ref="socksandshoes"/></title>
+	  <p>We
+	    have <me>(gh)(h^{-1}g^{-1})=g(hh^{-1})g^{-1}=geg^{-1}=gg^{-1}=e,</me>
+	    and similarly for <m>(h^{-1}g^{-1})(gh)=e</m>.
+	  </p>
+	</commentary>
+	
+	    <exercise xml:id="productgroupexer"><title>Product Groups</title><idx>product group</idx>
+	      <statement><p>Given two groups <m>G,H</m> with
+		  group operations <m>\ast_G, \ast_H</m>, the Cartesian
+		  product <m>G\times H</m> is a group with the
+		  operation <m>\ast_{G\times H}</m> given by
+		  <me>(g,h)\ast_{G\times H} (g',h')= (g\ast_G g',h\ast_H
+		  h').</me> Show that this operation satisfies the
+		  definition of a group.
+		</p>
+	      </statement>
+	    </exercise>
+
+	    <commentary component="instructor"><title>Instructor's solution for
+		<xref ref="productgroupexer"/></title>
+	      <p>The fact that the required properties of a group
+		operation hold for <m>\ast_G,\ast_H</m> separately
+		immediately implies that the required properties hold
+		for <m>\ast_{G\times H}</m>.
+	      </p>
+	    </commentary>
+
+	    
+	    <exercise xml:id="cyclicgroups">
+	      <title>Cyclic groups</title><idx>cyclic group</idx>
+	      <statement><p>A group <m>G</m> is
+		  called <term>cyclic</term> if there exists an
+		  element <m>g</m> in <m>G</m>, called a <term>generator</term>,
+		  such that the sequence
+		  <me>\left(g^k\right)_{k\in
+		  \Z}=(\ldots,g^{-3},g^{-2},g^{-1},g^0,g^1,g^2,g^3,\ldots)</me>
+		  contains all of the elements in <m>G</m>.
+		  <ol>
+		    <li>Suppose that a group <m>G</m> is finite, and
+		      cyclic, with generator <m>g</m>. Show that
+		      <me>G=\{g,g^2,g^3,\ldots,g^{|G|}\}.</me>
+		    </li>
+		    <li>The group of integers is cyclic. Find all of
+		 the generators.
+		    </li>
+		    <li>The group <m>\Z_8</m> is cyclic. Find all of
+		      the generators.		      
+		    </li>
+		      <li>The group <m>\Z_2\times \Z_3</m> is cyclic. Find
+			all of the generators.
+		      </li>
+		      <li>Show that the group <m>\Z_2\times \Z_2</m>
+		      is <em>not</em> cyclic.
+		      </li>
+		      <!-- maybe put some version of these generator
+		      exercises in 2.6 -->
+		      <!--
+		      <li>Show that <m>a</m> is a generator
+			of <m>\Z_n</m> if and only if <m>a,n</m> are
+			relatively prime.
+		      </li>
+		      <li>Let <m>m,n</m> be positive integers. Show that
+			the group <m>\Z_m\times \Z_n</m> is cyclic if
+			and only if <m>m,n</m> are relatively prime,
+			that is, if the greatest common divisor
+			of <m>m,n</m> is 1.
+		      </li>
+		      -->
+		  </ol>
+		</p>
+	      </statement>
+	      <hint>For part a, let <m>n</m> be the least positive
+		integer such that <m>g^n=e</m> (explain why <m>n</m>
+		exists!). Given an arbitrary element <m>h\in G</m>,
+		write <m>h=g^k</m> for some <m>k</m>, then use the
+		Division Algorithm.
+	      </hint>
+	      <!--
+	      <hint>For the last part, observe that <m>(a,b)\in \Z_m\times
+		  \Z_n</m> is a generator if and only if every entry in the sequence
+		<me>(a,b),(2a,2b),(3a,3b),\ldots,(mna,mnb)</me>
+		is distinct (say why!). Let <m>L</m> be the least common multiple of <m>n,m</m>. If <m>m,n</m>
+		are relatively prime, then <m>L=mn</m>, and if <m>m,n</m> are not relatively prime,
+		then <m>L\lt mn</m> (say why!). Use this observation to
+		prove the statement in the exercise.
+	      </hint>-->
+	      </exercise>
+
+	    <commentary component="instructor"><title>Instructor's solution for
+		<xref ref="cyclicgroups"/></title>
+	      <p>
+		<ol><li>Because <m>G</m> is finite, the
+		sequence <m>g,g^2,g^3,\ldots</m> must eventually repeat,
+		    by the pigeonhole
+		    principle. Suppose <m>g^k=g^\ell</m>, for
+		    some <m>1\leq k\lt \ell</m>. Then we
+		    have <m>g^{k-\ell}=e</m>, with <m>k-\ell\gt
+		      0</m>. Now that we know that there
+		    is <em>some</em> positive integer <m>p=k-\ell</m>
+		    such that <m>g^p=e</m>, we may choose <m>n</m> to be
+		    the <em>least</em> positive integer such
+		    that <m>g^n=e</m>. Now let <m>h=g^k</m> be an
+		    arbitrary element of <m>G</m>. Use the division
+		    algorithm to write <m>k=qn+r</m> for some <m>r</m>
+		    in the range <m>0\leq r\lt n</m>. Then we have
+		    <me>h=g^k=g^{qn+r}=(g^n)^qg^r = eg^r=g^r.</me>
+		    This establishes
+		    that <m>G=\{g,g^2,g^3,\ldots,g^n\}</m>. We conclude
+		    that <m>n=|G|</m>, and the proof is complete.
+		  </li>
+		  <li>The generators of <m>\Z</m> are <m>\pm 1</m>.
+		    </li>
+		  <li>The generators of <m>\Z_8</m> are <m>1,3,5,7</m>
+		    </li>
+		  <li>The generators of <m>\Z_2\times \Z_3</m>
+		  are <m>(1,1)</m> and <m>(1,2)</m>
+		      </li>
+		      <li>By direct checking, we find that none of the
+		      four elements of <m>\Z_2\times \Z_2</m> is a
+		      generator. 
+		      </li>
+
+<!--
+<li>We claim that <m>\Z_m\times \Z_n</m> is cyclic if and only
+if <m>m,n</m> are relatively prime. Here's the proof. Let <m>L</m>
+denote the least common multiple of <m>m,n</m>, so that <m>L\leq mn</m>
+and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
+  observe that an element <m>(a,b)</m> of <m>\Z_m\times \Z_n</m> is a
+  generator if and only if every entry in the sequence
+  <me>(a,b),(2a,2b),(3a,3b),\ldots,(mna,mnb)</me>
+  is distinct. If <m>L\lt mn</m>, then <m>(La,Lb)=(0,0)=(mna,mnb)</m>,
+  so <m>(a,b)</m> is <em>not</em> a generator. This proves the "only if"
+  direction. Conversely, suppose <m>L=mn</m> (that is, <m>m,n</m> are
+  relatively prime). We claim that <m>(1,1)</m> is a generator. If not,
+  then there exist integers <m>k,\ell</m> in the range <m>0\lt
+    k,\ell\lt mn</m> such that <m>k\neq \ell</m>
+  and <m>(k,k)=(\ell,\ell)</m>. Suppose, without loss of generality,
+  that <m>k\lt \ell</m>. Then we have <m>(0,0)=(\ell-k,\ell-k)</m>,
+  so <m>\ell-k</m> is a integer number that is less than <m>mn</m>,
+  and is divisible by both <m>m</m> and <m>n</m>. But this
+  contradicts the assumption that the least common multiple
+  of <m>m,n</m> is <m>mn</m>. This concludes the proof of the "if"
+  direction, and the proof is complete.
+		      </li>
+-->
+		  </ol>
+	      </p>
+	    </commentary>
+	    
+    <exercise xml:id="cyclicpermutations">
+      <title>Cyclic permutations</title><idx><h>cyclic permutations</h>
+      </idx>
+      <statement>
+	<p>Let <m>n</m> be a positive integer and let
+	  <m>k</m> be an integer in the range <m>2\leq k\leq n</m>.
+	  A permutation <m>\pi\in S_n</m> (see <xref ref="permgpdef"/>)
+	  is called a <term><m>k</m>-cycle</term><idx><h>permutation</h><h><m>k</m>-cycle
+	    </h>
+	  </idx>
+	  if there is a <m>k</m>-element
+	  set <m>A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}</m>
+	  such that <m>\pi(a_i)=a_{i+1}</m> for <m>1\leq i\leq k-1</m>
+	  and <m>\pi(a_k)=a_1</m>, and <m>\pi(j)=j</m> for <m>j\not\in
+	    A</m>.
+	  We use <term>cycle notation</term><idx><h>cycle notation</h>
+	  </idx><idx><h>permutation</h><h>cycle notation</h>
+	  </idx>
+	  <m>(a_1a_2\cdots a_k)</m> to denote the <m>k</m>-cycle
+	  that acts as
+	  <me>a_1{\to} a_2{\to} a_3{\to} \cdots{\to} a_k{\to} a_1</me>
+	  on the distinct positive
+	  integers <m>a_1,a_2,\ldots,a_k</m>. 	  For example, the
+	  element <m>\pi=[1,4,2,3]=(2,4,3)</m> is a 3-cycle in <m>S_4</m>
+	  because <m>\pi</m> acts on the set <m>A=\{2,3,4\}</m> by
+	  <me>2\to 4\to 3\to 2</me> and <m>\pi</m> acts
+	  on <m>A^c=\{1\}</m> as the identity.
+	  A <term><m>1</m>-cycle</term> is defined to be the identity
+	  permutation, and may be written as <m>(a)</m> in cycle
+	  notation, for any <m>a\in \{1,2,\ldots,n\}</m>. Note that
+	  cycle notation is not unique. For example, in <m>S_4</m> we
+	  have <m>(2,4,3)=(4,3,2)=(3,2,4)</m>
+	  and <m>(1)=(2)=(3)=(4)</m>. A permutation is
+	  called <term>cyclic</term><idx><h>cyclic permutation</h>
+	  </idx><idx><h>permutation</h><h>cyclic permutation</h>
+	  </idx>
+	  if it is a <m>k</m>-cycle for some <m>k</m>, <m>1\leq k \leq
+	    n</m>.<fn>There are two conventions about whether the
+	    identity permutation is considered cyclic. According to the
+	    definition in this text, the identity is cyclic because it
+	    is a 1-cycle. Another convention, not used here, is that
+	    a permutation is cyclic if it is a <m>k</m>-cycle for
+	    some <m>k\geq 2</m>. According to this convention, the
+	    identity is not cyclic.
+	  </fn>
+	  A 2-cycle is called a <term>transposition</term><idx><h>transposition</h>
+	  </idx><idx><h>permutation</h><h>transposition</h> </idx>.
+	  <ol>
+	    <li>Find all of the cyclic permutations in <m>S_3</m>. Find
+	    their inverses.
+	    </li>
+	    <li>Find all of the cyclic permutations in <m>S_4</m>. 
+	    </li>	    
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="cyclicpermutations"/></title>
+      <p>
+	<ol>
+	  <li>The cyclic permutations of <m>S_3</m> are the
+	    following. (Every element of <m>S_3</m> is cyclic.
+	    <me>e,(12),(13),(23),(123),(132)</me>
+	    Their inverses (in order) are the following.
+	    	    <me>e,(12),(13),(23),(132),(123)</me>
+	  </li>
+	  <li>The cyclic permutations of <m>S_4</m> are the following.
+	    <me>e,(12),(13),(14),(23),(24),(34),</me>
+	    <me>(123),(132),(124),(142),(134),(143),(234),(243),</me>
+	   <me>(1234),(1432),(1324),(1423),(1243),(1342) </me></li>
+	</ol>
+      </p>
+    </commentary>
+    
+    <exercise xml:id="disjointcycleproductexer"><statement><p> Cycles <m>(a_1a_2\cdots a_k)</m> and <m>(b_1b_2\cdots b_\ell)</m> are
+	  called <term>disjoint</term><idx><h>disjoint cyclic permutations</h>
+	  </idx>
+	  if the sets <m>\{a_1,a_2,\ldots,a_k\}</m>
+	  and <m>\{b_1,b_2,\ldots,b_\ell\}</m> are disjoint, that is,
+	  if <m>a_i\neq b_j</m> for all <m>i,j</m>. Show that every
+	  permutation in <m>S_n</m> is a product of disjoint cycles.
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="disjointcycleproductexer"/></title>
+      <p>This result is "obvious", so the exercise is about how to say
+	it nicely. Here's one approach: Given <m>\pi</m> in <m>S_n</m>,
+	define a digraph <m>G</m> with vertex
+	set <m>\{1,2,\ldots,n\}</m> and where <m>(i,j)</m> is an edge if
+	and only if <m>\pi(i)=j</m>. Then the disjoint cycle factors
+	of <m>\pi</m> are the connected components of <m>G</m>. Another
+	proof is by induction. The statement is obviously true
+	for <m>S_1</m>. Now suppose the statement holds for <m>S_k</m>
+	for <m>k\lt n</m>, and let <m>\pi\in
+	S_n</m>. Let <m>(1,\pi(1),\pi^2(1), \ldots, \pi^{j-1}(1))</m> be
+	the <m>j</m>-cycle that starts with 1. Now apply the inductive
+	hypothesis to <m>S_{n-j}</m> (with suitable relabelings of
+	indices).
+      </p>
+    </commentary>
+    
+    <exercise xml:id="permtransprodexer"><title>Every permutation is a
+    product of transpositions</title>
+      <statement><p><ol> <li>Show that every permutation in <m>S_n</m>
+	      can be written as a product of transpositions.</li>
+	    <li>Show that factoring a permutation into a product of
+	    transpositions is not unique by writing the identity
+	      permutation in <m>S_3</m> as a product of transpositions
+	    in two different ways.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="permtransprodexer"/></title>
+      <p><ol><li>By the previous problem
+      <xref ref="disjointcycleproductexer"/>, it is enough to show that
+      a cycle can be written as a product of transpositions. Here is a
+      decomposition of a <m>k</m>-cycle as a product of transpositions.
+      <me>(a_1a_2\ldots a_k) = (a_1a_2)(a_2a_3)\ldots
+	(a_{k-1}a_k)</me></li>
+	  <li>(there are many possible answers) <m>e=(12)(12)=(23)(23)</m>
+	  </li>
+	</ol>
+      </p>
+    </commentary>
+
+    
+    <exercise xml:id="cayleytable">
+      <title>Cayley tables</title>
+      <statement>
+	<p> The <term>Cayley table</term> for a finite group <m>G</m> is
+	  a two-dimensional array with rows and columns labeled by the
+	  elements of the group, and with entry <m>gh</m> in position
+	  with row label <m>g</m> and column label <m>h</m>. Partial
+	  Cayley tables for <m>S_3</m> (<xref ref="s3cayleytablefig"/>)
+	  and <m>D_4</m> (<xref ref="d4cayleytablefig"/>) are given
+	  below. 
+
+	  <figure xml:id="s3cayleytablefig">
+<me>	    
+\begin{array}
+{c|cccccc}
+\amp e  \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
+\hline
+e \amp  \amp  \amp  \amp (12) \amp  \amp  \\
+(23) \amp  \amp  \amp  \amp \amp \amp \\
+(13) \amp  \amp (132) \amp  \amp  \amp  \amp \\
+(12) \amp \amp  \amp  \amp  \amp (23) \amp \\
+(123) \amp  \amp  \amp  \amp  \amp  \amp \\
+(132) \amp  \amp  \amp  \amp  \amp  \amp 
+\end{array}
+</me>
+<caption>(Partial) Cayley table for <m>S_3</m>. The symbol <m>e</m>
+  denotes the identity permutation.
+      </caption>
+   </figure>
+
+	  <figure xml:id="d4cayleytablefig">
+<me>	    
+\begin{array}
+{c|cccccccc}
+\amp F_V \amp F_H \amp  F_D \amp F_{D'} \amp R_{1/4} \amp R_{1/2} \amp R_{3/4} \amp
+R_0\\ \hline
+F_V \amp  \amp  R_{1/2} \amp  \amp  \amp   \amp   \amp     \amp      \\
+F_H \amp  \amp  \amp  \amp  \amp    F_D   \amp   \amp  \amp     \\   
+F_D \amp  \amp  \amp  \amp  \amp    \amp    F_{D'}  \amp    \amp      \\   
+F_{D'} \amp  \amp  \amp  \amp  \amp    \amp   \amp    \amp      \\   
+R_{1/4}\amp  \amp  \amp  \amp  \amp    \amp   \amp    \amp      \\   
+R_{1/2} \amp  \amp  \amp  \amp  \amp    \amp   \amp    \amp      \\   
+R_{3/4} \amp  \amp  \amp  \amp  \amp    \amp   \amp    \amp      \\   
+R_0\amp  \amp  \amp  \amp  \amp  \amp    \amp   \amp    
+\end{array}
+</me>
+<caption>(Partial) Cayley table for <m>D_4</m>. (See <xref ref="dihedral-reading-exercise" /> for notation for
+	  the elements of <m>D_4</m>.)
+      </caption>
+   </figure>
+	  
+      <ol><li>Fill in the remaining entries in the Cayley tables
+	  for <m>S_3</m>
+	  and <m>D_4</m>.
+	    </li>
+	<li>Prove that the Cayley table for any group is
+	       a <term>Latin square</term>. This means that every
+	       element of the group appears exactly once in each row and
+	       in each column.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      	  <answer>
+<p><me>	    
+\begin{array}
+{c|cccccc}
+\amp e  \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
+\hline
+e \amp e \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
+(23) \amp (23) \amp e \amp (123) \amp (132) \amp (13) \amp (12)\\
+(13) \amp (13) \amp (132) \amp e \amp (123) \amp (12) \amp (23)\\
+(12) \amp (12) \amp (123) \amp (132) \amp e \amp (23) \amp (13)\\
+(123) \amp (123) \amp (12) \amp (23) \amp (13) \amp (132) \amp e\\
+(132) \amp (132) \amp (13) \amp (12) \amp (23) \amp e \amp (123)
+\end{array}
+</me></p>
+	  </answer>
+
+	  <answer>
+<p><me>	    
+\begin{array}
+{c|cccccccc}
+\amp F_V \amp F_H \amp  F_D \amp F_{D'} \amp R_{1/4} \amp R_{1/2} \amp R_{3/4} \amp
+R_0\\ \hline
+F_V \amp                R_0   \amp  R_{1/2} \amp  R_{3/4} \amp  R_{1/4}  \amp    F_{D'}  \amp    F_H   \amp    F_D   \amp    F_V    \\
+F_H \amp 	      R_{1/2} \amp   R_0   \amp  R_{1/4}  \amp  R_{3/4} \amp    F_D   \amp    F_V   \amp    F_{D'}  \amp    F_H    \\   
+F_D \amp 	      R_{1/4}  \amp  R_{3/4} \amp   R_0   \amp  R_{1/2} \amp    F_V   \amp    F_{D'}  \amp    F_H   \amp    F_D    \\   
+F_{D'} \amp 	      R_{3/4} \amp  R_{1/4}  \amp  R_{1/2} \amp   R_0   \amp    F_H   \amp    F_D   \amp    F_V   \amp    F_{D'}   \\   
+R_{1/4} \amp 	      F_D   \amp   F_{D'} \amp   F_H  \amp   F_V  \amp    R_{1/2} \amp    R_{3/4} \amp     R_0   \amp   R_{1/4}    \\   
+R_{1/2} \amp	      F_H   \amp   F_V  \amp   F_{D'} \amp   F_D  \amp    R_{3/4} \amp     R_0   \amp    R_{1/4}  \amp   R_{1/2}   \\   
+R_{3/4} \amp	      F_{D'}  \amp   F_D  \amp   F_V  \amp   F_H  \amp     R_0   \amp    R_{1/4}  \amp    R_{1/2} \amp   R_{3/4}   \\   
+R_0 \amp     F_V   \amp   F_H  \amp   F_D  \amp   F_{D'} \amp    R_{1/4}  \amp    R_{1/2} \amp    R_{3/4} \amp    R_0         
+\end{array}
+</me></p>
+	  </answer>
+
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for <xref ref="cayleytable"/>, part b</title>
+      <p>Let <m>G</m> be a group and let <m>g\in G</m>. In row <m>h</m>,
+	the element <m>g</m> appears in
+	column <m>h^{-1}g</m>. If <m>g</m> appears in column <m>a</m>
+	and column <m>b</m> in row <m>h</m>, then we
+	have <m>g=ha=hb</m>, so <m>a=b</m> (by left cancellation). A
+	similar argument shows that <m>g</m> appears exactly once in
+	each column.
+      </p>
+    </commentary>
+  </exercises>
+</section>

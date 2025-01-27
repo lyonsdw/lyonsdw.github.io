@@ -1,0 +1,556 @@
+<section xml:id="quaternionsection">
+  <title>Quaternions</title>
+  <introduction>
+
+    <p>The quaternions, discovered by William Rowan Hamilton in 1843,
+    were invented to capture the algebra of rotations of 3-dimensional
+    real space, extending the way that the complex numbers capture the
+    algebra of rotations of 2-dimensional real space.
+    </p>
+
+    <p>
+      Elements in the set of quaternions <m>\Quat</m><notation><usage><m>\Quat</m></usage><description>the
+      quaternions</description></notation> are in one-to-one
+      correspondence with points in 4-dimensional real space <m>\R^4</m>.
+We will write
+<m>r\leftrightarrow (t,x,y,z)</m> to denote that the quaternion <m>r</m>
+    corresponds to the 4-tuple <m>(t,x,y,z)</m> of real numbers.
+    </p>
+    </introduction>
+
+  <subsection><title>Cartesian form and pure quaternions
+    </title>
+    <p>The quaternions <m>i,j,k</m> are defined as follows.
+      <mdn>
+	<mrow>  i \amp \leftrightarrow (0,1,0,0)</mrow>
+	<mrow>  j \amp \leftrightarrow (0,0,1,0)</mrow>
+	<mrow>  k \amp \leftrightarrow (0,0,0,1)</mrow>
+      </mdn>
+      The expression <m>r=a+bi+cj+dk</m> is called the <term>Cartesian
+      form</term><idx>Cartesian form of a quaternion</idx> of the
+      quaternion that corresponds to the vector <m>(a,b,c,d)</m>
+      in <m>\R^4</m>. A quaternion of the form <m>a=a+0i+0j+0k\leftrightarrow
+	(a,0,0,0)</m> is called
+      a <term>scalar</term><idx><h>quaternion</h><h>scalar quaternion</h>
+      </idx> quaternion or a <term>real</term><idx><h>quaternion</h><h>real quaternion</h></idx>
+      quaternion. A quaternion of the form <m>xi+yj+zk\leftrightarrow
+	(0,x,y,z)</m> is called
+	a <term>pure</term><idx><h>quaternion</h><h>pure
+      quaternion</h></idx> quaternion 
+	or an <term>imaginary</term><idx><h>quaternion</h><h>imaginary quaternion</h></idx>
+	quaternion. For a quaternion <m>r=a+bi+cj+dk</m>, we call the real
+	quaternion <m>a</m> the <term>scalar
+      part</term><idx><h>quaternion</h><h>scalar part of a quaternion</h></idx> or <term>real
+	  part</term><idx><h>quaternion</h><h>real part of a quaternion</h></idx> of <m>r</m>, and we call the
+	quaternion <m>xi+yj+zk</m> the <term>vector
+      part</term><idx><h>quaternion</h><h>vector part of a quaternion</h></idx> or
+	the <term>imaginary
+      part</term><idx><h>quaternion</h><h>imaginary part of a quaternion</h></idx> of <m>r</m>.
+      To reflect the natural
+      correspondence of the pure quaternion <m>xi+yj+zk</m> with the
+      vector <m>(x,y,z)</m> in <m>\R^3</m>, we will
+      write <m>\R^3_\Quat</m><notation><usage><m>\R^3_\Quat</m></usage><description>the
+      space of pure quaternions</description>
+      </notation>
+      to denote the space of pure quaternions.
+      </p>
+  </subsection>
+
+  <subsection><title>Correspondence with complex matrices</title>
+    <p>Analogous to the way that the complex numbers <m>\C</m> can be
+      realized as the set <m>{\mathcal M}_\C</m> of <m>2\times 2</m> real matrices  (see
+      <xref ref="complexnosasrealmatalg"/>), the quaternions can be
+      realized by a set of <m>2\times 2</m> complex matrices, as
+      follows.  Let <m>{\mathcal M}_\Quat</m> denote the set
+      of <m>2\times 2</m> complex matrices of the form
+            <m>\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
+	u^\ast\end{array}\right]</m>.
+	    Given a quaternion <m>r=a+bi+cj+dk</m>, let <m>u,v</m> be
+	the complex numbers
+	    <m>u=a+bi</m>
+	and <m>v=c+di</m>, and let <m>{M}(r)</m> denote
+	the <m>2\times 2</m> matrix in <m>{\mathcal M}_\Quat</m> given by
+      <me>{M}(r)=\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
+	u^\ast\end{array}\right].</me> Conversely,
+      given a matrix <m>M\in {\mathcal M}_\Quat</m>, with top left entry
+      <m>a+bi</m> and top right entry <m>c+di</m>,
+      let <m>Q(M)</m> denote the
+      quaternion <m>r=a+bi+cj+dk</m>. It is
+      clear that the mappings <m>r\to M(r)</m> and <m>M\to Q(M)</m> are
+	inverses to one another, and establish a one-to-one
+      correspondence <m>\Quat\leftrightarrow {\mathcal M}_\Quat</m>.
+    </p>
+
+    <proposition xml:id="quatmatalgprop"><title><m>{\mathcal M}_\Quat</m> is closed under
+    addition and multiplication
+      </title>
+      <statement><p>Let <m>M,N</m> be elements of <m>{\mathcal
+	    M}_\Quat</m>. Then the sum <m>M+N</m> and the
+	  product <m>MN</m> are also elements of <m>{\mathcal M}_\Quat</m>.
+	</p>
+      </statement>
+    </proposition>
+
+      <exercise xml:id="quatmatalgpropexer"><statement><p>Prove <xref ref="quatmatalgprop"/>.</p>
+	</statement>
+      </exercise>
+
+  <commentary component="instructor"><title>Instructor's solution for
+    <xref ref="quatmatalgpropexer"/></title><p> (This is similar to the
+    solution to <xref ref="complexnosasrealmatalg"/>.)  Let <m>T(u,v)</m>
+    denote the matrix <m>\twotwo{u}{v}{-v^\ast}{u^\ast}</m>
+      in <m>{\mathcal M}_\Quat</m>. We have the following.
+	<md>
+	  <mrow>T(u,v)+T(r,s)\amp = \twotwo{u}{v}{-v^\ast}{u^\ast} + \twotwo{r}{s}{-s^\ast}{r^\ast} 
+	  </mrow>
+	  <mrow>\amp = \twotwo{u+r}{v+s}{-(v+s)^\ast}{(u+r)^\ast}
+	  </mrow>
+	  <mrow>\amp = T(u+r,v+s)</mrow>
+	  <mrow>T(u,v)T(r,s)\amp = \twotwo{u}{v}{-v^\ast}{u^\ast}  \twotwo{r}{s}{-s^\ast}{r^\ast} 
+	  </mrow>
+	  <mrow>\amp = \twotwo{ur-vs^\ast}{us+vr^\ast}{-(us+vr^\ast)^\ast}{(ur-vs^\ast)^\ast}
+	  </mrow>
+	  <mrow>\amp = T(ur-vs^\ast,us+vr^\ast)</mrow>
+	</md>
+	</p>
+  </commentary>
+
+  </subsection>
+  
+  <subsection><title>Addition and multiplication</title>
+    <p>
+      By virtue of <xref ref="quatmatalgprop"/>, we can define addition
+      and multiplication of quaternions <m>r,s</m>
+      as follows.
+      <mdn>
+	<mrow>r+s=Q(M(r)+M(s))</mrow>
+	<mrow xml:id="quatmultdef">rs=Q(M(r)M(s))</mrow>	
+      </mdn>
+      
+      Because matrix algebra has associative and distributive laws, these
+      carry over to quaternions. Note that quaternion multiplication is
+      not commutative! However, for any real quaternion <m>a</m>, we
+      have <m>M(a)=a\Id</m>, so <m>M(a)</m> commutes with all matrices,
+      and therefore <m>a</m> commutes with all quaternions.
+      To summarize, let <m>q,r,s</m> be
+      quaternions and let <m>a</m> be a real quaternion. We have
+      the following.
+      <mdn>
+	<mrow>q(rs) \amp = (qr)s\;\; \text{ (associative law of multiplication)}</mrow>
+	<mrow>q(r+s)\amp = qr+qs \;\; \text{ (distributive law)}</mrow>
+	<mrow> ar\amp =ra \;\; \text{ (real quaternions commute with all quaternions)}
+	</mrow>
+      </mdn>
+</p>
+
+    <p>
+      In practice, it is not necessary to convert quaternions to
+      matrices in order to add and multiply. Quaternion addition and multiplication
+      in Cartesian form is analogous to complex multiplication, using
+      the following basic multiplication rules.
+            <mdn>
+	<mrow xml:id="ijksquaretominus1">  i^2=j^2=k^2=-1 </mrow>
+	<mrow xml:id="quatmultrules">  ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j</mrow>
+	    </mdn>
+    </p>
+
+    <exercise xml:id="quatmultrulesexer"><statement><p>Verify <xref ref="ijksquaretominus1"/> and
+    <xref ref="quatmultrules"/>.</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="quatmultrulesexer"/></title><p> We
+	have <m>M(1) = \Id</m>,
+	<m>M(i)=\twotwo{i}{0}{0}{-i}</m>, <m>M(j)=\twotwo{0}{1}{-1}{0}</m>,
+	and <m>M(k)=\twotwo{0}{i}{i}{0}</m>. (These are, in
+	order, <m>\Id,iZ,iY,iX</m>, where <m>X,Y,Z</m> are the Pauli
+	matrices.) First, we work out the products
+	of <m>M(i),M(j),M(k)</m>. Here is a sample.
+	<md>
+	  <mrow>M(i)^2 \amp = \twotwo{i}{0}{0}{-i}\twotwo{i}{0}{0}{-i} = \twotwo{-1}{0}{0}{-1}=-\Id</mrow>
+	  <mrow>M(i)M(j) \amp = \twotwo{i}{0}{0}{-i}\twotwo{0}{1}{-1}{0} = \twotwo{0}{i}{i}{0}=M(k)
+	  </mrow>
+	</md>
+Then we work out all the equations
+	<xref ref="ijksquaretominus1"/> and
+	<xref ref="quatmultrules"/>. Here is a sample.
+	<md>
+	  <mrow> i^2 \amp = Q(M(i)^2) = Q(-\Id) = -1
+	  </mrow>
+	  <mrow>ij\amp =Q(M(i)M(j)) = Q(M(k))=k
+	  </mrow>
+	</md>
+      </p>
+    </commentary>
+    
+<p>
+      For
+<m>r=a+bi+cj+dk</m> and
+<m>r'=a'+b'i+c'j+d'k</m>, we have
+<men>r+r'=(a+a')+(b+b')i+(c+c')j+(d+d')k.</men>
+Multiplication looks like this.
+      <mdn>
+	<mrow number="no"> rr'\amp = (a+bi+cj+dk)(a'+b'i+c'j+d'k) </mrow>
+	<mrow number="no"> \amp = aa'+bb'i^2+cc'j^2+dd'k^2</mrow>
+	<mrow number="no"> \amp + ab'i+ba'i+cd'jk+dc'kj</mrow>
+	<mrow number="no"> \amp + ac'j+ca'j+bd'ik+db'ki</mrow>
+	<mrow number="no"> \amp + ad'k+da'k+bc'ij+cb'ji</mrow>
+	<mrow xml:id="quatmultcartesian"> \amp = (aa'-bb'-cc'-dd')</mrow>
+	<mrow number="no">\amp + (ab'+ba'+cd'-dc')i</mrow>
+	<mrow number="no">\amp + (ac'+ca'-bd'+db')j</mrow>
+	<mrow number="no">\amp + (ad'+da'+bc'-cb')k</mrow>	
+      </mdn>
+     If <m>u,v</m> are pure quaternions, <xref ref="quatmultcartesian"/> can
+      be written more compactly in terms of the dot and cross products
+      for vectors in <m>\R^3</m>.
+      <men xml:id="purequatproduct">uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
+      }u,v)</men>
+	    </p>
+
+<exercise><statement>
+    <ol>
+      <li>Verify <xref ref="purequatproduct"/>.</li>
+      </ol>
+  </statement>
+	    </exercise>
+  </subsection>
+
+  <commentary component="instructor"><title>Instructor's solution for
+      <xref ref="purequatproduct"/></title><p>
+      <ol>
+	<li>Just put <m>a=a'=0</m> in
+	  <xref ref="quatmultcartesian"/>.</li>
+      </ol>
+    </p>
+  </commentary>
+  
+  <subsection xml:id="quatconjnormsubsect"><title>Conjugate, modulus, and polar form</title>
+    <p>The <term>conjugate</term><idx>conjugate of a
+	quaternion</idx> of a quaternion <m>r=a+bi+cj+dk</m> is <m>r^\ast =
+	a-bi-cj-dk</m>, and the <term>modulus</term><idx>modulus of a quaternion</idx> of <m>r</m>
+      is <m>|r|=\sqrt{a^2+b^2+c^2+d^2}</m>. The <term>unit
+	quaternions</term><idx><h>quaternion</h><h>unit quaternions</h></idx><idx><h>groups, list of</h><h>the unit quaternions</h></idx>,
+          denoted <m>U(\Quat)</m><notation><usage><m>U(\Quat)</m></usage><description>the
+          unit quaternions</description></notation>, is the set
+      of quaternions with modulus 1.<fn>The set of unit
+          quaternions <m>U(\Quat)</m> is in one-to-one correspondence with
+        the 3-sphere <m>S^3=\{(t,x,y,z)\in \R^4\colon
+          t^2+x^2+y^2+z^2=1\}</m>. This is analogous to the set of norm
+          1 complex numbers that is in one-to-one correspondence with
+        the 1-sphere <m>S^1=\{(x,y)\in \R^2\colon x^2+y^2=1\}</m>.
+      </fn>
+	Analogous to complex numbers, a quaternion <m>r</m>
+	can be expressed
+      in <term>polar
+       form</term><idx>polar form of a quaternion</idx>
+	<men>r=|r|(\cos \theta + u\sin \theta)</men>
+	where <m>u</m> is a pure unit quaternion and <m>\theta</m> is a
+	real number. 
+      </p>
+
+      <exercise xml:id="quatpolarformdetailsexer"><statement>
+	  <p>
+	    <ol>
+	      <li>Show that the following construction produces a polar
+		form for a nonzero quaternion <m>r</m>. Let 
+      <m>r'=\frac{r}{|r|}=a'+b'i+c'j+d'k</m>.
+      If <m>|a'|\lt 1</m>,
+          let <m>u=\frac{1}{\sqrt{1-(a')^2}}(b'i+c'j+d'k)</m>, and
+      let <m>\theta=\arccos a'</m>. 
+	      </li>
+	      <li>Fill in the remaining details on polar form
+    for quaternions. What happens if <m>r=0</m>? What happens
+		if <m>|a'|=1</m>?</li>
+	      <li>Are <m>u,\theta</m> uniquely determined by <m>r</m>?
+		If not, describe the possible choices for <m>u,\theta</m>.</li>	      
+  </ol>
+</p>
+
+	</statement>
+      </exercise>
+
+      <commentary component="instructor"><title>Instructor's solution for
+	  <xref ref="quatpolarformdetailsexer"/></title><p>
+	  <ol>
+	    <li>(just check)</li>
+	    <li>If <m>r=0</m>,
+	  its polar form is simply <m>r=0</m>, the same as the case for
+	  complex numbers. If <m>|a'|=1</m>, then <m>r'=\pm 1</m>,
+	  so <m>\theta=0</m> or <m>\theta=\pi</m>, and 
+	      the polar form is <m>r=\pm |r|=a</m>.</li>
+	    <li>No, <m>u,\theta</m> are not uniquely determined
+	      by <m>r</m>. If we write <m>r(u,\theta)=|r|(\cos\theta +
+		u\sin\theta)</m>, then we have
+	      <me>r(u,\theta)=r(u,\theta+2\pi k)=r(-u,-\theta+2\pi
+		k)</me>
+	      for all <m>k\in \Z</m>. For the denerate
+	      case <m>\theta=0</m> mod <m>2\pi</m>, we have
+	      	      <me>r(u,0)=r(v,2\pi k)</me>
+		      for all <m>k\in \Z</m> and for all pure
+		      quaternions <m>v</m>. For the degenerate
+		      case <m>r=0</m>, we have
+	      	      <me>r(u,\theta)=r(v,\phi)</me>
+		      for all <m>\phi\in \R</m> and for all pure
+		      quaternions <m>v</m>.
+	    </li>
+	  </ol>
+	</p>
+      </commentary>
+
+      <p>
+      Continuing the analogy with complex numbers, we have the following, for all
+      quaternions <m>r,s</m>.
+      <mdn>
+	<mrow xml:id="quatconjmult">(rs)^\ast = s^\ast r^\ast</mrow>
+	<mrow xml:id="quatnormsquare">|r|^2 = rr^\ast=r^\ast r</mrow>
+	<mrow xml:id="quatnormmult">|rs|=|r||s|</mrow>
+      </mdn>.
+      
+    </p>
+
+        <exercise xml:id="quatconjnormmultexer"><statement>Verify the
+            three equations above. 
+	  </statement>
+	  <hint><p>Work in <m>{\mathcal M}_\Quat</m>. Start by checking
+            that <m>(M(r^\ast)) = (M(r))^\dagger</m>, where <m>\dagger</m> denotes the conjugate transpose of a
+	    matrix. 
+	    Alternatively, write <m>r,s</m> in polar form
+              and use <xref ref="purequatproduct"/>.</p>
+	    </hint>
+    </exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for
+	    <xref ref="quatconjnormmultexer"/></title><p>
+	    All three equations can be verified by computing the left and
+	    right hand sides using rectangular coordinates. A better approach is to
+	    write <m>r=|r|(\cos\theta + u\sin\theta)</m>, <m>s=|s|(\cos \phi +
+	      v\sin\phi)</m> in polar form. Then we have <m>r^\ast =
+	    |r|(\cos\theta - u\sin\theta)</m> and <m>s^\ast = |s|(\cos \phi
+	    -v\sin\phi)</m>. Using <xref ref="purequatproduct"/>, we
+	    have
+	    <md>
+	      <mrow>rs \amp= |r||s|(\cos\theta
+		+u\sin\theta)(\cos\phi+v\sin\phi) </mrow>
+	      <mrow>\amp = |r||s|\left[\cos\theta \cos\phi - u\cdot v
+		\sin\theta\sin\phi\right]</mrow>
+	      <mrow>\amp + |r||s|\left[(u\times v)\sin\theta\sin\phi +
+	      u\sin\theta\cos\phi +v\cos\theta\sin\phi\right].</mrow>
+	    </md>
+	    In the last expression above, the real part of <m>rs</m> is
+	    on the first line and the imaginary part is on the second line.
+	    Thus we have
+	    <md>
+	      <mrow>(rs)^\ast
+	      \amp = |r||s|\left[\cos\theta \cos\phi - u\cdot v
+		\sin\theta\sin\phi\right]</mrow>
+	      <mrow>\amp - |r||s|\left[(u\times v)\sin\theta\sin\phi +
+	      u\sin\theta\cos\phi +v\cos\theta\sin\phi\right].</mrow>
+	    </md>
+	    It is straightforward to check that you get the same thing
+	    by simplifying
+	    	    <md>
+		      <mrow>s^\ast r^\ast \amp=
+			|r||s|(\cos\phi-v\sin\phi)(\cos\theta -u\sin\theta). </mrow>
+		    </md>
+ This establishes <xref ref="quatconjmult"/>. Doing the same computation
+		    with <m>s=r^\ast=|r|(\cos\theta - u\sin\theta)</m> gives
+		    <xref ref="quatnormsquare"/>. Finally,
+	    use the two equations already established to compute
+	    <me>|rs|^2 = (rs)(rs)^\ast = rss^\ast r^\ast = |s|^2
+	      rr^\ast = |r|^2|s|^2,</me>
+	    then take square roots to establish <xref ref="quatnormmult"/>.
+	    A slightly more conceptual
+	    approach (assuming you are familiar with the matrix algebra
+	    operations of transpose and conjugation) is to first verify
+	    that <m>(M(r^\ast)) = (M(r))^\dagger</m>,
+	    where <m>\dagger</m> denotes the conjugate transpose of a
+	    matrix. <xref ref="quatconjmult"/> follows
+	    immediately. Next, verify
+	    that <m>T(u,v)(T(u,v))^\dagger=(|u|^2+|v|^2)\Id</m> (here we
+	    are using the same notation used in the solution to <xref ref="quatmatalgpropexer"/>). This
+	    last matrix corresponds to the quaternion <m>|r|^2</m>, so
+		    this establishes <xref ref="quatnormsquare"/>.
+	  </p>
+	</commentary>
+	
+  </subsection>
+
+  <subsection><title>Quaternions as rotations of <m>\R^3_\Quat</m></title>
+    <p>Let <m>r</m> be a unit quaternion and
+      let <m>v</m> be a pure quaternion. Let <m>R_r(v)</m>
+      denote the quaternion <m>R_r(v)=rvr^\ast</m>. It is easy to check
+      that <m>(R_r(v))^\ast = -R_r(v)</m>. 
+      From this we conclude that <m>rvr^\ast</m> is a pure
+      quaternion. 
+    </p>
+
+    <exercise xml:id="rvrastispureexer"><statement><p>Explain how "we conclude" that <m>R_r(v)</m>
+	  is pure when <m>r</m> is a unit quaternion and 
+	  <m>v</m> is a pure quaternion. 
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="rvrastispureexer"/></title>
+      <p>Just like for complex numbers, where if <m>z^\ast=-z</m>,
+      then it follows that <m>z</m> is pure imaginary, the analogous property holds for quaternions.
+      </p>
+    </commentary>
+    
+    <p>It is easy to see that <m>R_r</m> is a linear map from the real vector
+      space of unit quaternions to itself. That means that the following
+      properties hold for all pure quaternions <m>v,w</m> and all real
+      scalars <m>\alpha</m>.
+      <mdn>
+	<mrow>R_r(v+w) \amp = R_r(v) + R_r(w)</mrow>
+	<mrow>R_r(\alpha v) \amp = \alpha R_r(v)</mrow>
+      </mdn>
+    </p>
+
+    <exercise xml:id="quatrotislinearexer"><statement><p>Show the details to prove that <m>R_r</m> is
+	  linear.
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="quatrotislinearexer"/></title>
+      <p>Using the distributive law, we have
+	<me>R_r(v+w)=r(v+w)r^\ast = rvr^\ast +rwr^\ast =
+	  R_r(v)+R_r(w).</me> Using the fact that real numbers commute
+	  multiplicatively with all quaternions, we have
+	<me>R_r(\alpha v)= r(\alpha v)r^\ast=\alpha rvr^\ast=\alpha R_r(v).</me>
+	</p>
+    </commentary>
+
+    <p>We conclude with the main result of this section that shows how
+    rotations of 3-dimensional real space are encoded in the algebra of quaternions.</p>
+    
+    <proposition xml:id="quatrotprop"><title>Quaternions and rotations of <m>\R^3_\Quat</m></title>
+	<statement><p>Let <m>r=\cos\theta + u\sin\theta</m> be a unit
+	    quaternion in polar form, and
+	    let <m>R_r</m> be the linear transformation of the space of
+	    pure quaternions given by <m>v\to rvr^\ast</m>. The action
+	    of <m>R_r</m> is a rotation by <m>2\theta</m> radians about
+	    the axis given by the unit vector <m>u</m>.
+	  </p>
+	</statement>
+
+    </proposition>
+    
+  </subsection>
+
+  <exercises>
+
+    <exercise xml:id="quatrotpropexer">
+      <statement><p>Prove <xref ref="quatrotprop"/> using the following outline.
+	  Let <m>r=\cos\theta + u\sin\theta</m> be a polar form for a
+	  unit quaternion <m>r</m>.
+	  <ol><li>Show that <m>R_r(u)=u</m>.	    </li>
+	      <li>Let <m>v</m> be any pure unit quaternion orthogonal
+		to <m>u</m>, and let <m>w=u\times v</m>, so that the
+		triple <m>u,v,w</m> forms a right-handed coordinate
+		system for <m>\R^3</m>. Show that
+		<men xml:id="quatrotpropformula">R_r(v) = \cos(2\theta)v + \sin(2\theta)w</men> (use
+		equation <xref ref="purequatproduct"/>)
+		and then explain how this proves the Proposition.
+<!-- 1/24/2025 pdf build stops here, maybe breaks at all <hint>s ?? -->
+		  <hint><p><m>\spacer</m>
+		      In deriving equation <xref ref="quatrotpropformula"/>, you
+		    will obtain expressions <m>uv-vu</m>
+		    and <m>uvu</m>. Use equation
+		    <xref ref="purequatproduct"/> to show
+		    that <m>uv-vu=2w</m> and <m>uvu=v</m>. Show that the
+		    quaternion on the right side of
+		    <xref ref="quatrotpropformula"/> has norm
+		    1. Finally, use the fact that <me>a\cdot b =
+		    |a||b|\cos t</me> for real vectors <m>a,b</m>
+		    that make an angle <m>t</m> at the origin to
+		    determine the angle made by <m>v,R_r(v)</m>.
+		  </p>
+		  </hint>
+	      </li>
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for <xref ref="quatrotpropexer"/></title>
+      <p>
+	<ol>
+	  <li>First, check that, for any pure, unit quaternion <m>u</m>,
+	    we have <m>u^2=-1</m> (use
+	    <xref ref="purequatproduct"/>). Now we have
+	    <md>
+	     <mrow> R_r(u)\amp =(\cos\theta + u\sin\theta)u(\cos\theta +
+	       u\sin\theta)^\ast</mrow>
+	     <mrow>\amp = (\cos\theta + u\sin\theta)(u\cos\theta +
+	       \sin\theta)</mrow>
+	     <mrow>\amp = u(\cos^2\theta+\sin^2\theta) -
+	       \sin\theta\cos\theta + \sin\theta\cos\theta</mrow>
+	     <mrow>\amp = u</mrow>
+	    </md>
+	     as desired.	    
+	  </li>
+	  <li>We have
+	    <md>
+	     <mrow> R_r(v)\amp =(\cos\theta + u\sin\theta)v(\cos\theta +
+	       u\sin\theta)^\ast</mrow>
+	     <mrow>\amp = (\cos\theta + u\sin\theta)(v\cos\theta -vu\sin\theta)</mrow>
+	     <mrow>\amp = v\cos^2\theta + (uv-vu)\sin\theta\cos\theta
+	       -uvu\sin^2\theta</mrow>
+	     <mrow>\amp =v(\cos^2\theta -\sin^2\theta) +
+	       2w\sin\theta\cos\theta</mrow>	     </md>
+ 
+	    (to get the last expression from the next-to-last
+	    expression, use <xref ref="purequatproduct"/> to
+	    simplify <m>uv-vu=2u\times v=2w</m> and <m>uvu=v</m>).
+<!--	    Note 1/20/2023: decommissioning a former exercise that is
+	    used as a lemma in this derivation -->
+<!--	    
+and use <xref ref="quatreflectionexer"/> to
+get <m>v=uvu</m>, the reflection of <m>v</m> in the plane
+perpendicular to <m>u</m>).
+-->
+	    Using double angle formulas, the last expression in the
+	    displayed derivation becomes
+	    <me>v\cos(2\theta) + w\sin(2\theta).</me> Since <m>R_r</m>
+	    is a linear map that acts on the an orthogonal basis <m>u,v,w</m>
+	    as a rotation about <m>u</m> by the angle <m>2\theta</m>, the
+	    Proposition is established.
+	  </li>
+	</ol>
+      </p>
+    </commentary>
+
+    <exercise xml:id="quatrotcompinvexer"><statement>Show that the
+            following hold for all <m>r,s\in U(\Quat)</m>.
+	<ol>
+	  <li><m>R_r\circ R_s = R_{rs}</m></li>
+	  <li><m>(R_r)^{-1}=R_{r^\ast}</m></li>
+	</ol>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="quatrotcompinvexer"/></title>
+      <p>
+	<ol>
+	  <li>For all <m>u\in \R^3_\Quat</m>, we have
+	    <me>(R_r\circ R_s)(u) = R_r(sus^\ast)=r(sus^\ast)r^\ast =
+	    (rs)u(rs)^\ast = R_{rs}(u).</me>
+	  </li>
+	  <li>Applying the result from the previous part, we have
+	    <me>R_{r^\ast}\circ R_r = R_{r^\ast r} = R_{|r|^2}=R_1 = \Id</me>
+	    and similarly, <me>R_r\circ R_{r^\ast}=\Id.</me> We conclude
+	    that <m>(R_r)^{-1}=R_{r^\ast}</m>.
+	  </li>	  
+	</ol>
+      </p>
+    </commentary>
+    
+  </exercises>
+  </section>
+

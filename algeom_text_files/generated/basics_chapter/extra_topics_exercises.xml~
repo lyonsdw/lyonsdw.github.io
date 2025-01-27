@@ -1,0 +1,167 @@
+<section xml:id="extra_topics_exercises_section">
+  <title>More preliminary topics</title>
+
+    <subsection><title>A useful tool: commutative diagrams</title>
+
+    <p>A <term>directed graph</term><idx>directed graph</idx>
+      (or <em>digraph</em><idx>digraph</idx>
+      ) is a set <m>V</m> of <em>vertices</em>
+      and a set <m>E\subset V\times V</m> of <em>directed edges</em>. We
+      draw pictures of digraphs by drawing an arrow pointing from a
+      vertex <m>v</m> to a vertex <m>w</m> whenever <m>(v,w)\in E</m>. See
+      <xref ref="digraphegfig"/>.
+    </p>
+
+    <p>A <term>path</term><idx><h>directed graph</h><h>path in a
+    directed graph</h>
+      </idx> in a directed graph is a sequence of
+      vertices <m>v_0,v_1,\ldots,v_{n}</m> such that <m>(v_{i-1},v_i)\in E</m>
+      for <m>1\leq i\leq n</m>. The vertex <m>v_0</m> is called
+      the <term>initial vertex</term> and <m>v_n</m> is called the 
+      <term>final vertex</term> of the path <m>v_0,v_1,\ldots,v_{n}</m>.
+    </p>
+
+           <figure xml:id="digraphegfig">
+	     <caption>Example of a directed graph with vertex
+	       set <m>V=\{a,b,c,d\}</m> and edge
+	       set <m>E=\{(a,b),(c,b),(c,a),(a,d),(d,c)\}</m>. The vertex
+	       sequences <m>c,b</m> and <m>c,a,b</m> are both paths
+	       from <m>c</m> to <m>b</m>.
+      </caption>
+            <image width="30%" source="images/digraphegfig.png"></image>
+           </figure>
+
+    <p>A <term>commutative diagram</term><idx>commutative diagram</idx>
+      is a directed graph with two properties.
+      <ol>
+      <li>Vertices are labeled by sets and 
+    directed edges are labeled by functions between those sets. That is,
+      the directed edge <m>f=(X,Y)</m> denotes a function <m>f\colon
+	  X\to Y</m>.</li>
+      <li>Whenever there are two paths from an initial vertex <m>X</m>
+	to a final vertex <m>Y</m>, the composition of functions along
+	one path is equal to the composition of functions along the
+	other path. That is, if <m>X_0,X_1,\ldots,X_n</m> is a path with
+	edges <m>f_i\colon X_{i-1}\to X_{i}</m> for <m>1\leq i\leq n</m>
+	and <m>X_0=Y_0,Y_1,Y_2,\ldots,Y_m=X_n</m> is a path with
+	edges <m>g_i\colon Y_{i-1}\to Y_{i}</m> for <m>1\leq i\leq
+	  m</m>, then
+	<me>f_n\circ f_{n-1}\circ\cdots\circ f_1=g_m\circ
+	g_{m-1}\circ\cdots\circ g_1.</me>
+      </li>
+      </ol>
+
+    </p>
+
+    <p>
+    <xref ref="conjtransdeffig"/> shows a commutative diagram that
+    illustrates the definition of conjugate
+    transformations. <xref ref="welldefinednessfig"/> shows a commutative diagram that
+    goes with <xref ref="welldefinedness"/>.
+    </p> 
+
+
+           <figure xml:id="conjtransdeffig">
+	 <caption>A commutative diagram illustrating the definition of
+	   conjugate transformations <m>f,g</m> given in <xref ref="stereolifts"/>.
+      </caption>
+            <image width="25%" source="images/conjtransdefdiagram.png"></image>
+           </figure>
+
+           <figure xml:id="welldefinednessfig">
+	 <caption>A commutative diagram showing the
+	 relationship <m>\overline{f}\circ \pi = f</m> in <xref ref="welldefinedness"/>.
+      </caption>
+            <image width="25%" source="images/commutediagramtestfig.png"></image>
+           </figure>
+	   
+
+  </subsection>
+
+  <exercises>
+
+    <exercise xml:id="quatreflectionexer"><statement>
+	<!--Henle's reflection exercise, p.207-->
+	Let <m>r</m> be a pure, unit quaternion. Use
+	<xref ref="purequatproduct"/> to show that the
+	map <m>\R^3_\Quat \to \R^3_\Quat</m> given by <m>u\to rur</m> is
+	the reflection across the plane normal
+	to <m>r</m>. That is, show that <m>rur=u-2(u\cdot r)r</m>.
+	See <xref ref="quat_reflect_fig"/>.
+	      	         <figure xml:id="quat_reflect_fig">
+			   <caption>The reflection of <m>u\in
+			       \R^3_\Quat</m> across the plane normal
+			       to <m>r\in \R^3_\Quat</m>.
+      </caption>
+            <image width="30%" source="images/quaternion_reflection.png"></image>
+           </figure>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+	<xref ref="quatreflectionexer"/></title> <p>The component
+	of <m>u</m> in the <m>r</m> direction is <m>(u\cdot r)r</m>, and
+	the desired reflection of <m>u</m> in the plane normal
+	to <m>r</m> is <m>u-2(u\cdot r)r</m>. The heart of this exercise is to
+	see that <m>r\times(u\times r) = u-(u\cdot r)r</m>. This follows
+	immediately from the identity
+	<me>a\times (b\times c) = (a\cdot c)b - (a\cdot b)c,</me>
+	which holds for all <m>a,b,c\in \R^3</m>. Another way is to 
+	use the right-hand rule to see that the vectors on both sides of
+	the equation point in the same direction, and use the
+	formula <m>|a\times b|=|a||b|\sin\theta</m>, where <m>\theta</m>
+	is the angle made by vectors <m>a,b</m>, to see that the vectors
+	on both sides have length <m>|u|\sin \theta</m>,
+	where <m>\theta</m> is the angle made by <m>u</m> and <m>r</m>. 
+	Now we have
+	<md>
+	  <mrow>rur \amp = r(-u\cdot r + u\times r)\;\;(\text{by }<xref ref="purequatproduct"/>)</mrow>
+	  <mrow>\amp = r(-u\cdot r) -r\cdot (u\times r) + r\times (u\times
+	    r)\;\;(\text{by }<xref ref="purequatproduct"/>)</mrow>
+	  <mrow>\amp = u-2(u\cdot r)r</mrow>
+	</md>
+	as desired. 
+      </p>
+    </commentary>
+
+	<exercise xml:id="diagramexer"><title>Commutative diagram examples</title>
+	  <statement><p>
+	      <ol>
+		<li>Draw a commutative diagram that illustrates the
+		results of <xref ref="stereo2dliftinversion"/>.</li>
+		<li>The <term>distributive law</term>
+		for <m>\Z_n</m> says that  <me>[x]\left([y]+[z]\right) = [x][y] +
+		    [x][z]</me> for all <m>[x],[y],[z]\in
+		\Z_n</m>. Label the maps in the commutative diagram
+		  below to express the distributive law.
+		       <figure xml:id="distlawexer_diagram_blank_fig">
+            <image width="30%" source="images/distlawexer_diagram_blank.png"></image>
+              </figure>
+		</li>
+	      </ol>
+	</p>
+      </statement>
+    </exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for <xref ref="diagramexer"/></title>
+	  <p><ol><li><xref ref="stereolift_eg_fig"/> shows one possible
+	  answer using two commutative diagrams, one with maps
+	  between sets, and one with maps between elements of those sets.
+				       <figure xml:id="stereolift_eg_fig">
+            <image width="40%" source="images/stereoliftdiagram_eg.png"></image>
+              </figure>
+
+	      </li>
+	      <li><xref ref="distlawexer_diagram_fig"/> shows one possible
+	    answer.
+	               <figure xml:id="distlawexer_diagram_fig">
+            <image width="70%" source="images/distlawexer_diagram.png"></image>
+              </figure></li>
+	    </ol>
+	  </p>
+	</commentary>
+    
+</exercises>    
+
+</section>
+

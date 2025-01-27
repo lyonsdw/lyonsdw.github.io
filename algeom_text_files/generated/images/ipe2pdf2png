@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# run ipetopipe to make pdf output
+/Applications/Ipe.app/Contents/MacOS/ipetoipe -pdf $1.ipe
+
+# run MacOS utility sips to make png output
+sips -s format png $1.pdf --out $1.png

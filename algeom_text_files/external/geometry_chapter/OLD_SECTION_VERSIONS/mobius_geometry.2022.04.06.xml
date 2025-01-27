@@ -1,0 +1,1078 @@
+  <section>
+    <title>Möbius geometry
+    </title>	       
+
+    <introduction><p>Möbius
+    geometry provides a unifying framework for studying planar
+    geometries. In particular, the transformation groups of hyperbolic
+    and elliptic geometries in the sections that follow are
+    subgroups of the group of Möbius transformations.</p>
+    </introduction>
+    
+    <subsection>    <title>Möbius transformations</title>
+  <p>
+	A <term>Möbius
+    transformation</term><idx>Möbius
+	    transformation</idx> (also called a <term>linear fractional
+	  transformation</term><idx>linear fractional
+    transformation</idx>) of the extended complex
+    plane <m>\extC</m> is a function of the form
+  <men xml:id="stdlinfractransf">f(z)= \frac{az+b}{cz+d}</men>
+  where <m>z</m> is a complex variable, <m>a,b,c,d</m> are complex
+  constants, and <m>ad-bc\neq 0</m>. To complete the definition, we make
+  the assignments <m>f(-d/c)=\infty</m> and <m>f(\infty)=a/c</m>
+  if <m>c\neq 0</m>. If <m>c=0</m>, we
+  assign <m>f(\infty)=\infty</m>. 
+
+      </p>
+
+  <p><alert>Note on notational convention:</alert>
+    It is customary to use capital
+    letters such as <m>S,T,U</m> to denote Möbius transformations. It is
+    also customary to omit the parentheses, and to write <m>Tz</m>
+    instead of <m>T(z)</m> to denote the value of a Möbius
+    transformation. 
+  </p>
+  
+    <exercise xml:id="mobiustranslimitexer">
+ <statement><p>Let <m>f(x)=(ax+b)/(cx+d)</m> be a function of
+	  a <em>real</em> variable <m>x</m> with real
+     constants <m>a,b,c,d</m> with <m>ad-bc\neq 0</m> and 
+     <m>c\neq 0</m>.
+	  <ol>
+	    <li>Show that <m>\displaystyle \lim_{x\to
+		-d/c}|f(x)|=\infty</m>.</li>
+	    <li>Show that <m>\displaystyle \lim_{x\to \infty}f(x)=a/c</m>.
+	    </li>
+   </ol></p>
+    </statement>
+  </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiustranslimitexer"/></title>
+  <p><ol><li>We have <m>a(-d/c)+b = -\frac{ad-bc}{c}\neq 0</m> (by assumption),
+    so <m>ax+b\to -\frac{ad-bc}{c}\neq 0</m> and <m>cx+d \to 0</m>
+	as <m>x\to -d/c</m>, so <m>|f(x)|\to \infty</m> as <m>x\to
+	  -d/c</m>.</li>
+      <li>We have
+	<me>\frac{ax+b}{cx+d}=\frac{a}{c}\left(\frac{1+\frac{b}{ax}}{1+\frac{d}{cx}}\right).</me>
+	It is clear that the latter expression tends to <m>a/c</m>
+	as <m>x\to \infty</m>.
+      </li>
+    </ol>
+  </p>
+</commentary>
+    
+    
+        <exercise xml:id="mobiustransinvertcriterionexer"><statement><p>
+Show that the condition <m>ad-bc\neq 0</m> is necessary
+  and sufficient for invertibility. Find a formula for the inverse of <m>z\to (az+b)/(cz+d)</m>.
+      </p>
+    </statement>
+	</exercise>
+
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiustransinvertcriterionexer"/></title>
+  <p>First, we solve <m>w=\frac{az+b}{cz+d}</m>
+    for <m>z</m>. This yields <m>z=\frac{dw-b}{-cw+a}</m>. When
+    we <em>check</em> the composition, we see that
+    <md>
+      <mrow>\frac{a\left(\frac{dw-b}{-cw+a}\right)+b}{c\left(\frac{dw-b}{-cw+a}\right)+d}
+	\amp = \frac{a(dw-b)+b(-cw+a)}{c(dw-b)+d(-cw+a)}
+      </mrow>
+      <mrow>\amp  = w\frac{ad-bc}{ad-bc}.
+      </mrow>
+    </md>
+ Thus it is clear that the
+    condition <m>ad-bc</m> is necessary and sufficient for invertibility.
+  </p>
+</commentary>
+	
+
+    <exercise xml:id="mobiustranscomposeexer"><statement><p>
+Show that the composition of two Möbius transformations is a Möbius
+transformation. Suggestion: First show that the composition has the
+form <m>z\to \frac{rz+s}{tz+u}</m>. Next, instead of a brute force
+calculation to check that <m>ru-ts\neq 0</m>, use <xref ref="mobiustransinvertcriterionexer"/>.
+      </p>
+    </statement>
+  </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiustranscomposeexer"/></title>
+  <p>Let <m>Tz=\frac{az+b}{cz+d}</m>
+    and <m>Sz=\frac{ez+f}{gz+h}</m>. Then we have
+    <md>
+      <mrow>
+	S(Tz)\amp = \frac{e\frac{az+b}{cz+d} +f}{g\frac{az+b}{cz+d}+h}
+      </mrow>
+      <mrow>\amp = \frac{e(az+b)+f(cz+d)}{g(az+b)+h(cz+d)}</mrow>
+      <mrow>\amp = \frac{(ea+fc)z + (eb+fd)}{(ga+hc)z+(gb+hd)}</mrow>
+      <mrow>\amp = \frac{rz+s}{tz+u}</mrow>
+    </md>
+    for <m>r=ea+fc</m>, <m>s=eb+fd</m>, <m>t=ga+hc</m>, <m>u=gb+hd</m>.
+The composition is invertible
+    because both of its factors are invertible. It follows from the
+  previous exercise 
+  that <m>ru-ts\neq 0</m>.
+  </p>
+</commentary>
+
+      <p>
+          <definition xml:id="mobiusgeomdef"><statement><p>
+		The set of all Möbius transformations forms a
+		group <m>\M</m>, called
+		the <term>Möbius group</term>
+		<idx>Möbius group</idx>
+		<idx><h>groups, list of</h><h>Möbius group</h>
+		</idx>		
+		<notation><usage><m>\M</m>
+		  </usage><description>the
+		Möbius transformation group</description>
+		</notation>, under the operation
+of function composition. <term>Möbius geometry</term><idx>Möbius
+		  geometry</idx> <idx><h>geometries, list of</h><h>Möbius geometry</h>
+		</idx>
+		is the pair <m>(\extC,\M)</m>.
+	</p>
+      </statement>
+	  </definition>
+      </p>
+
+      <p>There is a natural relationship between Möbius group operations
+	and matrix group operations. The map <m>{\mathcal T}\colon
+	  GL(2,\C)\to \M</m> be given by
+	<men xml:id="gl2tomobgp">\left[
+	      \begin{array}{cc}a\amp b\\ c\amp d\end{array}\right]\to
+	  \left[z\to \frac{az+b}{cz+d}\right]</men>
+	is a group homomorphism. The kernel of <m>{\mathcal T}</m> is
+	      the group of nonzero scalar matrices.
+	       	       <me>\ker{\mathcal T}=\left\{\left[
+	      \begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
+			 k\neq 0\right\}</me>. The quotient
+		       group <m>GL(2,\C)/\ker{\mathcal T}</m> is
+		       called the <term>projective linear
+	      group</term> <m>PGL(2,\C)</m>. Thus we have a group
+		       isomorphism
+		       <me>PGL(2,\C)\approx \M</me>.
+      </p>
+      
+        <exercise xml:id="mobiusgpaspgl2exer"><statement><p>
+	      Show that the map <m>{\mathcal T}</m>
+	      is a group homomorphism. Show
+	      that the kernel of <m>{\mathcal T}</m>
+	      is 
+	       <me>\ker{\mathcal T}=\left\{\left[
+	      \begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
+	      k\neq 0\right\}</me>. 
+      </p>
+    </statement>
+	</exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiusgpaspgl2exer"/></title>
+  <p>Using the same letters as in the solution to
+    <xref ref="mobiustranscomposeexer"/>, the computation
+    <me>\twotwo{e}{f}{g}{h}\twotwo{a}{b}{c}{c}=\twotwo{r}{s}{t}{u}</me>
+    verifies that <m>{\mathcal T}</m> is a
+  homomorphism. It is clear that the
+    scalar matrices are contained in <m>\ker{\mathcal T}</m>. To see
+  that <m>\ker{\mathcal T}</m> is contained in the scalar matrices,
+    observe the Möbius transformation <m>\left[z\to
+      \frac{az+b}{cz+d}\right]</m> is the identity if and only
+    if <m>a=d\neq 0</m> and <m>b=c=0</m>.
+  </p>
+</commentary>
+	
+
+	<p>
+    Homotheties, rotations, translations, and inversions (see <xref ref="basicplanartrans"/> in
+    <xref ref="geomdefsect"/>) are special cases of Möbius transformations.
+    These basic transformations can be viewed as building blocks for
+    general Möbius transformations, as follows.
+
+  <proposition xml:id="mobiusdecompbasic"><statement><p>Every Möbius transformation is a
+	composition of homotheties, rotations, translations, and
+	inversions.</p>
+    </statement>
+    <proof>See <xref ref="mobiusdecompexer"/></proof>
+  </proposition>
+  </p>
+
+	<exercise xml:id="littlemobiusexer"><statement><p>
+	<ol>
+	  	  <li>Identify the values of the coefficients <m>a,b,c,d</m> in
+	    a Möbius transformation <m>z\to \frac{az+b}{cz+d}</m> that
+	    is a homothety, rotation, translation, and inversion, respectively.
+		  </li>
+		  <li>Write a Möbius transformation that does
+		    "clockwise rotation by one-quarter rotation 
+		    about the point <m>2-i</m>".</li>
+	</ol>
+      </p>
+  </statement>
+  </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="littlemobiusexer"/></title>
+  <p>
+    <ol>
+      <li><p><ul><li>A homothety must have <m>b=c=0</m> and <m>a/d\gt 0</m>.</li>
+	    <li>A rotation must have <m>b=c=0</m>
+	      and <m>|a|=|d|</m>.</li>
+	    <li>A translation must have <m>c=0</m>, <m>b\neq 0</m>,
+	    and <m>a=d\neq 0</m>.
+	    </li>
+	    <li>An inversion must have <m>a=d=0</m> and <m>c=b\neq 0</m>.
+	    </li>
+	  </ul>
+	</p>
+      </li>
+      <li><m>z \to e^{-i\pi/2}(z-(2-i)) + 2-i</m>
+      </li>
+   </ol>
+  </p>
+</commentary>
+  
+
+  <corollary><statement><p>Möbius transformations are conformal.</p>
+    </statement>
+    <proof>Apply <xref ref="mobiusdecompbasic"/> and <xref ref="basictransconformalexer"/>.</proof>
+  </corollary>  
+
+<p>  Next, a simple observation, in the form of the following Lemma,
+  leads to a result called the Fundamental Theorem of Möbius Geometry.
+</p>
+
+  <p>
+    <lemma><statement><p>If a Möbius transformation has more than two
+    fixed points, then it is the identity transformation.
+	</p>
+      </statement>
+      <proof>Hint: just solve <m>z=\frac{az+b}{cz+d}</m>. You will need
+      to consider cases.
+      </proof>
+    </lemma>
+    </p>
+
+  <p>
+    <proposition><title>The Fundamental Theorem of Möbius
+	Geometry</title>
+      <idx>Fundamental Theorem of Möbius geometry</idx>
+      <statement><p>A Möbius transformation is completely
+    determined by any three input-output pairs. This means that for any
+	  triple of distinct input values <m>z_1,z_2,z_3</m>
+	  in <m>\extC</m> and any triple of distinct output
+	  values <m>w_1,w_2,w_3</m> in <m>\extC</m>, there is a
+	  unique <m>T\in \M</m> such that <m>Tz_i=w_i</m> for <m>i=1,2,3</m>.
+	</p>
+      </statement>
+      <proof>Outline: Suppose there are two such
+	transformations, <m>S</m> and <m>T</m>. Show that <m>S\circ
+	T^{-1}</m> fixes three points. Now apply the previous Lemma.
+      </proof>
+    </proposition>
+  </p>
+    </subsection>
+
+
+    <subsection><title>Cross ratio</title>
+      <p>
+In what follows, we consider the special case of the output
+triple <m>w_1=1</m>, <m>w_2=0</m>, <m>w_3=\infty</m>. Given three distinct
+points <m>z_1,z_2,z_3</m> in <m>\extC</m>, we write <m>(\cdot,z_1,z_2,z_3)</m> to denote the
+unique Möbius transformation that satisfies <m>z_1\to
+      1</m>, <m>z_2\to 0</m>, and <m>z_3\to \infty</m>. We
+write <m>(z_0,z_1,z_2,z_3)</m> to denote the
+image of <m>z_0</m> under <m>(\cdot,z_1,z_2,z_3)</m>.
+The expression 
+<m>(z_0,z_1,z_2,z_3)</m> is called the <term>cross
+ratio</term><idx>cross ratio of Möbius geometry</idx> of the
+4-tuple <m>z_0,z_1,z_2,z_3</m>. The next two propositions give important properties of
+cross ratio.
+  </p>
+
+  <proposition xml:id="crossratioinvariant"><title>Cross ratio is
+      invariant</title><statement><p>
+	Let <m>z_1,z_2,z_3</m> be distinct points in <m>\extC</m>,
+	let <m>z_0\in \extC</m>, and let <m>T</m> be any Möbius
+	transformation. Then we have
+	<me>(z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).</me>
+      </p>
+    </statement>
+    <proof>The transformations <m>(\cdot,z_1,z_2,z_3)</m>
+      and <m>(\cdot,Tz_1,Tz_2,Tz_3)\circ T</m> both
+      send <m>z_1\to 1</m>, <m>z_2\to 0</m>, and <m>z_3\to \infty</m>,
+      so they must be equal, by the Fundamental Theorem. Now apply both
+      transformations to <m>z_0</m>.
+    </proof>
+  </proposition>
+
+<proposition xml:id="mobinvrealisclineprop"><statement><p>Let <m>z_1,z_2,z_3</m> be distinct points
+	  in <m>\extC</m>, let <m>T=(\cdot,z_1,z_2,z_3)</m>, and let <m>C_T=T^{-1}\left(\extR\right)</m> be 
+	  the inverse image of the extended real line <m>\extR=\R\cup \{\infty\}</m>
+	    under <m>T</m>. Then <m>C_T</m> is 
+	    a Euclidean circle or straight line. Furthermore, <m>C_T</m>
+	    is the unique Euclidean circle or straight line that
+	    contains the points <m>z_1,z_2,z_3</m>.
+	  </p>
+      </statement>
+      <proof>See <xref ref="mobinvrealisclineexer"/></proof>
+      </proposition>
+
+    <corollary xml:id="crossratiorealcriterion"><statement><p>
+The cross ratio <m>(z_0,z_1,z_2,z_3)</m> is real if and only
+	if <m>z_0,z_1,z_2,z_3</m> lie on a Euclidean circle or straight line.</p>
+      </statement>
+    </corollary>
+
+    <corollary xml:id="clinesinvariant"><statement><p>
+	  Let <m>C</m> be a Euclidean circle or straight line
+	  in <m>\extC</m> and let <m>T</m> be any Möbius
+	  transformation. Then <m>T(C)</m> is a Euclidean circle or
+	  straight line.
+	</p>
+      </statement>
+    </corollary>
+
+    <p>A Euclidean
+      circle or straight line is called
+      a <term>cline</term><idx>cline</idx> (pronounced "kline")
+      or <term>generalized circle</term><idx>generalized
+      circle</idx>. The propositions and corollaries above show that the
+      set of all clines is a single congruence class of figures in
+      Möbius geometry.
+    </p>
+    </subsection>
+
+    <subsection><title>Symmetry with respect to a cline</title>
+<p>      Geometrically, the conjugation
+	map <m>z\to z^{\ast}</m> in the complex plane is <em>reflection</em> across the real
+	line. This "mirror" symmetry generalizes to symmetry with respect
+	  to any cline, as follows. Given a cline <m>C</m> that contains
+	  <m>z_1,z_2,z_3</m> in <m>\extC</m>,
+	  let <m>T=(\cdot,z_1,z_2,z_3)</m>. Given any point <m>z</m>,
+	  the <term>symmetric point with respect to <m>C</m> </term> is
+	  <men xml:id="symmptdef">z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)</men>
+	  where <m>\conj\colon \extC\to \extC</m> is the extension of the
+	  conjugation map to the extended complex plane that
+	  sends <m>\infty\to \infty^\ast=\infty</m>. The idea is to
+	  map <m>C</m> to the real line via <m>T</m>, then
+	  conjugate, then map the real line back
+	  to <m>C</m>. See <xref ref="symmetric_pt_fig"/>.</p>
+
+      	         <figure xml:id="symmetric_pt_fig">
+		   <caption>Symmetric points <m>z,z^{\ast C}</m>
+		     with respect to the circle <m>C</m>
+      </caption>
+            <image width="90%" source="images/symmetric_pt2.png"></image>
+           </figure>
+
+	 <p>The definition of symmetric point depends only on the circle
+	   <m>C</m>, and not on the three
+	   points <m>z_1,z_2,z_3</m>. This fact is a corollary of the
+	   following Proposition.
+	 </p>
+
+	 <proposition xml:id="symmptinvariantprop"><statement><p>Let <m>C</m> be a cline and
+	     let <m>S</m> be a Möbius transformation. If <m>z,z'</m> are
+	     a pair of points that are symmetric with respect
+	     to <m>C</m>, then <m>Sz,Sz'</m> are symmetric with respect
+	     to the cline <m>S(C)</m>. That is, we have
+	       <me>(Sz)^{\ast S(C)} = S(z^{\ast C}).</me></p>
+	   </statement>
+	   <proof>Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>, so
+	     that <m>Sz_1,Sz_2,Sz_3</m> are three points
+	     on <m>S(C)</m>. Let <m>T=(\cdot,z_1,z_2,z_3)</m> and
+	     let <m>U=(\cdot,Sz_1,Sz_2,Sz_3)</m>. By invariance of the cross ratio, we have
+	     <me>(U\circ S)z=Tz</me>.
+	     Thus we have
+	     <md>
+	       <mrow>(Sz)^{\ast S(C)} \amp = (U^{-1}\circ \conj\circ
+		 U)(Sz) \;\; \text{(by definition)}</mrow>
+	       <mrow>\amp = (S\circ S^{-1}\circ U^{-1}\circ \conj\circ
+	       U\circ S)(z)</mrow>
+	       <mrow>\amp = S (S^{-1}\circ U^{-1}\circ \conj\circ
+		 U\circ S)(z)</mrow>
+	       <mrow>\amp = S(T^{-1}\circ \conj \circ T)(z)</mrow>
+	<mrow>\amp = S(z^{\ast C})</mrow>	       
+	     </md>
+	     as desired.
+	   </proof>
+	 </proposition>
+
+	 <corollary xml:id="symmptindeppts"><statement><p>The definition of <m>z^{\ast C}</m>
+	       depends only on the circle <m>C</m>, and not on the three
+	       points <m>z_1,z_2,z_3</m> used in the definition <xref ref="symmptdef"/>.
+	     </p>
+	   </statement>
+	   <proof>See <xref ref="symmetricpointexer"/>.</proof>
+	 </corollary>
+
+    </subsection>
+
+    
+    <subsection xml:id="normalformssubsect"><title>Normal forms</title>
+      
+      <p>We conclude this section on Möbius geometry with a discussion of the <term>normal
+	form</term><idx>normal form</idx> of a Möbius
+      transformation. We begin with a Lemma.
+    </p>
+
+    <lemma xml:id="normalformlemma"><statement><p>If a Möbius
+	  transformation has exactly two fixed
+	  points <m>0</m> and <m>\infty</m>, then it has the
+	  form <m>z\to \alpha z</m> for some nonzero <m>\alpha\in
+	    \C</m>. If a Möbius transformation has a single fixed point
+	  at <m>\infty</m>, then it has the form <m>z\to z+\beta</m> for
+	  some nonzero <m>\beta\in \C</m>.
+ </p>
+      </statement>
+      <proof>See <xref ref="normalformlemmaexer"/>.</proof>
+    </lemma>
+
+    <p>
+      Now suppose that a Möbius transformation <m>T</m> has two
+      fixed points, <m>p</m> and <m>q</m>. Let <m>S</m> be given
+      by <m>Sz = \frac{z-p}{z-q}</m>. Let <m>w=Sz</m> and
+      let <m>U=S\circ T\circ S^{-1}</m> be the transformation of
+      the <m>w</m>-plane that is  conjugate to <m>T</m> via <m>S</m>
+      (see <xref ref="stereolifts"/>). It is easy to check that <m>U</m> has exactly two
+      fixed points <m>0</m> and <m>\infty</m>. Applying the previous
+      Lemma, we have <m>Uw=\alpha w</m> for some nonzero <m>\alpha\in
+	\C</m>. Applying both sides of <m>S\circ T=U\circ S</m>
+      to <m>z</m>, we have the following <em>normal form</em>
+      for <m>T</m>.
+      <men xml:id="normalform2fixedpts">\frac{Tz-p}{Tz-q}= \alpha
+	\frac{z-p}{z-q}</men> The transformation <m>T</m> is
+	called <term>elliptic</term><idx>elliptic Möbius
+	transformation</idx>, <term>hyperbolic</term><idx>hyperbolic
+	Möbius transformation</idx>,
+	or <term>loxodromic</term><idx>loxodromic Möbius
+	transformation</idx> if <m>U</m> is a rotation (<m>|\alpha|=1</m>), a homothety (<m>\alpha \gt 0</m>), or
+	neither, respectively.
+    </p>
+
+    <p>Finally, suppose that a Möbius transformation <m>T</m> has
+      exactly one fixed point at <m>p</m>. Let <m>S</m> be given
+      by <m>Sz = \frac{1}{z-p}</m>. Again, let <m>w=Sz</m> and
+      let <m>U=S\circ T\circ S^{-1}</m>. This time, <m>U</m> has exactly
+      one fixed point at <m>\infty</m>. Applying the Lemma, we
+      have <m>Uw=w+\beta</m> for some nonzero <m>\beta\in
+      \C</m>. Applying both sides of <m>S\circ T=U\circ S</m>
+      to <m>z</m>, we have the following <em>normal form</em>
+      for <m>T</m>.
+      <men xml:id="normalformfixedpt">\frac{1}{Tz-p}=
+	\frac{1}{z-p}+\beta</men> A Möbius transformation of this type
+	is called <term>parabolic</term><idx>parabolic Möbius
+	transformation</idx>. Here is a summary of the classification
+	terminology associated with normal forms.
+    </p>
+
+    <p>
+    		  <table xml:id="normalformtable"><title>Summary of
+    		      normal forms of <m>T\in \M</m>
+		    </title>
+	    <tabular top="minor"
+		     left="minor" halign="center">
+	      <col right="minor"/><col right="minor"/><col right="minor"/>
+	      <row bottom="major"><cell>normal form type
+		</cell>
+		<cell>normal form</cell>
+		<cell>conjugate transformation type</cell>
+	      </row>
+
+      	      <row bottom="minor"><cell><term>elliptic</term>
+		</cell>
+		<cell><m>\frac{Tz-p}{Tz-q}= \alpha \frac{z-p}{z-q}, |\alpha|=1</m>
+		</cell>
+		<cell>rotation
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell><term>hyperbolic</term>
+		</cell>
+		<cell><m>\frac{Tz-p}{Tz-q}= \alpha \frac{z-p}{z-q},
+		\alpha\gt 0</m>
+		</cell>
+		<cell>homothety
+		</cell>
+	      </row>
+
+       	      <row><cell><term>loxodromic</term>
+		</cell>
+		<cell><m>\frac{Tz-p}{Tz-q}= \alpha \frac{z-p}{z-q},
+		      \alpha\neq 0</m>
+		</cell>
+		<cell>composition of homothety with rotation
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>
+		</cell>
+		<cell><m>|\alpha|\neq 1, \alpha\not\gt 0</m>
+		</cell>
+		<cell>
+		</cell>
+	      </row>
+	      
+	      
+     	      <row bottom="minor"><cell><term>parabolic</term>
+		</cell>
+		<cell><m>\frac{1}{Tz-p}= \frac{1}{z-p} + \beta,
+		\beta\neq 0</m>
+		</cell>
+		<cell>translation
+		</cell>
+	      </row>
+
+	    </tabular>
+	  </table>
+</p>
+
+</subsection>
+
+    <subsection><title>Steiner circles</title>
+            	         <figure xml:id="twofixedptgrid_fig">
+		   <caption>The polar coordinate grid and Steiner circle
+		   coordinate grid
+      </caption>
+            <image width="100%" source="images/2fixedptgrid.png"></image>
+           </figure>
+
+			       	         <figure xml:id="degenerate_grid_fig">
+		   <caption>Degenerate coordinate grid lines and
+		   degenerate Steiner circles
+      </caption>
+            <image width="100%" source="images/degenerate_grid_lines.png"></image>
+           </figure>
+
+      <p>
+The discussion of normal forms show that any non-identity
+	  Möbius transformation is conjugate to one of two basic
+	  forms, <m>w\to \alpha w</m> or <m>w\to w+\beta</m>. The
+	  natural coordinate system for depicting the action of <m>w\to
+	  \alpha w</m> is standard polar coordinates. See <xref ref="twofixedptgrid_fig"/>. A
+	  homothety is a flow along radial lines and a rotation
+	  is a flow around polar circles. The natural "degenerate"
+	  coordinate system for depicting a translation <m>w\to
+	  w+\beta</m> is a family of lines parallel to the line that
+	  contains the origin and <m>\beta</m>. A translation
+	  by <m>\beta</m> is a flow along these parallel lines.
+See <xref ref="degenerate_grid_fig"/>.
+</p>
+<p>
+Pulling the polar and degenerate coordinate grids back to the <m>z</m>-plane
+	  by <m>S^{-1}</m> leads to coordinate grids
+	  called <term>Steiner circles</term><idx>Steiner
+	    circles</idx>.<fn>The convention for which Steiner circles are considered "first" or
+	  "second" kinds is not universal. Here we follow the convention
+  used by Ahlfors <xref ref="ahlfors_complex_analysis"/> and Henle
+	  <xref ref="henle_modern_geometries"/>.</fn>
+ In the case where <m>T</m> has two fixed
+	  points <m>p,q</m>, the conjugating map <m>Sz=\frac{z-p}{z-q}</m>
+	  takes <m>p\to 0</m>, <m>q\to
+	    \infty</m>. Therefore <m>S^{-1}</m> maps <m>0\to p</m>
+	  and <m>\infty \to q</m>. 
+The transformation <m>S^{-1}</m> maps
+	      radial lines in the <m>w</m>-plane
+	      to clines in the <m>z</m>-plane
+	      that contain <m>p</m>
+	      and <m>q</m>
+	      called <term>Steiner circles of the first
+		kind</term><idx><h>Steiner circles</h><h>Steiner
+		  circles of the first kind</h>,</idx> and <m>S^{-1}</m> maps
+	      polar circles in the <m>w</m>-plane
+	      to clines in the <m>z</m>-plane
+	      called <term>Steiner circles of the second
+		kind</term><idx><h>Steiner circles</h><h>Steiner
+		  circles of the second kind</h> 
+	      </idx>
+	      or <term>circles of Apollonius</term><idx>circles of Apollonius</idx>.
+See <xref ref="twofixedptgrid_fig"/>.
+</p>
+
+<p>
+In the case where <m>T</m> has one
+	  fixed point <m>p</m>, the conjugating
+	  map <m>Sz=\frac{1}{z-p}</m> sends <m>p\to \infty</m>,
+so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
+	      lines in the <m>w</m>-plane that are
+	      parallel to the line through <m>0</m> and 
+	      <m>\beta</m> to clines in the <m>z</m>-plane
+	      that contain <m>p</m>. Every cline
+	      in this family is tangent to every other cline in this
+	      family at exactly the one point <m>p</m>. Clines in this
+	      family are called <term>degenerate Steiner
+		circles</term><idx><h>Steiner circles</h><h>degenerate
+	      Steiner circles</h>
+	      </idx>. See <xref ref="degenerate_grid_fig"/>.
+<xref ref="steinercirclesummary"/> summarizes the graphical depiction of Möbius
+	  transformations. 
+</p>
+
+	    		  <table xml:id="steinercirclesummary"><title>Summary of
+    		  Steiner circle pictures of Möbius transformations</title>
+	    <tabular top="minor"
+		     left="minor" halign="center">
+	      <col right="minor"/><col right="minor"/>
+	      <row bottom="major"><cell><strong>normal form type</strong>
+		</cell>
+		<cell><b>graphical dynamic</b>
+		</cell>
+
+	      </row>
+
+      	      <row bottom="minor"><cell>elliptic
+		</cell>
+		<cell>flow along Steiner circles of the second kind
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>hyperbolic
+		</cell>
+		<cell>flow along Steiner circles of the first kind
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>loxodromic
+		</cell>
+		<cell>composition of elliptic and hyperbolic flows
+		</cell>
+	      </row>
+
+     	      <row bottom="minor"><cell>parabolic
+		</cell>
+		<cell>flow along degenerate Steiner circles
+		</cell>
+	      </row>
+
+	    </tabular>
+	  </table>
+
+    </subsection>
+
+    
+  <exercises>
+
+    <exercise xml:id="mobiusdecompexer"><title>Decomposition of Möbius
+    transformations into four basic types</title>
+      <statement>
+	<p>
+	  <ol>
+	    <li>Explain why a
+	transformation of the form <m>z\to az</m>, with <m>a</m> any
+	nonzero complex constant, is a composition of a homothety and a
+	  rotation.
+	    </li>
+	    <li>Explicitly identify each homothety, rotation,
+      translation, and inversion in <xref ref="mobiusdecompfirst"/> to
+	      <xref ref="mobiusdecomplast"/> in the derivation
+	      below for the case <m>c\neq 0</m>.
+	<mdn>
+	  <mrow  xml:id="mobiusdecompfirst">	  z \amp \to cz+d</mrow>
+	  <mrow>  \amp\to \frac{1}{cz+d}</mrow>
+	  <mrow>  \amp\to \frac{bc-ad}{cz+d} + a</mrow>
+	  <mrow  xml:id="mobiusdecomplast">  \amp\to
+	    \frac{1}{c}\left(\frac{bc-ad}{cz+d} + a\right)</mrow>
+	  <mrow> \amp = \frac{az+b}{cz+d}</mrow>
+</mdn>
+	    </li>
+<li>	      Write your own
+  decomposition for the case <m>c=0</m>.</li>
+	  </ol>
+</p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiusdecompexer"/></title>
+  <p>
+    <ol>
+      <li>Use
+	polar form <m>a=|a|e^{i\arg a}</m>.</li>
+      <li><p><ol>
+	    <li>
+	      homothety and a rotation (multiplying by <m>c</m>),
+	      followed by translation (adding <m>d</m>)
+	    </li>
+	    <li>inversion</li>
+	    <li>homothety and rotation (multiplying by <m>bc-ad</m>),
+	      followed by translation (adding <m>a</m>)
+	    </li>
+	    <li>homothety and rotation (multiplying by <m>1/c</m>)
+	    </li>
+	  </ol>
+	</p>
+      </li>
+      <li>If <m>c=0</m>, then <m>ad-bc=ad\neq 0</m>, so <m>d\neq 0</m>,
+	and we have
+	<me> z = \frac{az+b}{d} = \frac{a}{d}z+\frac{b}{d}
+	</me>
+	a homothety and rotation (multiplying by <m>a/d</m>
+	followed by a translation (adding <m>b/d</m>).
+      </li>      
+    </ol>
+  </p>
+</commentary>
+    
+
+    <exercise xml:id="crossratioformexer"><title>Explicit form for the transformation <m>(\cdot,z_1,z_2,z_3)</m>
+      </title>
+      <statement><p>
+<ol>    <li>Show that, for the special case when <m>z_1,z_2,z_3</m> are complex (that is,
+    none of the three points is <m>\infty</m>), we have
+    the following.
+    <mdn>
+      <mrow xml:id="mob10inftyform">(\cdot,z_1,z_2,z_3) \amp=
+      \left[z\to \frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\right]
+      </mrow>
+      <mrow xml:id="crossratiofracform">(z_0,z_1,z_2,z_3) \amp= \frac{z_0-z_2}{z_0-z_3}\frac{z_1-z_3}{z_1-z_2}
+      </mrow>
+  </mdn></li>
+  <li>Find explicit formulas for <m>(\cdot,z_1,z_2,z_3)</m>
+    when <m>z_1=\infty</m>, then do the same for <m>z_2=\infty</m> and <m>z_3=\infty</m>.
+  </li>
+</ol>
+      </p></statement>
+  </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="crossratioformexer"/></title>
+  <p>
+    <ol>
+      <li>It is clear by inspection that <xref ref="mob10inftyform"/>
+	sends <m>z_1,z_2,z_3</m> to <m>1,0,\infty</m>, respectively.
+      </li>
+      <li>It is clear by inspection the following transformations make
+	the correct assignments.
+	<md>
+	  <mrow>(\cdot,\infty,z_2,z_3)\amp = \left[z\to
+	    \frac{z-z_2}{z-z_3}\right]</mrow>
+	  <mrow>(\cdot,z_1,\infty,z_3)\amp = \left[z\to
+	    \frac{z_1-z_3}{z-z_3}\right]</mrow>
+	  <mrow>(\cdot,z_1,z_2,\infty)\amp = \left[z\to
+	    \frac{z-z_2}{z_1-z_2}\right]</mrow>
+	  
+	</md>
+      </li>
+    </ol>
+  </p>
+</commentary>
+    
+    
+    <exercise xml:id="mobiustargetpracticeexer"><statement><p>Find Möbius transformations that make the
+    following assignments.
+	  <ol><li><m>1\to a, 0\to b, \infty\to c</m>
+	    </li>
+	    <li><m>a\to d, b\to e, c\to f</m>
+	    </li>
+	  </ol>
+    </p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobiustargetpracticeexer"/></title>
+  <p>
+    <ol>
+      <li>Start with the inverse of the desired transformation, then
+	take the inverse using matrix methods.
+	<md>
+	  <mrow>[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+	    \frac{z-b}{z-c}\frac{a-c}{a-b}\right]</mrow>
+	  <mrow>\amp \leftrightarrow
+	    \twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}</mrow>
+	  <mrow>[a\to 1, b\to 0,c\to \infty]^{-1} \amp \leftrightarrow
+	    \twotwo{c(b-a)}{b(a-c)}{b-a}{a-c}	  </mrow>
+	    <mrow>[1\to a, 0\to b,\infty\to c]
+	      \amp = \left[z\to \frac{c(b-a)z +b(a-c)}{(b-a)z+a-c} \right]
+	    </mrow>
+	</md>
+      </li>
+      <li>Put together the pieces from the previous part.
+	<md>
+	  	  <mrow>[a\to 1, b\to 0,c\to \infty] \amp = \left[z\to
+	    \frac{z-b}{z-c}\frac{a-c}{a-b}\right]</mrow>
+	    <mrow>[1\to d, 0\to e,\infty\to f]
+	      \amp = \left[z\to \frac{f(e-d)z +e(d-f)}{(e-d)z+d-f} \right]
+	    </mrow>
+	    <mrow>[a\to d,b\to e,c\to f] \amp = [1\to d, 0\to
+	    e,\infty\to f]\circ [a\to 1, b\to 0,c\to \infty]
+	    </mrow>
+	    <mrow>\amp \leftrightarrow \twotwo{f(e-d)}{e(d-f)}{e-d}{d-f}\twotwo{a-c}{b(c-a)}{a-b}{c(b-a)}
+	    </mrow>
+	    <mrow>\amp \leftrightarrow
+      \twotwo{ef(b-c)+df(c-a)+ed(a-b)}{abf(d-e)+bcd(e-f) +ace(f-d)}{d(c-b)+e(a-c)+f(b-a)}{ab(d-e)+bc(e-f)+ac(f-d)}
+	    </mrow>
+	</md>
+      </li>      
+    </ol>
+  </p>
+</commentary>
+    
+
+    <exercise xml:id="mobinvrealisclineexer">      <statement>	<p>
+	Prove <xref ref="mobinvrealisclineprop"/>. Suggestion:
+	Let <m>Tz=\frac{az+b}{cz+d}</m>, then manipulate <m>Tz=(Tz)^\ast</m>
+	to an equation with <m>|z|^2,z,z^\ast</m> terms and coefficients
+	involving <m>a,b,c,d</m> and their conjugates. Then use "complex completing
+	the square" (see <xref ref="complexcompletesquare"/>). The hint
+	below shows a version of a circle equation; peek if you need to,
+	and use it to work partially forwards from <m>Tz=(Tz)^\ast</m>,
+	and partially backwards from the equation in the hint.
+	</p>
+      </statement>
+      <hint><m>\left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
+      c}\right)\right|^2 = \left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2</m>
+      </hint>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="mobinvrealisclineexer"/>
+  (proof of <xref ref="mobinvrealisclineprop"/>)</title>
+  <p>Starting with <m>Tz=(Tz)^\ast</m>, we get
+    <me>|z|^2 (ac^\ast-a^\ast c) + z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+      d+bc^\ast) = b^\ast d-bd^\ast.</me> If <m>ac^\ast -a^\ast c\neq
+      0</m>, let <m>\alpha=\frac{-b c^\ast +a^\ast d}{ac^\ast -a^\ast
+      c}</m>, then complete the square to get
+    <me>|z-\alpha|^2 = \frac{b^\ast d -bd^\ast}{\alpha} +
+      |\alpha|^2.</me> Manipulate the right hand side
+      to <m>\left|\frac{ad-bc}{ac^\ast -a^\ast c}\right|^2</m>. For the
+    case <m>ac^\ast -a^\ast c=0</m>, let <m>\gamma=ad^\ast
+      -b^\ast c</m> and  <m>\delta=bd^\ast</m>. Then the equation 
+    <me>z(ad^\ast -b^\ast c)+z^\ast(-a^\ast
+      d+bc^\ast) = b^\ast d-bd^\ast</me>
+    becomes <m>\im(\gamma z+\delta)=0</m>, which is the equation
+      for a line.
+  </p>
+</commentary>
+    
+
+    <exercise xml:id="normalformlemmaexer">
+      <statement><p>
+	Prove <xref ref="normalformlemma"/>.
+	  </p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="normalformlemmaexer"/>
+  (proof of <xref ref="normalformlemma"/>)</title>
+  <p>
+    Let <m>Tz=\frac{az+b}{cz+d}</m>. Suppose that <m>T</m>
+    fixes <m>0,\infty</m>. We have <m>0=T(0)=b/d</m>,
+    so <m>b=0</m>. We have <m>T\infty = a/c</m>,
+    so <m>c=0</m>. Setting <m>\alpha = a/d</m>, it must be
+    that <m>\alpha\neq 0</m> (otherwise <m>T</m> would be constant)
+    and <m>\alpha\neq \infty</m> (otherwise <m>d=0</m>, which violates
+    the requirement <m>ad-bc=0</m>). Thus we have <m>Tz=az/d = \alpha
+      z</m> for some <m>\alpha\neq 0</m>. Now suppose <m>T</m>
+    has a single fixed point at <m>\infty</m>. Then <m>T\infty =
+      a/c</m>, so <m>c=0</m>. Let <m>\alpha=a/d,\beta=b/d</m>, so
+    that <m>Tz=\alpha z +\beta</m>. If <m>\alpha\neq 1</m>,
+    then <m>-\beta/\alpha</m> is another fixed point, so it must be
+    that <m>\alpha=1</m>. If <m>\beta=0</m>, then <m>T</m> is the
+    identity, but that contradicts our assumption that <m>T</m> has a
+    single fixed point. Thus <m>Tz=z+\beta</m> for some <m>\beta\neq 0</m>.
+  </p>
+</commentary>
+
+    <exercise xml:id="symmetricpointexer"><title>Symmetry with respect to a
+	cline</title><statement><p>
+	  <ol>
+	  <li>Prove <xref ref="symmptindeppts"/>.
+	  </li>
+	  <li>Let <m>C</m> be the unit circle. Show that <m>z^{\ast C} = 1/z^\ast</m>. Suggestion: This is just
+		a computation, but the choice of <m>z_1,z_2,z_3</m>
+		might make it more or less tedious. You might
+		try <m>\omega,\omega^2,\omega^3=1</m>,
+	    where <m>\omega=e^{2\pi i/3}</m>. 
+	    </li>
+	    <li>Now let <m>C</m> be a circle with center <m>a</m> and radius <m>r\gt 0</m>.
+            Use <xref ref="symmptinvariantprop"/> to show that <m>z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a</m>.</li>
+	  <li>Let <m>C</m> be a straight line. Show that
+	    <m>z^{\ast C}</m> is the reflection of <m>z</m>
+	    across <m>C</m>.</li>
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="symmetricpointexer"/></title>
+  <p>
+    <ol>
+      <li>Apply <xref ref="symmptinvariantprop"/> to a Möbius transformation that takes three
+	points on a cline <m>C</m> to three other points on <m>C</m>.
+      </li>
+      <li>Let <m>\omega = e^{i2\pi/3}</m> and let <m>Tz=(z,\omega,\omega^2,\omega^3=1)</m>.
+	We have the following.
+	<md><mrow>Tz\amp
+	    =\frac{z-\omega^2}{z-\omega^3}\frac{\omega-\omega^3}{\omega-\omega^2}</mrow>
+	  <mrow>\amp =
+	    (1+\omega)\left(\frac{z-\omega^2}{z-1}\right)</mrow>
+	  <mrow>T \amp \leftrightarrow
+	    \twotwo{1+\omega}{-\omega^2-1}{1}{-1}</mrow>
+	  <mrow>T^{-1} \amp \leftrightarrow \twotwo{-1}{\omega^2+1}{-1}{1+\omega}</mrow>	  
+	</md>
+	We have
+	<md>
+	  <mrow>z^{\ast C} \amp = T^{-1}((Tz)^\ast)</mrow>
+	  <mrow>\amp = T^{-1} \left(\frac{(1+\omega^2)z^\ast
+	    -\omega-1}{z^\ast-1}\right)</mrow>
+	  <mrow>\amp = \frac{-[(1+\omega^2)z^\ast -\omega-1]
+	  +(z-1)(\omega^2+1)}{-[(1+\omega^2)z^\ast -\omega-1]
+	    +(1+\omega)(z^\ast-1)}</mrow>
+	  <mrow>\amp = \cdots = \frac{1}{z^\ast} </mrow>
+	</md>
+      </li>
+      <li>Let <m>Sz=\frac{z-a}{r}</m> so that <m>S</m> takes <m>C</m> to
+	the unit circle. Applying <xref ref="symmptinvariantprop"/>, we
+	have
+	<me>(Sz)^{\ast S(C)} = \frac{1}{(Sz)^\ast} =
+	  \frac{r}{(z-a)^\ast}.</me>
+	Setting this last expression equal to <m>S(z^{\ast C})</m> and
+	applying <m>S^{-1}</m> to both sides, we have
+	<me>z^{\ast C} = \frac{r^2}{(z-a)^\ast} + a</me>
+	as desired.
+      </li>
+      <li>Let <m>C</m> make an angle <m>t</m> with the positive real
+	axis, and let <m>a</m> be a point
+	on <m>C</m>. Let <m>Sz=e^{-it}(z-a)</m>, so
+	that <m>S(C)=\R</m>. Applying <xref ref="symmptinvariantprop"/>,
+	we have
+	<m>(Sz)^{\ast S(C)} = (Sz)^\ast = e^{it}(z-a)^\ast</m>. Setting
+	this last expression equal to <m>S(z^{\ast C}</m> and
+	applying <m>S^{-1}</m> to both sides, we have
+	<me>z^{\ast C} = e^{i2t}(z-a)^\ast + a.</me> We know
+	that <m>Sz,(Sz)^\ast</m> are reflections of one another across
+	the real axis. Because <m>S^{-1}</m> is a rigid motion (rotation
+	followed by a translation, so distances and angles are
+	preserved), the pair <m>z,z^{\ast C}</m> must be reflections of
+	each other across the line <m>C</m>.
+	
+      </li>
+    </ol>
+  </p>
+</commentary>
+    
+    
+    <exercisegroup><title>Normal forms and Steiner circles.</title>
+
+<exercise xml:id="normalformegexer">      <statement><p>
+	Find the normal form and sketch a graph using Steiner circles
+	for the following transformations.
+	<ol><li><m>z\to \frac{1}{z}</m>
+	  </li>
+	  <li>	    <m>z\to \frac{3z-1}{z+1}</m></li>
+	</ol>
+	</p>	  
+      </statement>
+</exercise>
+
+<exercise xml:id="degneratenormalformexer">
+  <statement><p>Let <m>p</m> be the single fixed point of a Möbius
+      transformation that is conjugate to <m>w\to w+\beta</m>
+      via <m>Sz=\frac{1}{z-p}</m>. Show that the single line in the
+      degenerate Steiner clines through <m>p</m> is parallel to the
+      direction given by <m>\beta^\ast</m>.
+    </p>
+  </statement>
+  <hint><p>Show
+	that <m>S^{-1}w=\frac{pw+1}{w}</m>, so <m>S^{-1}</m>
+	takes <m>0,\beta,\infty</m>
+	to <m>\infty,\frac{p\beta+1}{\beta},p</m>. Thus the single
+	degenerate Steiner straight line through <m>p</m>
+      is in the direction given by  <m>\frac{p\beta+1}{\beta}-p
+	    =\frac{1}{\beta}\propto \beta^\ast</m>.</p>
+      </hint>
+</exercise>
+
+<exercise xml:id="apolloniuscircexer">
+  <statement><p>Show that a (generalized) circle of Apollonius (a Steiner circle of
+      the second kind) is characterized as the
+      set of points of the form
+      <me>C=\left\{P\in \C\colon \frac{d(P,A)}{d(P,B)}=k\right\} </me>
+      for some <m>A,B\in \C</m> and some real constant <m>k\gt 0</m>.
+    </p>
+  </statement>
+</exercise>
+
+    </exercisegroup>
+    
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="normalformegexer"/></title>
+  <p>
+    <ol>
+      <li>The fixed points of <m>T</m> are <m>\pm 1</m>, so the normal
+	form is
+	<me>\frac{Tz-1}{Tz+1}=\lambda\frac{z-1}{z+1}.</me>
+	Putting <m>z=2</m> and solving for <m>\lambda</m>, we
+	get <m>\lambda=-1</m>. The Steiner circles of the first kind are
+	circles through <m>\pm 1</m> (and the real axis), and Steiner circles of the second
+	kind are orthogonal to the first family (including the imaginary axis).
+      </li>
+      <li>Solving <m>Tz=z</m>, we get <m>(z-1)^2=0</m>, so <m>T</m> has
+	a single (degenerate) fixed point at <m>1</m>. The normal form
+	is
+	<me>\frac{1}{Tz-1} = \frac{1}{z-1}+\beta.</me>
+	Putting <m>z=0</m> and solving for <m>\beta</m>, we
+	get <m>\beta=1/2</m>. It is clear that <m>T</m> takes the real
+	axis to itself, so degenerate Steiner circles are tangent to
+	the real axis at <m>1</m>.
+      </li>
+    </ol>
+  </p>
+</commentary>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="degneratenormalformexer"/></title>
+  <p>We have
+    <md>
+      <mrow>S\amp \leftrightarrow \twotwo{0}{1}{1}{-p}</mrow>
+      <mrow>S^{-1}\amp \leftrightarrow \twotwo{-p}{-1}{-1}{0}\sim \twotwo{p}{1}{1}{0}</mrow>      
+    </md>
+    so <m>S^{-1}w=\frac{pw+1}{w}</m>, so <m>S^{-1}</m>
+	takes <m>0,\beta,\infty</m>
+    to <m>\infty,\frac{p\beta+1}{\beta},p</m>. Thus, <m>S^{-1}</m>
+    transforms the line through <m>0,\beta</m> in the <m>w</m>-plane to
+    the line through <m>\frac{p\beta+1}{\beta},p</m> in
+	the <m>z</m>-plane. This degenerate Steiner line has a direction
+    vector given
+	by <m>\frac{p\beta+1}{\beta}-p=\frac{p\beta+1-p\beta}{\beta}
+	=\frac{1}{\beta} = \frac{\beta^\ast}{|\beta|^2}\propto
+	\beta^\ast</m>, as claimed.
+  </p>
+</commentary>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="apolloniuscircexer"/></title>
+  <p>By definition, Steiner circles of the second kind are sets of the
+    form <m>S^{-1}(\{w\colon |w|=r\})</m> for some <m>w=Sz=\frac{z-p}{z-q}</m>
+    (some distinct <m>p,q\in
+    C)</m>. Setting <m>P=p</m>, <m>Q=q</m>, <m>k=r</m>, we have 
+    <me>S^{-1}(\{|w|=r\}) = \left\{P\colon
+      \frac{d(P,A)}{d(Q,B)}=k\right\}.</me>
+  </p>
+</commentary>
+
+
+  </exercises>
+
+  </section>

@@ -1,0 +1,1140 @@
+  <section>
+    <title>Hyperbolic geometry
+    </title>	       
+    <introduction>
+
+      <p>Before the discovery of hyperbolic geometry, it was believed
+	that Euclidean geometry was the only possible geometry of the
+	plane. In fact, hyperbolic geometry arose as a byproduct of
+	efforts to prove that there was no alternative to Euclidean
+	geometry. In this section, we present a Kleinian version of
+	hyperbolic geometry.</p>
+
+      
+      <definition><statement><p>Let <m>\D=\{z\colon |z|\lt
+	      1\}</m><notation><usage><m>\D</m>
+	      </usage><description>the open
+	      unit disk</description>
+	    </notation>
+		  denote the open unit disk in the complex
+		  plane. The <term>hyperbolic group</term><idx>hyperbolic group</idx>,
+	    denoted <m>\H</m><notation><usage><m>\H</m>
+	      </usage><description>the
+		  hyperbolic
+		  group</description> </notation>, is the subgroup of the Möbius
+	    group <m>\M</m> of transformations that map <m>\D</m> onto
+	    itself. The pair <m>(\D,\H)</m> is the <term>(Poincaré)
+	      disk model</term><idx>Poincaré disk model of hyperbolic
+		    geometry</idx>
+	    <idx><h>geometries, list of</h><h>hyperbolic geometry</h>
+	      <h>disk model</h>
+	    </idx>
+	    <idx><h>hyperbolic geometry</h><h>disk model</h>
+	    </idx>
+	    of hyperbolic geometry.
+	  </p>
+	      </statement>
+      </definition>
+
+	    <p><alert>Comments on terminology:</alert>
+	      Beware of the two different
+	    meanings of the adjective "hyperbolic". To say that a Möbius transformation is
+	    hyperbolic means that it is conjugate to a homothety (see
+	    <xref ref="normalformssubsect"/>). That is not the same
+	    thing as an element of the group of hyperbolic
+	    transformations. 
+	    </p>
+    </introduction>
+  
+    <subsection><title>The hyperbolic transformation group</title>
+
+      <p>We begin with an observation about Möbius transformations that
+      map open disks onto themselves.  Let <m>C=\{z\colon |z-a|=r\}</m>
+      be a circle with center <m>a</m> and radius <m>r \gt
+      0</m>. Let <m>D=\{z\colon |z-a|\lt r\}</m> denote the open disk
+	bounded by <m>C</m>, and let <m>E=\{z\colon |z-a|\gt r\}</m>
+	denote the complement of the closed disk bounded by <m>C</m>. Now suppose that a Möbius
+      transformation <m>T</m> maps <m>D</m> onto itself. Every
+      point <m>z\in D</m> has a symmetric point <m>z^{\ast C}\in E</m>,
+      and because <m>T</m> takes symmetric points to symmetric points
+      (<xref ref="symmptinvariantprop"/>),
+      it must be that <m>T</m> maps <m>E</m> onto itself. By process of
+      elimination, it must be that <m>T</m> maps <m>C</m> onto
+      itself.  Thus we have proved the following Lemma as a
+      special case.
+      </p>
+      
+   <lemma xml:id="hyperbolictransfixunitcirc"><statement><p>If <m>T\in \H</m>, then <m>T</m> maps the unit circle onto
+	 itself.
+	 <!--and if <m>S\in \overline{\H}</m>, then <m>S</m> maps
+	 the real line onto itself.-->
+       </p>
+     </statement>
+   </lemma>
+
+   <p>Given <m>T\in \H</m>, let <m>z_0\in\D</m> be the point
+     that <m>T</m> maps to <m>0</m>. It must be that <m>T</m> maps the
+     symmetric point <m>1/z_0^\ast</m>
+     to <m>\infty</m>. Let <m>z_1</m> be the point that <m>T</m> maps
+     to <m>1</m>. Then <m>T</m> has the form (see <xref ref="mob10inftyform"/>)
+     <me>Tz =
+       \frac{z-z_0}{z-1/z_0^\ast}\frac{z_1-1/z_0^\ast}{z_1-z_0}.</me>
+     Multiplying top and bottom by <m>-z_0^\ast</m>, and
+       setting <m>\alpha=-z_0^\ast \frac{z_1-1/z_0^\ast}{z_1-z_0}</m>,
+       we have 
+     <me>Tz=\alpha\frac{z-z_0}{1-z_0^\ast z}.</me>
+     A straightforward derivation shows
+       that <m>|\alpha|=1</m>, so that we have
+       <xref ref="diskhypgptrans0inftyform"/> below. Another computation establishes
+       an alternative formula <xref ref="diskhypgptranssu11form"/>
+       for <m>T\in \H</m>. See <xref ref="hyperbolictransformulaexer"/>.
+   </p>
+   
+   <proposition xml:id="hyperbolictransformulaprop"><statement><p>A
+	 Möbius transformation <m>T</m> is in <m>\H</m>
+	 if an only if <m>T</m> can be written in the form
+	 <men xml:id="diskhypgptrans0inftyform">Tz=e^{it}\frac{z-z_0}{1-z_0^\ast z}</men> for
+	 some <m>t\in \R</m> and <m>z_0\in \D</m>. Alternatively, we
+	 have <m>T\in \H</m> if and only if <m>T</m> can be written in
+	 the form
+	 <men xml:id="diskhypgptranssu11form">Tz=\frac{az+b}{b^\ast
+	   z+a^\ast}</men> for some <m>a,b\in \C</m>
+	 such that <m>|a|^2-|b|^2=1</m>. 
+       </p>
+     </statement>
+   </proposition>
+  </subsection>
+
+    <subsection><title>Classification of clines in hyperbolic
+	geometry</title>
+
+      <p>The clines of Möbius geometry are classified into several
+	types in hyperbolic geometry, as summarized in
+	<xref ref="hyperbolicclinesummary"/>.
+      </p>
+      	    		  <table xml:id="hyperbolicclinesummary"><title>Clines
+      	    		  in hyperbolic geometry
+    		  </title>
+	    <tabular top="minor"
+		     left="minor" halign="center">
+	      <col right="minor"/><col right="minor"/>
+	      <row bottom="major"><cell><strong>hyperbolic curve type</strong>
+		</cell>
+		<cell><b>cline type</b>
+		</cell>
+
+	      </row>
+
+      	      <row bottom="minor"><cell><term>hyperbolic straight line</term>
+		</cell>
+		<cell>a cline that intersects the unit circle at right angles
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>
+		  <term>hyperbolic circle</term>
+		</cell>
+		<cell>a circle completely contained in <m>\D</m>
+		</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell><term>horocycle</term>
+		</cell>
+		<cell>a circle with all but one
+		  point in <m>\D</m>, tangent to the unit circle
+		</cell>
+	      </row>
+
+     	      <row bottom="minor"><cell><term>hypercycle</term>
+		</cell>
+		<cell>a cline that intersects the unit circle at a
+		non-right angle 
+		</cell>
+	      </row>
+
+	    </tabular>
+	  </table>
+
+    </subsection>
+
+    <subsection><title>Normal forms for the hyperbolic group</title>
+
+      <p>In this subsection, we follow the development of normal forms
+      for general Möbius transformations given in
+      <xref ref="normalformssubsect"/> to derive normal forms and
+      graphical interpretations for transformations in the
+      hyperbolic group. We begin with an observation about fixed
+      points of a Möbius transformation that maps a cline to itself.</p>
+
+      <lemma xml:id="hyperbolicfixptlemma"><statement>Let <m>T\in \M</m> and let <m>C</m> be a
+	  cline. If <m>Tz=z</m>, then <m>T(z^{\ast C})=z^{\ast C}</m>.
+	</statement>
+	<proof>Apply <xref ref="symmptinvariantprop"/>.</proof>
+      </lemma>
+
+      <p>Now let <m>T</m> be a non-identity element of <m>\H</m>. The
+	fact that <m>T</m> maps the unit circle to itself implies that
+	there are exactly three possible cases for fixed points of <m>T</m>.
+	<ol><li>There is a pair of fixed
+	    points <m>p,q</m>  with <m>|p|\lt 1</m>, <m>|q|\gt 1</m>,
+	    and <m>q=\frac{1}{p^\ast}</m>, that is, <m>p,q</m> are a
+	    pair of symmetric points (with respect to
+	    the unit circle) that do not lie on the unit circle.</li>
+	  <li>There is a pair of fixed points that lie on the unit
+	    circle.</li>
+	  <li>There is a single fixed point that lies on the unit circle.</li>
+	</ol>
+      </p>
+
+      <exercise xml:id="hyperbolicfixptcaseexer"><statement>Give an argument to justify the three cases
+	  above.</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperbolicfixptcaseexer"/></title>
+  <p>By <xref ref="hyperbolicfixptlemma"/>, fixed points are symmetric with respect to the
+    unit circle <m>C</m>.
+    By <xref ref="symmetricpointexer"/>, we have <m>z^{\ast C} =
+      \frac{1}{z^\ast}</m>. From this
+    we have <m>|z||z^{\ast C}|=1</m>, so the norms
+    of <m>|z|,|z^{\ast}|</m> are either both 1, or one of the norms is
+    less than 1 and the other is greater. Finally, a single (degenerate)
+    fixed point must have norm 1.
+  </p>
+</commentary>
+      
+
+            	         <figure xml:id="hyp_transf_fig">
+		   <caption>Three types of hyperbolic transformations
+      </caption>
+            <image width="100%" source="images/hyperbolic_transformations.png"></image>
+           </figure>
+
+
+      <p>For cases 1 and 2 above, the map <m>T</m> acting on
+	the <m>z</m>-plane is conjugate to the map <m>U=S\circ T\circ
+	S^{-1}</m> acting on the <m>w</m>-plane by <m>Uw=\lambda w</m>,
+	for some nonzero <m>\lambda\in\C</m>, via the
+	map <m>w=Sz=\frac{z-p}{z-q}</m>. In case 1, the map <m>S</m>
+	takes the unit circle to some polar circle, say <m>C</m>,
+	so <m>U</m> must map <m>C</m> to itself. It follows
+	that <m>|\lambda|=1</m>, so the Möbius normal form type
+	for <m>T</m> is elliptic.  The action of <m>T</m> is a rotation
+	about Steiner circles of the second kind (hyperbolic circles)
+	with respect to the fixed points <m>p,q</m>. A
+	transformation <m>T\in \H</m> of this type is called
+	a <term>hyperbolic rotation</term><idx>hyperbolic
+	rotation</idx>.  See <xref ref="hyp_transf_fig"/>.
+      </p>
+
+      <p>For case 2, the map <m>w=Sz=\frac{z-p}{z-q}</m> takes the unit circle to a
+	straight line, say <m>L</m>,
+	through the origin, so <m>U=S\circ T\circ S^{-1}</m> must map <m>L</m>
+	to itself. It follows that <m>\lambda</m> is
+	real. Since <m>S</m> maps <m>\D</m> to one of the two half planes on
+	either side of <m>L</m>, the map <m>U</m> must take this half
+	plane to itself. If follows that <m>\lambda</m> must be
+	a <em>positive</em> real number, so the Möbius normal form type
+	for <m>T</m> is hyperbolic.  The action of <m>T</m> is a flow
+	about Steiner circles of the first kind (hypercycles and one
+	hyperbolic straight line) with respect to the
+	fixed points <m>p,q</m>. A transformation <m>T\in \H</m> of this
+	type is called a <term>hyperbolic
+	translation</term><idx>hyperbolic translation</idx>. See <xref ref="hyp_transf_fig"/>.
+      </p>
+
+      <p>For case 3, the conjugating map <m>w=Sz=\frac{1}{z-p}</m>
+      takes <m>T</m> to   <m>U=S\circ T\circ S^{-1}</m> of the form
+	<m>Uw=w+\beta</m> for some <m>\beta\neq 0</m>.
+	The Möbius normal form type for <m>T</m>
+	is parabolic. The action of <m>T</m> is a flow along degenerate
+	Steiner circles (horocycles) tangent to the unit circle
+	at <m>p</m>. A transformation <m>T\in \H</m> of this type is
+	called a <term>parallel displacement</term><idx>parallel
+      displacement</idx>. See <xref ref="hyp_transf_fig"/>.
+      </p>
+
+      <p>This completes the list of transformation types for the
+      hyperbolic group. See <xref ref ="hyperbolictransfsummary"/> for
+	a summary.</p>
+      
+            	    		  <table xml:id="hyperbolictransfsummary"><title>Normal
+      	    		  forms for the hyperbolic group
+    		  </title>
+	    <tabular top="minor"
+		     left="minor" halign="center">
+	      <col right="minor"/><col right="minor"/><col right="minor"/>
+	      <row bottom="major"><cell><strong>hyperbolic transformation type</strong>
+		</cell>
+		<cell><b>Möbius normal form</b>
+		</cell>
+		<cell>graphical dynamic</cell>
+
+	      </row>
+
+      	      <row bottom="minor"><cell><term>hyperbolic rotation</term>
+		</cell>
+		<cell>elliptic
+		</cell>
+		<cell>flow around hyperbolic circles</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>
+		  <term>parallel displacement</term>
+		</cell>
+		<cell>parabolic
+		</cell>
+		<cell>flow around horocycles</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell><term>hyperbolic translation</term>
+		</cell>
+		<cell>hyperbolic
+		</cell>
+		<cell>flow along hypercycles</cell>
+	      </row>
+
+       	      <row bottom="minor"><cell>(none)
+		</cell>
+		<cell>loxodromic
+		</cell>
+		<cell></cell>
+	      </row>
+	      
+	    </tabular>
+	  </table>
+
+    </subsection>
+
+    <subsection><title>Hyperbolic length and area</title>
+
+            	         <figure xml:id="hyperbolic_distance_fig">
+			   <caption>Constructing the hyperbolic straight
+			     line containing two points <m>z_1,z_2</m>
+      </caption>
+            <image width="50%" source="images/hyperbolic_distance2.png"></image>
+           </figure>
+
+      
+      <p>Let <m>z_1,z_2</m> be distinct points in <m>\D</m>. Let 
+	<m>T\in\H</m> be the transformation that sends <m>z_1\to 0</m>
+	 and <m>z_2\to  u\gt 0</m>. Then <m>T^{-1}(\R)</m> is a hyperbolic straight line that
+	contains <m>z_1,z_2</m>. Let <m>q_1=T^{-1}(-1)</m>
+	and <m>q_2=T^{-1}(1)</m>. See <xref ref="hyperbolic_distance_fig"/>.
+      </p>
+
+
+      <exercise xml:id="hyperbolicdisttransexer"><statement><p>Use
+	  <xref ref="hyperbolictransformulaprop"/> to write a formula
+	  for the transformation <m>T</m> in the previous
+	  paragraph.</p></statement>
+	<solution>  <p>Let <m>Sz=\frac{z-z_1}{1-z_1^\ast z}</m>, let <m>t=-\arg
+      (Sz_2)</m>, and let <m>Tz=e^{it}Sz</m>, so that we have <m>Tz_1=0</m> and <m>Tz_2=u\gt 0</m>. 
+     Because <m>T\in \H</m>,  <m>T</m> is determined by the two parameters <m>z_1,t</m>. 
+  </p>
+	</solution>
+      </exercise>
+
+      <p>A simple calculation verifies
+      that <m>(0,u,1,-1)=\frac{1+u}{1-u}</m>. By invariance of the cross
+      ratio, we have 
+	<m>(z_1,z_2,q_2,q_1)=\frac{1+u}{1-u}</m>. For <m>0\leq u\lt
+	1</m>, we have
+	<me>1\leq \frac{1+u}{1-u}\lt \infty</me>
+	with equality on the left if and only if <m>u=0</m>.
+      </p>
+
+      <exercise xml:id="hyperbolicdistbasiccalcexer"><p>Do the simple
+	  calculation mentioned above.</p>
+	<hint><p>Use <xref ref="crossratiofracform"/>.</p>
+	</hint>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperbolicdistbasiccalcexer"/></title>
+  <p><me>(0,u,1,-1) = \frac{0-1}{0+1}\frac{u+1}{u-1} = \frac{1+u}{1-u}</me>
+  </p>
+</commentary>
+      
+      
+      
+      <p>Now, given any points <m>z_1,z_2</m> in <m>\D</m>, not
+	necessarily distinct, define the quantity <m>d(z_1,z_2)</m> by
+	<men xml:id="hyperbolicdistdef">d(z_1,z_2)=
+	  \left\{\begin{array}{cc}\ln((z_1,z_2,q_2,q_1)) \amp z_1\neq
+	  z_2 \\ 0 \amp z_1=z_2\end{array}\right.</men>
+      where <m>q_1,q_2</m> are the ideal points on the hyperbolic
+      straight line connecting <m>z_1,z_2</m> (with each <m>q_i</m> at
+	the <m>z_i</m> end of the line) as described above, in the
+	case <m>z_1\neq z_2</m>.
+
+	From the discussion above we have
+	<men xml:id="disthyperbolicfrac">d(z_1,z_2) = \ln\left(\frac{1+u}{1-u}\right)</men>
+	where <m>u=\left|\frac{z_2-z_1}{1-z_1^\ast z_2}\right|</m>.	
+      </p>
+
+            <exercise xml:id="hyperbolicdistformexer2"><p>Justify the
+		value of <m>u</m> in
+		<xref ref="disthyperbolicfrac"/>.</p>
+	    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperbolicdistformexer2"/></title>
+  <p>It is clear that <m>u=|Tz_2|</m>, where <m>T</m> is the
+  transformation found in <xref ref="hyperbolicdisttransexer"/>.
+  </p>
+</commentary>
+	    
+
+            <proposition xml:id="hyperbolic_metric_is_invariant"><statement><p>The
+		  function <m>d</m> given by 
+      <xref ref="hyperbolicdistdef"/> is invariant under the action of
+      the hyperbolic group. That is, we have
+      <men>d(z_1,z_2) = d(Tz_1,Tz_2)</men>
+      for all <m>z_1,z_2\in \D</m> and for all <m>T\in\H</m>.
+	  </p>
+	</statement>
+      </proposition>
+	    
+      <exercise><p>Prove <xref ref="hyperbolic_metric_is_invariant"/>.
+	</p>
+      </exercise>
+	    
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperbolic_metric_is_invariant"/></title>
+  <p>Let <m>z_1,z_2\in \D</m>, and let <m>q_1,q_2</m> be points on the
+    hyperbolic line through <m>z_1,z_2</m> that lie on the unit circle,
+    with <m>q_i</m> "on the <m>z_i</m> side" for <m>i=1,2</m>, that
+    is, <m>q_i=T^{-1}z_i</m>, where <m>T</m> is the transformation found
+    in <xref ref="hyperbolicdisttransexer"/>. Be invariance of the cross
+    ratio under Möbius transformations, we have
+    <me>d(z_1,z_2)=\ln(z_1,z_2,q_2,q_1)=\ln(Tz_1,Tz_2,Tq_2,Tq_1)=d(Tz_1,Tz_2).</me>
+  </p>
+</commentary>
+
+      <p>The following Proposition shows that <m>d</m> is
+	a <em>metric</em> on hyperbolic space, and justifies referring
+	to <m>d(z_1,z_2)</m> as the <term>(hyperbolic)
+	distance</term><idx>hyperbolic distance</idx>
+	between the points <m>z_1,z_2.</m>
+      </p>
+      
+      <proposition xml:id="hyperbolicmetricprop"><statement><p>The function <m>d</m> given by
+	    <xref ref="hyperbolicdistdef"/> defines a metric
+	    on <m>\D</m>. That is, <m>d</m> satisfies
+	    <ol>
+	      <li><m>d(z_1,z_2)\geq 0</m>, and <m>d(z_1,z_2)=0</m> if and only if <m>z_1=z_2</m>
+	      </li>
+		<li><m>d(z_1,z_2)=d(z_2,z_1)</m></li>
+		<li><m>d(z_1,z_3)\leq d(z_1,z_2)+d(z_2,z_3)</m> (the
+		triangle inequality)
+	      </li>
+		</ol>
+		for all <m>z_1,z_2,z_3</m> in <m>\D</m>.
+	  </p>
+	</statement>
+	<proof>Property 1 follows immediately from
+	<xref ref="disthyperbolicfrac"/>. Property 2 is a simple
+	calculation: just write down the cross ratio expressions
+	for <m>d(z_1,z_2)</m> and <m>d(z_2,z_1)</m> and compare. The
+	proof of Property 3 is outlined in exercise <xref ref="hyperbolictriangleineqexer"/>.
+	</proof>
+      </proposition>
+
+
+
+    <p>Now let <m>\gamma</m> be a curve parameterized by <m>t\to z(t)=x(t)
+	+ iy(t)</m>, where <m>x(t),y(t)</m> are differentiable
+      real-valued functions of the real parameter <m>t</m> on an
+      interval <m>a\lt t\lt b</m>. Consider a short segment
+      of <m>\gamma</m>, say, on an interval <m>t_0\leq t\leq
+	t_1</m>. Let <m>z_0=z(t_0)</m> and <m>z_1=z(t_1)</m>. Then we have
+      <m>d(z(t_0),z(t_1))=\ln\left(\frac{1+u}{1-u}\right)</m>
+      where <m>u=\left|\frac{z_1-z_0}{1-z_0^\ast(z_1)}\right|</m>. The
+      quantity <m>|z_1-z_0|</m> is well-approximated
+      by <m>|z'(t_0)|dt</m>, where <m>z'(t)=x'(t)+iy'(t)</m> and 
+      <m>dt=t_1-t_0</m>. Thus, <m>u</m> is
+      well-approximated by
+            <m>\frac{|z'(t_0)|}{1-|z(t_0)|^2}\;dt</m>. The first
+            order Taylor approximation for <m>\ln((1+u)/(1-u))</m>
+            is <m>2u</m>. Putting this all together, we have the following.
+      <men xml:id="hyperboliclengthformula">\text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1-|z(t)|^2}\;dt</men>
+    </p>
+
+    <exercise xml:id="taylorseriesinvhyptanexer"><p>Show that the first order Taylor approximation
+	of <m>\ln((1+u)/(1-u))</m> is <m>2u</m>.
+      </p>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="taylorseriesinvhyptanexer"/></title>
+  <p>Using the Taylor series <me>\ln(1+u) =
+      u-\frac{u^2}{2}+\frac{u^3}{3} -\cdots</me>
+    and the fact <m>\ln[(1+u)/(1-u)]=\ln(1+u)=\ln(1-u)</m> we get
+    <me>\ln\left(\frac{1+u}{1-u}\right)=2\left(u+\frac{u^3}{3}+\frac{u^5}{5}+\cdots\right) .</me>
+  </p>
+</commentary>
+    
+    
+    <exercise xml:id="hyperboliccirclecircumexer"><p>Find the length of the hyperbolic circle parameterized
+	by <m>z(t) = \alpha e^{it}</m> for <m>0\leq t\leq 2\pi</m>, where <m>0\lt \alpha\lt 1</m> .
+      </p>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperboliccirclecircumexer"/></title>
+  <p>For <m>z(t)=\alpha e^{it}</m>, we have <m>z'(t)=i\alpha
+  e^{it}</m>, and  <m>|z(t)|=|z'(t)|=\alpha</m>. The circumference of
+    the circle is
+    <mdn>
+      <mrow>\text{circumference } \amp = 2\int_0^{2\pi}
+	\frac{|z'(t)|}{1-|z(t)|^2}dt</mrow>
+	<mrow>\amp =	2\int_0^{2\pi} \frac{\alpha}{1-\alpha^2}dt</mrow>
+      <mrow xml:id="hypcircalpha">\amp = \frac{4\pi\alpha}{1-\alpha^2}.</mrow>
+    </mdn>
+    While this answer is correct, it is more useful to have the
+    circumference expressed in terms of the hyperbolic
+    radius <m>r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)</m>. Solving
+    for <m>\alpha</m> in terms of <m>r</m>, we get
+    <m>\alpha=\frac{e^r-1}{e^r+1}</m>. Then simplifying
+    <xref ref="hypcircalpha"/>, we get
+    <me>\text{circumference } = \pi(e^r-e^{-r})=2\pi \sinh r.</me>
+    
+
+  </p>
+</commentary>
+    
+
+    <p>We conclude this subsection on hyperbolic length and area with an
+      integral formula for the area of a region <m>R</m> in <m>\D</m>,
+      following the development in
+      <xref ref="henle_modern_geometries"/>.  As a function of
+      the two real variables <m>r</m> and <m>\theta</m>, the polar
+      form expression <m>z=re^{i\theta}</m> gives rise to the two parameterized
+      curves <m>r\to z_1(r)=re^{i\theta}</m> (where <m>\theta</m> is constant)
+      and <m>\theta \to z_2(\theta) = re^{i\theta}</m> (where <m>r</m> is
+      constant). Using <m>z_1'(r) =
+      e^{i\theta}</m> and <m>z_2'(\theta)=ire^{i\theta}</m>, the arc length
+      differential <m>ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}</m> for the two
+      curves are the following.
+      <me>\frac{2|e^{i\theta}|\;dr}{1-r^2}=\frac{2\;dr}{1-r^2}
+	\;(\text{for curve } z_1)
+      </me>
+            <me>\frac{2|ire^{i\theta}|\;dr}{1-r^2}=\frac{2r\;dr}{1-r^2}
+	\;(\text{for curve } z_2)
+	    </me>
+	    Thus we have <m>dA=\frac{4r\;dr\;d\theta}{(1-r^2)^2}</m>, so
+	    that the area of a region <m>R</m> is
+	    <men xml:id="hyperbolicareaintformula">\text{Area}(R)=\iint_R
+	      dA = \iint_R \frac{4r\;dr\;d\theta}{(1-r^2)^2}.</men>
+    </p>
+
+    <exercise xml:id="hypdiskareaexer"><p>Find the area of the hyperbolic disk <m>\{|z|\leq
+	  \alpha\}</m>, for <m>0\lt \alpha\lt 1</m>.
+      </p>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hypdiskareaexer"/></title>
+  <p>We have
+    <md>
+      <mrow>\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha
+	\frac{4r\;dr\;d\theta}{(1-r^2)^2}</mrow>
+      <mrow>\amp = -2 \int_0^{2\pi} \left[\int_1^{1-\alpha^2}
+	\frac{du}{u^2}\right]d\theta \; (\text{for } u=1-r^2)</mrow>
+      <mrow>\amp = 2 \int_0^{2\pi} \left[\left.\frac{1}{u}\right|_1^{1-\alpha^2}
+	\right]d\theta</mrow>
+      <mrow>\amp = 2\int_0^{2\pi} \frac{\alpha^2}{1-\alpha^2}
+	d\theta</mrow>
+      <mrow>\amp = \frac{4\pi\alpha^2}{1-\alpha^2}.</mrow>
+    </md>
+    As was the case for <xref ref="hyperboliccirclecircumexer"/>, this
+    solution is correct, but we want an expression in terms of the
+    hyperbolic
+    radius <m>r=\ln\left(\frac{1+\alpha}{1-\alpha}\right)</m>. Again,
+    solve for <m>\alpha</m> in terms of <m>r</m>, then simplify. We get
+    <me>\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).</me>
+  </p>
+</commentary>
+    
+
+    </subsection>
+    
+    <subsection><title>The upper-half plane model</title>
+
+      <p>
+      <definition><title>The upper half-plane model of hyperbolic
+	  geometry</title><idx><h>geometries, list of</h><h>hyperbolic geometry</h>
+	  <h>upper half-plane model</h>
+	</idx>
+	<idx>upper half-plane model of hyperbolic geometry</idx>
+	<idx><h>hyperbolic geometry</h><h>upper half-plane model</h>
+	</idx>	
+	<statement><p>Let <m>\U=\{z\colon \im(z)\gt
+	      0\}</m><notation><usage><m>\U</m>
+	      </usage><description>the upper
+	      half-plane</description>
+	    </notation>
+	    denote the upper half of complex plane above the real
+	    axis, and
+	    let <m>\HU</m><notation><usage><m>\HU</m>
+	      </usage><description>the
+	    upper half-plane group</description>
+	    </notation>
+	    <idx><h>groups, list of</h><h>upper half-plane
+	    transformation group</h>
+	    </idx>
+	    denote the subgroup of the Möbius
+	  group <m>\M</m> of transformations that map <m>\U</m> onto
+	  itself. The pair <m>(\U,\HU)</m> is the <term>upper half-plane
+	  model</term> of hyperbolic geometry.
+	  </p>
+	</statement>
+      </definition>
+      </p>
+      
+      <proposition xml:id="upperhalfplanetransfprop">
+<statement>      <p>A Möbius transformation <m>T</m> is in <m>\HU</m> if and only
+	 if <m>T</m> can be written in the form
+	 <men xml:id="halfplanehypgptrans">Tz=\frac{az+b}{cz+d}</men>
+	 such that <m>a,b,c,d</m> are real and <m>ad-bc\gt
+	   0</m>.</p>
+</statement>
+      </proposition>
+
+      <p>Hyperbolic straight lines in the upper half-plane model are
+	clines that intersect the real line at right angles. The hyperbolic
+	distance between two points <m>z_1,z_2</m> in the upper
+	half-plane is
+	<men>d(z_1,z_2)=\ln((z_1,z_2,q_2,q_1))</men>
+	where <m>q_1,q_2</m> are the points on the (extended) real line at the
+	end of the hyperbolic straight line that
+	contains <m>z_1,z_2</m>, with each <m>q_i</m> on the same "side"
+	as the corresponding <m>z_i</m>.
+	The hyperbolic length of a  curve <m>\gamma</m>
+	parameterized by <m>t\to
+	  z(t)=x(t)+iy(t)</m> on the interval <m>a\leq t\leq b</m>
+	is
+     <men xml:id="halfplanelengthformula">\text{Length}(\gamma)=\int_a^b
+       \frac{|z'(t)|}{y(t)}\;dt.</men>
+     The hyperbolic area of a region <m>R</m> in <m>\U</m> is
+     	    <men xml:id="upperhalfplaneareaintformula">\text{Area}(R)=\iint_R
+	      dA = \iint_R \frac{dx\;dy}{y^2}.</men>
+	
+
+      </p>
+
+  </subsection>
+
+  
+
+
+  <exercises>
+
+    <exercise xml:id="hyperbolictransformulaexer">
+      <statement><p>Prove <xref ref="hyperbolictransformulaprop"/> using the following outline.
+	  <ol>
+	    <li>Complete the proof of
+	    <xref ref="diskhypgptrans0inftyform"/> using this outline: Let <m>|z|=1</m> and apply
+     <xref ref="hyperbolictransfixunitcirc"/>. We have
+     <me>1=|Tz|=|\alpha|\left| \frac{z-z_0}{1-z_0^\ast
+       z}\right|.</me>	Continue this derivation to show
+       that <m>|\alpha|=1</m>.
+	    </li>
+	    <li>Prove <xref ref="diskhypgptranssu11form"/> by verifying the
+	      following. Given <m>z_0\in \D</m> and <m>t\in \R</m>, show that the
+	    assignments <m>a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
+	      b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}</m>
+	      satisfy <m>|a|^2-|b|^2=1</m> and that
+	      <men xml:id="twohyptransformssame">\frac{az+b}{b^\ast  z+a^\ast} = e^{it}\frac{z-z_0}{1-z_0^\ast z}</men>.
+	      Conversely, given <m>a,b\in \C</m>
+	      with <m>|a|^2-|b|^2=1</m>, show that the assignments
+	      <m>t=2\arg a, z_0=-\frac{b}{a}</m> satisfy <m>z_0\in
+	      \D</m>, and that <xref ref="twohyptransformssame"/> holds.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for
+  <xref ref="hyperbolictransformulaexer"/> (proof of <xref ref="hyperbolictransformulaprop"/>)</title>
+  <p>
+    <ol>
+      <li>We have
+	<me>\left|\frac{z-z_0}{1-z_0^\ast z}\right|^2 =
+	\frac{(z-z_0)(z^\ast-z_0^\ast)}{(1-z_0^\ast z)(1-z_0z^\ast)} =
+	  \frac{|z|^2+|z_0|^2-z_0z^\ast -z_0^\ast z}{1+|z_0|^2-z_0z^\ast
+	  -z_0^\ast z} = 1</me> (because <m>|z|=1</m> by assumption). 
+	It follows that <m>|\alpha|=1</m>.
+      </li>
+      <li>Let <m>|z_0|\in \D</m> and <m>t\in \R</m> be given and let <m>a=\frac{e^{it/2}}{\sqrt{1-|z_0|^2}},
+	      b=\frac{-e^{it/2}z_0}{\sqrt{1-|z_0|^2}}</m>.
+	We have the following.
+	<md>
+	  <mrow>|a|^2-|b|^2 \amp= \frac{1 - |z_0|^2}{1-|z_0|^2}
+	   =1</mrow>
+	  <mrow>\frac{az+b}{b^\ast  z+a^\ast} \amp= \frac{e^{it/2}z-e^{it/2}z_0}{-e^{-it/2}z_0^\ast  z+e^{-it/2}}
+	     = e^{it}\frac{z-z_0}{1-z_0^\ast z}</mrow>
+	</md>
+	Conversely, let <m>a,b\in \C</m> be given
+	with <m>|a|^2-|b|^2=1</m> and let <m>t=2\arg a,
+	  z_0=-\frac{b}{a}</m>. The assumption <m>|a|^2-|b|^2=1</m>
+	implies that <m>|a|\gt |b|</m>, so <m>|z_0|=|b|/|a|\lt 1</m>, as
+	required. We have
+	<md>
+	  <mrow>\frac{az+b}{b^\ast  z+a^\ast} \amp =
+	    \frac{az - az_0}{-a^\ast z_0^\ast z + a^\ast}
+	  </mrow>
+	  <mrow>\amp = \frac{a}{a^\ast}\frac{z-z_0}{1-z_0^\ast z}</mrow>
+	    <mrow>
+	    \amp  = e^{it}\frac{z-z_0}{1-z_0^\ast z},</mrow>
+	</md>
+	as desired.
+      </li>      
+    </ol>
+  </p>
+</commentary>
+    
+
+    <exercise xml:id="twopts2lineexer"><title>Two points determine a
+	line</title><statement><p>Let <m>p,q</m> be distinct points
+	in <m>\D</m>. Show that there is a unique hyperbolic straight
+	  line that contains <m>p</m> and <m>q</m>.</p></statement>
+      <hint><p>Start by choosing a transformation that sends <m>p\to 0</m>.</p>
+      </hint>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="twopts2lineexer"/></title>
+  <p>Let <m>Tz=\frac{z-p}{1-p^\ast z}</m>, so that <m>Tp=0</m>. There is
+    only one hyperbolic straight line that contains <m>Tp,Tq</m>,
+    namely, the diameter line
+    of the unit circle, say <m>L</m>, that passes
+    through <m>Tq</m>. Therefore <m>T^{-1}(L)</m> is the unique
+    hyperbolic straight line that contains <m>p,q</m>.
+  </p>
+</commentary>
+    
+    
+    <exercise xml:id="dropperpexer"><title>Dropping a perpendicular from a point to a
+	line</title> <statement><p>Let <m>L</m> be a hyperbolic straight line and
+      let <m>p\in\D</m> be a point not on <m>L</m>. Show that there is a
+      unique hyperbolic straight line <m>M</m> that contains <m>p</m>
+	  and is orthogonal to <m>L</m>.</p>
+      </statement>
+      <hint><p>Start by choosing a transformation that sends <m>p\to 0</m>.</p>
+      </hint>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="dropperpexer"/></title>
+  <p>Let <m>Tz=\frac{z-p}{1-p^\ast z}</m>, so
+    that <m>Tp=0</m>. Let <m>a,b</m> be the points where <m>T(L)</m>
+    intersects the unit circle. There is a unique diameter,
+    say <m>K</m>, that bisects the Euclidean straight line
+    segment connecting <m>a</m> and <m>b</m>. It is clear that <m>K</m>
+    is orthogonal to <m>T(L)</m>. It follows that <m>T^{-1}(K)</m> is
+    the unique hyperbolic straight line that passes through <m>p</m> and
+    is orthogonal to <m>L</m>.
+  </p>
+</commentary>
+
+    <exercise xml:id="hyperbolictriangleineqexer"><title>The triangle inequality for the hyperbolic
+	metric</title>
+      <statement><p>Show that <m>d(a,b)\leq d(a,c)+d(c,b)</m> for
+	  all <m>a,b,c</m> in <m>\D</m> using the outline below.
+	  <ol>
+	    <li>Show that the triangle inequality holds with strict
+	      equality when <m>a,b,c</m> are collinear and <m>c</m> is
+	      between <m>a</m> and <m>b</m>.
+	      Suggestion: This is a straightforward computation using the
+		cross ratio expressions for the values
+		  of <m>d</m>.
+	    </li>
+	    <li>Show that the triangle inequality holds with strict
+	      inequality when <m>a,b,c</m> are collinear and <m>c</m> is not
+	      between <m>a</m> and <m>b</m>.
+	    </li>
+	    <li>Let <m>p\in \D</m> lie on a hyperbolic line <m>L</m>,
+	      let <m>q\in \D</m>, let <m>M</m> be a line
+	      through <m>q</m> perpendicular to <m>L</m> (this
+	      line <m>M</m> exists by <xref ref="dropperpexer"/>), and
+	      let <m>q'</m> be the point of intersection of <m>L,M</m>. Show
+	      that <m>d(p,q')\leq d(p,q)</m>. Suggestion: apply <m>T\in
+		\H</m> that takes <m>p\to 0</m> and takes <m>L\to
+		\R</m>. Let <m>t=-\arg(Tq)</m> if <m>\re(Tq)\geq 0</m>
+	      and let <m>t=\pi-\arg(Tq)</m> if <m>\re(Tq)\lt
+	      0</m>. Let <m>r=e^{it}Tq</m>. See <xref ref="hyperbolic_tri_ineq_fig"/>.
+	    </li>
+	    <li>Given arbitrary <m>a,b,c</m>, apply a
+	      transformation <m>T</m> to send <m>a\to 0</m> and <m>b</m>
+	      to a nonnegative real point. Drop a perpendicular
+	      from <m>Tc</m> to the real line, say, to <m>c'</m>. Apply
+	      results from the previous steps of this outline. 
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      
+    </exercise>
+
+    	    	       <figure xml:id="hyperbolic_tri_ineq_fig">
+            <image width="80%" source="images/hyperbolic_tri_ineq.png"></image>
+           </figure>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="hyperbolictriangleineqexer"/></title>
+  <p>
+    <ol>
+      <li>First use a hyperbolic transformation to take <m>a\to 0</m>
+	and <m>b,c</m> real with <m>0=a\lt c\lt b \lt 1</m>.
+	Let <m>p=-1</m> and <m>q=1</m>.
+	Assuming <m>a,b,c</m> are distinct, we have the following.
+	<md>
+	  <mrow>d(a,b) \amp = \ln (a,b,q,p)</mrow>
+	  <mrow>\amp = \ln  \left(\frac{a-q}{a-p}\frac{b-p}{b-q}\right)</mrow>
+	  <mrow>\amp = \left(\frac{q-a}{a-p}\frac{b-p}{q-b}\right)</mrow>
+	  <mrow>\amp = \ln(q-a)-\ln(a-p)+\ln(b-p)-\ln(q-b)</mrow>
+	  <mrow>d(a,c)\amp = \ln(a,c,q,p)</mrow>
+	  <mrow>\amp = \ln  \left(\frac{q-a}{a-p}\frac{c-p}{q-c}\right)</mrow>
+  	  <mrow>\amp = \ln(q-a)-\ln(a-p)+\ln(c-p)-\ln(q-c)</mrow>
+	  <mrow>d(c,b) \amp = \ln(b,c,q,p)</mrow>
+	  <mrow>\amp = \ln  \left(\frac{q-c}{c-p}\frac{b-p}{q-b}\right)</mrow>
+  	  <mrow>\amp = \ln(q-c)-\ln(c-p)+\ln(b-p)-\ln(q-b)</mrow>
+	</md>
+From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or more
+	of <m>a,b,c</m> coincide are trivial.
+      </li>
+      <li>Observe that, for <m>0\lt u\lt 1</m>, 
+	<md>
+	  <mrow>\frac{d}{du}d(0,u)\amp =
+	    \frac{d}{du}\ln\left(\frac{1+u}{1-u}\right)</mrow>
+	  <mrow>\amp = \frac{d}{du}\left(\ln(1+u)-\ln(1-u)\right)</mrow>
+	  <mrow>\amp = \frac{1}{1+u} + \frac{1}{1-u}</mrow>
+	  <mrow>\amp = \frac{2}{1-u^2}\gt 0,</mrow>
+	</md> so <m>d(0,u)</m> is an increasing function
+	of <m>u</m>. This means that if <m>0=a\lt b\lt c</m> (we may
+	assume this without loss of generality),
+	then <m>d(a,c)\gt d(a,b)</m>, so that we have
+	<me>d(a,b)\lt d(a,c)+d(c,b)</me>
+	as claimed.
+      </li>
+      <li>Following the suggestion, it is clear (draw a sketch!) that <m>Tq'</m> is
+		  between <m>Tp=0</m> and <m>r</m>. Thus, by part (a),
+	we have <m>d(0,Tq')\lt d(0,r)=d(0,Tq)</m>, where the last
+		  equality is justified because rotation about 0 is
+		  distance preserving.
+      </li>
+      <li>We have
+	<md>
+	  <mrow>d(a,b)\amp \leq d(a,c')+d(c',b) \;\;\text{(by parts (a),(b))}</mrow>
+	  <mrow>\amp \leq d(a,c)+d(c,b)\;\; \text{(by part (c))}.</mrow>
+	</md>
+      </li>      
+    </ol>
+  </p>
+</commentary>
+    
+    
+    <exercise xml:id="upperhalfplanetransfpropexer"><statement><p>Prove
+	  <xref ref="upperhalfplanetransfprop"/>.</p>
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for
+  <xref ref="upperhalfplanetransfpropexer"/> (proof of <xref ref="upperhalfplanetransfprop"/>)</title>
+  <p>Because <m>T\in \HU</m> must send the real line to itself, so the
+    preimages <m>z_1=T^{-1}(1),z_2=T^{-1}(0),z_3=T^{-1}(\infty)</m> must
+    be real. Thus we have
+    <me>Tz=(z,z_1,z_2,z_3)=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_2-z_3}=\frac{az+b}{cz+d}</me>
+    for some real <m>a,b,c,d</m>. We have
+    <me>Ti = \frac{ai+b}{ci+d}= \frac{ac+bd + i(ad-bc)}{c^2+d^2}</me>
+    so <m>ad-bc</m> must be positive because <m>T(\U)=\U</m>.
+  </p>
+</commentary>
+    
+      <exercise xml:id="upperhalfplanelengthexer"><title>Length integral in the upper half-plane
+	  model</title><statement><p>This exercise is to establish
+	  <xref ref="halfplanelengthformula"/>. The strategy is to
+	  obtain the differential expression
+	    <me>d(z(t_0),z(t_1))\approx \frac{|z'(t)|dt}{y(t)}</me>
+	    for a curve <m>z(t)=x(t)+iy(t)</m>
+	    with <m>z(t_0)=z_0</m>, <m>z(t_1)=z_1</m>,
+	    and <m>dt=t_1=t_0</m> using the following sequence of steps.
+	    <ul><li>First, map <m>z_0,z_1</m> in <m>\U</m>
+	      to <m>z_0',z_1'</m> in <m>\D</m> using a
+		transformation <m>\mu</m> that preserves distance.</li>
+	      	    <li>Using the analysis we used to get the disk model length integral
+	    formula <xref ref="hyperboliclengthformula"/>, we have
+	    <me>d(z_0',z_1')=\ln\left(\frac{1+u}{1-u}\right)</me>
+	    where <m>u=\left|\frac{z_1'-z_0'}{1-(z_0')^\ast
+	      z_1'}\right|</m>.</li>
+		    <li>Translate the above
+		      expression in terms of <m>z_0,z_1</m>, and show
+		      that the differential approximation is <m>\frac{|z'(t)|dt}{y(t)}</m>.
+		    </li>
+	    </ul>
+	    Complete the exercise parts below to carry out the strategy
+	    just outlined.
+	    <ol>
+	      <li>Show that <m>\mu z=\frac{z-i}{z+i}</m>
+		takes <m>\U</m> to <m>\D</m>. 
+	      </li>
+	      <li>Let <m>z_0'=\mu z_0</m> and <m>z_1'=\mu z_1</m>. Show
+		that
+		<me>\frac{z_1'-z_0'}{1-(z_0')^\ast
+		z_1'}=e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}</me> for some
+		real <m>t</m>.
+	      </li>
+	      <li>Let <m>u=\left|\frac{z_1-z_0}{z_0^\ast -
+		  z_1}\right|</m>. Show that
+		<me>\ln\left(\frac{1+u}{1-u}\right)\approx \frac{|z(t)|dt}{y(t)}.</me>
+	      </li>
+	    </ol>
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="upperhalfplanelengthexer"/></title>
+  <p>
+    <ol>
+      <li>The map <m>\mu</m> sends <m>1\to
+	  -i</m>, <m>0\to -1</m>, and <m>\infty \to 1</m>, so <m>\mu</m>
+	takes <m>\R</m> to the unit circle. Checking point interior
+	to <m>\U</m>, we have <m>\mu(i)=0</m>, so <m>\mu</m>
+	takes <m>\U</m> to <m>\D</m>.
+      </li>
+      <li>We have
+	<md>
+	  <mrow>
+	    \frac{z_1'-z_0'}{1-(z_0')^\ast z_1'}
+	    \amp=\frac{\frac{z_1-i}{z_1+i}-\frac{z_0-i}{z_0+i}}{1-\left(\frac{z_0-i}{z_0+i}\right)^\ast
+	    \frac{z_1-i}{z_1+i}}
+	  </mrow>
+	    <mrow>\amp=\left(\frac{(z_0+i)(z_1-i)-(z_0-i)(z_1+i)}{(z_0+i)^\ast)(z_1+i)-(z_0-i)^\ast(z_1-i)}\right)
+	      \left(\frac{(z_0+i)^\ast(z_1+i)}{(z_0+i)(z_1+i)}\right)
+	    </mrow>
+	    <mrow>
+	\amp =e^{it}\frac{z_1-z_0}{z_0^\ast - z_1}
+	  </mrow>
+	</md>
+	where <m>t=-2\arg(z_0+i)</m>.
+      </li>
+      <li>For <m>dt</m> small, we have <m>z_1-z_0 \approx dz=
+      |z'(t)|dt</m>, and <m>z_0^\ast -z_1 \approx 2i\im(z(t)) =
+      2iy(t)</m>. Taking norms yields the desired expression for the
+      length differential.
+      </li>      
+    </ol>
+  </p>
+</commentary>
+      
+
+          <exercise xml:id="upperhalfplaneareaintformulaexer"><title>Area integral in the upper half-plane
+	  model</title><statement><p>Adapt the argument in the paragraph
+	  preceding the disk model area integral
+	  <xref ref="hyperbolicareaintformula"/> to establish the upper
+	  half-plane area integral  <xref ref="upperhalfplaneareaintformula"/>. 
+	  </p>
+	</statement>
+	  </exercise>
+
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="upperhalfplaneareaintformulaexer"/></title>
+  <p>Consider parameterized curves <m>x=x(t)+y_0</m>, <m>y=x_0+y(s)</m>
+    with <m>x(0)=x_0, y(0)=y_0</m>. The arc length
+    differential <m>ds</m> for the two curves
+    are <m>\frac{x'(t)dt}{y}=\frac{dx}{y}</m> (for <m>x(t)</m>)
+    and <m>\frac{y'(t)dt}{y}=\frac{dy}{y}</m> (for <m>y(t)</m>) so the
+    area differential is <m>dA=\frac{dx\;dy}{y^2}</m>.
+  </p>
+</commentary>
+	  
+
+	       <figure xml:id="hyperbolic_triangle_area_fig">
+  <caption>Hyperbolic triangle <m>\triangle ABC</m>
+      </caption>
+            <image width="50%" source="images/hyperbolic_triangle_area.png"></image>
+           </figure>
+
+	  
+	  <exercisegroup><title>Area of a hyperbolic
+	  triangle.</title><introduction>The following sequence of
+	  exercises establishes the area formula for hyperbolic
+	      triangles.</introduction>
+
+	    <exercise xml:id="doubasymptriareaexer"><title>Area of a doubly-asymptotic
+		triangle</title>
+	      <statement><p>A triangle with one vertex in <m>\D</m> and
+	      two vertices on the unit circle, connected by arcs of circles
+		  that are orthogonal to the unit circle, is called
+		  a <term>doubly-asymptotic</term><idx>doubly-asymptotic
+	      hyperbolic triangle</idx> hyperbolic triangle. Examples
+		  are <m>\triangle AA_1A_2</m>, <m>\triangle
+	      BB_1B_2</m>, and <m>\triangle CC_1C_2</m> in
+	      <xref ref="hyperbolic_triangle_area_fig"/>. 
+	      <ol><li> Explain why any doubly-asymptotic triangle in the
+		    upper half-plane is congruent to the one shown in
+		    <xref ref="doubleasymp_tri_upperhalfplane_fig"/>for some
+		    angle <m>\alpha</m>.</li>
+		   <li> Now use the integration formula for the upper
+		      half-plane model to show that the area of the
+		      doubly-asymptotic triangle with
+		      angle <m>\alpha</m> (at the vertex interior
+		      to <m>\U</m>) is <m>\pi-\alpha</m>.
+		    </li>
+		  </ol>
+
+	            <figure xml:id="doubleasymp_tri_upperhalfplane_fig">
+   <caption>Doubly-asymptotic hyperbolic triangle in the upper
+     half-plane with vertices <m>1,p,\infty</m> with <m>p</m> on the
+     upper half of the unit circle
+      </caption>
+            <image width="50%" source="images/2asymp_tri_upperhalfplane.png"></image>
+		    </figure>
+			    		</p>
+	      </statement>
+	    </exercise>
+
+					 
+	    <exercise xml:id="asympngonareaexer"><title>Area of an asymptotic
+			<m>n</m>-gon</title>
+		      <statement><p>A polygon with <m>n\geq 3</m>
+			  vertices on the unit
+		  circle, connected by arcs of circles
+		  that are orthogonal to the unit circle, is called
+			  an <term>asymptotic</term><idx>asymptotic <m>n</m>-gon
+			  in hyperbolic space
+			  </idx> <m>n</m>-gon. An example of an
+			  asymptotic hexagon is the figure with
+			  vertices <m>A_1,A_2,B_1,B_2,C_2,C_2</m>
+			  connected by the colored hyperbolic
+			  lines in
+			  <xref ref="hyperbolic_triangle_area_fig"/>. Show
+			  that the area of an asymptotic <m>n</m>-gon
+			  is <m>\pi(n-2)</m>. 
+		</p>
+		      </statement>
+		      <hint><p>Partition the
+			  asymptotic <m>n</m>-gon into <m>n</m>
+			      doubly-asymptotic triangles.</p>
+			  </hint>
+		    </exercise>
+
+		    <exercise xml:id="hyperbolic_triangle_area_exer"><title>Area of a hyperbolic
+			triangle</title><statement><p>Let <m>\triangle
+			ABC</m> be a hyperbolic triangle. Extend the
+			three sides <m>AB</m>, <m>BC</m>, <m>AC</m> to
+			six points on the unit circle. See
+			  <xref ref="hyperbolic_triangle_area_fig"/>.
+			  Use
+			a partition of the asymptotic hexagon whose
+			vertices are these six points to show that the
+			area of <m>\triangle ABC</m> is
+			  <men xml:id="hyperbolictrianglearea">\text{Area}(\triangle
+			  ABC)= \pi-(\angle A +\angle B + \angle C).</men>
+			</p>
+		      </statement>
+		      <hint><p>Partition the asymptotic hexagon with
+			vertices <m>A_1,A_2,B_1,B_2,C_1,C_2</m>.
+			Start with the six overlapping
+		      doubly-asymptotic triangles whose bases are
+			colored arcs and whose vertex
+			in <m>\D</m> is whichever of <m>A,B,C</m>
+		      matches the color of the base. For example, the
+			two red doubly-asymptotic triangles
+		      are <m>\triangle AA_1A_2</m> and <m>\triangle
+			    AC_1B_2</m>. </p>
+		      </hint>
+		    </exercise>
+	  </exercisegroup>
+
+    <commentary><title>Instructor's solution for <xref ref="doubasymptriareaexer"/></title>
+      <p><ol>
+	  <li>Let <m>\triangle ABC</m> be a doubly-asymptotic triangle
+	    in the upper half-plane, and suppose <m>B,C\in
+	    \extR</m>. Any hyperbolic line intersects <m>\extR</m> in
+	    two points (this is easy to see in the disk model, so must
+	    also be true in the upper half-plane). Let <m>B'\in
+	    \extR</m> be the intersection of side <m>AB</m>
+	    with <m>\extR</m> that is not <m>B</m>, and let <m>C'</m> be
+	    the intersection of side <m>AC</m> with <m>\extR</m> that is
+	    not <m>C</m>. Let <m>T</m> be the Möbius transformation 
+	    that takes <m>B\to 1, B'\to -1, C\to \infty</m>, and
+	    let <m>T'</m> be the Möbius transformation that takes <m>C\to 1, C'\to -1, B\to
+	      \infty</m>. One of <m>T,T'</m> takes <m>A</m> to the upper
+	    half-plane, and hence is an element of <m>\HU</m> that make
+	    the doubly-asymptotic triangle given in the Figure.
+	  </li>
+	  <li>The area of the triangle with vertices
+			at <m>1,p,\infty</m> is	
+		<md>
+			  <mrow>\int_{\cos(\pi-\alpha)}^1
+			\int_{\sqrt{1-x^2}}^{\infty}\frac{1}{y^2}
+			  dy\;dx
+			    \amp = \int_{\cos(\pi-\alpha)}^1
+			    \left[-\frac{1}{y}\right]_{\sqrt{1-x^2}}^{\infty}</mrow>
+			  <mrow>\amp =
+			    \int_{\cos(\pi-\alpha)}^1\frac{1}{\sqrt{1-x^2}}dx</mrow>
+			  <mrow>\amp = \left[-\arccos
+			  x\right]_{\cos(\pi-\alpha)}^1</mrow>
+			  <mrow>\amp = \pi-\alpha.</mrow>
+	  </md></li>
+	</ol>
+		      </p>
+			    </commentary>
+
+<!-- Instructor's solution -->
+<commentary>
+  <title>Instructor's solution for <xref ref="asympngonareaexer"/></title>
+  <p>Making the hint more explicit, draw a radius from 0 to each of the
+    vertices of the asymptotic <m>n</m>-gon. This partitions the
+    asymptotic <m>n</m>-gon into <m>n</m> doubly-asymptotic
+    triangles. The <m>n</m> angles <m>\alpha_i</m>
+    made be consecutive radii at 0 sum
+    to <m>2\pi</m>, so the areas of the doubly-asymptotic triangles sum
+    to <m>\sum_i (\pi-\alpha_i) = n\pi -2\pi = (n-2)\pi</m>.
+  </p>
+</commentary>
+    
+    
+	  		    <commentary><title>Instructor's solution for
+	  		    <xref ref="hyperbolic_triangle_area_exer"/></title> 
+			<p>Using
+		      <xref ref="doubasymptriareaexer"/>, the sum of the areas of the six
+			doubly asymptotic triangles in the hint
+		      is <me>2((\pi-\angle A)+(\pi-\angle B)+(\pi-\angle
+			  C)).</me> Subtracting the overcounted
+		      area <m>2\text{ Area}(\triangle ABC)</m> gives the
+			area of the asymptotic hexagon with
+		      vertices <m>A_1,A_2,B_1,B_2,C_1,C_2</m>. We know
+		      this quantity is <m>4\pi</m> by <xref ref="asympngonareaexer"/>.
+		      Rearrange
+		      terms in
+		      <me>2((\pi-\angle A)+(\pi-\angle B)+(\pi-\angle
+			  C))-2\text{ Area}(\triangle ABC)=4\pi</me>
+		      to get the desired area formula.</p>
+		      </commentary>
+
+  </exercises>
+
+  </section>

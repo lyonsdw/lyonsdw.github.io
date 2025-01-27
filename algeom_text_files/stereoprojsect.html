@@ -96,15 +96,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.2';
+eBookConfig.runestone_version = '7.5.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.8b270ccf5298bad1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.d966d31a41778c59.css">
+<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
 <style>
 #frontmatter-3-3-3-2-1 { counter-set: frontmatter-3-3-3-2-1 0; }
 #frontmatter-3-3-3-2-1 > li::marker { content: ""counter(frontmatter-3-3-3-2-1,decimal)"."; }
@@ -565,7 +565,7 @@ S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\,.\tag{1.3.1}
 <div class="para">Let <span class="process-math">\(N=(0,1)\)</span> denote the "north pole" (that is, the point at the "top" of the unit circle). Given a point <span class="process-math">\(P=(x,y)\neq N\)</span> on the unit circle, let <span class="process-math">\(s(P)\)</span> denote the intersection of the line <span class="process-math">\(\overline{NP}\)</span> with the <span class="process-math">\(x\)</span>-axis. See <a href="stereoprojsect.html#stereoprojfig" class="xref" data-knowl="./knowl/xref/stereoprojfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.1">Figure 1.3.1</a>. The map <span class="process-math">\(s\colon S^1\setminus \{N\}\to \R\)</span> given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that <span class="process-math">\(s(x,y)=\frac{x}{1-y}\text{.}\)</span>
 </div>
 </div>
-<figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/../images/stereoproj.png" class="contained"></div>
+<figure class="figure figure-like" id="stereoprojfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/stereoproj.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure><details id="stereoproj1formulaexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="stereoproj1formulaexer-1-1">Draw the relevant similar triangles and verify the formula <span class="process-math">\(s(x,y) = \frac{x}{1-y}\text{.}\)</span>
@@ -601,7 +601,7 @@ S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\,.\tag{1.3.4}
 <div class="para">Let <span class="process-math">\(N=(0,0,1)\)</span> denote the "north pole" (that is, the point at the "top" of the sphere, where the positive <span class="process-math">\(z\)</span>-axis is "up"). Given a point <span class="process-math">\(P=(a,b,c)\neq N\)</span> on the unit sphere, let <span class="process-math">\(s(P)\)</span> denote the intersection of the line <span class="process-math">\(\overline{NP}\)</span> with the <span class="process-math">\(x,y\)</span>-plane, which we identify with the complex plane <span class="process-math">\(\C\text{.}\)</span> See <a href="stereoprojsect.html#stereoproj2fig" class="xref" data-knowl="./knowl/xref/stereoproj2fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.3">Figure 1.3.3</a>. The map <span class="process-math">\(s\colon S^2\setminus \{N\}\to \C\)</span> given by this rule is called <dfn class="terminology">stereographic projection</dfn>. Using similar triangles, it is easy to see that <span class="process-math">\(s(a,b,c)=\frac{a+ib}{1-c}\text{.}\)</span>
 </div>
 </div>
-<figure class="figure figure-like" id="stereoproj2fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/../images/stereoproj2.png" class="contained"></div>
+<figure class="figure figure-like" id="stereoproj2fig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/stereoproj2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span>Stereographic projection</figcaption></figure><div class="para logical" id="stereoprojsect-3-6">
 <div class="para">We extend stereographic projection to the entire unit sphere as follows. We call the set</div>
 <div class="displaymath process-math" id="extendedcomplexsdefn">
@@ -668,12 +668,57 @@ s^{-1}(z) = \begin{cases}
 <em class="alert">Suggestion:</em> Use <a href="stereoprojsect.html#conjtransdefexer" class="xref" data-knowl="./knowl/xref/conjtransdefexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Checkpoint 1.3.4">Checkpoint 1.3.4</a> for the exercises that follow.</div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="stereo1dliftinversion"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="stereo1dliftinversion-1-1">Show that the maps <span class="process-math">\(S^1\to S^1\)</span> given by <span class="process-math">\((x,y)\to (x,-y)\)</span> and <span class="process-math">\(\extR\to \extR\)</span> given by <span class="process-math">\(x\to 1/x\)</span> are conjugate transformations with respect to stereographic projection.</div></article><article class="exercise exercise-like" id="mobiuszrotations"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="mobiuszrotations-1-1">Show that the map <span class="process-math">\(R_{Z,\theta}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to
-(a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)\)</span> (a rotation about the <span class="process-math">\(z\)</span>-axis by angle <span class="process-math">\(\theta\)</span>) and the map <span class="process-math">\(T_{Z,\theta}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to
-e^{i\theta}z\)</span> are conjugate transformations with respect to stereographic projection.</div></article><article class="exercise exercise-like" id="stereo2dliftinversion"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="stereo2dliftinversion-1-1">Show that the map <span class="process-math">\(R_{X,\pi}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to (a,-b,-c)\)</span> (rotation about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi\)</span> radians)	and the map <span class="process-math">\(T_{X,\pi}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to 1/z\)</span> are conjugate transformations with respect to stereographic projection.</div></article><article class="exercise exercise-like" id="mobiusxpiby2rotations"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="mobiusxpiby2rotations-1-1">Show that the map <span class="process-math">\(R_{X,\pi/2}\colon S^2\to S^2\)</span> given by <span class="process-math">\((a,b,c)\to (a,-c,b)\)</span> (rotation about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians) and the map <span class="process-math">\(T_{X,\pi/2}\colon \extC\to \extC\)</span> given by <span class="process-math">\(z\to \frac{z+i}{iz+1}\)</span> are conjugate transformations with respect to stereographic projection.</div></article>
+<div class="para logical" id="stereo1dliftinversion-1-1">
+<div class="para">Let <span class="process-math">\(f\colon S^1\to S^1\)</span> and <span class="process-math">\(g\colon \extR\to
+\extR\)</span> be given by</div>
+<div class="displaymath process-math" id="stereo1dliftinversion-1-1-3">
+\begin{align*}
+f(x,y)\amp =(x,-y)\\
+g(x)\amp =\begin{cases}1/x \amp x\neq 0\\
+\infty \amp x=0\\
+0 \amp x=\infty.\end{cases}
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(f,g\)</span> are conjugate transformations with respect to stereographic projection.</div>
+</div></article><article class="exercise exercise-like" id="mobiuszrotations"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para logical" id="mobiuszrotations-1-1">
+<div class="para">Let <span class="process-math">\(R_{Z,\theta}\colon S^2\to S^2\)</span> and <span class="process-math">\(T_{Z,\theta}\colon \extC\to \extC\)</span> be given by</div>
+<div class="displaymath process-math" id="mobiuszrotations-1-1-3">
+\begin{align*}
+R_{Z,\theta}(a,b,c)\amp =
+(a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)\\
+T_{Z,\theta}(z)\amp = \begin{cases} e^{i\theta}z \amp
+z\neq \infty\\ \infty\amp z=\infty.\end{cases}
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(R_{Z,\theta},T_{Z,\theta}\)</span> are conjugate transformations with respect to stereographic projection.</div>
+</div></article><article class="exercise exercise-like" id="stereo2dliftinversion"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para logical" id="stereo2dliftinversion-1-1">
+<div class="para">Let <span class="process-math">\(R_{X,\pi}\colon S^2\to S^2\)</span> and <span class="process-math">\(T_{X,\pi}\colon \extC\to
+\extC\)</span> be given by</div>
+<div class="displaymath process-math" id="stereo2dliftinversion-1-1-3">
+\begin{align*}
+R_{X,\pi}(a,b,c)\amp =(a,-b,-c)\\
+T_{X,\pi}(z)\amp =\begin{cases}1/z \amp z\neq 0\\
+\infty \amp z=0\\
+0 \amp z=\infty.\end{cases}
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(R_{X,\pi},T_{X,\pi}\)</span> are conjugate transformations with respect to stereographic projection.</div>
+</div></article><article class="exercise exercise-like" id="mobiusxpiby2rotations"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para logical" id="mobiusxpiby2rotations-1-1">
+<div class="para">Let <span class="process-math">\(R_{X,\pi/2}\colon S^2\to S^2\)</span> and <span class="process-math">\(T_{X,\pi/2}\colon \extC\to
+\extC\)</span> be given by</div>
+<div class="displaymath process-math" id="mobiusxpiby2rotations-1-1-3">
+\begin{align*}
+R_{X,\pi/2}(a,b,c)\amp =(a,-c,b)\\
+T_{X,\pi/2}(z)\amp =\begin{cases} \frac{z+i}{iz+1}\amp z\neq i\\
+\infty \amp z=i\\
+-i \amp z=\infty.\end{cases}
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(R_{X,\pi},T_{X,\pi}\)</span> are conjugate transformations with respect to stereographic projection.</div>
+</div></article>
 </div>
 </div>
 <article class="exercise exercise-like" id="stereoprojdiamends"><h4 class="heading">

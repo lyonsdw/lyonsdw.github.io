@@ -1,0 +1,948 @@
+ <section xml:id="elliptic_geometry_section">
+    <title>Elliptic geometry
+    </title>	       
+    <introduction>
+<p>Elliptic geometry is the geometry of the sphere (the 2-dimensional
+surface of a 3-dimensional solid ball), where congruence
+  transformations are the rotations of the sphere about its center.
+</p>
+
+  <p>
+  We will work with three models for elliptic
+  geometry: one based on quaternions, one based on rotations of the
+  sphere, and another that is a subgeometry of Möbius geometry. Using the natural
+  identification <m>xi+yj+zk\leftrightarrow (x,y,z)</m> of the pure
+  quaternions <m>\R^3_\Quat</m>
+  with <m>\R^3</m>, we will
+  write <m>S_\Quat^2</m> to denote the set of unit pure quaternions,
+  that is,
+  <me>S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}.</me>
+  We begin by establishing some basic facts about the relevant
+    transformation groups.
+</p> 
+    </introduction>
+
+    <subsection><title>The group of unit quaternions</title>
+      <p>Recall from <xref ref="quaternionsection"/> that <m>U(\Quat)</m>
+	is the set of quaternions of modulus 1. In fact, <m>U(\Quat)</m>
+	is a group.
+      </p>
+
+      <exercise xml:id="unitquatisgpexer"><statement>Show that <m>U(\Quat)</m> is a group.
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="unitquatisgpexer"/></title>
+  <p>By <xref ref="quatnormmult"/>, <m>U(\Quat)</m> is closed under
+    multiplication. It has identity element 1, and the inverse
+    of <m>r\in U(\Quat)</m> is <m>r^{-1}=r^\ast</m> by <xref ref="quatnormsquare"/>.
+  </p>
+</commentary>
+      
+      <p>
+	Recall that the map <m>M\colon \Quat \to
+	  {\mathcal M}_{\Quat}</m> sends <m>r=a+bi+cj+dk</m> to the
+	matrix 
+	<me>\left[\begin{array}{cc} a+bi \amp c+di\\ -c+di \amp
+	  a-bi\end{array}\right]</me>.
+	The image of <m>U(\Quat)</m> under <m>M</m> is the matrix
+	group
+	<men xml:id="su2def">SU(2)= \left\{\left[\begin{array}{cc} a \amp b\\ -b^\ast \amp
+	  a^\ast\end{array}\right]\colon a,b\in \C,
+	  |a|^2+|b|^2=1\right\},</men><idx>special unitary
+	  group</idx><idx><h>groups, list of</h><h>special unitary group</h>
+	</idx><notation><usage><m>SU(2)</m>
+	  </usage><description>the
+	  special unitary group</description>
+	</notation> called the <em>special unitary</em> group.
+	Restricting the domain
+	of <m>M</m> to <m>U(\Quat)</m> and restricting the codomain
+	of <m>M</m> to <m>M(U(\Quat))=SU(2)</m> is an isomorphism of
+	groups
+	<me>U(\Quat)\approx SU(2).</me>
+      </p>
+
+      <exercise xml:id="su2isgpisounitquitexer"><statement>Show that <m>SU(2)</m> is a group. Show
+	  that <m>M\colon U(\Quat)\to SU(2)</m> is a homomorphism. 
+      </statement>
+      <hint>It is not necessary to perform any new computation to show
+      that <m>M</m> is a homomorphism. Instead, use <xref ref="quatmultdef"/>.
+      </hint>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="su2isgpisounitquitexer"/></title>
+  <p>Notice that <m>SU(2)</m> is the subset <m>{\mathcal M}_\Quat</m>
+  (see <xref ref="quatmatalgprop"/>) of matrices with determinant 1. We
+  know <m>{\mathcal M}_\Quat</m> is closed under matrix multiplication,
+  and determinant is multiplicative (that is, <m>\det(AB)=\det A\det
+  B</m>), so <m>SU(2)</m> is closed under multiplication. The identity
+  matrix is the identity element of <m>SU(2)</m> and the inverse
+  operation is given
+  by <m>\twotwo{a}{b}{-b^\ast}{a^\ast}^{-1}=\twotwo{a\ast}{-b}{b^\ast}{a}</m>. Alternatively,
+  the fact that <m>SU(2)</m> is a group follows from the fact that it is
+  the set of matrices with determinant 1 that preserve the complex inner
+    product on <m>\C^2</m>. That the map <m>M\colon
+      U(\Quat)\to SU(2)</m> is a homomorphism is a consequence of 
+  the <em>definition</em> of quaternion multiplication
+    <xref ref="quatmultdef"/>, namely, <m>rs=M^{-1}(M(r)M(s))</m>
+    for quaternions <m>r,s</m>. Applying <m>M</m> to both sides, we have
+    <m>M(rs)=M(r)M(s)</m>.
+  </p>
+</commentary>
+      
+    <p>The action of a unit quaternion as a rotation on <m>\R^3_\Quat</m> (see
+      <xref ref="quatrotprop"/>) takes the sphere <m>S^2_\Quat</m>
+      to itself. The action of the group <m>U(\Quat)</m>
+      on <m>S^2_\Quat</m> defines a model of elliptic geometry.
+    </p>
+
+    <definition>
+      The <term>quaternion model</term>
+      <idx><h>elliptic geometry</h><h>quaternion model</h></idx>
+      <idx><h>geometries, list of</h>
+	<h>elliptic geometry</h><h>quaternion model</h></idx>      
+      of elliptic geometry is <m>(S^2_\Quat,U(\Quat))</m>.
+    </definition>
+
+        <exercise xml:id="unitquatactionons2exer"><statement>Show that the map <m>U(\Quat)\to
+	  \Perm(S^2_\Quat)</m> given by
+	<me>r \to \left[ v\to rvr^\ast \right]</me> is a group action.
+      </statement>
+	</exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="unitquatactionons2exer"/></title>
+  <p>The fact that the given map is a homomorphism is part (a) of <xref ref="quatrotcompinvexer"/>.
+  </p>
+</commentary>
+	
+    
+    </subsection>
+    
+    <subsection xml:id="rotgp"><title>The group of rotations of the
+	2-sphere</title>
+      
+      <p>Let <m>R_{{v},\theta}</m><notation><usage><m>R_{v,\theta}</m>
+	  </usage><description>rotation
+	    about the axis <m>v</m> by angle <m>\theta</m>
+	  </description>
+	</notation>
+	denote the rotation of <m>\R^3</m>
+about the axis given by a unit vector <m>{v}</m> by an
+angle <m>\theta</m>. We use the standard orientation, so that a positive
+value of <m>\theta</m> is a counterclockwise rotation of the plane
+orthogonal to <m>{v}</m>, as viewed from "above" where <m>{v}</m> points
+	in the "up" direction. See <xref ref="vectangrot_fig"/>.</p>
+
+	            	         <figure xml:id="vectangrot_fig">
+				   <caption>The
+				   rotation <m>R_{v,\theta}</m> about
+				     the vector <m>v</m> by the angle <m>\theta</m>
+      </caption>
+            <image width="40%" source="images/vectangrot.png"></image>
+           </figure>
+
+				 <p><alert>Notation convention:</alert>
+				   For readability and convenience, we
+	  write <m>R_{X,\theta},R_{Y,\theta},R_{Z,\theta}</m> to denote
+	  rotations by <m>\theta</m> radians about the standard basis
+	    vectors <m>(1,0,0), (0,1,0), (0,0,1)</m>, respectively.
+	</p>
+
+ <p>We will write <m>\Rot(S^2)</m> to denote the set
+	<me>\Rot(S^2)=\{R_{{v},\theta}\colon
+	  {v}\in\R^3,|{v}|=1,\theta\in\R\}</me>				   
+   of all rotations. 
+	To see why
+	  the set <m>\Rot(S^2)</m> is a group<fn>For the purpose of a
+	  self-contained exposition based on elementary geometry, using
+	  only complex and quaternion algebra, we do not utilize the
+	  fact that <m>\Rot(S^2)</m> is the
+	  group <m>SO(3)</m> of orthogonal transformations
+	  of <m>\R^3</m> with determinant 1.</fn> under the operation of
+	  composition, consider the map <m>U(\Quat)\to \Rot(S^2)</m>
+	  given by <m>r\to R_r</m> established by
+	  <xref ref="quatrotprop"/>. The fact that
+	<m>R_r\circ R_s = R_{rs}</m> (see
+	<xref ref="quatrotcompinvexer"/>) implies that the composition
+	of two rotations is a rotation. The remaining group properties
+	are straightforward. Once we have proved that <m>\Rot(S^2)</m>
+	is a group, the same equation <m>R_r\circ R_s = R_{rs}</m> shows
+	that the map <m>r\to R_r</m> is a homomorphism of
+	groups <m>U(\Quat)\to \Rot(S^2)</m>. The kernel of this
+	homomorphism is <m>\{\pm 1\}</m>. This
+	establishes an isomorphism
+	<me>U(\Quat)/\{\pm 1\} \approx \Rot(S^2).</me>
+      </p>
+
+      <exercise xml:id="s2rotisgpexer"><statement>Complete the details to show
+      that <m>\Rot(S^2)</m> is a group. Show that the kernel of the
+      homomorphism <m>U(\Quat)\to \Rot(S^2)</m> given by <m>r\to
+	    R_r</m> is <m>\{\pm 1\}</m>.
+	</statement>
+	<hint>Use <xref ref="quatrotprop"/>.</hint>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="s2rotisgpexer"/></title>
+  <p>The results of <xref ref="quatrotcompinvexer"/> imply
+    that <m>\Rot(S^2)</m> is a group with identity element <m>R_1</m>
+    and inverse given
+    by <m>(R_r)^{-1}=R_{r^\ast}</m>. Now let <m>r=\cos \theta +
+      u\sin\theta </m> for some pure quaternion <m>u</m>. <xref ref="quatrotprop"/> says that <m>R_r</m>
+    is a rotation by <m>2\theta</m>, so if <m>R_r=R_1</m>, then we must
+    have <m>\theta = k\pi</m> for some <m>k\in
+    \Z</m>. Therefore <m>r=\cos(k\pi) = \pm 1</m>, as claimed.
+  </p>
+</commentary>
+      
+
+          <definition>
+	    The <term>spherical model</term>
+	    <idx><h>elliptic geometry</h><h>spherical model</h></idx>
+	    <idx><h>geometries, list of</h>
+	      <h>elliptic geometry</h><h>spherical model</h></idx>	    
+	    of elliptic geometry is <m>(S^2,\Rot(S^2))</m>.
+    </definition>
+
+      <p>We conclude with a useful fact about constructing arbitrary
+      rotations by composing rotations from a specific set elementary
+	types, namely, rotations about the <m>z</m>-axis by arbitrary
+	angles, and rotations about the <m>x</m>-axis by <m>\pi/2</m>
+	radians. We start with a Lemma that shows how to do this
+      for <m>y</m>-axis rotations.
+      </p>
+
+      <lemma><title>Rotations about the <m>y</m>-axis
+	</title><statement>An arbitrary rotation about the <m>y</m>-axis
+	  is a composition of a rotations about the <m>x</m>-axis
+	  by <m>\pi/2</m> radians with a rotation about
+	  the <m>z</m>-axis. Specifically, we have the following.
+	<men xml:id="yrotdecomp">R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}</men>
+	</statement>
+	<proof>Visualize! You can also verify by checking that both
+	sides of <xref ref="yrotdecomp"/> yield the same result when
+	evaluated on the three standard basis vectors. Yet another proof
+	is to do a quaternion computation.</proof>
+      </lemma>
+
+      <proposition xml:id="rotgenprop"><title>Generators for <m>\Rot(S^2)</m>
+	</title>
+	<statement>The set <me>\{R_{Z,\theta}\colon \theta\in
+	    \R\}\cup \{R_{X,\pi/2}\}</me> is a generating set
+	    for <m>\Rot(S^2)</m>. This means that any rotation may be
+	  written as a composition of rotations about the <m>z</m>-axis
+	  and rotations about the <m>x</m>-axis by <m>\pi/2</m> radians.
+	</statement>
+	<proof>Consider a model of the
+	  sphere printed with a map of the world (i.e., a geographic
+	  globe) in such a way that the north pole is on top of the
+	  sphere and Greenwich, England (at zero degrees longitude) is
+	  in the <m>x,z</m>-plane. The sphere in the upper left of
+	  <xref ref="rotation_decomposition_fig"/> depicts this "start"
+	  position of the north pole <m>N</m>, Greenwich <m>G</m>, and
+	  the great circle <m>C</m> that is the intersection of the sphere with
+	  the <m>x,z</m>-plane (<m>C</m> is shown in red in all four
+	  spheres for reference). Now let <m>R</m> be an
+	  arbitrary rotation. The sphere in the upper right of 
+	  <xref ref="rotation_decomposition_fig"/> shows how <m></m>
+	  <m>N</m>, <m>G</m>, and <m>C</m> are transformed by <m>R</m>.
+	  The rest of the diagram shows how we can write <m>R^{-1}</m> as a composition
+	  of rotations by "putting the north pole back on top" and
+	  "putting zero degrees back in place", as follows. From the
+	  upper right in the diagram, we "put the north
+	  pole back" by first performing a rotation <m>R_{Z,\theta_1}</m>
+	  about the <m>z</m>-axis that
+	  brings the north pole into the <m>x,z</m>-plane. Next, we
+	  perform the rotation
+	  <m>R_{Y,\theta_2}</m> about the <m>y</m>-axis (use the Lemma)
+	  to bring the north pole back to the top. Finally, we perform a
+	  rotation <m>R_{Z,\theta_3}</m> to bring Greenwich back home in
+	  the <m>x,z</m>-plane.  Reading clockwise from the upper left
+	  of the diagram, the sequence of transformations
+	  <me>R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}</me>
+	  takes the north pole <m>N</m> through the sequence
+	  <me>N\to R(N)\to N' \to N''=N\to N</me>. 
+	  Meanwhile, <m>G</m> traces the path
+	  <me>G\to R(G)\to
+	  G'\to G''\to G </me> while the great circle <m>C</m> is
+	  transformed in the sequence
+	  <me>C\to R(C) \to C' \to C''\to C.</me>
+	  This leads to the decomposition
+	  <m>R=R_{Z,-\theta_1}\circ R_{Y,-\theta_2}\circ R_{Z,-\theta_3}</m>.
+	       <figure xml:id="rotation_decomposition_fig">
+       <caption>Decomposition of the rotation <m>R</m>
+      </caption>
+            <image width="100%" source="images/rot_decomp2.png"></image>
+           </figure>
+
+	</proof>
+      </proposition>
+
+    </subsection>
+
+    <subsection xml:id="ellipticsubgpssubsec"><title>The elliptic subgroup of the Möbius group</title>
+
+      <p>
+      </p>
+
+      <p>
+	Let 
+<me>\S=\{s\circ R\circ s^{-1} \;\;\colon \;\;R\in
+	  \Rot(S^2)\}</me><notation><usage><m>\S</m>
+	  </usage><description>the elliptic group</description>
+      </notation>
+	denote the group of transformations
+	of <m>\extC</m> that are conjugate to rotations of <m>S^2</m>
+via the stereographic projection <m>s</m>.
+	 The group <m>\S</m> is called
+	  the <term>elliptic group</term><idx>elliptic
+	  group</idx> <idx><h>groups, list of</h><h>elliptic
+	  group</h> </idx>. It is easy to check that the map <m>\Rot(S^2)\to
+	  \S</m> given by <m>R\to s\circ R\circ s^{-1}</m> is an
+	  isomorphism of groups, so we have
+	<me>\S\approx \Rot(S^2).</me>
+      </p>
+
+            <exercise xml:id="ellipticgpisgpexer"><statement>Show that <m>\S</m> is indeed a group. 
+	 Show that <m>R\to s\circ R\circ s^{-1}</m> is a group
+		isomorphism <m>\Rot(S^2)\to \S</m>.
+	</statement>
+	    </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticgpisgpexer"/></title>
+  <p>It is easy to see that <m>R\to s\circ R\circ s^{-1}</m> is a group
+    isomorphism with inverse <m>S\to s^{-1}\circ S\circ s</m>. The
+    conjugate of a composition is the composition of conjugates, and the
+    conjugate of an inverse is the inverse of the conjugate.
+  </p>
+</commentary>
+	    
+	    
+	<p>
+	  Exercises in <xref ref="stereoprojsect"/> show that <m>s\circ
+	  R_{Z,\theta}\circ s^{-1}</m> the Möbius
+	  transformation <m>T_{Z,\theta}</m> given by <m>z\to e^{i\theta}z</m>
+	  (see
+	  <xref ref="mobiuszrotations"/>) and that <m>s\circ
+	  R_{X,\pi/2}\circ s^{-1}</m> is the Möbius
+	  transformation <m>T_{X,\pi/2}</m> given by <m>z\to \frac{z+i}{iz+1}</m>
+	  (see
+	  <xref ref="mobiusxpiby2rotations"/>). The fact (<xref ref="rotgenprop"/>) that rotations
+	  of the form <m>R_{Z,\theta},R_{X,\pi/2}</m>
+	  generate <m>\Rot(S^2)</m>  implies that the Möbius
+	  transformations <m>T_{Z,\theta}</m> and <m>T_{X,\pi/2}</m> generate <m>\S</m>. Therefore <m>\S</m>
+	  is in fact a subgroup of the Möbius group. 
+	</p>
+
+    <definition>
+      The <term>Möbius subgeometry model</term>
+      <idx><h>elliptic geometry</h><h>Möbius subgeometry model</h> </idx>
+      <idx><h>geometries, list of</h><h>elliptic geometry</h><h>Möbius
+      subgeometry model</h>
+      </idx>
+      of elliptic geometry is <m>(\extC,\S)</m>.
+    </definition>
+	    
+
+	<p>We can say more about the specific form of elements
+	  in <m>\S</m> in terms of the group homomorphism <m>{\mathcal
+	    T}\colon GL(2,\C)\to \M</m> that sends the
+	  matrix <m>\left[\begin{array}{cc} a\amp b\\ c\amp
+	    d\end{array}\right]</m> to the Möbius
+	  transformation <m>z\to \frac{az+b}{cz+d}</m> (see
+	  <xref ref="gl2tomobgp"/>). Observe that the transformations
+	  <mdn>
+	    <mrow xml:id="tzthetaassu2image">
+	      T_{Z,\theta} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
+	      e^{i\theta/2} \amp 0\\ 0 \amp
+	      e^{-i\theta/2}\end{array}\right]\right)
+	    </mrow>
+	    <mrow xml:id="txpiby2assu2image">
+	      T_{X,\pi/2} \amp= {\mathcal T}\left(\left[\begin{array}{cc}
+	      \frac{1}{\sqrt{2}}\amp \frac{i}{\sqrt{2}}\\
+	      \frac{i}{\sqrt{2}}\amp \frac{1}{\sqrt{2}}\end{array}\right]\right)
+	    </mrow>
+	  </mdn>
+	  are images of elements of the group <m>SU(2)</m> (see
+	  <xref ref="su2def"/>). Because <m>T_{Z,\theta},T_{X,\pi/2}</m>
+	  generate <m>\S</m>,
+	  it follows that every element
+	  of <m>\S</m> is the image under <m>{\mathcal T}</m>
+	  of an element of <m>SU(2)</m>.
+	</p>
+
+	<exercise xml:id="ellipticgpgenexer">
+	  <statement>Let <m>M_{Z,\theta},M_{X,\pi/2}</m> denote the
+	    matrices <m>\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
+	    \twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}</m>,
+	    respectively.  Verify that <m>M_{Z,\theta},M_{X,\pi/2}</m>
+	    are indeed elements of <m>SU(2)</m>. Verify
+	    <xref ref="tzthetaassu2image"/> and
+	    <xref ref="txpiby2assu2image"/>.  Explain the final comment
+	    in the paragraph above. Why does it follow that every
+	    element of <m>\S</m> is the image of an element
+	    of <m>SU(2)</m>?
+	  </statement>
+	</exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticgpgenexer"/></title>
+  <p>
+    The matrices <m>M_{Z,\theta},M_{X,\pi/2}</m>
+  meet the criteria of membership in <m>SU(2)</m> with <m>a=e^{i\pi/2},
+      b=0</m> for <m>M_{Z,\theta}</m> and 
+    and <m>a=1/\sqrt{2},b=i/\sqrt{2}</m>
+    for <m>M_{X,\pi/2}</m>. That is, the entries have the
+  form <m>\twotwo{a}{b}{-b^\ast}{a^\ast}</m> and
+  satisfy <m>|a|^2+|b|^2=1</m>. The fact that Equations <xref ref="tzthetaassu2image"/> and
+	    <xref ref="txpiby2assu2image"/> hold is a byproduct of
+  Exercises <xref ref="mobiuszrotations"/> and
+  <xref ref="mobiusxpiby2rotations"/>, respectively. To see why every
+  element in <m>\S</m> is the image under <m>{\mathcal T}</m> of an
+  element of <m>SU(2)</m>, let <m>S\in \S</m>, and write <m>S</m> as a
+  composition <m>S=T_1\circ T_2 \circ \cdots \circ T_k</m>, where each <m>T_i</m>
+is of the form
+  form of one of <m>T_{Z,\theta},T_{X,\pi/2}</m>. Then we have
+  <md>
+    <mrow>S\amp ={\mathcal T}(M_1)\circ {\mathcal T}(M_2) \circ \cdots \circ {\mathcal T}(M_k)</mrow>
+    <mrow>\amp = {\mathcal T}(M_1M_2\cdots M_k)</mrow>
+  </md>
+  where each <m>M_i</m> is of the form of one
+    of <m>M_{Z,\theta},M_{X,\pi/2}</m>.  
+  </p>
+</commentary>
+	
+
+	<p>
+	Thus we have proved the following
+	explicit formula for elements of <m>\S</m>.
+	</p>
+
+	<proposition xml:id="ellipticgpissu2imageprop"><title>Formula for transformations in the elliptic group
+	  </title>
+	  <statement><p> A map <m>T</m> is an element of <m>\S</m>
+	      if and only if <m>T</m> may be written in the form
+	      <m>Tz=\frac{az+b}{-b^\ast z+a^\ast}</m> for
+	      some <m>a,b\in \C</m>
+	      with <m>|a|^2+|b|^2=1</m>. 
+	    </p>
+	  </statement>
+	</proposition>
+
+	<p>
+	  Setting <m>e^{i\theta}=\frac{a}{a^\ast}</m>
+	  and <m>z_0=\frac{-b}{a}</m>, we have the following alternative
+	  form for <m>T\in \S</m>.
+	  <men xml:id="ellipticgp0inftyform">Tz=e^{i\theta}\frac{z-z_0}{z_0^\ast z+1}</men>
+	</p>
+    </subsection>
+    
+    <subsection><title>Circles in <m>S^2</m> and clines in <m>\extC</m>
+      </title>
+
+      <p>A <em>circle</em> in <m>S^2</m> is a circle in a plane
+	intersecting <m>S^2</m>. A <term>great circle</term><idx>great
+	circle</idx> is the intersection of <m>S^2</m> with a plane
+	through the origin. In elliptic geometry, a great circle is
+	called an <term>elliptic straight line</term> because the path
+	of shortest length connecting two given points in <m>S^2</m> is
+	an arc of a great circle. Circles in <m>S^2</m> that are not
+	great circles are called <term>elliptic cycles</term>. Elliptic
+	straight lines and elliptic cycles in the Möbius
+	subgeometry model <m>(\extC,\S)</m> are stereographic projections of
+	elliptic straight lines and elliptic cycles in the spherical
+	model. It turns out that elliptic straight lines and elliptic cycles in <m>\extC</m> are in
+	fact clines. Here is the statement and proof.
+      </p>
+
+             <proposition><title>Stereographic projection takes circles to clines</title>
+	 <statement> Let <m>C</m> be a circle that is the intersection
+	   of <m>S^2</m> with a plane in <m>\R^3</m>.
+	   If <m>C</m> contains the north
+	   pole <m>(0,0,1)</m> of <m>S^2</m>, then <m>s(C\setminus\{(0,0,1)\})</m> is a Euclidean straight
+	   line in <m>\C</m>. Otherwise, <m>s(C)</m> is a circle in <m>\C</m>.
+	 </statement>
+	 <proof>Proof sketch: The statement about the case when <m>C</m> contains the
+	 north pole is geometrically clear. 
+	   For the case when <m>C</m> does not contain <m>(0,0,1)</m>, choose
+	   a rotation <m>R</m> of <m>S^2</m> that takes some point
+	 on <m>C</m> to the north pole. Again, let <m>T=s\circ R\circ s^{-1}</m> be the conjugate element
+	   in <m>\S</m>. It is clear that <m>R</m> takes <m>C</m> to a
+	   circle, that <m>s</m> takes <m>R(C)</m> to a Euclidean
+	 straight line, 
+	   and that <m>T^{-1}</m> takes <m>s(R(C))</m> to a cline
+	   (because <m>T^{-1}</m> is a Möbius
+	    transformation!). Thus <m>s(C)=(T^{-1}\circ s\circ R)(C)</m>
+	   is a cline. Because <m>(0,0,1)</m> is not on <m>C</m>, it
+	   must be that <m>\infty</m> is not on <m>s(C)</m>,
+	   so <m>s(C)</m> is a circle in <m>\C</m>.
+	 </proof>
+       </proposition>
+    </subsection>
+    
+    <subsection><title>Angles and orientation on <m>S^2</m>
+      </title>
+
+      <p> The standard orientation for angles on <m>S^2</m> (see
+	<xref ref="rotgp"/>) is also called the
+	<em> outward-pointing normal</em>
+	orientation. The standard orientation measures angles from the
+	viewpoint of an observer standing on the <em>outside</em> of the sphere.
+	The <em>inward-pointing normal</em> orientation is
+	the reverse orientation that measures angles from the viewpoint
+	of an observer walking on the inside of the sphere. See <xref ref="two_orientations_fig"/>.
+      </p>
+
+      	            	         <figure xml:id="two_orientations_fig">
+				   <caption>Two orientations on the
+				     sphere: oriented angle <m>\angle
+				     PQR</m> is positive viewed from the
+				     outward-pointing normal
+				     vector <m>v</m>, but is negative
+				     viewed from the inward-pointing
+				     vector <m>-v</m>.
+      </caption>
+            <image width="60%" source="images/2orientations.png"></image>
+           </figure>
+
+
+<corollary><title>Stereographic projection is conformal</title>
+	  <statement><p>Stereographic projection preserves oriented
+	  angles with respect to the inward-pointing normal
+	  orientation. 
+	    </p>
+	  </statement>
+	  <proof>Proof sketch: Begin with the special case of curves <m>C_1,C_2</m>
+	    that intersect at the south
+	    pole <m>S=(0,0,-1)</m>. The lines <m>L_1,L_2</m> that are tangent
+	    to <m>C_1,C_2</m> at <m>S</m> lie in
+	    planes <m>\Pi_1,\Pi_2</m>
+	    that contain the south pole and the origin. The
+	    tangents <m>L_1,L_2</m> also lie in the plane <m>z=-1</m>
+	    tangent to the sphere at the south pole.
+	    It is clear
+	    that the lines <m>L_1',L_2'</m> tangent
+	    to <m>s(C_1),s(C_2)</m> at <m>s(S)=0</m>
+	    are straight lines 
+	    that intersect at the origin. The angle made
+	    by <m>L_1,L_2</m> is the same as the angle made by the
+	    planes <m>\Pi_1,\Pi_2</m>, but with inward-normal
+	    orientation! See <xref ref="stereo_conformal_fig"/>.
+	    Now suppose two
+	    curves intersect at <m>P</m>. Choose a rotation <m>R</m>
+	    of <m>S^2</m> that takes <m>P</m> to the south pole, and
+	    let <m>T=s\circ R\circ s^{-1}</m> be the conjugate element
+	    in <m>\S</m>. It is clear that <m>R</m>
+	    and <m>T</m> are conformal (because <m>T</m> is a Möbius
+	    transformation!). Now the fact that <m>s</m> is conformal
+	    at <m>(0,0,-1)</m> implies that <m>s=T^{-1}\circ s\circ
+	      R</m> is conformal at <m>P</m>.
+	    	       <figure xml:id="stereo_conformal_fig">
+		 <caption>Stereographic projection is conformal at <m>S=(0,0,-1)</m>.
+      </caption>
+            <image width="60%" source="images/stereo_conformal.png"></image>
+           </figure>
+	  </proof>
+
+	</corollary>
+
+	
+    </subsection>
+
+    
+    <subsection><title>Elliptic length and area</title>
+      <p>The distance between points <m>P,Q</m> on <m>S^2</m> is the
+      length of the arc of a great circle that connects them. Because
+      the sphere has radius 1, the arc
+	length is the same as the radian measure of the angle <m>\angle
+	  POQ</m>, where <m>O</m> is the origin. From vector calculus,
+	we
+	have the following dot product formula.
+	<me>(\overrightarrow{OP})\cdot (\overrightarrow{OQ})=|\overrightarrow{OP}||\overrightarrow{OQ}|\cos(\angle
+	  POQ)</me>
+	Solving for <m>\cos(\angle POQ)</m>, we obtain the formula for
+	the distance <m>d_{S^2}(P,Q)</m> between points <m>P,Q</m> in <m>S^2</m>.
+	<men xml:id="s2metric">d_{S^2}(P,Q)=\cos^{-1}\left((\overrightarrow{OP})\cdot (\overrightarrow{OQ})\right)</men>
+      </p>
+
+      <p>To "transfer" the metric <xref ref="s2metric"/> to <m>\extC</m> by
+	stereographic projection means that we define the elliptic
+	metric <m>d_{\extC}</m>
+	on <m>\extC</m> by the following.
+	<men xml:id="elliptic_metric_def">d_{\extC}(p,q):=d_{S^2}(s^{-1}(p),s^{-1}(q))</men>
+      </p>
+
+      <proposition xml:id="elliptic_metric_is_invariant"><statement><p>The elliptic metric
+      <xref ref="elliptic_metric_def"/> is invariant under the action of
+      the elliptic group. That is, we have
+      <men>d_{\extC}(p,q) = d_{\extC}(Tp,Tq)</men>
+      for all <m>p,q\in \extC</m> and for all <m>T\in\S</m>.
+	  </p>
+	</statement>
+<!--	<proof>See <xref ref="ellipticmetinvexer"/>.</proof>-->
+      </proposition>
+
+	<p>
+	In order to obtain a formula for computing <m>d_{\extC}(p,q)</m>, we
+	follow the same procedure
+	for hyperbolic distance. First, we find the
+	distance <m>d_{\extC}(0,u)</m>, where <m>0\leq u\leq
+	  1</m>. Let <m>S=(0,0,-1)=s^{-1}(0)</m> and
+	let <m>U=s^{-1}(u)</m>. Let <m>0=(0,0,0)</m>, let 
+	<m>N=(0,0,1)</m>, let <m>\alpha =
+	    \angle SNU</m> and let <m>\theta = \angle SOU</m> (see
+	    <xref ref="elliptic_distance_fig"/>). 
+      It is a simple exercise to
+	show that <m>\alpha = \theta/2</m>, so that we
+	have
+	<men xml:id="ellipticdist0u"> d_{\extC}(0,u)=d_{S^2}(S,U)=\theta = 2\alpha=2\arctan u. </men>
+      </p>
+
+     <figure xml:id="elliptic_distance_fig">
+       <caption>Transferring the natural metric on <m>S^2</m>
+       to <m>\extC</m> via stereographic projection.
+      </caption>
+            <image width="60%" source="images/elliptic_distance.png"></image>
+           </figure>
+
+
+    <exercise xml:id="ellipticdistlemmaexer"><statement>Show that <m>\theta/2=\alpha=\arctan u</m> in
+    <xref ref="elliptic_distance_fig"/>.
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticdistlemmaexer"/></title>
+  <p>We have <m>\angle ONU = \alpha</m>, so <m>\angle NUO = \alpha</m>,
+    so <m>\angle UON = \pi-2\alpha</m>, so <m>\theta = \angle SOU =
+      \pi-(\pi-2\alpha)=2\alpha</m>. We
+    have <m>\frac{u}{1}=\tan\alpha</m>, so <m>\alpha = \arctan u</m>.
+  </p>
+</commentary>
+    
+    
+    <p>For the general case, let <m>z_1,z_2\in \extC</m>. Because 
+
+      and let
+      <m>Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}</m> be the
+      transformation in <m>\S</m> (using the form <xref ref="ellipticgp0inftyform"/>)
+      that sends <m>z_1\to 0</m> and <m>z_2\to u\geq 0</m>. Applying
+      <xref ref="ellipticdist0u"/>, we have the elliptic distance
+      formula in <m>\extC</m>.
+      <men xml:id="ellipticdist">d_{\extC}(z_1,z_2)=2\arctan
+	\left|\frac{z_2-z_1}{z_1^\ast z_2 + 1}\right|</men>
+      Now let <m>\gamma</m> be a parametric curve <m>z(t)=x(t)+iy(t)</m>
+      in <m>\extC</m>. Using the same argument as in the
+	paragraph preceding the hyperbolic length integral formula
+	<xref ref="hyperboliclengthformula"/>, using the first order
+	Taylor approximation <m>\arctan u \approx u</m> and making the
+	appropriate changes, we arrive at
+	the elliptic length integral formula.
+      <men xml:id="ellipticlengthformula">\text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt</men>	
+    </p>
+
+    <exercise xml:id="ellipticdsexer"><statement>Show that the first order Taylor approximation
+	for <m>\arctan u</m> is <m>u</m>. Complete the details of
+	modifying the derivation of the hyperbolic length integral
+	formula to obtain the elliptic length integral formula.
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticdsexer"/></title>
+  <p>Integrating the geometric series
+    <me>\frac{1}{1+x^2} = 1-x^2+x^4 -x^6 + \cdots </me>
+    term by term yields
+    <me>\arctan x = x-\frac{x^3}{3}+ \frac{x^5}{5} - \cdots .</me>
+    We have <m>z_2-z_1\approx z'(t)\;dt</m> and <m>z_1^\ast z_2 + 1
+    \approx |z(t)|^2 + 1</m>.
+  </p>
+</commentary>
+    
+
+        <exercise xml:id="ellipticcircumexer"><p>Find the length of the elliptic cycle parameterized
+	by <m>z(t) = \alpha e^{it}</m> for <m>0\leq t\leq 2\pi</m>, where <m>0\lt \alpha\leq 1</m> .
+      </p>
+	</exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticcircumexer"/></title>
+  <p>We have
+    <md>
+      <mrow>\text{circumference } \amp = 2\int_0^{2\pi} \frac{\alpha}{1+\alpha^2}dt</mrow>
+      <mrow>\amp = \frac{4\pi\alpha}{1+\alpha^2}.</mrow>
+    </md>
+    In terms of <m>r=d_{\extC}(0,\alpha)= 2\arctan \alpha</m>, we have
+    <m>\alpha = \tan \frac{r}{2}</m>, so
+    <me>\text{circumference } = \frac{4\pi\alpha}{1+\alpha^2} =
+    4\pi\frac{\tan \frac{r}{2}}{\sec^2 \frac{r}{2}}=
+    4\pi\sin\frac{r}{2} \cos \frac{r}{2} = 2\pi \sin r.</me>
+  </p>
+</commentary>
+	
+
+    <p> Using the same argument as in the
+	paragraph preceding the hyperbolic area integral formula
+	<xref ref="hyperbolicareaintformula"/>, using the elliptic length
+	differential <m>ds=\frac{2|z'(t)|\;dt}{1-|z(t)|^2}</m> in place
+	of the hyperbolic length differential and making the appropriate
+	changes, we obtain
+	the elliptic area integral formula.
+      <men xml:id="ellipticareaintformula">\text{Area}(R)=\iint_R
+	      dA = \iint_R \frac{4r\;dr\;d\theta}{(1+r^2)^2}.</men>
+    </p>
+
+        <exercise xml:id="ellipticdiskareaexer"><p>Find the area of the elliptic disk <m>\{|z|\leq
+	  \alpha\}</m>, for <m>0\lt \alpha\lt 1</m>.
+      </p>
+	</exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticdiskareaexer"/></title>
+  <p>We have
+    <md>
+      <mrow>\text{Area } \amp = \int_0^{2\pi} \int_0^\alpha \frac{4\;dr\;d\theta}{(1+r^2)^2}      </mrow>
+      <mrow>\amp = 2\int_0^{2\pi} \left[ \int_1^{1+\alpha^2}
+	\frac{du}{u^2}\right] d\theta \;\;(\text{for }u=1+r^2)</mrow>
+      <mrow>\amp =
+	2\int_0^{2\pi}\frac{\alpha^2}{1+\alpha^2}d\theta</mrow>
+      <mrow>\amp = \frac{4\pi\alpha^2}{1+\alpha^2}.</mrow>
+          </md>
+      In terms of <m>r=2\arctan \alpha</m>, we
+      have <m>\alpha=\tan\frac{r}{2}</m> and
+      <me>\text{Area } = \frac{4\pi\alpha^2}{1+\alpha^2} = \frac{4\pi
+      \tan^2\frac{r}{2}}{\sec^2\frac{r}{2}} = 4\pi \sin^2 \frac{r}{2}.</me>
+  </p>
+</commentary>
+	
+
+    </subsection>
+    
+    <exercises>
+
+        <commentary component="instructor">
+      <p><alert>Essential exercises:</alert>
+	<xref text="local" ref="threeellipticmodelssameexer"/>,
+	<xref text="local" ref="ellipticmetinvexer"/>,
+	<xref text="local" ref="twogonareaexer"/>,
+        <xref text="local" ref="elliptic_triangle_area_exer"/>
+	</p>
+      <p><alert>At least discuss the idea:</alert>
+	</p>
+	  <p><alert>May be omitted:</alert>
+   	  </p>
+</commentary>
+      
+      <exercise xml:id="threeellipticmodelssameexer"><statement>Show that the three models of
+		  elliptic geometry are equivalent.</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="threeellipticmodelssameexer"/></title>
+  <p>The three models for elliptic geometry
+  are <m>(S^2_\Quat,U(\Quat))</m>, <m>(S^2,\Rot(S^2))</m>,
+    and <m>(\extC,\S)</m>.
+    The maps 
+    <me>\begin{array}{ccccc}
+      S^2_\Quat \amp \longleftrightarrow \amp S^2 \amp
+      \longrightarrow \amp \extC\\
+      xi+yj+zk \amp \longleftrightarrow \amp (x,y,z) \amp
+      \stackrel{s}{\longrightarrow} \amp \frac{x+iy}{1-z}
+\end{array}      
+    </me>
+    are clearly bijections. The correspondences
+    <me>r \leftrightarrow R_r \leftrightarrow s\circ R_r \circ
+      s^{-1}</me>
+    that have been established in the exposition and the exercises
+      establish the necessary conjugacies for elements
+    of <m>U(\Quat),\Rot(S^2),\S</m>.
+  </p>
+</commentary>
+      
+
+      <exercise xml:id="ellipticmetinvexer">
+	<statement><p>Prove <xref ref="elliptic_metric_is_invariant"/>.
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="ellipticmetinvexer"/>
+  (proof of <xref ref="elliptic_metric_is_invariant"/>)</title>
+  <p>Let <m>T\in \S</m> so that <m>T=s\circ R\circ s^{-1}</m> for
+    some <m>R\in \Rot(S^2)</m>. We have
+    <md>
+      <mrow>d_{\extC}(Tp,Tq) \amp = d_{\extC}(sRs^{-1}p,sRs^{-1}q)</mrow>
+      <mrow>\amp = d_{S^2}(Rs^{-1}p,Rs^{-1}q)
+	\;\;(\text{by definition } <xref ref="elliptic_metric_def"/>)</mrow>
+      <mrow>\amp = d_{S^2}(s^{-1}p,s^{-1}q)
+	\;\;(d_{S^2}\text{ is invariant under rotation }R)</mrow>
+      <mrow>\amp = d_{\extC}(p,q)
+	\;\;(\text{by definition } <xref ref="elliptic_metric_def"/>).</mrow>
+    </md>
+  </p>
+</commentary>
+
+
+    <exercisegroup xml:id="elliptic_triangle_area_exergroup"><title>Area
+	of an elliptic triangle</title> <introduction>The following
+	sequence of exercises establishes the area formula for elliptic triangles.
+      </introduction>
+
+      <exercise xml:id="twogonareaexer"><title>Area of an elliptic
+	  2-gon</title><statement>
+	  <p>An <term>elliptic 2-gon</term><idx><h>elliptic geometry</h><h>2-gon</h>
+	    </idx> is a figure with two vertices connected by two
+	    elliptic line segments. In <m>\extC</m>, any 2-gon is
+	    congruent to a set of the form <m>R_{\alpha} :=\{z\in \C\colon
+	    0\leq \arg z \leq \alpha\}\cup \{\infty\}</m> for
+	    some <m>\alpha</m> in the range <m>0\leq \alpha\lt
+	    2\pi</m>. See <xref ref="two_gon_fig"/>.
+	   Use an area integral in <m>\extC</m> to show that the area
+	    of <m>R_{\alpha}</m> is <m>2\alpha</m>. Verify that this is the
+	    right answer using a picture of <m>S^2</m>.
+	    	          	  <figure xml:id="two_gon_fig">
+            <image width="75%"
+		   source="images/2gon.png"></image>
+	    <caption>2-gons in <m>\extC</m> and <m>S^2</m>.
+	    </caption>
+          </figure>
+
+	  </p>
+	</statement>
+      </exercise>
+
+      <exercise xml:id="elliptic_triangle_area_exer"><title>Area of an
+	  elliptic triangle</title>
+	<statement><p>Let <m>\triangle ABC</m> be an elliptic
+      triangle. Let <m>{\mathcal C}_{AB},{\mathcal
+	  C}_{AC},{\mathcal C}_{BC}</m> denote the great circles that
+	    extend the sides <m>AB,AC,BC</m> of the
+	    triangle. 
+	    See
+	    <xref ref="elliptic_triangle_area_fig"/>. 
+	    <ol><li>Explain why <m>A,A'</m> are endpoints of the same
+		diameter, that is, endpoints of a diameter
+		of <m>S^2</m> or their stereographic projections in <m>\extC</m>.
+	      </li>
+	      <li>Explain why <m>\triangle A'B'C'</m> has the same area
+		as <m>\triangle ABC</m>, even though the two triangles
+		are not necessarily congruent! (Note that the interior
+		of <m>\triangle A'B'C'</m> is the <em>exterior</em> of
+		the three great circles, that is, on the side that
+		contains the point <m>\infty</m>.) Hint: What does part
+		(a) of this problem imply about the relationship
+		between points <m>X</m> and <m>X'</m> on <m>S^2</m>
+		for <m>X=A,B,C</m>?
+	      </li>
+	      <li> Let <m>R</m> denote the interior of the region shown in the figure on the right in
+	<xref ref="elliptic_triangle_area_fig"/>. Explain why the area of <m>R</m>
+	is
+      <me>2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
+	ABC).</me>
+      Suggestion: Decompose <m>R</m> using overlapping 2-gons.
+	      </li>
+	      <li>
+      Let <m>R'</m> denote the exterior of the region <m>R</m>, that
+      is, <m>R'=\extC\setminus R</m>. Explain why the area of <m>R'</m>
+	is
+      <me>2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
+	A'B'C').</me>
+      Suggestion: Decompose <m>R'</m> into overlapping 2-gons.
+	      </li>
+	      <li>Explain why the area of elliptic triangle 
+			<m>\triangle ABC</m> is
+			  <men xml:id="elliptictrianglearea">\text{Area}(\triangle
+			  ABC)= (\angle A +\angle B + \angle
+			    C)-\pi.</men></li>
+	    </ol>
+	          	  <figure xml:id="elliptic_triangle_area_fig">
+            <image width="75%"
+		   source="images/elliptic_triangle_area.png"></image>
+          </figure>
+	  </p>
+	</statement>
+      </exercise>
+      
+    </exercisegroup>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="twogonareaexer"/></title>
+  <p>We have
+    <md>
+      <mrow>\text{Area}(R_{\alpha}) \amp = \int_0^\alpha \int_0^\infty
+	\frac{4r\;dr\;d\theta}{(1+r^2)^2}</mrow>
+      <mrow>\amp = 2\int_0^\alpha \left[\frac{du}{u^2}\right]_1^\infty
+	d\theta \;\;(u=1+r^2)</mrow>
+      <mrow>\amp = 2\int_0^\alpha 1 \; d\theta</mrow>
+      <mrow>\amp = 2\alpha.</mrow>
+    </md>
+    You can see this is the right answer on <m>S^2</m>. The area
+    of <m>R_\alpha</m> is the fraction <m>\frac{\alpha}{2\pi}</m>
+    of the total area <m>4\pi</m> of <m>S^2</m>,
+    so <me>\text{Area}(R_\alpha) = \frac{\alpha}{2\pi}4\pi=2\alpha.</me>
+  </p>
+</commentary>
+    
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="elliptic_triangle_area_exer"/></title>
+  <p>
+    <ol>
+      <li>The points <m>A,A'</m> are the intersections of great
+      circles <m>AC,AB</m>, so they are endpoints of a diameter. (Two
+      planes through the origin intersect in a line through the origin,
+      and that line contains a diameter of the sphere.)
+      </li>
+      <li>On <m>S^2</m>, points <m>p,q</m> are antipodal if and only
+	if <m>q=-p</m>. So we have <m>X'=-X</m>
+	for <m>X=A,B,C</m>. The antipodal map <m>x\to -x</m> is not an
+	element of <m>\Rot(S^2)</m>, but it is clear that it is distance
+	and area preserving. Triangles <m>\triangle ABC</m>
+	and <m>\triangle A'B'C'</m> are antipodal images of each other,
+	so they have the same area.
+      </li>
+      <li>View <m>R</m> as three 2-gons
+	<m>AA',BB',CC'</m> that overlap in triangle <m>\triangle
+	  ABC</m>.</li>
+      <li>View <m>R'</m> as three 2-gons
+	<m>AA',BB',CC'</m> that overlap in triangle <m>\triangle
+	  A'B'C'</m>.</li>      
+      <li>We have
+	<md>
+	  <mrow>4\pi \amp =\text{ Area}(S^2)</mrow>
+	  <mrow>\amp = \text{ Area}(R)+\text{ Area}(R')</mrow>
+	  <mrow>\amp = 4(\angle A+\angle B+\angle C) -
+	  2\left(\text{Area}(\triangle ABC)+\text{Area}(\triangle
+	    A'B'C')\right).</mrow>
+	  <mrow>\amp = 4(\angle A+\angle B+\angle C) -
+	  4\left(\text{Area}(\triangle ABC)\right)</mrow>
+	</md>
+	Rearranging, we have
+<me>\text{Area}(\triangle ABC)= (\angle A +\angle B + \angle
+			  C)-\pi.</me>
+      </li>      
+    </ol>
+  </p>
+</commentary>
+
+</exercises>
+    
+</section>

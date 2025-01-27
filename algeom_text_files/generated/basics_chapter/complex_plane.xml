@@ -1,0 +1,264 @@
+<section xml:id="complex_plane_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+The Complex Plane
+</title>
+
+    <p>The complex numbers were originally invented to solve problems
+    in algebra. It was later recognized that the algebra of complex
+    numbers provides an elegant set of tools for geometry in the
+    plane. For an introduction (or for a review) of the basics of the algebra and geometry
+      of the complex numbers, we refer the reader to the section entitled
+      <url href="https://mathvista.org/not_just_calculus/complex_plane_section.html">
+    Complex Numbers</url> in the author's text "Not Just Calculus"
+    <xref ref="njc"/>. The remainder of this short section introduces
+    material that will be useful later in this text.
+      </p>
+
+ <p><alert>Circles and Lines.</alert>
+   Let <m>C</m> be the circle in the complex plane with radius <m>r\gt 0</m> and with
+      center <m>a\in \C</m>. 
+      A point <m>z</m> lies on <m>C</m> if and only if the distance
+      from <m>z</m> to <m>a</m> equals <m>r</m>. In mathematical
+      symbols, <m>C</m> is the set of complex solutions <m>z</m> for the
+      following equation.
+      <men xml:id="circleeqn">|z-a|=r</men>
+    </p>
+
+    <p>
+      The real line <m>\R</m> in the complex plane is the set of solutions <m>z</m> of the
+      equation <m>\im(z)=0</m>. More generally, let <m>L</m> be a line
+      that contains the point <m>p\in \C</m> and makes an
+      angle <m>\theta</m> with the real axis (set <m>\theta=0</m>
+      if <m>L</m> is parallel to the real axis). If <m>z\in L</m>,
+      then <m>e^{-i\theta}(z-p)</m> is real,
+      so <m>\im(e^{-i\theta}(z-p))=0</m>. See <xref ref="lines_in_complex_plane_fig"/>. Conversely,
+      if <m>e^{-i\theta}(z-p)</m> is real, then <m>z</m> lies
+      on <m>L</m>. Multiplying by a positive constant <m>k</m>, and
+      setting <m>a=ke^{-i\theta}</m> and <m>b=-ke^{-i\theta}p</m>, we conclude that the line <m>L</m> is the set of
+      solutions to the following equation.
+      <men xml:id="lineeqn">\im(az+b)=0</men> 
+    </p>
+
+    	         <figure xml:id="lines_in_complex_plane_fig">
+       <caption>A line in the complex plane.
+      </caption>
+            <image width="40%" source="images/lines_in_complex_plane.png"></image>
+           </figure>
+
+ 
+<exercises>
+
+  <exercise xml:id="solvecomplexquadraticsexer"><title>Solving
+  quadratic equations</title>
+  <statement>Find all complex solutions of the following
+equations. 
+<ol>
+<li><m>\displaystyle z^2 + 3z + 5 = 0</m></li>
+<li><m>(z - i)(z + i) = 1</m></li>
+<li><m>\displaystyle \frac{2z + i}{-z+3i} = z</m></li>
+</ol>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="solvecomplexquadraticsexer"/></title>
+<p><ol>
+      <li><m>\displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}</m></li>
+      <li><m>0</m></li>
+      <li><m>\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
+    281^{1/4}\sin \varphi)]</m>, where <m>\varphi=(\arctan(16/5)+\pi)/2</m></li>
+</ol></p>
+</commentary>
+
+<exercise xml:id="complexcircleslines"><title>Circles and lines</title><statement><p>
+      <ol>
+	<li>For a real variable <m>x</m> and a real constant <m>a</m>, <em>completing the square</em>
+	  refers to rewriting the expression <m>x^2 - 2ax</m>
+	  as follows.
+	  <me>x^2-2ax = x^2-2ax +a^2 - a^2 = \left(x-a\right)^2
+	    -a^2.</me>
+	  A complex version of completing the square for a complex
+	  variable <m>z</m> and a complex constant <m>a</m>
+	  is the following.
+	  <men xml:id="complexcompletesquare">|z|^2-2\re(za^\ast)=|z-a|^2
+	    -|a|^2</men>
+	  Write a derivation to justify this. Then use
+	  completing the square to find the center and radius of the
+	  circle given by the equation <m>|z|^2 -iz +iz^\ast -5=0</m>.
+	</li>
+	<li>Write an alternative proof for the general form for the
+	  equation of a line <xref ref="lineeqn"/>, as
+	  follows. Let <m>a=u+iv</m>, <m>b=r+is</m>, <m>z=x+iy</m>. Find
+	  the equation of the line <m>\im(az+b)=0</m> in terms of the
+	  real variables <m>x,y</m> and real
+	  constants <m>u,v,r,s</m>. Explain why it is necessary that <m>a\neq 0</m>.
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="complexcircleslines"/></title>
+  <p>
+    <ol><li>Starting with the right hand side of
+	<xref ref="complexcompletesquare"/>, we have
+	<md>
+	  <mrow>|z-a|^2 -|a|^2 \amp = (z-a)(z-a)^\ast -aa^\ast</mrow>
+	  <mrow>\amp = zz^\ast -za^\ast - z^\ast a +aa^\ast
+	    -aa^\ast</mrow>
+	  <mrow>\amp = |z|^2 -2\re(za^\ast)</mrow>
+	</md>
+	as desired. Applying this to the equation given at the end of
+	the part a, we set <m>a=-i</m> and complete the square by
+	adding <m>|-i|^2=1</m> to both sides. Rearranging, we have
+	<me>|z-(-i)|^2 = (\sqrt{6})^2.</me>
+	This is a circle centered at <m>a=-i</m>, with radius <m>r=\sqrt{6}</m>.
+      </li>
+      <li>We have
+	<md> 
+	  <mrow>\im(az+b) \amp = \im(u+iv)(x+iy) + r+is)</mrow>
+	  <mrow>\amp = \im( (ux-vy+r) + i(vx+uy+s)</mrow>
+	</md>
+	so the equation <m>\im(az+b)=0</m> is equivalent
+	to <m>vx+uy+s=0</m>. This is the general form for the equation
+	for a line in <m>\R^2</m>, as long as <m>(u,v)</m> is not the
+	zero vector (if <m>0=u=v</m>, then the solutions to <m>s=0</m>
+	is either the empty set or the whole plane).
+      </li>
+    </ol>
+  </p>
+</commentary>
+
+
+<exercise xml:id="complexnosasrealmatalg"><title>Complex numbers as <m>2\times 2</m> real matrices
+  </title>
+  <statement><p>Let <m>{\mathcal M}_\C</m> denote the set of <m>2\times
+	2</m> matrices of the form <m>\left[\begin{array}{cc}a\amp
+	-b\\b\amp a\end{array}\right]</m> with <m>a,b\in \R</m>. Given a complex
+      number <m>z</m> with Cartesian form  <m>z=a+bi</m>, let <m>M(z)</m> denote the matrix
+	<m>\left[\begin{array}{cc}a\amp
+	-b\\b\amp a\end{array}\right]</m> in <m>{\mathcal
+	M}_\C</m>. Conversely, given a matrix <m>M\in {\mathcal M}_\C</m>
+      with top left entry <m>a</m> and bottom left entry <m>b</m>,
+      let <m>C(M)</m> denote the complex number <m>a+bi</m>. It is clear
+      that the mappings <m>z\to M(z)</m> and <m>M\to C(M)</m> are
+	inverses to one another, and establish a one-to-one
+      correspondence <m>\C\leftrightarrow {\mathcal M}_\C</m>.
+      <ol><li>Show that <m>{\mathcal M}_\C</m> is closed under addition
+	  and multiplication. That is, suppose that <m>M,N</m> are
+	  elements of <m>{\mathcal M}_\C</m>. Show that <m>M+N</m>
+	  and <m>MN</m> are also elements of <m>{\mathcal M}_\C</m>.
+	</li>
+	<li>Show that complex addition and multiplication are
+	  "mirrored" in <m>{\mathcal M}_\C</m>. That is, show that
+  	<mdn>
+  	  <mrow xml:id="ctomatsum">M(z+w)\amp =M(z)+M(w)</mrow>
+	  <mrow xml:id="ctmatmult">M(zw)\amp =M(z)M(w).</mrow>
+	</mdn>
+	</li>
+      </ol>
+      </p>
+      <p><alert>Significance of this exercise.</alert> Matrix algebra
+	provides a framework for theory and applications in almost every
+	area in mathematics. Using the one-to-one
+	correspondence <m>\mathcal{M}_\C\leftrightarrow \C</m>, it is
+	possible to translate all of complex algebra in terms of matrix
+	operations. We will use this same idea to define and prove the
+	basic properties of quaternion algebra in <xref ref="quaternionsection"/>, and
+	we will use correspondences with matrix algebras to prove
+	properties of geometric transformations in <xref ref="geometry_chapter"/>.
+      </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's comment on
+    notation in  <xref ref="complexnosasrealmatalg"/></title>
+  <p>The thoughtful student might object to the notational overloading
+    where <m>M</m> is used to denote a <em>function</em> <m>M\colon
+      \C\to \mathcal{M}_\C</m> also to denote an element <m>M</m>
+    in <m>\mathcal{M}_\C</m>. One might reply to this student that this
+    is routine abuse of notation: we write <m>y=y(t)</m> where <m>y</m>
+    denotes a function <m>y\colon \R\to \R</m>
+    but also denotes a real value <m>y\in \R</m>. To fix this
+    overloading, we would need separate names, say <m>\text{
+      MAT}\colon \C\to \mathcal{M}_\C</m> and <m>\text{CPLX}\colon
+      \mathcal{M}_\C\to \C</m> for the functions <m>M,C</m> in the
+    exercise. We have opted for the simpler, admittedly less precise,
+    notation. 
+  </p>
+  </commentary>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexnosasrealmatalg"/></title>
+  <p>
+    <ol>
+      <li>Let <m>T(a,b)</m> denote the
+	matrix <m>\twotwo{a}{-b}{b}{a}</m> in <m>{\mathcal M}_\C</m>.
+	We have the following.
+	<md>
+	  <mrow>T(a,b)+T(c,d)\amp = \twotwo{a}{-b}{b}{a} + \twotwo{c}{-d}{d}{c} 
+	  </mrow>
+	  <mrow>\amp = \twotwo{a+c}{-b-d}{b+d}{a+c}
+	  </mrow>
+	  <mrow>\amp = T(a+c,b+d)</mrow>
+	  <mrow>T(a,b)T(c,d)\amp = \twotwo{a}{-b}{b}{a} \twotwo{c}{-d}{d}{c} 
+	  </mrow>
+	  <mrow>\amp =\twotwo{ac-bd}{-ad-bc}{ad+bc}{ac-bd}
+	  </mrow>
+	  <mrow>\amp = T(ac-bd,ad+bc)</mrow>
+	</md>
+      </li>
+      <li>Let <m>z=a+bi</m> and <m>w=c+di</m> so that <m>M(z)=T(a,b)</m>
+	and <m>M(w)=T(c,d)</m>.
+	We have the following.
+	<md>
+	  <mrow>	 M(z+w)\amp = M((a+ib)+(c+id)</mrow>
+	  <mrow>\amp = M((a+c)+i(b+d))</mrow>
+	  <mrow>\amp = T(a+c,b+d)</mrow>
+	  <mrow>\amp = T(a,b)+T(c,d)</mrow>
+	  <mrow>\amp = M(z)+M(w)</mrow>	  
+	  <mrow>M(zw)\amp = M((a+ib)(c+id))</mrow>
+	  <mrow>\amp = M((ac-bd)+i(ad+bc))</mrow>
+	  <mrow>\amp = T(ac-bd,ad+bc)</mrow>
+	  <mrow>\amp = T(a,b)T(c,d)</mrow>
+	  <mrow>\amp = M(z)M(w)</mrow>	  	  	  	  
+	</md>
+      </li>
+    </ol>
+</p>
+</commentary>
+
+</exercises>
+
+<!-- exercise template
+<exercise><statement><p>
+    </p>
+  </statement>
+  <NOanswer><p>
+    </p>
+  </NOanswer>
+</exercise>
+-->
+
+<!-- index template
+<idx><h></h></idx>
+    -->
+
+<!-- notation template
+     <notation><usage>
+	        </usage>
+	 <description>
+	 </description>
+     </notation>
+  -->
+
+     <!-- instructor's solutions template
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="verifyeulersformulaexer"/></title>
+<p>
+</p>
+</commentary>
+-->
+
+</section>

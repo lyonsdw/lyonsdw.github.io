@@ -1,0 +1,644 @@
+  <section>
+    <title>Projective geometry
+    </title>	       
+    <introduction>
+
+      <p>Early motivation for the development of projective
+      geometry came from artists trying to solve practical
+      problems in perspective drawing and painting. In this section, we
+      present a modern Kleinian version of projective geometry.</p>
+      
+      <p>Throughout this section, <m>\F</m> is a field, <m>V</m> is a
+	vector space over <m>\F</m>, <m>\Proj(V)=(V\setminus \!\{0\})/\F^\ast</m> is
+	the projective space, and <m>PGL(V)=GL(V)/\F^\ast</m> is the
+	projective transformation group. See <xref ref="projspaceandgroupexer"/> for
+	definitions and details. We will write <m>[T]</m> for
+	the projective transformation that is the equivalence class of
+	the linear transformation <m>T</m> of <m>V</m>.
+</p>
+
+
+    </introduction>
+
+    <subsection><title>Projective points, lines, and flats</title>
+
+      <p>Points in projective space correspond bijectively to
+	1-dimensional subspaces of <m>V</m> via
+	<me>[v] \leftrightarrow \{\alpha v\colon \alpha\in\F\}.</me>
+	The set of 1-dimensional subspaces in <m>V</m>,
+	denoted <m>G(1,V)</m>, is an alternative model space for
+	projective geometry. We will usually denote points in projective
+	space using capital letters, such as <m>P</m>, <m>Q</m>, etc.
+      </p>
+      
+	<p>
+	A <term>line</term><idx><h>projective
+	    geometry</h><h>line in projective space</h>
+	</idx>
+       in projective space is a
+	set of the form
+	<me>\ell_\Pi=\{[v]\colon v\in \Pi\setminus\{0\}\}</me> for some 2-dimensional
+	subspace <m>\Pi</m> in <m>V</m>. Thus, projective lines
+	correspond bijectively to 2-dimensional subspaces of <m>V</m>
+	via
+	<me>\ell_{\Pi} \leftrightarrow \Pi.</me>
+	The set of 2-dimensional subspaces in <m>V</m> is
+	denoted <m>G(2,V)</m>. Points in projective space are
+	called <term>collinear</term><idx><h>projective
+	geometry</h><h>collinear projective points</h>
+	</idx>
+	if they lie together on a projective line.
+	We will usually denote projective lines
+	using lower case letters, such as <m>\ell</m>, <m>m</m>, etc.
+	</p>
+	
+	<p>
+	There is an offset by 1 in the use of the
+	word "dimension" in regards to subsets of <m>\Proj(V)</m> and
+	the corresponding subspace in <m>V</m>. In general,
+	a <term><m>k</m>-dimensional flat</term><idx><h>projective
+	    geometry</h><h><m>k</m>-dimensional flat </h></idx>
+	in <m>\Proj(V)</m> is
+	a set of the form <m>\{[v]\colon v\in G(k+1,V)\}</m>,
+	where <m>G(d,V)</m> denotes the set of <m>d</m>-dimensional
+	subspaces of <m>V</m>.<fn>The set <m>G(d,V)</m> is called
+	  the <term>Grassmannian</term> of <m>d</m>-dimensional
+	  subspaces of <m>V</m>, named in honor of Hermann Grassmann.
+	</fn>
+	Flats are also called <em>subspaces</em>
+	in projective space, even though projective space is not a
+	vector space.
+	</p>
+
+	<p>Points <m>P_1=[v_1],P_2=[v_2],\ldots,P_k=[v_k]</m> are said to be
+	  in <term>general position</term> if the
+	  vectors <m>v_1,v_2,\ldots,v_k</m> are independent
+	  in <m>V</m>. 
+	</p>
+    </subsection>
+
+    <subsection><title>Coordinates</title>
+      <p>For the remainder of this section, we
+	consider <m>V=\F^{n+1}</m>. For readability, we will
+	write <m>P=[v]=[x_0,x_1,x_2,\ldots,x_{n}]</m> (rather than the
+	more cumbersome <m>[(x_0,x_1,x_2,\ldots,x_n)]</m>)
+	to denote the point in
+	projective space that is the projective equivalence class of the
+	point <m>v=(x_0,x_1,x_2,\ldots,x_{n})</m> in <m>\F^{n+1}</m>.
+        The entries <m>x_i</m> are called <term>homogeneous
+	  coordinates</term><idx><h>projective
+	geometry</h><h>homogeneous coordinates</h> 
+	</idx> of <m>P</m>. If <m>x_0\neq 0</m>, then
+	<me>P=[x_0,x_1,x_2,\ldots,x_n]=\left[1,\frac{x_1}{x_0},\frac{x_2}{x_0},\ldots,\frac{x_n}{x_0}\right].</me>
+	The numbers <m>x_i/x_0</m> for <m>1\leq i\leq n</m> are
+	called <term>inhomogeneous coordinates</term><idx><h>projective
+	geometry</h><h>inhomogeneous coordinates</h>
+	</idx> for <m>P</m>. The <m>n</m> degrees of freedom that are
+	apparent in inhomogeneous coordinates explain
+	why <m>\Proj(\F^{n+1})</m> is called <m>n</m>-dimensional. Many
+	texts write <m>\F\Proj(n)</m>, <m>\F\Proj_n</m>, or
+	simply <m>\Proj_n</m> when <m>\F</m> is understood, to
+	denote <m>\Proj(\F^{n+1})</m>. 
+      </p>
+    </subsection>
+    
+    <subsection><title>Freedom in projective transformations</title>
+
+      <p>In an <m>n</m>-dimensional vector space, any <m>n</m>
+	independent vectors can be mapped to any other set of <m>n</m>
+	independent vectors by a linear transformation. Therefore it
+	seems a little surprising that in <m>n</m>-dimensional
+	projective space <m>\F\Proj_n=\Proj(\F^{n+1})</m>, it is
+	possible to map any set of <m>n+2</m> points to any other set
+	of <m>n+2</m> points, provided both sets of points meet
+	sufficient "independence" conditions.  This subsection gives the
+	details of this result, called the Fundamental Theorem of
+	Projective Geometry.
+      </p>
+
+      <p>Let <m>e_1,e_2,\ldots, e_n,e_{n+1}</m> denote the standard basis
+      vectors for <m>\F^{n+1}</m> and
+      let <m>e_0=\sum_{i=1}^{n+1}e_i</m>. Let <m>v_1,v_2,\ldots,v_{n+1}</m>
+      be another basis for <m>\F^{n+1}</m> and
+      let <m>c_1,c_2,\ldots,c_{n+1}</m> be nonzero scalars. Let <m>T</m>
+      be the linear transformation <m>T</m> of <m>\F^{n+1}</m> given
+      by <m>e_i\to c_iv_i</m> for <m>1\leq i\leq
+      n+1</m>. Projectively, <m>[T]</m> sends <m>[e_i]\to [v_i]</m>
+      and <m>[e_0]\to [\sum_i c_iv_i]</m>.
+    </p>
+
+    <p>Now suppose there is another map <m>[S]</m> that agrees
+      with <m>[T]</m> on the <m>n+2</m>
+      points <m>[e_0],[e_1],[e_2],\ldots,[e_{n+1}]</m>. Then <m>[U]:=[S]^{-1}\circ
+      [T]</m> fixes all the
+      points <m>[e_0],[e_1],[e_2],\ldots,[e_{n+1}]</m>. This means
+      that <m>Ue_i=k_ie_i</m> for some nonzero
+      scalars <m>k_1,k_2,\ldots,k_{n+1}</m> and that <m>Ue_0=k'e_0</m>
+      for some <m>k'\neq 0</m>. This implies
+      <me>(k_1,k_2,\ldots,k_{n+1})=(k',k',\ldots,k') </me>
+      so we have <m>k'=k_1=k+2=\cdots k_{n+1}</m>. Therefore <m>[U]</m>
+      is the identity transformation, so <m>[S]=[T]</m>. We have just
+      proved the following existence and uniqueness lemma.
+    </p>
+
+    <lemma xml:id="fundthmprojgeomlemma"><statement><p>Let <m>v_1,v_2,\ldots,v_{n+1}</m> be an
+	  independent set of vectors in <m>\F^{n+1}</m> and
+	  let <m>v_0=\sum_{i=1}^{n+1}c_iv_i</m> for some nonzero
+	  scalars <m>c_1,c_2,\ldots,c_{n+1}</m>. There exists a unique
+	  projective transformation that maps <m>[e_i]\to [v_i]</m>
+	  for <m>0\leq i\leq n+1</m>.
+	</p>
+      </statement>
+    </lemma>
+
+    <theorem xml:id="fundthmprojgeom"><title>Fundamental Theorem of Projective Geometry</title>
+      <idx>Fundamental Theorem of Projective Geometry</idx>
+      <statement>      <p>Let <m>P_0,P_1,P_2,\ldots,P_{n+1}</m> be a set
+	  of <m>n+2</m> points in <m>\Proj(\F^{n+1})</m> such that all
+	  subsets of size <m>n+1</m> are in general
+	  position. Let <m>Q_0,Q_1,Q_2,\ldots,Q_{n+1}</m> be another
+	  such set. There exists a unique projective transformation that
+	  maps <m>P_i\to Q_i</m>, <m>0\leq i\leq n+1</m>.
+	</p>
+      </statement>
+    </theorem>
+    
+    </subsection>
+
+    <subsection><title>The real projective plane</title>
+      <p>The remainder of this section is devoted to the planar geometry
+	<m>\Proj(\R^3)=\R\Proj_2</m> called the <term>real projective
+	  plane</term><idx><h>projective geometry</h><h>real projective
+	  plane</h></idx>. It is of historical interest because of its
+	  early practical use by artists. Lines through the origin
+	  in <m>\R^3</m> model sight lines in the real world as seen
+	  from an eye placed at the origin. A plane that does not pass
+	  through the origin models the "picture plane" of the artist's
+	  canvas. <xref ref="durerpicture"/> shows a woodcut by Albrecht
+	  Dürer that illustrates a "perspective machine" gadget used by
+	  16th century artists to put the projective model into practice
+	  for image making.
+      </p>
+
+          <figure xml:id="durerpicture">
+	    <caption><em>Man drawing a lute</em>,
+	      Albrecht Dürer, 1525.
+      </caption>
+            <image width="60%" source="images/durerperspective.jpg"></image>
+           </figure>
+
+	  <p>A two dimensional subspace <m>\Pi</m> in <m>\R^3</m> is specified by a
+	    normal vector <m>n=(n_1,n_2,n_3)</m> via the
+	    equation <m>n\cdot v=0</m>, that is, a point <m>v=(x,y,z)</m>
+	    lies on <m>\Pi</m> with normal vector <m>n</m> if and only if <m>n\cdot
+	      v=n_1x+n_2y+n_3z=0</m>. Any nonzero multiple of <m>n</m> is also a normal
+	    vector for <m>\Pi</m>, so the set <m>G(2,\R)</m> of
+	    2-dimensional subspaces in <m>\R^3</m> is in one-to-one
+	    correspondence with <m>\R^3/\R^\ast</m>. We will
+	    write <m>\ell=[n]=[n_1,n_2,n_3]</m> to denote the
+	    projective line <m>\ell</m> whose corresponding
+	    2-dimensional subspace in <m>\R^3</m> has normal vectors
+	    proportional to <m>(n_1,n_2,n_3)</m>. Beware the overloaded
+	    notation! Whether the equivalence class <m>[v]</m> of a
+	    vector <m>v</m> in <m>\R^3</m> denotes a projective point or
+	    a projective line has to be specified.
+	  </p>
+
+	  
+	    <p>
+	    The equation <m>n\cdot v=0</m> makes
+	    sense <em>projectively</em>. This means that if <m>n\cdot
+	      v=0</m> for vectors <m>n,v</m>, then <men xml:id="projdotprodzero">(\alpha
+	      n)\cdot (\beta v)=0 \;\;\text{for all}\;\; \alpha,\beta\in
+	      \F^\ast</men>, even though the
+	    value of the dot product is <em>not</em> well-defined for
+	    projective equivalence classes! Thus we will write
+	    <m>\ell\cdot P=[n_1,n_2,n_3]\cdot [x,y,z]=0</m> for a
+	    projective line <m>\ell=[n_1,n_2,n_3]</m> and a projective
+	    point <m>P=[x,y,z]</m>,
+	    to mean <xref ref="projdotprodzero"/>, and we make the
+	    following interpretation of the dot product as
+	    an <em>incidence relation</em> in <m>\R\Proj_2</m>.
+	    <men>\ell \cdot P = 0 \;\; \Leftrightarrow
+	    \;\;P\;\;\text{lies on}\;\;\ell\;\;\Leftrightarrow
+	    \;\;\ell\;\;\text{contains}\;\;P. </men>
+	    Given two independent vectors <m>v,w</m> in <m>\R^3</m>,
+	    their cross product <m>v\times w</m> is a normal vector for
+	    the 2-dimensional space spanned by <m>v,w</m>.
+	    Given two
+	    2-dimensional subspaces <m>\Pi,\Sigma</m> in <m>\R^3</m>
+	    with normal vectors <m>n,m</m>, the cross
+	    product <m>n\times m</m> is a vector that lies along the
+	    1-dimensional subspace <m>\Pi\cap\Sigma</m>. 
+	   The bilinearity of cross product implies
+	    that cross product is well-defined on projective classes,
+	    i.e., we can write <m>[u]\times [v]:=[u\times v]</m>. Thus
+	    we have the following.
+	    </p>
+	    <proposition><statement><p>Given two points <m>P=[u],P'=[u']</m>
+		  in <m>\R\Proj_2</m>, there is a unique projective
+		  line <m>\overline{PP'}=[u\times u']</m>
+		  that contains them. Given
+		  two lines <m>\ell=[n],\ell'=[n']</m>
+		  in <m>\R\Proj_2</m>, there is a unique projective
+		  point <m>[n\times n']</m>
+		  in their intersection <m>\ell\cap \ell'</m>.
+		</p>
+	      </statement>
+	    </proposition>
+
+    </subsection>
+
+    <exercises>
+
+        <commentary component="instructor">
+      <p><alert>Essential exercises:</alert>
+	<xref text="local" ref="fundthmprojgeompfexer"/>,
+	<xref text="local" ref="chartexer"/>,
+	<xref text="local" ref="mobiusgeomisprojectivegeom"/>,
+        <xref text="local" ref="projcrossratioexer"/>,
+        <xref text="local" ref="rp2collinearconditionexer"/>
+	</p>
+      <p><alert>At least discuss the idea:</alert>
+	<xref text="local" ref="pappusthmexer"/>	
+	</p>
+      <p><alert>May be omitted:</alert>
+	<xref text="local" ref="quadricsexer"/>
+   	  </p>
+</commentary>
+      
+      
+      <exercise xml:id="fundthmprojgeompfexer"><statement><p>Use <xref ref="fundthmprojgeomlemma"/> to prove the Fundamental Theorem of
+      Projective Geometry (<xref ref="fundthmprojgeom"/>).</p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="fundthmprojgeompfexer"/>
+  (proof of the Fundamental Theorem of Projective Geometry)</title>
+  <p>Let <m>P_0,P_1,P_2,\ldots,P_{n+1}</m> be a set of <m>n+2</m> points
+	  in <m>\Proj(\F^{n+1})</m> such that all subsets of
+	  size <m>n+1</m> are in general
+	  position. Let <m>v_0,v_1,v_2,\ldots,v_{n+1}</m> be vectors
+	  in <m>\F^{n+1}</m> such that <m>P_i=[v_i]</m>. By assumption,
+	  the points <m>P_1,P_2,\ldots,P_{n+1}</m> are in general
+	  position, so the vectors <m>v_1,v_2,\ldots,v_{n+1}</m> are
+    independent and form a basis
+    of <m>\F^{n+1}</m>. Let <m>c_1,c_2,\ldots,c_{n+1}</m> be scalars
+	  such that <m>v_0=\sum_{i=1}^{n+1}c_iv_i</m>. By
+	  <xref ref="fundthmprojgeomlemma"/>, there is a unique
+	  projective transformation <m>T</m> that maps <m>[e_i]\to
+	    P_i</m>, <m>0\leq i\leq n+1</m>. By the same argument, there
+	  is a unique projective transformation <m>S</m> that
+	  maps <m>[e_i]\to Q_i</m>, <m>0\leq i\leq n+1</m>. It follows
+	  that the projective transformation <m>S\circ T^{-1}</m>
+	  maps <m>P_i\to Q_i</m>, <m>0\leq i\leq n+1</m>. For
+	  uniqueness, suppose there are two projective maps,
+	  say <m>U,V</m> that map <m>P_i\to Q_i</m>, <m>0\leq i\leq
+	    n+1</m>. It then follows that <m>U\circ T, V\circ T</m> both
+	  map <m>[e_i]\to Q_i</m>, <m>0\leq i\leq n+1</m>. By the
+	  uniqueness statement in <xref ref="fundthmprojgeomlemma"/>, we
+	  have <m>U\circ T=V\circ T</m>. Thus we have
+	  <me>U=(U\circ T)\circ T^{-1} = (V\circ T)\circ T^{-1}=V. </me>
+	  Alternatively, we could have stated and proved a separate
+	  lemma that says that any projective transformation that
+	  fixes <m>n+2</m> points in <m>\Proj(\F^{n+1})</m> must be the
+	  identity. [The special case of this statement, that we already
+	  know, is that a Möbius transformation with three fixed points
+	  is the identity.]
+  </p>
+</commentary>
+      
+
+      <exercise xml:id="chartexer"><title>Coordinate charts and inhomogeneous
+	  coordinates</title><statement>
+	  <p>To facilitate thinking about the interplay between
+	    the projective geometry <m>\Proj(\F^{n+1})=\F\Proj_n</m>
+	    and the geometry of <m>\F^{n}</m> (rather
+	    than <m>\F^{n+1}</m>!) it is useful to have a
+	    careful definition for "taking inhomogeneous coordinates in
+	    position <m>i</m>". Here it is: Let <m>U_i</m> be the subset
+	    of <m>\F\Proj_n</m> of points whose homogeneous
+	    coordinate <m>x_i</m> is nonzero. Let <m>\pi_i\colon U_i\to
+	      \F^n</m> be given by
+	    <me>   [x_0,x_1,x_2,\ldots x_{i-1},x_i,x_{i+1},\ldots,x_n]
+  \to  \left(\frac{x_0}{x_i},\frac{x_1}{x_i},\frac{x_2}{x_i},\ldots
+	      \frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_n}{x_i}\right).</me>
+	    The one-sided inverse <m>\F^n\to \F\Proj_n</m> given by
+	    <me>(x_0,x_1,\ldots x_{i-1},\widehat{x_i},x_{i+1},\ldots,x_n)
+	      \to [x_0,x_1,\ldots x_{i-1},1,x_{i+1},\ldots,x_n]</me>
+	    (where the circumflex hat indicates a deleted item from a
+	    sequence) is called the <m>i</m>-th <term>coordinate
+	      chart</term><idx><h>projective geometry</h><h>coordinate chart</h>
+	    </idx>
+	    for <m>\F\Proj_n</m>. What is the map that
+	    results from applying the <m>0</m>-th coordinate
+	    chart <m>\C\to \C\Proj_2</m> followed by taking homogeneous
+	    coordinates in position 1? 
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="chartexer"/></title>
+  <p>The map <m>\pi_1\circ \text{chart}_0</m> is inversion, as follows.
+    <me>z\stackrel{\text{chart}_0}{\to} [1,z] \stackrel{\pi_1}{\to} 1/z</me>
+  </p>
+</commentary>
+      
+            <exercise xml:id="mobiusgeomisprojectivegeom"><title>Möbius geometry is projective
+		geometry</title>
+     <statement> <p> Show that Möbius geometry <m>(\extC,\M)</m>
+	 and the projective geometry <m>(\Proj(\C^2),PGL(2))</m> are
+	 equivalent via the map <m>\mu\colon \Proj(\C^2) \to \extC</m> given by
+  <men xml:id="mobiusmodelequivmap">
+        \mu([\alpha,\beta]) = 
+        \begin{cases}
+        \alpha/\beta \amp \beta\neq 0\\
+	\infty \amp \beta=0.
+        \end{cases}
+  </men>
+  Comment: Observe that <m>\mu</m> is an extension of <m>\pi_1\colon
+    U_1\to \C</m> given
+    by <m>\pi_1([x_0,x_1])=\frac{x_0}{x_1}</m> (defined in
+    <xref ref="chartexer"/>). 
+     </p></statement>
+	    </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="mobiusgeomisprojectivegeom"/></title>
+  <p>It is clear that <m>\mu</m> is a bijection. Let <m>T\in
+      \M</m> be given by <m>Tz=\frac{az+b}{cz+d}</m>. Let <m>M\in
+      GL(2,C)</m> be given by <m>M=\twotwo{a}{b}{c}{d}</m>. 
+    If <m>\beta\neq 0</m>, we have
+    <md>
+      <mrow>\mu([M][\alpha,\beta])\amp
+	=\mu\left([a\alpha+b\beta,c\alpha+d\beta]\right)</mrow>
+      <mrow>\amp = \frac{a\alpha+b\beta}{c\alpha+d\beta}</mrow>
+      <mrow>\amp =
+	\frac{a\frac{\alpha}{\beta}+b}{c\frac{\alpha}{\beta}+d}</mrow>
+      <mrow>\amp = T(\alpha/\beta)</mrow>
+      <mrow>\amp = T(\mu([\alpha,\beta]).</mrow>
+    </md>
+    If <m>\beta=0</m>, we have
+    <me>\mu([M][\alpha,0])= \mu([a\alpha,c\alpha])=a/c=T(\infty) =
+      T(\mu([\alpha,0]).</me>
+    Thus we have <m>\mu\circ T\circ \mu^{-1} = [M]\in PGL(2,\C)</m>
+      and <m>\mu^{-1}\circ [M]\circ \mu = T\in \M</m>.
+  </p>
+</commentary>
+	    
+      
+      <exercise xml:id="projcrossratioexer"><title>Cross ratio</title>
+	<statement><p>The projective space <m>\Proj_1=\Proj(\F^2)</m> is
+	    called the <term>projective line</term><idx><h>projective
+		geometry</h><h>projective line</h> </idx>). The
+	    map <m>\mu\colon \Proj_1\to \extF</m>, given by <m>\mu([x_0,x_1])=\frac{x_0}{x_1}</m>
+	    (defined in <xref ref="mobiusgeomisprojectivegeom"/>, but
+	    where <m>\F</m> may be any field, with <m>\extF=\F\cup \{\infty\}</m>) takes
+	    the points <me>[e_0]=[1,1],[e_2]=[0,1],[e_1]=[1,0]</me>
+	    in <m>\Proj_1</m>
+	    to
+	    the points <m>1,0,\infty</m> in <m>\extF</m>,
+	    respectively. Let <m>(\cdot,P_1,P_2,P_3)</m> denote the unique
+	    projective transformation <m>[T]</m> that
+	    takes <m>P_1,P_2,P_3</m>
+	    to <m>[e_0],[e_2],[e_1]</m>. The <term>cross
+	      ratio</term><idx><h>projective geometry</h><h>cross ratio</h>
+	    </idx><idx>cross ratio of projective geometry
+	    </idx> <m>(P_0,P_1,P_2,P_3)</m> is defined to be <m>\mu([T](P_0))</m>.
+	    <ol>	      <li>Show that this definition of cross
+		ratio in projective geometry corresponds to the cross
+		ratio of Möbius geometry for the case <m>\F=\C</m>, via
+		the map <m>\mu</m>, that is, show that the following holds.
+	          <me>(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))</me></li>
+	      <li>Show that
+		<me>(P_0,P_1,P_2,P_3)=\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}</me>
+		where <m>\det(P_iP_j)</m>
+		is the determinant of the matrix
+		<m>\twotwo{a_i}{a_j}{b_i}{b_j}</m>, where
+		<m>P_i=[a_i,b_i]</m>.
+		<!--
+		Suggestion: First
+		  find <m>[T]^{-1}</m>. Solve <me>
+		  (a_1,b_1) = x(a_3,b_3) + y(a_2,b_2)</me>
+		  to get <m>x=\det(P_1P_2)</m>,  <m>y=\det(P_3P_1)</m>.
+From this, show the following.
+<md>
+  <mrow>[T]^{-1}\amp=\twotwo{xa_3}{ya_2}{xb_3}{yb_2}</mrow>
+  <mrow>[T] \amp= \twotwo{yb_2}{-ya_2}{-xb_3}{xa_3}</mrow>
+</md>
+Now just calculate <m>\mu(T(a_0,b_0))</m>.
+-->
+	      </li>
+
+	    </ol>
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="projcrossratioexer"/></title>
+  <p>
+    <ol>
+      <li>Let <m>S=(\cdot,\mu(P_1),\mu(P_2),\mu(P_3))</m>. By <xref ref="mobiusgeomisprojectivegeom"/>,
+    the map <m>\mu^{-1}\circ S\circ \mu</m> is a projective
+    transformation, and it is easy to see that <m>\mu^{-1}\circ S\circ \mu</m>
+    takes <m>P_1,P_2,P_3</m> to <m>[e_0], [e_2],[e_1]</m>, so by the
+    Fundamental Theorem of Projective Geometry, we must
+    have <m>\mu^{-1}\circ S\circ \mu = [T]</m>. Evaluating both sides of
+    this equation at <m>P_0</m>, we have
+	<me>(P_0,P_1,P_2,P_3)=(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3)).</me></li>
+
+      <li>It is easy to verify that
+	<me>(\mu(P_0),\mu(P_1),\mu(P_2),\mu(P_3))=
+	\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}</me>.</li>
+    </ol>
+  </p>
+</commentary>
+      
+<!--
+            <exercise><statement><p>Show that every projective transformation
+	    of <m>\R\Proj_2=\Proj(\R^3)</m>
+	    has a fixed point. Is the same statement true for <m>\Proj(\R^4)</m>?
+	  </p>
+	</statement>
+      </exercise>
+	    -->
+	    
+      <exercise xml:id="rp2collinearconditionexer"><title>Condition for collinearity in <m>\R\Proj_2</m>
+	</title>
+	<statement><p>Let <m>u=(u_1,u_2,u_3),v=(v_1,v_2,v_3),w=(w_1,w_2,w_3)</m>
+	    be vectors in <m>\R^3</m>, and let <m>M</m> be the
+	    matrix <m>M=\left[\begin{array}{ccc}
+	      u_1 \amp v_1 \amp w_1\\
+	      u_2 \amp v_2 \amp w_2\\
+	      u_3 \amp v_3 \amp w_3\\\end{array}\right]
+	    </m> Show that <m>[u],[v],[w]</m> are collinear
+	    in <m>\R\Proj_2</m> if and only if <m>\det M=0</m>.
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="rp2collinearconditionexer"/></title>
+  <p>A line in projective space <m>\R\Proj_2</m>
+    the set of equivalence classes of all
+    vectors in a 2-dimensional subspace of <m>\R^3</m>. The three
+    vectors <m>u,v,w</m> lie in a 2-dimensional subspace together if and
+    only if the three vectors are linearly dependent. This holds if and
+    only if the determinant of the given <m>3\times 3</m> matrix is zero.
+  </p>
+</commentary>
+      
+
+      	            <figure xml:id="pappus_theorem_fig">
+	    <caption>Pappus' Theorem
+      </caption>
+            <image width="45%" source="images/pappus_theorem.png"></image>
+		    </figure>
+		    
+      <exercise xml:id="pappusthmexer"><statement><p>The following is a
+      famous theorem of classical geometry.
+      </p>
+	  <assemblage><title>Pappus' Theorem</title>. <idx>Pappus' Theorem</idx>
+	    <p>Let <m>A,B,C</m> be three distinct collinear points
+	  in <m>\R\Proj_2</m>. Let <m>A',B',C'</m> be another three
+	  distinct collinear points on a different
+	  line. Let <m>P,Q,R</m> be the intersection
+	  points <m>P=BC'\cap B'C</m>, <m>Q=AC'\cap
+	    A'C</m>, <m>R=AB'\cap A'B</m>. Then  points <m>P,Q,R</m> are
+	      collinear. See <xref ref="pappus_theorem_fig"/>.</p>
+	  </assemblage>
+	  <p>Follow the outline below to prove Pappus' Theorem under the
+	  additional assumption that no three of <m>A,A',P,R</m> are collinear. Applying
+	  the Fundamental Theorem of Projective Geometry, we may
+	  assume <m>A=[e_1]</m>, <m>A'=[e_2]</m>, <m>P=[e_3]</m>,
+	  and <m>R=[e_0]</m>.
+	    <ul>
+	      <li>Check that <m>AR=[0,-1,1]</m> and <m>A'R=[1,0,-1]</m>.
+	      </li>
+	      <li>Explain why it follows that <m>B'=[r,1,1]</m>
+		and <m>B=[1,s,1]</m> for some <m>r,s</m>.
+	      </li>
+	      <li>Explain why <m>C=[rs,s,1]</m>
+		and <m>C'=[r,rs,1]</m>.</li>
+		<li>Explain why <m>Q=[rs,rs,1]</m>.
+		</li>
+		<li>Observe that <m>P,Q,R</m> all lie on <m>[1,-1,0]</m>.
+		</li>
+		<!--
+		<li>Finally, address the degenerate case(s)
+		where <m>A,A',P,R</m> are not in general position.
+		</li>-->
+	    </ul>
+	  </p>
+	</statement><hint><p>For the second bullet point, use the fact that
+	  <m>B'=[x,y,z]</m> lies on <m>AR</m> to get <m>y=z</m>.
+	  For the third bullet point, use known
+	  coordinates for <m>A,B,B',P</m> to get coordinates for
+	  lines <m>AB,PB'</m>. Then <m>C= AB\cap PB'</m>. Use a similar
+	  process for <m>C'</m>. Four the fourth bullet point,
+	  use <m>Q=AC'\times A'C</m>.</p>
+	</hint>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="pappusthmexer"/> (proof
+  of Pappus' Theorem)</title>
+  <p>Following the outline, we have the following.
+    <ul>
+      <li>We have the following.
+	<md><mrow>AR\amp = [e_1]\times [e_0] = [1,0,0]\times [1,1,1] = [0,-1,1]</mrow>
+	  <mrow>A'R\amp = [e_2]\times [e_0] = [0,1,0]\times [1,1,1] = [1,0,-1]</mrow>
+	</md>
+	</li>
+      <li>Since <m>B'</m> lies on <m>AR</m>, we have <m>B'\cdot
+	  AR=0</m>, so <m>B'=[r,x,x]</m> for some <m>r,x</m>. It must be
+	that <m>x\neq 0</m>, for otherwise, we would have <m>B'=A</m>. So
+	we can take <m>B'</m> to be <m>[r,1,1]</m>. Similar reasoning
+	yields <m>B = [1,s,1]</m> for some <m>s</m>.
+      </li>
+      <li>Next we have the following.
+	<md><mrow>AB\amp = [e_1]\times [1,s,1]  = [0,-1,s]</mrow>
+	  <mrow>PB'\amp = [e_3]\times [r,1,1] = [-1,r,0]</mrow>
+	</md>
+	Now we have <m>C=AB\times PB'=[rs,s,1]</m>.
+	Similar reasoning applies to <m>C'</m>,
+	which lies on <m>A'B'</m> and also on <m>BP</m> and yields <m>C'=[r,rs,1]</m>.
+      </li>
+      <li>Point <m>Q</m> lies on <m>AC'=[0,-1,rs]</m> and also
+	on <m>A'C=[1,0,-rs]</m>, so must have the form <m>AC'\times A'C=[rs,rs,1]</m>.
+      </li>
+      <li>We have <m>X\cdot [1,-1,0]=0</m> for <m>X=P,Q,R</m>, so we
+	conclude that <m>P,Q,R</m> are collinear.
+      </li>
+      <!--
+		<li>Finally, we consider degenerate
+		  cases. If <m>A,A',R</m> are collinear, then
+		  both <m>B,B'</m> must lie on <m>AA'</m>, violating the
+		  hypothesis that the two lines <m>AB,A'B'</m> are distinct.
+		</li>
+-->
+    </ul>
+  </p>
+</commentary>
+      
+
+      <exercise xml:id="quadricsexer"><title>Quadrics</title>
+	<statement><p>A <term>quadric</term><idx><h>projective geometry</h><h>quadric</h>
+	    </idx> in <m>\Proj(\F^{n+1})</m> is a set of points whose
+	    homogeneous coordinates satisfy an equation of the form
+	    <men xml:id="quadriceqn">\sum_{0\leq i\leq j\leq n}c_{ij}x_ix_j=0.</men>
+	    A quadric in <m>\R\Proj_2</m> is called
+	    a <term>conic</term><idx><h>projective geometry</h><h>conic</h>
+	    </idx>. 
+	    <ol><li>Explain why <xref ref="quadriceqn"/> is a valid
+	    definition of a set of 
+		points in <m>\Proj(\F^{n+1})</m>.</li>
+	      <li>Consider the conic <m>C</m> given by
+	    <me> x_0^2+x_1^2 -x_2^2=0.</me> What are the figures
+		in <m>\R^2</m> that result from taking inhomogeneous
+		coordinates (see <xref ref="chartexer"/>) on <m>C</m> in positions <m>0,1,2</m>?
+	      </li>
+	    </ol>
+	  </p>
+	</statement>
+      </exercise>
+
+<!-- Instructor's solution -->
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="quadricsexer"/></title>
+  <p>
+    <ol>
+      <li>Given a vector <m>x=(x_0,x_1,\ldots,x_{n+1})\in\F^{n+1}</m>,
+	let <m>c(x)</m> denote the expression on the left side of
+	<xref ref="quadriceqn"/>. We have <m>c(kx) = k^2c(x)</m> for
+      any scalar <m>k</m>, so <m>c(x)=0</m> if and only if <m>c(kx)=0</m>.
+      </li>
+      <li>Taking inhomogeneous coordinates in position 0,
+	let <m>u=x_1/x_0,v=x_2/x_0</m>. The points <m>(1,u,v)</m>
+	satisfy
+	<m>1+u^2-v^2=0</m>, which is the equation for a hyperbola in
+	the <m>u,v</m>-plane. Taking inhomogeneous coordinates in
+	position 1 is also a hyperbola. Taking inhomogeneous
+	coordinates in position 2, with <m>u=x_0/x_2,v=x_1/x_2</m>, we
+	have <m>u^2+v^2-1=0</m>, which is the equation for the unit
+	circle in the <m>u,v</m>-plane.
+      </li>
+    </ol>
+  </p>
+</commentary>
+      
+      
+    </exercises>
+
+
+
+  </section>
