@@ -96,15 +96,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.2';
+eBookConfig.runestone_version = '7.5.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.8b270ccf5298bad1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.d966d31a41778c59.css">
+<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
 <style>
 #frontmatter-3-3-3-2-1 { counter-set: frontmatter-3-3-3-2-1 0; }
 #frontmatter-3-3-3-2-1 > li::marker { content: ""counter(frontmatter-3-3-3-2-1,decimal)"."; }
@@ -552,7 +552,7 @@ S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}
 </div>
 <details id="allptsscaledfroms1exer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
-</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="allptsscaledfroms1exer-1-1">Draw a sketch that includes <span class="process-math">\(P,P',O,r,t\text{.}\)</span> Show that "it is easy to check" that <span class="process-math">\(P=rP'\)</span> by checking it.</div></article></details><div class="para" id="vector_operations_section-12">If we have a point <span class="process-math">\(A=(u,v)=(k\cos \theta,k\sin\theta)\text{,}\)</span> we say that the numbers <span class="process-math">\(u,v\)</span> are the <dfn class="terminology">Cartesian coordinates</dfn> or the <dfn class="terminology">rectangular coordinates</dfn> for <span class="process-math">\(A\text{,}\)</span> and we say that the numbers <span class="process-math">\(k,\theta\)</span> are <dfn class="terminology">polar coordinates</dfn>  for <span class="process-math">\(A\text{.}\)</span> </div>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="allptsscaledfroms1exer-1-1">Draw a sketch that includes <span class="process-math">\(S,O,P,\angle SOP, P',r,t\text{.}\)</span> Show that "it is easy to check" that <span class="process-math">\(P=rP'\)</span> by checking it.</div></article></details><div class="para" id="vector_operations_section-12">If we have a point <span class="process-math">\(A=(u,v)=(k\cos \theta,k\sin\theta)\text{,}\)</span> we say that the numbers <span class="process-math">\(u,v\)</span> are the <dfn class="terminology">Cartesian coordinates</dfn> or the <dfn class="terminology">rectangular coordinates</dfn> for <span class="process-math">\(A\text{,}\)</span> and we say that the numbers <span class="process-math">\(k,\theta\)</span> are <dfn class="terminology">polar coordinates</dfn>  for <span class="process-math">\(A\text{.}\)</span> </div>
 <details id="polarnonuniqueexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
 </h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="polarnonuniqueexer-1-1">Show that polar coordinates are not unique by finding three different pairs of polar coordinates <span class="process-math">\(r,t\)</span> for the point <span class="process-math">\(A=(1,1)\text{.}\)</span> How many different values of <span class="process-math">\(r\)</span> are possible? What are they? How many different values of <span class="process-math">\(t\)</span> are possible? What are they?</div></article></details><div class="para logical" id="vector_operations_section-14">
@@ -627,11 +627,8 @@ x}\right\Vert \left\Vert{\mathbf y}\right\Vert \cos \theta\tag{2.1.10}
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer. For <span class="process-math">\(k\)</span> in the range <span class="process-math">\(0\leq k\leq n-1\text{,}\)</span> let <span class="process-math">\(P_k=\wrap\left(\frac{2\pi k}{n}\right)\text{,}\)</span> where <span class="process-math">\(\wrap\)</span> denotes the wrapping function.</div>
 <ol class="lower-alpha" id="polygonvertexexer-1-1-6">
 <li id="polygonvertexexer-1-1-6-1"><div class="para" id="p-derived-polygonvertexexer-1-1-6-1">Show that the points <span class="process-math">\(P_0,P_1,\ldots,P_{n-1}\)</span> are vertices of a regular <span class="process-math">\(n\)</span>-gon inscribed in the unit circle.</div></li>
-<li id="polygonvertexexer-1-1-6-2"><div class="para" id="p-derived-polygonvertexexer-1-1-6-2">Show that the following holds for <span class="process-math">\(0\leq k,\ell\leq n-1\text{.}\)</span><div class="displaymath process-math">
-\begin{equation*}
-P_k\odot P_\ell = P_{k+_n \ell}
-\end{equation*}
-</div>
+<li id="polygonvertexexer-1-1-6-2"><div class="para" id="p-derived-polygonvertexexer-1-1-6-2">Let integers <span class="process-math">\(k,\ell\)</span> be in the range <span class="process-math">\(0\leq k,\ell\leq n-1\text{,}\)</span> and let <span class="process-math">\(r=k +_n \ell =
+(k+\ell)\MOD n\)</span> (see <a href="mod_arith_section.html" class="internal" title="Section 1.6: Modular Arithmetic">Section 1.6</a>). Show that  <span class="process-math">\(P_k\odot P_\ell = P_{r}\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="conventionsaboutptsandvects"><h4 class="heading">
