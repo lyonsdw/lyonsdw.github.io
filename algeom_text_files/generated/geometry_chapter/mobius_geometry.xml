@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="mobiusgeomsect">
     <title>Möbius geometry
     </title>	       
 
@@ -612,11 +612,12 @@ All clines are congruent in Möbius geometry.
             <image width="90%" source="images/symmetric_pt2.png"></image>
            </figure>
 
-		 <exercise><statement>Show that the symmetric point of a symmetric
+		 <exercise><statement><p>Show that the symmetric point of a symmetric
 		   point is the point you started with. That is, show
 		     that <m>(z^{\ast C})^{\ast C}=z</m>. This allows
 		   us to speak of "a pair of symmetric points" without
-		   ambiguity.</statement>
+		       ambiguity.</p>
+		   </statement>
 		   <hint><p><m>(T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
 			 \conj\circ T) = \Id</m></p>
 		   </hint>
@@ -1193,12 +1194,6 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	    center <m>a</m> and radius <m>r</m> if and only
 	    if <m>|z-a||z'-a|=r^2</m> and  <m>z,z'</m> lie on the same
 	    ray emanating from <m>a</m>. See <xref ref="symmptsfig"/>.
-	    <hint><p>The equation for <m>z^{\ast C}</m> in part iii
-		gives <m>(z'-a)(z-a)^\ast = r^2</m>. For the first
-		statement, take the norm of both sides. For the second
-		statement, take the argument of both sides.
-	      </p>
-	    </hint>
 	  </li>
 	  <li>Show that <m>z,z'</m> are
 	    symmetric with respect to a line <m>C</m>
@@ -1208,6 +1203,13 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	  </ol>
 	</p>
       </statement>
+      	    <hint><p>For part (b): The equation for <m>z^{\ast C}</m> in part iii
+		gives <m>(z'-a)(z-a)^\ast = r^2</m>. For the first
+		statement, take the norm of both sides. For the second
+		statement, take the argument of both sides.
+	      </p>
+	    </hint>
+
     </exercise>
 
 <!-- Instructor's solution -->

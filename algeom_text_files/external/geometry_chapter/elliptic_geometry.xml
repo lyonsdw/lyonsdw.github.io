@@ -28,7 +28,7 @@ surface of a 3-dimensional solid ball), where congruence
 	is a group.
       </p>
 
-      <exercise xml:id="unitquatisgpexer"><statement>Show that <m>U(\Quat)</m> is a group.
+      <exercise xml:id="unitquatisgpexer"><statement><p>Show that <m>U(\Quat)</m> is a group.</p>
 	</statement>
       </exercise>
 
@@ -64,8 +64,8 @@ surface of a 3-dimensional solid ball), where congruence
 	<me>U(\Quat)\approx SU(2).</me>
       </p>
 
-      <exercise xml:id="su2isgpisounitquitexer"><statement>Show that <m>SU(2)</m> is a group. Show
-	  that <m>M\colon U(\Quat)\to SU(2)</m> is a homomorphism. 
+      <exercise xml:id="su2isgpisounitquitexer"><statement><p>Show that <m>SU(2)</m> is a group. Show
+	    that <m>M\colon U(\Quat)\to SU(2)</m> is a homomorphism. </p>
       </statement>
       <hint><p>It is not necessary to perform any new computation to show
 	  that <m>M</m> is a homomorphism. Instead, use <xref ref="quatmultdef"/>.</p>
@@ -108,9 +108,9 @@ surface of a 3-dimensional solid ball), where congruence
       of elliptic geometry is <m>(S^2_\Quat,U(\Quat))</m>.
     </definition>
 
-        <exercise xml:id="unitquatactionons2exer"><statement>Show that the map <m>U(\Quat)\to
+        <exercise xml:id="unitquatactionons2exer"><statement><p>Show that the map <m>U(\Quat)\to
 	  \Perm(S^2_\Quat)</m> given by
-	<me>r \to \left[ v\to rvr^\ast \right]</me> is a group action.
+	      <me>r \to \left[ v\to rvr^\ast \right]</me> is a group action.</p>
       </statement>
 	</exercise>
 
@@ -181,10 +181,10 @@ orthogonal to <m>{v}</m>, as viewed from "above" where <m>{v}</m> points
 	<me>U(\Quat)/\{\pm 1\} \approx \Rot(S^2).</me>
       </p>
 
-      <exercise xml:id="s2rotisgpexer"><statement>Complete the details to show
+      <exercise xml:id="s2rotisgpexer"><statement><p>Complete the details to show
       that <m>\Rot(S^2)</m> is a group. Show that the kernel of the
       homomorphism <m>U(\Quat)\to \Rot(S^2)</m> given by <m>r\to
-	    R_r</m> is <m>\{\pm 1\}</m>.
+	      R_r</m> is <m>\{\pm 1\}</m>.</p>
 	</statement>
 	<hint><p>Use <xref ref="quatrotprop"/>.</p>
 	</hint>
@@ -222,11 +222,11 @@ orthogonal to <m>{v}</m>, as viewed from "above" where <m>{v}</m> points
       </p>
 
       <lemma><title>Rotations about the <m>y</m>-axis
-	</title><statement>An arbitrary rotation about the <m>y</m>-axis
+	</title><statement><p>An arbitrary rotation about the <m>y</m>-axis
 	  is a composition of a rotations about the <m>x</m>-axis
 	  by <m>\pi/2</m> radians with a rotation about
 	  the <m>z</m>-axis. Specifically, we have the following.
-	<men xml:id="yrotdecomp">R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}</men>
+	    <men xml:id="yrotdecomp">R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}</men></p>
 	</statement>
 	<proof><p>Visualize! You can also verify by checking that both
 	sides of <xref ref="yrotdecomp"/> yield the same result when
@@ -313,9 +313,9 @@ via the stereographic projection <m>s</m>.
 	<me>\S\approx \Rot(S^2).</me>
       </p>
 
-            <exercise xml:id="ellipticgpisgpexer"><statement>Show that <m>\S</m> is indeed a group. 
+            <exercise xml:id="ellipticgpisgpexer"><statement><p>Show that <m>\S</m> is indeed a group. 
 	 Show that <m>R\to s\circ R\circ s^{-1}</m> is a group
-		isomorphism <m>\Rot(S^2)\to \S</m>.
+		  isomorphism <m>\Rot(S^2)\to \S</m>.</p>
 	</statement>
 	    </exercise>
 
@@ -384,7 +384,7 @@ via the stereographic projection <m>s</m>.
 	</p>
 
 	<exercise xml:id="ellipticgpgenexer">
-	  <statement>Let <m>M_{Z,\theta},M_{X,\pi/2}</m> denote the
+	  <statement><p>Let <m>M_{Z,\theta},M_{X,\pi/2}</m> denote the
 	    matrices <m>\twotwo{e^{i\theta/2}}{0}{0}{e^{-i\theta/2}},
 	    \twotwo{1/\sqrt{2}}{i/\sqrt{2}}{i/\sqrt{2}}{1/\sqrt{2}}</m>,
 	    respectively.  Verify that <m>M_{Z,\theta},M_{X,\pi/2}</m>
@@ -393,7 +393,7 @@ via the stereographic projection <m>s</m>.
 	    <xref ref="txpiby2assu2image"/>.  Explain the final comment
 	    in the paragraph above. Why does it follow that every
 	    element of <m>\S</m> is the image of an element
-	    of <m>SU(2)</m>?
+	    of <m>SU(2)</m>?</p>
 	  </statement>
 	</exercise>
 
@@ -469,11 +469,11 @@ is of the form
       </p>
 
              <proposition><title>Stereographic projection takes circles to clines</title>
-	 <statement> Let <m>C</m> be a circle that is the intersection
+	 <statement> <p>Let <m>C</m> be a circle that is the intersection
 	   of <m>S^2</m> with a plane in <m>\R^3</m>.
 	   If <m>C</m> contains the north
 	   pole <m>(0,0,1)</m> of <m>S^2</m>, then <m>s(C\setminus\{(0,0,1)\})</m> is a Euclidean straight
-	   line in <m>\C</m>. Otherwise, <m>s(C)</m> is a circle in <m>\C</m>.
+	     line in <m>\C</m>. Otherwise, <m>s(C)</m> is a circle in <m>\C</m>.</p>
 	 </statement>
 	 <proof><p>Proof sketch: The statement about the case when <m>C</m> contains the
 	 north pole is geometrically clear. 
@@ -618,8 +618,8 @@ is of the form
            </figure>
 
 
-    <exercise xml:id="ellipticdistlemmaexer"><statement>Show that <m>\theta/2=\alpha=\arctan u</m> in
-    <xref ref="elliptic_distance_fig"/>.
+    <exercise xml:id="ellipticdistlemmaexer"><statement><p>Show that <m>\theta/2=\alpha=\arctan u</m> in
+	  <xref ref="elliptic_distance_fig"/>.</p>
       </statement>
     </exercise>
 
@@ -654,10 +654,10 @@ is of the form
       <men xml:id="ellipticlengthformula">\text{Length}(\gamma)=2\int_a^b \frac{|z'(t)|}{1+|z(t)|^2}\;dt</men>	
     </p>
 
-    <exercise xml:id="ellipticdsexer"><statement>Show that the first order Taylor approximation
+    <exercise xml:id="ellipticdsexer"><statement><p>Show that the first order Taylor approximation
 	for <m>\arctan u</m> is <m>u</m>. Complete the details of
 	modifying the derivation of the hyperbolic length integral
-	formula to obtain the elliptic length integral formula.
+	  formula to obtain the elliptic length integral formula.</p>
       </statement>
     </exercise>
 
@@ -749,8 +749,9 @@ is of the form
    	  </p>
 </commentary>
       
-      <exercise xml:id="threeellipticmodelssameexer"><statement>Show that the three models of
-		  elliptic geometry are equivalent.</statement>
+      <exercise xml:id="threeellipticmodelssameexer"><statement><p>Show that the three models of
+	    elliptic geometry are equivalent.</p>
+	</statement>
       </exercise>
 
 <!-- Instructor's solution -->

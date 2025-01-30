@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="hyperbolicgeomsect">
     <title>Hyperbolic geometry
     </title>	       
     <introduction>
@@ -228,12 +228,12 @@
  <exercise xml:id="hyplinewith0isdiam">
    <statement><p>Show that a hyperbolic straight line that contains 0 must be a
        diameter of the unit circle.</p>
+   </statement>
      <hint><p>Prove the contrapositive: assume <m>C</m> is a hyperbolic
        straight line that is also a Euclidean circle, and intersects the unit circle orthogonally
        at <m>p</m>. Give an argument why <m>C</m> can <em>not</em>
 	 contain 0.</p>
      </hint>
-   </statement>
  </exercise>
 
 <!-- Instructor's solution -->
@@ -287,8 +287,8 @@
       hyperbolic group. We begin with an observation about fixed
       points of a Möbius transformation that maps a cline to itself.</p>
 
-      <lemma xml:id="hyperbolicfixptlemma"><statement>Let <m>T\in \M</m> and let <m>C</m> be a
-	  cline. If <m>Tz=z</m>, then <m>T(z^{\ast C})=z^{\ast C}</m>.
+      <lemma xml:id="hyperbolicfixptlemma"><statement><p>Let <m>T\in \M</m> and let <m>C</m> be a
+	    cline. If <m>Tz=z</m>, then <m>T(z^{\ast C})=z^{\ast C}</m>.</p>
 	</statement>
 	<proof><p>Apply <xref ref="symmptinvariantprop"/>.</p>
 	</proof>
@@ -308,8 +308,9 @@
 	</ol>
       </p>
 
-      <exercise xml:id="hyperbolicfixptcaseexer"><statement>Give an argument to justify the three cases
-	  above.</statement>
+      <exercise xml:id="hyperbolicfixptcaseexer"><statement><p>Give an argument to justify the three cases
+	    above.</p>
+	</statement>
       </exercise>
 
 <!-- Instructor's solution -->
@@ -993,6 +994,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     
     <exercise xml:id="upperhalfplanetransfpropexer"><statement><p>Prove
 	  <xref ref="upperhalfplanetransfprop"/>.</p>
+      </statement>
 	<hint>
 	  <p>For the "only if" direction, apply <xref ref="transpreservesdiskprop"/> to the cline
     <m>\extR</m>, and conclude that <m>T</m> must send the real line to
@@ -1001,7 +1003,6 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     the "if" direction, suppose <m>T</m> has the given
     form. Let <m>y\gt 0</m> and show that <m>\im(T(x+iy))\gt 0</m>.</p>
 	</hint>
-      </statement>
     </exercise>
 
 <!-- Instructor's solution -->
