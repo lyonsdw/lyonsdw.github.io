@@ -160,9 +160,9 @@ eBookConfig.enable_chatcodes =  false;
 #cyclicgroups-3-1-8 { counter-set: cyclicgroups-3-1-8 0; }
 #cyclicgroups-3-1-8 > li::marker { content: "("counter(cyclicgroups-3-1-8,lower-alpha)")"; }
 #cyclicgroups-3-1-8 > li { counter-increment: cyclicgroups-3-1-8; }
-#cyclicpermutations-3-1-45 { counter-set: cyclicpermutations-3-1-45 0; }
-#cyclicpermutations-3-1-45 > li::marker { content: "("counter(cyclicpermutations-3-1-45,lower-alpha)")"; }
-#cyclicpermutations-3-1-45 > li { counter-increment: cyclicpermutations-3-1-45; }
+#cyclicpermutations-3-1-39 { counter-set: cyclicpermutations-3-1-39 0; }
+#cyclicpermutations-3-1-39 > li::marker { content: "("counter(cyclicpermutations-3-1-39,lower-alpha)")"; }
+#cyclicpermutations-3-1-39 > li { counter-increment: cyclicpermutations-3-1-39; }
 #permtransprodexer-2-1-1 { counter-set: permtransprodexer-2-1-1 0; }
 #permtransprodexer-2-1-1 > li::marker { content: "("counter(permtransprodexer-2-1-1,lower-alpha)")"; }
 #permtransprodexer-2-1-1 > li { counter-increment: permtransprodexer-2-1-1; }
@@ -553,7 +553,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="space"> </span><span class="title">Stereographic projection <span class="process-math">\(S^1\to \extR\)</span></span>
 </h3>
 <div class="para logical" id="stereoprojsect-2-2">
-<div class="para">Let <span class="process-math">\(S^1\)</span> denote the unit circle in the <span class="process-math">\(x,y\)</span>-plane:</div>
+<div class="para">Let <span class="process-math">\(S^1\)</span>  denote the unit circle in the <span class="process-math">\(x,y\)</span>-plane:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stereoprojfig.html" id="s1defn">
 \begin{equation}
 S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\,.\tag{1.3.1}
@@ -573,7 +573,7 @@ S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\,.\tag{1.3.1}
 \extR=\R\cup \{\infty\}\tag{1.3.2}
 \end{equation}
 </div>
-<div class="para">the <dfn class="terminology">extended real numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a real number. Now we define stereographic projection <span class="process-math">\(s\colon S^1 \to \extR\)</span> by</div>
+<div class="para"> the <dfn class="terminology">extended real numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a real number. Now we define stereographic projection <span class="process-math">\(s\colon S^1 \to \extR\)</span> by</div>
 <div class="displaymath process-math" id="stereoproj1defn">
 \begin{equation}
 s(x,y) = 
@@ -588,8 +588,7 @@ s(x,y) =
 </h3>
 <div class="para" id="stereoprojsect-3-3">The definitions in the previous subsection extend naturally to higher dimensions. Here are the details for the main case of interest.</div>
 <div class="para logical" id="stereoprojsect-3-4">
-<div class="para">Let <span class="process-math">\(S^2\)</span> denote the unit sphere in <span class="process-math">\(\R^3\text{:}\)</span>
-</div>
+<div class="para">Let <span class="process-math">\(S^2\)</span> denote the unit sphere in <span class="process-math">\(\R^3\text{:}\)</span> </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/stereoproj2fig.html" id="s2defn">
 \begin{equation}
 S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\,.\tag{1.3.4}
@@ -606,7 +605,7 @@ S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\,.\tag{1.3.4}
 \extC=\C\cup \{\infty\}\tag{1.3.5}
 \end{equation}
 </div>
-<div class="para">the <dfn class="terminology">extended complex numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a complex number. Now we define stereographic projection <span class="process-math">\(s\colon S^2 \to \extC\)</span> by</div>
+<div class="para"> the <dfn class="terminology">extended complex numbers</dfn>, where "<span class="process-math">\(\infty\)</span>" is an element that is not a complex number. Now we define stereographic projection <span class="process-math">\(s\colon S^2 \to \extC\)</span> by</div>
 <div class="displaymath process-math" id="stereoprojdefn">
 \begin{equation}
 s(a,b,c) = 
@@ -632,7 +631,7 @@ s(a,b,c) =
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="inverse1dstereoexer"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para" id="inverse1dstereoexer-1-1">For <span class="process-math">\(s\colon S^1\to \extR\text{,}\)</span> find a formula for <span class="process-math">\(s^{-1}\colon \extR\to S^1\text{.}\)</span> Find <span class="process-math">\(s^{-1}(3)\text{.}\)</span>
-</div>
+</div> <div class="para" id="inverse1dstereoexer-1-2"></div>
 <div class="solutions"><details id="inverse1dstereoexer-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="inverse1dstereoexer-2-1">
 <div class="displaymath process-math">
 \begin{equation*}
@@ -642,7 +641,11 @@ s^{-1}(r) = \begin{cases}
 \end{cases}
 \end{equation*}
 </div>
-<div class="para"><span class="process-math">\(s^{-1}(3) = (3/5,4/5)\)</span></div>
+<div class="displaymath process-math">
+\begin{equation*}
+s^{-1}(3) = (3/5,4/5)
+\end{equation*}
+</div>
 </div></div></details></div></article><article class="exercise exercise-like" id="inverse2dstereoexer"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para" id="inverse2dstereoexer-1-1">For <span class="process-math">\(s\colon S^2\to \extC\text{,}\)</span> find a formula for <span class="process-math">\(s^{-1}\colon \extC\to S^2\text{.}\)</span> Find <span class="process-math">\(s^{-1}(3+i)\text{.}\)</span>
 </div>
@@ -655,7 +658,11 @@ s^{-1}(z) = \begin{cases}
 \infty\\ (0,0,1) \amp \text{ if } z=\infty \end{cases}
 \end{equation*}
 </div>
-<div class="para"><span class="process-math">\(s^{-1}(3+i) = (6/11,2/11,9/11)\)</span></div>
+<div class="displaymath process-math">
+\begin{equation*}
+s^{-1}(3+i) = (6/11,2/11,9/11)
+\end{equation*}
+</div>
 </div></div></details></div></article>
 </div>
 </div>

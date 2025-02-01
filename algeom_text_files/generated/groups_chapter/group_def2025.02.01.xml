@@ -345,15 +345,15 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
       <title>Cyclic permutations</title><idx><h>cyclic permutations</h>
       </idx>
       <statement>
-	<p>Let <m>k,n</m> be positive integers with <m>k\leq n</m>.  A
-	  permutation <m>\pi\in S_n</m> (see <xref ref="permgpdef"/>) is
-	  called
-	  a <term><m>k</m>-cycle</term><idx><h>permutation</h><h><m>k</m>-cycle
+	<p>Let <m>n</m> be a positive integer and let
+	  <m>k</m> be an integer in the range <m>2\leq k\leq n</m>.
+	  A permutation <m>\pi\in S_n</m> (see <xref ref="permgpdef"/>)
+	  is called a <term><m>k</m>-cycle</term><idx><h>permutation</h><h><m>k</m>-cycle
 	    </h>
 	  </idx>
 	  if there is a <m>k</m>-element
 	  set <m>A=\{a_1,a_2,\ldots,a_k\}\subseteq \{1,2,\ldots,n\}</m>
-	  such that <m>\pi(a_i)=a_{i+1}</m> for <m>i\leq k-1</m>, 
+	  such that <m>\pi(a_i)=a_{i+1}</m> for <m>1\leq i\leq k-1</m>
 	  and <m>\pi(a_k)=a_1</m>, and <m>\pi(j)=j</m> for <m>j\not\in
 	    A</m>.
 	  We use <term>cycle notation</term><idx><h>cycle notation</h>
@@ -364,28 +364,28 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  <me>a_1{\to} a_2{\to} a_3{\to} \cdots{\to} a_k{\to} a_1</me>
 	  on the distinct positive
 	  integers <m>a_1,a_2,\ldots,a_k</m>. 	  For example, the
-	  element <m>\pi=[1,4,2,3]=(2\;4\;3)</m> is a 3-cycle in <m>S_4</m>
+	  element <m>\pi=[1,4,2,3]=(2,4,3)</m> is a 3-cycle in <m>S_4</m>
 	  because <m>\pi</m> acts on the set <m>A=\{2,3,4\}</m> by
 	  <me>2\to 4\to 3\to 2</me> and <m>\pi</m> acts
 	  on <m>A^c=\{1\}</m> as the identity.
-	  <!--
-	  Note that, by this definition, a <term><m>1</m>-cycle</term> is the identity
-	  permutation in <m>S_n</m>.
-	  -->
-	  Note that
+	  A <term><m>1</m>-cycle</term> is defined to be the identity
+	  permutation, and may be written as <m>(a)</m> in cycle
+	  notation, for any <m>a\in \{1,2,\ldots,n\}</m>. Note that
 	  cycle notation is not unique. For example, in <m>S_4</m> we
-	  have <m>(2\;4\;3)=(4\;3\;2)=(3\;2\;4)</m>
+	  have <m>(2,4,3)=(4,3,2)=(3,2,4)</m>
 	  and <m>(1)=(2)=(3)=(4)</m>. A permutation is
 	  called <term>cyclic</term><idx><h>cyclic permutation</h>
 	  </idx><idx><h>permutation</h><h>cyclic permutation</h>
 	  </idx>
-	  if it is a <m>k</m>-cycle for some <m>k</m>.
-	  <!--
-	    <fn>A convention used in some texts (but not in this text)
-	    is that a permutation is cyclic if it is a <m>k</m>-cycle for
+	  if it is a <m>k</m>-cycle for some <m>k</m>, <m>1\leq k \leq
+	    n</m>.<fn>There are two conventions about whether the
+	    identity permutation is considered cyclic. According to the
+	    definition in this text, the identity is cyclic because it
+	    is a 1-cycle. Another convention, not used here, is that
+	    a permutation is cyclic if it is a <m>k</m>-cycle for
 	    some <m>k\geq 2</m>. According to this convention, the
-	      identity is not cyclic.</fn>
-	    -->
+	    identity is not cyclic.
+	  </fn>
 	  A 2-cycle is called a <term>transposition</term><idx><h>transposition</h>
 	  </idx><idx><h>permutation</h><h>transposition</h> </idx>.
 	  <ol>
