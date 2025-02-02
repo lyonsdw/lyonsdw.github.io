@@ -160,9 +160,9 @@ eBookConfig.enable_chatcodes =  false;
 #cyclicgroups-3-1-8 { counter-set: cyclicgroups-3-1-8 0; }
 #cyclicgroups-3-1-8 > li::marker { content: "("counter(cyclicgroups-3-1-8,lower-alpha)")"; }
 #cyclicgroups-3-1-8 > li { counter-increment: cyclicgroups-3-1-8; }
-#cyclicpermutations-3-1-35 { counter-set: cyclicpermutations-3-1-35 0; }
-#cyclicpermutations-3-1-35 > li::marker { content: "("counter(cyclicpermutations-3-1-35,lower-alpha)")"; }
-#cyclicpermutations-3-1-35 > li { counter-increment: cyclicpermutations-3-1-35; }
+#cyclicpermutations-3-1-34 { counter-set: cyclicpermutations-3-1-34 0; }
+#cyclicpermutations-3-1-34 > li::marker { content: "("counter(cyclicpermutations-3-1-34,lower-alpha)")"; }
+#cyclicpermutations-3-1-34 > li { counter-increment: cyclicpermutations-3-1-34; }
 #permtransprodexer-2-1-1 { counter-set: permtransprodexer-2-1-1 0; }
 #permtransprodexer-2-1-1 > li::marker { content: "("counter(permtransprodexer-2-1-1,lower-alpha)")"; }
 #permtransprodexer-2-1-1 > li { counter-increment: permtransprodexer-2-1-1; }
@@ -652,24 +652,22 @@ G=\{g,g^2,g^3,\ldots,g^{|G|}\}.
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclic permutations.</span>
 </h4>
 <div class="para logical" id="cyclicpermutations-3-1">
-<div class="para">Let <span class="process-math">\(k,n\)</span> be positive integers with <span class="process-math">\(k\leq n\text{,}\)</span> and let <span class="process-math">\(A=\{a_1,a_2,\ldots,a_k\}\)</span> be a set of <span class="process-math">\(k\)</span> distinct elements in <span class="process-math">\(\{1,2,\ldots,n\}\text{.}\)</span> We write <span class="process-math">\((a_1a_2\cdots a_k)\)</span> to denote the permutation <span class="process-math">\(\kappa\)</span> in <span class="process-math">\(S_n\)</span> (see <a href="groupintrosection.html#permgpdef" class="xref" data-knowl="./knowl/xref/permgpdef.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.1">Definition 2.1.1</a>) given by the assignments</div>
+<div class="para">Let <span class="process-math">\(k,n\)</span> be positive integers with <span class="process-math">\(k\leq n\text{,}\)</span> and let <span class="process-math">\(A=\{a_1,a_2,\ldots,a_k\}\)</span> be a set of <span class="process-math">\(k\)</span> distinct elements in <span class="process-math">\(\{1,2,\ldots,n\}\text{.}\)</span> We write <span class="process-math">\((a_1a_2\cdots a_k)\)</span> to denote the permutation <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S_n\)</span> (see <a href="groupintrosection.html#permgpdef" class="xref" data-knowl="./knowl/xref/permgpdef.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.1">Definition 2.1.1</a>) given by the assignments</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/permgpdef.html">
 \begin{equation*}
-a_1\stackrel{\kappa}{\to} a_2\stackrel{\kappa}{\to}
-a_3\stackrel{\kappa}{\to} \cdots\stackrel{\kappa}{\to}
-a_k\stackrel{\kappa} {\to} a_1
+a_1{\to} a_2{\to}  a_3{\to} \cdots{\to} a_k {\to} a_1
 \end{equation*}
 </div>
-<div class="para">and <span class="process-math">\(\kappa(j)=j\)</span> for <span class="process-math">\(j\not\in A\text{.}\)</span>  If <span class="process-math">\(k=1\text{,}\)</span> the permutation <span class="process-math">\((a_1)\)</span> is the identity permutation. A permutation of the form <span class="process-math">\(\kappa=(a_1a_2\cdots a_k)\)</span> is called a <dfn class="terminology"><span class="process-math">\(k\)</span>-cycle</dfn>.  For example, the element <span class="process-math">\(\kappa=[1,4,2,3]=(2\;4\;3)\)</span> is a 3-cycle in <span class="process-math">\(S_4\)</span> because <span class="process-math">\(\kappa\)</span> acts on the set <span class="process-math">\(A=\{2,3,4\}\)</span> by</div>
+<div class="para">and <span class="process-math">\(\sigma(j)=j\)</span> for <span class="process-math">\(j\not\in A\text{.}\)</span>  If <span class="process-math">\(k=1\text{,}\)</span> the permutation <span class="process-math">\((a_1)\)</span> is the identity permutation. A permutation of the form <span class="process-math">\((a_1a_2\cdots a_k)\)</span> is called a <dfn class="terminology"><span class="process-math">\(k\)</span>-cycle</dfn>.  For example, the element <span class="process-math">\(\sigma=[1,4,2,3,5]=(2\;4\;3)\)</span> is a 3-cycle in <span class="process-math">\(S_5\)</span> because <span class="process-math">\(\sigma\)</span> acts on the set <span class="process-math">\(A=\{2,3,4\}\)</span> by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/permgpdef.html">
 \begin{equation*}
 2\to 4\to 3\to 2
 \end{equation*}
 </div>
-<div class="para">and <span class="process-math">\(\kappa\)</span> acts on <span class="process-math">\(A^c=\{1\}\)</span> as the identity.  Note that cycle notation is not unique. For example, in <span class="process-math">\(S_4\)</span> we have <span class="process-math">\((2\;4\;3)=(4\;3\;2)=(3\;2\;4)\text{.}\)</span>  A permutation is called <dfn class="terminology">cyclic</dfn> if it is a <span class="process-math">\(k\)</span>-cycle for some <span class="process-math">\(k\text{.}\)</span>  A 2-cycle is called a <dfn class="terminology">transposition</dfn>.</div>
-<ol class="lower-alpha" id="cyclicpermutations-3-1-35">
-<li id="cyclicpermutations-3-1-35-1"><div class="para" id="p-derived-cyclicpermutations-3-1-35-1">Find all of the cyclic permutations in <span class="process-math">\(S_3\text{.}\)</span> Find their inverses.</div></li>
-<li id="cyclicpermutations-3-1-35-2"><div class="para" id="p-derived-cyclicpermutations-3-1-35-2">Find all of the cyclic permutations in <span class="process-math">\(S_4\text{.}\)</span>
+<div class="para">and <span class="process-math">\(\sigma\)</span> acts on <span class="process-math">\(\{1,5\}\)</span> as the identity.  Note that cycle notation is not unique. For example, we have <span class="process-math">\((2\;4\;3)=(4\;3\;2)=(3\;2\;4)\text{.}\)</span>  A permutation is called <dfn class="terminology">cyclic</dfn> if it is a <span class="process-math">\(k\)</span>-cycle for some <span class="process-math">\(k\text{.}\)</span>  A 2-cycle is called a <dfn class="terminology">transposition</dfn>.</div>
+<ol class="lower-alpha" id="cyclicpermutations-3-1-34">
+<li id="cyclicpermutations-3-1-34-1"><div class="para" id="p-derived-cyclicpermutations-3-1-34-1">Find all of the cyclic permutations in <span class="process-math">\(S_3\text{.}\)</span> Find their inverses.</div></li>
+<li id="cyclicpermutations-3-1-34-2"><div class="para" id="p-derived-cyclicpermutations-3-1-34-2">Find all of the cyclic permutations in <span class="process-math">\(S_4\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="disjointcycleproductexer"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>

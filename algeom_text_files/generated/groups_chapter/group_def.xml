@@ -349,12 +349,10 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  let <m>A=\{a_1,a_2,\ldots,a_k\}</m>
 	  be a set of <m>k</m> distinct elements
 	  in <m>\{1,2,\ldots,n\}</m>. We write <m>(a_1a_2\cdots a_k)</m>
-	  to denote the permutation <m>\kappa</m> in <m>S_n</m> (see
+	  to denote the permutation <m>\sigma</m> in <m>S_n</m> (see
 	  <xref ref="permgpdef"/>) given by the assignments
-	  <me>a_1\stackrel{\kappa}{\to} a_2\stackrel{\kappa}{\to}
-	  a_3\stackrel{\kappa}{\to} \cdots\stackrel{\kappa}{\to}
-	    a_k\stackrel{\kappa} {\to} a_1</me>
-	  and <m>\kappa(j)=j</m> for <m>j\not\in A</m>.
+	  <me>a_1{\to} a_2{\to}  a_3{\to} \cdots{\to} a_k {\to} a_1</me>
+	  and <m>\sigma(j)=j</m> for <m>j\not\in A</m>.
 <!--
 	  To be precise,
 	  the permutation <m>\kappa=(a_1a_2\cdots a_k)</m> is given by
@@ -367,7 +365,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  -->
 	  If <m>k=1</m>, the
 	  permutation <m>(a_1)</m> is the identity permutation. A
-	  permutation of the form <m>\kappa=(a_1a_2\cdots a_k)</m>
+	  permutation of the form <m>(a_1a_2\cdots a_k)</m>
 	  is called 
 	  a <term><m>k</m>-cycle</term><idx><h>permutation</h><h><m>k</m>-cycle
 	    </h>
@@ -379,16 +377,16 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  </idx>.
 	  -->
 	  For example, the
-	  element <m>\kappa=[1,4,2,3]=(2\;4\;3)</m> is a 3-cycle in <m>S_4</m>
-	  because <m>\kappa</m> acts on the set <m>A=\{2,3,4\}</m> by
-	  <me>2\to 4\to 3\to 2</me> and <m>\kappa</m> acts
-	  on <m>A^c=\{1\}</m> as the identity.
+	  element <m>\sigma=[1,4,2,3,5]=(2\;4\;3)</m> is a 3-cycle in <m>S_5</m>
+	  because <m>\sigma</m> acts on the set <m>A=\{2,3,4\}</m> by
+	  <me>2\to 4\to 3\to 2</me> and <m>\sigma</m> acts
+	  on <m>\{1,5\}</m> as the identity.
 	  <!--
 	  Note that, by this definition, a <term><m>1</m>-cycle</term> is the identity
 	  permutation in <m>S_n</m>.
 	  -->
 	  Note that
-	  cycle notation is not unique. For example, in <m>S_4</m> we
+	  cycle notation is not unique. For example, we
 	  have <m>(2\;4\;3)=(4\;3\;2)=(3\;2\;4)</m>.
 	  <!--
 	      and <m>(1)=(2)=(3)=(4)</m>.
