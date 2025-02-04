@@ -4,9 +4,9 @@
   <subsection>
     <title>Stereographic projection <m>S^1\to \extR</m></title>
     <p>
-      Let <m>S^1</m> denote the unit circle in the <m>x,y</m>-plane:
-      <men xml:id="s1defn"><notation><usage><m>S^1</m></usage><description>unit
-	    circle in the plane</description></notation>
+      Let <m>S^1</m> <notation><usage><m>S^1</m></usage><description>unit
+	    circle in the plane</description></notation> denote the unit circle in the <m>x,y</m>-plane:
+      <men xml:id="s1defn">
 	S^1 = \{(x,y)\in \R^2 \colon x^2+y^2=1\}\,.
       </men>
       Let <m>N=(0,1)</m> denote the "north pole" (that is, the point at
@@ -43,9 +43,9 @@
     <p>We extend stereographic projection to the entire unit circle as
       follows. We call the set
       <men xml:id="extendedrealsdefn">\extR=\R\cup \{\infty\}
-	<idx><h>extended real numbers</h></idx>
-	<notation><usage><m>\extR</m></usage><description>extended real numbers</description></notation>
       </men>
+      	<idx><h>extended real numbers</h></idx>
+	<notation><usage><m>\extR</m></usage><description>extended real numbers</description></notation>
       the <term>extended real numbers</term>, where "<m>\infty</m>" is
       an element that is not a real number. Now we define stereographic
       projection <m>s\colon S^1 \to \extR</m> by
@@ -69,9 +69,9 @@
   dimensions. Here are the details for the main case of interest.</p>
 
       <p>
-      Let <m>S^2</m> denote the unit sphere in <m>\R^3</m>:
-      <men xml:id="s2defn"><notation><usage><m>S^2</m></usage><description>unit
+      Let <m>S^2</m> denote the unit sphere in <m>\R^3</m>: <notation><usage><m>S^2</m></usage><description>unit
 	    sphere in <m>\R^3</m></description></notation>
+      <men xml:id="s2defn">
 	S^2 = \{(a,b,c)\in \R^3\colon a^2+b^2+c^2=1\}\,.
       </men>
       Let <m>N=(0,0,1)</m> denote the "north pole" (that is, the point at
@@ -95,9 +95,8 @@
     <p>We extend stereographic projection to the entire unit sphere as
       follows. We call the set
       <men xml:id="extendedcomplexsdefn">\extC=\C\cup \{\infty\}
-	<idx><h>extended complex numbers</h></idx>
+      </men> 	<idx><h>extended complex numbers</h></idx>
 	<notation><usage><m>\extC</m></usage><description>extended complex numbers</description></notation>
-      </men>
       the <term>extended complex numbers</term>, where "<m>\infty</m>" is
       an element that is not a complex number. Now we define stereographic
       projection <m>s\colon S^2 \to \extC</m> by
@@ -156,12 +155,17 @@ Formulas for inverse stereographic projection
 	    For <m>s\colon S^1\to \extR</m>, find a formula
 	    for <m>s^{-1}\colon \extR\to S^1</m>. Find <m>s^{-1}(3)</m>.
 	  </p>
+	  <p><commentary component="printstudent">(See <em>Solutions to
+	  Exercises</em> in <xref ref="solutionsintheback"/>.)</commentary>
+	    </p>
 	</statement>
-		<answer><me>s^{-1}(r) = \begin{cases}
+		<answer><p><me>s^{-1}(r) = \begin{cases}
 	      \left(\frac{2r}{r^2+1},\frac{r^2-1}{r^2+1}\right) \amp
 	      \text{ if } r\neq \infty\\ (0,1)\amp \text{ if } r=\infty
-	    \end{cases}</me> <m>s^{-1}(3) = (3/5,4/5)</m>
-	</answer>
+		      \end{cases}</me> <me>s^{-1}(3) = (3/5,4/5)</me></p>
+		</answer>
+<!--		<solution><p>test solution</p>
+		</solution>-->
       </exercise>
 
 
@@ -171,11 +175,11 @@ Formulas for inverse stereographic projection
 	    for <m>s^{-1}\colon \extC\to S^2</m>. Find <m>s^{-1}(3+i)</m>.
 	  </p>
 	</statement>
-	<answer><me>s^{-1}(z) = \begin{cases}
+	<answer><p><me>s^{-1}(z) = \begin{cases}
 	      \left(\frac{2\re(z)}{|z|^2+1},\frac{2\im(z)}{|z|^2+1},
 	    \frac{|z|^2-1}{|z|^2+1}\right)\amp \text{ if } z\neq
 	      \infty\\ (0,0,1) \amp \text{ if } z=\infty \end{cases}</me>
-	  <m>s^{-1}(3+i) = (6/11,2/11,9/11)</m>
+	    <me>s^{-1}(3+i) = (6/11,2/11,9/11)</me></p>
 	</answer>
       </exercise>
 	  
@@ -227,46 +231,69 @@ Formulas for inverse stereographic projection
   <title>
 Transformations that are conjugate via stereographic projection
   </title>
-  <introduction><alert>Suggestion:</alert> Use
-  <xref ref="conjtransdefexer"/> for the exercises that follow.
+  <introduction><p><alert>Suggestion:</alert> Use
+      <xref ref="conjtransdefexer"/> for the exercises that follow.</p>
       </introduction>
 
   <exercise xml:id="stereo1dliftinversion">
-    <statement> <p>Show that the maps <m>S^1\to S^1</m> given by 
-	<m>(x,y)\to (x,-y)</m> and <m>\extR\to \extR</m>
-	given by <m>x\to 1/x</m> are conjugate transformations with
+    <statement> <p>Let <m>f\colon S^1\to S^1</m> and <m>g\colon \extR\to
+	  \extR</m> be given by
+	<md>
+	  <mrow>f(x,y)\amp =(x,-y)</mrow>
+	  <mrow>g(x)\amp =\begin{cases}1/x \amp x\neq 0,\infty\\
+	    \infty \amp x=0\\
+	    0 \amp x=\infty.\end{cases}</mrow>
+	</md>
+	Show that <m>f,g</m>
+	are conjugate transformations with
 	respect to stereographic projection.</p>
   </statement>
   </exercise>
 
           <exercise xml:id="mobiuszrotations">
       <statement>
-<p>Show that the map <m>R_{Z,\theta}\colon S^2\to S^2</m> given by 
-	<m>(a,b,c)\to
-    (a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)</m> (a rotation
-	about the <m>z</m>-axis by angle <m>\theta</m>)
-	and the map <m>T_{Z,\theta}\colon \extC\to \extC</m> given by <m>z\to
-    e^{i\theta}z</m> are conjugate
+	<p>Let <m>R_{Z,\theta}\colon S^2\to S^2</m>
+	  and <m>T_{Z,\theta}\colon \extC\to \extC</m>
+	  be given by
+	  <md>
+	    <mrow>R_{Z,\theta}(a,b,c)\amp =
+	      (a\cos\theta-b\sin\theta,a\sin\theta+b\cos\theta,c)</mrow>
+	    <mrow>T_{Z,\theta}(z)\amp = \begin{cases} e^{i\theta}z \amp
+	      z\neq \infty\\ \infty\amp z=\infty.\end{cases}</mrow>
+	  </md>
+	Show that <m>R_{Z,\theta},T_{Z,\theta}</m>
+	are conjugate
 	transformations with respect to stereographic projection.
 </p>
       </statement>
     </exercise>
 
     <exercise xml:id="stereo2dliftinversion">
-      <statement><p>Show that the map <m>R_{X,\pi}\colon S^2\to S^2</m> given by 
-	<m>(a,b,c)\to (a,-b,-c)</m> (rotation about the <m>x</m>-axis
-	by <m>\pi</m> radians)	and the map <m>T_{X,\pi}\colon \extC\to \extC</m>
-  given by <m>z\to 1/z</m> are conjugate transformations with
-	respect to stereographic projection.
-</p>
+      <statement><p>Let <m>R_{X,\pi}\colon S^2\to S^2</m> and <m>T_{X,\pi}\colon \extC\to
+	  \extC</m> be given by
+	<md>
+	  <mrow>R_{X,\pi}(a,b,c)\amp =(a,-b,-c)</mrow>
+	  <mrow>T_{X,\pi}(z)\amp =\begin{cases}1/z \amp z\neq 0,\infty\\
+	    \infty \amp z=0\\
+	    0 \amp z=\infty.\end{cases}</mrow>
+	</md>
+	Show that <m>R_{X,\pi},T_{X,\pi}</m>
+	are conjugate transformations with
+	respect to stereographic projection.</p>
       </statement>
     </exercise>
 
     <exercise xml:id="mobiusxpiby2rotations">
-      <statement><p>Show that the map <m>R_{X,\pi/2}\colon S^2\to S^2</m> given by 
-	<m>(a,b,c)\to (a,-c,b)</m> (rotation about the <m>x</m>-axis
-	by <m>\pi/2</m> radians) and the map <m>T_{X,\pi/2}\colon \extC\to \extC</m>
-  given by <m>z\to \frac{z+i}{iz+1}</m> are conjugate transformations with
+      <statement><p>Let <m>R_{X,\pi/2}\colon S^2\to S^2</m> and <m>T_{X,\pi/2}\colon \extC\to
+	  \extC</m> be given by
+	<md>
+	  <mrow>R_{X,\pi/2}(a,b,c)\amp =(a,-c,b)</mrow>
+	  <mrow>T_{X,\pi/2}(z)\amp =\begin{cases} \frac{z+i}{iz+1}\amp z\neq i,\infty\\
+	    \infty \amp z=i\\
+	    -i \amp z=\infty.\end{cases}</mrow>
+	</md>
+	Show that <m>R_{X,\pi},T_{X,\pi}</m>
+	are conjugate transformations with
 	respect to stereographic projection.
 </p>
       </statement>

@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="mobiusgeomsect">
     <title>Möbius geometry
     </title>	       
 
@@ -233,14 +233,14 @@ The composition is invertible
     <xref ref="geomdefsect"/>) are special cases of Möbius transformations.
     These basic transformations can be viewed as building blocks for
     general Möbius transformations, as follows.
-
-  <proposition xml:id="mobiusdecompbasic"><statement><p>Every Möbius transformation is a
+	</p>
+	
+<p>  <proposition xml:id="mobiusdecompbasic"><statement><p>Every Möbius transformation is a
 	composition of homotheties, rotations, translations, and
 	inversions.</p>
     </statement>
-<!--    <proof>See <xref ref="mobiusdecompexer"/></proof>-->
-  </proposition>
-  </p>
+</proposition></p>
+
 
 	<exercise xml:id="littlemobiusexer"><statement><p>
 	<ol>
@@ -460,11 +460,11 @@ transformations. Here is the formal statement with a proof.
 	<me>(z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).</me>
       </p>
     </statement>
-    <proof>The transformations <m>(\cdot,z_1,z_2,z_3)</m>
+    <proof><p>The transformations <m>(\cdot,z_1,z_2,z_3)</m>
       and <m>(\cdot,Tz_1,Tz_2,Tz_3)\circ T</m> both
       send <m>z_1\to 1</m>, <m>z_2\to 0</m>, and <m>z_3\to \infty</m>,
       so they must be equal, by the Fundamental Theorem. Now apply both
-      transformations to <m>z_0</m>.
+	transformations to <m>z_0</m>.</p>
     </proof>
   </proposition>
     </subsection>
@@ -490,7 +490,6 @@ transformations. Here is the formal statement with a proof.
 	    contains the points <m>z_1,z_2,z_3</m>.
 	  </p>
       </statement>
-<!--      <proof>See <xref ref="mobinvrealisclineexer"/></proof>-->
       </proposition>
 
     <corollary xml:id="crossratiorealcriterion"><statement><p>
@@ -540,11 +539,11 @@ The cross ratio <m>(z_0,z_1,z_2,z_3)</m> is real if and only
 	  <xref ref="mobinvrealisclineprop"/>. 
 	</p>
       </statement>
-      <hint>Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>
+      <hint><p>Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>
 	  and let <m>w_1=Tz_1,w_2=Tz_2,w_3=Tz_3</m>. Let <m>U=(\cdot,z_1,z_2,z_3)</m> and
 	  let <m>V=(\cdot,w_1,w_2,w_3)</m>. Explain
 	  why <m>T=V^{-1}U</m> and hence
-	  that <m>T(C)=V^{-1}U(C)=V^{-1}(\extR)</m> must be a cline.
+	  that <m>T(C)=V^{-1}U(C)=V^{-1}(\extR)</m> must be a cline.</p>
       </hint>
     </exercise>
 
@@ -570,10 +569,10 @@ All clines are congruent in Möbius geometry.
 	  <xref ref="mobinvrealisclineprop"/>. 
 	</p>
       </statement>
-      <hint>Start here: Let <m>C,D</m> be two clines. Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>
+      <hint><p>Start here: Let <m>C,D</m> be two clines. Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>
 	and let <m>w_1,w_2,w_3</m> be three points on <m>D</m>. Let <m>U=(\cdot,z_1,z_2,z_3)</m> and
 	let <m>V=(\cdot,w_1,w_2,w_3)</m>, and
-	let <m>T=V^{-1}U</m>. Explain why <m>T</m> takes <m>C</m> to <m>D</m>.
+	  let <m>T=V^{-1}U</m>. Explain why <m>T</m> takes <m>C</m> to <m>D</m>.</p>
       </hint>
     </exercise>
 
@@ -613,13 +612,14 @@ All clines are congruent in Möbius geometry.
             <image width="90%" source="images/symmetric_pt2.png"></image>
            </figure>
 
-		 <exercise><statement>Show that the symmetric point of a symmetric
+		 <exercise><statement><p>Show that the symmetric point of a symmetric
 		   point is the point you started with. That is, show
 		     that <m>(z^{\ast C})^{\ast C}=z</m>. This allows
 		   us to speak of "a pair of symmetric points" without
-		   ambiguity.</statement>
-		   <hint><m>(T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
-		   \conj\circ T) = \Id</m>
+		       ambiguity.</p>
+		   </statement>
+		   <hint><p><m>(T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
+			 \conj\circ T) = \Id</m></p>
 		   </hint>
 		 </exercise>
 		 
@@ -630,7 +630,6 @@ All clines are congruent in Möbius geometry.
 	       points <m>z_1,z_2,z_3</m>.
 	     </p>
 	   </statement>
-<!--	   <proof>See <xref ref="symmetricpointexer"/>.</proof>-->
 	 </proposition>
 	 
 	 
@@ -641,7 +640,7 @@ All clines are congruent in Möbius geometry.
 	     to the cline <m>S(C)</m>. That is, we have
 	       <me>(Sz)^{\ast S(C)} = S(z^{\ast C}).</me></p>
 	   </statement>
-	   <proof>Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>, so
+	   <proof><p>Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>, so
 	     that <m>Sz_1,Sz_2,Sz_3</m> are three points
 	     on <m>S(C)</m>. Let <m>T=(\cdot,z_1,z_2,z_3)</m> and
 	     let <m>U=(\cdot,Sz_1,Sz_2,Sz_3)</m>. By invariance of the cross ratio, we have
@@ -657,7 +656,7 @@ All clines are congruent in Möbius geometry.
 	       <mrow>\amp = S(T^{-1}\circ \conj \circ T)(z)</mrow>
 	<mrow>\amp = S(z^{\ast C})</mrow>	       
 	     </md>
-	     as desired.
+	     as desired.</p>
 	   </proof>
 	 </proposition>
 
@@ -680,7 +679,6 @@ All clines are congruent in Möbius geometry.
 	  some nonzero <m>\beta\in \C</m>.
  </p>
       </statement>
-<!--      <proof>See <xref ref="normalformlemmaexer"/>.</proof>-->
     </lemma>
 
     <p>
@@ -1093,14 +1091,14 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	methods (peek at the second part of the hint below if you need to).
 	</p>
       </statement>
-      <hint>Equation for the circle: <me>\left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
+      <hint><p>Equation for the circle: <me>\left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
       c}\right)\right|^2 = \left|\frac{ad-bc}{ac^\ast -a^\ast
 	  c}\right|^2</me>
 	Why do three noncollinear points <m>P,Q,R</m>
 	determine a unique circle? The center <m>C</m>
 	of the circle must be the intersection of the perpendicular
 	bisectors of segments <m>PQ</m>, <m>QR</m>. The radius must be
-	the distance from <m>C</m> to any one of <m>P,Q,R</m>.
+	  the distance from <m>C</m> to any one of <m>P,Q,R</m>.</p>
       </hint>
     </exercise>
 
@@ -1191,30 +1189,11 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 
 	    </ol>
 	  </li>
-	  <!--
-	  <li>Let <m>C</m> be the unit circle. Show that <m>z^{\ast C} = 1/z^\ast</m>. Suggestion: This is just
-		a computation, but the choice of <m>z_1,z_2,z_3</m>
-		might make it more or less tedious. You might
-		try <m>\omega,\omega^2,\omega^3=1</m>,
-	    where <m>\omega=e^{2\pi i/3}</m>. 
-	    </li>
-	    <li>Now let <m>C</m> be a circle with center <m>a</m> and radius <m>r\gt 0</m>.
-            Use <xref ref="symmptinvariantprop"/> to show that <m>z^{\ast C} = \frac{r^2}{(z-a)^\ast}+a</m>.</li>
-	  <li>Let <m>C</m> be a straight line. Show that
-	    <m>z^{\ast C}</m> is the reflection of <m>z</m>
-	    across <m>C</m>.</li>
-	  -->
 	  <li>Show that <m>z,z'</m> are
 	    symmetric with respect to a circle <m>C</m> with
 	    center <m>a</m> and radius <m>r</m> if and only
 	    if <m>|z-a||z'-a|=r^2</m> and  <m>z,z'</m> lie on the same
 	    ray emanating from <m>a</m>. See <xref ref="symmptsfig"/>.
-	    <hint><p>The equation for <m>z^{\ast C}</m> in part iii
-		gives <m>(z'-a)(z-a)^\ast = r^2</m>. For the first
-		statement, take the norm of both sides. For the second
-		statement, take the argument of both sides.
-	      </p>
-	    </hint>
 	  </li>
 	  <li>Show that <m>z,z'</m> are
 	    symmetric with respect to a line <m>C</m>
@@ -1224,6 +1203,13 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	  </ol>
 	</p>
       </statement>
+      	    <hint><p>For part (b): The equation for <m>z^{\ast C}</m> in part iii
+		gives <m>(z'-a)(z-a)^\ast = r^2</m>. For the first
+		statement, take the norm of both sides. For the second
+		statement, take the argument of both sides.
+	      </p>
+	    </hint>
+
     </exercise>
 
 <!-- Instructor's solution -->

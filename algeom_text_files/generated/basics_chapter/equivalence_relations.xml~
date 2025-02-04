@@ -1,4 +1,4 @@
-<section>
+ <section xml:id="equiv_relns_sect">
   <title>Equivalence relations</title>
   
   <subsection>
@@ -19,17 +19,19 @@
       symmetric, and transitive. Given an equivalence relation
       on <m>X</m> and an element <m>x\in X</m>, we write <m>[x]</m> to
       denote the set
-      <men xml:id="equivalenceclass"><idx><h>equivalence class</h></idx>
-	<notation><usage><m>[x]</m></usage><description>the equivalence class
-	    of an element <m>x</m></description></notation>
+      <men xml:id="equivalenceclass">
 	[x] = \{y\in X\colon x\sim y\},
       </men>
+      <idx><h>equivalence class</h></idx>
+	<notation><usage><m>[x]</m></usage><description>the equivalence class
+	    of an element <m>x</m></description></notation>
       called the <term>equivalence class</term> of the
       element <m>x</m>. The set of equivalence classes is
       denoted <m>X/\!\!\sim</m>, that is,
       <men xml:id="setofequivclasses">     
-	<notation><usage><m>X/\!\!\sim</m></usage><description>the set of equivalence classes
-	    for an equivalence relation <m>\sim</m></description></notation> X/\!\!\sim \; = \{[x]\colon x\in X\}.</men>
+	X/\!\!\sim \; = \{[x]\colon x\in X\}.</men>
+      <notation><usage><m>X/\!\!\sim</m></usage><description>the set of equivalence classes
+	    for an equivalence relation <m>\sim</m></description></notation>
     </p>
 
     <p>A <term>partition</term><idx>partition of a set</idx>
@@ -38,7 +40,7 @@
     </p>
   </subsection>
 
-    <subsection><title>Important example: the integers modulo an
+    <subsection><title>The integers modulo an
       integer <m>n</m>
     </title>
 
@@ -160,31 +162,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	    and <m>X/(\sim_{\mathcal P}) = {\mathcal P}</m>.
 	  </p>
 	</statement>
-	<!--
-	<proof>
-		  <p>Let <m>\sim</m> be an equivalence relation on a
-	    set <m>X</m>. It is clear that the union <m>\bigcup_{x\in X}
-	    [x]</m> of all the equivalence classes in <m>X/\!\!\sim</m>
-	    is all of <m>X</m>. To see why equivalence classes are
-	    disjoint, suppose that <m>[x]\cap [y]\neq \emptyset</m> for
-	    some <m>x,y\in X</m>, say <m>z\in [x]\cap [y]</m>. We will
-	    show that it must be that <m>[x]=[y]</m>. First we show
-	    that <m>[x]\subseteq [y]</m>.  Let <m>w\in [x]</m>. We
-	    have <m>w\sim x</m>, <m>x\sim z</m>, and <m>z\sim
-	    y</m>. Transitivity of <m>\sim</m> implies that <m>w\sim
-	    y</m>, so <m>w\in [y]</m>. The same argument, reversing the
-	    roles of <m>x,y</m>, shows that <m>[y]\subseteq [x]</m>. All
-	    of this establishes that <m>X/\!\!\sim</m> forms a partition
-	    of <m>X</m>.  Conversely, let <m>{\mathcal P}</m> be a
-	    partition of <m>X</m> with associated
-	    relation <m>\sim_{\mathcal P}</m>. It is clear
-	    that <m>\sim_{\mathcal P}</m> is reflexive, symmetric, and
-	    transitive.  It is also clear that the
-	    correspondences <m>\sim \to X/\!\!\sim</m> and <m>{\mathcal
-	    P}\to \sim_{\mathcal P}</m> are inverse to one another.
-	  </p>
-</proof>
--->
+
       </fact>
     </p>
 
@@ -227,20 +205,6 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	equivalence classes (that is, if and only if <m>[x\sim
       y\Rightarrow f(x)=f(y)]</m>.)
     </p></statement>
-    <!--
-    <proof>
-      <p>First we consider the "if" direction. Suppose <m>f\colon X\to Y</m>
-    is constant on equivalence classes of the equivalence
-    relation <m>\sim</m> on <m>X</m>. It is clear then
-    that <m>\overline{f}([x])=f(x)</m> is well-defined. For the "only
-    if" direction, suppose that <m>\overline{f}\colon X\to Y</m> given
-    by <m>\overline{f}([x])=f(x)</m> exists. Now if <m>x\sim y</m>, we
-    have <m>[x]=[y]</m>, so 
-    <m>f(x)=\overline{f}([x])=\overline{f}([y])=f(y)</m>. It follows
-    that <m>f</m> is constant on equivalence classes.
-  </p>
-</proof>
--->
 </fact></p>
 
 <p><alert>Note on terminology:</alert> when a function <m>f</m> is constant on
@@ -261,25 +225,6 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
       f(X)\}</m>. Furthermore, the function <m>X/\!\!\sim_f \; \to f(X)</m> given
       by <m>[x]\to f(x)</m> is a one-to-one correspondence.
     </p></statement>
-    <!--
-    <proof>
-	  <p>
-	    Let <m>f\colon X\to Y</m> be a function. It is clear that
-	    the associated relation <m>\sim_f</m> is an equivalence
-	    relation. (Again, proving the three properties would be
-	    painful because of the the obviousness. You would have to say things like
-	    "if <m>f(x)=f(y)</m> then <m>f(y)=f(x)</m>, so <m>\sim_f</m>
-	    is symmetric".) The equivalence classes of <m>\sim_f</m> are
-	    clearly the preimages <m>f^{-1}(\{y\})</m> of 1-point
-	    sets <m>\{y\}\subseteq Y</m>. The function <m>X/\!\!\sim_f\to
-	      f(X)</m> given by <m>[x]\to f(x)</m> is clearly
-	    onto. (You can justify the existence of <m>f</m> using
-	    <xref ref="welldefinedness"/>.) To
-	    see that this function is also one-to-one, just note that
-	    if <m>f(x)=f(y)</m> then <m>[x]=[y]</m>, by definition of <m>\sim_f</m>.
-	  </p>
-    </proof>
--->
 </fact></p>
 
   </subsection>
@@ -389,7 +334,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
         <exercisegroup xml:id="zmodn">
   <title>
     The integers modulo <m>n</m>
-  </title><introduction>Let <m>n</m> be a positive integer.
+  </title><introduction><p>Let <m>n</m> be a positive integer.</p>
   </introduction>
 
 

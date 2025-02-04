@@ -209,9 +209,7 @@ Multiplication looks like this.
 	    </p>
 
 <exercise><statement>
-    <ol>
-      <li>Verify <xref ref="purequatproduct"/>.</li>
-      </ol>
+<p>    Verify <xref ref="purequatproduct"/>.</p>
   </statement>
 	    </exercise>
   </subsection>
@@ -309,14 +307,14 @@ Multiplication looks like this.
       
     </p>
 
-        <exercise xml:id="quatconjnormmultexer"><statement>Verify the
-            three equations above. 
+        <exercise xml:id="quatconjnormmultexer"><statement><p>Verify the
+              three equations above. </p>
 	  </statement>
-	  <hint>Work in <m>{\mathcal M}_\Quat</m>. Start by checking
+	  <hint><p>Work in <m>{\mathcal M}_\Quat</m>. Start by checking
             that <m>(M(r^\ast)) = (M(r))^\dagger</m>, where <m>\dagger</m> denotes the conjugate transpose of a
 	    matrix. 
 	    Alternatively, write <m>r,s</m> in polar form
-            and use <xref ref="purequatproduct"/>.
+              and use <xref ref="purequatproduct"/>.</p>
 	    </hint>
     </exercise>
 
@@ -404,8 +402,8 @@ Multiplication looks like this.
       properties hold for all pure quaternions <m>v,w</m> and all real
       scalars <m>\alpha</m>.
       <mdn>
-	<mrow>R_r(v+w) = R_r(v) + R_r(w)</mrow>
-	<mrow>R_r(\alpha v) = \alpha R_r(v)</mrow>
+	<mrow>R_r(v+w) \amp = R_r(v) + R_r(w)</mrow>
+	<mrow>R_r(\alpha v) \amp = \alpha R_r(v)</mrow>
       </mdn>
     </p>
 
@@ -436,7 +434,6 @@ Multiplication looks like this.
 	    of <m>R_r</m> is a rotation by <m>2\theta</m> radians about
 	    the axis given by the unit vector <m>u</m>.
 	  </p>
-<!--	  <proof>See <xref ref="quatrotpropexer"/>.</proof>-->
 	</statement>
 
     </proposition>
@@ -457,7 +454,13 @@ Multiplication looks like this.
 		<men xml:id="quatrotpropformula">R_r(v) = \cos(2\theta)v + \sin(2\theta)w</men> (use
 		equation <xref ref="purequatproduct"/>)
 		and then explain how this proves the Proposition.
-		<hint><p>In deriving equation <xref ref="quatrotpropformula"/>, you
+<!-- 1/24/2025 pdf build stops here, maybe breaks at all <hint>s ?? -->
+	      </li>
+	  </ol>
+	</p>
+	</statement>
+		  <hint><p>
+		      In deriving equation <xref ref="quatrotpropformula"/>, you
 		    will obtain expressions <m>uv-vu</m>
 		    and <m>uvu</m>. Use equation
 		    <xref ref="purequatproduct"/> to show
@@ -470,10 +473,7 @@ Multiplication looks like this.
 		    determine the angle made by <m>v,R_r(v)</m>.
 		  </p>
 		  </hint>
-	      </li>
-	  </ol>
-	</p>
-      </statement>
+	
     </exercise>
 
     <commentary component="instructor"><title>Instructor's solution for <xref ref="quatrotpropexer"/></title>
@@ -524,12 +524,12 @@ perpendicular to <m>u</m>).
       </p>
     </commentary>
 
-    <exercise xml:id="quatrotcompinvexer"><statement>Show that the
+    <exercise xml:id="quatrotcompinvexer"><statement><p>Show that the
             following hold for all <m>r,s\in U(\Quat)</m>.
 	<ol>
 	  <li><m>R_r\circ R_s = R_{rs}</m></li>
 	  <li><m>(R_r)^{-1}=R_{r^\ast}</m></li>
-	</ol>
+	</ol></p>
       </statement>
     </exercise>
 

@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="group_action_sect">
     <title>Group actions
     </title>	       
 
@@ -139,14 +139,14 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     </usage><description>set of orbits of the action
       of group <m>G</m> on set <m>X</m></description></notation>
   <title>Orbit space</title>
-  We write <m>X/G</m> to denote the set
+<statement> <p> We write <m>X/G</m> to denote the set
   <me>X/G=\{\Orb(x)\colon x\in X\}</me>
   of orbits of the group <m>G</m> acting on a set <m>X</m>. The
   set <m>X/G</m> is also called the <term>orbit
     space</term><idx><h>group action</h><h>orbit space</h>
   </idx>
   of the
-  group action.
+  group action.</p></statement>
 </definition>
 
 
@@ -217,7 +217,6 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	is a one-to-one correspondence
 	<me>G/\Stab(x)\leftrightarrow \Orb(x)</me> given by
 	<me>g\Stab(x) \leftrightarrow gx.</me></p></statement>
-<!--      <proof> See <xref ref="orbitstabthmpfexer" />.      </proof>-->
     </theorem>
 
     
@@ -247,9 +246,9 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	  according
 	  to whether <m>\alpha\Delta=\Delta</m>
 	  or <m>\alpha\Delta=-\Delta</m>, respectively.
-	  <me>\sgn(\alpha) = \begin{cases} +1 \amp \text{if }\amp
-	    \alpha\Delta = \Delta\\
-	    -1 \amp \text{if } \amp \alpha\Delta = -\Delta
+	  <me>\sgn(\alpha) = \begin{cases}
+	    +1 \amp \text{if }  \alpha\Delta = \Delta\\
+	    -1 \amp \text{if } \alpha\Delta = -\Delta
 	    \end{cases}
 	  </me>
 	  We say that a permutation <m>\alpha</m>
@@ -290,7 +289,8 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	      then <m>\alpha</m> is an even permutation, and that any
 	      product of transpositions that equals <m>\alpha</m> must
 	      have an even number of transpositions. (A similar statement
-	      holds replacing the word "even" by the word "odd".)
+	      holds replacing the word <q>even</q>
+	      by the word <q>odd</q>.)
 	    </li>
 	    <li>The subset of even permutations of <m>S_n</m> is denoted
 	      <m>A_n</m>. 
@@ -481,7 +481,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	    action</term> <m>G\to \Perm(X)</m>
 	  of 
 	  <m>G</m> on the vector space <m>X=\F^n</m> is given by
-	  <me>g\to [v\to g\cdot v],</me> where the "dot" in the
+	  <me>g\to [v\to g\cdot v],</me> where the <q>dot</q> in the
 	  expression <m>g\cdot v</m> is ordinary multiplication of a
 	  matrix times a column vector. Show that this is indeed a group
 	  action. 

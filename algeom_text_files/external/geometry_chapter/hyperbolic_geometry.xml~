@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="hyperbolicgeomsect">
     <title>Hyperbolic geometry
     </title>	       
     <introduction>
@@ -72,13 +72,13 @@
 	   itself. Then <m>T</m> also maps <m>E</m> onto itself,
 	   and <m>T</m> maps <m>C</m> onto itself.
 </p>
-<proof>Sketch: Suppose that <m>T</m> maps <m>D</m> onto itself. The "other side"
+<proof><p>Sketch: Suppose that <m>T</m> maps <m>D</m> onto itself. The "other side"
   of <m>C</m> is the set of points that are symmetric, with respect
   to <m>C</m>, to the points in <m>D</m>. By
   <xref ref="symmptinvariantprop"/>, <m>T</m> maps symmetric points to
   symmetric points, so <m>T</m> maps <m>E</m> into itself. It is easy
   to check that, in fact, <m>T</m> maps <m>E</m> <em>onto</em> itself.
-  By elimination, it must be that <m>T</m> maps <m>C</m> onto itself.
+  By elimination, it must be that <m>T</m> maps <m>C</m> onto itself.</p>
 </proof>
 	 </proposition>
 
@@ -224,41 +224,16 @@
   </p>
 </commentary>
 
-  <!-- hyperbolic cline congruence classes, exercise for 3.6 -->
-<!-- 
-    consider the following family of clines. For <m>\alpha\gt 0</m>,
-    let <m>C_\alpha</m> be the circle that contains the points <m>0</m>
-    and <m>\alpha</m> and is symmetric across the real
-    line. Let <m>C_\infty=\extR</m>. Here are the standard clines for
-    each of the four categories:
-    <ol>
-      <li>hyperbolic straight line: <m>C_\infty=\extR</m>
-      </li>
-      <li>hyperbolic circle: <m>C_\alpha</m> for <m>0\lt \alpha\lt 1</m>
-      </li>
-      <li>horocycle: <m>C_1</m>
-      </li>
-      <li>hypercycle: the family of circles <m>C_\alpha</m> for <m>\alpha\gt 1</m>
-      </li>
-    </ol>
-    It is easy to see that every cline in each of the four categories is
-    congruent to some <m>C_\alpha</m> (start by sending any point on the
-    given cline to zero, then apply a rotation). Now to show that any
-    two clines in the same category, say <m>C</m> and <m>D</m>,
-    are congruent, map both to 
--->
-
-			  
 			  
  <exercise xml:id="hyplinewith0isdiam">
    <statement><p>Show that a hyperbolic straight line that contains 0 must be a
        diameter of the unit circle.</p>
-     <hint>Prove the contrapositive: assume <m>C</m> is a hyperbolic
+   </statement>
+     <hint><p>Prove the contrapositive: assume <m>C</m> is a hyperbolic
        straight line that is also a Euclidean circle, and intersects the unit circle orthogonally
        at <m>p</m>. Give an argument why <m>C</m> can <em>not</em>
-       contain 0.
+	 contain 0.</p>
      </hint>
-   </statement>
  </exercise>
 
 <!-- Instructor's solution -->
@@ -278,8 +253,8 @@
        Show that all hyperbolic straight lines are congruent.
        </p>
    </statement>
-   <hint>Start by showing that any hyperbolic straight line is
-     congruent to <m>\extR</m>.
+   <hint><p>Start by showing that any hyperbolic straight line is
+       congruent to <m>\extR</m>.</p>
    </hint>
  </exercise>
 
@@ -312,10 +287,11 @@
       hyperbolic group. We begin with an observation about fixed
       points of a Möbius transformation that maps a cline to itself.</p>
 
-      <lemma xml:id="hyperbolicfixptlemma"><statement>Let <m>T\in \M</m> and let <m>C</m> be a
-	  cline. If <m>Tz=z</m>, then <m>T(z^{\ast C})=z^{\ast C}</m>.
+      <lemma xml:id="hyperbolicfixptlemma"><statement><p>Let <m>T\in \M</m> and let <m>C</m> be a
+	    cline. If <m>Tz=z</m>, then <m>T(z^{\ast C})=z^{\ast C}</m>.</p>
 	</statement>
-	<proof>Apply <xref ref="symmptinvariantprop"/>.</proof>
+	<proof><p>Apply <xref ref="symmptinvariantprop"/>.</p>
+	</proof>
       </lemma>
 
       <p>Now let <m>T</m> be a non-identity element of <m>\H</m>. The
@@ -332,8 +308,9 @@
 	</ol>
       </p>
 
-      <exercise xml:id="hyperbolicfixptcaseexer"><statement>Give an argument to justify the three cases
-	  above.</statement>
+      <exercise xml:id="hyperbolicfixptcaseexer"><statement><p>Give an argument to justify the three cases
+	    above.</p>
+	</statement>
       </exercise>
 
 <!-- Instructor's solution -->
@@ -583,11 +560,11 @@
 		</ol>
 	  </p>
 	</statement>
-	<proof>Property 1 follows immediately from
+	<proof><p>Property 1 follows immediately from
 	<xref ref="disthyperbolicfrac"/>. Property 2 is a simple
 	calculation: just write down the cross ratio expressions
 	for <m>d(z_1,z_2)</m> and <m>d(z_2,z_1)</m> and compare. The
-	proof of Property 3 is outlined in exercise <xref ref="hyperbolictriangleineqexer"/>.
+	proof of Property 3 is outlined in exercise <xref ref="hyperbolictriangleineqexer"/>.</p>
 	</proof>
       </proposition>
 
@@ -1017,6 +994,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     
     <exercise xml:id="upperhalfplanetransfpropexer"><statement><p>Prove
 	  <xref ref="upperhalfplanetransfprop"/>.</p>
+      </statement>
 	<hint>
 	  <p>For the "only if" direction, apply <xref ref="transpreservesdiskprop"/> to the cline
     <m>\extR</m>, and conclude that <m>T</m> must send the real line to
@@ -1025,7 +1003,6 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     the "if" direction, suppose <m>T</m> has the given
     form. Let <m>y\gt 0</m> and show that <m>\im(T(x+iy))\gt 0</m>.</p>
 	</hint>
-      </statement>
     </exercise>
 
 <!-- Instructor's solution -->
