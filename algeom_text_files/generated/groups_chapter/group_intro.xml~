@@ -26,8 +26,9 @@
     and onto. Given two permutations <m>\alpha,\beta</m> of a set <m>X</m>, we
       write <m>\alpha\beta</m> to denote the composition of
       functions <m>\alpha\circ\beta</m>.
-
-      <definition xml:id="permgpdef">
+    </p>
+    
+<p>      <definition xml:id="permgpdef">
       <statement>
 	<p>
 	  Let <m>X</m> be a set and
@@ -53,17 +54,25 @@
       on <m>n</m> symbols</description></notation>
       </p></statement>
       </definition>
+</p>
 
-      <alert>Notation:</alert> An element <m>\sigma\in S_n</m> can
-	    be specified by a list of
-	    values <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m>.<fn>There
-	    is a reason that we use square brackets, rather than
-	    parentheses, for the list of output values of a permutation:
-	    Lists written with parentheses are used, by nearly universal
-	      convention, for a different representation of
-	    permutations called <em>cycle notation</em>. Cycle notation is
-	    introduced in <xref ref="cyclicpermutations" />.</fn> For
-	    example, the list <m>[3,1,2]</m> specifies the permutation
+<p>
+  <alert>Notation:</alert> We will denote the element <m>\sigma</m>
+  in <m>S_n</m> using the symbols <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m>, that is, 
+  the list of values of <m>\sigma</m>, separated by commas and enclosed in 
+  square
+  brackets.<fn>Writing <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m> to
+    denote <m>\sigma \in S_n</m>
+    is a compact
+	    replacement for the standard 2-row notation
+    <me>\begin{bmatrix} 1 \amp 2\amp \cdots \amp n\\
+      \sigma(1) \amp \sigma(2)\amp \cdots \amp \sigma(n)\end{bmatrix}
+    </me>
+    that is used in most introductory textbooks. We choose to use square
+    brackets, rather than rounded parentheses, to avoid confusion with the standard notation for
+    <em>cyclic</em> permutations, introduced in <xref ref="cyclicpermutations" />. 
+	     </fn> 
+  For example, we write <m>[3,1,2]</m> to denote the permutation
 	    <m>\sigma\colon \{1,2,3\}\to\{1,2,3\}</m> given by
 	    <me>\sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.</me>
     </p>
@@ -79,7 +88,8 @@
 	    <m>\sigma\tau= [1,3,2]</m>, <m>\tau\sigma=[3,2,1]</m>, <m>\sigma^2=[2,3,1]</m>
 	</p></answer>
       </exercise>
-    
+
+
   </subsection>
 
     <subsection>
@@ -111,33 +121,37 @@ are reflections across lines of the form <m>\overline{OP}</m>
       </caption>
             <image width="90%" source="images/rotrefl_clip.jpg"></image>
            </figure>
-	
-	<assemblage><title>Rotations in the plane</title>
-	        <idx><h>rotation (in the plane)</h></idx>
-		<notation><usage><m>R_\theta</m>
-		  </usage><description>planar rotation by angle <m>\theta</m></description></notation>
+      </p>
+      
+      <p>	<assemblage><title>Rotations in the plane</title>
 	<p>Fix a center point <m>O</m>. We write <m>R_\theta</m> to
 	  denote the rotation by angle <m>\theta</m> about the
-	  point <m>O</m>. Angle units can be revolutions or degrees or
+	  point <m>O</m>. 	  <idx><h>rotation (in the plane)</h></idx>
+		<notation><usage><m>R_\theta</m>
+		  </usage><description>planar rotation by angle <m>\theta</m></description></notation>
+Angle units can be revolutions or degrees or
 	  radians, whatever is most convenient. We observe the usual
 	  convention that positive values of <m>\theta</m> denote
 	  counterclockwise rotations and negative values of <m>
 	  \theta</m> denote clockwise rotations. 
 	</p>
-      </assemblage>
-        <assemblage><title>Reflections in the plane</title>
+</assemblage></p>
+
+<p>        <assemblage><title>Reflections in the plane</title>
+	      <p>We write <m>F_L</m> to
+		denote the reflection across the line <m>L</m>.
 	  	        <idx><h>reflection (in the plane)</h></idx>
 			<notation><usage><m>F_L</m>
-			  </usage><description>planar reflection across line <m>L</m></description></notation>
-	      <p>We write <m>F_L</m> to
-		denote the reflection across the line <m>L</m>. This
-		means that <m>P'=F_L(P)</m> if and only
+			  </usage><description>planar reflection across
+		line <m>L</m></description></notation> This means
+		that <m>P'=F_L(P)</m> if and only
 		if <m>\overline{PP'}\perp L</m> and the distance
 		from <m>P</m> to <m>L</m> is the same as the distance
-		from <m>P'</m> to <m>L</m>. 
+		from <m>P'</m> to <m>L</m>.
 	</p>
       </assemblage>
       </p>
+      
 
       <p>
 	Given symmetries <m>A,B</m>, we write <m>AB</m> to denote the
@@ -146,7 +160,9 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	with <m>L=\overline{OP}</m> for some vertex <m>P</m>, we
 	have <m>R_{240}R_{120}=R_{0}</m>
 	and <m>F_LR_{120}=R_{-120}F_L</m>.
-	          <definition>
+      </p>
+      
+	<p><definition>
 	  <statement>
 	    <p>The <term>dihedral group</term><idx><h>the dihedral group</h></idx>
         <idx><h>groups, list of</h><h>dihedral group</h></idx>,
@@ -156,9 +172,9 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	      reflection symmetries of the regular <m>n</m>-gon
 	      together with the binary operation of function composition. 
       </p></statement>
-    </definition>
+	</definition></p>
 
-      </p>
+
 
       <exercise xml:id="dihedral-reading-exercise">
 	<statement><p>
@@ -226,8 +242,9 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	</definition>
       </p>
 
-      <exercise xml:id="s1closedgpexer"><statement>Show that if <m>z,w</m> are elements of <m>S^1</m>, then
-	  their product <m>zw</m> is also in <m>S^1</m>.</statement>
+      <exercise xml:id="s1closedgpexer"><statement><p>Show that if <m>z,w</m> are elements of <m>S^1</m>, then
+	    their product <m>zw</m> is also in <m>S^1</m>.</p>
+	</statement>
       </exercise>
     </subsection>
 
@@ -294,7 +311,7 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	  </p>
 	</commentary>
 	
-	  <definition><statement><p>The set
+<p>	  <definition><statement><p>The set
 		<m>C_n=\{\omega^0,\omega^1,\omega^2,\ldots,\omega^{n-1}\}</m>
 		, together with the
 	  operation of complex multiplication, is called
@@ -305,7 +322,7 @@ are reflections across lines of the form <m>\overline{OP}</m>
 		</idx>.</p>
 	    </statement>
 	  </definition>
-
+</p>
     </subsection>
 
     
@@ -314,13 +331,13 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	  <title>Integers</title>
 	  <p>
 	    <definition>
-	      <statement>The set <m>\Z</m> of integers, together with
+	      <statement><p>The set <m>\Z</m> of integers, together with
 		the operation of addition, is called the <term>group of
 		integers</term>. Similarly, the set <m>\Z_n</m> of integers
 		modulo <m>n</m> (where <m>n</m> is some integer <m>n\geq
 		1</m>), together with the operation of addition
 		modulo <m>n</m>, is called the <term>group of integers
-		mod <m>n</m></term>.
+		    mod <m>n</m></term>.</p>
 	      </statement>
 	    </definition>
 	  </p>
@@ -335,7 +352,9 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	entries. We write <m>GL(n,\C)</m> to
 	denote the set of <m>n\times n</m> invertible matrices with complex
 	entries.
-	<definition>
+      </p>
+      
+<p>	<definition>
 	  	  <statement>
 	    <p>The set <m>GL(n,\R)</m> (respectively, <m>GL(n,\C)</m>), together with the binary operation of
 	      matrix multiplication, is called the <term>group
@@ -363,32 +382,33 @@ entries</description></notation>
 	  <p>Let <m>\F</m> be a field, such as the rational
 	    numbers <m>\Q</m>, the real numbers <m>\R</m>, or the
 	    complex numbers <m>\C</m>. We write <m>\F^\ast</m> to denote
-	    the set of nonzero elements in <m>\F</m>.
-	    <definition>
+	    the set of nonzero elements in <m>\F</m>.	  </p>
+	  
+<p>	    <definition>
 	      <statement>
-		<statement>
-		  Let <m>\F</m> be a field. The
+<p>		  Let <m>\F</m> be a field. The
 		  set <m>\F^\ast</m> <notation><usage><m>\F^\ast</m>
 		    </usage><description>group
       of nonzero elements in a field <m>\F</m></description></notation>,
       together with the binary operation of multiplication, is called
       the <term>group of nonzero elements</term> in the field <m>\F</m>.
-		</statement>
+	      </p>
 	      </statement>
-	    </definition>
-	  </p>
+</definition></p>
+
 
     </subsection>
 
 	<subsection><title>Unit quaternions</title>
-	  <definition>
-	    <statment>The set <m>U(\Quat)</m> of
+<p>	  <definition>
+	    <statment><p>The set <m>U(\Quat)</m> of
 	      quaternions of norm 1 (defined in
 	      <xref ref="quatconjnormsubsect"/>), together with the
 	      binary operation of quaternion multiplication, is called
-	      the <term>group of unit quaternions</term>.
+	      the <term>group of unit quaternions</term>.</p>
 	    </statment>
 	  </definition>
+	</p>
 	</subsection>
 	
   <exercises>
@@ -396,7 +416,7 @@ entries</description></notation>
     <exercise xml:id="d4matexer">
       <title>Matrices for the dihedral group <m>D_4</m>
       </title>
-      <statement>Let <m>H</m> denote the <m>x</m>-axis in the <m>x,y</m>-plane. The
+      <statement><p>Let <m>H</m> denote the <m>x</m>-axis in the <m>x,y</m>-plane. The
 	map <m>F_H\colon \R^2\to \R^2</m> is a linear map whose matrix
 	is
 	<m>\displaystyle \left[\begin{array}{cc}1 \amp 0\\ 0 \amp
@@ -405,7 +425,7 @@ entries</description></notation>
 	<m>\displaystyle \left[\begin{array}{cc}0 \amp -1\\ 1 \amp
 	0\end{array}\right]</m>. Find the matrices for the remaining
 	elements of the dihedral group <m>D_4</m> as specified in
-	<xref ref="dihedral-reading-exercise" />.
+	<xref ref="dihedral-reading-exercise" />.</p>
       </statement>
     </exercise>
 
@@ -436,8 +456,8 @@ entries</description></notation>
           <commentary component="instructor"><title>Instructor's solution for <xref ref="d4complexopexer"/></title>
       <p>The complex functions corresponding to
 	<me>R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}</me>
-	are "<m>z</m> goes to"
-	<me>z, iz, -z, -iz, z^\ast,-z^\ast,-iz^\ast,iz^\ast </me> 
+	are <q><m>z</m> goes to</q>
+		<me>z, iz, -z, -iz, z^\ast,-z^\ast,-iz^\ast,iz^\ast </me> 
 	respectively.
       </p>
     </commentary>

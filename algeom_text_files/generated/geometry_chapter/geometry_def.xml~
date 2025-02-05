@@ -8,19 +8,22 @@
 	concept of <em>congruence transformation</em>, or simply <em>symmetry</em>.
 	The symmetries of a geometric space 
 	preserve inherent properties of figures, such as distance,
-	angle, and area. In his 1872 work called the <foreign>Erlanger Programm</foreign><fn>The German
-	  term <foreign>Erlanger Programm</foreign> (or "Erlangen program" in
+	angle, and area. In his 1872 work called the <foreign>Erlanger Programm</foreign>,<fn>The German
+	  term <foreign>Erlanger Programm</foreign> (or <q>Erlangen
+	program</q>
+	   in
 	English) is named after the city Erlangen, where Klein worked at
-	  the university.</fn>, Felix Klein unified the study of
+	  the university.</fn> Felix Klein unified the study of
 	a wide variety of geometric spaces by overtly placing the group of
 	congruence transformations as part of the structure of a geometry. The
 	following is a version of Klein's
 	definition of geometry.
 	  <!--The title of the work is <em>Vergleichende
 	  Betrachtungen über neuere geometrische Forschungen.</em>-->
-	
-<definition xml:id="geometrydefn"><statement>
-    A <term>geometry</term><idx>geometry</idx>
+      </p>
+      
+<p><definition xml:id="geometrydefn"><statement>
+<p>    A <term>geometry</term><idx>geometry</idx>
     is a pair <m>(X,G)</m>, where <m>X</m> is a set, called
     the <term>(model) space</term><idx>model space</idx>, and <m>G</m> is a group, called the group
     of <term>congruence
@@ -33,18 +36,20 @@
     if there is an element <m>g</m> in <m>G</m> such
     that <m>g(F)=F'</m>. We write <m>F\cong F'</m><notation><usage><m>F \cong F'</m>
       </usage><description>figure <m>F</m> is congruent to figure <m>F'</m></description></notation> to denote that
-    figures <m>F,F'</m> are congruent.
-</statement></definition>
-<alert>Note on terminology and notation:</alert>
+  figures <m>F,F'</m> are congruent.</p>
+</statement></definition></p>
+
+<p><alert>Note on terminology and notation:</alert>
 throughout this chapter on geometry, the term
 <em>transformation</em> will always mean a one-to-one and onto map of a
 space to itself. Given a geometry <m>(X,G)</m> with group
 action <m>\phi\colon G\to \Perm(X)</m>, we will abuse notation and
 write <m>g\colon X\to X</m> to denote the map <m>\phi(g)\colon X\to
 X</m> for an element <m>g</m> in <m>G</m>. It is common usage to say
-"the transformation <m>g</m>" to mean "the
-transformation <m>\phi(g)</m>" of the space <m>X</m>.
-      </p>
+<q>the transformation <m>g</m></q>
+ to mean <q>the
+  transformation <m>\phi(g)</m></q>
+ of the space <m>X</m>.</p>
 
     </introduction>
 
@@ -70,7 +75,8 @@ transformation <m>\phi(g)</m>" of the space <m>X</m>.
     transitivity, if <m>F'=gF</m> and <m>F''=hF'</m>,
     then <m>F''=hF'=h(gF)=(gh)F</m>. 
    Comment: This is almost the same exercise as
-  showing that the "in the same orbit" relation coming from a group
+    showing that the <q>in the same orbit</q>
+     relation coming from a group
   acting on a set is an equivalence relation. You could even point out
     that it <em>is</em> the same exercise, if you note that you need to
     consider the action <m>G\to \Perm({\mathcal P}(X))</m> (that is,
@@ -198,47 +204,6 @@ group <m>PGL(V)</m>.
 
     </subsection>
 
-    <!--
-    <subsection><title>Invariants</title>
-      <p>The term "invariant" is used several ways in geometry. Here are
-      two of them.
-      </p>
-      
-      <p>
-	<definition><statement><p>Let <m>{\mathcal F}\subset {\mathcal
-		P}(X)</m> be a set of figures in a
-		geometry <m>(X,G)</m>, and let <m>Y</m> be a set. 
-	      A function <m>f\colon {\mathcal F}\to Y</m> such
-      that <m>f(F)=f(g(F))</m> for all figures <m>F</m> in <m>{\mathcal F}</m> and
-      for all
-      congruence
-      transformations <m>g</m> in <m>G</m> is called a <term><m>Y</m>-valued
-		invariant</term><idx>invariant</idx> of <m>(X,G)</m>.
-</p>
-  </statement>
-  
-	</definition>
-
-	<definition><statement><p>An set of figures <m>{\mathcal
-	F}\subset {\mathcal P}(X)</m> in a geometry <m>(X,G)</m> is
-	      called <term>invariant</term> if <m>{\mathcal F}</m> is
-	      a union of congruence classes, that is, if <m>g(F)\in
-		{\mathcal F}</m> whenever <m>F\in {\mathcal F}</m>. An
-	      invariant set <m>{\mathcal F}</m> is
-	      called <term>minimal</term> if no proper subset of <m>{\mathcal
-	F}</m> is also invariant.
-	    </p>
-	  </statement>
-	</definition>
-	</p>
-      
-                  <p>(put checkpoint(s) here: show distance and angle
-                  are are invariants of Euclidean geometry, and points
-                  and points and circles of fixed radii are invariant
-                  sets; do something similar for spherical geometry</p>
-	
-</subsection>
--->
       
     <subsection><title>Subgeometries and equivalent geometries</title>
 
@@ -255,7 +220,10 @@ group <m>PGL(V)</m>.
 	    </p>
 	  </statement>
 	</definition>
-	
+      </p>
+
+      
+<p>	
 	<definition xml:id="equivgeomdef"><title>Equivalent geometries</title>
 	  <statement><p>Geometries <m>(X,G)</m>
 	      and <m>(Y,H)</m>
@@ -285,12 +253,17 @@ group <m>PGL(V)</m>.
 	    </p>
 	  </statement>
 	</definition>
+</p>
+
+<p>
 	<alert>Note on terminology:</alert> the term
-	      "geometry" is used to refer to a specific model as in
+	<q>geometry</q>
+	 is used to refer to a specific model as in
 	      definition <xref ref="geometrydefn"/>, and also to refer
 	  to an equivalence class of geometries.<fn>This is similar
-	      to the situation for groups, where the term "the cyclic
-	    group of order <m>n</m>" can refer to additive group <m>\Z_n</m>, or the
+	      to the situation for groups, where the term <q>the cyclic
+	    group of order <m>n</m></q>
+	   can refer to additive group <m>\Z_n</m>, or the
 	    multiplicative group of <m>n</m>th complex roots of unity,
 	      or simply the isomorphism class of
 	      these groups.
