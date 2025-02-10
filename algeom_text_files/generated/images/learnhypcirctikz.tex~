@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+  \tikzmath{\t=30;}
+  \draw[black] (0,0) circle (1);
+  \draw[red] (\t: {sec(\t)}) circle ({tan(\t)});
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \tikzmath{
+    \a1=.1;
+    \a2=.3;
+    \b1=.5;
+    \b2=.6;
+    \c1=.7;
+    \c2=.95;
+  }
+  \tikzmath{
+    \A1=\a1*360;
+    \A2=\a2*360;
+    \B1=\b1*360;
+    \B2=\b2*360;
+    \C1=\c1*360;
+    \C2=\c2*360;    
+  }
+  %% polar coords is (angle: norm)
+  \draw[black] (0,0) circle (1);
+  \draw[black] (\A1: 1cm) circle (.05);
+  \draw[black] (\A2: 1) circle (.05);
+  \draw[black] (\B1: 1) circle (.05);
+  \draw[black] (\B2: 1) circle (.05);
+  \draw[black] (\C1: 1) circle (.05);
+  \draw[black] (\C2: 1) circle (.05);  
+%  \draw[red] ({(-\A1+\A2)/2+\A1}: {(sec((-\A1+\A2)/2))}) circle
+  %  ({(tan((-\A1+\A2)/2))});
+  \draw[red] ({(\A1+\A2)/2}: {(sec((-\A1+\A2)/2))}) circle  ({(tan((-\A1+\A2)/2))});
+%  \draw[red] ({(-\A1+\A2)/2+\A1}: {(sec((-\A1+\A2)/2))}) arc ({\A2-90}:{\A1-90}:{(tan((-\A1+\A2)/2))});
+  \draw[green] ({(\A2+\B1)/2}: {(sec((-\A2+\B1)/2))}) circle ({(tan((-\A2+\B1)/2))});
+  \draw[blue] ({(\B2+\B1)/2}: {(sec((\B2-\B1)/2))}) circle  ({(tan((\B2-\B1)/2))});
+  \draw[red] ({(\C1+\B2)/2}: {(sec((\C1-\B2)/2))}) circle  ({(tan((\C1-\B2)/2))});
+  \draw[green] ({(\C2+\C1)/2}: {(sec((\C2-\C1)/2))}) circle  ({(tan((\C2-\C1)/2))});
+  \draw[blue] ({(\C2+\A1)/2}: {(sec((-\C2+\A1)/2))}) circle  ({(tan((-\C2+\A1)/2))});  
+\end{tikzpicture}

@@ -6,6 +6,11 @@
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
 \input xy
 \xyoption{all}
 
@@ -149,19 +154,21 @@ Figure~\ref{#2}\\ #7
 %% \hfill\spacer
 
 %%%% lift of complex inversion via stereographic projection
-\hfill
-\xymatrix{
-  S^2 \ar[r]^{R_{X,\pi}} \ar[d]_{s} & S^2 \ar[d]^{s}\\
-  \extC \ar[r]_{\text{ inversion }} & \extC
-}
-\hfill\spacer
+%% \hfill
+%% \xymatrix{
+%%   S^2 \ar[r]^{R_{X,\pi}} \ar[d]_{s} & S^2 \ar[d]^{s}\\
+%%   \extC \ar[r]_{\text{ inversion }} & \extC
+%% }
+%% \hfill\spacer
 
-\hfill
-\xymatrix{
-  (a,b,c) \ar[r]^{R_{X,\pi}} \ar[d]_{s} & (a,-b,-c) \ar[d]^{s}\\
-  \frac{a+bi}{1-c} \ar[r]_{\text{ inversion }} & \frac{a-bi}{1+c}
-}
-\hfill\spacer
+%% \hfill
+%% \xymatrix{
+%%   (a,b,c) \ar[r]^{R_{X,\pi}} \ar[d]_{s} & (a,-b,-c) \ar[d]^{s}\\
+%%   \frac{a+bi}{1-c} \ar[r]_{\text{ inversion }} & \frac{a-bi}{1+c}
+%% }
+%% \hfill\spacer
+
+\input{learnhypcirctikz}
 
 
 \end{document}

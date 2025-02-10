@@ -1,0 +1,82 @@
+%% \begin{tikzpicture}
+%%   \tikzmath{\t=30;}
+%%   \draw[black] (0,0) circle (1);
+%%   \draw[red] (\t: {sec(\t)}) circle ({tan(\t)});
+%% \end{tikzpicture}
+
+% 2/8/2025 need to control layers
+% calculate triangle vertices
+% control placement of labels
+
+
+\begin{tikzpicture}[scale=2.5]%[x=2cm,y=2cm]
+  \pgfdeclarelayer{fore}
+  \pgfsetlayers{main,fore}
+  \tikzmath{
+    \a1=.07; %     
+    \a2=.35; % 
+    \b1=.45; % 
+    \b2=.65; %     
+    \c1=.75; % 
+    \c2=0.01; %    
+  }
+  \tikzmath{
+    \A1=\a1*360;
+    \A2=\a2*360;
+    \B1=\b1*360;
+    \B2=\b2*360;
+    \C1=\c1*360;
+    \C2=\c2*360;    
+  }
+  \begin{pgfonlayer}{fore}
+  %% polar coords is (angle: norm)
+  \draw[black] (0,0) circle (1); % boundary circle
+  \filldraw[black] (\A1: 1) circle (1pt) node[anchor=west] {$A_1$};
+  \filldraw[black] (\A2: 1) circle (1pt) node[anchor=east, yshift=3pt] {$C_2$};
+  \filldraw[black] (\B1: 1) circle (1pt) node[anchor=east] {$C_1$};
+  \filldraw[black] (\B2: 1) circle (1pt) node[anchor=east, yshift=-2pt] {$B_2$};
+  \filldraw[black] (\C1: 1) circle (1pt) node[anchor=north] {$B_1$};
+  \filldraw[black] (\C2: 1) circle (1pt) node[anchor=west] {$A_2$};
+  \end{pgfonlayer}
+  
+  % why neg tan?
+  
+  %%% arc A1 to B2
+%  \draw[black] (\A1:1) -- (\B2:1);
+  \draw[black, name path=a1b2] (\B2:1) arc ({\B2-90}:{\A1+90}:{(tan((\A1-\B2)/2))}); %
+  
+  %%% arc A2 to C1
+  \draw[black, name path=a2c1] (\C1:1) arc ({\C1-90}:{\A2+90}:{(tan((\A2-\C1)/2))});
+
+  %%% arc B1 to C2
+%  \draw[black] (\B1:1) -- (\C2:1);
+  \draw[black, name path=b1c2] (\C2:1) arc ({\C2-90}:{\B1+90-360}:{(tan((\B1-\C2)/2))}); %
+
+  \filldraw[blue, name intersections={of=a1b2 and b1c2}]
+  (intersection-1) circle (1pt) node[anchor=west, xshift=5pt, yshift=4pt] {$A$};
+  \filldraw[red, name intersections={of=a1b2 and a2c1}] (intersection-1)
+  circle (1pt) node[anchor=north, xshift=-3pt, yshift=-3pt] {$B$};
+  \filldraw[green, name intersections={of=a2c1 and b1c2}]
+  (intersection-1) circle (1pt) node[anchor=east, xshift=-3pt, yshift=8pt] {$C$};; 
+  
+  
+  %  \draw[red] ({(\A1+\A2)/2}: {(sec((-\A1+\A2)/2))}) circle  ({(tan((-\A1+\A2)/2))});
+  \draw[red] (\A2:1) arc ({\A2-90}:{\A1+90}:{(tan((\A1-\A2)/2))}); % why neg tan?
+  
+  %  \draw[green] ({(\A2+\B1)/2}: {(sec((-\A2+\B1)/2))}) circle  ({(tan((-\A2+\B1)/2))});
+  \draw[green] (\B1:1) arc ({\B1-90}:{\A2+90}:{(tan((\A2-\B1)/2))}); % why neg tan?
+  
+  %  \draw[blue] ({(\B2+\B1)/2}: {(sec((\B2-\B1)/2))}) circle  ({(tan((\B2-\B1)/2))});
+  \draw[blue] (\B2:1) arc ({\B2-90}:{\B1+90}:{(tan((\B1-\B2)/2))}); % 
+  
+  %  \draw[red] ({(\C1+\B2)/2}: {(sec((\C1-\B2)/2))}) circle  ({(tan((\C1-\B2)/2))});
+  \draw[red] (\C1:1) arc ({\C1-90}:{\B2+90}:{(tan((\B2-\C1)/2))}); % 
+  
+  %  \draw[green] ({(\C2+\C1)/2}: {(sec((\C2-\C1)/2))}) circle  ({(tan((\C2-\C1)/2))});
+  \draw[green] (\C2:1) arc ({\C2-90}:{\C1+90-360}:{(tan((\C1-\C2)/2))}); % 
+  
+  %  \draw[blue] ({(\C2+\A1)/2}: {(sec((-\C2+\A1)/2))}) circle  ({(tan((-\C2+\A1)/2))});  
+  \draw[blue] (\A1:1) arc ({\A1-90}:{\C2+90}:{(tan((\C2-\A1)/2))}); %
+
+\end{tikzpicture}
+
