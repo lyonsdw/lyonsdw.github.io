@@ -4,6 +4,11 @@
 %%   \draw[red] (\t: {sec(\t)}) circle ({tan(\t)});
 %% \end{tikzpicture}
 
+%% draw hyperbolic straight line from E(a)=(cos a, sin a) to E(b)=(cos b, sin b)
+%%%%  a,b in degrees, 0 <= a < b < 360
+%% (b:1) arc (b-270 : a - 90 : tan( (b-a)/2 ))
+%% (start pt) arc (start angle : stop angle : radius)
+
 \begin{tikzpicture}[scale=2.5]%[x=2cm,y=2cm]
   \pgfdeclarelayer{fore}
   \pgfsetlayers{main,fore}
