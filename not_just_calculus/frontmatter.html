@@ -74,6 +74,7 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -96,205 +97,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.3';
+eBookConfig.runestone_version = '7.5.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#frontmatter-3-3-3-2-1 { counter-set: frontmatter-3-3-3-2-1 0; }
-#frontmatter-3-3-3-2-1 > li::marker { content: ""counter(frontmatter-3-3-3-2-1,decimal)"."; }
-#frontmatter-3-3-3-2-1 > li { counter-increment: frontmatter-3-3-3-2-1; }
-#frontmatter-3-3-3-2-2 { counter-set: frontmatter-3-3-3-2-2 0; }
-#frontmatter-3-3-3-2-2 > li::marker { content: ""counter(frontmatter-3-3-3-2-2,decimal)"."; }
-#frontmatter-3-3-3-2-2 > li { counter-increment: frontmatter-3-3-3-2-2; }
-#setnotationparseexer-1-1-1 { counter-set: setnotationparseexer-1-1-1 0; }
-#setnotationparseexer-1-1-1 > li::marker { content: ""counter(setnotationparseexer-1-1-1,decimal)"."; }
-#setnotationparseexer-1-1-1 > li { counter-increment: setnotationparseexer-1-1-1; }
-#setopspuzzleexer-1-1-6 { counter-set: setopspuzzleexer-1-1-6 0; }
-#setopspuzzleexer-1-1-6 > li::marker { content: ""counter(setopspuzzleexer-1-1-6,decimal)"."; }
-#setopspuzzleexer-1-1-6 > li { counter-increment: setopspuzzleexer-1-1-6; }
-#setalgfirstexer-1-1-3 { counter-set: setalgfirstexer-1-1-3 0; }
-#setalgfirstexer-1-1-3 > li::marker { content: "("counter(setalgfirstexer-1-1-3,lower-alpha)")"; }
-#setalgfirstexer-1-1-3 > li { counter-increment: setalgfirstexer-1-1-3; }
-#powersetproblem-1-1-8 { counter-set: powersetproblem-1-1-8 0; }
-#powersetproblem-1-1-8 > li::marker { content: "("counter(powersetproblem-1-1-8,lower-alpha)")"; }
-#powersetproblem-1-1-8 > li { counter-increment: powersetproblem-1-1-8; }
-#algofsetsexer-1-1-7-1 { counter-set: algofsetsexer-1-1-7-1 0; }
-#algofsetsexer-1-1-7-1 > li::marker { content: ""counter(algofsetsexer-1-1-7-1,lower-roman)""; }
-#algofsetsexer-1-1-7-1 > li { counter-increment: algofsetsexer-1-1-7-1; }
-#algofsetsexer-1-1-8 { counter-set: algofsetsexer-1-1-8 0; }
-#algofsetsexer-1-1-8 > li::marker { content: "("counter(algofsetsexer-1-1-8,lower-alpha)")"; }
-#algofsetsexer-1-1-8 > li { counter-increment: algofsetsexer-1-1-8; }
-#writeoutrelsexer-1-1-1 { counter-set: writeoutrelsexer-1-1-1 0; }
-#writeoutrelsexer-1-1-1 > li::marker { content: ""counter(writeoutrelsexer-1-1-1,decimal)"."; }
-#writeoutrelsexer-1-1-1 > li { counter-increment: writeoutrelsexer-1-1-1; }
-#writeoutfunsexer-1-1-1 { counter-set: writeoutfunsexer-1-1-1 0; }
-#writeoutfunsexer-1-1-1 > li::marker { content: ""counter(writeoutfunsexer-1-1-1,decimal)"."; }
-#writeoutfunsexer-1-1-1 > li { counter-increment: writeoutfunsexer-1-1-1; }
-#writeoutfunsexercontd-1-1-2 { counter-set: writeoutfunsexercontd-1-1-2 0; }
-#writeoutfunsexercontd-1-1-2 > li::marker { content: ""counter(writeoutfunsexercontd-1-1-2,decimal)"."; }
-#writeoutfunsexercontd-1-1-2 > li { counter-increment: writeoutfunsexercontd-1-1-2; }
-#fnsetalgfirstexer-1-1-5 { counter-set: fnsetalgfirstexer-1-1-5 0; }
-#fnsetalgfirstexer-1-1-5 > li::marker { content: "("counter(fnsetalgfirstexer-1-1-5,lower-alpha)")"; }
-#fnsetalgfirstexer-1-1-5 > li { counter-increment: fnsetalgfirstexer-1-1-5; }
-#permsexer-2-1-4 { counter-set: permsexer-2-1-4 0; }
-#permsexer-2-1-4 > li::marker { content: "("counter(permsexer-2-1-4,lower-alpha)")"; }
-#permsexer-2-1-4 > li { counter-increment: permsexer-2-1-4; }
-#projectionfirstexer-2-1-30 { counter-set: projectionfirstexer-2-1-30 0; }
-#projectionfirstexer-2-1-30 > li::marker { content: "("counter(projectionfirstexer-2-1-30,lower-alpha)")"; }
-#projectionfirstexer-2-1-30 > li { counter-increment: projectionfirstexer-2-1-30; }
-#onesidedinvproofsexer-1-1-4 { counter-set: onesidedinvproofsexer-1-1-4 0; }
-#onesidedinvproofsexer-1-1-4 > li::marker { content: ""counter(onesidedinvproofsexer-1-1-4,decimal)"."; }
-#onesidedinvproofsexer-1-1-4 > li { counter-increment: onesidedinvproofsexer-1-1-4; }
-#invertibilityconditions-2-1-2 { counter-set: invertibilityconditions-2-1-2 0; }
-#invertibilityconditions-2-1-2 > li::marker { content: ""counter(invertibilityconditions-2-1-2,decimal)"."; }
-#invertibilityconditions-2-1-2 > li { counter-increment: invertibilityconditions-2-1-2; }
-#writeoutfunsexeragain-1-1-2 { counter-set: writeoutfunsexeragain-1-1-2 0; }
-#writeoutfunsexeragain-1-1-2 > li::marker { content: ""counter(writeoutfunsexeragain-1-1-2,decimal)"."; }
-#writeoutfunsexeragain-1-1-2 > li { counter-increment: writeoutfunsexeragain-1-1-2; }
-#surjinjegexer-1-1-3 { counter-set: surjinjegexer-1-1-3 0; }
-#surjinjegexer-1-1-3 > li::marker { content: "("counter(surjinjegexer-1-1-3,lower-alpha)")"; }
-#surjinjegexer-1-1-3 > li { counter-increment: surjinjegexer-1-1-3; }
-#partitionexer-1-1-2 { counter-set: partitionexer-1-1-2 0; }
-#partitionexer-1-1-2 > li::marker { content: ""counter(partitionexer-1-1-2,decimal)"."; }
-#partitionexer-1-1-2 > li { counter-increment: partitionexer-1-1-2; }
-#partitionfromfunexer-1-1-4 { counter-set: partitionfromfunexer-1-1-4 0; }
-#partitionfromfunexer-1-1-4 > li::marker { content: ""counter(partitionfromfunexer-1-1-4,decimal)"."; }
-#partitionfromfunexer-1-1-4 > li { counter-increment: partitionfromfunexer-1-1-4; }
-#partitionfromfunegexer-1-1-9 { counter-set: partitionfromfunegexer-1-1-9 0; }
-#partitionfromfunegexer-1-1-9 > li::marker { content: "("counter(partitionfromfunegexer-1-1-9,lower-alpha)")"; }
-#partitionfromfunegexer-1-1-9 > li { counter-increment: partitionfromfunegexer-1-1-9; }
-#setsizecompareexer-1-1-4 { counter-set: setsizecompareexer-1-1-4 0; }
-#setsizecompareexer-1-1-4 > li::marker { content: "("counter(setsizecompareexer-1-1-4,lower-alpha)")"; }
-#setsizecompareexer-1-1-4 > li { counter-increment: setsizecompareexer-1-1-4; }
-#intoisontofinite-1-1-3 { counter-set: intoisontofinite-1-1-3 0; }
-#intoisontofinite-1-1-3 > li::marker { content: "("counter(intoisontofinite-1-1-3,lower-alpha)")"; }
-#intoisontofinite-1-1-3 > li { counter-increment: intoisontofinite-1-1-3; }
-#divisibility_and_primes_section-9-3 { counter-set: divisibility_and_primes_section-9-3 0; }
-#divisibility_and_primes_section-9-3 > li::marker { content: ""counter(divisibility_and_primes_section-9-3,decimal)"."; }
-#divisibility_and_primes_section-9-3 > li { counter-increment: divisibility_and_primes_section-9-3; }
-#consolidatingprimefactorsexer-2-1-3 { counter-set: consolidatingprimefactorsexer-2-1-3 0; }
-#consolidatingprimefactorsexer-2-1-3 > li::marker { content: "("counter(consolidatingprimefactorsexer-2-1-3,lower-alpha)")"; }
-#consolidatingprimefactorsexer-2-1-3 > li { counter-increment: consolidatingprimefactorsexer-2-1-3; }
-#zmegexer-1-1-3 { counter-set: zmegexer-1-1-3 0; }
-#zmegexer-1-1-3 > li::marker { content: ""counter(zmegexer-1-1-3,decimal)"."; }
-#zmegexer-1-1-3 > li { counter-increment: zmegexer-1-1-3; }
-#equivmodmisequivrel-1-1-2 { counter-set: equivmodmisequivrel-1-1-2 0; }
-#equivmodmisequivrel-1-1-2 > li::marker { content: "("counter(equivmodmisequivrel-1-1-2,lower-alpha)")"; }
-#equivmodmisequivrel-1-1-2 > li { counter-increment: equivmodmisequivrel-1-1-2; }
-#modopswelldef-1-1-4 { counter-set: modopswelldef-1-1-4 0; }
-#modopswelldef-1-1-4 > li::marker { content: "("counter(modopswelldef-1-1-4,lower-alpha)")"; }
-#modopswelldef-1-1-4 > li { counter-increment: modopswelldef-1-1-4; }
-#missingtermslinexpexer-1-1-1 { counter-set: missingtermslinexpexer-1-1-1 0; }
-#missingtermslinexpexer-1-1-1 > li::marker { content: ""counter(missingtermslinexpexer-1-1-1,decimal)"."; }
-#missingtermslinexpexer-1-1-1 > li { counter-increment: missingtermslinexpexer-1-1-1; }
-#linexpsumexer-1-1-1 { counter-set: linexpsumexer-1-1-1 0; }
-#linexpsumexer-1-1-1 > li::marker { content: ""counter(linexpsumexer-1-1-1,decimal)"."; }
-#linexpsumexer-1-1-1 > li { counter-increment: linexpsumexer-1-1-1; }
-#hotelbilldoubleexer-1-1-2 { counter-set: hotelbilldoubleexer-1-1-2 0; }
-#hotelbilldoubleexer-1-1-2 > li::marker { content: "("counter(hotelbilldoubleexer-1-1-2,lower-alpha)")"; }
-#hotelbilldoubleexer-1-1-2 > li { counter-increment: hotelbilldoubleexer-1-1-2; }
-#investmentvalueexer-1-1-8 { counter-set: investmentvalueexer-1-1-8 0; }
-#investmentvalueexer-1-1-8 > li::marker { content: "("counter(investmentvalueexer-1-1-8,lower-alpha)")"; }
-#investmentvalueexer-1-1-8 > li { counter-increment: investmentvalueexer-1-1-8; }
-#rabbitturtleraceexer-2-2-1 { counter-set: rabbitturtleraceexer-2-2-1 0; }
-#rabbitturtleraceexer-2-2-1 > li::marker { content: "("counter(rabbitturtleraceexer-2-2-1,lower-alpha)")"; }
-#rabbitturtleraceexer-2-2-1 > li { counter-increment: rabbitturtleraceexer-2-2-1; }
-#dribpuzzleexer-1-2-1 { counter-set: dribpuzzleexer-1-2-1 0; }
-#dribpuzzleexer-1-2-1 > li::marker { content: "("counter(dribpuzzleexer-1-2-1,lower-alpha)")"; }
-#dribpuzzleexer-1-2-1 > li { counter-increment: dribpuzzleexer-1-2-1; }
-#snowflakecurveexer-2-2-3 { counter-set: snowflakecurveexer-2-2-3 0; }
-#snowflakecurveexer-2-2-3 > li::marker { content: "("counter(snowflakecurveexer-2-2-3,lower-alpha)")"; }
-#snowflakecurveexer-2-2-3 > li { counter-increment: snowflakecurveexer-2-2-3; }
-#parseratsdenseexer-1-1-1 { counter-set: parseratsdenseexer-1-1-1 0; }
-#parseratsdenseexer-1-1-1 > li::marker { content: ""counter(parseratsdenseexer-1-1-1,decimal)"."; }
-#parseratsdenseexer-1-1-1 > li { counter-increment: parseratsdenseexer-1-1-1; }
-#walkarounds1exer-1-1-4 { counter-set: walkarounds1exer-1-1-4 0; }
-#walkarounds1exer-1-1-4 > li::marker { content: "("counter(walkarounds1exer-1-1-4,lower-alpha)")"; }
-#walkarounds1exer-1-1-4 > li { counter-increment: walkarounds1exer-1-1-4; }
-#termdecexer-1-1-1 { counter-set: termdecexer-1-1-1 0; }
-#termdecexer-1-1-1 > li::marker { content: "("counter(termdecexer-1-1-1,lower-alpha)")"; }
-#termdecexer-1-1-1 > li { counter-increment: termdecexer-1-1-1; }
-#charfunexer-1-1-14 { counter-set: charfunexer-1-1-14 0; }
-#charfunexer-1-1-14 > li::marker { content: "("counter(charfunexer-1-1-14,lower-alpha)")"; }
-#charfunexer-1-1-14 > li { counter-increment: charfunexer-1-1-14; }
-#distdemorganlawsexer-1-1-7 { counter-set: distdemorganlawsexer-1-1-7 0; }
-#distdemorganlawsexer-1-1-7 > li::marker { content: "("counter(distdemorganlawsexer-1-1-7,lower-alpha)")"; }
-#distdemorganlawsexer-1-1-7 > li { counter-increment: distdemorganlawsexer-1-1-7; }
-#equivrelnexer-1-1-6-1 { counter-set: equivrelnexer-1-1-6-1 0; }
-#equivrelnexer-1-1-6-1 > li::marker { content: ""counter(equivrelnexer-1-1-6-1,lower-roman)""; }
-#equivrelnexer-1-1-6-1 > li { counter-increment: equivrelnexer-1-1-6-1; }
-#equivrelnexer-1-1-13 { counter-set: equivrelnexer-1-1-13 0; }
-#equivrelnexer-1-1-13 > li::marker { content: "("counter(equivrelnexer-1-1-13,lower-alpha)")"; }
-#equivrelnexer-1-1-13 > li { counter-increment: equivrelnexer-1-1-13; }
-#normpropnonpropexer-1-1-1 { counter-set: normpropnonpropexer-1-1-1 0; }
-#normpropnonpropexer-1-1-1 > li::marker { content: "("counter(normpropnonpropexer-1-1-1,lower-alpha)")"; }
-#normpropnonpropexer-1-1-1 > li { counter-increment: normpropnonpropexer-1-1-1; }
-#wrappingfnpropexer-2-1-1 { counter-set: wrappingfnpropexer-2-1-1 0; }
-#wrappingfnpropexer-2-1-1 > li::marker { content: "("counter(wrappingfnpropexer-2-1-1,lower-alpha)")"; }
-#wrappingfnpropexer-2-1-1 > li { counter-increment: wrappingfnpropexer-2-1-1; }
-#polygonvertexexer-1-1-6 { counter-set: polygonvertexexer-1-1-6 0; }
-#polygonvertexexer-1-1-6 > li::marker { content: "("counter(polygonvertexexer-1-1-6,lower-alpha)")"; }
-#polygonvertexexer-1-1-6 > li { counter-increment: polygonvertexexer-1-1-6; }
-#conventionsaboutptsandvects-2-2-1 { counter-set: conventionsaboutptsandvects-2-2-1 0; }
-#conventionsaboutptsandvects-2-2-1 > li::marker { content: "("counter(conventionsaboutptsandvects-2-2-1,lower-alpha)")"; }
-#conventionsaboutptsandvects-2-2-1 > li { counter-increment: conventionsaboutptsandvects-2-2-1; }
-#conventionsaboutptsandvects-2-2-1-1-1-1 { counter-set: conventionsaboutptsandvects-2-2-1-1-1-1 0; }
-#conventionsaboutptsandvects-2-2-1-1-1-1 > li::marker { content: ""counter(conventionsaboutptsandvects-2-2-1-1-1-1,lower-roman)"."; }
-#conventionsaboutptsandvects-2-2-1-1-1-1 > li { counter-increment: conventionsaboutptsandvects-2-2-1-1-1-1; }
-#conventionsaboutptsandvects-2-2-1-2-1-6 { counter-set: conventionsaboutptsandvects-2-2-1-2-1-6 0; }
-#conventionsaboutptsandvects-2-2-1-2-1-6 > li::marker { content: ""counter(conventionsaboutptsandvects-2-2-1-2-1-6,lower-roman)"."; }
-#conventionsaboutptsandvects-2-2-1-2-1-6 > li { counter-increment: conventionsaboutptsandvects-2-2-1-2-1-6; }
-#isitlinearexer-1-1-5 { counter-set: isitlinearexer-1-1-5 0; }
-#isitlinearexer-1-1-5 > li::marker { content: ""counter(isitlinearexer-1-1-5,decimal)"."; }
-#isitlinearexer-1-1-5 > li { counter-increment: isitlinearexer-1-1-5; }
-#usemattoevalexer-1-1-1 { counter-set: usemattoevalexer-1-1-1 0; }
-#usemattoevalexer-1-1-1 > li::marker { content: ""counter(usemattoevalexer-1-1-1,decimal)"."; }
-#usemattoevalexer-1-1-1 > li { counter-increment: usemattoevalexer-1-1-1; }
-#matopsexer-1-1-1 { counter-set: matopsexer-1-1-1 0; }
-#matopsexer-1-1-1 > li::marker { content: ""counter(matopsexer-1-1-1,decimal)"."; }
-#matopsexer-1-1-1 > li { counter-increment: matopsexer-1-1-1; }
-#idandinvcheckexer-1-1-1 { counter-set: idandinvcheckexer-1-1-1 0; }
-#idandinvcheckexer-1-1-1 > li::marker { content: ""counter(idandinvcheckexer-1-1-1,decimal)"."; }
-#idandinvcheckexer-1-1-1 > li { counter-increment: idandinvcheckexer-1-1-1; }
-#solvelinsysexer-2-1-21 { counter-set: solvelinsysexer-2-1-21 0; }
-#solvelinsysexer-2-1-21 > li::marker { content: "("counter(solvelinsysexer-2-1-21,lower-alpha)")"; }
-#solvelinsysexer-2-1-21 > li { counter-increment: solvelinsysexer-2-1-21; }
-#reflectislinearexer-2-1-1 { counter-set: reflectislinearexer-2-1-1 0; }
-#reflectislinearexer-2-1-1 > li::marker { content: "("counter(reflectislinearexer-2-1-1,lower-alpha)")"; }
-#reflectislinearexer-2-1-1 > li { counter-increment: reflectislinearexer-2-1-1; }
-#complexmultfirstexer-1-1-1 { counter-set: complexmultfirstexer-1-1-1 0; }
-#complexmultfirstexer-1-1-1 > li::marker { content: ""counter(complexmultfirstexer-1-1-1,decimal)"."; }
-#complexmultfirstexer-1-1-1 > li { counter-increment: complexmultfirstexer-1-1-1; }
-#complexalg2ndexer-1-1-1 { counter-set: complexalg2ndexer-1-1-1 0; }
-#complexalg2ndexer-1-1-1 > li::marker { content: ""counter(complexalg2ndexer-1-1-1,decimal)"."; }
-#complexalg2ndexer-1-1-1 > li { counter-increment: complexalg2ndexer-1-1-1; }
-#complexdivisionexer-1-1-1 { counter-set: complexdivisionexer-1-1-1 0; }
-#complexdivisionexer-1-1-1 > li::marker { content: ""counter(complexdivisionexer-1-1-1,decimal)"."; }
-#complexdivisionexer-1-1-1 > li { counter-increment: complexdivisionexer-1-1-1; }
-#twosqrootsexer-2-1-1 { counter-set: twosqrootsexer-2-1-1 0; }
-#twosqrootsexer-2-1-1 > li::marker { content: "("counter(twosqrootsexer-2-1-1,lower-alpha)")"; }
-#twosqrootsexer-2-1-1 > li { counter-increment: twosqrootsexer-2-1-1; }
-#linfractransdefexer-1-1-19 { counter-set: linfractransdefexer-1-1-19 0; }
-#linfractransdefexer-1-1-19 > li::marker { content: "("counter(linfractransdefexer-1-1-19,lower-alpha)")"; }
-#linfractransdefexer-1-1-19 > li { counter-increment: linfractransdefexer-1-1-19; }
-#intptsdenseins1prop-2-11 { counter-set: intptsdenseins1prop-2-11 0; }
-#intptsdenseins1prop-2-11 > li::marker { content: ""counter(intptsdenseins1prop-2-11,decimal)"."; }
-#intptsdenseins1prop-2-11 > li { counter-increment: intptsdenseins1prop-2-11; }
-</style>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="not_just_calculus.html"><span class="title">Not Just Calculus:</span> <span class="subtitle">First-Year Introduction to Upper-Level Mathematics</span></a></h1>
 <p class="byline">David W. Lyons</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="not_just_calculus-6-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -474,7 +291,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="author-info">Department of Mathematical Sciences<br>Lebanon Valley College<br>Annville, PA, USA<br><a href="mailto:lyons@lvc.edu">lyons@lvc.edu</a>
 </div>
 </div>
-<div class="date"> January 2025 Edition, revised: January 28, 2025</div>
+<div class="date"> January 2025 Edition, revised: February 11, 2025</div>
 <nav class="summary-links"><ul>
 <li><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></li>
 <li><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></li>
@@ -485,7 +302,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
