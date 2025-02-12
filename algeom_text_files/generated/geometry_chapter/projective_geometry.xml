@@ -255,7 +255,7 @@
 
     <exercises>
 
-        <commentary component="instructor">
+        <aside component="instructor">
       <p><alert>Essential exercises:</alert>
 	<xref text="local" ref="fundthmprojgeompfexer"/>,
 	<xref text="local" ref="chartexer"/>,
@@ -269,7 +269,7 @@
       <p><alert>May be omitted:</alert>
 	<xref text="local" ref="quadricsexer"/>
    	  </p>
-</commentary>
+</aside>
       
       
       <exercise xml:id="fundthmprojgeompfexer"><statement><p>Use <xref ref="fundthmprojgeomlemma"/> to prove the Fundamental Theorem of
@@ -278,7 +278,7 @@
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="fundthmprojgeompfexer"/>
   (proof of the Fundamental Theorem of Projective Geometry)</title>
   <p>Let <m>P_0,P_1,P_2,\ldots,P_{n+1}</m> be a set of <m>n+2</m> points
@@ -312,7 +312,7 @@
 	  know, is that a Möbius transformation with three fixed points
 	  is the identity.]
   </p>
-</commentary>
+</aside>
       
 
       <exercise xml:id="chartexer"><title>Coordinate charts and inhomogeneous
@@ -349,12 +349,12 @@
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="chartexer"/></title>
   <p>The map <m>\pi_1\circ \text{chart}_0</m> is inversion, as follows.
     <me>z\stackrel{\text{chart}_0}{\to} [1,z] \stackrel{\pi_1}{\to} 1/z</me>
   </p>
-</commentary>
+</aside>
       
             <exercise xml:id="mobiusgeomisprojectivegeom"><title>Möbius geometry is projective
 		geometry</title>
@@ -376,7 +376,7 @@
 	    </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiusgeomisprojectivegeom"/></title>
   <p>It is clear that <m>\mu</m> is a bijection. Let <m>T\in
       \M</m> be given by <m>Tz=\frac{az+b}{cz+d}</m>. Let <m>M\in
@@ -397,7 +397,7 @@
     Thus we have <m>\mu\circ T\circ \mu^{-1} = [M]\in PGL(2,\C)</m>
       and <m>\mu^{-1}\circ [M]\circ \mu = T\in \M</m>.
   </p>
-</commentary>
+</aside>
 	    
       
       <exercise xml:id="projcrossratioexer"><title>Cross ratio</title>
@@ -449,7 +449,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="projcrossratioexer"/></title>
   <p>
     <ol>
@@ -467,7 +467,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
 	\frac{\det(P_0P_2)\det(P_1P_3)}{\det(P_1P_2)\det(P_0P_3)}</me>.</li>
     </ol>
   </p>
-</commentary>
+</aside>
       
 <!--
             <exercise><statement><p>Show that every projective transformation
@@ -493,7 +493,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="rp2collinearconditionexer"/></title>
   <p>A line in projective space <m>\R\Proj_2</m>
     the set of equivalence classes of all
@@ -502,7 +502,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
     only if the three vectors are linearly dependent. This holds if and
     only if the determinant of the given <m>3\times 3</m> matrix is zero.
   </p>
-</commentary>
+</aside>
       
 
       	            <figure xml:id="pappus_theorem_fig">
@@ -557,7 +557,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="pappusthmexer"/> (proof
   of Pappus' Theorem)</title>
   <p>Following the outline, we have the following.
@@ -596,7 +596,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
 -->
     </ul>
   </p>
-</commentary>
+</aside>
       
 
       <exercise xml:id="quadricsexer"><title>Quadrics</title>
@@ -621,7 +621,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="quadricsexer"/></title>
   <p>
     <ol>
@@ -642,7 +642,7 @@ Now just calculate <m>\mu(T(a_0,b_0))</m>.
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
       
       
     </exercises>

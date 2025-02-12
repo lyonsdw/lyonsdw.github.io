@@ -125,33 +125,146 @@ verifies that <m>\mu_a\circ \mu_b=\mu_{ab}</m>, so the
 		    as desired.
   </p>
 </commentary>
-	      
 
-<exercise xml:id="alternatinggpexer"><title>The alternating group</title>
+    <exercise xml:id="permparityexer"><title>An alternative approach to
+    parity of permutations</title>
+      <statement>
+	<p>This exercise gives a way to define even and odd
+	      permutations that is different from the method used in
+	  <xref ref="signofpermexer"/>.
+	  <ol><li>Suppose that the identity permutation <m>e</m>
+	      in <m>S_n</m> is written as a product of transpositions
+	      <me>e=\tau_1\tau_2\cdots \tau_r.</me>
+	      Show that <m>r</m> is even.
+	    </li>
+	    <li>Suppose that <m>\sigma</m> in <m>S_n</m> is
+	  written in two ways as a product of transpositions.
+	  <me>\sigma = (a_1b_1)(a_2b_2)\cdots (a_sb_s) =
+	    (c_1d_1)(c_2d_2)\cdots (c_td_t)</me> Show that <m>s,t</m>
+	  are either both even or both odd. The common evenness or
+	  oddness of <m>s,t</m> is called the <term>parity</term> of
+	  the permutation <m>\sigma</m>.</li>
+	    <li>Show that the parity of a <m>k</m>-cycle is even
+	    if <m>k</m> is odd, and the parity of a <m>k</m>-cycle is odd
+	    if <m>k</m> is even.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      <hint><p><ol><li>Consider the two rightmost
+	      transpositions <m>\tau_{r-1}\tau_{r}</m>. They have one
+	      of the following forms, where <m>a,b,c,d</m> are distinct.
+	      <me>(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)</me>
+	      The first allows you to reduce the transposition count by
+	      two by cancelling.
+	      The remaining three can be
+	      rewritten.
+	      <me>(ab)(bc), (ac)(cb), (ab)(cd)</me>
+	      Notice that the index of the rightmost transposition in
+	      which the symbol <m>a</m> occurs has been reduced by 1
+	      (from <m>r</m> to <m>r-1</m>). Finish this reasoning with
+	      an inductive argument.
+	    </li>
+	  </ol>
+	</p>
+      </hint>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for <xref ref="permparityexer"/></title>
+      <!-- <p>First we prove a technical Lemma: Let <m>n\geq 2</m>. Given <m>a\in \{1,2,\ldots,n\}</m> and
+	given transpositions <m>\alpha_1,\alpha_2,\ldots,\alpha_k</m>
+	in <m>S_n</m>, define <m>h(\alpha_1,\ldots,\alpha_k,a)</m> to be
+	the highest index <m>\ell</m> such that <m>a</m> appears
+	in <m>\alpha_\ell</m>, and
+	let <m>h(\alpha_1,\ldots,\alpha_k,a)=0</m> if <m>a</m> does not
+	appear in any <m>\alpha_i</m>. Now
+	let <m>\tau_1,\tau_2,\ldots,\tau_r</m> be transpositions
+	in <m>S_n</m> for some <m>r\geq 2</m>.
+	  Then there exist transpositions <m>\beta_1,\beta_2,\ldots,\beta_t</m> such
+	  that <m>\tau_1\tau_2\cdots \tau_r=\beta_1\beta_2\cdots
+	  \beta_t</m>, such that <m>r,t</m> have the same parity, and 
+	such that <m>h(\beta_1,\ldots,\beta_t,a)</m> is equal to 0
+	or 1.
+	We prove the Lemma by induction on the value of <m>h</m>. The Lemma's assertion clearly holds
+	if <m>h=0</m> or if <m>h=1</m>. Now suppose the Lemma's assertion holds for
+	all <m>h\lt s</m>, and now
+	suppose <m>h(\tau_1,\tau_2,\ldots,\tau_r,a)=s</m> for
+	some <m>\tau_1,\ldots,\tau_r,a</m>. 
+	The four possibilities
+	for <m>\tau_{s-1}\tau_s</m> (note that we may assume <m>s\geq 2</m>)
+	are the following,
+	where <m>a,b,c,d</m> are distinct.
+<mdn><mrow xml:id="groupdeflocaltag1" tag="star"> (ab)(ab), (ac)(ab), (bc)(ab),
+    (cd)(ab) </mrow></mdn>	
+	    These products can be rewritten, respectively, as the following.
+<mdn><mrow xml:id="groupdeflocaltag2" tag="dstar"> e, (ab)(bc), (ac)(cb), (ab)(cd) </mrow></mdn>		    
+	    In the first of the four cases in
+	    <xref ref="groupdeflocaltag1"/>, where <m>\tau_{s-1}\tau_s=(ab)(ab)</m>, we have
+	    <me>\tau_1\tau_2\cdots\tau_{s-1}\tau_s\cdots
+	    \tau_r=\tau_1\tau_2\cdots\widehat{\tau}_{s-1}\widehat{\tau}_s
+	      \cdots \tau_r</me>
+	    where <m>h(\tau_1,\ldots,\tau_{s-2},\tau_{s+1},\ldots,\tau_r,a)\leq
+	    s-2</m>, and the number of transpositions on both sides
+	    differs by 2.
+	    By the inductive hypothesis, the Lemma's assertion holds. In
+	    each of the three remaining cases in <xref ref="groupdeflocaltag1"/>, we can write
+	    <me>\tau_1\tau_2\cdots\tau_{s-1}\tau_s\cdots
+	    \tau_r=\tau_1\tau_2\cdots{\tau}'_{s-1}{\tau}'_s
+	      \cdots \tau_r</me>	    
+where <m>h(\tau_1,\ldots,\tau'_{s-1},\tau'_s,\ldots,\tau_r,a)\leq s-1</m>. Once again, the Lemma's
+	    assertion follows by the inductive hypothesis. This
+	    completes the proof of the Lemma.
+	</p>-->
+	<p>
+	<ol>
+	  <li>Clearly, <m>r</m> cannot be 1, and the statement is true
+	    for <m>r=2</m>. Now suppose the statement holds for <m>k\lt
+	      r</m> and let <m>e=\tau_1\cdots \tau_r</m> be
+	    given. The four possibilities
+	    for <m>\tau_{r-1}\tau_r</m> are the following,
+	    where <m>a,b,c,d</m> are distinct.
+	    <me>(ab)(ab), (ac)(ab), (bc)(ab), (cd)(ab)</me>
+	    These products can be rewritten, respectively, as
+	    <me>e, (ab)(bc), (ac)(cb), (ab)(cd)</me>
+	    In the first case, we have <m>e=\tau_1\cdots \tau_{r-2}</m>,
+	    so <m>r-2</m> must be even by the inductive hypothesis, so
+	    we are done. In the other three cases, we have an expression
+	    where the rightmost occurrence of the symbol <m>a</m> is in
+	    position <m>r-1</m>. Continuing this process, we continue to
+	    rewrite the product of transpositions until the number of
+	    transpositions drops by 2. This must happen, because
+	    otherwise the rightmost occurrence of the symbol <m>a</m>
+	    would be in the first transposition, but then the product
+	    would not be the identity because it would not fix <m>a</m>.
+	  </li>
+	  <li>We have
+	  <me>e=\sigma\sigma^{-1}  =
+	    (c_1d_1)(c_2d_2)\cdots (c_td_t)(a_sb_s)\cdots(a_1b_1)</me>
+	  so <m>s+t</m> is even by the previous part.
+	  </li>
+	  <li>A <m>k</m>-cycle is a product of <m>k-1</m> transpositions.
+      <me>(a_1a_2\ldots a_k) = (a_1a_2)(a_2a_3)\ldots (a_{k-1}a_k)</me>	    
+	  </li>
+	</ol>
+	
+      </p>
+    </commentary>
+
+
+<exercise xml:id="alternatinggpsizeexer"><title>The size of the alternating group</title>
   <statement><p>
-      <ol>
-	<li>Show that, for <m>n\geq 2</m>, 
-	  half of the elements of <m>S_n</m> are even, and
+	Show that <m>|A_n|=|S_n|/2</m> for <m>n\geq 2</m>, that is,
+	  that half of the elements of <m>S_n</m> are even, and
 	half are odd.
-	</li>
-	<li>The set of even permutations in <m>S_n</m> is called
-	  the <term>alternating group</term><idx>alternating
-	    group</idx><idx><h>groups, list of</h><h>alternating
-	      group</h> </idx>,
-	  denoted <m>A_n</m><notation><usage><m>A_n</m></usage><description>the
-	      alternating group</description></notation>. Show that <m>A_n</m> is
-	    indeed a subgroup of <m>S_n</m>.
-	</li>
-      </ol>
     </p>
   </statement>
 </exercise>
 
 <!-- Instructor's solution -->
 <commentary component="instructor">
-  <title>Instructor's solution for <xref ref="alternatinggpexer"/></title>
+  <title>Instructor's solution for <xref ref="alternatinggpsizeexer"/></title>
   <p>
-<ol><li>    Let <m>{\mathcal E}, {\mathcal O}</m> denote the set of even, or
+    Let <m>{\mathcal E}, {\mathcal O}</m> denote the set of even, or
     odd, respectively, elements of <m>S_n</m>.
     Let <m>\tau</m> be a transposition (<m>\tau=(12)</m> will do
     fine). Notice that <m>L_\tau\colon S_n\to \S_n</m> given
@@ -159,16 +272,6 @@ verifies that <m>\mu_a\circ \mu_b=\mu_{ab}</m>, so the
     is itself) and takes <m>{\mathcal E}</m>
     to <m>{\mathcal O}</m>, and vice-versa. Thus it must be the case
     that <m>|{\mathcal E}|=|{\mathcal O}|</m>.
-  </li>
-  <li>It is clear that the product of two even permutations is an even
-    permutation. If <m>\sigma=\tau_1\cdots \tau_r</m> is a product of
-    transpositions, then <m>\sigma^{-1}=\tau_r\cdots \tau_1</m>, so the
-    inverse of an even permutation is also an even permutation. The
-    set <m>A_n</m> is not empty because the identity is an even
-    permutation. We conclude that <m>A_n</m> is a subgroup of <m>S_n</m>
-    by the 2-step subgroup test.
-  </li>
-</ol>
   </p>
 </commentary>
 

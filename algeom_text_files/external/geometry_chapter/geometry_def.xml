@@ -51,14 +51,14 @@ X</m> for an element <m>g</m> in <m>G</m>. It is common usage to say
 
     </introduction>
 
-    <commentary component="instructor"><title>Instructor's comment on
+    <aside component="instructor"><title>Instructor's comment on
     notation convention</title>
       <p>The definition of <em>geometry</em> given here as a
 	pair <m>(X,G)</m> with the model space <m>X</m> listed first and
 	the transformation group <m>G</m> listed second follows Henle
 	<xref ref="henle_modern_geometries"/>. 
       </p>
-    </commentary>
+    </aside>
     
           <exercise xml:id="congruenceisequivrelexer"><statement><p>Show that congruence is an equivalence
       relation on the set of figures in a geometry.</p>
@@ -66,7 +66,7 @@ X</m> for an element <m>g</m> in <m>G</m>. It is common usage to say
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="congruenceisequivrelexer"/></title>
   <p>For symmetry, we have <m>F=\Id F</m> for all figures <m>F</m>. For
     reflexivity, if <m>F'=gF</m>, then <m>F=g^{-1}F'</m>. For
@@ -81,7 +81,7 @@ X</m> for an element <m>g</m> in <m>G</m>. It is common usage to say
   transformations acting on figures) that arises
     from the action <m>G\to \Perm(X)</m> of transformations acting on points.
   </p>
-</commentary>
+</aside>
 
 
 
@@ -274,7 +274,7 @@ group <m>PGL(V)</m>.
     
     <exercises>
 
-      <commentary component="instructor">
+      <aside component="instructor">
 <!--	<title>List of exercises by essentialness</title>-->
 	<p><alert>Essential exercises:</alert> <xref text="local" ref="geomdefwarmupexer"/>,
 		  <xref text="local" ref="anglemeascomplexexer"/>,
@@ -286,7 +286,7 @@ group <m>PGL(V)</m>.
 	<p><alert>At least discuss the idea:</alert> <xref text="local" ref="equivgeomdefexer"/>	</p>
 	  <p><alert>May be omitted:</alert> <xref text="local" ref="equivgeomgrpsisoquestionexer"/>
 	  </p>
-      </commentary>
+      </aside>
       
       <exercise xml:id="geomdefwarmupexer"><title>Warm up exercises with the three example geometries</title>
 	<statement><p><ol>
@@ -319,7 +319,7 @@ group <m>PGL(V)</m>.
       </exercise>
 
 <!-- Instructor's solution -->
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="geomdefwarmupexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="geomdefwarmupexer"/></title>
   <p>
     <ol>
       <li><p>These are both 3-4-5 triangles. One way to map the first
@@ -388,7 +388,7 @@ group <m>PGL(V)</m>.
 </li>
 </ol>
   </p>
-</commentary>
+</aside>
       
       
       	         <figure xml:id="curve_angle_limit_fig">
@@ -464,7 +464,7 @@ The value of limit <xref ref="anglemeascurves"/> is
       </exercisegroup>
 
 
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="anglemeascomplexexer"/></title>
   <p>Let <m>T</m> be the
     transformation <m>T(z)=e^{-i\arg(u-v)}(z-v)</m>. <m>T</m> is conformal
@@ -479,9 +479,9 @@ The value of limit <xref ref="anglemeascurves"/> is
     as desired.
   </p>
   
-</commentary>
+</aside>
 
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="homothetyconformalexer"/></title>
   <p>Let <m>T(z)=kz</m> for <m>k\gt 0</m> be a homothety, and
     let <m>u,v,w</m> be three points in <m>\C</m>.
@@ -489,10 +489,10 @@ The value of limit <xref ref="anglemeascurves"/> is
     <me>\angle T(u)T(v)T(w)=
       \arg((kw-kv)/(ku-kv))=\arg((w-v)/(u-v))=\angle uvw.</me>
   </p>
-</commentary>
+</aside>
 
 
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="twocurveangleexer"/></title>
   <p>Given parameterizations <m>p(t),q(s)</m> for curves <m>C_1,C_2</m>
     that intersect at <m>v=p(0)=q(0)</m>, the limit
@@ -512,10 +512,10 @@ The value of limit <xref ref="anglemeascurves"/> is
            </figure>
 
   </p>
-</commentary>
+</aside>
 
 
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="inversionconformalexer"/></title>
   <p>Let <m>C_1,C_2</m> be two curves, parameterized by <m>p(t),q(s)</m>,
     respectively, intersecting at <m>v=p(0)=q(0)</m>, and
@@ -542,7 +542,7 @@ After transforming the curves by inversion, the corresponding angle is
     </md>
       (<m>q(s)/p(t)\to 1</m>  because <m>q(s), p(t)\to v</m> as <m>s,t\to 0</m>).
   </p>
-</commentary>
+</aside>
 
 
       <exercisegroup><title>Equivalent geometries.</title>
@@ -582,7 +582,7 @@ After transforming the curves by inversion, the corresponding angle is
       </exercisegroup>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="equivgeomdefexer"/></title>
   <p>Let <m>(X,G)</m>, <m>(Y,H)</m>, and <m>(Z,K)</m> be
     geometries. Clearly <m>(X,G)</m> is equivalent to itself via the
@@ -593,10 +593,10 @@ After transforming the curves by inversion, the corresponding angle is
     and <m>\nu\colon Y\to Z</m> are geometry equivalence maps,
     then <m>\nu\circ \mu\colon X\to Z</m> is also a geometry equivalence map.
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="equiveuclideangeomexer"/></title>
   <p>Let <m>\mu\colon \R^2\to \C</m> be the canonical
     identification <m>\mu(x,y)=x+iy</m>. All three of the types of generators
@@ -628,10 +628,10 @@ After transforming the curves by inversion, the corresponding angle is
     conjugacy condition holds for all of <m>{\mathcal E}_1</m>
     and <m>{\mathcal E}_2.</m>
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="equivgeomgrpsisoquestionexer"/></title>
   <p>No. Let <m>(X,G)</m> be a geometry and let <m>H</m> be any group,
     and consider the action of <m>G\times H</m> on <m>X</m> given
@@ -639,7 +639,7 @@ After transforming the curves by inversion, the corresponding angle is
     are equivalent via the identity map on <m>X</m>, but unless <m>H</m>
     is trivial, <m>G</m> is not isomorphic to <m>G\times H</m>.
   </p>
-</commentary>
+</aside>
 
     </exercises>
 </section>

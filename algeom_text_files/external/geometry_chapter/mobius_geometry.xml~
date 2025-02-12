@@ -249,8 +249,8 @@ The composition is invertible
 	    is a homothety, rotation, translation, and inversion, respectively.
 		  </li>
 		  <li>Write a Möbius transformation that does
-		    "clockwise rotation by one-quarter rotation 
-		    about the point <m>2-i</m>".</li>
+		    <q>clockwise rotation by one-quarter rotation 
+		      about the point <m>2-i</m></q>.</li>
 	</ol>
       </p>
   </statement>
@@ -296,7 +296,8 @@ The composition is invertible
 
       <p>The Fundamental Theorem of Möbius Geometry says that all
 	three-point sets are congruent. It will turn out to be convenient to work with
-	the "standard" three-point set <m>\{1,0,\infty\}</m>. Given any
+	the <q>standard</q>
+	 three-point set <m>\{1,0,\infty\}</m>. Given any
 	three distinct complex numbers <m>z_1,z_2,z_3</m> it is easy to
 	check that the transformation <m>T</m> given by 
 	    <men xml:id="mob10inftyform">Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}</men>
@@ -474,7 +475,7 @@ transformations. Here is the formal statement with a proof.
 
       <p>A Euclidean
       circle or straight line is called
-      a <term>cline</term><idx>cline</idx> (pronounced "kline")
+	a <term>cline</term><idx>cline</idx> (pronounced <q>kline</q>)
       or <term>generalized circle</term><idx>generalized
       circle</idx>. The propositions and corollaries in this subsection show that the
       set of all clines is a single congruence class of figures in
@@ -592,7 +593,8 @@ All clines are congruent in Möbius geometry.
     <subsection><title>Symmetry with respect to a cline</title>
 <p>      Geometrically, the conjugation
 	map <m>z\to z^{\ast}</m> in the complex plane is <em>reflection</em> across the real
-	line. This "mirror" symmetry generalizes to symmetry with respect
+  line. This <q>mirror</q>
+   symmetry generalizes to symmetry with respect
 	  to any cline, as follows. Given a cline <m>C</m> that contains
 	  <m>z_1,z_2,z_3</m> in <m>\extC</m>,
 	  let <m>T=(\cdot,z_1,z_2,z_3)</m>. Given any point <m>z</m>,
@@ -615,7 +617,8 @@ All clines are congruent in Möbius geometry.
 		 <exercise><statement><p>Show that the symmetric point of a symmetric
 		   point is the point you started with. That is, show
 		     that <m>(z^{\ast C})^{\ast C}=z</m>. This allows
-		   us to speak of "a pair of symmetric points" without
+		       us to speak of <q>a pair of symmetric points</q>
+		        without
 		       ambiguity.</p>
 		   </statement>
 		   <hint><p><m>(T^{-1}\circ \conj \circ T)\circ (T^{-1}\circ
@@ -725,11 +728,12 @@ All clines are congruent in Möbius geometry.
 		    </title>
 	    <tabular top="minor"
 		     left="minor" halign="center">
-	      <col right="minor"/><col right="minor"/><col right="minor"/>
+	      <col right="minor"/><col right="minor"/><col width="35%" right="minor"/>
 	      <row bottom="major"><cell>normal form type
 		</cell>
 		<cell>normal form</cell>
-		<cell>conjugate transformation type</cell>
+		<cell><p>conjugate transformation type</p>
+		</cell>
 	      </row>
 
       	      <row bottom="minor"><cell><term>elliptic</term>
@@ -754,7 +758,7 @@ All clines are congruent in Möbius geometry.
 		<cell><m>\frac{Tz-p}{Tz-q}= \alpha \frac{z-p}{z-q},
 		      \alpha\neq 0</m>
 		</cell>
-		<cell>composition of homothety with rotation
+		<cell><p>composition of homothety with rotation</p>
 		</cell>
 	      </row>
 
@@ -798,45 +802,42 @@ All clines are congruent in Möbius geometry.
            </figure>
 
       <p>
-The discussion of normal forms show that any non-identity
-	  Möbius transformation is conjugate to one of two basic
-	  forms, <m>w\to \alpha w</m> or <m>w\to w+\beta</m>. The
-	  natural coordinate system for depicting the action of <m>w\to
-	  \alpha w</m> is standard polar coordinates. See <xref ref="twofixedptgrid_fig"/>. A
-	  homothety is a flow along radial lines and a rotation
-	  is a flow around polar circles. The natural "degenerate"
-	  coordinate system for depicting a translation <m>w\to
-	  w+\beta</m> is a family of lines parallel to the line that
-	  contains the origin and <m>\beta</m>. A translation
-	  by <m>\beta</m> is a flow along these parallel lines.
-See <xref ref="degenerate_grid_fig"/>.
+The discussion of normal forms show that any non-identity Möbius
+	  transformation is conjugate to one of two basic forms, <m>w\to
+	  \alpha w</m> or <m>w\to w+\beta</m>. The natural coordinate
+	  system for depicting the action of <m>w\to \alpha w</m> is
+	  standard polar coordinates. See
+	  <xref ref="twofixedptgrid_fig"/>. A homothety is a flow along
+	  radial lines and a rotation is a flow around polar
+	  circles. The natural <q>degenerate</q> coordinate system for
+	  depicting a translation <m>w\to w+\beta</m> is a family of
+	  lines parallel to the line that contains the origin
+	  and <m>\beta</m>. A translation by <m>\beta</m> is a flow
+	  along these parallel lines.  See
+	  <xref ref="degenerate_grid_fig"/>.
 </p>
 <p>
 Pulling the polar and degenerate coordinate grids back to the <m>z</m>-plane
 	  by <m>S^{-1}</m> leads to coordinate grids
 	  called <term>Steiner circles</term><idx>Steiner
-	    circles</idx>.<fn>The convention for which Steiner circles are considered "first" or
-	  "second" kinds is not universal. Here we follow the convention
-  used by Ahlfors <xref ref="ahlfors_complex_analysis"/> and Henle
-	  <xref ref="henle_modern_geometries"/>.</fn>
- In the case where <m>T</m> has two fixed
-	  points <m>p,q</m>, the conjugating map <m>Sz=\frac{z-p}{z-q}</m>
-	  takes <m>p\to 0</m>, <m>q\to
-	    \infty</m>. Therefore <m>S^{-1}</m> maps <m>0\to p</m>
-	  and <m>\infty \to q</m>. 
-The transformation <m>S^{-1}</m> maps
-	      radial lines in the <m>w</m>-plane
-	      to clines in the <m>z</m>-plane
-	      that contain <m>p</m>
-	      and <m>q</m>
-	      called <term>Steiner circles of the first
-		kind</term><idx><h>Steiner circles</h><h>Steiner
-		  circles of the first kind</h>,</idx> and <m>S^{-1}</m> maps
-	      polar circles in the <m>w</m>-plane
-	      to clines in the <m>z</m>-plane
-	      called <term>Steiner circles of the second
-		kind</term><idx><h>Steiner circles</h><h>Steiner
-		  circles of the second kind</h> 
+    circles</idx>.<fn>The convention for which Steiner circles are
+	  considered <q>first</q>
+     or
+    <q>second</q> kinds is not universal. Here we follow the convention
+     used by Ahlfors <xref ref="ahlfors_complex_analysis"/> and Henle
+     <xref ref="henle_modern_geometries"/>.</fn> In the case
+     where <m>T</m> has two fixed points <m>p,q</m>, the conjugating
+     map <m>Sz=\frac{z-p}{z-q}</m> takes <m>p\to 0</m>, <m>q\to
+     \infty</m>. Therefore <m>S^{-1}</m> maps <m>0\to p</m>
+     and <m>\infty \to q</m>.  The transformation <m>S^{-1}</m> maps
+     radial lines in the <m>w</m>-plane to clines in the <m>z</m>-plane
+     that contain <m>p</m> and <m>q</m> called <term>Steiner circles of
+     the first kind</term><idx><h>Steiner circles</h><h>Steiner circles
+     of the first kind</h>,</idx> and <m>S^{-1}</m> maps polar circles
+     in the <m>w</m>-plane to clines in the <m>z</m>-plane
+     called <term>Steiner circles of the second
+     kind</term><idx><h>Steiner circles</h><h>Steiner circles of the
+     second kind</h>
 	      </idx>
 	      or <term>circles of Apollonius</term><idx>circles of Apollonius</idx>.
 See <xref ref="twofixedptgrid_fig"/>.
@@ -1078,13 +1079,15 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	Let <m>Tz=\frac{az+b}{cz+d}</m>, then manipulate <m>Tz=(Tz)^\ast</m>
 	to an equation with <m>|z|^2,z,z^\ast</m> terms and coefficients
 	involving <m>a,b,c,d</m> and their conjugates. For the case when
-	the coefficient of <m>|z|^2</m> is not zero, use "complex completing
-	the square" (see <xref ref="complexcompletesquare"/>) to derive
+	the coefficient of <m>|z|^2</m> is not zero, use <q>complex completing
+	    the square</q>
+	 (see <xref ref="complexcompletesquare"/>) to derive
 	the equation of a circle. Peek at the first part hint below if you need to,
 	and use it to work partially forwards from <m>Tz=(Tz)^\ast</m>,
 	and partially backwards from the equation in the hint. For the
 	case when the coefficient of <m>|z|^2</m> is zero, derive the
-	equation for a line. For the "furthermore" statement, you will
+	equation for a line. For the <q>furthermore</q>
+	 statement, you will
 	need to show that any three points in the plane determine a
 	unique circle or straight line. This is a Euclidean statement,
 	and it is straightforward to prove this using Euclidean

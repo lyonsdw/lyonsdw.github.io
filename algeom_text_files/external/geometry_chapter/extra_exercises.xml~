@@ -23,7 +23,7 @@ product <m>\R^2\rtimes O(2)</m> as described in <xref ref="semidirect_product_ex
 	    type <m>z\to e^{it}z</m> for <m>t\in \R</m>
 	    and <m>z\to z+b</m> for <m>b\in
 	      C</m>. The geometry <m>(\C,\E)</m> is sometimes called
-	    "Euclidean geometry". Is <m>(\C,\E)</m> equivalent to the
+	    <q>Euclidean geometry</q>. Is <m>(\C,\E)</m> equivalent to the
 	    Euclidean geometry defined in <xref ref="geomexamples"/>?
 	    Why or why not?
 	  </p>
@@ -36,7 +36,8 @@ product <m>\R^2\rtimes O(2)</m> as described in <xref ref="semidirect_product_ex
   transformation <m>(x,y)\to (x,-y)</m>, corresponding to the orthogonal
     matrix <m>\twotwo{1}{0}{0}{-1}</m>, is an element of the group given
     in <xref ref="geomexamples"/>, but not in <m>\E</m>. To justify the
-    "not in <m>\E</m>" claim, observe that generating elements
+    <q>not in <m>\E</m></q>
+     claim, observe that generating elements
   of <m>\E</m> (rotations and translations) preserve oriented angles, so
     all elements of <m>\E</m> preserve oriented angles. But <m>(x,y)\to
       (x,-y)</m> takes the oriented angle <m>\angle 1,0,i</m>, which
@@ -61,7 +62,8 @@ product <m>\R^2\rtimes O(2)</m> as described in <xref ref="semidirect_product_ex
   transformation <m>(x,y,z)\to (-x,-y,-z)</m>, corresponding to the orthogonal
     matrix <m>-\Id</m>, is an element of the group given
     in <xref ref="geomexamples"/>, but is not conjugate to any element in <m>\S</m>. To justify the
-    "not conjugate to an element of <m>\S</m>" claim, elements
+    <q>not conjugate to an element of <m>\S</m></q>
+     claim, elements
   of <m>\S</m> are Möbius transformations, and therefore conformal, and
   therefore preserve oriented angles. But <m>-\Id</m> takes the oriented
     angle <m>\angle XZY</m> (where we use the shorthand <m>X,Y,Z</m>
@@ -126,7 +128,7 @@ geometric proof that the composition of two rotations is a rotation
       </exercise>
 -->
 
-      <exercise xml:id="elliptictransfareellipticnormal"><statement>Prove
+      <exercise xml:id="elliptictransfareellipticnormal"><statement><p>Prove
       that all elements of the elliptic group <m>\S</m> are
 	  elliptic in the normal form sense, i.e., we
 	  have <m>|\alpha|=1</m> in the normal form expression
@@ -134,7 +136,7 @@ geometric proof that the composition of two rotations is a rotation
 	\frac{z-p}{z-q}.</me>
       Suggestion: First find the
 		fixed points <m>p,q</m>, then put <m>z=\infty</m> in the normal form equation
-      and solve for <m>\alpha</m>.
+		and solve for <m>\alpha</m>.</p>
 	</statement>
       </exercise>
 
@@ -252,16 +254,16 @@ conclude <m>|\alpha|=1</m>.
 
 		  The above objects are 
 		  organized along two sequences of mappings. The
-		  rotation <m>R_{r_{a,b}}</m> is at the end of the  "quaternion
-		  path" 
-		  <mdn>
+		  rotation <m>R_{r_{a,b}}</m> is at the end of the  <q>quaternion
+		    path</q>
+		    <mdn>
 		    <mrow xml:id="quatpath">SU(2)\amp \to U(\Quat)  \to \Rot(S^2_\Quat)</mrow>
 		    <mrow number="no"> M_{a,b} \amp
 		      \to r_{a,b} \to R_{r_{a,b}}</mrow>
 		  </mdn>
 		  and the rotation <m>R_{T_{a,b}}</m> is at the end of
-		  the  "Möbius path"
-		  <mdn>
+		    the  <q>Möbius path</q>
+		    		  <mdn>
 		    <mrow xml:id="mobiuspath">SU(2)\amp \to \S  \to \Rot(S^2)</mrow>
 		    <mrow number="no"> M_{a,b} \amp
 		      \to T_{a,b} \to R_{T_{a,b}}.</mrow>
@@ -356,9 +358,9 @@ in <xref ref="rotcomparetable"/>.</li>
 				 <caption>The map <m>C_{iH}</m> is given
 				   by <m>C_{iH}(T)=(iH)T(iH)^{-1}</m>. The
 				   column of maps on the left is the
-				   "Möbius path", and the column of maps
-				   on the right is the "quaternion
-				   path". 
+				   <q>Möbius path</q>, and the column of maps
+				   on the right is the <q>quaternion
+				     path</q>. 
       </caption>
             <image width="35%" source="images/rot_id_diagram.png"></image>
            </figure>

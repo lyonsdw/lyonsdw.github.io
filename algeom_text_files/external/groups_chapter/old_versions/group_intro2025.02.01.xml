@@ -1,0 +1,569 @@
+  <section xml:id="groupintrosection">
+    <title>Examples of groups
+    </title>
+
+    <introduction>
+
+      <p>Groups are one of the most basic algebraic objects, yet have
+      structure rich enough to be widely useful in all branches of
+      mathematics and its applications. A group is a set <m>G</m> with a
+      binary operation <m>G\times G \to G</m> that has a short list of
+      specific properties. Before we give the complete definition of
+      a group in the next section (see <xref ref="groupdefn"/>), this
+      section introduces examples of some important and useful groups.
+</p>
+    </introduction>
+
+    
+  <subsection>
+    <title>Permutations</title>
+    <p>
+      A <term>permutation</term><idx><h>permutation</h><h>permutation
+      of a set</h>
+      </idx>
+      of a set <m>X</m> is a bijection
+    from <m>X</m> to itself, that is, a function that is both one-to-one
+    and onto. Given two permutations <m>\alpha,\beta</m> of a set <m>X</m>, we
+      write <m>\alpha\beta</m> to denote the composition of
+      functions <m>\alpha\circ\beta</m>.
+    </p>
+    
+<p>      <definition xml:id="permgpdef">
+      <statement>
+	<p>
+	  Let <m>X</m> be a set and
+	  let <m>\Perm(X)</m><notation><usage><m>\Perm(X)</m>
+	    </usage><description>permutations
+      of a set <m>X</m></description></notation> denote the set
+	  of all permutations of <m>X</m>.  The <em>group of
+	  permutations of <m>X</m></em> is the
+      set <m>G=\Perm(X)</m>       <idx><h>groups, list of</h><h>group of
+      permutations of a set</h></idx>
+       <idx><h>permutation group of a set</h></idx>
+	  together with the binary operation <m>G\times G\to G</m> given by
+	  function composition, that is, <m>(\alpha,\beta) \to
+	  \alpha\circ\beta</m>. For the special case <m>X =
+	  \{1,2,\ldots,n\}</m> for some integer <m>n\geq 1</m>, the
+	  group <m>\Perm(X)</m> is called the <term>symmetric
+	  group</term>, and is denoted <m>S_n</m>.
+	        <idx><h>symmetric group</h></idx>
+		<notation><usage><m>S_n</m>
+		  </usage><description>
+		    <idx><h>groups, list of</h><h>symmetric group</h></idx>
+		    the symmetric group
+      on <m>n</m> symbols</description></notation>
+      </p></statement>
+      </definition>
+</p>
+
+<p>
+  <alert>Notation:</alert> An element <m>\sigma\in S_n</m> can
+	    be specified by a list of
+	    values <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m>.<fn>There
+	    is a reason that we use square brackets, rather than
+	    parentheses, for the list of output values of a permutation:
+	    Lists written with parentheses are used, by nearly universal
+	      convention, for a different representation of
+	    permutations called <em>cycle notation</em>. Cycle notation is
+	    introduced in <xref ref="cyclicpermutations" />.</fn> For
+	    example, the list <m>[3,1,2]</m> specifies the permutation
+	    <m>\sigma\colon \{1,2,3\}\to\{1,2,3\}</m> given by
+	    <me>\sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.</me>
+    </p>
+
+      <exercise xml:id="permutation-reading-exercise">
+	<statement><p>
+	    Let <m>\sigma=[3,1,2]</m> and let
+	    <m>\tau=[2,1,3]</m>. Find <m>\sigma\tau</m>, <m>\tau\sigma</m>,
+	    and <m>\sigma^2=\sigma\sigma</m>.
+	</p></statement>
+	<answer>
+	  <p>
+	    <m>\sigma\tau= [1,3,2]</m>, <m>\tau\sigma=[3,2,1]</m>, <m>\sigma^2=[2,3,1]</m>
+	</p></answer>
+      </exercise>
+
+
+  </subsection>
+
+    <subsection>
+      <title>Symmetries of regular polygons</title>
+
+      <p>Informally and intuitively, we say that regular polygons have rotational and mirror
+      symmetries. Specifically, the rotational symmetries are rotations
+	about the center <m>O</m> of the polygon, clockwise or counterclockwise,
+	by some angle <m>\angle POP'</m>, where <m>P,P'</m> are any two
+      vertices. The mirror symmetries of the polygon
+are reflections across lines of the form <m>\overline{OP}</m>
+      or <m>\overline{OM}</m>, where <m>P</m> is any vertex and <m>M</m>
+      is the midpoint of any edge of the polygon.  See
+      <xref ref="ngonsymmfig" />.
+      </p>
+
+         <figure xml:id="ngonsymmfig">
+	   <caption>Symmetries of a regular <m>n</m>-gon
+      </caption>
+            <image width="60%" source="images/ngonsymm_clip.jpg"></image>
+           </figure>
+
+
+      <p>Here are some standard notations for rotations and reflections
+	in the plane. See <xref ref="rotreflfig" />.
+
+	         <figure xml:id="rotreflfig">
+	   <caption>Rotations and reflections in the plane
+      </caption>
+            <image width="90%" source="images/rotrefl_clip.jpg"></image>
+           </figure>
+      </p>
+      
+      <p>	<assemblage><title>Rotations in the plane</title>
+	<p>Fix a center point <m>O</m>. We write <m>R_\theta</m> to
+	  denote the rotation by angle <m>\theta</m> about the
+	  point <m>O</m>. 	  <idx><h>rotation (in the plane)</h></idx>
+		<notation><usage><m>R_\theta</m>
+		  </usage><description>planar rotation by angle <m>\theta</m></description></notation>
+Angle units can be revolutions or degrees or
+	  radians, whatever is most convenient. We observe the usual
+	  convention that positive values of <m>\theta</m> denote
+	  counterclockwise rotations and negative values of <m>
+	  \theta</m> denote clockwise rotations. 
+	</p>
+</assemblage></p>
+
+<p>        <assemblage><title>Reflections in the plane</title>
+	      <p>We write <m>F_L</m> to
+		denote the reflection across the line <m>L</m>.
+	  	        <idx><h>reflection (in the plane)</h></idx>
+			<notation><usage><m>F_L</m>
+			  </usage><description>planar reflection across
+		line <m>L</m></description></notation> This means
+		that <m>P'=F_L(P)</m> if and only
+		if <m>\overline{PP'}\perp L</m> and the distance
+		from <m>P</m> to <m>L</m> is the same as the distance
+		from <m>P'</m> to <m>L</m>.
+	</p>
+      </assemblage>
+      </p>
+      
+
+      <p>
+	Given symmetries <m>A,B</m>, we write <m>AB</m> to denote the
+	composition <m>A\circ B</m>. For example, for the symmetries of
+	the equilateral triangle, with angles in degrees, and
+	with <m>L=\overline{OP}</m> for some vertex <m>P</m>, we
+	have <m>R_{240}R_{120}=R_{0}</m>
+	and <m>F_LR_{120}=R_{-120}F_L</m>.
+      </p>
+      
+	<p><definition>
+	  <statement>
+	    <p>The <term>dihedral group</term><idx><h>the dihedral group</h></idx>
+        <idx><h>groups, list of</h><h>dihedral group</h></idx>,
+	denoted <m>D_n</m> <notation><usage><m>D_n</m>
+	  </usage><description>dihedral
+	      group</description></notation>, is the set of rotation and
+	      reflection symmetries of the regular <m>n</m>-gon
+	      together with the binary operation of function composition. 
+      </p></statement>
+	</definition></p>
+
+
+
+      <exercise xml:id="dihedral-reading-exercise">
+	<statement><p>
+	    Let <m>X</m>
+	    be the square centered at the origin in the <m>x,y</m>-plane
+	    with vertices at <m>(\pm 1,\pm 1)</m>. The square <m>X</m>
+	    has lines of symmetry <m>H,V,D,D'</m> (horizontal, vertical,
+	    diagonal, and another diagonal) where <m>H,V</m> denote
+	    the <m>x,y</m> axes, respectively, and <m>D,D'</m>
+	    denote the lines <m>y=-x,y=x</m>, respectively. See
+	    <xref ref="d4labeling_fig"/>.
+	    </p>
+
+	         <figure xml:id="d4labeling_fig">
+       <caption>Lines of symmetry for the square.
+      </caption>
+            <image width="40%" source="images/d4labeling.png"></image>
+           </figure>
+
+		 <p>
+		   The
+	    symmetries of the square <m>X</m> are 
+	    <me>D_4=\{R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}\}</me>
+	    where the rotation angles units are revolutions. Find the
+	    following.
+	    <ol>
+	      <li><m>R_{1/4}R_{1/2}</m></li>	      
+	      <li><m>R_{1/4}F_H</m></li>
+	      <li><m>F_HR_{1/4}</m></li>
+	      <li><m>F_HF_D</m></li>
+	      <li><m>F_DF_H</m></li>
+	      <li><m>(F_DR_{1/2})^2= F_DR_{1/2}F_DR_{1/2}</m></li>
+              <li><m>(F_DR_{1/2})^3</m></li>
+	    </ol>
+	</p></statement>
+
+	<answer>
+	  <ol>
+	    <li><m>R_{3/4}</m></li>
+	    <li><m>F_{D'}</m></li>
+	    <li><m>F_D</m></li>
+	    <li><m>R_{1/4}</m></li>
+	    <li><m>R_{3/4}</m></li>
+	    <li><m>R_0</m></li>
+	    <li><m>F_{D'}</m></li>
+	  </ol>
+	</answer>
+      </exercise>
+      
+
+  </subsection>
+
+    <subsection xml:id="s1grpdef"><title>The norm 1 complex numbers</title>
+      <p><definition>
+	  <statement><p>The <term>circle group</term><idx><h>circle
+		  group</h><idx><h>groups, list of</h><h>circle group</h>
+		</idx>
+	      </idx>,
+	      denoted <m>S^1</m>, is the set
+	      <me>S^1=\{z\in \C\colon |z|=1\}</me> of norm 1 complex numbers
+	      together with the binary operation <m>S^1\times S^1\to S^1</m>
+	      given by complex multiplication, that is, <m>(z,w)\to zw</m>.
+	    </p>
+	  </statement>
+	</definition>
+      </p>
+
+      <exercise xml:id="s1closedgpexer"><statement><p>Show that if <m>z,w</m> are elements of <m>S^1</m>, then
+	    their product <m>zw</m> is also in <m>S^1</m>.</p>
+	</statement>
+      </exercise>
+    </subsection>
+
+    <commentary component="instructor"><title>Instructor's solution for <xref ref="s1closedgpexer"/></title>
+      <p>Let <m>z,w\in S^1</m>. Then <m>|zw|=|z||w|=1</m>, so <m>zw\in S^1</m>.
+      </p>
+    </commentary>
+
+    <subsection><title>The <m>n</m>-th roots of unity
+      </title>
+	<p>Let <m>n\geq 1</m> be an integer. The set 
+	  <me>C_n=\{z\in \C\colon
+	    z^n=1\}</me><notation><usage><m>C_n</m>
+	    </usage><description>the <m>n</m>th
+	    roots of unity
+	    </description>
+	  </notation>
+	  is called the set
+	  of <term>(complex) <m>n</m>-th roots of
+	    unity</term>.</p>
+
+	<exercise xml:id="rootsofunitygpfacts"><statement>
+	    <p>
+	      <ol>
+		<li>Let  <m>\omega=e^{i2\pi/n}</m>. Show
+		    that <m>\omega^k</m> is in <m>C_n</m> for all
+		    integers <m>k</m>.</li>
+		  <li>Show that, if <m>z</m> is an element
+		    of <m>C_n</m>, then <m>z=\omega^k</m> for some
+		    integer <m>k</m>.
+		  </li>
+		  <li>Show that the set <m>C_n</m>
+		  consists of precisely the <m>n</m> elements
+		  <me>\{\omega^0,\omega^1,\omega^2,\ldots,\omega^{n-1}\}.</me>
+		  </li>
+		</ol>
+            </p>
+	    </statement>
+	  </exercise>
+
+	<commentary component="instructor"><title>Instructor's solution for
+	    <xref ref="rootsofunitygpfacts"/></title>
+	  <p><ol>
+	      <li>We have <m>(\omega^k)^n= e^{i2\pi k}=1</m>,
+	      so <m>\omega^k\in C_n</m>.
+	      </li>
+	      <li>Let <m>z=\in C_n</m>. Then <m>1=z^n = |z^n|=
+		  |z|^n</m>, so <m>|z|=1</m>. Thus <m>z=e^{it}</m> for
+		some real <m>t</m>. The fact that <m>1=z^n=e^{itn}</m>
+		  means that 
+		  <m>tn=2\pi k</m> for some
+		integer <m>k</m>. Thus we have <m>z= e^{i2\pi
+		    k/n}=\omega^k</m>.
+	      </li>
+	      <li>From the previous part, we have that every element
+		in <m>C_n</m> is of the form <m>\omega^k</m> for some
+		integer <m>k</m>. Use the division algorithm to
+		write <m>k=qn+r</m>. Then <m>\omega^k=\omega^r</m>. We
+		conclude that every element in <m>C_n</m> is a member of
+		the set
+	  <me>\{\omega^r\colon 0\leq r\leq n-1\}.</me>
+	      </li>
+	    </ol>
+	  </p>
+	</commentary>
+	
+<p>	  <definition><statement><p>The set
+		<m>C_n=\{\omega^0,\omega^1,\omega^2,\ldots,\omega^{n-1}\}</m>
+		, together with the
+	  operation of complex multiplication, is called
+	  the <term>group of <m>n</m>-th roots of
+		  unity</term><idx><h>groups, list of</h><h>the <m>n</m>-th
+		    roots of
+		    unity</h>
+		</idx>.</p>
+	    </statement>
+	  </definition>
+</p>
+    </subsection>
+
+    
+    
+        <subsection>
+	  <title>Integers</title>
+	  <p>
+	    <definition>
+	      <statement><p>The set <m>\Z</m> of integers, together with
+		the operation of addition, is called the <term>group of
+		integers</term>. Similarly, the set <m>\Z_n</m> of integers
+		modulo <m>n</m> (where <m>n</m> is some integer <m>n\geq
+		1</m>), together with the operation of addition
+		modulo <m>n</m>, is called the <term>group of integers
+		    mod <m>n</m></term>.</p>
+	      </statement>
+	    </definition>
+	  </p>
+	  
+    </subsection>
+    
+    <subsection>
+      <title>Invertible matrices</title>
+      <p>
+	Let <m>n\geq 1</m> be an integer. We write <m>GL(n,\R)</m> to
+	denote the set of <m>n\times n</m> invertible matrices with real
+	entries. We write <m>GL(n,\C)</m> to
+	denote the set of <m>n\times n</m> invertible matrices with complex
+	entries.
+      </p>
+      
+<p>	<definition>
+	  	  <statement>
+	    <p>The set <m>GL(n,\R)</m> (respectively, <m>GL(n,\C)</m>), together with the binary operation of
+	      matrix multiplication, is called the <term>group
+	      of <m>n\times n</m> real (respectively, complex) invertible matrices</term>, or also
+	      the <term>general linear group</term>.	    <idx><h>general linear group</h></idx>
+	      <idx><h>groups, list of</h><h>general linear
+		  group</h></idx>				<notation><usage><m>GL(n,\R)</m>
+		</usage><description> the group
+      of <m>n\times n</m> invertible matrices with real
+				    entries</description></notation>
+	      <notation><usage><m>GL(n,\C)</m>
+		</usage><description>
+the group of <m>n\times n</m> invertible matrices with complex
+entries</description></notation>
+	    </p>
+	  </statement>
+      </definition></p>
+
+
+
+    </subsection>
+
+        <subsection>
+	  <title>Nonzero elements in a field</title>
+	  <p>Let <m>\F</m> be a field, such as the rational
+	    numbers <m>\Q</m>, the real numbers <m>\R</m>, or the
+	    complex numbers <m>\C</m>. We write <m>\F^\ast</m> to denote
+	    the set of nonzero elements in <m>\F</m>.	  </p>
+	  
+<p>	    <definition>
+	      <statement>
+<p>		  Let <m>\F</m> be a field. The
+		  set <m>\F^\ast</m> <notation><usage><m>\F^\ast</m>
+		    </usage><description>group
+      of nonzero elements in a field <m>\F</m></description></notation>,
+      together with the binary operation of multiplication, is called
+      the <term>group of nonzero elements</term> in the field <m>\F</m>.
+	      </p>
+	      </statement>
+</definition></p>
+
+
+    </subsection>
+
+	<subsection><title>Unit quaternions</title>
+<p>	  <definition>
+	    <statment><p>The set <m>U(\Quat)</m> of
+	      quaternions of norm 1 (defined in
+	      <xref ref="quatconjnormsubsect"/>), together with the
+	      binary operation of quaternion multiplication, is called
+	      the <term>group of unit quaternions</term>.</p>
+	    </statment>
+	  </definition>
+	</p>
+	</subsection>
+	
+  <exercises>
+
+    <exercise xml:id="d4matexer">
+      <title>Matrices for the dihedral group <m>D_4</m>
+      </title>
+      <statement><p>Let <m>H</m> denote the <m>x</m>-axis in the <m>x,y</m>-plane. The
+	map <m>F_H\colon \R^2\to \R^2</m> is a linear map whose matrix
+	is
+	<m>\displaystyle \left[\begin{array}{cc}1 \amp 0\\ 0 \amp
+	-1\end{array}\right]</m>. The map <m>R_{1/4}\colon \R^2\to \R^2</m> is a linear map whose matrix
+	is
+	<m>\displaystyle \left[\begin{array}{cc}0 \amp -1\\ 1 \amp
+	0\end{array}\right]</m>. Find the matrices for the remaining
+	elements of the dihedral group <m>D_4</m> as specified in
+	<xref ref="dihedral-reading-exercise" />.</p>
+      </statement>
+    </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for <xref ref="d4matexer"/></title>
+      <p>The matrices for
+	<me>R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}</me>
+	are
+	<me>\twotwo{1}{0}{0}{1},\twotwo{0}{-1}{1}{0},\twotwo{-1}{0}{0}{-1},\twotwo{0}{1}{-1}{0},
+	\twotwo{1}{0}{0}{-1}, \twotwo{-1}{0}{0}{1},
+	  \twotwo{0}{-1}{-1}{0}, \twotwo{0}{1}{1}{0},</me>
+	respectively.
+      </p>
+    </commentary>
+    
+      <exercise xml:id="d4complexopexer">
+      <title>Complex number operations for the dihedral group <m>D_4</m>
+      </title>
+      <statement><p>Let <m>H</m> denote the real line <m>\R</m> in the
+	  complex plane <m>\C</m>. The
+	map <m>F_H\colon \C\to \C</m> is complex conjugation <m>z\to {z}^\ast</m>.
+	The map <m>R_{1/4}\colon \C\to \C</m> is the map <m>z\to e^{i\pi/2}z=iz</m>.
+	Find the maps <m>\C\to \C</m>  for the remaining
+	elements of the dihedral group <m>D_4</m> as specified in
+	  <xref ref="dihedral-reading-exercise" />.</p>
+      </statement>
+      </exercise>
+
+          <commentary component="instructor"><title>Instructor's solution for <xref ref="d4complexopexer"/></title>
+      <p>The complex functions corresponding to
+	<me>R_0,R_{1/4},R_{1/2},R_{3/4},F_H,F_V,F_D,F_{D'}</me>
+	are "<m>z</m> goes to"
+	<me>z, iz, -z, -iz, z^\ast,-z^\ast,-iz^\ast,iz^\ast </me> 
+	respectively.
+      </p>
+    </commentary>
+
+      <exercise xml:id="commutativeornotexer"><statement><p>Recall that a binary operation <m>(x,y)
+	      \to x\ast y</m> is <em>commutative</em> if <m>x\ast
+	      y=y\ast x</m> for all possible values of <m>x,y</m>. <ol><li>Which
+	      of the group operations in the examples in this section
+		are commutative? Which are not?</li>
+	      <li>Show that <m>S_n</m> is <em>not</em> commutative
+		for <m>n\gt 2</m>.
+	      </li>
+	    </ol>
+	  </p>
+	</statement>
+      </exercise>
+
+      <commentary component="instructor"><title>Instructor's solution for
+	  <xref ref="commutativeornotexer"/></title>
+	<p><ol>
+	    <li>Commutative: <m>S^1,C_n,\Z,\Z_n,\F^\ast</m>. Not
+	      commutative: <m>\Perm(X),D_n,GL(n),U(\Quat)</m></li>
+	    <li>Let <m>n\gt 2</m>. Let <m>\sigma=[3,1,2]\times
+	    \Id,\tau=[2,1,3]\times \Id</m> be elements
+	      of <m>S_n</m> that are the same as <m>\sigma,\tau</m>
+	    defined in
+	      <xref ref="permutation-reading-exercise"/>
+	    on <m>\{1,2,3\}\subseteq \{1,2,\ldots,n\}</m>, and identity
+	      on <m>\{4,5,\ldots,n\}</m>. Then we
+	    have <m>[1,3,2]\times \Id = \sigma\tau\neq \tau\sigma=
+	    [3,2,1]\times \Id</m>.
+	    </li>
+	  </ol>
+	</p>
+      </commentary>
+
+      <exercise xml:id="identityexer"><statement><p>One of the properties of a group is the
+	    existence of an <em>identity</em> element. This is a group
+	    element <m>e</m> with the property that <m>eg=ge=g</m> for
+	    every <m>g</m> in <m>G</m>. Find an identity element for
+	    each of the groups in the examples in this section.
+	  </p>
+	</statement>
+      </exercise>
+
+      <commentary component="instructor"><title>Instructor's solution for <xref ref="identityexer"/></title>
+	<p> Here are the pairs <m>G,e</m>.
+	  <ul>
+	    <li><m>\Perm(X), \Id_X</m></li>
+	    <li><m>D_4,R_0</m></li>
+	    <li><m>S_1,1</m>
+	    </li>
+	    <li><m>C_n,\omega^0=1</m>
+	    </li>
+	    <li><m>\Z,0</m>, <m>\Z_n,0</m>
+	    </li>
+	    <li><m>GL(n), \Id</m>
+	    </li>
+	    <li><m>\F^{\ast}, 1</m>
+	    </li>
+	    <li><m>U(\Quat), 1</m>
+	    </li>
+	  </ul>
+	</p>
+      </commentary>
+
+      <exercise xml:id="inverseeltexer"><statement><p>One of the properties of a group is the
+	    existence of an <em>inverse</em> element for every element
+	    in the group. This means that for every <m>g</m> in a
+	    group <m>G</m>, there is an element <m>h</m> with the
+	    property that <m>gh=hg=e</m>, where <m>e</m> is the identity
+	    element of the group. Find inverses for the following list
+	    of group elements.
+	    <ol>
+	      <li><m>[4,2,1,3]</m> in <m>S_4</m>
+	      </li>
+	      <li><m>R_{120}</m> in <m>D_6</m> (where <m>120</m> is in degrees)
+	      </li>
+	      <li><m>\frac{1}{\sqrt{2}}(-1+i)</m> in <m>S^1</m></li>
+      	      <li><m>7</m> in <m>\Z</m></li>
+      	      <li><m>7</m> in <m>\Z_9</m></li>
+      	      <li><m>\displaystyle \left[\begin{array}{cc}1 \amp 2\\ 2 \amp
+		  1\end{array}\right]</m> in <m>GL(2,\R)</m></li>
+	      <li><m>r=a+bi+cj+dk</m> in <m>U(\Quat)</m>
+	      </li>
+	    </ol>
+	  </p>
+	</statement>
+      </exercise>
+
+      <commentary component="instructor"><title>Instructor's solution for
+	  <xref ref="inverseeltexer"/></title>
+	<p>
+	    <ol>
+	      <li><m>[4,2,1,3]^{-1}=[3,2,4,1]</m> 
+	      </li>
+	      <li><m>R_{120}^{-1}=R_{240}</m> 
+	      </li>
+	      <li><m>\left(\frac{1}{\sqrt{2}}(-1+i)\right)^{-1}=\frac{-1-i}{\sqrt{2}}</m></li>
+      	      <li><m>-(7)=-7</m> </li>
+      	      <li><m>-(7)=2</m> </li>
+      	      <li><m>\displaystyle \left[\begin{array}{cc}1 \amp 2\\ 2 \amp
+		  1\end{array}\right]^{-1}=-\frac{1}{3}\twotwo{1}{-2}{-2}{1}</m></li>
+	      <li>Using <xref ref="quatnormsquare"/>
+		  with <m>|r|=1</m>, we have 
+		  <m>r^{-1}= {r^\ast} = {a-bi-cj-dk}. </m>
+	      </li>
+	    </ol>
+	</p>
+      </commentary>
+  </exercises>
+
+
+  
+</section>

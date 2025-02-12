@@ -1,4 +1,4 @@
-  <section>
+  <section xml:id="group_homomorphism_sect">
     <title>Group homomorphisms
     </title>	       
 
@@ -11,8 +11,8 @@
 <notation><usage><m>G\approx
 	    H</m></usage><description>group <m>G</m> is isomorphic
       to group <m>H</m></description></notation>
-	<statement>Let <m>G,H</m> be groups.
-	  <p>A map <m>\phi\colon G\to H</m> is called
+	<statement><p>Let <m>G,H</m> be groups.
+	  A map <m>\phi\colon G\to H</m> is called
 	    a <term>homomorphism</term>
 	    if  <me>\phi(xy) = \phi(x)\phi(y)</me>
 	    for all <m>x,y</m> in <m>G</m>. A homomorphism that is both
@@ -130,7 +130,6 @@ Find the kernel of each of the following homomorphisms.
       </ol>
     </p>
   </statement>
-<!--  <proof>See <xref ref="homismbasicpropertiesexer" />.</proof>-->
 </proposition>
 
 
@@ -150,7 +149,6 @@ Find the kernel of each of the following homomorphisms.
 	  homomorphism <m>G\to G'</m> for some group <m>G'</m>.
 	</p>
       </statement>
-<!--      <proof><p>See <xref ref="gmodkisgroupexer" />.</p>     </proof>-->
     </proposition>
 
     
@@ -205,9 +203,6 @@ Find the kernel of each of the following homomorphisms.
 	  </ol>
 	</p>
       </statement>
-<!--      	      <proof><p>See exercises <xref ref="oneimpliesthree"/> and
-      	      <xref ref="threeimpliestwo"/> in <xref ref="normalsubgroupcharacterizationexer"/>.</p>
-	      </proof>-->
     </proposition>
 
     <exercises>
@@ -310,8 +305,9 @@ Basic properties of homomorphisms
 	</p>
 	</commentary>
 
-      <exercise xml:id="isoinvisisoexer"><statement>Show that the inverse of an isomorphism is
-	  an isomorphism.</statement>
+      <exercise xml:id="isoinvisisoexer"><statement><p>Show that the inverse of an isomorphism is
+	    an isomorphism.</p>
+	</statement>
       </exercise>
 
       <!-- Instructor's solution -->
@@ -366,7 +362,8 @@ Proof of the First Isomorphism Theorem
       
       <commentary component="instructor"><title>Instructor's solution for
       <xref ref="gmodkisgroupexer"/> (proof of <xref ref="gmodkisgroup"/>)</title>
-<p>For the "if" direction, let <m>K=\ker(\phi)</m> for some
+	<p>For the <q>if</q>
+	  direction, let <m>K=\ker(\phi)</m> for some
 	homomorphism <m>\phi \colon G\to G'</m> for some
 group <m>G'</m>. By  <xref ref="imagesameiffkernelcosetsame"/> of
 	<xref ref="homismbasicproperties" />, we have 
@@ -375,7 +372,8 @@ a one-to-one correspondence <m>G/K\leftrightarrow \phi(G)</m>. The group
 	induces the group multiplication <xref ref="multkernelcosets" />
 on <m>G/K</m>.
 
-	For the "only if" direction, suppose <m>G/K</m> is a
+	For the <q>only if</q>
+	 direction, suppose <m>G/K</m> is a
 	group under the operation <xref ref="multkernelcosets" />.
 	Let <m>\phi\colon G\to G/K</m> be given by <m>g\to gK</m>. Then
 	it is easy to check that <m>K=\ker(\phi)</m>.</p>
@@ -390,9 +388,9 @@ on <m>G/K</m>.
       isomorphism.
     </p>
   </statement>
-  <hint>Use the fact that <m>\gcd(m,n)</m> is the least positive integer
+  <hint><p>Use the fact that <m>\gcd(m,n)</m> is the least positive integer
     of the form <m>sm+tn</m> over all integers <m>s,t</m> (see <xref ref="subgpsofzexer"/>). Use this to
-    solve <m>ax=1 \pmod{n}</m> when <m>a,n</m> are relatively prime.
+      solve <m>ax=1 \pmod{n}</m> when <m>a,n</m> are relatively prime.</p>
   </hint>
 </exercise>
 
@@ -534,7 +532,8 @@ on <m>G/K</m>.
 
 <li>      
     <p>
-Show that "is conjugate to" is an equivalence relation. That is,
+      Show that <q>is conjugate to</q>
+       is an equivalence relation. That is,
 consider the relation on <m>G</m> given by <m>x\sim y</m>
 if <m>y=C_a(x)</m> for some <m>a</m>. Show that this is an equivalence
 relation.
@@ -578,7 +577,8 @@ relation.
 Isomorphism induces an equivalence relation
   </title>
   <statement>
-    <p> Prove that "is isomorphic to" is an equivalence relation on
+    <p> Prove that <q>is isomorphic to</q>
+      is an equivalence relation on
       groups. That is, consider the relation <m>\approx</m> on the set
       of all groups, given by <m>G\approx H</m> if there
       exists a group isomorphism <m>\phi\colon G\to H</m>. Show that

@@ -48,7 +48,7 @@
   </statement>
 </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="homismdefegexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="homismdefegexer"/></title>
       <p>Given two <m>n\times n</m> matrices <m>M,N</m>, we
 	have <m>\det(MN)=\det(M)\det(N)</m>, so the determinant map is a
 	homomorphism on <m>GL_n</m>. Given <m>a,b\in \Z</m>, the
@@ -68,7 +68,7 @@
 	  \neq 5 = 1^2+2^2.</me> For <m>g\to g^2</m>, we
 	have <me>(F_HF_D)^2 = R_{1/4}^2=R_{1/2}\neq R_0=F_H^2F_D^2.</me>
       </p>
-    </commentary>
+    </aside>
     
                 <definition>
 	<title>Kernel of a group homomorphism
@@ -95,6 +95,11 @@ Find the kernel of each of the following homomorphisms.
 	    axa^{-1}</m>, some fixed <m>a\in G</m></li>
       </ul>
     </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
   </statement>
   <answer><ol><li> <m>C_n</m>
       </li>
@@ -250,7 +255,7 @@ Basic properties of homomorphisms
 </exercise>
       </exercisegroup>
 
-      <commentary component="instructor"><title>Instructor's solution for
+      <aside component="instructor"><title>Instructor's solution for
       <xref ref="homismbasicpart1exer"/> (proof of
       <xref ref="homismbasicproperties"/>, part 1) </title>
 	<p>For Property 1, apply <m>\phi</m> to both sides of 
@@ -262,9 +267,9 @@ Basic properties of homomorphisms
 	      get <m>\phi(g)\phi(g^{-1})=e_H</m> (using Property 1), so that
 	      we have <m>\phi(g^{-1})=(\phi(g))^{-1}</m>.
 	</p>
-      </commentary>
+      </aside>
 
-            <commentary component="instructor"><title>Instructor's solution for
+            <aside component="instructor"><title>Instructor's solution for
       <xref ref="homismbasicpart2exer"/> (proof of
       <xref ref="homismbasicproperties"/>, part 2) </title>
 <p>	    For Property 3, let <m>a,b</m> be elements
@@ -284,9 +289,9 @@ Basic properties of homomorphisms
   contains <m>e_H</m> (by Property 1), so <m>\phi(G)</m> passes the 2-step
 	      subgroup test.
 </p>
-	    </commentary>
+	    </aside>
 	    
-      <commentary component="instructor"><title>Instructor's solution for
+      <aside component="instructor"><title>Instructor's solution for
       <xref ref="homismbasicpart3exer"/> (proof of
       <xref ref="homismbasicproperties"/>, part 3) </title>
 	<p>For Property 5, suppose <m>\phi(x)=y</m>. If <m>k\in
@@ -303,7 +308,7 @@ Basic properties of homomorphisms
 	  of <m>\phi</m> has more than one element if and only
 	    if <m>\phi</m> is not one-to-one.
 	</p>
-	</commentary>
+	</aside>
 
       <exercise xml:id="isoinvisisoexer"><statement><p>Show that the inverse of an isomorphism is
 	    an isomorphism.</p>
@@ -311,7 +316,7 @@ Basic properties of homomorphisms
       </exercise>
 
       <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="isoinvisisoexer"/></title>
   <p>An isomorphism is a bijection, so the inverse mapping is a
   bijection. We need to prove the inverse map is operation
@@ -322,7 +327,7 @@ Basic properties of homomorphisms
       \phi^{-1}(\phi(x)\phi(y))=\phi^{-1}(\phi(xy))=xy=\phi^{-1}(a)\phi^{-1}(b),</me>
     as required.
   </p>
-</commentary>
+</aside>
 
       
       
@@ -360,7 +365,7 @@ Proof of the First Isomorphism Theorem
 </exercise>
       </exercisegroup>
       
-      <commentary component="instructor"><title>Instructor's solution for
+      <aside component="instructor"><title>Instructor's solution for
       <xref ref="gmodkisgroupexer"/> (proof of <xref ref="gmodkisgroup"/>)</title>
 	<p>For the <q>if</q>
 	  direction, let <m>K=\ker(\phi)</m> for some
@@ -377,7 +382,7 @@ on <m>G/K</m>.
 	group under the operation <xref ref="multkernelcosets" />.
 	Let <m>\phi\colon G\to G/K</m> be given by <m>g\to gK</m>. Then
 	it is easy to check that <m>K=\ker(\phi)</m>.</p>
-    </commentary>
+    </aside>
 
 
       
@@ -395,7 +400,7 @@ on <m>G/K</m>.
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="autznexer"/></title>
   <p>Suppose <m>\gcd(a,n)=1</m>. Then there exist integers <m>s,t</m>
     such that <m>sa+tn=1</m>. Then we have <m>as = 1-tn = 1\pmod{n}</m>,
@@ -438,7 +443,7 @@ on <m>G/K</m>.
   <p><alert>Note:</alert> It is not necessary to prove the Claim to solve the
       given exercise. It is enough simply to note that <m>b\in \ker(\mu_a)</m>.
   </p>
-</commentary>
+</aside>
 
 <exercise xml:id="zmodnascnexer"><title>Another construction of <m>\Z_n</m>
   </title><statement><p>Let <m>n\geq 1</m> be an
@@ -461,7 +466,7 @@ on <m>G/K</m>.
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="zmodnascnexer"/></title>
   <p>
     <ol>
@@ -489,7 +494,7 @@ on <m>G/K</m>.
     </ol>
 
   </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="isogen2genexer"><title>Isomorphic images of generators are
@@ -502,7 +507,7 @@ on <m>G/K</m>.
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="isogen2genexer"/></title>
   <p>Elements of <m>\phi(\langle S\rangle)</m> have the form
     <m>\phi(s_1s_2\cdots s_k)</m> for some <m>s_i\in S\cup
@@ -511,7 +516,7 @@ on <m>G/K</m>.
     <m>\phi(s_1)\phi(s_2)\cdots \phi(s_k)</m>. The result follows from
     the fact that <m>\phi(s_1s_2\cdots s_k) = \phi(s_1)\phi(s_2)\cdots \phi(s_k)</m>.
   </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="conjugationexer">
@@ -544,7 +549,7 @@ relation.
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="conjugationexer"/></title>
   <p>
   <ol>
@@ -569,7 +574,7 @@ relation.
 </li>
   </ol>
   </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="isoisequivrel">
@@ -588,7 +593,7 @@ Isomorphism induces an equivalence relation
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="isoisequivrel"/></title>
   <p>For reflexivity, notice that <m>\Id\colon G\to G</m> is an
     isomorphism for any group <m>G</m>. For symmetry, suppose <m>\phi\colon G\to H</m> is an
@@ -603,7 +608,7 @@ Isomorphism induces an equivalence relation
     bijective, so is <m>\psi\circ \phi</m>. Thus we have <m>G\approx
       K</m> by the isomorphism <m>\psi\circ \phi</m>.
   </p>
-</commentary>
+</aside>
 
       <exercisegroup xml:id="normalsubgroupcharacterizationexer">
 	  <title>
@@ -654,17 +659,17 @@ This means you start by supposing that <m>xK=x'K</m> and <m>yK=y'K</m>, then sho
       </exercisegroup>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="oneimpliesthree"/></title>
   <p>Let <m>K</m> be the kernel of <m>\phi\colon G\to
       H</m>. Let <m>g\in G</m> and let <m>k\in K</m>. Then we have
     <me>\phi(gkg^{-1})=\phi(g)\phi(k)\phi(g)^{-1}=e_H</me>
     so <m>gkg^{-1}\in K</m>.
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="threeimpliestwo"/></title>
   <p>Suppose that <m>K</m> is a normal subgroup of <m>G</m>. We just
   need to show that the multiplication given by Equation
@@ -679,10 +684,10 @@ This means you start by supposing that <m>xK=x'K</m> and <m>yK=y'K</m>, then sho
   which is in <m>xyK</m>, as required. This proves <m>x'y'K\subseteq
   xyK</m>. A similar argument shows containment in the other direction.
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="morenormalcharexer"/></title>
   <p>
     <ol>
@@ -701,7 +706,7 @@ This means you start by supposing that <m>xK=x'K</m> and <m>yK=y'K</m>, then sho
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
 
 
       
@@ -758,7 +763,7 @@ Let <m>G</m> be a group. An <term>automorphism</term><idx><h>group automorphism<
       </exercise>      
 
       <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
     <xref ref="automorphismexer"/></title>
   <p>
@@ -795,7 +800,7 @@ Let <m>G</m> be a group. An <term>automorphism</term><idx><h>group automorphism<
   </p>
 </li>
   </ol></p>
-</commentary>
+</aside>
       
   </exercises>
   
