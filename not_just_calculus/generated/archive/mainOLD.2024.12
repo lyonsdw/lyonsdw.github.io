@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<mathbook>-->
+<pretext>
+  <docinfo>
+    <macros>
+      \def\of{\mathbin{\circ}}
+      \DeclareMathOperator{\MOD}{\rm MOD}
+\DeclareMathOperator{\percent}{\%}      
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\realify}{realify}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\One}{\Large\mathbb 1}
+\DeclareMathOperator{\proj}{proj}      
+\newcommand{\C}{\mathbb{C}} <!-- complex numbers -->
+\newcommand{\Quat}{\mathbb{H}} <!-- quaternions -->
+\newcommand{\extC}{\hat{\C}} <!-- extended complex plane -->
+\newcommand{\R}{\mathbb{R}} <!-- real numbers -->
+\newcommand{\extR}{\hat{\R}} <!-- extended real line -->
+\newcommand{\F}{\mathbb{F}} <!-- field F -->
+\newcommand{\extF}{\hat{\F}} <!-- extended field  -->
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}      
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\M}{{\rm \bf M}} <!-- group of Möbius transformations -->
+\newcommand{\E}{{\rm \bf E}} <!-- group of Euclidean Möbius transformations -->
+\renewcommand{\H}{{\rm \bf H}} <!-- group of hyperbolic geometry transformations -->
+\newcommand{\HU}{\H_{\U}} <!-- group of upper half plane hyperbolic geometry transformations -->
+\renewcommand{\S}{{\rm \bf S}} <!-- group of elliptic geometry transformations -->
+\newcommand{\D}{\mathbb{D}} <!-- open unit disk -->
+\newcommand{\closedD}{\hat{\D}} <!-- closed unit disk -->
+\newcommand{\U}{\mathbb{U}} <!-- upper half plane -->
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+      #3 \amp #4 \end{array} \right]}
+\def\expi{E}
+\def\wrap{W}
+<!--\newcommand{\Mob}{Möbius}-->
+    </macros>
+  </docinfo>
+
+  <book xml:id="not_just_calculus"  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <!-- switch titles (comment/uncomment) 
+    for printed Instructor's  Solutions version -->
+
+    <title>Not Just Calculus</title>
+    <subtitle>First-Year Introduction to Upper-Level
+      Mathematics</subtitle>
+
+
+<!-- Chapters of the text, Front and Back Matter -->
+
+    <xi:include href="front_matter/front_matter.xml"/>
+    <xi:include href="basic_tools_chapter/basics.xml"/>-->
+    <xi:include href="cartesian_plane_chapter/cartesian_plane.xml"/>
+    <xi:include href="back_matter/back_matter.xml"/>
+
+
+  </book>
+</pretext>
+<!--</mathbook>-->
+
+

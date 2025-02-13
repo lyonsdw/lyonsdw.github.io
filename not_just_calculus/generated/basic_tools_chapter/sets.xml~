@@ -1,0 +1,366 @@
+<section xml:id="sets_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Sets
+</title>
+
+  <p>
+    A <term>set</term><idx>set</idx> is a collection of objects called
+    the <term>elements</term><idx><h>set</h><h>element of a set</h></idx>
+    or <term>members</term><idx><h>set</h>
+      <h>member of a set</h></idx> of the set. Given
+    an object <m>x</m> and a set <m>A</m>, exactly one of two things is
+    true: either <m>x</m> is an element of <m>A</m>, denoted <m>x\in
+    A</m><notation><usage><m>x\in A</m>
+      </usage>
+      <description><m>x</m>
+	is an element of <m>A</m>
+      </description>
+    </notation>, or <m>x</m> is not an element of <m>A</m>, denoted <m>x\not
+    \in A</m><notation><usage><m>\not\in</m>
+      </usage>
+      <description><m>x</m>
+	is not an element of <m>A</m>
+      </description>
+    </notation>. Two sets are
+    <term>equal</term><idx><h>set</h><h>equal sets</h></idx>
+    if they contain exactly the same elements.
+  </p>
+
+<p>  To denote a set that contains a small number of elements, we list the
+  elements, separated by commas, and enclosed in curly brackets
+  "<m>\{\ldots\}</m>"<notation><usage><m>\{\ldots\}</m>
+      </usage>
+      <description>curly brackets
+      </description>
+    </notation>. For
+  example, the set <m>A=\{x,y,z\}</m> contains elements <m>x,y,z</m>, and contains no other
+  objects. In this notation, the order in which
+  the objects are listed does not matter. Redundancy also does not
+  matter: the same object may be listed
+  more than once. For example, we may write
+  <me>A=\{x,y,z\}=\{y,z,x\}=\{y,x,y,z\}.
+  </me>
+</p>
+
+<p> Another way to denote a set is the notation
+  <m>\{x\colon x \text{ satisfies condition } C\}</m>, where the colon ":" is pronounced
+  "such that". For example, the <em>closed unit interval</em> of the real
+  numbers <m>\R</m> is the set <m>\{x\in \R \colon 0\leq x\leq 1\}</m>.
+</p>
+
+<p>The set that
+  contains no elements is called the <term>empty
+  set</term><idx><h>set</h><h>the empty set</h></idx>, denoted
+  <m>\emptyset</m><notation><usage><m>\emptyset</m>
+      </usage>
+      <description>the empty set
+      </description>
+    </notation>.
+</p>
+
+<p>We say that <m>A</m> is a <term>subset</term><idx><h>set</h><h>subset</h></idx>
+  of <m>B</m>, denoted <m>A\subseteq B</m><notation><usage><m>A
+  \subseteq B</m>
+      </usage>
+    <description><m>A</m>
+      is a subset of <m>B</m>
+      </description>
+    </notation>, if every element in the set <m>A</m> is also in the
+  set <m>B</m>, and we write <m>A\not\subseteq
+  B</m><notation><usage><m>A \not\subseteq B</m>
+      </usage>
+    <description><m>A</m>
+      is not a subset of <m>B</m>
+      </description>
+    </notation> to
+  indicate that there is at least one element in <m>A</m> that is not an
+  element in <m>B</m>. A consequence of these definitions is that if 
+  <m>A=B</m>, then <m>A\subseteq B</m> and <m>B\subseteq
+  A</m>. Conversely, if <m>A\subseteq B</m> and <m>B\subseteq A</m>,
+  then <m>A=B</m>. Another consequence is that the empty set is a subset
+  of any given set <m>A</m> because there is no element
+  in <m>\emptyset</m> that is not in <m>A</m>.
+</p>
+
+<exercise xml:id="setnotationparseexer">
+<statement>  <p>
+    <ol>
+      <li>  Which of these are correct (one, both, or neither)? Discuss.
+	<md> <mrow>2\subseteq \{1,2,3\}\amp \amp  2\in \{1,2,3\}</mrow>
+	</md>
+      </li>
+      <li>
+	      <li>    Which of these are correct (one, both, or neither)? Discuss.
+  <md><mrow>\emptyset\subseteq \{1,2,3\} \amp \amp  \emptyset \in
+      \{1,2,3\}</mrow>  </md>
+	      </li>      
+      </li>
+      <li>    Are any of the following things the same? Discuss.
+  <md>
+    <mrow>   \{0\}\amp \amp \{\emptyset\} \amp \amp \emptyset \amp \amp \{  \}</mrow></md>
+      </li>
+    </ol>
+</p></statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="setnotationparseexer"/></title>
+  <p>
+        <ol>
+      <li>The expression on the right is correct. It says the object <m>2</m> is an
+element of the set consisting of objects <m>1,2,3</m>. The expression on
+the left is incorrect. The object <m>2</m> is not a subset of the set
+consisting of objects <m>1,2,3</m>. Instead it would be correct to say
+<me>\{2\}\subseteq \{1,2,3\}.</me>
+</li>
+      <li>      The expression on the left is correct. Since every element in the
+      empty set is also an element of <m>\{1,2,3\}</m> (we say this is
+      "vacuously true"), the empty set is a subset of <m>\{1,2,3\}</m>. The
+      expression on the right is not correct. The set <m>\{1,2,3\}</m> has
+      exactly three members, and the empty set is not one of them.
+      </li>
+      <li>    The last two things on the right are the same. Both symbols
+    <m>\emptyset</m> and <m>\{\}</m> denote a set with no members. The two sets on
+    the left are not empty: they each contain one member. But the number
+    0 and the empty set are not the same thing, so two sets on the left
+    are different.
+      </li>
+    </ol>
+</p>
+</commentary>
+
+<p>The <term>intersection</term><idx><h>set</h><h>intersection</h></idx>
+  of sets <m>A,B</m>, denoted <m>A\cap B</m><notation><usage><m>A \cap B</m>
+      </usage>
+    <description>intersection of sets <m>A,B</m>
+      </description>
+    </notation>, is the set
+  <me>A\cap B =\{x\colon x\in A \text{ and } x\in B\}.
+</me>
+The <term>union</term>
+  <idx><h>set</h><h>union</h></idx> of sets <m>A,B</m>, denoted <m>A\cup
+  B</m><notation><usage><m>A \cup B</m>
+      </usage>
+    <description>union of sets <m>A,B</m>
+      </description>
+    </notation>, is the set
+<me>A\cup B =\{x\colon x\in A \text{ or } x\in B\}
+</me>
+where the word "or" means "one or the other or both".
+The set 
+<me>A\setminus B =\{x\colon x\in A \text{ and } x\not \in B\}
+</me>
+(also sometimes denoted <m>A-B</m>) is called the <term>difference of set
+<m>A</m> minus set <m>B</m></term><idx><h>set</h><h>difference of
+    sets</h></idx><notation><usage><m>A \setminus B</m>
+      </usage>
+  <description>difference of sets <m>A,B</m>
+      </description>
+    </notation>, or just <m>\text{"}\!A</m> minus <m>B\text{"}</m> for short. 
+</p>
+
+<exercise xml:id="setopspuzzleexer">
+  <statement><p>
+      Let <m>A,B</m> be sets, and let <m>R=A\cap B</m>, <m>S=A\cup
+	B</m>, <m>T=A\setminus B</m>, and <m>U=B\setminus A</m>.
+      <ol>
+	<li>Give an example for which <m>R,S,T,U</m> are four different sets.
+	</li>
+	<li>Give an example for which <m>R,S,T,U</m> are exactly two different sets.
+	</li>	
+	<li>Give an example for which <m>R,S,T,U</m> are all the same set.
+	</li>	
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="setopspuzzleexer"/></title>
+  <p>
+(There are many correct answers. These are just a sample.)
+      <ol><li>
+	  Let <m>A=\{x,y\}</m> and
+	  let <m>B=\{y,z\}</m>. Then <m>R=\{y\}</m>, <m>S=\{x,y,z\}</m>, <m>T=\{x\}</m>,
+	  and <m>U=\{z\}</m> are all different.
+	</li>
+<li>	  Let <m>A=\{x,y\}</m> and
+	  let <m>B=\{x,y\}</m>. Then <m>R=S=\{x,y\}</m>
+	  and  <m>T=U=\emptyset</m> are exactly two different sets.</li>
+<li>	  Let <m>A</m> and
+	  let <m>B</m> be empty. Then <m>R</m>, <m>S</m>, <m>T</m>,
+  and <m>U=</m> are all the same set (the empty set).	</li>
+      </ol>    
+</p>
+</commentary>
+
+
+<exercises>
+
+  <exercise xml:id="setalgfirstexer"><statement><p>
+	  One of the
+	  following statements is always true, and the other statement
+	  is sometimes true, and sometimes false. Determine which is
+	  which. Demonstrate the "sometimes true" statement by giving
+	  two specific examples <mdash/> one example for which the statement is
+	  true, and one example for which the statement is
+	  false. "Specific" means that you will write all of the sets
+	  <m>S,A,B</m> as lists of elements inside curly
+	  brackets, and write both of the sets on the left side and on the right
+	  sides of the equation as lists of elements in curly brackets.
+	  <ol>
+	    <li>For any subsets <m>A,B</m> of of a set <m>S</m>, we have
+	      <m>S\setminus (A \cap B) = (S\setminus A) \cap (S\setminus B)</m>.
+	    </li>
+	    <li>For any three subsets <m>A,B</m> of a set <m>S</m>, we have
+	      <m>S\setminus (A\cap B) = (S\setminus A)\cup (S\setminus B)</m>.
+	    </li>
+	  </ol></p></statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="setalgfirstexer"/></title>
+  <p>
+Statement a is sometimes true and sometimes false. To see that statement
+a is sometimes true, consider the example <m>S=A=B=\emptyset</m>.
+It is clear that <m>S\setminus (A\cap B)=\emptyset = (S\setminus A)\cap
+      (S\setminus B)</m>. To see that statement a
+is sometimes false, consider the
+example <m>S=\{a,b,c\}</m>, <m>=\{a,b\}</m>, and <m>B=\{b,c\}</m>.
+Then we have
+<m>S\setminus (A\cap B)=\{a,c\}</m>, but <m>(S\setminus A)\cap
+  (S\setminus B)=\emptyset</m>.
+  </p>
+  <p>A direct proof that statement b (one of De Morgan's Law's) is always true is not required;
+  proof technique for equality of sets is not expected at this
+    point. A proof using characteristic functions is <xref ref="distdemorganlawsexer"/>,
+  later in this text.
+  </p>
+</commentary>
+
+    <exercise xml:id="powersetproblem"><statement><p>
+	  Given a set <m>A</m>, the <term>power set</term><idx><h>power set</h>
+	  </idx>  of <m>A</m>, denoted <m>{\mathcal
+	    P}(A)</m><notation><usage><m>{\mathcal P}(A)</m>
+	    </usage><description>power set of a set <m>A</m>
+	    </description>
+	  </notation>, is defined to be the set of all subsets
+	  of <m>A</m>.
+	  <ol>
+	    <li>Explain why <m>\emptyset \in \mathcal{P}(A)</m> for any
+	      set <m>A</m>.
+	    </li>
+	    <li>Write out <m>\mathcal{P}(\{a,b\})</m> with all of its elements.
+	    </li>
+	    <li>Write out <m>\mathcal{P}(\{a,b,c\})</m> with all of its elements.
+	    </li>	    
+   </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="powersetproblem"/></title>
+  <p>
+    <ol>
+      <li>As explained in the text, if we were to claim that the empty
+	set is <em>not</em> a subset of some set <m>A</m>, there would
+	have to be some element in the empty set that is <em>not</em>
+	in <m>A</m>. But this is impossible, because the empty set
+	contains no elements.
+      </li>
+	    <li>
+    <me>{\mathcal P}(\{a,b\}) =
+      \{\emptyset,\{a\},\{b\},\{a,b\}\}</me>	      
+	    </li>
+	    <li>
+    <me>{\mathcal P}(\{a,b,c\}) =
+      \{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}</me>
+	    </li>
+	</ol>
+</p>
+</commentary>
+
+
+<exercise xml:id="algofsetsexer"><statement><p>Let <m>S</m> be a set.
+      An <term>algebra of
+	    subsets</term><idx><h>algebra of sets</h>
+      </idx> of <m>S</m>
+      is a set <m>{\mathcal A}</m> whose elements are subsets of <m>S</m>
+      for which the following properties hold.
+<blockquote>	  <ol marker="i"> <li><m>\emptyset \in {\mathcal A}</m></li>
+	    <li><m>X\cap Y\in {\mathcal A}</m> for every <m>X,Y\in {\mathcal A}</m></li>
+	    <li><m>X\cup Y\in  {\mathcal A}</m> for every <m>X,Y\in {\mathcal A}</m></li>
+	    <li><m>S\setminus X \in {\mathcal A}</m> for every <m>X\in {\mathcal  A}</m></li>
+</ol></blockquote>
+<ol>  <li>One algebra of subsets of <m>S=\{a,b\}</m>
+    is the power set <m>\mathcal{P}(S)</m> of <m>S</m>.
+    Are there any other algebras of subsets of <m>S</m>?
+  </li>
+  <li>Find all possible algebras of subsets of <m>\{a,b,c\}</m>.
+  </li>
+     <li>Give an example of a collection of subsets of some set <m>S</m> for which
+       exactly  three of the four set algebra properties hold.</li>
+</ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="algofsetsexer"/></title>
+  <p>
+    <ol>
+      <li>The only algebra of subsets of <m>S=\{a,b\}</m>
+	are <m>\mathcal{P}(S)</m> and <m>\{\emptyset,S\}</m>.
+      </li>
+      <li> Here are all the algebras of subsets of <m>S=\{a,b,c\}</m>.
+	<md>
+	  <mrow> \mathcal{P}(S)
+	  </mrow>
+	  <mrow> \{\emptyset, S\}</mrow>
+	  <mrow>\{\emptyset,\{a\},\{b,c\},S\}</mrow>
+	  <mrow>\{\emptyset,\{b\},\{a,c\},S\}</mrow>
+	  <mrow>\{\emptyset,\{c\},\{a,b\},S\}</mrow>	  	  
+	</md>
+      </li>
+      <li>Here is a minimal example: Let <m>S=\{a\}</m> and
+	consider <m>\mathcal{A}=\{\emptyset\}</m>.
+	This satisfies i, ii, and iii, but not iv.
+      </li>
+    </ol>
+</p>
+</commentary>
+
+
+
+
+  <exercise xml:id="hypergraphegexer">
+    <statement><p>A <em>hypergraph</em> is a pair of sets <m>(V,E)</m>,
+	where <m>V</m> is a set and <m>E</m> is a set of nonempty subsets
+	of <m>V</m>. Write out all of the hypergraphs <m>(V,E)</m> for <m>V=\{a,b\}</m>.
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="hypergraphegexer"/></title>
+  <p>
+Here are the 8 hypergraphs of the form <m>(\{a,b\},E)</m>. 
+	<md><mrow>E\amp = \emptyset</mrow>
+	  <mrow>E\amp = \{\{a\}\}</mrow>
+	  <mrow>E\amp = \{\{b\}\}</mrow>
+	  <mrow>E\amp = \{\{a,b\}\}</mrow>	  	  
+	  <mrow>E\amp = \{\{a\},\{b\}\}</mrow>	  
+	  <mrow>E\amp = \{\{a\},\{a,b\}\}</mrow>
+	  <mrow>E\amp = \{\{b\},\{a,b\}\}</mrow>	  
+	  <mrow>E\amp = \{\{a\},\{b\},\{a,b\}\}</mrow>	  
+	</md>    
+</p>
+</commentary>
+  
+  
+
+</exercises>
+
+</section>
+

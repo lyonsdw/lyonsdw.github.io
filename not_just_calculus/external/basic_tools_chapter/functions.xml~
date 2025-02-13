@@ -1,0 +1,577 @@
+<section xml:id="functions_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Functions
+</title>
+
+
+<p>
+<!--  <alert>Products, relations, and functions.</alert>-->
+  Given objects <m>x,y</m>, an
+  ordered list of the form <m>(x,y)</m><notation><usage><m>(x,y)</m>
+      </usage>
+    <description>ordered pair 
+      </description>
+    </notation> is called an <term>ordered
+  pair</term><idx><h>Cartesian product</h><h>ordered pair</h></idx>. To
+  say that the pair is ordered means that the pairs <m>(x,y)</m> and <m>(y,x)</m>
+  are different if <m>x\neq y</m>. The object <m>x</m> is called the <term>first
+    entry</term><idx><h>Cartesian product</h><h>first entry in an ordered pair</h></idx>
+  (or the <term>left entry</term>) of the ordered
+  pair <m>(x,y)</m>, and the object <m>y</m> is called the
+  <term>second entry</term><idx><h>Cartesian product</h><h>second entry in an ordered pair</h></idx>
+  (or the <term>right entry</term>). The <term>(Cartesian)
+ product</term><idx><h>Cartesian product</h></idx> of the set <m>A</m> with
+  the set <m>B</m>, denoted <m>A\times B</m><notation><usage><m>A\times
+	B</m></usage><description>the (Cartesian) product of sets <m>A,B</m>
+      </description></notation> is the set
+<me> A\times B = \{(a,b)\colon a\in A \text{ and } b\in B\}</me>
+      of all ordered pairs of the form
+ <m>(a,b)</m>, where <m>a</m> is an element of set <m>A</m> and <m>b</m> is an element of
+ set <m>B</m>.
+</p>
+
+  <p>
+    A subset <m>R\subseteq S\times T</m> of the product of sets <m>S,T</m>
+     is called a <term>relation from <m>S</m>
+      to <m>T</m></term><idx><h>relation between sets</h>
+			  </idx>.
+    A relation <m>f\subseteq S\times T</m> is called a 
+    <term>function from <m>S</m> to <m>T</m></term><idx><h>function</h></idx>
+if every element <m>s</m> in <m>S</m> is the left entry of exactly one element in
+  <m>f</m>. We write <m>f\colon S\to T</m><notation><usage><m>f\colon S\to T</m>
+      </usage>
+   <description>a function <m>f</m> with domain <m>S</m> and codomain <m>T</m>
+      </description>
+  </notation> to indicate that the relation <m>f\subseteq S\times T</m>
+  is a function. 
+  The set <m>S</m> is called
+  the <term>domain</term><idx><h>function</h><h>domain</h></idx>,
+    the set <m>T</m> is called the
+  <term>codomain</term><idx><h>function</h><h>codomain</h></idx>, and
+  the set <m>f\subseteq S\times T</m> is called
+  the <term>graph</term><idx><h>function</h><h>graph</h></idx> of the
+  function <m>f\colon S\to T</m>. We write <m>f(s)=t</m>
+  <notation><usage><m>f(s)=t</m>
+      </usage>
+   <description> <m>(s,t)</m> is an element of <m>f</m>
+   </description>
+   </notation>
+to indicate that <m>(s,t)</m> is an element of <m>f</m>.
+  If <m>f(s)=t</m>, we say that <m>t</m> is
+  the <term>image of <m>s</m> under <m>f</m></term><idx><h>function</h><h>image of a point</h></idx>
+  and that <m>s</m> is
+   a <term>preimage of <m>t</m> under <m>f</m></term><idx><h>function</h><h>preimage of a
+      point</h></idx>. Informally, we may refer to a function
+   a <em>process</em> that transforms <em>inputs</em> (elements of the
+   domain set) to <em>outputs</em> in the codomain set. When the
+   sets <m>S,T</m> are understood or implied by context, it is common
+   usage to refer to the function <m>f\colon S\to T</m> simply as "the
+  function <m>f</m>".
+  </p>
+
+<p>To express that a relation <m>R\subseteq S\times T</m>
+  consists of <em>three</em> parts, namely, the sets <m>R</m>, <m>S</m>,
+  and <m>T</m>, 
+   we say that a relation is
+	a <em>triple</em> <m>(R,S,T)</m>. To say that
+	relations <m>(R,S,T)</m> and <m>(R',S',T')</m> are equal means
+	that <m>R=R'</m>, <m>S=S'</m>, and <m>T=T'</m>. In particular, to say that two
+	functions are equal means that they have not only the same
+	graph, but also the same domain and the	same codomain.
+</p>
+
+  <exercise xml:id="writeoutrelsexer">
+  <statement><p>
+      <ol>
+	<li>  Write all 16 relations from <m>S=\{a,b\}</m> to <m>T=\{x,y\}</m>.
+	</li>
+	<li>
+Which of the relations in the previous part are functions?
+	</li>
+      </ol>
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="writeoutrelsexer"/></title>
+  <p>
+<ol> 
+  <li>Here is one possible relation from <m>S</m> to <m>T</m>.
+    <me>\{(a,x),(a,y)(b,y)\}.</me>
+    For a shortcut, let's use this code: there are four elements
+    in <m>S\times T</m>, namely <m>(a,x),(a,y),(b,x),(b,y)</m>. A
+    relation is specified by which of these four belong to it. We will
+    write a 4-bit string, for example, <m>1101</m>, to denote the
+    relation that includes the pairs indicated by the 1's and omits the
+    pairs indicated by the 0's. For example, we will write
+    <me>R=1101=\{(a,x),(a,y),(b,y)\}</me>
+    to denote the example we started with. Using this code, the 16
+    relations from <m>S</m> to <m>T</m> are given by the 16 4-bit strings.
+	</li>
+	<li>
+Using the code from the first part, the functions correspond to the
+4-bit strings of the form <m>XX^cYY^c</m>, where each of <m>X,Y</m> is a
+bit <m>0</m> or <m>1</m>, and <m>X^c</m> denotes the complementary bit
+(that is, <m>0^c=1</m>, <m>1^c=0</m>). The four functions are 
+<m>0101,0110,1001,1010</m>. 
+	</li>
+      </ol>    
+</p>
+</commentary>
+  
+  
+  
+  <exercise xml:id="writeoutfunsexer">
+  <statement><p>
+      <ol>
+	<li>  Write the graphs of all possible functions from <m>\{x,y,z\}</m> to
+	  <m>\{A,B\}</m>. Suggestion: The graph
+	  <m>\{(x,f(x)),(y,f(y)),(z,f(x))\}</m> of a
+	  function <m>f\colon \{x,y,z\}\to\{A,B\}</m> can be shown in an
+	  "input/output" table like this:
+	  <me>\begin{array}{c|ccc}u\amp x\amp y\amp z\\
+	    \hline f(u) \amp f(x) \amp f(y) \amp f(z) \end{array}.</me>
+	  If we agree on the ordering of the elements in the top row,
+	  then we can fully describe the graph of <m>f</m> using only
+	  the second row.
+	  For example, <m>f=[A,A,B]</m> denotes<fn>This shorthand
+	    notation for functions is not standard, but we will use it
+	    here for convenience. When writing mathematics, it is a
+	    good idea to use standard notation by default. But you are
+	    allowed to define your own special-purpose notation when you
+	    have a good reason.</fn> the
+	    graph <m>f=\{(x,A),(y,A),(z,B)\}</m>.
+	</li>
+	<li>
+    Write the graphs of all possible functions from <m>\{A,B\}</m> to
+  <m>\{x,y,z\}</m>. 
+	</li>
+	<li>  Write the graphs of all possible functions from <m>\{x,y,z\}</m> to
+        <m>\{x,y,z\}</m>.  
+	</li>
+	<li>Suppose that the graph of <m>f\colon S\to T</m> is given by
+	  <me>f=\{(u,1), (v,3), (w,1)\}</me>
+	  Is it possible to identify the set <m>S</m>? 
+	  Is it possible to identify the set <m>T</m>? 
+	</li>
+      </ol>
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="writeoutfunsexer"/></title>
+  <p>
+<ol>
+	<li>
+    We will write functions in the following list form.
+    <me>[f(x),f(y),f(z)]</me> The collection of all 8 possible functions is
+    <me>[A,A,A],[A,A,B],[A,B,A],[A,B,B],[B,A,A],[B,A,B],[B,B,A],[B,B,B].</me>
+	</li>
+	<li>
+    We will write functions in list form <m>(f(A),f(B))</m>, as for the previous
+    problem. The 9 possible functions are
+    <me>(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z).</me>
+	</li>
+	<li>
+	      Using list form, as in the previous two problems, there are 27
+    functions. 
+	</li>
+	<li>It must be that <m>S=\{u,v,w\}</m>, because every element
+	in <m>S</m> must appear as the left entry in exactly one element
+	  of <m>f</m>. It is not possible to say what <m>T</m> is,
+	  except to say that <m>T</m> must contain the set <m>\{1,3\}</m>.
+	</li>
+      </ol>    
+</p>
+</commentary>
+  
+
+<p>
+  Given functions <m>f\colon S\to T</m> and <m>g\colon T\to U</m>, the function
+  <m>g\of f\colon S\to U</m><notation><usage><m>g\of f</m>
+      </usage>
+   <description>composition of functions <m>g,f</m>
+   </description>
+   </notation>, called
+   the <term>composition</term><idx><h>function</h><h>composition of functions</h></idx>
+   of <m>g</m> with <m>f</m>,
+is defined by <m>(g\of f)(s) = g(f(s))</m> for all <m>s\in S</m>. This means that
+if <m>(s,t)</m> is an element of <m>f</m> and <m>(t,u)</m> is an element
+   of <m>g</m>,
+then <m>(s,u)</m> is an element of <m>g\of f</m>.
+</p>
+
+<p>
+  Given a set <m>S</m>, the function <m>f\colon S\to S</m> defined by <m>f(s)=s</m> for
+  every <m>s\in S</m> is called the <term>identity function
+  on <m>S</m></term><idx><h>function</h><h>identity function</h></idx>. The
+  identity function on <m>S</m> is sometimes denoted <m>I_S</m>
+  <notation><usage><m>I_S</m>
+      </usage>
+   <description> identity function on a set <m>S</m>
+   </description>
+   </notation>, <m>\Id_S</m><notation><usage><m>\Id_S</m>
+      </usage>
+   <description> identity function on a set <m>S</m>
+   </description>
+   </notation>,
+or <m>\One_S</m><notation><usage><m>\One_S</m>
+      </usage>
+   <description> identity function on a set <m>S</m>
+   </description>
+   </notation>, and the subscript <m>S</m> may be omitted when the
+context is clear.
+</p>
+
+
+  <p>
+<!--<alert>Inverse relations and inverse functions.</alert>-->
+  Given a
+  relation <m>R\subseteq S\times T</m>, the <term>inverse relation
+    to <m>R</m>
+  </term><idx><h>inverse relation</h>
+  </idx>, denoted <m>R^{-1}</m>, is the relation from <m>T</m>
+  to <m>S</m> given by
+  <me>R^{-1}=\{(t,s)\colon (s,t)\in R\}\subseteq T\times S.</me>
+  In general, the inverse relation <m>f^{-1}\subseteq T\times S</m> of a
+  function <m>f\colon S\to T</m>
+  is <em>not</em> a function. To say that the inverse
+  relation <m>f^{-1}\subseteq T\times S</m> is a function, it must be
+  true that 
+  every <m>t</m> in <m>T</m> is the left entry of exactly one element
+  in <m>f^{-1}</m>. This is the same as saying that every <m>t</m> in <m>T</m> is
+  the <em>right</em> entry of exactly one element in <m>f</m>, or, to
+  say in another way, every element in the codomain of <m>f\colon S\to T</m> has
+  exactly one preimage under <m>f</m>. In
+  this case, <m>f\colon S\to T</m> is
+  said to be <term>invertible</term><idx><h>function</h>
+    <h>invertible function</h>  </idx>
+  with <term>inverse function</term><idx><h>function</h>
+    <h>inverse function</h> 
+  </idx> <m>f^{-1}\colon T\to S</m>. 
+  <xref ref="bijectiveimpliestwosidedinverse"/> records an
+  important basic property of the relationship between an invertible
+  function and its inverse function.
+</p>
+
+<proposition xml:id="bijectiveimpliestwosidedinverse"><statement><p>Let <m>f\colon
+      S\to T</m> be a function, and suppose
+      that the inverse
+      relation <m>f^{-1}\subseteq T\times S</m> is a
+      function <m>f^{-1}\colon T\to S</m>. Then we have
+      <m>f^{-1}\of f=\One_S</m> and <m>f\of f^{-1}=\One_T</m>.
+    </p>
+  </statement>
+<!--  <proof><p>If <m>(s,t)\in f</m>, then <m>(t,s)\in f^{-1}</m>. By the
+      definition of composition, we have <m>(s,s)\in f^{-1}\of
+      f</m>. This holds for all <m>s\in S</m>, so we conclude
+      that <m>f^{-1}\of f=\One_S</m>. Conversely, if <m>(t,s)\in
+      f^{-1}</m>, then <m>(s,t)\in f</m>. By the definition of
+      composition, we have <m>(t,t)\in f\of f^{-1}</m>. This holds for
+      all <m>t\in T</m>, so we conclude that <m>f\of f^{-1}=\One_T</m>.
+    </p>
+  </proof>-->
+</proposition>
+
+<exercise xml:id="bijectiveimpliestwosidedinverseproofexer">
+  <p>Fill in the blanks
+    in the following proof of
+    <xref ref="bijectiveimpliestwosidedinverse"/>.
+    Let <m>s\in S</m>, and let <m>t=f(s)</m> so
+    that we have <m><fillin> (s,t)</fillin>\in f</m>. By the definition
+    of <m><fillin>\text{inverse relation}</fillin></m>, we have
+    that <m>(t,s)\in <fillin>f^{-1}</fillin>
+    </m>. By the
+    definition of <m><fillin>\text{composition}</fillin></m>, we
+    have <m>(s,s)  \in f^{-1}\of
+      f</m>. This holds for all <m>s\in S</m>, so we conclude
+    that <m><fillin>f^{-1}\of f=\One_S</fillin></m>. Similarly,
+    let <m>t\in T</m>, and let <m>s=f^{-1}(t)</m>, so
+    that we have <m><fillin>(t,s)</fillin>\in f^{-1}</m>. It follows
+    that <m><fillin>(s,t)</fillin>
+      \in f</m>. By the definition of
+    composition, we have <m>(t,t)\in <fillin>f\of f^{-1}</fillin>
+    </m>. This holds for
+      all <m>t\in T</m>, so we conclude that <m>f\of f^{-1}=\One_T</m>.
+  </p>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="bijectiveimpliestwosidedinverseproofexer"/></title>
+  <p>
+    <ol>
+      <li><m>(s,t)</m>
+      </li>
+      <li>inverse relation
+      </li>
+      <li><m>f^{-1}</m>
+      </li>
+      <li>composition
+      </li>
+      <li><m>f^{-1}\of f=\One_S</m>
+      </li>
+      <li><m>(t,s)</m>
+      </li>
+      <li><m>(s,t)</m>
+      </li>
+      <li><m>f\circ f^{-1}</m>
+      </li>
+    </ol>
+</p>
+</commentary>
+
+-->
+
+<p>
+<alert>Image sets and preimage sets.</alert>
+Let <m>f\colon S\to T</m> be a function, let <m>U\subseteq S</m> be a subset of the domain <m>S</m> and
+  let <m>V\subseteq T</m> be a subset of the codomain <m>T</m>.
+  The <term>image of <m>U</m> under <m>f</m>
+  </term><idx><h>image of a set under a function</h>
+  </idx>, denoted <m>f(U)</m><notation><usage><m>f(U)</m>
+    </usage><description>the image of the set <m>U</m> under the
+    function <m>f</m></description>
+  </notation>, is defined to be
+<me>f(U)=\{f(s)\colon s\in U\}.</me>
+The set <m>f(S)</m> is called the <term>image of the
+  function <m>f</m></term><idx><h>function</h><h>image of a function</h>
+</idx>.<fn><p>The term "range" is used in many texts, sometimes to
+    refer to the image of a function, and sometimes to refer to the
+    codomain. Because the ambiguity, we do not use the term "range" in these notes.</p>
+</fn>
+  The <term>preimage of <m>V</m> under <m>f</m>
+  </term><idx><h>preimage of a set under a function</h>
+  </idx>, denoted <m>f^{-1}(V)</m><notation><usage><m>f^{-1}(V)</m>
+    </usage><description>the preimage of the set <m>V</m> under the
+      function <m>f</m></description></notation>, is defined to be
+    <me>f^{-1}(V)=\{s\in S\colon f(s)\in V\}.</me>
+    Note that we do <em>not</em> assume that <m>f^{-1}</m> is a function
+    to make this definition. If <m>V</m> contains only one
+    point, say <m>V=\{t_0\}</m>, it is customary to omit the set
+    brackets and write <m>f^{-1}(t_0)</m> instead of <m>f^{-1}(\{t_0\})</m>.
+</p>
+
+<exercise xml:id="writeoutfunsexercontd">
+  <statement><p>
+      This exercise refers to the collections of function in <xref ref="writeoutfunsexer"/>.
+      <ol>
+	<li>  Of the collection of functions from <m>\{x,y,z\}</m> to
+  <m>\{A,B\}</m>, which ones are invertible? For each function, give the preimage of <m>A</m>.
+	</li>
+	<li>
+    Of the collection of functions from  <m>\{A,B\}</m> to
+  <m>\{x,y,z\}</m>. Which are invertible? For each function, give the preimage of the set <m>\{x,y\}</m>.
+	</li>
+	<li>  Of the collection of functions from <m>\{x,y,z\}</m> to
+        <m>\{x,y,z\}</m>.  Which are invertible? 
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="writeoutfunsexercontd"/></title>
+  <p>
+<ol>
+	<li>
+	  None of the 8 functions
+    <me>(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B)</me>	  
+    is invertible. The preimages of <m>A</m> for the 8
+    functions are, in order:
+    <me>\{x,y,z\},\{x,y\},\{x,z\},\{x\},\{y,z\},\{y\},\{z\},\emptyset.</me>
+	</li>
+	<li>
+    None of the 9 functions
+    <me>(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z)</me>	  
+The preimages of
+     the set <m>\{x,y\}</m> for the 9
+    functions are, in order:
+    <me>\{A,B\},\{A,B\},\{A\},\{A,B\},\{A,B\},\{A\},\{B\},\{B\},\emptyset.</me>
+	</li>
+	<li>
+	Of the 27
+    functions, 6 are invertible. Here are those 6.
+	      <me>    (x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)</me>
+	</li>
+      </ol>    
+</p>
+</commentary>
+
+
+<exercises>
+
+  
+  <exercise xml:id="fnsetalgfirstexer"><statement><p>Let <m>f\colon S\to
+	  T</m> be a function that is not invertible. One of the
+	  following statements is always true, and the other statement
+	  is sometimes true, and sometimes false. Determine which is
+	  which. Demonstrate the "sometimes true" statement by giving
+	  two specific examples <mdash/> one example for which the statement is
+	  true, and one example for which the statement is
+	  false. "Specific" means that you will write all of the sets
+	  <m>S,T,A,B</m> or <m>S,T,V,W</m> as lists of elements inside curly
+	  brackets, and write your functions as lists of ordered pairs
+	  in curly brackets.
+	  <ol>
+	    <li>For any subsets <m>A,B</m> of <m>S</m>, we have <m>f(A
+		\cap B) = f(A) \cap f(B)</m>.
+	    </li>
+	    <li>For any subsets <m>V,W</m>
+	      of <m>T</m>, we have <m>f^{-1}(V\cap W) = f^{-1}(V)\cap
+	      f^{-1}(W)</m>.
+	    </li>
+	  </ol></p></statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="fnsetalgfirstexer"/></title>
+  <p>
+Statement a is sometimes true and sometimes false. To see that statement
+a is sometimes true, consider the example <m>S=T=A=B=\{\ast\}</m>,
+with <m>f</m> given by <m>f=\{(\ast,\ast)\}</m>. It is clear
+that <m>f(A\cap B)=f(A)\cap f(B) = \{\ast\}</m>. To see that statement a
+is sometimes false, consider the
+example <m>S=\{a,b\}</m>, <m>T=\{\ast\}</m>, <m>A=\{a\}</m>, <m>B=\{b\}</m>,
+and <m>f=\{(a,\ast),(b,\ast)\}</m>. Then we have
+<m>f(A\cap B)=f(\emptyset)=\emptyset</m>, but <m>f(A)\cap f(B) =
+  \{\ast\}\neq \emptyset</m>.
+  </p>
+  <p>A direct proof that statement b is always true is not required;
+  proof technique for equality of sets is not expected at this
+  point. Nonetheless, here is a sample proof, in case there is interest,
+  that attempts to rely only on the intuitive notion of "equivalent
+    statements".
+    <blockquote>
+   To say that <m>x</m> is an element in the set <m>f^{-1}(V\cap W)</m> means
+  that <m>f(x)</m> is in the set <m>V\cap W</m>. This is the same as
+  saying that <m>f(x)\in V</m> and <m>f(x)\in W</m>. This, in turn, is
+  the same as saying that <m>x\in f^{-1}(V)</m> and <m>x\in
+  f^{-1}(W)</m>, which is the same as saying <m>x\in f^{-1}(V)\cap
+  f^{-1}(W)</m>. This chain of equivalent statements shows that
+	<me>f^{-1}(V\cap W)=f^{-1}(V)\cap
+	  f^{-1}(W),</me>
+	as desired.
+    </blockquote>
+  </p>
+</commentary>
+
+
+<exercise xml:id="permsexer"><title>Permutations</title>
+  <statement><p>A <term>permutation</term> of a set <m>X</m> is an
+      invertible function from <m>X</m> to itself.
+      <ol><li>Using the notation explained in
+	  <xref ref="writeoutfunsexer"/>, write all 24 of the permutations
+	  of <m>X=\{a,b,c,d\}</m>. (For example, write
+	  <m>[d,b,a,c]</m>
+	  to denote the permutation 
+	  whose graph is <m>\{(a,d),(b,b),(c,a),(d,c)\}</m>.)
+	</li>
+	<li>Let <m>f=[d,b,a,c]</m> and <m>g=[a,c,d,b]</m> be
+	  permutations of the set <m>X=\{a,b,c,d\}</m>, using the
+	  notation from part a above. Find the permutations <m>f\of
+	  g</m>, <m>g\of f</m>, and <m>f^{-1}</m>.
+	</li>
+      </ol>
+</p></statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="permsexer"/></title>
+  <p> <ol>
+      <li>Here are the 24 permutations of <m>\{a,b,c,d\}</m>. (First row
+    is <m>[a,X,Y,Z]</m> with <m>X,Y,Z</m> in dictionary order. Next rows
+    are made by applying transpositions <m>(ab),(ac),(ad)</m> to the
+    first row.)
+    <me>[a,b,c,d],[a,b,d,c],[a,c,b,d],[a,c,d,b],[a,d,b,c],[a,d,c,b]</me>
+    <me>[b,a,c,d],[b,a,d,c],[b,c,a,d],[b,c,a,b],[b,d,a,c],[b,d,c,a]</me>
+    <me>[c,b,a,d],[c,b,d,a],[c,a,b,d],[c,a,d,b],[c,d,b,a],[c,d,a,b]</me>    
+    <me>[d,b,c,a],[d,b,a,c],[d,c,b,a],[d,c,a,b],[d,a,b,c],[d,a,c,b]</me></li>
+      <li>
+	<md>
+	  <mrow>f\circ g \amp = [d,a,c,b]</mrow>
+	  <mrow>g\circ f \amp = [b,c,a,d]</mrow>
+	  <mrow>f^{-1} \amp = [c,b,d,a]</mrow>
+	</md>
+
+      </li>
+    </ol>
+  </p>
+</commentary>
+
+
+
+<exercise xml:id="projectionfirstexer"><title>Projection</title>
+  <statement><p>
+      Let <m>\R</m> denote the set of real numbers, and let 
+      <m>\R^2</m> denote the set <m>\R^2= \R\times \R</m> of ordered
+      pairs of real numbers. Let <m>X\subseteq \R^2</m> denote the line
+      <m>X=\{(x,1)\colon x\in \R\}</m>, and let <m>{O}\in \R^2</m> denote the point
+      <m>{O}=(0,0)</m>. Given a point <m>P</m> in <m>\R^2</m>,
+      let <m>L</m> denote the line <m>L=\overline{OP}</m> that passes
+      through <m>0</m> and <m>P</m>. If <m>L</m> and <m>X</m> have a
+      point of intersection, say at <m>Q=(x_0,0)</m>, we will write <m>\pi(P)</m> to denote 
+      the <m>x</m>-coordinate <m>x_0</m> of <m>Q</m>. Let <m>D\subseteq \R^2</m> the set of all
+      points <m>P</m> for which <m>\pi(P)</m> exists, and let
+      <m>\pi\colon D\to \R</m> denote the function that sends <m>P\in
+	D</m> to <m>\pi(P)\in \R</m>. The function <m>\pi</m> is called
+      a <em>1-point projection</em>
+      from <m>O</m>.
+      <ol>
+	<li>Find <m>D</m>.
+	</li>
+	<li>Find <m>\pi(3,4)</m>, <m>\pi(2,1/2)</m>, and <m>\pi(6,1)</m>.
+	</li>
+	<li>Find <m>\pi^{-1}(3)</m>.
+	</li>
+	<li>Let <m>T\subseteq D</m> be the line segment with endpoints <m>(1,2)</m>
+	  and <m>(4,-1)</m>. Find <m>\pi(T)</m>.	  </li>
+	  <li>Let <m>U\subseteq \R</m> be the interval <m>U=\{x\colon
+	      -2\leq x \leq 7\}</m>. Find <m>\pi^{-1}(U)</m>.
+	</li>
+      </ol>
+</p>
+</statement>
+  </exercise>
+
+    
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="projectionfirstexer"/></title>
+  <p>For convenience, let's use familiar vocabulary of <m>x,y</m>-plane
+    for <m>\R^2</m>.
+    <ol>
+      <li><m>D</m> is the complement of the <m>x</m>-axis, that
+      is, <m>D=\R^2\setminus \{(x,0)\colon x\in \R\}</m>.
+      </li>
+      <li><m>\pi(3,4)=3/4</m>, <m>\pi(2,1/2)=4</m>, <m>\pi(6,1)=6</m>
+	(in general, <m>\pi(a,b)=a/b</m>)
+      </li>
+      <li><m>\pi^{-1}(3)=\{(x,x/3)\colon x\in \R\}</m>, that is, the
+	line with equation <m>y=x/3</m> or <m>x-3y=0</m>.
+      </li>
+      <li><m>\pi(T) = \{-4\leq x\leq 1/2\}</m> (we will avoid standard
+	square bracket closed interval notation, because <m>[-4,2]</m>
+	looks confusingly like a function in the convenience shortcut
+	notation used in this section)
+      </li>
+      <li>The set <m>\pi^{-1}(U)</m> is the union of 2 quarter-planes (minus a
+      point), bounded by the lines <m>y=x/7</m>
+      and <m>y=-x/2</m>, and containing all points on these lines except
+	for <m>O=(0,0)</m>, and containing the "upper" and "lower"
+      quarter-planes determined by these two lines, that is, the
+      quarter-planes that contain
+	the <m>y</m>-axis. To be precise,
+	<me>\pi^{-1}(U) = \{(x,y)\colon y\leq -x/2 \text{ or } y\geq
+	x/7\}\setminus \{(0,0)\}.</me>
+      </li>
+    </ol>
+  </p>
+</commentary>
+
+
+</exercises>
+
+</section>
+

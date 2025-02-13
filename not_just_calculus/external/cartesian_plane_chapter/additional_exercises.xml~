@@ -1,0 +1,721 @@
+<section xml:id="additional_exercises_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Problems
+</title>
+
+<subsection xml:id="basicplanarconceptssubsec">
+  <title>Some basic algebra and geometry in the plane</title>
+
+<exercises>
+
+  <exercise xml:id="matsandcomplexmultexer"><title>Matrices and complex multiplication</title>
+    <statement><p><xref ref="complex_plane_section"/> begins with a
+    one-to-one correspondence <m>\C\leftrightarrow \R^2</m> given
+	by <m>z\leftrightarrow (\re(z),\im(z))</m>. The mapping that
+	sends <m>z\in \C</m> to <m>(\re(z),\im(z))\in \R^2</m> is
+	sometimes called "realify". Now let <m>z</m> be a complex number, 
+	let <m>\mu_z \colon \C\to \C</m> be the map given
+	by <m>\mu_z(w)=zw</m>, and let <m>L_z\colon \R^2\to \R^2</m> be
+	given by <me>L_z = \realify \circ \; \mu_z \circ
+	  \realify^{-1}.</me>
+	Show that <m>L_z</m> is a linear map, and find its matrix.
+    </p>
+    </statement>
+    <hint><p>Use <xref ref="characterizatonlinmapsprop"/>.</p>
+    </hint>
+  </exercise>
+
+  
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="matsandcomplexmultexer"/></title>
+  <p>
+    Let <m>a,b</m> be real real. Note
+    that <m>\realify(a+bi)=(a,b)</m>
+    and <m>\realify^{-1}(a,b)=a+bi</m>. Now let <m>z=a+bi</m> be given.
+    We have
+    <md>
+      <mrow>L_z(x,y) \amp = \realify(\mu_z(\realify^{-1}(x,y)))</mrow>
+      <mrow>\amp = \realify(\mu_z(x+iy))</mrow>
+      <mrow>\amp = \realify ((a+bi)(x+iy))</mrow>
+      <mrow>\amp =\realify((ax-by)+i(ay+bx))</mrow>
+      <mrow>\amp = (ax-by,ay+bx).</mrow>
+    </md>
+    By part a of <xref ref="characterizatonlinmapsprop"/>, we conclude
+    that <m>L_z</m> is linear, and by Equation <xref ref="mattimescolvectdef"/>, we see that the
+    matrix for <m>L_z</m> is
+    <me>[L_z] = \begin{bmatrix}a\amp -b\\b\amp a\end{bmatrix}.</me>
+    If <m>z=rE(\theta)=re^{i\theta}</m>, we have
+    <md>
+      <mrow>L_z \amp = rR_{\theta}\\</mrow>
+      <mrow>[L_z] \amp = [rR_\theta] = \begin{bmatrix}r\cos \theta\amp
+      -r\sin\theta\\ r\sin\theta \amp r\cos\theta\end{bmatrix}.</mrow>
+    </md>
+</p>
+</commentary>
+  
+  
+  <exercise xml:id="maptomatandcomplexfnexer"><title>Matrices and complex functions</title>
+    <statement><p>Let <m>R_{\theta}</m> denote the rotation of the plane about the
+	origin by <m>\theta</m> radians. 
+	For example, <m>R_{\pi}</m> is the
+	linear map <m>\R^2\to \R^2</m>
+	given by the
+	matrix <m>\twotwo{-1}{0}{0}{-1}</m>. Alternatively, <m>\R_{\pi}</m>
+	is the map <m>\C\to\C</m> given
+	by <m>R_{\pi}(z)=-z</m>. Let <m>F_H,F_V,F_D,F_{D'}</m> be the
+	reflections across the lines <m>H: y=0</m>, <m>V:
+	  x=0</m>, <m>D: y=-x</m>, and <m>D': y=x</m>. For
+	example <m>F_H</m> is the linear map <m>\R^2\to \R^2</m> given
+	by the
+	matrix <m>\twotwo{1}{0}{0}{-1}</m>. Alternatively, <m>F_H</m> is
+	the map <m>\C\to\C</m> given by <m>F_H(z)=z^{\ast}</m>. Find
+	linear maps and complex functions for all eight of the mappings
+	in the set
+	<me>D_4=\{R_0,R_{\pi/2},R_{\pi},R_{3\pi/2},F_H,F_V,F_D,F_{D'}\}.</me>
+	For each complex function <m>f</m>, find a
+	constant <m>\alpha</m> so that <m>f(z)</m> may be written 
+	in the form <m>f(z)=\alpha z</m> or in the form <m>f(z)=\alpha
+	  z^\ast</m>.
+    </p>
+    </statement>
+    <hint><p>For the complex functions for <m>F_D</m> and <m>F_{D'}</m>,
+	use part c of <xref ref="reflectislinearexer"/>.</p>
+    </hint>
+  </exercise>
+
+  
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="maptomatandcomplexfnexer"/></title>
+  <p>
+The matrices for
+	<me>R_0,R_{\pi/2},R_{\pi},R_{3\pi/2},F_H,F_V,F_D,F_{D'}</me>
+	are
+	<me>\twotwo{1}{0}{0}{1},\twotwo{0}{-1}{1}{0},\twotwo{-1}{0}{0}{-1},\twotwo{0}{1}{-1}{0},
+	\twotwo{1}{0}{0}{-1}, \twotwo{-1}{0}{0}{1},
+	  \twotwo{0}{-1}{-1}{0}, \twotwo{0}{1}{1}{0},</me>
+	respectively.
+    </p>
+      <p>The corresponding complex functions corresponding are the following.
+	<md>
+	  <mrow>R_0(z)=z, \amp \amp R_{\pi/2}(z)=iz,
+	    \amp \amp R_{\pi}(z)=-z, \amp \amp R_{3\pi/2}(z)=-iz</mrow>
+	  <mrow>F_H(z)=z^\ast, \amp \amp F_V(z)=-z^\ast,
+	    \amp \amp F_D(z)=-iz^\ast, \amp \amp F_{D'}(z)=iz^\ast </mrow>
+	</md>    
+</p>
+</commentary>
+  
+
+  
+  
+  <exercise xml:id="orthprojexer"><title>Orthogonal projections onto lines</title>
+    <statement><p>Let <m>\mathbf{u}</m> be a vector in <m>\R^2</m> such
+	that <m>\left\Vert\mathbf{u}\right\Vert=1</m>, 
+	let <m>\ell</m> be the line
+	<me>\ell=\{\alpha \mathbf{u}\colon \alpha \in \R\}</me>
+	and let <m>\mathbf{v}=\overrightarrow{OQ}</m> be another vector
+	in <m>\R^2</m>, where <m>O=(0,0)</m> is the origin and <m>Q</m>
+	is some point in the plane. Let <m>P</m> be the point on <m>\ell</m> such
+	that <m>\triangle OPQ</m> is a right triangle.
+	Use <xref ref="dotprodgeom"/> and draw a sketch to explain why
+	<me>\overrightarrow{OP}=(\mathbf{u}\cdot
+	  \mathbf{v})\mathbf{u}.</me>
+	The vector <m>\overrightarrow{OP}</m> is called
+	the <term>(orthogonal) projection of <m>\mathbf{v}</m>
+	  onto <m>\mathbf{u}</m></term><idx><h>orthogonal projection of a
+	    vector onto another vector</h></idx>,
+	denoted <m>\proj_{\mathbf{u}}\mathbf{v}</m><notation><usage><m>\proj_{\mathbf{u}}\mathbf{v}</m>
+	  </usage><description>orthogonal projection of
+	    vector <m>\mathbf{v}</m> onto vector <m>\mathbf{u}</m>
+	  </description>
+	</notation>.
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="orthprojexer"/></title>
+  <p>
+    (draw sketches and use <xref ref="dotprodgeom"/> to get the
+      length of <m>\overrightarrow{OP}</m>)
+</p>
+</commentary>
+
+</exercises>
+
+  </subsection>
+
+<subsection><title>Roots of unity</title>
+
+  <p>Let <m>n</m> be a positive integer. A
+	<term>(complex) <m>n</m>-th root of
+	unity</term><idx><h><m>n</m>-th root of unity
+	  </h>
+	</idx>
+	is a complex number <m>z</m> such
+	that <m>z^n=1</m>.
+  </p>
+
+  <exercises>
+
+    <exercise xml:id="rootsof1normexer">
+    <statement><p>Show that if <m>z</m> is an <m>n</m>-th root of unity, then <m>|z|=1</m>.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1normexer"/></title>
+  <p>
+	    Taking norms of both sides of <m>z^n=1</m>, we
+	    get <m>|z|^n=1</m>. Because <m>|z|</m> is a nonnegative real
+	    number, we conclude that <m>|z|=1</m>.
+  </p>
+  </commentary>
+    
+    <exercise xml:id="rootsof1plotegexer">
+    <statement><p>Find all of the <m>n</m>-th roots of unity for <m>n=3,6</m>. Sketch
+       their locations on the unit circle.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1plotegexer"/></title>
+  <p>(sketch the points)
+  </p>
+  </commentary>
+    
+    <exercise xml:id="rootsof1ispowerofomegaexer">
+    <statement><p>Let <m>\omega=E(2\pi/n)</m>. Show that if <m>z</m> is an <m>n</m>-th root of unity, then
+        <m>z=\omega^k</m> for some integer <m>k</m>.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1ispowerofomegaexer"/></title>
+  <p>Let <m>z</m> be an <m>n</m>-th root of unity. By part a,
+	    we have <m>|z|=1</m>, so <m>z=E(\theta)</m> for some
+	    real <m>\theta</m>. Then <m>z^n = E(n\theta)=1</m>,
+	    so <m>n\theta = 2\pi k</m> for some
+	    integer <m>k</m>. Solving for <m>\theta</m>, we
+	    have <m>\theta= 2k\pi/n</m>, so <m>z=\omega^k</m>.
+  </p>
+  </commentary>
+    
+    <exercise xml:id="rootsof1reducepowerexer">
+    <statement><p>Let <m>k</m> be an integer. Show
+	that <m>\omega^k=\omega^r</m> for some <m>r</m> in the
+	range <m>0\leq r\leq n-1</m>.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1reducepowerexer"/></title>
+  <p>Use the Division Algorithm to write <m>k=nq+r</m> for
+	    integers <m>q,r</m> with <m>r</m> in the range <m>0\leq
+	      r\leq n-1</m>. Then we have
+	    <me>\omega^k=\omega^{nq+r}=\omega^{nq}\omega^r=\omega^r.</me>
+  </p>
+  </commentary>
+    
+    <exercise xml:id="rootsof1primitiveegexer">
+    <statement><p>An <m>n</m>-th root of unity <m>z</m> is
+	called <term>primitive</term><idx><h>primitive root of unity</h>
+	</idx>
+	if all
+          <m>n</m>-th roots of unity can be written as powers of <m>z</m>. Find all
+          of the primitive roots of unity for <m>n=3,6,10</m>.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1primitiveegexer"/></title>
+  <p>The primitive roots of unity for <m>n=3</m>
+	    are <m>\omega, \omega^2</m>. For <m>n=6</m>, they
+	    are <m>\omega,\omega^5</m>. For <m>n=10</m>, they
+	    are <m>\omega,\omega^3,\omega^7, \omega^9</m>.
+  </p>
+  </commentary>
+    
+    <exercise xml:id="rootsof1ismodarithexer">
+    <statement><p>Let <m>C_n</m> denote the set of <m>n</m>-th roots of unity, and
+            let <m>\mu\colon \Z_n\to C_n</m> be given by
+            <m>\mu(k)=\omega^k</m>. Show that <m>\mu</m> is one-to-one and onto,
+            and that <m>\mu(k)\mu(\ell)=\mu(k+_n\ell)</m> for all <m>k,\ell</m> in
+            <m>\Z_n</m>.
+      </p></statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1ismodarithexer"/></title>
+  <p><xref ref="rootsof1reducepowerexer"/> shows that the set <m>C_n</m> is given by
+	    <me>C_n=\{\omega^0,\omega^1,\ldots,\omega^{n-1}\}.</me>
+	    This implies that <m>\mu</m> is onto. By <xref ref="intoisontofinite"/>, we have
+	    that <m>\mu</m> is also one-to-one. For <m>k,\ell\in
+	      \Z_n</m>, we have
+	    <m>\mu(k)\mu(\ell)=\omega^k\omega^\ell=\omega^{k+\ell}</m>. Again
+	    by <xref ref="rootsof1reducepowerexer"/>, we
+	    have <m>\omega^{k+\ell}=\omega^{k+_n \ell}=\mu(k+_n\ell)</m>.
+  </p>
+  </commentary>
+    
+    
+  </exercises>
+</subsection>
+
+<subsection xml:id="linfracttranssubsect">
+  <title>Linear fractional transformations of the extended
+  real numbers</title>
+
+<p>  We call the set
+	<me>\extR=\R\cup \{\infty\}</me>
+	the <term>extended real numbers</term><idx><h>extended real numbers</h>
+	</idx>,
+	where <m>\infty</m> is an element that is not a real
+	number. Let <m>\alpha\neq 0</m> be a real number and
+	let <m>\beta</m> be any real number.
+	We define functions <m>\mu_\alpha,\tau_{\beta},\rho\colon \extR\to\extR</m>,
+	as follows.
+	<md>
+	  <mrow>\mu_{\alpha}(x)\amp = \begin{cases} \alpha x \amp x\in \R\\ \infty \amp x=\infty \end{cases}
+	</mrow>
+	<mrow>\tau_{\beta}(x) \amp = \begin{cases} x+\beta \amp x\in \R\\ \infty
+	  \amp x=\infty \end{cases}</mrow>
+	<mrow>\rho(x) \amp = \begin{cases} 1/x \amp x\in \R,x\neq 0\\
+	\infty \amp x=0\\ 0 \amp x=\infty \end{cases}</mrow>	
+</md></p>
+  
+  <exercises>
+
+<exercise xml:id="linfractransinvertexer">
+    <statement><p>
+  Show that <m>\mu_{\alpha},\tau_{\beta},\rho</m> are invertible
+    functions. Say where you use the assumption that <m>\alpha\neq 0</m>.
+      </p>
+    </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="linfractransinvertexer"/></title>
+  <p>
+	  It is easy to see what the inverse functions should be. We
+	    guess
+	    that <m>\left(\mu_{\alpha}\right)^{-1}=\mu_{(1/\alpha)}</m>,
+	    that <m>\left(\tau_{\beta}\right)^{-1}=\tau_{(-\beta)}</m>,
+	    and that <m>\left(\rho\right)^{-1}=\rho</m>. Now just check
+	    the compositions of each function with its candidate inverse
+	    to verify that the candidate inverse is indeed an inverse,
+	    that is, check that
+<me>\mu_{\alpha}\of \mu_{(1/\alpha)}=\mu_{(1/\alpha)}\of\mu_{\alpha}=
+  \One</me>
+and similarly for <m>\tau_{\beta},\rho</m>. </p>
+  </commentary>
+
+	  
+<exercise xml:id="linfractranscompseexer"><statement>
+    <p>
+            Let <m>a,b,c,d</m> be real numbers with <m>c\neq 0</m>
+    and <m>ad-bc\neq 0</m>. Show that
+    the composition
+    <me>\mu_{(1/c)}\of\tau_a\of \mu_{(bc-ad)}\of\rho\of \tau_d\of
+      \mu_c</me>
+    is given by
+    <men xml:id="linfractransformcneq0">T(x)=\begin{cases}
+      \frac{ax+b}{cx+d} \amp \text{ if }x\in  \R,x\neq -d/c\\
+      \infty \amp \text{ if } x= -d/c\\
+      a/c \amp \text{ if }x=\infty.
+    \end{cases}</men>
+    Conclude that <m>T\colon
+      \extR\to\extR</m> is invertible.
+</p></statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractranscompseexer"/></title>
+  <p>(just carry out the algebra)
+  </p>
+</commentary>
+
+<exercise xml:id="linfractranscompose2exer"><statement>
+    <p>
+Let <m>a,b,c,d</m> be real numbers with <m>c=0</m>
+      and <m>ad-bc\neq 0</m>. Show that <m>d\neq 0</m> and that the
+      composition
+      <m>\tau_{(b/d)}\of \mu_{a/d}</m> is given by
+          <men xml:id="linfractransformceq0">T(x)=\begin{cases}
+      \frac{ax+b}{cx+d} \amp \text{ if } x\neq \infty\\
+      \infty \amp \text{ if } x= \infty.
+    \end{cases}</men>
+      Conclude that <m>T\colon
+      \extR\to\extR</m> is invertible.
+</p></statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractranscompose2exer"/></title>
+  <p>(just carry out the algebra)
+  </p>
+</commentary>
+
+<exercise xml:id="linfractransdefexer"><statement>
+    <p>
+Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
+      function
+      <m>T\colon \extR\to \extR</m> given
+      by <m>T(x)=\frac{ax+b}{cx+d}</m>, with exceptional values specified by
+      <xref ref="linfractransformcneq0"/> and
+      <xref ref="linfractransformceq0"/> for the cases <m>c\neq
+      0</m>, <m>c=0</m>, respectively,
+      is called a <term>linear
+	fractional transformation</term><idx><h>linear fractional transformation</h> </idx>
+      on the extended reals. Given an invertible
+      matrix <m>\twotwo{a}{b}{c}{d}</m>, let <m>T_M</m> denote the
+      linear fractional transformation given by
+      <me>T_M(x) = \frac{ax+b}{cx+d}.</me>
+      Suppose that <m>N=\twotwo{e}{f}{g}{h}</m> is another invertible
+      matrix, so that <m>T_N(x)=\frac{ex+f}{fx+h}</m>. Let <m>\Id</m> denote the identity matrix, and
+    let <m>{\rm id}</m> denote the identity function <m>{\rm id}\colon
+      \extR\to \extR</m>.
+      Show the following.
+      <ol>
+	<li><m>T_{MN}=T_M\of T_N</m>
+	</li>
+	<li><m>T_{\Id}={\rm id}</m>
+	</li>
+	<li><m>(T_M)^{-1}=T_{(M^{-1})}</m>
+	</li>
+      </ol>
+    </p>
+</statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractransdefexer"/></title>
+  <p>
+    <ol>
+      <li>We have
+	<md>
+	  <mrow>(T_M\of T_N)(x)\amp = T\left(\frac{ex+f}{gx+h}\right) \\
+	    \amp = \frac{a\left(\frac{ex+f}{gx+h}\right) +
+	    b}{c\left(\frac{ex+f}{gx+h}\right) + d}\\
+	    \amp = \frac{a\left({ex+f}\right) +
+	    b(gx+h)}{c\left({ex+f}\right) + d(gx+h)}\\
+	    \amp = \frac{(ae+bg)x + (af+bh)}{(ce+dg)x+ (cf+dh)}\\
+	    \amp = T_{MN}(x).
+	  </mrow>
+	</md>
+	    A thoughtful student might consider the exceptional values.	  	
+      </li>
+      <li>We have <m>T_{\Id}(x) = \frac{1x+0}{0x+1}=x</m> (this works
+	for <m>x\in \R</m> and for <m>x=\infty</m>).
+      so <m>T_{\Id}={\rm id}</m>.
+      </li>
+      <li>We have
+    <me>{\rm id} = T_{\Id}=T_{M^{-1}M}= T_{M^{-1}}\of T_M</me>
+    and similarly, we have
+    <me>{\rm id} = T_{M}\of T_{M^{-1}}.</me>
+    It follows that <m>(T_M)^{-1}=T_{(M^{-1})}</m>. (Alternatively, one
+    may compute both sides directly, and then compare.)
+      </li>
+    </ol>
+  </p>
+</commentary>
+
+
+<exercise xml:id="stereoprojextRexer"><statement><p>Let <m>s\colon S^1\to \extR</m> be the stereographic projection
+      function, given by
+      <me>s(x,y)=\begin{cases}\frac{x}{1-y}\amp y\neq 1\\ \infty \amp
+	y=1. \end{cases}</me>
+      Show that <m>s</m> is a bijection.
+</p></statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="stereoprojextRexer"/></title>
+  <p>From <xref ref="inversestereoexer"/> we have the formula
+	    <me>s^{-1}(a) =
+	      \left(\frac{2a}{a^2+1},\frac{a^2-1}{a^2+1}\right)</me>
+	    for the inverse of <m>s\colon Q\to (1,\infty)</m>. From this
+	    we can guess the formula for <m>s^{-1}</m> for <m>s\colon
+	      S^1\to \extR</m>.
+	    <me>s^{-1}(a)=\begin{cases}\left(\frac{2a}{a^2+1},\frac{a^2-1}{a^2+1}\right)
+	      \amp a\in \R\\ (0,1) \amp a=\infty \end{cases}</me>
+	    Now just check that this works by checking the
+	      compositions <m>s\of
+	      s^{-1}\stackrel{?}{=}\One_{\extR}</m>, <m>s^{-1}\of
+	      s\stackrel{?}{=}\One_{S^1}</m>. 
+  </p>
+</commentary>
+
+
+    <exercise xml:id="linfractransliftexer"><statement><p>Given a function <m>f\colon \extR\to\extR</m>, the <em>lift
+	of <m>f</m> by <m>s</m></em> is the function
+      <m>s^{-1}\of f\of s\colon S^1\to S^1</m>. Show that the lift of the
+      linear fractional transformation <m>T(x)=1/x</m> is given
+      by <m>(x,y)\to (x,-y)</m> and that the lift of <m>S(x)=-x</m> is
+      given by <m>(x,y)\to (-x,y)</m>.</p></statement></exercise>
+
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractransliftexer"/></title>
+  <p>Let <m>T\colon \extR\to\extR</m> be the
+	  function <m>T(x)=1/x</m> and let
+	    <m>g\colon S^1\to S^1</m> be the
+	    function <m>g(x,y)=(-x,-y)</m>. We wish to show
+	    that <m>g=s^{-1}\of T\of s</m>. Applying <m>s</m> to both
+	    sides, this is the same as <m>s\of g=T\of s</m>. To check
+	    this, just evaluate both sides on the
+	    input <m>(x,y)</m>. Both sides produce the
+	    same output <m>\frac{-x}{1+y}</m> (do the algebra). A similar analysis works
+	    for <m>S(x)=-x</m>. Let <m>h(x,y)=(-x,y)</m> and show
+	    that <m>s\of S=h\of s</m>.
+  </p>
+</commentary>
+    
+<exercise xml:id="linfractransfixptexer"><statement><p>An element <m>x_0\in A</m> is called a <term>fixed point</term> of
+      a function <m>f\colon A\to A</m> if <m>f(x_0)=x_0</m>. Find all the
+      fixed points of the linear fractional
+      transformation <m>T(x)=\frac{6x+2}{3x+3}</m>, and find the fixed
+      points of the lift <m>s^{-1}\of T\of s</m>.</p></statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractransfixptexer"/></title>
+  <p>Solve <m>T(x)=x</m> to get <m>x=-1/2,2</m>. These points
+	    lift to the points <m>(-4/5,-3/5), (4/5,3/5)</m>
+	    on <m>S^1</m> (show the work).
+  </p>
+</commentary>
+
+   <exercise xml:id="linfractransfixptevectexer"><statement><p>Let <m>M\colon
+      \R^2\to \R^2</m> be a linear map. A nonzero
+      vector <m>\mathbf{v}\in \R^2</m> is called
+      an <term>eigenvector</term> for <m>M</m>
+      with <term>eigenvalue</term> <m>\lambda\in \R</m>
+      if <m>M\mathbf{v}=\lambda \mathbf{v}</m>. Show that if <m>x_0</m>
+      is a fixed point for a linear fractional
+      transformation <m>T(x)=\frac{ax+b}{cx+d}</m>,
+      then <m>\begin{bmatrix}x_0\\1\end{bmatrix}</m> is an eigenvector
+      for <m>M(T)=\twotwo{a}{b}{c}{d}</m> with
+      eigenvalue <m>cx_0+d</m>.</p></statement></exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="linfractransfixptevectexer"/></title>
+  <p>If <m>\frac{ax+b}{cx+d}=x</m>, then
+	    <me>\twotwo{a}{b}{c}{d}\begin{bmatrix}x\\1\end{bmatrix} =
+	      \begin{bmatrix}ax+b\\cx+d\end{bmatrix}=
+	      (cx+d)\begin{bmatrix}\frac{ax+b}{cx+d}\\ 1\end{bmatrix}=
+	      (cx+d)\begin{bmatrix}x\\ 1\end{bmatrix}.
+	    </me>
+  </p>
+</commentary>
+
+  </exercises>
+  
+  </subsection>
+
+
+<subsection><title>Integral points on the unit circle
+  </title>
+
+  <p>We define the set <m>\mathcal{I}</m>, called the set
+      of <term>integral points</term> in the unit circle <m>S^1</m>, by
+      <me>\mathcal{I} = \{E(k)\colon k\in \Z\}.</me> This subsection is
+      an exploration of how integral points are distributed in the unit
+      circle. We begin with a Lemma.
+  </p>
+
+  <p>
+    <lemma xml:id="Einjectsintegerslemma"><statement>
+	<p>If <m>E(m)=E(n)</m> for integers <m>m,n</m>, then <m>m=n</m>.
+	</p>
+      </statement>
+    </lemma>
+  </p>
+
+  <exercise xml:id="Einjectsintegersexer">
+    <p>Prove <xref ref="Einjectsintegerslemma"/>. Hint: examine your solution to
+    <xref ref="walkarounds1exer"/>.
+    </p>
+  </exercise>
+
+  <commentary component="instructor">
+  <title>Instructor's solution for <xref ref="Einjectsintegersexer"/></title>
+  <p>If <m>E(n)=E(m)</m>, then <m>E(n-m)=E(0)</m>, so <m>m-n=2\pi k</m>
+    for some integer <m>k</m>. If <m>k\neq 0</m>, then we have <m>\pi =
+      \frac{m-n}{2k}</m>. But this is impossible because <m>\pi</m> is
+    irrational. Therefore we must have <m>n=m</m>.
+  </p>
+</commentary>
+
+  <p>Let <m>a,b</m> be real numbers with <m>a\lt b</m>. We define
+      the <term>open interval</term> <m>U_{a,b}</m> of the unit circle
+      to be the set
+      <me>U_{a,b}=\{E(t)\colon a\lt t\lt b\}.</me> We say that a
+      subset <m>X\subseteq S^1</m> is <term>dense</term> in <m>S^1</m>
+      if every open interval of <m>S^1</m>
+      contains an element
+      of <m>X</m>. 
+  </p>
+
+  <p><proposition xml:id="intptsdenseins1prop"><statement><p>The set <m>\mathcal{I}</m> is dense in <m>S^1</m>.
+	</p>
+      </statement>
+      <proof> (This is an outline of the main points of the proof. You will
+	complete the details in the exercises below.) Let <m>a,b</m> be
+	given, with <m>a\lt b</m>, and
+	let <m>\epsilon=b-a</m>. If <m>\epsilon \geq 2\pi</m>,
+	then <m>U_{a,b}=S^1</m>, so <m>U_{a,b}</m> contains an element
+	of <m>\mathcal{I}</m> because <m>U_{a,b}</m> contains
+	all of <m>\mathcal{I}</m>. For the remainder of the proof, we
+	assume <m>\epsilon\lt 2\pi</m>. 
+	<ol>
+	  <li>Choose a finite collection of open
+	    intervals <m>\{U_k\}_{k=1}^N</m>, where <m>N</m> is a
+	    positive integer and each <m>U_k</m> is
+	    an arc of length <m>\epsilon</m>, that is,
+	    <me>U_k =U_{a_k,a_k+\epsilon}</me> for
+	    some real number <m>a_k</m>, and such that
+	    <me>S^1=\bigcup_{k=1}^N U_k.</me>
+	  </li>
+	  <li>At least one of the intervals <m>U_k</m> in the previous
+	    part must contain at least two elements
+	    of <m>\mathcal{I}</m>, say <m>E(m)</m> and <m>E(n)</m>,
+	    with <m>E(m)\neq E(m)</m>.
+	  </li>
+	  <li>For the two points <m>E(m),E(n)</m> in the previous part,
+	    choose real numbers <m>s,t</m> such that <m>0\leq s\lt t\lt
+	      2\pi</m>, such
+	    that <m>\{E(m),E(n)\}=\{E(s),E(t)\}</m>. Without loss of
+	    generality, we may assume <m>E(m)=E(s)</m> and <m>E(n)=E(t)</m>.
+	  </li>
+	  <li>Let <m>t_0=t-s</m>, so that <m>0\lt t_0\lt \epsilon</m>.
+	    We have
+	    <me>E(n)E(-m)=E(n-m)=E(t-s)=E(t_0).</me>
+	  </li>
+	  <li>Choose an integer <m>k</m> so that <m>a\lt kt_0 \lt
+	      b</m>. Now we have <m>E(kt_0)=E(k(n-m))\in U_{a,b}\cap \mathcal{I}</m>, as desired.
+	  </li>
+	</ol>
+      </proof>
+  </proposition>
+</p>
+
+  <exercises>
+
+<exercise xml:id="intptsdensexer1">
+  <statement>
+    <p>Give specific details for how one can choose the
+    intervals <m>U_k</m> in part 1 of the proof of <xref ref="intptsdenseins1prop"/>. How
+      do you know what integer <m>N</m> is needed? Write
+      explicit expressions for the numbers <m>a_k</m>.
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="intptsdensexer1"/></title>
+  <p>Here is one way to choose the intervals. If you but them end-to-end, the number of arc segments of
+    length <m>\epsilon</m> that fits into <m>S^1</m>
+    is <m>2\pi/\epsilon</m>. The next integer up is <m>\lfloor
+    2\pi/\epsilon\rfloor +1</m>. But the union of open intervals together
+    (i.e., consecutive intervals <m>\ldots
+      U_{a,b},U_{b,c},U_{c,d},\ldots</m> with <m>a\lt b\lt c\lt d</m>)
+    does not contain the points <m>b,c</m>, etc, at the butted
+    joints. We can patch the butted intervals by overlaying a second set
+    of intervals whose endpoints fall at the midpoints of the first
+    set. We could do this with two sets of open intervals. Let <m>M=\lfloor
+    2\pi/\epsilon\rfloor +1</m>.
+    <md>
+      <mrow>V_k \amp =\{U_{k\epsilon,(k+1)\epsilon}\}_{k=0}^M</mrow>
+      <mrow>W_k \amp =\{U_{(k+1/2)\epsilon,(k+3/2)\epsilon}\}_{k=0}^M</mrow>      
+    </md>
+    Now we can choose <m>N=2(M+1)</m> and set <me>(U_k)=(V_0,\ldots,V_M,W_0,\ldots,W_M).</me>
+  </p>
+</commentary>
+
+<exercise xml:id="intptsdensexer2">
+  <statement>
+    <p>Justify the claim made in part 2 of the proof. Why must there be
+    an interval <m>U_k</m> that contains two elements
+    of <m>\mathcal{I}</m>. (Hint: what if this were not the case?) 
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="intptsdensexer2"/></title>
+  <p>If there is no <m>U_k</m> that contains 2 elements
+    of <m>\mathcal{I}</m>, then the number of points
+    in <m>\mathcal{I}</m> is less than or equal to <m>N</m>. This
+    contradicts the <xref ref="Einjectsintegerslemma"/>, that shows the number of points in <m>\mathcal{I}</m> is infinite.
+  </p>
+</commentary>
+
+<exercise xml:id="intptsdensexer3">
+  <statement>
+    <p>    Draw sketches to illustrate what is going on in part 3 of the
+  proof. Why is the phrase "without loss of generality" needed?
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="intptsdensexer3"/></title>
+  <p>(draw sketches) We need "without loss of generality because
+    orientation matters. Traveling a path starting at <m>1</m> and
+    moving counterclockwise, the first point we encounter in the
+    set <m>\{E(m),E(n)\}</m> needs to be <m>E(m)</m> for what comes
+    next. If we run into <m>E(n)</m> first, then we can just exchange
+    the values of <m>m,n</m>, and go from there.
+  </p>
+</commentary>
+
+<exercise xml:id="intptsdensexer4">
+  <statement>
+    <p>In part 4 of the proof, how do we know that <m>0\lt t_0\lt
+    \epsilon</m>? Justify each of the "equals" signs in the displayed equation.
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="intptsdensexer4"/></title>
+  <p>We now have <m>m=s+2\pi k</m> and <m>n=t+2\pi\ell</m> for some
+    integers <m>k,\ell</m>. Thus we have
+    <me>E(n-m)=E(t-s+2\pi(\ell -k))=E(t-s).</me>
+    We have <m>t_0\lt \epsilon</m> because the arc from <m>s</m>
+    to <m>t</m> radians is <m>t-s=t_0</m> radians. This is the same as
+    the shortest arc from <m>E(m)</m> to <m>E(n)</m>, which is less
+    than <m>\epsilon</m> because <m>E(m),E(n)</m> both lie in the
+    same <m>U_k</m> of arc length epsilon.
+  </p>
+</commentary>
+
+<exercise xml:id="intptsdensexer5">
+  <statement>
+    <p>In part 5 of the proof, how do we know that it is possible to
+      choose the integer <m>k</m>? (Hint: what if it were not possible?)
+      Justify the "equals" sign and the "is an element of" sign in the
+      last sentence.
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor">
+  <title>Instructor's solution for <xref ref="intptsdensexer5"/></title>
+  <p>Picture a ruler with consecutive tick marks spaced
+    by <m>t_0</m>. If there is no tick mark on this ruler
+    between <m>a</m> and <m>b</m>, then both <m>a,b</m> must lie between
+    consecutive marks <m>\ell t_0,(\ell+1)t_0</m> for some
+    integer <m>\ell</m>, that is, we would
+    have
+    <me>\ell t_0 \leq a \lt b \leq (\ell+1)t_0.</me> But then we would
+    have <m>b-a\leq t_0</m>, which contradicts <m>t_0\lt
+      \epsilon=b-a</m>. For the last sentence, use <m>t_0=n-m +2\pi
+      j</m> for some integer <m>j</m> (by the previous exercise), so <m>E(kt_0)=E(k(n-m))</m>.
+  </p>
+</commentary>
+
+
+</exercises>
+
+</subsection>
+  
+
+
+</section>

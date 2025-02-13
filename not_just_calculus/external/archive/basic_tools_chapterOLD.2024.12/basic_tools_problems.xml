@@ -1,0 +1,1377 @@
+<section xml:id="basic_tools_problems_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Problems
+</title>
+
+
+<subsection><title>Linear and Exponential Growth</title>
+  <exercises>
+
+    <exercise xml:id="hotelbilldoubleexer"><statement><p>Consider the following true-life situation.
+	  <blockquote>
+"I want to rent this room for the month of July," he said.  The clerk
+wheezed.  He peered through the narrow slits of his bloodshot eyes,
+glaring through the murk of the humid dusty darkness of the fleabag
+lobby, and said, "for you<mdash/>a deal."  "How much?" said the big guy,
+sweat trickling down his face, staining the collar of his dingy shirt
+which didn't appear to have been washed in weeks.  Noticing the telltale
+bulge of a revolver under the stranger's dirt-stained jacket, the clerk
+replied, "First day<mdash/>one cent.  Second day<mdash/>two cents.  Third
+day<mdash/>four.  Every day it doubles."  The stranger's face drew into a
+knot as he scrutinized the greasy poker-faced clerk.  He said, "That's
+nothin'.  What's the hitch?"
+	  </blockquote>
+	  <ol><li>How much would the stranger pay on July 31st?
+	    </li>
+	    <li>What would the bill be for the month of July?</li>
+	  </ol>
+</p>
+  </statement>
+    </exercise>
+
+    	  <!--
+	      Comment on grammar choices: the lack of a hyphen in the
+	  phrases "true life", "dirt stained", and "poker faced" is
+	  intentional. It is meant to be funny.
+	  -->
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="hotelbilldoubleexer"/></title>
+  <p>
+	  <ol><li><m>2^{30} \text{ cents } = \$10,737,418.24</m>
+	      </li>
+	    <li><m>\$21,474,836.47</m>
+	      </li>
+	  </ol>
+</p>
+</commentary>
+    
+  <exercise xml:id="investmentvalueexer"><statement><p>An
+	investment portfolio has holdings in instruments <m>X</m>
+	and <m>Y</m>. At a certain moment, both instruments have a value of <m>100</m>
+	dollars. Beginning at that same moment, the value of <m>X</m>
+	drops exactly <m>10</m> dollars every day, and the value of
+	<m>Y</m> loses <m>20</m>
+	percent of its value every day.
+	<ol>
+	  <li>Assuming that the values of both investments are
+	  continuous functions of time, Which of <m>X,Y</m> is the first to reach a value of 20 dollars?</li>
+	  <li>Explain how you know, without calculating, which
+	  investment is the first to reach a value of zero.
+	  </li>
+	</ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="investmentvalueexer"/></title>
+  <p>
+	<ol>
+<li>Value functions are <m>X(t) = 100 - 10t</m> and
+      <m>Y(t)=100(.8)^t</m>.  Solve <m>X(t)=20</m> and <m>Y(t)=20</m>
+      see that <m>X(8)=20</m> and <m>Y(7.21)\approx 20</m>, so <m>Y</m>
+      is the first to reach the value <m>20</m>.
+</li>
+<li>There is no <m>t</m> for which <m>Y(t)=0</m> (the graph of <m>Y</m>
+  is asymptotic to the <m>t</m>-axis). By contrast, the graph of <m>X</m> is linear,
+  with a negative slope, so it must have a <m>t</m> intercept for some
+  positive value of <m>t</m>.</li>
+	</ol>    
+</p>
+</commentary>
+  
+
+<!--
+  <exercise xml:id="gumbypokeydietexer"><statement><p>Gumby and Pokey decide to go on a diet together.  Gumby and Pokey
+	both weigh <m>10</m>
+	ounces. Starting their diets on the same day, Gumby
+	loses <m>1/10</m>
+	of an ounce each day, while Pokey loses half his body
+  weight each day.  
+	<ol>
+	  <li>Who wins the race to the body weight of 1 ounce?</li>
+<li>Explain how you know, without calculating, that Gumby will win the
+  race to zero body weight.</li>
+<li>How much of Pokey is left when Gumby vanishes?  </li>
+	</ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="gumbypokeydietexer"/></title>
+  <p>
+	<ol>
+<li>Body weight functions are <m>G(t) = 10 - t/10</m> and
+      <m>P(t)=10(1/2)^t</m>.  Solve <m>G(t)=1</m> and <m>P(t)=1</m> to see that Pokey
+  wins (about 3.3 days versus 90 days).</li>
+<li>There is no <m>t</m> for which <m>P(t)=0</m>.</li>
+<li>It takes 100 days for <m>G(t)</m> to hit zero.  At that time, Pokey
+  weighs <m>10(1/2)^{100}\approx 7.9\times 10^{-30}</m> ounces.</li>
+	</ol>    
+</p>
+</commentary>
+-->
+
+  <exercise xml:id="rabbitturtleraceexer"><title>Zeno's Paradox</title>
+    <statement><p>The Greek philosopher Zeno (ca. 450BC)
+considered the following motion problem.  A rabbit and a turtle agree to
+run a race.  Displaying good sportsmanship, the rabbit, who can run
+faster, gives the turtle a head start.  Zeno argued that the rabbit will
+never catch the turtle, as follows.  To catch the turtle, the rabbit
+must first travel from the starting point to the turtle's starting
+point.  During this time, the turtle will advance.  Let's call the
+turtle's new location point 2.  Now the rabbit must travel to point 2,
+but during that time, the turtle advances to point 3.  And so on.  This
+process defines an infinite sequence of distinct points.  Traveling from
+each one to the next requires a positive amount of time.  Since an
+infinite sum of positive numbers must be infinite, Zeno concludes that
+the rabbit will never catch the turtle.  Of course, Zeno knew there must
+be some flaw in this argument, but was unable to resolve the paradox
+satisfactorily.
+	  </p>
+
+	  <p> Analyze Zeno's paradox under the following assumptions:
+the rabbit travels at a constant speed of 5 feet per second; the turtle
+travels at a constant speed of 2 feet per second; and the head start
+distance is 10 feet.  Place coordinates on the race track with the
+rabbit beginning at 0 and the turtle beginning at 10, with both running
+in the positive direction.
+	    <ol>
+	      <li>Using high school algebra and the formula
+		<me>(\text{distance}) = (\text{rate})(\text{time})</me>
+find the location where the rabbit catches the turtle, and the time
+elapsed from the beginning of the race to the point where the rabbit
+catches the turtle.
+	      </li>
+	      <li>
+Find the sequence of distances traveled by the rabbit from the
+rabbit's starting point to the turtle's starting point, from there to
+point 2, from point 2 to point 3, etc.		
+	      </li>
+	      <li>Find the sequence of times that elapse while the
+rabbit traveled the distance intervals in the previous part.
+	      </li>
+	      <li>Use the theory of geometric sequences to resolve
+Zeno's paradox by reconciling your findings in the previous steps of
+this problem.
+	      </li>
+	    </ol>
+	  </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rabbitturtleraceexer"/></title>
+  <p>
+	    <ol>
+	      <li>
+		Use <m>R(t)</m> for position of rabbit at time <m>t</m>, use <m>T(t)</m> for
+    position of turtle at time <m>t</m>, so <m>R(t) = 5t</m>, <m>T(t)=10+2t</m>, solve
+    <m>R(t)=T(t)</m> to get <m>t=10/3</m> seconds; the rabbit at turtle meet at
+    the point <m>R(10/3)=T(10/3)=50/3</m> feet from the Rabbit's starting point
+	      </li>
+	      <li> <m>10,10(2/5),10(2/5)^2, \ldots</m></li>
+	      <li> <m>2,2(2/5),2(2/5)^2,\ldots</m>
+	      </li>
+	      <li>total time is <m>\sum_{n=1}^\infty 2(2/5)^n =
+      2\left(\frac{1}{1-2/5}\right) = 10/3</m>, total distance (for the
+      rabbit) is <m>\sum_{n=1}^\infty 10(2/5)^n =
+      10\left(\frac{1}{1-2/5}\right) = 50/3</m>
+	      </li>
+	    </ol>
+</p>
+</commentary>
+  
+  
+      <exercise xml:id="dribpuzzleexer"><statement><p>The following problem is a modern version of Zeno's paradox. It is taken
+from an article by George Andrews in the January 1998 issue of the
+	    <em>American Mathematical Monthly</em>, Vol. 105
+No. 1 and is attributed to a Prof. Sleator. 
+	  </p>
+	  <p>
+Two trees are one mile apart. A drib flies from one tree to the other
+and back, making the first trip at 10 miles per hour, the return at 20
+miles per hour, the next at 40 and so on,
+each successive mile at twice the speed of the preceding.
+<ol>
+<li>Write the first five terms of the sequence of velocities for trip
+  numbers 1, 2, 3, etc.  Write an explicit formula for this sequence.</li>
+<li>Write the first five terms of the sequence times
+  taken for trips 1, 2, 3, etc.  Write an explicit formula for this sequence.</li>
+<li>Write the first five terms of the sequence of how much time it
+takes the drib to travel 1 mile, 2 miles, 3 miles, etc.  Write an
+  explicit formula for this sequence.</li>
+<li>Where is the drib 12 minutes after the first trip begins?</li>
+</ol>
+    </p>
+  </statement>
+	<NOanswer><p>
+    </p>
+  </NOanswer>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="dribpuzzleexer"/></title>
+  <p>
+	    <ol>
+<li> <m>10,10\cdot 2, 10\cdot 2^2,10\cdot 2^3,10\cdot 2^4</m>, <m>10\cdot 2^{n-1}</m>,
+  <m>n\geq 1</m></li>
+<li> <m>1/10 \cdot (1/2)^{n-1}</m>, <m>n\geq 1</m></li>
+<li> <m>\frac{1}{10}\left(\frac{1-(1/2)^{n}}{1-1/2}\right) = \frac{1}{5}\left(1-(1/2)^{n}\right)</m></li>
+<li>Since the sequence in the previous part goes to 1/5 hour or 12
+  minutes, this means that in 12 minutes the drip has completed an
+  infinite number of 1-mile trips.  Perhaps the drib is in both trees at
+  once?</li>
+	    </ol>
+</p>
+</commentary>
+		 
+<exercise xml:id="snowflakecurveexer"><title>The Snowflake Curve</title>
+	<statement><p><em>Koch's snowflake</em> is a geometric figure
+	    built recursively, as follows.  Stage 1 is an equilateral
+	    triangle whose sides are 1 unit in length.  To produce
+	    Stage <m>n</m> from Stage <m>n-1</m>, perform the replacement
+	    of edges illustrated in
+	    <xref ref="snowflake_recursionfig"/>.
+
+    	    <figure xml:id="snowflake_recursionfig">
+		   <caption>Each edge at stage <m>n-1</m>
+		     is replaced by four edges at stage <m>n</m>
+      </caption>
+            <image width="100%" source="images/snowflake_recursion.png"></image>
+           </figure>
+	    
+	  </p>
+	  <p>
+The snowflake is the figure obtained after infinitely many stages.
+Stages 1, 2, 3 and the finished snowflake are shown in
+<xref ref="KochFlakefig"/>.
+
+    	         <figure xml:id="KochFlakefig">
+       <caption> The first three stages and the finished snowflake
+       (https://commons.wikimedia.org/wiki/File:KochFlake.png) 
+      </caption>
+            <image width="70%" source="images/KochFlake.png"></image>
+           </figure>
+
+	    <ol>
+<li>Write the first 5 terms of the sequence of the number of edges in
+  Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</li>
+<li>Write the first 5 terms of the sequence of the lengths of each edge in
+  Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.</li>
+<li>Write the first 5 terms of the sequence of the total perimeter of
+the figure for Stages 1, 2, 3, etc.  Write an explicit formula for this
+  sequence.  Hint: Multiply your results from the previous two parts.</li>
+<li>Write the first 5 terms of the sequence of the number of new
+equilateral triangle "bumps" added at Stages 1, 2, 3, etc.  Write an
+explicit formula for this sequence.  Hint: Adapt your result from
+  part (a).</li>
+<li>Write the first 5 terms of the sequence of areas of each new
+equilateral triangle "bump" added at Stages 1, 2, 3, etc.  Write an
+explicit formula for this sequence.  Hint: The area of an equilateral
+triangle whose side measures <m>s</m> units of length is <m>s^2\sqrt{3}/4</m>.
+  Hint: Use part (b).</li>
+<li>Write the first 5 terms of the sequence of the new area added
+(total area of all the new "bumps") at Stages 1, 2, 3, etc.  Write an
+explicit formula for this sequence.  Hint: Multiply your results from
+  the previous two parts.</li>
+<li>Write the first 5 terms of the sequence of total area for
+Stages 1, 2, 3, etc.  Write an explicit formula for this sequence.
+Hint: Sum the terms of the geometric sequence from the previous part.
+Watch out!  The first couple of terms may not fit the pattern of the
+  sequence.</li>
+<li>What is the perimeter of the snowflake?</li>
+<li>What is the area of the snowflake?</li>
+	    </ol>
+	  </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="snowflakecurveexer"/></title>
+  <p>
+	    <ol>
+	      <li> <m>3\cdot 4^{n-1}</m>, <m>n\geq 1</m></li>
+	      <li> <m>(1/3)^{n-1}</m>, <m>n\geq 1</m></li>
+	      <li> <m>3(4/3)^{n-1}</m>, <m>n\geq 1</m></li>
+<li> <m>3\cdot 4^{n-2}</m>, <m>n\geq 2</m>.  Note that the first term in this
+  sequence is 1.</li>
+<li> <m>\frac{\sqrt{3}}{4}(\frac{1}{9})^{n-1}</m>, <m>n\geq 1</m></li>
+<li> <m>\frac{3\sqrt{3}}{16}(\frac{4}{9})^{n-1}</m>, <m>n\geq 2</m>.  Note that
+  the first term in this sequence is <m>\sqrt{3}/4</m>.</li>
+<li> <m>\displaystyle \frac{\sqrt{3}}{4} +
+  \frac{3\sqrt{3}}{20}\left({1 - (4/9)^n}\right)</m></li>
+<li>The perimeter is the limit as <m>n\to\infty</m> of the sequence in
+  part c, which is infinity.</li>
+<li>The area is the limit as <m>n\to\infty</m> of the sequence in
+  part g, which is <m>\frac{2\sqrt{3}}{5}</m>.</li>
+	    </ol>
+</p>
+</commentary>
+
+
+  </exercises>
+
+  
+  
+  </subsection>
+  
+
+<subsection>     <title>Rational and Irrational Numbers</title>
+
+  <p>A <term>rational number</term><idx><h>rational number</h></idx>
+     is a number that can be written in the
+    form <m>a/b</m>
+    for some integers <m>a,b</m>. An <term>irrational
+      number</term><idx><h>irrational number</h>
+    </idx>
+     is a
+    real number that is not rational. The standard symbol for the set of
+    rational numbers<idx><h>the set of rational numbers</h>
+    </idx>
+    is <m>\Q</m><notation><usage><m>\Q</m>
+      </usage><description>the set of rational numbers</description>
+    </notation>. In set notation, we have
+    <me>\Q=\left\{\frac{a}{b}\colon a,b\in \Z, b\neq 0\right\}.</me>
+    The following is a classic proof by contradiction that proves that
+    at least one irrational number exists.
+  </p>
+  
+<p>    <proposition xml:id="root2isirrat"><statement><p>The number <m>\sqrt{2}</m> is irrational.
+	</p>
+      </statement>
+      <proof><p>
+Suppose on the contrary that <m>\sqrt{2}=a/b</m> is rational, where <m>a,b</m> are
+integers. We may assume both <m>a,b</m> are positive, and we may assume
+that the fraction <m>a/b</m> is reduced, that is, that <m>a,b</m> have
+no common factors other than 1. 
+Squaring both sides of
+<m>\sqrt{2}=a/b</m> and rearranging, we have <m>2b^2=a^2</m>. This says
+that <m>a^2</m> is even, so it must be that <m>a</m> itself is even.
+That means we can write <m>a=2k</m> for some integer <m>k</m>. Substituting <m>2k</m>
+for <m>a</m> in the equation <m>2b^2=a^2</m>, we
+get <m>2b^2=(2k)^2=4k^2</m>, which simplifies to <m>b^2=2k^2</m>. Now we
+see that <m>b^2</m> is even, so it must be that <m>b</m> is even. But this means that <m>a,b</m> are
+both divisible by 2, which contradicts the assumption that <m>a,b</m>
+share no common factors. We conclude that
+ <m>\sqrt{2}</m> is irrational.
+	</p>
+      </proof>
+    </proposition>
+  </p>
+
+<exercise xml:id="parseroot2irratproofexer"><statement><p>Justify the statement in the proof above that
+      says "so <m>a</m> itself must be even". Give a proof that uses the
+      results of <xref ref="evenoddexer"/>. Give another proof that uses
+      only the Fundamental Theorem of Arithmetic.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="parseroot2irratproofexer"/></title>
+  <p>
+      <xref ref="evenoddexer"/> establishes that "an odd
+      times an odd must be odd". Suppose now
+      that <m>2|a^2</m>. If <m>a</m> is odd, then <m>a^2</m> is odd, but
+      this contradicts that <m>2|a^2</m>. Thus it must be that <m>a</m>
+      is even.
+  </p>
+  <p>
+      For another proof, apply <xref ref="primedividesexer"/> to conclude
+      that if <m>2|a^2</m>, then <m>2|a</m> as well. Alternatively,
+      apply the Fundamental Theorem of Arithmetic
+      directly. Suppose <m>a=p_1p_2\ldots p_r</m> is a prime
+      factorization of <m>a</m>. If <m>2|a^2</m>, then one of the
+      primes <m>p_j</m> must be <m>2</m>, by uniqueness of prime
+      factorization. Thus <m>2|a</m>.
+</p>
+</commentary>
+
+<p>
+  It turns out that irrational numbers are not rare or isolated among
+  the real numbers; the rational numbers and irrational numbers are
+  "everywhere" in the real line. The following proposition makes this
+  statement precise.  Recall that an <em>open interval</em> of the real
+  line is a set of the form
+<me>(a,b)=\{x\in \R\colon a\lt x\lt b\}</me> for some real
+numbers <m>a,b</m> with <m>a\lt b</m>.
+We say that a
+      subset <m>X\subseteq \R</m> is <term>dense</term> in <m>\R</m>
+if every open interval  contains an element
+      of <m>X</m>. 
+  </p>
+
+<p><proposition xml:id="ratsirratsdenseinrealsprop"><statement><p>The
+	set <m>\Q</m> of rational numbers is dense in <m>\R</m>. 
+	The set <m>\R\setminus \Q</m> of irrational numbers is dense in <m>\R</m>.
+	</p>
+      </statement>
+    <proof>(This is an outline of the main points of the proof
+      that <m>\Q</m> is dense in <m>\R</m>. In exercises below, you will complete the 
+      details of the proof of the density of the rationals, and you will
+      also prove the density of the irrationals.)
+      Let <m>a,b</m> be
+        given, with <m>a\lt b</m>, and
+        let <m>\epsilon=b-a</m>. Choose an integer <m>n</m> large enough
+        so that <m>1/n \lt \epsilon</m>. We claim that there is some
+        integer multiple of <m>1/n</m> that lies between <m>a</m>
+        and <m>b</m>, that is, there is some integer <m>m</m>
+	such that <m>a\lt m/n \lt b</m>. If not, then there exist
+        consecutive integer multiples <m>k/n,(k+1)/n</m> of <m>1/n</m>
+        so that
+	<me>k/n \leq a \lt b\leq (k+1)/n.</me> But then we would have
+	<m>b-a\leq (k+1)/n -k/n = 1/n</m>, a contradiction. Thus we have
+	shown that the open interval <m>(a,b)</m> contains a rational number.
+	We conclude
+	that <m>\Q</m> is dense in <m>\R</m>. 
+      </proof>
+      </proposition>
+	</p>
+      
+<exercise xml:id="parseratsdenseexer"><statement><p>
+      <ol>
+	<li>In the proof outline of
+	  <xref ref="ratsirratsdenseinrealsprop"/> above, how do we know that we can "choose an
+	  integer <m>n</m> large enough"?
+	</li>
+	<li>Explain why it is that "then we would have <m>b-a\leq
+	1/n</m>" (immediately after the displayed equation).
+	</li>
+	<li>What does that contradict?
+	</li>
+	<li>What allows us to "conclude that <m>\Q</m> is dense in <m>\R</m>"?
+	</li>
+      </ol>
+
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="parseratsdenseexer"/></title>
+  <p>
+    <ol>
+      <li>We start with the observation that, for any positive real
+      number, there exists and integer that is larger. (This is called
+      the Archimedean property of the real numbers, but we can be
+	explicit by choosing <m>n=\lceil 1/\epsilon \rceil + 1</m>.) Thus, there exists
+	some integer <m>n</m> such that <m>n\gt 1/\epsilon</m>. It
+	follows that <m>1/n\lt \epsilon</m>.
+      </li>
+      <li>The situation is that we have 4 real numbers <m>R,S,T,U</m>
+	with <m>R\leq S\lt T\leq U</m>. (Look at a sketch of these on
+	the real number line.) It follows that <m>T-S \leq U-V</m>.
+      </li>
+      <li>This contradicts our previous choice of <m>n</m>, which
+	guarantees that <m>1/n\lt b-a</m>.
+      </li>
+      <li>Since the choice of <m>a,b</m> was
+	arbitrary, this shows that <em>every</em> open interval
+	of <m>\R</m> contains a rational number.
+      </li>
+    </ol>
+</p>
+</commentary>
+
+<exercises>
+  
+    <exercise xml:id="rootnisirratorintexer"><statement><p>Let <m>n</m> be a positive integer. Show
+	  that either <m>n</m> is a perfect square (that
+	  is, <m>n=k^2</m> for some integer <m>k</m>),
+	  or <m>\sqrt{n}</m> is irrational.
+    </p>
+      </statement>
+      <hint>Let <m>n</m> be a positive integer, and suppose
+	that <m>\sqrt{n}=a/b</m> is rational, where <m>a,b</m> are
+	positive integers that share no common factors other than 1. Squaring and rearranging,
+	we have <m>nb^2=a^2</m>. Let <m>p</m> be a prime factor
+	of <m>b</m>. Explain why it must be that <m>p|a</m>. Explain why
+	this implies that <m>b=1</m>. Explain how this implies the
+	desired conclusion.
+      </hint>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootnisirratorintexer"/></title>
+<p>(completing the outline given in the hint) By
+  <xref ref="primedividesexer"/>, if <m>p|a^2</m>, then <m>p|a</m> (you
+  can also do this directly using the Fundamental Theorem of
+  Arithmetic). But <m>p|a</m> contradicts our assumption that <m>a,b</m>
+  have no common factors other than 1. So there must not be any prime
+  factors of <m>b</m>. This implies <m>b=1</m>. This
+  means <m>\sqrt{n}=a</m>, so <m>n=a^2</m> is a perfect square. We
+  conclude that <m>\sqrt{n}</m> is either an integer or else <m>\sqrt{n}</m>
+  must be irrational.
+</p>
+</commentary>
+    
+<exercise xml:id="irratsdenseexer"><statement><p>
+Complete the proof of <xref ref="ratsirratsdenseinrealsprop"/> by showing that the irrationals are dense in the reals.
+    </p>
+  </statement>
+  <hint>Apply the density of <m>\Q</m> to the
+    interval <m>(a/\sqrt{2},b/\sqrt{2})</m>.</hint>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="irratsdenseexer"/></title>
+  <p>
+    Let <m>a,b</m> be given, with <m>a\lt b</m>. Using the fact that the
+    rationals are dense in the reals, there is some rational number,
+    say <m>m/n</m>, that lies in the
+    interval <m>(a/\sqrt{2},b/\sqrt{2})</m>, that is, we have
+    <me>a/\sqrt{2} \lt m/n \lt b/\sqrt{2}.</me> Multiplying through
+    by <m>\sqrt{2}</m>, we have
+    <me>a \lt m\sqrt{2}/n \lt b.</me> We need only show
+    that <m>m\sqrt{2}/n</m> is irrational. If not, then there are
+    integers <m>p,q</m> such that <m>m\sqrt{2}/n=p/q</m>, so that <m>\sqrt{2}=(pn)/(qm)</m>. But this is
+    impossible, because <m>\sqrt{2}</m> is irrational. Thus we conclude
+    that the interval <m>(a,b)</m> contains an irrational number,
+    namely <m>m\sqrt{2}/n</m>. Since the choice of <m>a,b</m> was
+    arbitrary, we conclude that the irrationals are dense in the reals.
+  </p>
+  <p>Alternatively, you could follow the 4-step outline used to prove
+    that the rationals are dense, making alterations to get to the
+    point <m>a\lt m\sqrt{2}/n\lt b</m> for some
+    integers <m>m,n</m>. Then you finish by showing <m>m\sqrt{2}/n</m>
+    is irrational.
+  </p>
+</commentary>
+
+    <exercise xml:id="walkarounds1exer"><statement><p>Choose an angle <m>\theta_0</m>. Starting at the
+point <m>(1,0)</m>, walk around the unit circle in a counterclockwise
+direction, taking steps of size <m>\theta_0</m>. What is the smallest whole
+number of steps you have to take until you come for the first time to a
+point that you've already stepped on? Where is this first repeated
+	  location?
+	  <ol>
+	    <li>Find the answer for <m>\theta_0 = 20</m> degrees.</li>
+	    <li>Find the answer for <m>\theta_0 = 27</m> degrees.</li>
+	    <li>Find the answer for <m>\theta_0 = \sqrt{2}</m> degrees.</li>
+	    <li>Find the answer for <m>\theta_0 = 3\pi/2</m> radians.</li>
+	    <li>Find the answer for <m>\theta_0 = 1</m> radian. You
+	    may use the fact that <m>\pi</m> is irrational. </li> 
+<li>Find the answer for an arbitrary value of <m>\theta_0</m>. Suggestion:
+  Rather than degrees or radians, you might consider
+  using <em>revolutions</em>
+  for your angle units.	    </li>
+	  </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="walkarounds1exer"/></title>
+  <p>
+	  <ol>
+	    <li>Because <m>20\cdot 18 = 360</m>, the answer is 18
+	      steps. The first revisited point is <m>(1,0)</m>.
+	    </li>
+	    <li>For a brute force solution, we can list the steps in order:
+ <m>27,54,71,98,\ldots</m>. We notice that 40 steps comes out to 3 trips
+around the circle (<m>27\cdot 40 = 360\cdot 3</m>) and that this is the first
+repeated position. So the answer is 40 steps, and the first revisited
+ point is <m>(1,0)</m>. [Comment: there are more
+insightful ways to solve this. You'll need a more general approach for
+part f below.]
+	    </li>
+<li>    Suppose there is some number of steps, say <m>n</m>, at which we visit a
+previously visited point. In those <m>n</m> steps, we would travel
+<m>n\sqrt{2}</m> degrees. To say that this is a previously visited point, it
+has to be true that we got to this point after some number, say <m>m</m>,
+steps, with <m>m\lt n</m>. This means that <m>m\sqrt{2},n\sqrt{2}</m> would have to
+be different by some whole number multiple of 360. So we would have
+		   <me>n\sqrt{2}-m\sqrt{2}=360k</me>
+for some integer <m>k</m>. Rearranging, we would have
+ <m>\sqrt{2}=\frac{360k}{n-m}</m>. But this is impossible by the result of
+<xref ref="root2isirrat"/>. We conclude that there will {\em never} be a repeated
+location when the step size is <m>\sqrt{2}</m> degrees.
+		   </li>
+<li>4 steps, first revisited point is <m>(1,0)</m>
+</li>
+<li>never repeats (similar argument as in part c)</li>
+<li>
+<p>  Let <m>\theta_0</m> be the step size, measured in revolutions. Suppose there
+is some step count <m>n</m> at which we revisit, for the first time, a previously visited
+  point (the step count starts at 0 at the starting
+  point <m>(1,0)</m>).  To
+say that this is a previously visited point, it has to be true that we
+got to this point at some smaller step count <m>m\lt n</m>. We
+  claim that <m>m</m> must be zero. Indeed, if <m>n'</m> is the step
+  count on which we revisit a previously visited point, which we
+  previously visited
+  at <m>m'\lt n'</m> steps, then we would also have
+  revisited the start point <m>(1,0)</m> at the step
+  count <m>n'-m'</m>. By assumption, <m>n</m> is the <em>smallest</em>
+  step count at which we revisit any point, so we must have <m>m=0</m>.
+  </p>
+  <p>
+  In <m>n</m> steps, we travel <m>n\theta_0 = k</m> revolutions,
+  where <m>k \geq 1</m> is some integer.  Solving this last equation, we
+  get <m>\theta=\frac{k}{n}</m>. Notice that, because <m>n,k</m> are the
+  smallest possible integers in the fraction that
+  represents <m>\theta_0</m>, it must be that the fraction <m>k/n</m> is
+  reduced. Furthermore, if <m>\theta_0</m> is not rational, it must be
+  that there is no point on the circle that is ever revisited in any
+  number of steps.
+</p>
+
+<p>To summarize: steps of rational size <m>\theta_0=a/b</m> revolutions, with <m>a,b</m> reduced,
+will first repeat after <m>b</m> steps, and the first repeat location is
+<m>(1,0)</m>. This occurs after traveling exactly <m>a</m> times around the
+circle. Steps of an irrational number of revolutions will never repeat.
+</p>
+</li>
+	  </ol>
+</p>
+</commentary>
+    
+    
+<exercise xml:id="repeatdec9exer"><statement><p>Your intelligent younger cousin declares to you
+      that
+      <m>1.\overline{9}=1.999\ldots \text{(infinitely repeating 9's)}</m>
+	is less than 2. How do you explain that <m>1.\overline{9}</m> is actually <em>equal</em>
+	to 2?
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="repeatdec9exer"/></title>
+  <p>
+Let <m>x=1.\overline{9}</m>. Then <m>10x= 19.\overline{9}</m>, and
+<me>9x=10x-x=19.\overline{9}=1.\overline{9}=18,</me>
+so we must have <m>x=2</m>. Another way to see why <m>1.\overline{9}=2</m> is to
+use the sum formula for geometric series. We have
+<me>.\overline{9} = .9 + .09 + .009 + \cdots = \sum_{n=0}^\infty .9(.1)^n.</me>
+This is a geometric series with initial term <m>.9</m> and common ratio <m>.1</m>,
+and so it sums to the value <m>\displaystyle .9\left(\frac{1}{1-.1}\right)
+= 1.</m>
+Therefore we have <m>x=1.\overline{9}=1+.\overline{9} = 2</m>.    
+</p>
+</commentary>
+
+
+    <exercise xml:id="ratiffdecrepeatexer"><statement><p>Show that a number is rational if and only if it has a  decimal representation
+    that eventually repeats or terminates.
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="ratiffdecrepeatexer"/></title>
+  <p>
+Suppose that <m>x</m> has a repeating decimal representation
+<me> x = X_kX_{k-1}\ldots X_2X_1.\overline{d_1d_2\ldots d_r}</me>
+where the symbols <m>X_j</m> and <m>d_\ell</m> represent digits <m>0\ldots 9</m>.
+Then we have the following.
+<md><mrow>10^r \amp = X_kX_{k-1}\ldots X_2X_1d_1d_2\ldots d_r.\overline{d_1d_2\ldots
+    d_r}\\</mrow>
+  <mrow>(10^r-1)x \amp = 10^rx-x =X_kX_{k-1}\ldots X_2X_1d_1d_2\ldots d_r -
+  X_kX_{k-1}\ldots X_2X_1</mrow>
+</md>
+which is a whole number, say <m>N</m>. Thus we have <m>x = N/(10^r-1)</m>, so we
+see that <m>x</m> is a rational number. If the decimal for <m>x</m>
+terminates, then we simply have <m>x=\frac{N}{10^r}</m> for the
+integer <m>N=10^rx</m>, where <m>r</m> is the length of the finite block of
+digits to the right of the decimal point.
+</p>
+<p>
+Conversely, suppose that <m>x=a/b</m> is a rational number, where <m>a,b</m> are
+whole numbers with <m>b\neq 0</m>. For the case when <m>a,b</m> are both positive,
+long division produces a decimal representation for <m>x</m> through repeated
+use of the division algorithm, where each stage produces a
+remainder <m>r</m> in the range <m>0\leq r\lt b-1</m>. If at any stage
+we obtain a remainder <m>r=0</m>, the decimal terminates. If we never
+obtain a remainder <m>r=0</m>, then eventually we must obtain a
+remainder that we have had before. At this point, the division process
+begins a repeating block that repeats forever. If <m>x</m> is negative,
+we apply the same argument to <m>|x|</m> to obtain a terminating or
+repeating decimal, then <m>x</m> is represented by this decimal with a
+minus sign in front of it.
+</p>
+</commentary>
+    
+
+    <exercise xml:id="termdecexer"><statement><p>Prove the following facts about terminating
+    decimal expansions.
+	  <ol><li>      Suppose that <m>m=2^s5^t</m> for some nonnegative integers
+      <m>s,t</m>. Show that the rational number <m>n/m</m> (<m>n</m> also an integer)
+        has a terminating decimal expansion.
+	    </li>
+	    <li> Suppose that the reduced rational number <m>n/m</m> (<m>n,m</m>
+          integers with no common factors, <m>m\neq 0</m>) has a terminating
+          decimal expansion. Show that <m>m=2^s5^t</m> for some nonnegative integers
+          <m>s,t</m>.
+	    </li>
+	  </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="termdecexer"/></title>
+  <p>
+	  <ol>
+	    <li>
+	                We have
+          <me>m=\left\{
+          \begin{array}{cc}
+            \frac{10^t}{2^{t-s}} \amp \mbox{ if } t\geq s\\
+            \frac{10^s}{5^{s-t}} \amp \mbox{ if } s\geq t\\
+          \end{array}
+            \right.</me>
+          so it follows that
+          <me>\frac{n}{m}=\left\{
+          \begin{array}{cc}
+            \frac{n\cdot 2^{t-s}}{10^{t}} \amp \mbox{ if } t\geq s\\
+            \frac{n\cdot 5^{s-t}}{10^{s}} \amp \mbox{ if } s\geq t\\            
+          \end{array}
+            \right.</me>
+          which has a terminating decimal expansion.
+	    </li>
+	    <li>
+            Write the decimal expansion as 
+	    <md> <mrow> \amp d_{k}d_{k-1}d_{k-2}\cdots d_2d_1d_0.d_{-1}d_{-2}\cdots d_{-j}</mrow>
+	      <mrow>  \amp = \sum_{i=-j}^k d_i10^i</mrow>
+	      <mrow>  \amp = \sum_{i=-k}^j \frac{d_{-i}}{10^i}</mrow>
+	      <mrow>  \amp = \frac{\sum_{i=-k}^j d_{-i}
+	      10^{j-i}}{10^{j}}</mrow>
+            </md>
+where the last equals sign is getting a common denominator. After
+            reducing, the denominator has only 2 and 5 for prime
+            factors. To finish, if you haven't done it already, use the
+            Fundamental Theorem of Arithmetic to prove a little lemma to
+            show that if <m>a/b = n/m</m> are both reduced fractions,
+            with <m>a,b,c,d</m> are positive integers, then <m>a=n</m>
+            and <m>b=m</m>.
+	    </li>
+	  </ol>
+</p>
+</commentary>
+    
+  </exercises>
+</subsection>
+    
+
+
+<subsection>     <title>More Sets and Functions</title>
+  <exercises>
+
+    
+    <exercise xml:id="powersetproblem"><statement><p>
+	  Given a set <m>A</m>, the <term>power set</term><idx><h>power set</h>
+	  </idx>  of <m>A</m>, denoted <m>{\mathcal
+	    P}(A)</m><notation><usage><m>{\mathcal P}(A)</m>
+	    </usage><description>power set of a set <m>A</m>
+	    </description>
+	  </notation>, is defined to be the set of all subsets of <m>A</m>. For example,
+    for <m>A=\{a,b,c\}</m>, we have
+    <me>{\mathcal P}(A) =
+      \{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}.</me>
+   <ol> <li>Why is the empty set considered a subset of <m>A</m>?</li>
+      <li>Write out all of the possible functions from <m>A</m> to
+        <m>\{0,1\}</m>. Hint: there are 8 in all.</li>
+        <li> Can you see a natural one-to-one correspondence between
+          the power set of <m>A</m> and the list of functions you just wrote down?</li>
+   </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="powersetproblem"/></title>
+  <p>
+	  <ol>
+	    <li>Given any two sets <m>X,Y</m>, it must be that case that either
+	      <m>X\subseteq Y</m> or <m>X\not\subseteq Y</m>. The set <m>X</m>
+	      is <em>not</em>
+	       a subset of set <m>Y</m> if <m>X</m> contains
+	      some element that is <em>not</em>
+	       also an element of <m>Y</m>. Because the
+	      empty set does <em>not</em>
+	      contain any element that is <em>not</em>
+	       an
+    element of <m>A</m>, it must be that the empty set is a subset of
+	      <m>A</m>.</li>
+	      <li>
+	      We will write a 3-bit string <m>ijk</m> to denote the function
+    <m>A\to \{0,1\}</m> given by <m>f(a)=i</m>, <m>f(b)=j</m>, <m>f(c)=k</m>. For example,
+    the string <m>010</m> denotes the function given by <m>a\mapsto 0</m>,
+    <m>b\mapsto 1</m>, <m>c\mapsto 0</m>. Using this notation, the 8 functions
+    <m>A\to \{0,1\}</m> are the following.
+    <m></m> 000, 001, 010, 011, 100, 101, 110, 111
+	      <m></m></li>
+   <li>Given a function <m>f\colon A\to \{0,1\}</m>, define the set <m>S_{f}</m> by
+     <me>S_{f} = \{x\in A\colon f(x)=1\}.</me>
+    Using this correspondence, the list of bit strings in the previous
+    part correspond to the following subsets of <m>A</m>
+    <me>\emptyset, \{c\}, \{b\},\{b,c\}, \{a\}, \{a,c\}, \{a,b\}, \{a,b,c\}
+      </me>
+   </li>
+	</ol>
+</p>
+</commentary>
+    
+    <exercise xml:id="algofsetsexer"><statement><p>Let <m>S</m> be a set. An <term>algebra of
+	    subsets</term><idx><h>algebra of sets</h>
+	  </idx>
+	   of <m>S</m> is a
+      subset <m>{\mathcal A}\subseteq {\mathcal P}(S)</m> of the power set of
+      <m>S</m> (see <xref ref="powersetproblem"/> above) for which the following properties hold.
+<blockquote>	  <ol marker="i"> <li><m>\emptyset \in {\mathcal A}</m></li>
+	    <li>For every <m>X,Y\in {\mathcal A}</m>, <m>X\cap Y\in {\mathcal A}</m></li>
+	    <li>For every <m>X,Y\in {\mathcal A}</m>, <m>X\cup Y\in  {\mathcal A}</m></li>
+	    <li>For every <m>X\in {\mathcal  A}</m>, <m>S\setminus X \in {\mathcal A}</m></li>
+</ol></blockquote>
+<ol>  <li>Show that the power set <m>{\mathcal P}(S)</m> is an algebra of
+    sets for any set <m>S</m>.</li>
+     <li>Give an example of a collection of subsets of some set <m>S</m> for which
+       exactly  three of the four set algebra properties hold.</li>
+</ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="algofsetsexer"/></title>
+  <p>
+    <ol>
+      <li>A power set of a set <m>S</m>
+	satisfies i, ii, iii, and iv because it
+	contains <em>every</em> subset of <m>S</m>.
+      </li>
+      <li>Here is a minimal example: Let <m>S=\{a\}</m> and
+	consider <m>\mathcal{A}=\{\emptyset\}</m>.
+	This satisfies i, ii, and iii, but not iv.
+      </li>
+    </ol>
+</p>
+</commentary>
+
+<!--
+    <exercise><statement><p>Let <m>f\colon S\to T</m> be a function. Define
+    <m>\overleftarrow{f}\colon {\mathcal P}(T)\to {\mathcal P}(S)</m> by
+    <m>\overleftarrow{f}(V)=f^{-1}(V)</m> for <m>V\subseteq T</m>, where <m>{\mathcal P}</m> denotes the
+    power set operator, defined in <xref ref="powersetproblem"/> above, and
+    <m>f^{-1}(V)</m> denotes the preimage of <m>V</m> under <m>f</m>. The function
+	  <m>\overleftarrow{f}</m> is an <term>algebra of sets
+    mapping</term><idx><h>algebra of sets mapping</h></idx>, which means that the following
+	  properties hold for all <m>U,V\in {\mathcal P}(T)</m>.
+	  <mdn>
+	    <mrow xml:id="preservesintersection">
+         \overleftarrow{f}(U\cap V) \amp = \overleftarrow{f}(U) \cap
+              \overleftarrow{f}(V)</mrow>
+	    <mrow xml:id="preservesunion">
+         \overleftarrow{f}(U\cup V) \amp = \overleftarrow{f}(U) \cup
+              \overleftarrow{f}(V)</mrow>
+	    <mrow xml:id="preservesdifference">
+        \overleftarrow{f}(T\setminus U) \amp = S\setminus
+              \overleftarrow{f}(U)</mrow>
+	  </mdn>
+<ol>     <li>Demonstrate each of the properties of an algebra of sets
+        mapping with an example in which none of the sets involved in
+    the equations are empty.</li>
+  <li>Choose one of the properties and show that it holds in
+  general.</li>
+</ol>
+    </p>
+  </statement>
+  <NOanswer><p>
+    </p>
+  </NOanswer>
+</exercise>
+    -->
+    
+    <exercise xml:id="charfunexer"><statement><p>
+	  Let <m>S</m> be a set. Given a subset <m>A</m> of <m>S</m>,
+	  the <term>characteristic
+	  function</term><idx><h>characteristic function for a set</h>
+	  </idx>
+	  for <m>A</m> (relative to <m>S</m>), denoted
+	  <m>\chi_A\colon S\to \{0,1\}</m><notation><usage><m>\chi_A</m>
+	    </usage><description>characteristic function for the
+	    set <m>A</m>
+	    </description>
+	  </notation>,
+    is given by
+    <me>\chi_A(x) =\left\{
+      \begin{array}{cc}
+        1 \amp \mbox{if } x\in A\\
+        0 \amp \mbox{if } x\not\in A\\
+      \end{array}\right..</me>
+      Let <m>A,B</m> be subsets of <m>S</m>. Prove the following. The symbol
+      "<m>\oplus</m>" denotes addition modulo 2.
+    <ol>
+      <li> <m>A=B</m> if and only if <m>\chi_A=\chi_B</m></li>
+      <li> <m>(\chi_A)^2 = \chi_A</m></li>
+      <li> <m>\chi_{A\cap B} = \chi_A\cdot \chi_B</m></li>
+      <li> <m>\chi_{A\cup B} = \chi_A \oplus \chi_B \oplus (\chi_A\cdot \chi_B)</m></li>
+      <li> <m>\chi_{S\setminus A} = 1\oplus \chi_A</m></li>
+      <li> <m>\chi_{S\setminus (A\cup B)} = (1 \oplus \chi_A)(1 \oplus \chi_B)</m></li>
+    </ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="charfunexer"/></title>
+  <p>
+<ol>  <li>Suppose <m>A=B</m>, and let <m>x</m> be an element in <m>S</m>. If <m>x\in A</m>, we
+      have <m>\chi_A(x)=1=\chi_B(x)</m>. If <m>x\not\in A</m>, then we have
+      <m>\chi_A(x)=0=\chi_B(x)</m>. Thus, for all <m>x\in S</m>, we have
+      <m>\chi_A(x)=\chi_B(x)</m>. In other words, the functions
+      <m>\chi_A,\chi_B</m> are equal. Conversely, suppose that
+      <m>\chi_A=\chi_B</m>. If <m>x\in A</m>, we have <m>\chi_A(x)=1</m>, so
+      <m>\chi_B(x)=1</m>, which means that <m>x\in B</m>. This shows that every
+      element in <m>A</m> is also in <m>B</m>, so we have <m>A\subseteq
+      B</m>. Likewise, if <m>x\in B</m>, then <m>\chi_B(x)=1</m>, so <m>\chi_A(x)=1</m>,
+      which means that <m>x\in A</m>. This shows that <m>B\subseteq A</m>. Having
+      proved that <m>A\subseteq B</m> and <m>B\subseteq A</m>, we conclude that
+    <m>A=B</m>.</li>
+      <li>If <m>x\in A</m>, then <m>\chi_A(x)=1</m>, so <m>(\chi_A(x))^2=1</m>. If
+      <m>x\not\in A</m>, then <m>\chi_A(x)=0</m>, so <m>(\chi_A(x))^2=0</m>. Thus, for
+      all possible values of <m>x</m>, we have
+      <m>(\chi_A(x))^2=\chi_A(x)</m>. This means that the functions <m>\chi_A,(\chi_A)^2</m> are equal.</li>
+      <li>If <m>x</m> is in <m>A\cap B</m>, then <m>\chi_{A\cap B}(x)=1</m>, and
+      <m>\chi_A(x)\chi_B(x)=1\cdot 1 = 1</m>. If <m>x</m> is not an element of
+      <m>A</m>, or if <m>x</m> is not an element of <m>B</m>, or both, then <m>x</m> is not
+      in <m>A\cap B</m>, so <m>\chi_{A\cap B}(x)=0</m>, and at least one of
+      <m>\chi_A(x),\chi_B(x)</m> is zero, so <m>\chi_A(x)\chi_B(x)=0</m>. Thus,
+      for all possible values of <m>x</m>, we have
+      <m>\chi_{A\cap B}(x)=\chi_A(x)\chi_B(x)</m>. This means that the functions 
+      <m>\chi_{A\cap B}, \chi_A\chi_B</m> are equal.</li>
+      <li><p>We consider four possibilities for <m>x\in S</m>.</p>
+<p>	<ol marker="i">
+	  <li> <m>x\in A</m> and <m>x\in B</m></li>
+	  <li> <m>x\in A</m> and <m>x\not\in B</m></li>
+	  <li> <m>x\not\in A</m> and <m>x\in B</m></li>
+	  <li> <m>x\not\in A</m> and <m>x\not\in B</m>      </li></ol></p>
+<p>      For possibility i, we have <m>\chi_{A\cup B}(x)=1</m>, and 
+      <me>\chi_A(x) \oplus \chi_B(x) \oplus \chi_{A\cap B}(x) = 1\oplus
+	1\oplus 1\cdot 1 = 1.</me>
+          For possibility ii, we have <m>\chi_{A\cup B}(x)=1</m>, and 
+      <me>\chi_A(x) \oplus \chi_B(x) \oplus \chi_{A\cap B}(x)
+	= 1\oplus 0\oplus 1\cdot 0 = 1.</me>
+      For possibility iii, we have <m>\chi_{A\cup B}(x)=1</m>, and 
+      <me>\chi_A(x) \oplus \chi_B(x) \oplus \chi_{A\cap B}(x)
+	= 0\oplus 1\oplus 0\cdot 1 = 1.</me>
+      For possibility iv, we have <m>\chi_{A\cup B}(x)=0</m>, and 
+      <me>\chi_A(x) \oplus \chi_B(x) \oplus \chi_{A\cap B}(x)
+	= 0\oplus 0\oplus 0\cdot 0 = 0.</me>
+      In all four cases, we have <m>\chi_{A\cup B}(x)
+      =\chi_A(x) \oplus \chi_B(x) \oplus \chi_{A\cap B}(x)</m>,
+      so we conclude the equality of functions
+      <me>\chi_{A\cup B} =\chi_A \oplus \chi_B \oplus \chi_{A\cap
+      B}.</me></p>
+</li>
+	</ol>
+</p>
+</commentary>
+    
+
+    <exercise xml:id="distdemorganlawsexer"><statement><p>
+	      Let <m>A,B,C</m> be sets. Prove the following (the first two are <term>distributive
+	    laws</term><idx><h>distributive laws for sets</h>
+	      </idx>
+	      for sets and the second two are <term>De Morgan's
+	    laws</term><idx><h>De Morgan's laws</h></idx>). Hint: use characteristic functions from
+      <xref ref="charfunexer"/> above.
+      <ol>
+	<li> <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m></li>
+	<li> <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C)</m></li>
+        <li> <m>S\setminus{(A\cap B)} = (S\setminus A) \cup (S\setminus
+            B)</m></li>
+	<li> <m>S\setminus{(A\cup B)} = (S\setminus A) \cap (S\setminus B)</m></li>
+</ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="distdemorganlawsexer"/></title>
+  <p>
+	  <ol>
+	    <li>We will use part a of the previous problem to show that the sets
+on the left and right sides are equal by showing that their
+characteristic functions are equal. Beginning with the characteristic
+function for the set on the left side, we have
+	      <md>
+<mrow>\chi_{A\cap(B\cup C)} \amp =
+		  \chi_A \chi_{B\cup C} \amp \amp \text{(by part c above)}</mrow>
+<mrow>\amp = \chi_A
+(\chi_{B}\oplus \chi_{C} \oplus \chi_B\chi_C) \amp \amp
+  \text{(by part d above)}</mrow>
+<mrow>\amp = \chi_A\chi_B \oplus \chi_A\chi_C \oplus \chi_A\chi_B\chi_C
+  \amp \amp \text{(distributing)}</mrow>
+<mrow>\amp = \chi_A\chi_B \oplus \chi_A\chi_C \oplus (\chi_A)^2\chi_B\chi_C
+  \amp \amp  \text{(by part b above)}</mrow>
+<mrow>\amp = \chi_A\chi_B \oplus \chi_A\chi_C \oplus \chi_A\chi_B\chi_A\chi_C
+  \amp \amp  \text{(rearranging)}</mrow>
+<mrow>\amp = \chi_{A\cap B}\oplus \chi_{A\cap C} \oplus \chi_{A\cap B}\chi_{A\cap C}
+  \amp \amp  \text{(by part c above)}</mrow>
+<mrow>  \amp = \chi_{(A\cap B)\cup (A\cap C)} \amp \amp  \text{(by part d
+  above)}.</mrow>
+	      </md>
+The last expression is the characteristic function for the set on the
+	      right side.</li>
+	    <li>(similar to part a)</li>
+<li>Again we will use equality of characteristic functions to
+establish equality of sets. Beginning with the set on the right side, we
+have
+  <md>
+    <mrow>\chi_{(S\setminus A) \cup (S\setminus B)} \amp =
+\chi_{(S\setminus A)} \oplus \chi_{(S\setminus
+B)}\oplus \chi_{(S\setminus A)} \chi_{(S\setminus
+      B)} \amp \amp \text{(part d above)}</mrow>
+<mrow>\amp = (1\oplus \chi_A)\oplus (1\oplus  \chi_B) \oplus
+  (1\oplus \chi_A)(1\oplus  \chi_B)\amp \amp \text{(part e above)}</mrow>
+<mrow>\amp = 1\oplus \chi_A \oplus 1\oplus \chi_B \oplus
+  1\oplus \chi_A\oplus \chi_B \oplus \chi_A\chi_B\amp \amp \text{(distributing)}</mrow>
+<mrow>\amp = 1\oplus \chi_A\chi_B \amp \amp \text{(simplifying multiples of 2
+  to zero)}</mrow>
+<mrow>\amp = 1\oplus \chi_{(A\cap B)}\amp \amp \text{(part c above)}</mrow>
+<mrow>\amp = \chi_{S\setminus(A\cap B)}\amp \amp \text{(part e above)}.</mrow>
+  </md>
+  The last expression is the characteristic function for the set on the
+  left.</li>
+	    <li>(similar to part c)</li>
+	  </ol>
+</p>
+</commentary>
+    
+    <exercise xml:id="partitionexer"><statement><p>
+	  A <term>partition</term><idx><h>partition</h>
+	  </idx>  of a set <m>S</m> is a collection of 
+  nonempty subsets of <m>S</m> whose union is all of <m>S</m> and any two of which have
+  empty intersection.
+	  <ol>
+	    <li>Let <m>S=\{a,b,c\}</m>. Write out all possible partitions of <m>S</m>.</li>
+    <li>Give an example of a collection of subsets of <m>S=\{a,b,c\}</m>
+      whose union is all of <m>S</m>, but some two of which have nonempty
+      intersection.</li>
+      <li>Give an example of a collection of subsets of <m>S=\{a,b,c\}</m>,
+      any two of which have empty intersection, but whose union is not
+	all of <m>S</m>.</li>
+</ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="partitionexer"/></title>
+  <p>
+	  <ol>
+	    <li>Here are the 5 partitions of <m>S</m>.
+	      <md>
+		<mrow>\{a,b,c\}</mrow>
+		<mrow>\{a,b\},\{c\}</mrow>
+		<mrow>\{a,c\},\{b\}</mrow>
+		<mrow>\{b,c\},\{a\}</mrow>
+		<mrow>\{a\},\{b\},\{c\}</mrow>
+	      </md>
+	      </li>
+	    <li> <m>\{a,b\}, \{b,c\}</m> (there are many correct answers)</li>
+	    <li> <m>\{a\},\{b\}</m> (there are many correct answers)</li>
+	  </ol>
+</p>
+</commentary>
+    
+
+    <exercise xml:id="equivrelnexer"><statement><p>
+	  An <term>equivalence relation</term><idx><h>equivalence relation</h>
+	  </idx> on a set  <m>S</m> is a set  <m>E\subseteq
+  S\times S</m> of ordered pairs of elements of  <m>S</m> that satisfies the
+  following.
+	  <blockquote>	  <ol marker="i">  <li>  <m>(x,x)\in E</m> for
+		every  <m>x\in S</m> (the <term>reflexive</term>
+		 property)</li>
+	      <li> if  <m>(x,y)</m> is in  <m>E</m> then  <m>(y,x)</m>
+		is in  <m>E</m> (the <term>symmetric</term>
+		 property)</li>
+ <li> if  <m>(x,y)</m> is in  <m>E</m> and  <m>(y,z)</m> is in  <m>E</m>, then  <m>(x,z)</m>
+   is in  <m>E</m> (the <term>transitive</term>
+    property)</li>
+</ol></blockquote>
+	  <ol>  <li> Write out all possible equivalence relations for  <m>S=\{a,b,c\}</m>.</li>
+   <li>Give an example of a set  <m>F\subseteq S\times S</m> of ordered
+      pairs of  <m>S=\{a,b,c\}</m> that satisfies exactly two of the three properties in
+     the definition of equivalence relation.</li>
+	  </ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="equivrelnexer"/></title>
+  <p>
+    <ol>
+      <li>Here are the 5 equivalence relations on <m>S</m>.
+	      <md>
+		<mrow>S\times S</mrow>
+		<mrow>\{a,b\}\times \{a,b\}\cup \{(c,c)\}</mrow>
+		<mrow>\{a,c\}\times \{a,c\}\cup\{(b,b)\}</mrow>
+		<mrow>\{b,c\}\times \{b,c\}\cup\{(a,a)\}</mrow>
+		<mrow>\{(a,a), (b,b), (c,c)\}</mrow>
+	      </md>
+      </li>
+      <li>Here is an example: <m>F=\{a,b\}\times \{a,b\}</m>. This satisfies
+      ii and iii, but not i.
+      </li>
+    </ol>
+</p>
+</commentary>
+    
+<!--
+    <exercise>	  <title>Correspondence between partitions and equivalence relations</title><statement><p>
+	  <ol>
+	    <li> Let <m>{\mathcal U}</m> be a partition on a set <m>S</m>. Define a set
+    <m>E_{\mathcal U} \subseteq S\times S</m> of ordered pairs of <m>S</m> by
+    <m>(x,y)\in E_{\mathcal U}</m> if and only if there is some <m>U\in
+    {\mathcal U}</m> such that <m>x,y</m> both lie in <m>U</m>. Show that
+	      <m>E_{\mathcal U}</m> is an equivalence relation on <m>S</m>.</li>
+<li> Let <m>E\subset S\times S</m> be an equivalence relation on <m>S</m>. For
+  each <m>x\in S</m>, let <m>U_x=\{y\in S\colon (x,y)\in E\}</m> Show that the 
+collection of subsets <m>{\mathcal U}_E = \{U_x\colon x\in S\}</m> is a
+  partition of <m>S</m>.</li>
+<li> Show that the mappings
+  <md>
+    <mrow>{\mathcal U} \amp \longrightarrow E_{\mathcal U}</mrow>
+    <mrow>{\mathcal U}_E \amp \longleftarrow E</mrow>
+  </md>
+  determine a one-to-one correspondence 
+<me>   \{ \mbox{partitions of } S\} \longleftrightarrow \{ \mbox{equivalence
+  relations on } S\}.</me>
+</li>
+	</ol>
+	</p>
+  </statement>
+  <NOanswer><p>
+    </p>
+  </NOanswer>
+</exercise>
+    -->
+    
+  </exercises>
+  </subsection>
+
+<subsection>     <title>Pythagorean Triples</title>
+
+<p>  A 3-tuple <m>(a,b,c)</m> of positive integers is called a <term>Pythagorean
+    triple</term><idx><h>Pythagorean triple</h>
+  </idx>
+   if there exists a right triangle with leg lengths <m>a,b</m> and
+  hypotenuse length <m>c</m>. A Pythagorean triple
+  is <term>primitive</term><idx><h>primitive Pythagorean triple</h>
+  </idx> if
+  <m>a,b,c</m> have no common divisor (other than 1).</p>
+
+<p>
+  A point <m>(p,q)</m> on the unit circle is called a <em>rational point</em>
+  if both <m>p,q</m> are rational numbers. Let <m>Q</m> be the open first quadrant
+of the unit circle in the <m>x,y</m>-plane (that is, points on the unit
+circle with both coordinates positive). The following exercises explore
+  the details of the  one-to-one correspondences
+
+<me>      \{\text{primitive Pythagorean triples}\} 
+  \longleftrightarrow 
+  \{\text{rational points on } Q\} \longleftrightarrow \{\text{rational
+  numbers } a\gt 1\}.
+</me>
+</p>
+
+  
+      	    <figure xml:id="pythtrip2circptfig">
+	      <caption>Pythagorean triple <m>(a,b,c)</m>
+		 and associated unit
+		circle point <m>(a/c,b/c)</m>
+      </caption>
+            <image width="100%" source="images/pythtrip2circpt.png"></image>
+           </figure>
+
+
+
+					    
+<exercises>
+
+  <exercise xml:id="pythtriptoratptexer"><statement><p> Given a Pythagorean triple <m>(a,b,c)</m>
+(not necessarily primitive), show that <m>(a/c,b/c)</m> is a rational
+point on <m>Q</m> (see <xref ref="pythtrip2circptfig"/>).
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="pythtriptoratptexer"/></title>
+  <p>
+	<me>\left(\frac{a}{c}\right)^2 + \left(\frac{b}{c}\right)^2 =
+	\frac{a^2+b^2}{c^2}=1</me>
+</p>
+</commentary>
+  
+
+  <exercise xml:id="pythripprimpairwisereduced"><statement><p>
+	Let <m>(a,b,c)</m> be a primitive Pythagorean triple.
+Show that <m>a,c</m> share no common divisors other than 1.	
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="pythripprimpairwisereduced"/></title>
+  <p>
+Suppose that <m>a,c</m> share some common divisor, say
+<m>k</m>, and let <m>p</m> be a prime factor of <m>k</m>. Then <m>b^2=c^2-a^2</m> also has a
+prime factor <m>p</m>, so <m>(a,b,c)</m> would not be primitive.
+</p>
+</commentary>
+  
+  
+  <exercise xml:id="ratpthasuniqueprimitivepreimageexer"><statement><p>
+Let <m>(p,q)</m> be a point in <m>Q</m> with both <m>p,q</m> rational.
+    Show that there is a unique reduced Pythagorean triple that maps
+  to <m>(p,q)</m> via <m>(a,b,c)\to (a/c,b/c)</m>. Use
+    this to explain why there is a one-to-one correspondence
+    <me>\{\text{primitive Pythagorean triples}\} \longleftrightarrow
+      \{\mbox{rational points on } Q\}.</me>
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="ratpthasuniqueprimitivepreimageexer"/></title>
+<p>Let <m>(p,q)</m> be a point in <m>Q</m> with both <m>p,q</m>
+	rational. First, write <m>p=\frac{s}{t},q=\frac{u}{v}</m> for some
+	integers <m>s,t,u,v</m>. 
+         Multiplying both sides of
+	<me>\left(\frac{s}{t}\right)^2 +
+	  \left(\frac{u}{v}\right)^2=1 </me>
+	by <m>(tv)^2</m>, we get
+	<me>(sv)^2+(tu)^2=(tv)^2.</me> Note that <m>(sv,tu,tv)</m> is a
+	Pythagorean triple, and that <m>(sv/tv,tu/tv)=(p,q)</m>. If
+	<m>(sv,tu,tv)</m> is not primitive, then we can remove all
+	common factors and produce a primitive triple <m>(a,b,c)</m>
+	such that <m>(a/c,b/c)=(p,q)</m>.
+	</p>
+
+      <p>Now suppose that there is another reduced Pythagorean
+	triple <m>(d,e,f)</m> such that <m>(d/f,e/f)=(p,q)</m>. 
+Then we have <m>a/c=d/f</m>. Rearranging, we have
+	<m>af=dc</m>. Because <m>a,c</m> share no common factors
+	(by <xref ref="pythripprimpairwisereduced"/> above), it must be that all the prime factors of <m>a</m> are also
+prime factors of <m>d</m>, so we have <m>a|d</m>. Likewise, we have <m>c|f</m>. But the
+same argument applies to show that <m>d|a</m> and <m>f|c</m>, so we have <m>a=d</m> and
+<m>c=f</m>, and it follows that 
+<m>(a,b,c)=(d,e,f)</m>. 
+</p>
+
+
+      <p>The above arguments show that the function <m>f\colon \{\text{primitive Pythagorean triples}\}\to
+	  \{\text{rational points on } Q\}</m> given
+	by <m>f(a,b,c)=(a/c,b/c)</m> is surjective (we showed that for
+	every rational point <m>(p,q)</m> on <m>Q</m>, 
+	there is at
+	least one primitive Pythagorean triple <m>(a,b,c)</m> such
+	that <m>f(a,b,c)=(p,q)</m>) and also injective (we showed there is
+	at most one reduced Pythagorean triple in the preimage of <m>(p,q)</m>).
+	We conclude that <m>f</m> is a one-to-one correspondence.
+      </p>
+</commentary>
+  
+
+  <exercise xml:id="stereoprojformulaexer"><statement><p>
+Given a point <m>P=(x,y)</m> on <m>Q</m>, let <m>L</m> be the line through
+      <m>P</m> and <m>(0,1)</m>.  Let <m>s(P)</m> be the <m>x</m>-coordinate of the
+      intersection of <m>L</m> with the <m>x</m> axis.  See <xref ref="stereoprojfig"/>.  This defines a one-to-one
+correspondence <m>s\colon Q\to (1,\infty)</m> called <term>stereographic
+      projection</term>. Show that <m>s</m> is given by <m>s(x,y) =
+	\frac{x}{1-y}</m>.
+	        	    <figure xml:id="stereoprojfig">
+		   <caption>Stereographic projection
+      </caption>
+            <image width="60%" source="images/stereoproj.png"></image>
+           </figure>
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="stereoprojformulaexer"/></title>
+  <p>
+Use similar triangles, as suggested by
+	      <xref ref="simtrifig"/>.	
+    <figure xml:id="simtrifig">
+     <caption>Similar triangles yield a formula	for <m>s(P)</m>
+      </caption>
+            <image width="60%" source="images/simtri.png"></image>
+           </figure>	
+</p>
+</commentary>
+  
+
+      <exercise xml:id="inversestereoexer">
+	<statement><p>
+Find a formula for <m>s^{-1}\colon (1,\infty)\to Q</m>. Verify that
+  your formula really gives an inverse for <m>s</m> by showing
+  that <m>s^{-1}\of s=\One_{Q}</m> and <m>s\of s^{-1}=\One_{(1,\infty)}</m>.	      
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="inversestereoexer"/></title>
+  <p>
+    To find a formula for <m>s^{-1}</m>, we solve the pair of equations
+<m>x/(1-y)=a</m> and <m>x^2+y^2=1</m> for <m>x</m> and <m>y</m> in terms of <m>a</m>.  We obtain
+    <me>s^{-1}(a) =
+      \left(\frac{2a}{a^2+1},\frac{a^2-1}{a^2+1}\right).</me>
+    Now check (do the algebra!) that <m>s^{-1}(s(x,y))=(x,y)</m> and <m>s(s^{-1}(a))=a</m>.
+</p>
+</commentary>
+      
+      <exercise xml:id="ratptstoratnosexer"><statement><p>
+Use the formulas for <m>s,s^{-1}</m> to explain why there is a
+    one-to-one correspondence
+  <me>\{\mbox{rational points on } Q\} \longleftrightarrow
+  \{\text{rational numbers } a\gt 1\}.</me>	    
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="ratptstoratnosexer"/></title>
+  <p>
+Observe that rational
+points go to rational numbers under <m>s</m>, and rational numbers go to
+rational points under <m>s^{-1}</m>.
+</p>
+</commentary>
+      
+      <exercise xml:id="practicepythtripcorrespexer"><statement><p>
+From the correspondences established in this exercise, what is
+      the rational number associated to the Pythagorean triple
+      <m>(4,3,5)</m>? To <m>(5,12,13)</m>? What primitive Pythagorean triple
+  corresponds to the rational number 3? To the rational number <m>7/4</m>?
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="practicepythtripcorrespexer"/></title>
+  <p>
+	    <md>
+	      <mrow>(4,3,5) \amp \leftrightarrow 2</mrow>
+	      <mrow>(5,12,13) \amp \leftrightarrow 5 </mrow>
+	      <mrow>3 \amp \leftrightarrow (3,4,5)</mrow>
+	      <mrow>7/4 \amp \leftrightarrow (56,33,65)</mrow>
+</md>
+</p>
+</commentary>
+
+  </exercises>
+  </subsection>
+
+</section>

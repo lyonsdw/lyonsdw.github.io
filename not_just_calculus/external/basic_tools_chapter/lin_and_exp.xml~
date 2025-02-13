@@ -1,0 +1,239 @@
+<section xml:id="linexp_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Linear and Exponential Growth
+</title>
+
+<p> Let <m>b,m</m> be real constants, and consider the linear function
+ <m>L(t)=b+mt</m>. The sequence of values <m>L(0), L(1), L(2),\ldots</m> given by
+ <me>b, b+m, b+2m,\ldots ,b+nm,\ldots</me>
+ is called an <term>arithmetic sequence</term><idx><h>arithmetic sequence</h></idx>
+ <fn>The emphasis is on the
+third syllable "met" when the word "arithmetic" is used as an
+adjective rather than a noun. For example: "Addition is an operation of
+ <m>\mbox{a}\cdot \mbox{rith}'\cdot \mbox{metic}</m>. Repeated addition
+   creates an <m>\mbox{arith}\cdot \mbox{met}'\cdot \mbox{ic}</m>
+   sequence."</fn>
+ with <term>initial term</term><idx><h>initial term of an arithmetic sequence</h></idx>
+ <m>b</m> and <term>common difference</term><idx><h>common difference
+ in an arithmetic sequence</h></idx>
+  <m>m</m>. An
+ arithmetic sequence is said to
+ exhibit <term>linear</term><idx><h>linear growth or decay</h></idx>
+ growth or decay,
+according to whether <m>m \gt 0</m> or <m>m\lt 0</m>, respectively.
+</p>
+
+
+<p>
+  Let <m>a,r</m> be real constants with <m>a\neq 0, r\gt 0, r\neq 1</m>, and consider
+the exponential function <m>E(t) = ar^t</m>. The sequence of values
+ <m>E(0),E(1),E(2),\ldots</m> given by
+  <me>a,ar,ar^2,\ldots,ar^n,\ldots</me>
+is called a
+  <term>geometric sequence</term><idx><h>geometric sequence</h></idx>
+  with <term>initial term</term><idx><h>initial term of a geometric sequence</h></idx>
+  <m>a</m> and <term>common ratio</term><idx><h>common ratio in a geometric sequence</h></idx>
+   <m>r</m>. A geometric
+   sequence with <m>a\gt 0</m>
+   is said to
+  exhibit <term>exponential</term><idx><h>exponential growth or decay</h></idx>
+   growth or decay,
+according to whether <m>r\gt 1</m> or <m>r\lt 1</m>, respectively.
+</p>
+
+    <exercise xml:id="missingtermslinexpexer"><statement><p>    Fill in the missing terms of the following arithmetic and
+geometric sequences.  Identify the initial term and the common difference or
+	  common ratio for each.
+	  <ol><li>  <m>5,2,-1, \underline{\rule{2ex}{0ex}},
+		\underline{\rule{2ex}{0ex}},\underline{\rule{2ex}{0ex}},\ldots</m>
+	    </li>
+	    <li>  <m>5,2,0.8,\underline{\rule{2ex}{0ex}},
+	      \underline{\rule{2ex}{0ex}},\underline{\rule{2ex}{0ex}},\ldots</m>    </li>
+	    <li>
+	      <m>\underline{\rule{2ex}{0ex}}, 2,
+	      \underline{\rule{2ex}{0ex}},5,\underline{\rule{2ex}{0ex}},8,\ldots</m>     </li> 
+	    <li>
+	    <m>\underline{\rule{2ex}{0ex}}, 2,
+	    \underline{\rule{2ex}{0ex}},4,\underline{\rule{2ex}{0ex}},8,\ldots</m>     </li>  
+	  </ol>
+    </p>
+  </statement>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="missingtermslinexpexer"/></title>
+  <p>
+	  <ol>
+	    <li>   <m>-4,-7,-10</m>, <m>b=5</m>, <m>m=-3</m>
+	    </li>
+	    <li>    <m>5(2/5)^3,5(2/5)^4,5(2/5)^5</m>, <m>a=5</m>, <m>r=2/5</m></li>
+	    <li>    <m>1/2,7/2,13,2</m>, <m>b=1/2</m>, <m>m=3/2</m></li>
+	    <li>    <m>2^{1/2},2^{3/2},2^{5/2}</m>, <m>a=2^{1/2}</m>, <m>r=2^{1/2}</m></li>
+	  </ol>    
+</p>
+</commentary>
+    
+
+<p>
+  <alert>Finite arithmetic and geometric sums.</alert>
+   Exercises at
+the end of this subsection outline the derivations of the following formulas.
+ <mdn> <mrow xml:id="arithsum">  b + (b+m) + (b+2m) + \cdots + (b+nm)
+  \amp =  \frac{(n+1)(2b+nm)}{2} </mrow>
+   <mrow xml:id="geompartialsum">  a + ar + ar^2 + \cdots + ar^n \amp
+     = a\left(\frac{1-r^{n+1}}{1-r}\right)</mrow>  </mdn>
+</p>
+
+<exercise xml:id="linexpsumexer"><statement><p>  Find the given sums of terms of arithmetic and
+      geometric sequences.    
+      <ol>      <li>Find the sum of the first 100 positive
+	  integers.    </li>
+	<li>  <m>2 + 5 + 8 + 11 + \cdots + 302</m>    </li>
+	<li>  <m>2 + 5 + 8 + 11 + \cdots + 1571</m>    </li>
+	<li> <m>2 + 6 + 18 + 54 + \cdots + 2(3^{100})</m>  </li>
+	<li>  <m>2 + 6 + 18 + 54 + \cdots + 9565938</m>    </li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="linexpsumexer"/></title>
+  <p>
+<ol><li>   <m>5050</m></li>
+	<li>    <m>15,352</m>
+	</li>
+	<li>     <m>412,126</m>
+	</li>
+	<li>     <m>3^{101}-1 \approx 1.55 \times 10^{48}</m></li>
+	<li>     <m>3^{15}-1 = 14,348,906</m></li>
+      </ol>    
+</p>
+</commentary>
+
+
+<p><alert>Infinite geometric sums.</alert>
+   An infinite sum of the form
+  <me>a + ar + ar^2 + ar^3 + \cdots</me>
+  is called an <term>infinite geometric series</term><idx><h>infinite
+  geometric series</h></idx>, and is defined to mean
+ <m>\displaystyle \lim_{n\to\infty} s_n</m> (if the limit exists), where
+ <m>s_1,s_2,s_3,\ldots</m> is sequence of finite sums
+  <md>  <mrow>s_0 \amp = a</mrow>
+    <mrow>  s_1  \amp = a + ar</mrow>
+    <mrow>  s_2  \amp = a + ar + ar^2</mrow>
+    <mrow>     \amp \vdots </mrow>
+    <mrow>  s_n  \amp = a+ ar+ar^2 + \cdots + ar^n</mrow>
+    <mrow>   \amp \vdots</mrow>
+</md>
+If <m>|r| \lt 1</m>, then <m>|r|^n \to 0</m>
+  as <m>n\to \infty</m>. Using properties of limits from calculus, we have
+   <me>a\left(\frac{1-r^{n+1}}{1-r}
+    \right) \to a\left(\frac{1}{1-r}\right)</me>
+  as <m>n\to \infty</m>. Putting this together with <xref ref="geompartialsum"/>
+  above is the justification for the following formula.
+<mdn><mrow xml:id="geominfsum">a + ar+ ar^2 + ar^3 + \cdots =
+    a\left(\frac{1}{1-r}\right) \amp \amp \mbox{ for } |r|\lt 1</mrow>
+      </mdn>
+</p>
+
+<exercises>
+
+
+    <exercise xml:id="arithsumderiveexer"><statement><p>  Derive <xref ref="arithsum"/>.
+    </p>
+      </statement>
+      <hint><p>  Write the sum in reverse order <m>L(n)+L(n-1) + \cdots + L(1) +
+  L(0)</m> directly beneath <m>L(0)+ L(1) + \cdots + L(n)</m>, in such a way
+  that the terms are aligned vertically. Notice that each vertically
+  aligned pair has the form <m>L(k)</m> and <m>L(n-k)</m>, and that <m>L(k)+L(n-k) =
+  2b+nm</m> (the <m>k</m>'s cancel!). Now go from there.
+</p>
+      </hint>
+    </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="arithsumderiveexer"/></title>
+  <p>
+   Let <m>s=\sum_{k=0}^n L(k)</m> be the desired sum. Then we have
+   <md><mrow>2s  \amp = \sum_{k=0}^n L(k)+ \sum_{k=0}^n L(n-k)</mrow>
+     <mrow>       \amp = \sum_{k=0}^n (L(k)+L(n-k))</mrow>
+     <mrow>             \amp = \sum_{k=0}^n (b+mk+b+m(n-k)))</mrow>
+     <mrow>       \amp = \sum_{k=0}^n (2b+nm)</mrow>
+     <mrow>	 \amp = (2b+nm)(n+1).</mrow>
+   </md>
+    It follows that
+    <me> s= \frac{(2b+nm)(n+1)}{2},
+    </me>
+    as desired.    
+</p>
+</commentary>
+    
+
+    <exercise xml:id="geomsumderiveexer"><statement><p>  Derive <xref ref="geompartialsum"/>.
+    </p>
+      </statement>
+      <hint><p>  Let <m>s</m> be the desired sum <m>a+ar+ar^2 + \cdots + ar^n</m>. Examine
+  the expansion of <m>s-rs</m> (many terms cancel!). Simplify and solve for
+  <m>s</m>.    
+	</p>
+      </hint>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="geomsumderiveexer"/></title>
+  <p>
+	  We have <m>s=\sum_{k=0}^n ar^n</m>, so <m>sr=\sum_{k=0}^n ar^{n+1} =
+\sum_{k=1}^{n+1} ar^{n}</m>. Thus we have
+	  <me>  s(1-r) = s-rs = \sum_{k=0}^n ar^n - \sum_{k=1}^{n+1} ar^{n} = a-ar^{n+1}.</me>
+  It follows that
+	 <me>s = a\left(\frac{1-r^{n+1}}{1-r}\right),</me>
+  as claimed.    
+</p>
+</commentary>
+
+<exercise xml:id="recursionexer"><title>Recursion</title>
+  <statement><p>  The sequence <m>L(n)</m> for <m>n=1,2,3,\ldots</m>
+      satisfies the recursive relation <m>L(n+1)=L(n)+m</m>. (A
+      recursive relation says how the next entry in a sequence is
+      determined by one or more previous entries.) The sequence <m>E(n)</m> for <m>n=1,2,3,\ldots</m>
+      satisfies the recursive relation <m>E(n+1)=rE(n)</m>. Suppose that there is a
+      function <m>M(t)</m> that satisfies the recursive relation <m>M(n+1)=rM(n)+m</m>
+      for <m>n=1,2,3,\ldots</m>. Find a formula for <m>M(t)</m> in terms
+      of <m>M_0=M(0),r,m</m>.
+    </p>
+      </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="recursionexer"/></title>
+  <p>
+    The first few terms of the sequence <m>M(0),M(1),M(2),\ldots</m> are
+    the following.
+    <md>
+      <mrow>
+	M(0) \amp = M_0\\
+	M(1) \amp = rM_0+m\\
+	M(2) \amp = r(rM_0+m) + m\\
+	M(3) \amp = r[r(rM_0+m) + m]+m
+      </mrow>
+    </md>
+    Notice that <m>M(3) = r^3M_0 + m(r^2+r+1)</m>. You can see this
+    pattern holds in general, so we have
+    <md>
+      <mrow>M(n) \amp = r^nM_0 + m(1+r+r^2 + \cdots r^{n-1})\\
+	\amp = r^nM_0 + m\left(\frac{1-r^{n}}{1-r}\right)\\
+	\amp = r^n\left(M_0 - \frac{m}{r-1}\right) + \frac{m}{r-1}.
+      </mrow>
+    </md>
+    Thus we have
+    <me>M(t) = \left(M_0 - \frac{m}{r-1}\right)r^t + \frac{m}{r-1}.</me>
+</p>
+</commentary>
+
+  
+</exercises>
+
+
+
+</section>

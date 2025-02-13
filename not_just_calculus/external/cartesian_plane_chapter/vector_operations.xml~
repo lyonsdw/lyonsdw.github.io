@@ -1,0 +1,676 @@
+<section xml:id="vector_operations_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+The Cartesian Plane
+</title>
+
+<p>
+  Let <m>\R</m> denote the set of real numbers. The <term>Cartesian
+    plane</term><idx><h>Cartesian Plane</h>
+  </idx><fn>The Cartesian plane is named in honor of
+the 17th-century  mathematician and philosopher René Descartes.</fn> (or the <term>real coordinate plane</term>, or simply, the <term>plane</term>)
+   is the set
+  <me>\R^2 = \{(a,b)\colon a,b\in \R\}</me> of ordered pairs of real
+  numbers. 
+</p>
+
+<!--In drawings, a point is a dot, and a vector is an arrow. -->
+
+<p>
+  The <term>sum</term><idx><h>sum in <m>\R^2</m>
+    </h>
+  </idx>
+   <m>(a,b)+(c,d)</m> of two ordered pairs <m>(a,b)</m> and <m>(c,d)</m> is
+defined by
+  <men xml:id="vectoradd">(a,b)+(c,d) = (a+c,b+d).</men>
+  The <term>scalar multiple</term><idx><h>scalar multiple</h></idx>
+   <m>\alpha(a,b)</m> of the real number <m>\alpha</m> times the ordered pair <m>(a,b)</m> is defined by 
+  <men xml:id="scalarmult">\alpha(a,b) = (\alpha a,\alpha b).</men>
+  The <term>dot product</term><idx><h>dot product</h></idx>
+   <m>(a,b)\cdot (c,d)</m> of two ordered pairs <m>(a,b)</m> and <m>(c,d)</m>
+is defined by
+  <men xml:id="dotprod">(a,b)\cdot (c,d) = ac+bd.</men>
+</p>
+
+<p>
+  An ordered pair is sometimes called a <em>point</em> in <m>\R^2</m>,
+  and sometimes called a <em>vector</em>, depending on the nature of the
+  object represented by <m>(a,b)</m>. In drawings, a point is a dot, and
+  a vector is an arrow.  We use capital letters in italic font to denote
+  points, for example, <m>P=(a,b)</m>. We use
+  bold lower case letters in Roman font, for example <m>{\mathbf
+  x}=(a,b)</m> (better for typing), or lower case letters with an arrow
+  written above them, for example <m>\vec{x}=(a,b)</m> (better for
+  handwriting), to denote vectors. Given points <m>Q=(x_0,y_0)</m>
+  and <m>R=(x_1,y_1)</m>, we write <m>\overrightarrow{QR}</m> to denote
+  the ordered pair <m>\overrightarrow{QR}= R-Q = (x_1-x_0,y_1-y_0)</m>,
+  which we interpret as a vector, depicted by a directed line
+  segment that begins at <m>Q</m> and ends at <m>R</m>.
+  Note that the <em>point</em> <m>(a,b)</m> has only one possible drawing, that
+  is, a dot at the location <m>(a,b)</m>. By contrast,
+  the <em>vector</em> <m>(a,b)</m> has infinitely many possible
+  drawings: given any point <m>S</m>, vector <m>(a,b)</m> is depicted by
+  an arrow that begins at <m>S</m> and ends at <m>S+(a,b)</m>. Another
+  way to say this is that two arrows <m>\overrightarrow{QR},
+  \overrightarrow{Q'R'}</m> are <em>equal as vectors</em>
+  if <m>R-Q=R'-Q'</m>, even though we may have <m>Q\neq Q'</m>
+  and <m>R\neq R'</m>.
+  </p>
+
+<p>
+    <alert>Warning about notation:</alert> Many texts make a distinction
+  between points and vectors by using the notation <m>(a,b)</m> for a
+  point and <m>\langle a,b\rangle</m> for a vector. In these notes, we
+  use <m>(a,b)</m> for both the point and the vector. The point <m>P=(a,b)</m> and the
+    vector <m>\mathbf{x}=(a,b)</m> are <alert>not</alert> equal, because
+  a point and a vector are different types of objects. The correct
+    relationship between <m>P</m> and <m>\mathbf{x}</m>
+    is given by <m>\mathbf{x}=\overrightarrow{OP}</m>,
+    where <m>O</m> is the point <m>O=(0,0)</m>.
+  The take-away message is that you must always be clear whether
+  you mean a point or a vector when you write an ordered pair.
+  </p>
+
+<p>
+  The ordered pair <m>(0,0)</m> is called
+   the <term>origin</term><idx><h>origin in <m>\R^2</m>
+ </h></idx>
+  or
+ the <term>zero vector</term><idx><h>zero vector</h></idx>, depending on whether we are thinking of <m>(0,0)</m>
+  as a point or as a vector, respectively. It is common practice to use
+  the capital letter <m>O</m> to denote the origin and to use the
+  symbols <m>\mathbf{0}</m> or <m>\vec{0}</m> to denote the
+  zero vector.
+  <md>
+    <mrow>O \amp = (0,0) \amp\amp \text{(the origin point)}</mrow>
+    <mrow>\mathbf{0} =\vec{0} \amp = (0,0) \amp\amp \text{(the zero vector)}</mrow>    
+  </md>
+    The vectors <m>{\mathbf e}_1 = (1,0)</m> and
+ <m>{\mathbf e}_2= (0,1)</m> are called the <term>standard basis
+   vectors</term><idx><h>standard basis vectors in <m>\R^2</m>
+ </h></idx>     <notation><usage><m>{\mathbf e}_1,{\mathbf e}_2</m>
+	        </usage>
+   <description>standard basis vectors in <m>\R^2</m>
+	 </description>
+     </notation>. We
+have the following expressions for <m>{\mathbf x}=(a,b)</m> in terms of the
+standard basis vectors.
+<men xml:id="stdbasisexpansion">    {\mathbf x} = (a,b) = a{\mathbf e}_1 + b{\mathbf e}_2=
+    ({\mathbf e}_1\cdot {\mathbf x}) {\mathbf e}_1
+  + ({\mathbf e}_2\cdot {\mathbf x}) {\mathbf e}_2.</men>
+</p>
+
+<exercise xml:id="stbbasisexpandexer"><statement><p>
+      Verify each of the equalities in <xref ref="stdbasisexpansion"/>.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="stbbasisexpandexer"/></title>
+  <p>
+      For the first equality (reading left to right), we have
+      <md><mrow>\mathbf{x} \amp = (a,b) </mrow>
+	<mrow>\amp = (a,0) + (0,b) \amp \amp (\text{ using }<xref ref="vectoradd"/>)</mrow>
+	<mrow>\amp = a(1,0) + b(0,1) \amp \amp (\text{ using }<xref ref="scalarmult"/>)</mrow>	
+	<mrow>\amp = a\mathbf{e}_1 + b\mathbf{e}_2.</mrow>
+      </md>
+      For the second equality, we use <m>\mathbf{e}_1\cdot
+      \mathbf{x}=(1,0)\cdot (a,b) = a+0=a</m> and <m>\mathbf{e}_2\cdot
+      \mathbf{x}=(0,1)\cdot (a,b) = 0+b=b</m>.    
+</p>
+</commentary>
+
+
+<p>The <term>norm</term><idx><h>norm of a vector</h></idx>
+  or <term>modulus</term><idx><h>modulus of a vector</h></idx>
+   of an ordered pair <m>(a,b)</m>, denoted
+<m>\left\Vert(a,b)\right\Vert</m>     <notation><usage><m>\left\Vert(a,b)\right\Vert</m>
+	        </usage>
+  <description>norm of the ordered pair <m>(a,b)</m>
+	 </description>
+     </notation>, is defined by
+  <men xml:id="cartesiannorm">\left\Vert(a,b)\right\Vert = \sqrt{(a,b)\cdot (a,b)} = \sqrt{a^2+b^2}.</men>
+  The <term>unit circle</term><idx><h>unit circle</h></idx><notation><usage><m>S^1</m></usage>
+	 <description>unit circle</description></notation> is the set
+  <me>S^1 = \{(x,y)\in \R^2\colon x^2+y^2=1\}</me>  
+  of all ordered pairs
+in the Cartesian plane with norm equal to one. Geometrically, <m>S^1</m> is a circle with radius 1,
+centered at the origin.
+It is useful to navigate on the unit circle with a single real
+parameter, where the parameter value 0 corresponds to the point <m>(1,0)</m>.
+  A parameter value <m>t\gt 0</m> corresponds to the
+  point <m>W(t)</m>
+  that lies at
+the end of a counterclockwise arc along <m>S^1</m> that begins at <m>(1,0)</m> and
+  has length <m>t</m>. For <m>t\lt 0</m>, the point <m>W(t)</m> lies at 
+  the end of a <em>clockwise</em>
+  arc that begins at <m>(1,0)</m> and has
+  length <m>|t|</m>. Another way to say this is that <m>t</m> is the radian measure of the
+oriented angle <m>\angle SOP</m>, where <m>S=(1,0)</m> and <m>O=(0,0)</m>, and
+   <m>P=\wrap(t)</m>. The function <m>\wrap\colon \R\to S^1</m> (often called the <term>wrapping function</term><idx><h>wrapping function</h>
+   </idx>) is given by
+   <men xml:id="wrapfndef">\wrap(t)= (\cos t,\sin t)</men>
+where <m>t</m> is in radians. Note that <m>\wrap</m> is periodic: the
+circumference of the unit circle is <m>2\pi</m>, so we
+have <m>\wrap(t)=\wrap(t+2\pi k)</m> for every integer <m>k</m>.
+</p>
+
+<exercise><statement><p>Draw a figure that illustrates the
+	points <m>P=W(t),S,O</m>, the angle <m>\angle SOP</m>, and the
+	oriented arc from <m>S</m> to <m>P</m> on <m>S^1</m>. Draw one
+      figure for a positive value of <m>t</m>, and draw another figure
+      for a negative value of <m>t</m>.
+    </p>
+  </statement>
+</exercise>
+
+<p>
+  Every point <m>P\neq (0,0)</m> is a positive scalar multiple of a unique
+point <m>\wrap(t)</m> on the unit circle, as follows. Let
+  <m>P</m> be a point in <m>\R^2</m> with <m>P\neq (0,0)</m> (unlike in the previous
+  paragraph, <m>P</m> is not
+  necessarily a point on the unit circle), and again let <m>S=(1,0)</m>
+  and <m>O=(0,0)</m>. Let <m>t</m> be the radian
+  measure of the angle <m>\angle SOP</m>, and let <m>P'=W(t)</m>.
+  It is easy to check that <m>P=rP'</m> where
+ <m>r=\left\Vert P\right\Vert</m>. The expression <m>P=r\wrap(t)</m>
+ is called the <term>polar form </term> <idx><h>polar form of a vector</h></idx>
+ for <m>P</m>. The
+  number <m>t</m> is called
+  (an) <term>argument</term><idx><h>argument of a vector</h></idx>  of <m>P</m>, denoted
+ <m>\arg(P)</m>.
+Because <m>\wrap</m> is periodic with period <m>2\pi</m>, any number of the
+form <m>t+2\pi k</m>, for all <m>k\in \Z</m>, is also a value of <m>\arg(P)</m>. In this usage, <m>\arg</m> is
+not technically a function, because it has multiple possible values. A
+single-valued function may be defined by restricting the value of
+ <m>\arg(P)</m>, say, to the range <m>-\pi \lt \arg(P)\leq \pi</m>.
+</p>
+
+
+<exercise xml:id="allptsscaledfroms1exer"><statement><p>Draw a sketch
+      that includes <m>S,O,P,\angle SOP, P',r,t</m>. Show that "it is easy to check"
+      that <m>P=rP'</m> by checking it.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="allptsscaledfroms1exer"/></title>
+  <p>(Draw a sketch.)
+    Let <m>P=(a,b)</m> and let <m>P'=(\cos t, \sin t)</m> be
+      the intersection of the line through<m>0,P</m> with the unit
+      circle <m>S^1</m> (where <m>O</m> denotes the origin, as usual). Let <m>A=(a,0)</m> and let <m>C=(\cos t,0)</m>.
+      Consider the similar triangles <m>\triangle
+	PAO</m>, <m>P'CO</m> (draw a picture!). Let <m>r=\left\Vert P\right\Vert</m>, and
+      note that the length of the line segment <m>\overline{OP}</m>
+      is <m>r</m>, and that the length of the line
+      segment <m>\overline{OP'}</m> is 1.
+      By similarity, we have equal ratios of
+      corresponding sides of the two triangles.
+      <md><mrow>\frac{a}{r} \amp =\frac{\cos t}{1}
+	</mrow>
+	<mrow>\frac{b}{r} \amp =\frac{\sin t}{1}
+	</mrow>
+      </md>
+      From this we get <m>P=(a,b)=(r\cos t,r \sin t)</m>.
+      <m></m>
+</p>
+</commentary>
+
+<p>
+  If we have a point <m>A=(u,v)=(k\cos \theta,k\sin\theta)</m>, we say
+  that the numbers <m>u,v</m> are the <term>Cartesian
+    coordinates</term><idx><h>Cartesian coordinates</h></idx>
+   or the <term>rectangular coordinates</term><idx><h>rectangular
+  coordinates</h></idx> for <m>A</m>, and we say that the numbers <m>k,\theta</m> are <term>polar
+  coordinates</term> <idx><h>polar coordinates</h></idx>
+  for <m>A</m>. 
+
+<!--  <men xml:id="r2arg">\arg(r\cos t, r\sin t) = t</men>-->
+</p>
+
+<exercise xml:id="polarnonuniqueexer">
+  <statement>  <p>
+      Show that polar coordinates are not unique by finding three different pairs of
+      polar coordinates <m>r,t</m> for the point <m>A=(1,1)</m>. How
+      many different values of <m>r</m> are possible? What are they? How
+      many different values of <m>t</m> are possible? What are they?
+  </p></statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="polarnonuniqueexer"/></title>
+  <p>If <m>A=(r\cos t,r\sin t)</m>, then we have <m>\left\Vert
+      A\right\Vert^2 = r^2</m>, so <m>r=\pm \left\Vert
+      A\right\Vert=\pm \sqrt{2}</m>. For both choices of <m>r</m>, we
+    have infinitely many choices for <m>t</m>, obtained by adding any
+    integer multiple of <m>2\pi</m> radians to the basic
+    values <m>t=\pi/4</m> (for <m>r=\sqrt{2}</m>) and <m>t=5\pi/4</m>
+    (for <m>r=-\sqrt{2}</m>. 
+    Thus we have polar coordinates of
+    the forms
+    <md>
+      <mrow>(\sqrt{2},\pi/4 + 2\pi k), \amp \amp k\in \Z</mrow>
+      <mrow>(-\sqrt{2},5\pi/4  + 2\pi k), \amp \amp k\in \Z.</mrow>      
+    </md>
+  </p>
+  </commentary>
+
+<p>
+  Rotations about a point in the plane combine in a simple way: a rotation
+by <m>t</m> radians, followed by a rotation by <m>s</m> radians, results in a
+combined rotation by <m>t+s</m> radians. It is useful to encode the
+composition of rotations in a multiplication operation on <m>S^1</m>.
+Given
+points <m>\wrap(t),\wrap(s)</m> on the unit circle, let <m>\wrap(t)\odot \wrap(s)</m> be defined
+by
+  <men xml:id="s1mult">\wrap(t)\odot \wrap(s) = \wrap(t+s).</men>
+</p>
+
+<exercise xml:id="circledotwelldefexer">
+  <statement><p>Let <m>P,Q</m> be points in <m>S^1</m>. Show that the value
+      of <m>P\odot Q</m> does not depend on the values <m>t,s</m> that
+      we choose to write <m>P=\wrap(t)</m> and <m>Q=\wrap(s)</m>. In
+      other words, suppose that <m>\wrap(t)=\wrap(t')</m> and
+      that <m>\wrap(s)=\wrap(s')</m>, but do not assume that <m>t=t'</m>
+      or that <m>s=s'</m>. Show
+      that <m>\wrap(t+s)=\wrap(t'+s')</m>. 
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="circledotwelldefexer"/></title>
+  <p>The assumption that <m>\wrap(t)=\wrap(t')</m> and
+    that <m>\wrap(s)=\wrap(s')</m> means that <m>t=t'+2\pi k</m> and
+    that <m>s=s'+2\pi \ell</m> for some integers <m>k,\ell</m>. Then we
+    have
+    <me>\wrap(t+s)=\wrap(t'+s'+2\pi(k+\ell))=\wrap(t'+s').</me>
+  </p>
+  </commentary>
+
+<exercises>
+
+  <exercise xml:id="scalarmultisradialexer"><statement><p>
+          Let <m>P=(a,b)</m> be a point in <m>\R^2</m> different from the origin
+    <m>O=(0,0)</m>, and let <m>\alpha </m> be a real number. Show
+    that <m>O,P,\alpha P</m> are
+    collinear (that is, show that <m>O,P,\alpha P</m> lie on
+    the same line).
+    </p>
+  </statement>
+  </exercise>
+
+  <commentary component="instructor"><title>Instructor's solution for
+<xref ref="scalarmultisradialexer"/></title>
+    <p>
+      Let <m>P=(r\cos t,r\sin t)</m> be the polar form
+	for <m>P</m>. Then <m>\alpha P = \alpha (r\cos t,r \sin t) =
+	(\alpha r\cos t, \alpha r\sin t)</m> is the polar form
+	for <m>\alpha P</m>. From this it is clear that <m>P,\alpha
+	  P</m> have the same argument <m>t</m>. This means that <m>P,\alpha
+	P</m> lie on the same line that passes through the origin and
+	makes an angle of <m>t</m> radians with the
+	positive <m>x</m>-axis.
+</p>
+</commentary>
+
+
+
+  <exercise xml:id="parallelogramruleexer"><title>Parallelogram rule for vector addition</title>
+    <statement><p>Let <m>P=(a,b)</m> and <m>Q=(c,d)</m> be points
+      in <m>\R^2</m> such that both <m>P</m> and <m>Q</m> are different
+      from the origin <m>O=(0,0)</m>
+      and <m>Q</m> is not a
+	scalar multiple of <m>P</m>. Let <m>R=P+Q</m>.
+	Show that the points <m>O,P,Q,R</m> are the
+	corners of a parallelogram.<fn>A four-sided polygon with
+      consecutive vertices <m>A,B,C,D</m> is a parallelogram if both
+      pairs of opposite sides are parallel, that is,
+      if  <m>\overline{AB}\parallel \overline{CD}</m>
+      and <m>\overline{BC}\parallel \overline{AD}</m>.
+	</fn>
+	</p>
+      <p><alert>Comment:</alert> This result is called the "parallelogram rule for
+      vector addition" because it gives a simple geometric picture: the
+	  sum <m>\mathbf{u}+\mathbf{v}=\overrightarrow{OR}</m> of
+      vectors <m>\mathbf{u}=\overrightarrow{OP},\mathbf{v}=\overrightarrow{OQ}</m> is a diagonal of the
+	  parallelogram with adjacent
+      sides <m>\overline{OP},\overline{OQ}</m>. Make a sketch!
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="parallelogramruleexer"/></title>
+  <p>
+    We must show that the opposite
+      sides <m>\overline{OP}</m> and <m>\overline{QR}</m> are parallel,
+      and also that the opposite sides <m>\overline{OQ}</m> and <m>\overline{PR}</m> are parallel.
+      If <m>a\neq 0</m>, then the
+      sides <m>\overline{OP}</m> and <m>\overline{QR}</m> lie on lines with the
+      same slope <m>b/a</m>, and are therefore parallel. If <m>c\neq
+	0</m>, then the sides <m>\overline{OQ}</m>
+      and <m>\overline{PR}</m> lie on lines with the slope <m>d/c</m>,
+      and are therefore parallel. If <m>a=0</m>
+       then the sides <m>\overline{OP}</m>
+      and <m>\overline{QR}</m> are both vertical, and are therefore
+      parallel. Likewise, if <m>c=0</m>, then the sides <m>\overline{OQ}</m>
+      and <m>\overline{PR}</m> are both vertical, and are therefore
+      parallel. It is impossible to have <m>a=c=0</m>, because then 
+       <m>Q</m> would be a scalar multiple of <m>P</m>. This takes
+      care of all possible cases, so we conclude that <m>O,P,Q,R</m>
+      form the vertices of a parallelogram.
+</p>
+</commentary>
+
+<exercise xml:id="scalingislinearexer"><statement><p>
+      Show that the following hold for all <m>\alpha,\beta \in
+	\R</m>, <m>{\mathbf x},{\mathbf y}\in \R^2</m>.
+      <mdn>
+	<mrow xml:id="scalardistovervectsum">\alpha({\mathbf x}+{\mathbf y}) \amp = \alpha{\mathbf x} +
+    \alpha{\mathbf y}
+	</mrow>
+      <mrow xml:id="scalarsfactorfromdotprod">
+(\alpha \mathbf{x})\cdot (\beta \mathbf{y}) \amp = (\alpha \beta) (\mathbf{x}\cdot\mathbf{y})
+	</mrow>
+      </mdn>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="scalingislinearexer"/></title>
+  <p>
+    To show that <xref ref="scalardistovervectsum"/> holds,
+	let <m>\alpha\in \R</m>, and let <m>{\mathbf x}=(a,b),{\mathbf
+	y}=(c,d)\in \R^2</m>. We have
+      <md>
+	<mrow>\alpha({\mathbf x}+{\mathbf y}) \amp =
+	  \alpha((a,b)+(c,d))</mrow>
+	<mrow> \amp = \alpha(a+c,b+d)\amp \amp (\text{vector add.})</mrow>
+	<mrow> \amp = (\alpha(a+c),\alpha(b+d)) \amp \amp (\text{scalar mult.})</mrow>
+	<mrow> \amp = (\alpha a+\alpha c,\alpha b+\alpha d)\amp \amp
+	(\text{dist. law for reals})</mrow>
+	<mrow> \amp = (\alpha a,\alpha b)+(\alpha c,\alpha d)\amp \amp
+	(\text{vector add.})</mrow>		
+	<mrow> \amp = \alpha(a,b)+\alpha(c,d)\amp \amp (\text{scalar mult.})</mrow>
+	<mrow> \amp = \alpha\mathbf{x}+\alpha\mathbf{y},</mrow>				
+      </md>
+      as desired. To show that <xref ref="scalarsfactorfromdotprod"/>
+	holds, let <m>\alpha,\beta \in \R</m>, and let <m>{\mathbf x}=(a,b),{\mathbf
+	y}=(c,d)\in \R^2</m>. We have
+      <md>
+	<mrow>(\alpha \mathbf{x})\cdot (\beta \mathbf{y}) \amp =
+	  (\alpha(a,b))\cdot (\beta(c,d))</mrow>
+	<mrow>\amp = (\alpha a,\alpha b)\cdot (\beta c,\beta d)</mrow>
+	<mrow>\amp = \alpha a \beta c + \alpha b \beta d</mrow>
+	<mrow>\amp = (\alpha \beta) (ac+bd)</mrow>
+	<mrow>\amp = (\alpha \beta) (\mathbf{x}\cdot \mathbf{y}).</mrow>
+      </md>
+</p>
+</commentary>
+
+<exercise xml:id="normpropnonpropexer"><statement><p>How do norms and absolute values interact?
+      <ol><li>   Show that <m>\left\Vert r(a,b)\right\Vert=|r|\left\Vert(a,b)\right\Vert</m> for all real numbers
+      <m>r,a,b</m>.
+	</li>
+	<li>Is it true that <m>|(a,b)\cdot (c,d)|= \left\Vert(a,b)\right\Vert\;\left\Vert(c,d)\right\Vert</m> for
+        all real numbers <m>a,b,c,d</m>? Prove it or give a counterexample.
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="normpropnonpropexer"/></title>
+  <p>
+<ol><li>      We have
+      <md>
+	<mrow>\left\Vert r(a,b)\right\Vert \amp = \left\Vert(ra,rb)\right\Vert
+	</mrow>
+	<mrow>\amp =\sqrt{(ra)^2+(rb)^2}</mrow>
+	<mrow>\amp =\sqrt{r^2(a^2+b^2)}</mrow>
+	<mrow>\amp =\sqrt{r^2}\sqrt{a^2+b^2}</mrow>
+	<mrow>\amp =|r|\sqrt{a^2+b^2}</mrow>
+	<mrow>\amp =|r|\left\Vert(a,b)\right\Vert.</mrow>
+      </md>
+  </li>
+  <li>No. Let <m>(a,b)=(1,0)</m> and
+  let <m>(c,d)=(0,1)</m>. Then <m>(a,b)\cdot (c,d)=0</m>, so the left
+    side of the equation evaluates to <m>|(1,0)\cdot (0,1)|= 0</m>, while the
+  right side is <m>\left\Vert (1,0)\right\Vert
+  \left\Vert(0,1)\right\Vert = 1\cdot 1 = 1</m>.
+  </li>
+</ol>    
+</p>
+</commentary>
+
+
+<exercise xml:id="wrappingfnpropexer"><title>Properties of the wrapping function</title>
+  <statement><p>
+      <ol>
+<!--	<li>Explain why we need to check that
+	  <me>\wrap(t)\odot \wrap(s)= \wrap(t+2k\pi)\odot \wrap(s+2\ell
+	    \pi)</me>
+	   for all <m>k,\ell</m> in <m>\Z</m>, then check it.
+	</li>-->
+	<li>Show that <m>\wrap(t)\cdot \wrap(s) = \cos (t-s)</m>.</li>
+	<li>Show that
+	  <me>\wrap(t)\cdot \wrap(s) = (\wrap(r)\odot \wrap(t))\cdot
+ (\wrap(r)\odot \wrap(s))</me>
+ for all real numbers <m>r,s,t</m>.
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="wrappingfnpropexer"/></title>
+  <p>
+      <ol>
+	<li>We have
+	  <me>W(t)\cdot W(s) = (\cos t, \sin t)\cdot (\cos s,\sin t) =
+	    \cos t \cos s + \sin t\sin s =\cos(t-s)</me>
+	  where last equality is the formula for the cosine of a
+	    difference of angles.
+	</li>
+	<li>By part a above, the left side is <m>W(t)\cdot
+	    W(s)=\cos(t-s)</m>. For the right side, we have
+	  <md>
+	    <mrow>(\wrap(r)\odot \wrap(t))\cdot
+ (\wrap(r)\odot \wrap(s))\amp =\wrap(r+t)\cdot \wrap(r+s)\amp \amp
+ (\text{def. of } \odot)
+	    </mrow>
+	    <mrow>\amp =\cos((r+t)-(r+s))\amp \amp (\text{by part a above})</mrow>
+	    <mrow>\amp =\cos(t-s).</mrow>
+	  </md>
+	  <me></me>
+	</li>
+      </ol>    
+</p>
+</commentary>
+
+<exercise xml:id="polarrectconvertexer"><statement><p> 
+  Write formulas for converting from polar to rectangular
+    coordinates and vice-versa.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="polarrectconvertexer"/></title>
+  <p>
+    To convert from polar coordinates <m>r,t</m>
+    to rectangular coordinates <m>x,y</m>, first make sure <m>r\geq
+      0</m> (if <m>r\lt 0</m>, then replace <m>r,t</m>
+    by <m>-r,t+\pi</m>), then use the equations <m>x=r\cos \theta,
+    y=r\sin \theta</m> (show sketches to explain these formulas).  To convert
+    from rectangular to polar, use <m>r=\sqrt{x^2+y^2}</m> and <m>\tan \theta =
+    y/x</m>.  For the last equation, you must use judgment when <m>x=0</m> to decide
+    whether <m>\theta</m> should be <m>\pi/2</m> or <m>-\pi/2</m>.  You must also use
+    judgment when calculating <m>\theta = \arctan (y/x)</m>. The standard
+    codomain for <m>\arctan</m> is the interval <m>(-\pi/2,\pi/2)</m>, so you need to use
+    <m>\theta = \arctan (y/x) + \pi</m> for <m>x\lt 0</m>.    
+</p>
+</commentary>
+
+
+<exercise xml:id="geomdotprodexer"><title>Geometric content of the dot product</title>
+  <statement><p>Let <m>{\mathbf x},{\mathbf y}</m> be vectors in
+      <m>\R^2</m>. Let <m>O=(0,0)</m> denote the origin, and let <m>P,Q</m>
+      be the points given by <m>{\mathbf x}=\overrightarrow{OP}</m> and
+    <m>{\mathbf y}=\overrightarrow{OQ}</m>. Show that
+      <men xml:id="dotprodgeom">{\mathbf x} \cdot {\mathbf y} = \left\Vert{\mathbf
+	x}\right\Vert \left\Vert{\mathbf y}\right\Vert \cos \theta</men> 
+ where <m>\theta</m> is the measure of the angle <m>\angle POQ</m>. Hint: Start by
+    writing <m>P,Q</m> in polar form, then use previous exercises.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="geomdotprodexer"/></title>
+  <p>
+    Let <m>P=rW(t)</m> and <m>Q=sW(u)</m> be the polar forms
+      for <m>P,Q</m>. Then we have
+      <md>
+	<mrow>\mathbf{x}\cdot \mathbf{y} \amp = (rW(t))\cdot (sW(u))
+	</mrow>
+	<mrow>\amp = rs(W(t)\cdot W(u) \amp \amp (\text{by }
+	  <xref ref="scalarsfactorfromdotprod"/>)</mrow>
+	<mrow>\amp = rs \cos(t-u)\amp \amp (\text{by }
+	  <xref ref="wrappingfnpropexer"/>)</mrow>
+	<mrow>\amp = \left\Vert \mathbf{x}\right\Vert \left\Vert
+	\mathbf{y}\right\Vert \cos \theta.</mrow>
+      </md>
+</p>
+</commentary>
+
+<exercise xml:id="polygonvertexexer"><statement><p>Let <m>n</m> be a positive
+    integer. For <m>k</m> in the range <m>0\leq k\leq n-1</m>, let
+    <m>P_k=\wrap\left(\frac{2\pi k}{n}\right)</m>, where <m>\wrap</m> denotes the
+      wrapping function.
+      <ol><li>Show that the points <m>P_0,P_1,\ldots,P_{n-1}</m> are vertices of
+    a regular <m>n</m>-gon inscribed in the unit circle.
+	</li>
+	<li>Let integers <m>k,\ell</m> be in the range
+	  <m>0\leq k,\ell\leq n-1</m>, and let <m>r=k +_n \ell =
+	  (k+\ell)\MOD n</m> (see <xref ref="mod_arith_section"/>). Show
+	  that  <m>P_k\odot P_\ell = P_{r}</m>.</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="polygonvertexexer"/></title>
+  <p>
+      <ol><li>(just notice that the radian angle <m>2\pi/n</m>
+      is <m>1/n</m>th of a full revolution)
+	</li>
+	<li>Use the
+	  division algorithm to write <m>k+\ell = nq +r</m> for some
+	  integers <m>q,r</m> with <m>r=(k+\ell) \MOD m</m>. We have
+	  <me>P_k\odot P_\ell = W\left((k+\ell)\frac{2\pi}{n}\right) = W\left(2\pi q +
+	  r\frac{2\pi}{n}\right)= W\left(r\frac{2\pi}{n}\right)=P_{k +_n \ell}.</me>
+	</li>
+      </ol>
+</p>
+</commentary>
+
+<exercise xml:id="conventionsaboutptsandvects">
+  <title>Conventions on linear operations with points and
+    vectors</title>
+  <statement>
+    <p>In these notes, addition and scaling operations are defined for
+    ordered pairs, regardless of whether we view the ordered pairs as
+    points or as vectors. Traditional convention places some
+    restrictions that we have ignored, and will continue to ignore, but
+    nevertheless will present here for the reader's cultural
+      awareness. In short, traditional orthodoxy goes like this:
+      <ul>
+	<li>The operations <m>(a,b)+(c,d)</m>
+	  and <m>\alpha(a,b)</m> are allowed
+	  when <m>(a,b)</m> and <m>(c,d) </m> are both <em>vectors</em>, and
+	  the resulting ordered pairs <m>(a+c,b+d)</m>, <m>(\alpha
+	    a,\alpha b)</m> are interpreted as <em>vectors</em>.
+	</li>
+	<li>Addition and scaling of ordered pairs are discouraged, or
+	  even banned outright, if the ordered pairs
+	  are both <em>points</em>, except for the following two cases:
+	  </li>
+ 	<li> If <m>P=(a,b)</m> and <m>Q=(c,d)</m> are <em>points</em>, then
+	  the operation <m>(c,d)-(a,b)</m> is allowed, and the
+	  resulting ordered pair <m>Q-P=(c-a,d-b)</m> is interpreted as
+	  a <em>vector</em>, denoted <m>\overrightarrow{PQ}</m>.
+	</li>
+	<li>If <m>(a,b)</m> is a <em>point</em> and <m>(c,d)</m> is
+	  a <em>vector</em>, then the operation <m>(a,b)+(c,d)</m> is
+	  allowed, and the resulting ordered pair is interpreted as a <em>point</em>.
+  </li>
+</ul>
+      Here is a very short summary of the orthodox rules.
+      <ul>
+	<li>vector <m>+</m> vector <m>=</m> vector
+	</li>
+	<li>point <m>+</m> vector <m>=</m> point
+	</li>
+	<li>point <m>-</m> point <m>=</m> vector
+	</li>
+	<li>scalar <m>\cdot </m> vector <m>=</m> vector
+	</li>
+	<li>point <m>+</m> point <m>=</m> (not recognized)
+	</li>
+	<li>scalar <m>\cdot </m> point <m>=</m> (not recognized)
+	</li>
+      </ul>
+      The reader will have already noticed that in these notes, we
+      adopt an inclusive approach that allows addition and scaling of
+      points.
+      </p>
+      <p>
+      <ol>
+	<li><p>Draw sketches that illustrate the following.
+	  <ol>
+	    <li>(vector <m>+</m> vector <m>=</m> vector)
+	      <me>\overrightarrow{PQ}+\overrightarrow{QR}=\overrightarrow{PR}</me>  
+	</li>
+	<li>(point <m>+</m> vector <m>=</m> point) <me>P+\overrightarrow{PQ}=Q</me> 
+	</li>
+	<li>(point <m>-</m> point <m>=</m> vector) <me>Q-P=\overrightarrow{PQ}</me>
+
+	</li>
+	  </ol></p>
+	</li>
+      <li><p>Let <m>P=(a,b)</m> be a point, let <m>\mathbf{x}</m> be a
+	vector, and let <m>O=(0,0)</m> be the origin. Draw sketches that
+	demonstrate the following "conversion" formulas that convert the
+	  point <m>(a,b)</m> to the vector <m>(a,b)</m>, and vice-versa.
+	  <ol>
+	    <li>(convert <m>P</m> to <m>\mathbf{x}</m>) <me>\mathbf{x}=P-O</me>
+	    </li>
+	    <li>(convert <m>\mathbf{x}</m> to <m>P</m>) <me>P=O+\mathbf{x}</me>
+	    </li>
+	  </ol>
+	</p>
+      </li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="conventionsaboutptsandvects"/></title>
+  <p>
+(sketch the appropriate drawings, with appropriate labels and commentary)
+</p>
+</commentary>
+
+  
+</exercises>
+
+
+</section>

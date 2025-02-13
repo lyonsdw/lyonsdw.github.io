@@ -1,0 +1,339 @@
+<section xml:id="inj_and_surj_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Injectivity and Surjectivity
+</title>
+
+<p>
+  In <xref ref="functions_section"/>, we note that a
+  function is invertible if every element 
+  in the codomain has exactly one preimage.
+  A function
+  is <term>surjective</term><idx><h>function</h><h>surjective
+      function</h></idx>,
+  or <term>onto</term><idx><h>function</h><h>onto function</h></idx>,
+  if every element of the codomain has <em>at least</em>
+  one preimage. A function is <term>injective</term><idx><h>function</h><h>injective
+      function</h></idx>,
+  or <term>one-to-one</term><idx><h>function</h><h>one-to-one function</h></idx>,
+if every element of
+  the codomain has <em>at most</em>
+  one preimage.
+ A function
+  is <term>bijective</term><idx><h>function</h><h>bijective function</h></idx>
+  if it is both
+injective and surjective, that is, if every element in the codomain is
+the right entry of exactly one element of the function. Thus, the
+  adjectives "bijective" and "invertible" mean the same thing. A bijective
+  function is also called a <term>one-to-one
+    correspondence</term><idx><h>function</h><h>one-to-one
+      correspondence</h></idx>.
+</p>
+
+  <proposition xml:id="rightinvimpliessurjective">
+    <statement>
+      <p>Let <m>f\colon S\to T</m> be a function, and suppose that
+	there exists a
+	function <m>g\colon T\to S</m> such that <m>f\of g =
+	  \One_T</m>. Then <m>f</m> is surjective.
+      </p>
+    </statement>
+    <proof>
+      <p>Let <m>t_0</m> be an element of <m>T</m>, and
+	let <m>s_0=g(t_0)</m>. Applying <m>f</m> to both sides of the
+	last equation, we have <m>f(s_0)=f(g(t_0))</m>. Because <m>f\of
+	g=\One_T</m>, the last expression simplifies
+	to <m>\One_T(t_0)=t_0</m>. This shows that the preimage
+	of <m>t_0</m> under <m>f</m> has at least one element,
+	namely <m>s_0</m>. Because <m>t_0</m> was an arbitrary choice,
+	we conclude that every element in <m>T</m> has at least one
+	element in its preimage under <m>f</m>. Therefore <m>f</m> is
+	surjective.
+      </p>
+    </proof>
+  </proposition>
+
+  
+  
+  <proposition xml:id="leftinvimpliesinjective">
+    <statement>
+      <p>Let <m>f\colon S\to T</m> be a function, and suppose that
+	there exists a
+	function <m>g\colon T\to S</m> such that <m>g\of f =
+	  \One_S</m>. Then <m>f</m> is injective.
+      </p>
+    </statement>
+    <proof>
+      <p>Let <m>t_0</m> be an element of <m>T</m>, and
+	let <m>s_0=g(t_0)</m>. If <m>s_1</m> is a preimage of <m>t_0</m>
+	  under <m>f</m>, then <m>f(s_1)=t_0</m>. Applying <m>g</m> to
+	  both sides of <m>f(s_1)=t_0</m>, we have
+	  <m>g(f(s_1))=g(t_0)</m>. On the right side, we
+	  have <m>g(t_0)=s_0</m>. On the left, we
+	  have <m>g(f(s_1))=(g\circ f)(s_1)=\One(s_1)=s_1</m>. Therefore
+	  we have <m>s_1=s_0</m>. This shows that any preimage
+	  of <m>t_0</m> under <m>f</m> must be equal to <m>s_0</m>. 
+	Because <m>t_0</m> was an arbitrary choice,
+	we conclude that every element in <m>T</m> has at most one
+	preimage under <m>f</m>. Therefore <m>f</m> is
+	injective.
+      </p>
+    </proof>
+  </proposition>
+
+    <commentary component="instructor"><title>Comment on
+	<xref ref="rightinvimpliessurjective"/> and
+	<xref ref="leftinvimpliesinjective"/> and the Axiom of
+	Choice</title>
+      <p>The converse of <xref ref="rightinvimpliessurjective"/> is
+      equivalent to the Axiom of Choice. The Axiom of Choice is not used
+      in the facts that appear in this section. By contrast, the
+      converse of <xref ref="leftinvimpliesinjective"/> does not require
+      the Axiom of Choice.
+      </p>
+      </commentary>
+  
+
+  <exercise xml:id="onesidedinvproofsexer">
+    <statement>
+      <p>The proofs for the two previous propositions both begin with
+      the sentence "Let <m>t_0</m> be an element of <m>T</m>, and
+	let <m>s_0=g(t_0)</m>."
+	<ol><li>In the first proof, we end up concluding
+	    that <m>s_0</m> is a preimage of <m>t_0</m>
+	    under <m>f</m>. Do we get the same conclusion in the second
+	    proof? If the answer is "no", then
+	give an explicit example that shows why the answer is
+	no.</li>
+	  <li>	In the first proof, do we show that <m>s_0</m> is
+	    the <em>only</em> preimage of <m>t_0</m> under <m>f</m>, or
+	    could there be others? If the answer is "no", then
+	give an explicit example that shows why the answer is
+	no.</li>
+	</ol>
+	"Explicit" means you must list all the elements of the
+	sets <m>S,T</m> and all the ordered pairs in the functions <m>f,g</m>.
+      </p>
+      <hint><p>The answer to both questions is indeed "no". Use small
+      finite sets for your examples.</p>
+      </hint>
+    </statement>
+  </exercise>
+
+    <commentary component="instructor"><title>Instructor's solution for
+<xref ref="onesidedinvproofsexer"/></title>
+      <p>
+	<ol><li>
+	    No. It is possible that <m>t_0</m> could have 0 preimages
+	    under <m>f</m>. The second proof shows that <em>if</em> <m>t_0</m>
+	    has a preimage, then in has only one
+	    preimage. Example: let <m>S=\{a\}</m>, <m>T=\{x,y\}</m>, <m>f=\{(a,x)\}</m>, <m>g=\{(x,a),(y,a)\}</m>,
+	    and <m>t_0=y</m>. The
+	    hypotheses of the second proof are satisfied, that is, we
+	    have <m>g\of f = \{(a,a)\}= \One_S</m>, but <m>a</m>
+	    is not a preimage of <m>t_0=y</m>.
+	  </li>
+	  <li>
+	    No. It is possible for <m>t_0</m> to have many preimages
+	    under <m>f</m>. The
+	    proof shows that <m>t_0</m> has <em>at least one</em>
+	    preimage. Example:
+	    let <m>S=\{a,b\}</m>, <m>T=\{x\}</m>, <m>f=\{(a,x),(b,x)\}</m>,
+	    <m>g=\{(x,a)\}</m>, and <m>t_0=x</m>. The hypotheses of the
+	    first proof are satisfied, that is, we have <m>f\of g =
+	      \{(x,x)\}=\One_T</m>,
+	    but <m>a=g(x)</m> is not the only
+	    preimage of <m>t_0=x</m>.
+	  </li>
+	</ol>
+</p>
+  </commentary>
+  
+    <p>
+    Putting together <xref ref="bijectiveimpliestwosidedinverse"/>,
+	<xref ref="rightinvimpliessurjective"/>, and 
+	<xref ref="leftinvimpliesinjective"/> we have the following.
+</p>
+    <corollary xml:id="invertibilityconditions">
+      <title>Characterization of invertibility</title>
+      <statement><p>
+	  The following conditions are equivalent
+	  for a function <m>f\colon S\to T</m>.
+	  <ol>
+	    <li>The inverse relation <m>f^{-1}\subseteq T\times S</m> is
+	      a function <m>f^{-1}\colon T\to S</m>. 
+	    </li>
+	    <li>The function <m>f\colon S\to T</m> is surjective and injective.
+	    </li>
+	    <li>There exists a function <m>g\colon T\to S</m> such that <m>g\of f = \One_S</m>
+	and <m>f\of g = \One_T</m>.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+    </corollary>
+
+	<p>
+	The statement that the conditions 1, 2, and 3 in
+	<xref ref="invertibilityconditions"/> are equivalent
+	means that if <m>f</m> satisfies any one of the three
+	conditions, then <m>f</m> satisfies the other two conditions as well.
+    </p>
+
+<exercise xml:id="writeoutfunsexeragain">
+  <statement><p>This exercise refers to the collections of functions is
+  <xref ref="writeoutfunsexer"/>.
+      <ol>
+	<li>  Of all the functions from <m>\{x,y,z\}</m> to
+  <m>\{A,B\}</m>, which are injective? Which are surjective? 
+	</li>
+	<li>
+    Of all the functions from <m>\{A,B\}</m> to
+  <m>\{x,y,z\}</m>, which are injective? Which are surjective? 
+	</li>
+	<li>  Of all the functions from <m>\{x,y,z\}</m> to
+          <m>\{x,y,z\}</m>, which are injective? Which are surjective?
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="writeoutfunsexeragain"/></title>
+  <p>
+    <ol>
+	<li>
+Of the 8 functions
+    <me>(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B),</me>
+    none are injective because each function list contains
+    two occurrences of at least one of the two output values. All of
+    the functions are surjective except for <m>(A,A,A)</m>
+    and <m>(B,B,B)</m>.
+	</li>
+	<li>
+    Of the 9 functions
+    <me>(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z),</me>
+     6 are injective, that is, all but <m>(x,x), (y,y),(z,z)</m>.
+     None are surjective because none of the lists contains all
+    three letters <m>x,y,z</m>.
+	</li>
+	<li>
+Of the 27 functions, 6 are injective, and the same 6 are surjective 
+   Here are those 6.
+	      <me>    (x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)</me>
+	</li>
+      </ol>
+</p>
+</commentary>
+
+
+
+<exercises>
+
+  <exercise xml:id="surjinjcompexer">  	<statement><p>
+	Is the composition of two injective functions always injective? Is
+	the composition of two surjective functions always surjective?
+	For each question, if the answer is yes, give a proof. If the
+	answer is no, give an example.
+  </p></statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="surjinjcompexer"/></title>
+  <p>
+    The answer to both questions is yes. Let <m>f\colon S\to T</m>
+    and <m>g\colon T\to U</m> be functions. Suppose that both <m>f,g</m>
+    are injective, and let <m>u\in U.</m> Because <m>g</m> is injective,
+    the preimage <m>g^{-1}(u)</m> has at most one
+    element. If <m>g^{-1}(u)</m> empty, then <m>(g\circ f)^{-1}(u)</m> is
+    also empty. If <m>g^{-1}(u)</m> not empty, then <m>g^{-1}(u)</m>
+    contains 1 element, say <m>t\in T</m>. Because <m>f</m> is
+    injective, the preimage <m>f^{-1}(t)</m> contains at most one
+    element, so <m>(g\circ f)^{-1}(u)</m> contains at most one
+    element. Thus, in all cases, <m>(g\circ f)^{-1}(u)</m> contains at
+    most one element. We conclude that <m>g\circ f</m> is injective. Now
+    suppose that <m>f,g</m> are both surjective, and let <m>u\in
+      U</m>. The preimage <m>g^{-1}(u)</m> contains at least one
+    element, say <m>t\in T</m>. The preimage <m>f^{-1}(t)</m> contains
+    at least one element, say <m>s\in S</m>. Therefore <m>s\in (g\circ
+      f)^{-1}(u)</m>. We conclude that <m>g\circ f</m> is surjective.
+</p>
+</commentary>
+  
+  
+<exercise xml:id="surjinjegexer">  	<statement><p>Find examples illustrating possibilities
+      for surjectivity and injectivity for which the domain and codomain
+      are the <em>same set</em> <m>T</m>.
+      <ol>
+<li>Give an example of a one-to-one function <m>g\colon T\to T</m> that
+is not onto.</li>
+	<li>Give an example of an onto function <m>g\colon T\to T</m>
+	  that is not one-to-one.</li>
+      </ol>
+  </p></statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="surjinjegexer"/></title>
+  <p>
+<ol><li>Let <m>T=\{1,2,3,\ldots\}</m> and consider <m>g\colon T \to T</m> defined
+  by <m>g(n)=n+1</m>. It is clear that <m>g</m> is one-to-one  but not onto.</li>
+<li>Let <m>T=\{0,1,2,3,\ldots\}</m> and let <m>g</m> be given by
+  <m>g(n)=\lfloor n/2\rfloor</m>. It is clear that <m>g</m> is onto but
+  not one-to-one.</li></ol>    
+</p>
+</commentary>
+
+
+  <exercise xml:id="socksnshoesexer"><statement><p>
+	    Suppose that <m>f</m> and <m>g</m> are both invertible, and that the
+    composition <m>g\of f</m> is defined. Show that <m>g\of f</m> is invertible
+    and that <m>(g\of f)^{-1} = f^{-1} \of g^{-1}</m>. This fact is referred
+    to as the "socks and shoes" property.      
+    </p></statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="socksnshoesexer"/></title>
+  <p>
+      Let <m>h=f^{-1} \of g^{-1}</m>. Let <m>s</m> be in the domain of <m>f</m>. We have
+<md>        <mrow>(h \of (g\of f))(s)
+    \amp= h(g(f(s)) \amp \amp \text{(definition of composition)}</mrow>
+  <mrow> \amp= f^{-1}(g^{-1}(g(f(s)))) \amp \amp (\text{definition of } h)</mrow>
+<mrow> \amp= f^{-1}((g^{-1}\of g)(f(s))) \amp \amp (\text{(associativity of
+  function composition})</mrow>
+<mrow>\amp= f^{-1}(f(s)) \amp \amp (g^{-1}\of g \text{ is the identity
+  function})</mrow>
+<mrow>\amp= s\amp \amp (f^{-1}\of f \text{ is the identity
+  function})                </mrow>
+</md>
+      This establishes that <m>h\of (g\of f)</m> is the identity function on
+      the domain of <m>f</m>. A similar derivation shows that <m>(g\of f)\of h</m>
+      is the identity function on the codomain of <m>g</m>. We conclude that
+      <m>(g\of f)</m> is invertible, with inverse <m>(g\of f)^{-1} = h = f^{-1}
+      \of g^{-1}</m>, as desired.    
+</p>
+</commentary>
+  
+  <exercise xml:id="allsizepreimageexer"><statement><p>
+	Let <m>\N=\{0,1,2,3,\ldots\}</m>. Find a function 
+	<m>f\colon \N\to \N</m> such that <m>|f^{-1}(j)|=j</m> for
+	all <m>j\in \N</m>.
+    </p></statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="allsizepreimageexer"/></title>
+  <p>
+    Let <m>f(0)=1</m>, <m>f(1)=f(2)=2</m>, <m>f(3)=f(4)=f(5)=3</m>,
+    etc. In "output row of the input/output table" notation, this
+    function is
+    <me>f=[1,2,2,3,3,3,4,4,4,4,\ldots ].</me>
+</p>
+</commentary>
+
+
+</exercises>
+
+</section>
+

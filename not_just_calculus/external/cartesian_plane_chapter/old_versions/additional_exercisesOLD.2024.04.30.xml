@@ -1,0 +1,348 @@
+<section xml:id="additional_exercises_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Planar Algebra and Geometry
+</title>
+
+
+
+<exercises>
+
+  <exercise xml:id="maptomatandcomplexfnexer"><title>Matrices and complex functions</title>
+    <statement><p>Let <m>R_{\theta}</m> denote the rotation of the plane about the
+	origin by <m>\theta</m> radians. 
+	For example, <m>R_{\pi}</m> is the
+	linear map <m>\R^2\to \R^2</m>
+	given by the
+	matrix <m>\twotwo{-1}{0}{0}{-1}</m>. Alternatively, <m>\R_{\pi}</m>
+	is the map <m>\C\to\C</m> given
+	by <m>R_{\pi}(z)=-z</m>. Let <m>F_H,F_V,F_D,F_{D'}</m> be the
+	reflections across the lines <m>H: y=0</m>, <m>V:
+	  x=0</m>, <m>D: y=-x</m>, and <m>D': y=x</m>. For
+	example <m>F_H</m> is the linear map <m>\R^2\to \R^2</m> given
+	by the
+	matrix <m>\twotwo{1}{0}{0}{-1}</m>. Alternatively, <m>F_H</m> is
+	the map <m>\C\to\C</m> given by <m>F_H(z)=z^{\ast}</m>. Find
+	linear maps and complex functions for all eight of the mappings
+	in the set
+	<me>D_4=\{R_0,R_{\pi/2},R_{\pi},R_{3\pi/2},F_H,F_V,F_D,F_{D'}\}.</me>
+	For each complex function <m>f</m>, find a
+	constant <m>\alpha</m> so that <m>f(z)</m> may be written 
+	in the form <m>f(z)=\alpha z</m> or in the form <m>f(z)=\alpha
+	  z^\ast</m>.
+    </p>
+    </statement>
+    <hint>For the complex functions for <m>F_D</m> and <m>F_{D'}</m>,
+    use part c of <xref ref="reflectislinearexer"/>.
+    </hint>
+  </exercise>
+
+  
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="maptomatandcomplexfnexer"/></title>
+  <p>
+The matrices for
+	<me>R_0,R_{\pi/2},R_{\pi},R_{3\pi/2},F_H,F_V,F_D,F_{D'}</me>
+	are
+	<me>\twotwo{1}{0}{0}{1},\twotwo{0}{-1}{1}{0},\twotwo{-1}{0}{0}{-1},\twotwo{0}{1}{-1}{0},
+	\twotwo{1}{0}{0}{-1}, \twotwo{-1}{0}{0}{1},
+	  \twotwo{0}{-1}{-1}{0}, \twotwo{0}{1}{1}{0},</me>
+	respectively.
+    </p>
+      <p>The corresponding complex functions corresponding are the following.
+	<md>
+	  <mrow>R_0(z)=z, \amp \amp R_{\pi/2}(z)=iz,
+	    \amp \amp R_{\pi}(z)=-z, \amp \amp R_{3\pi/2}(z)=-iz</mrow>
+	  <mrow>F_H(z)=z^\ast, \amp \amp F_V(z)=-z^\ast,
+	    \amp \amp F_D(z)=-iz^\ast, \amp \amp F_{D'}(z)=iz^\ast </mrow>
+	</md>    
+</p>
+</commentary>
+  
+
+  <exercise xml:id="rootsof1exer"><title>Roots of unity</title>
+    <statement><p>
+	Let <m>n</m> be a positive integer. A
+	<term>(complex) <m>n</m>-th root of
+	unity</term><idx><h><m>n</m>-th root of unity
+	  </h>
+	</idx>
+	is a complex number <m>z</m> such
+	that <m>z^n=1</m>.
+	<ol>
+	  <li>Show that if <m>z</m> is an <m>n</m>-th root of unity, then <m>|z|=1</m>.</li>
+     <li>Find all of the <m>n</m>-th roots of unity for <m>n=3,6</m>. Sketch
+       their locations on the unit circle.</li>
+      <li>Let <m>\omega=E(2\pi/n)</m>. Show that if <m>z</m> is an <m>n</m>-th root of unity, then
+        <m>z=\omega^k</m> for some integer <m>k</m>.</li>
+      <li> Let <m>k</m> be an integer. Show
+	that <m>\omega^k=\omega^r</m> for some <m>r</m> in the
+	range <m>0\leq r\leq n-1</m>.</li>
+      <li>An <m>n</m>-th root of unity <m>z</m> is
+	called <term>primitive</term><idx><h>primitive root of unity</h>
+	</idx>
+	if all
+          <m>n</m>-th roots of unity can be written as powers of <m>z</m>. Find all
+          of the primitive roots of unity for <m>n=3,6,10</m>.</li>
+          <li>Let <m>C_n</m> denote the set of <m>n</m>-th roots of unity, and
+            let <m>\mu\colon \Z_n\to C_n</m> be given by
+            <m>\mu(k)=\omega^k</m>. Show that <m>\mu</m> is one-to-one and onto,
+            and that <m>\mu(k)\mu(\ell)=\mu(k+_n\ell)</m> for all <m>k,\ell</m> in
+            <m>\Z_n</m>.</li>
+	</ol>
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rootsof1exer"/></title>
+  <p>
+	<ol><li>
+	    Taking norms of both sides of <m>z^n=1</m>, we
+	    get <m>|z|^n=1</m>. Because <m>|z|</m> is a nonnegative real
+	    number, we conclude that <m>|z|=1</m>.
+	  </li>
+	  <li>(sketch the points)</li>
+	  <li>Let <m>z</m> be an <m>n</m>-th root of unity. By part a,
+	    we have <m>|z|=1</m>, so <m>z=E(\theta)</m> for some
+	    real <m>\theta</m>. Then <m>z^n = E(n\theta)=1</m>,
+	    so <m>n\theta = 2\pi k</m> for some
+	    integer <m>k</m>. Solving for <m>\theta</m>, we
+	    have <m>\theta= 2k\pi/n</m>, so <m>z=\omega^k</m>.
+	  </li>
+	  <li>Use the Division Algorithm to write <m>k=nq+r</m> for
+	    integers <m>q,r</m> with <m>r</m> in the range <m>0\leq
+	      r\leq n-1</m>. Then we have
+	    <me>\omega^k=\omega^{nq+r}=\omega^{nq}\omega^r=\omega^r.</me>
+	  </li>
+	  <li>The primitive roots of unity for <m>n=3</m>
+	    are <m>\omega, \omega^2</m>. For <m>n=6</m>, they
+	    are <m>\omega,\omega^5</m>. For <m>n=10</m>, they
+	    are <m>\omega,\omega^3,\omega^7, \omega^9</m>.
+	  </li>
+	  <li>Part d shows that the set <m>C_n</m> is given by
+	    <me>C_n=\{\omega^0,\omega^1,\ldots,\omega^{n-1}\}.</me>
+	    This implies that <m>\mu</m> is onto. By <xref ref="intoisontofinite"/>, we have
+	    that <m>\mu</m> is also one-to-one. For <m>k,\ell\in
+	      \Z_n</m>, we have
+	    <m>\mu(k)\mu(\ell)=\omega^k\omega^\ell=\omega^{k+\ell}</m>. Again
+	    by part d, we
+	    have <m>\omega^{k+\ell}=\omega^{k+_n \ell}=\mu(k+_n\ell)</m>.
+	  </li>
+	</ol>
+</p>
+</commentary>
+  
+  
+  <exercise xml:id="orthprojexer"><title>Orthogonal projections onto lines</title>
+    <statement><p>Let <m>\mathbf{u}</m> be a vector in <m>\R^2</m> such
+	that <m>\left\Vert\mathbf{u}\right\Vert=1</m>, 
+	let <m>\ell</m> be the line
+	<me>\ell=\{\alpha \mathbf{u}\colon \alpha \in \R\}</me>
+	and let <m>\mathbf{v}=\overrightarrow{OQ}</m> be another vector
+	in <m>\R^2</m>, where <m>O=(0,0)</m> is the origin and <m>Q</m>
+	is some point in the plane. Let <m>P</m> be the point on <m>\ell</m> such
+	that <m>\triangle OPQ</m> is a right triangle.
+	Use <xref ref="dotprodgeom"/> and draw a sketch to explain why
+	<me>\overrightarrow{OP}=(\mathbf{u}\cdot
+	  \mathbf{v})\mathbf{u}.</me>
+	The vector <m>\overrightarrow{OP}</m> is called
+	the <term>(orthogonal) projection of <m>\mathbf{v}</m>
+	  onto <m>\mathbf{u}</m></term><idx><h>orthogonal projection of a
+	    vector onto another vector</h></idx>,
+	denoted <m>\proj_{\mathbf{u}}\mathbf{v}</m><notation><usage><m>\proj_{\mathbf{u}}\mathbf{v}</m>
+	  </usage><description>orthogonal projection of
+	    vector <m>\mathbf{v}</m> onto vector <m>\mathbf{u}</m>
+	  </description>
+	</notation>.
+    </p>
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="orthprojexer"/></title>
+  <p>
+    (draw sketches and use <xref ref="dotprodgeom"/> to get the
+      length of <m>\overrightarrow{OP}</m>)
+</p>
+</commentary>
+  
+
+<!--  <exercise><title>Clock with indistinguishable hour and minute hands</title>
+    <statement><p>
+    </p>
+  </statement>
+  <NOanswer><p>
+    </p>
+  </NOanswer>
+  </exercise>
+  -->
+
+<exercise xml:id="linfractransexer"><title>Linear fractional transformations of the extended
+  real numbers</title>
+    <statement><p>We call the set
+	<me>\extR=\R\cup \{\infty\}</me>
+	the <term>extended real numbers</term><idx><h>extended real numbers</h>
+	</idx>,
+	where <m>\infty</m> is an element that is not a real
+	number. Let <m>\alpha\neq 0</m> be a real number and
+	let <m>\beta</m> be any real number.
+	We define functions <m>\mu_\alpha,\tau_{\beta},\rho\colon \extR\to\extR</m>,
+	as follows.
+	<md>
+	  <mrow>\mu_{\alpha}(x)\amp = \begin{cases} \alpha x \amp x\in \R\\ \infty \amp x=\infty \end{cases}
+	</mrow>
+	<mrow>\tau_{\beta}(x) \amp = \begin{cases} x+\beta \amp x\in \R\\ \infty
+	  \amp x=\infty \end{cases}</mrow>
+	<mrow>\rho(x) \amp = \begin{cases} 1/x \amp x\in \R,x\neq 0\\
+	\infty \amp x=0\\ 0 \amp x=\infty \end{cases}</mrow>	
+	</md>
+<ol>
+  <li>Show that <m>\mu_{\alpha},\tau_{\beta},\rho</m> are invertible
+    functions. Say where you use the assumption that <m>\alpha\neq 0</m>.
+  </li>
+  <li>Let <m>a,b,c,d</m> be real numbers with <m>c\neq 0</m>
+    and <m>ad-bc\neq 0</m>. Show that
+    the composition
+    <me>\mu_{(1/c)}\of\tau_a\of \mu_{(bc-ad)}\of\rho\of \tau_d\of
+      \mu_c</me>
+    is given by
+    <men xml:id="linfractransformcneq0">T(x)=\begin{cases}
+      \frac{ax+b}{cx+d} \amp \text{ if }x\in  \R,x\neq -d/c\\
+      \infty \amp \text{ if } x= -d/c\\
+      a/c \amp \text{ if }x=\infty.
+    \end{cases}</men>
+    Conclude that <m>T\colon
+      \extR\to\extR</m> is invertible.    </li>
+    <li>Let <m>a,b,c,d</m> be real numbers with <m>c=0</m>
+      and <m>ad-bc\neq 0</m>. Show that <m>d\neq 0</m> and that the
+      composition
+      <m>\tau_{(b/d)}\of \mu_{a/d}</m> is given by
+          <men xml:id="linfractransformceq0">T(x)=\begin{cases}
+      \frac{ax+b}{cx+d} \amp \text{ if } x\neq \infty\\
+      \infty \amp \text{ if } x= \infty.
+    \end{cases}</men>
+      Conclude that <m>T\colon
+      \extR\to\extR</m> is invertible.
+    </li>
+    <li>Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
+      function
+      <m>T\colon \extR\to \extR</m> given
+      by <m>T(x)=\frac{ax+b}{cx+d}</m>, with exceptional values specified by
+      <xref ref="linfractransformcneq0"/> and
+      <xref ref="linfractransformceq0"/> for the cases <m>c\neq
+      0</m>, <m>c=0</m>, respectively,
+      is called a <term>linear
+	fractional transformation</term><idx><h>linear fractional transformation</h> </idx>
+      on the extended reals. Given a linear fractional
+      transformation <m>T(x)=\frac{ax+b}{cx+d}</m>,
+      let <m>M(T)=\twotwo{a}{b}{c}{d}</m>. We will call <m>M(T)</m>
+      the <em>matrix of coefficients</em> of <m>T</m>. Suppose
+      that <m>S</m> is another linear fractional transformation
+      with <m>M(S)=\twotwo{e}{f}{g}{h}</m>. Show that <m>M(T\of
+	S)=M(T)M(S)</m> and <m>M(T^{-1})=(M(T))^{-1}</m> (the previous
+      two parts of this problem show that <m>T</m> is invertible).
+    </li>
+    <li>Let <m>s\colon S^1\to \extR</m> be the stereographic projection
+      function, given by
+      <me>s(x,y)=\begin{cases}\frac{x}{1-y}\amp y\neq 1\\ \infty \amp
+	y=1. \end{cases}</me>
+      Show that <m>s</m> is a bijection.
+    </li>
+    <li>Given a function <m>f\colon \extR\to\extR</m>, the <em>lift
+	of <m>f</m> by <m>s</m></em> is the function
+      <m>s^{-1}\of f\of s\colon S^1\to S^1</m>. Show that the lift of the
+      linear fractional transformation <m>T(x)=-1/x</m> is given
+      by <m>(x,y)\to (-x,-y)</m> and that the lift of <m>S(x)=-x</m> is
+      given by <m>(x,y)\to (-x,y)</m>.
+    </li>
+    <li>An element <m>x_0\in A</m> is called a <term>fixed point</term> of
+      a function <m>f\colon A\to A</m> if <m>f(x_0)=x_0</m>. Find all the
+      fixed points of the linear fractional
+      transformation <m>T(x)=\frac{6x+2}{3x+3}</m>, and find the fixed
+      points of the lift <m>s^{-1}\of T\of s</m>.
+    </li>
+<!--    <li><alert>Challenge problem.</alert> The fixed points of the lift
+      of <m>T</m> in the last problem turned out to be opposite
+      endpoints of a diameter on the unit circle. Show that this
+      happens if and only if <m>b=c</m> in the expression <m>T(x)=\frac{ax+b}{cx+d}</m>.
+      </li>-->
+    <li>Let <m>M\colon \R^2\to \R^2</m> be a linear map. A nonzero
+      vector <m>\mathbf{v}\in \R^2</m> is called an <term>eigenvector</term>
+      for <m>M</m> with <term>eigenvalue</term> <m>\lambda\in \R</m> if 
+      <m>M\mathbf{v}=\lambda \mathbf{v}</m>. Show that if <m>x_0</m> is
+      a fixed point for a linear fractional transformation <m>T(x)=\frac{ax+b}{cx+d}</m>,
+      then <m>\begin{bmatrix}x_0\\1\end{bmatrix}</m> is an eigenvector
+      for <m>M(T)=\twotwo{a}{b}{c}{d}</m> with eigenvalue <m>cx_0+d</m>.
+    </li>
+	</ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="linfractransexer"/></title>
+  <p>
+	<ol>
+	  <li>It is easy to see what the inverse functions should be. We
+	    guess
+	    that <m>\left(\mu_{\alpha}\right)^{-1}=\mu_{(1/\alpha)}</m>,
+	    that <m>\left(\tau_{\beta}\right)^{-1}=\tau_{(-\beta)}</m>,
+	    and that <m>\left(\rho\right)^{-1}=\rho</m>. Now just check
+	    the compositions of each function with its candidate inverse
+	    to verify that the candidate inverse is indeed an inverse,
+	    that is, check that
+<me>\mu_{\alpha}\of \mu_{(1/\alpha)}=\mu_{(1/\alpha)}\of\mu_{\alpha}=
+  \One</me>
+and similarly for <m>\tau_{\beta},\rho</m>. 
+	  </li>
+	  <li>(just carry out the algebra)
+	  </li>
+	  <li>(just carry out the algebra)
+	  </li>
+	  <li>(just carry out the algebra)
+	  </li>
+	  <li>From <xref ref="inversestereoexer"/> we have the formula
+	    <me>s^{-1}(a) =
+	      \left(\frac{2a}{a^2+1},\frac{a^2-1}{a^2+1}\right)</me>
+	    for the inverse of <m>s\colon Q\to (1,\infty)</m>. From this
+	    we can guess the formula for <m>s^{-1}</m> for <m>s\colon
+	      S^1\to \extR</m>.
+	    <me>s^{-1}(a)=\begin{cases}\left(\frac{2a}{a^2+1},\frac{a^2-1}{a^2+1}\right)
+	      \amp a\in \R\\ (0,1) \amp a=\infty \end{cases}</me>
+	    Now just check that this works by checking the
+	      compositions <m>s\of
+	      s^{-1}\stackrel{?}{=}\One_{\extR}</m>, <m>s^{-1}\of
+	      s\stackrel{?}{=}\One_{S^1}</m>. 
+	  </li>
+	  <li>Let <m>T\colon \extR\to\extR</m> be the
+	  function <m>T(x)=1/x</m> and let
+	    <m>g\colon S^1\to S^1</m> be the
+	    function <m>g(x,y)=(-x,-y)</m>. We wish to show
+	    that <m>g=s^{-1}\of T\of s</m>. Applying <m>s</m> to both
+	    sides, this is the same as <m>s\of g=T\of s</m>. To check
+	    this, just evaluate both sides on the
+	    input <m>(x,y)</m>. Both sides produce the
+	    same output <m>\frac{-x}{1+y}</m> (do the algebra). A similar analysis works
+	    for <m>S(x)=-x</m>. Let <m>h(x,y)=(-x,y)</m> and show
+	    that <m>s\of S=h\of s</m>.
+	  </li>
+	  <li>Solve <m>T(x)=x</m> to get <m>x=-1/2,2</m>. These points
+	    lift to the points <m>(-4/5,-3/5), (4/5,3/5)</m>
+	    on <m>S^1</m> (show the work).
+	  </li>
+	  <li>If <m>\frac{ax+b}{cx+d}=x</m>, then
+	    <me>\twotwo{a}{b}{c}{d}\begin{bmatrix}x\\1\end{bmatrix} =
+	      \begin{bmatrix}ax+b\\cx+d\end{bmatrix}=
+	      (cx+d)\begin{bmatrix}\frac{ax+b}{cx+d}\\ 1\end{bmatrix}=
+	      (cx+d)\begin{bmatrix}x\\ 1\end{bmatrix}.
+	    </me>
+	  </li>
+	</ol>
+</p>
+</commentary>
+
+  
+  
+</exercises>
+
+</section>

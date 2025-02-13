@@ -1,0 +1,373 @@
+<section xml:id="mod_arith_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Modular Arithmetic
+</title>
+
+  <p>
+Given a positive integer <m>m</m>, we say
+    integers <m>a,b</m> are <term>equivalent
+    modulo <m>m</m></term><idx><h>equivalence modulo an
+    integer</h></idx>, written <m>a\equiv b \pmod{m}</m>    <notation>
+      <usage><m>a\equiv b \pmod{m}</m>
+      </usage>
+      <description><m>a</m> is equivalent to <m>b</m> modulo <m>m</m>
+      </description>
+    </notation>,
+if <m>m|(a-b)</m>.
+  </p>
+  
+  <exercise xml:id="parseequivmodmexer"><statement><p>Say which of the following are true, or
+	false, or neither. Explain.
+	<md>
+<mrow>	     \amp 8\equiv 2\pmod{3}
+	    \amp \amp  7\equiv 2 \pmod{3}
+	  </mrow>
+	</md>
+      </p>
+    </statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="parseequivmodmexer"/></title>
+  <p>
+The statement <m>8\equiv 2\pmod{3}</m>
+	is true, because <m>3|(8-2)</m>. The statement <m>7\equiv 2
+	  \pmod{3}</m> is false, because <m>3\nmid (7-2)</m>.    
+</p>
+</aside>
+  
+
+  <p>
+    We write <m>\Z_m</m>
+ to denote the set
+  <me>\Z_m = \{0,1,\ldots,m-1\}</me>    <notation>
+      <usage><m>\Z_m</m>
+      </usage>
+      <description>the set <m>\{0,1,\ldots,m-1\}</m>
+      </description>
+    </notation>
+of possible remainders obtained when dividing by a positive integer by <m>m</m>.
+The function <m>\Z \to \Z_m</m> that sends an input <m>n</m> to its
+remainder when dividing by <m>m</m> is called <q>reducing
+    mod <m>m</m></q>. We write <m>n \MOD m</m><notation>
+      <usage><m>n \MOD m</m>
+      </usage>
+      <description><m>n</m> modulo <m>m</m>
+      </description>
+  </notation>, pronounced <q><m>n</m> modulo <m>m</m></q>
+   or
+  simply <q><m>n</m> mod <m>m</m></q>, to denote this remainder.
+  </p>
+
+  <p><alert>Comment on notation:</alert> Be careful using <q>mod</q>
+     and
+    <q>MOD</q>. The expression <m>\text{"}a\equiv b \pmod{m}\text{"}</m>
+    is
+    a <em>statement</em>, that is, an assertion that is either true or
+    false; by contrast, the expression <m>\text{"}a \MOD m\text{"}</m>
+    is a <em>number</em>, which is neither true nor false. The
+    expression <m>\text{"}\!\!\pmod{m}\text{"}</m> is
+    an <em>adjective</em> that modifies the
+    verb <m>\text{"}\equiv\text{"}</m> (pronounced <q>is equivalent
+    to</q>). By contrast, the
+    expression <m>\text{"}\MOD\ m\text{"}</m> is a <em>function</em> on
+    the integers.
+  </p>
+
+  <p>Here is a useful fact that connects equivalence modulo an
+    integer <m>m</m> with the operation that send an integer <m>n</m>
+    to <m>n \MOD m</m>.
+  </p>
+
+<proposition xml:id="modMODequivprop">
+<statement><p>  Let <m>m>1</m> be a positive integer, and let <m>a,b</m> be
+    integers. Then <m>a\equiv b \pmod{m}</m> if and only if <m>a\MOD m = b \MOD m</m>.
+    </p></statement>
+<proof>
+  <p>
+    Use the division algorithm to
+      write
+    <md>        <mrow>a \amp = qm + r</mrow>
+      <mrow> b \amp = q'm + r'</mrow>
+</md>
+      for some integers <m>q,q'</m> and <m>r,r'</m> in the
+      range <m>0\leq r,r'\lt m</m>,
+      so we have
+    <men xml:id="aminusb">a-b = (q-q')m + (r-r')</men>
+      with <m>|r-r'|\leq m-1</m>.
+    To establish the <q>if</q>
+     part of the statement in the Proposition, suppose that <m>a \MOD m = b\MOD m</m>. This
+means that <m>r=r'</m>, so <xref ref="aminusb"/> becomes <m>a-b=(q - q')m</m>. Thus we have
+<m>m|(a-b)</m>, so we conclude that <m>a\equiv b \pmod{m}</m>. To
+establish the <q>only if</q>
+ part of the statement in the Proposition,
+suppose that <m>a\equiv b \pmod{m}</m>, so we have that <m>a-b</m> is a
+multiple of <m>m</m>, say <m>a-b=km</m>. Then <xref ref="aminusb"/>
+becomes
+   <me>r-r' = m(k-q+q').</me>
+Because <m>|r-r'|\leq m-1</m>, we conclude that <m>k-q+q'</m> must be
+zero. Thus we have <m>r=r'</m>, which means that <m>a \MOD m = b\MOD m</m>. This
+completes the proof. 
+  </p>
+</proof>
+</proposition>
+
+<exercise>  <statement>
+    <p>Is <xref ref="modMODequivprop"/> true for the case <m>m=1</m>? If
+      yes, does the given proof work? If the proposition is true
+      for <m>m=1</m> and the proof does not work, write a proof that
+      does work. If the proposition is false, give an example of two
+      integers <m>a,b</m> such that exactly one of the two statements
+      <md>
+	<mrow>\text{"}a\equiv b \pmod{1}\text{"}</mrow>
+	<mrow>\text{"}a \MOD 1 = b \MOD 1\text{"} </mrow>
+      </md>
+        is true. If the proposition is true and the given proof works, why
+      don't we include the case <m>m=1</m> in the statement of the proposition?
+    </p>
+  </statement>
+</exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+    <xref ref="modMODequivprop"/></title>
+  <p>Yes, the proposition holds for <m>m=1</m>. Yes, the given proof
+    works. We don't care about the case <m>m=1</m>, because it is
+    trivial. Every integer is equivalent to <m>0</m> modulo 1. It just
+    is not interesting.
+  </p>
+</aside>
+  
+  
+  <p>
+    We define operations <m>a+_m b</m> and
+<m>a\cdot_m b</m> for elements <m>a,b</m> in <m>\Z_m</m> as follows.
+<md>  <mrow>a+_m b \amp = (a+b)\MOD m</mrow>
+  <mrow>    a\cdot_m b \amp = (ab)\MOD m</mrow>
+</md>
+The operations <m>+_m</m>, <m>\cdot_m</m> are called <term>addition modulo
+  <m>m</m></term><idx><h>addition modulo <m>m</m>
+</h></idx>
+ and <term>multiplication modulo <m>m</m></term><idx><h>multiplication
+    modulo <m>m</m>
+</h></idx>, respectively. The set <m>\Z_m</m>
+is sometimes called the <q><m>m</m>-hour clock</q>
+ and the operations
+<m>+_m,\cdot_m</m> are called <q>clock arithmetic</q>
+ or <q>arithmetic modulo
+  <m>m</m></q>.</p>
+
+  <exercise xml:id="zmegexer"><statement><p>For each of the three items
+	  below, find examples of integers <m>m\gt
+	  1</m>, <m>a,b\in \Z_m</m> for which the conditions hold.
+	<ol><li><m>a+_m b = 0</m> and <m>a\neq 0</m> and <m>b\neq 0</m>
+	  </li>
+	  <li><m>a \cdot_m b = 0</m> and <m>a\neq 0</m> and <m>b\neq 0</m>
+	  </li>
+	  <li><m>a \cdot_m b =1</m> and <m>a\neq 1</m> and <m>b\neq 1</m>
+	  </li>
+	</ol>
+      </p>
+    </statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="zmegexer"/></title>
+  <p>
+	<ol><li>any <m>m\gt 1</m>, any <m>a\in \Z_m</m>, and <m>b=m-a</m>
+	  </li>
+	  <li>any composite <m>m=rs</m> with <m>r\neq 1</m> and <m>s\neq
+	      1</m> (for example, <m>m=6=3\cdot 2</m>),
+	    with <m>a=r</m>, <m>b=s</m> (in the same
+	    example, <m>a=3</m>, <m>b=2</m>)
+	  </li>
+	  <li><m>m=5</m>, <m>a=2</m>, <m>b=3</m>
+	  </li>
+	</ol>    
+</p>
+</aside>
+  
+  
+
+<exercises>
+
+  <exercise xml:id="equivmodmisequivrel"><statement><p>
+	Let <m>m</m> be a positive integer.
+	<ol>
+	  <li>
+	    Show that <m>a\equiv a \pmod{m}</m> for every integer <m>a</m>. (This is
+    called the <em>reflexive</em>
+    property of equivalence modulo <m>m</m>.)</li>
+  <li>
+  Show that if <m>a\equiv b \pmod{m}</m> then <m>b\equiv a \pmod{m}</m>. (This is
+  called the <em>symmetric</em>
+   property of equivalence modulo <m>m</m>.)    
+  </li>
+  <li>
+  Show that if <m>a\equiv b \pmod{m}</m> and <m>b\equiv c \pmod{m}</m>, then
+  <m>a\equiv c \pmod{m}</m>. (This is
+  called the <em>transitive</em>
+   property of equivalence modulo <m>m</m>.)    
+  </li>
+	</ol>
+    </p>
+  </statement>
+</exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="equivmodmisequivrel"/></title>
+  <p>
+	<ol>     <li> We have <m>(a-a)=0 = 0m</m>, so <m>a\equiv a
+	      \pmod{m}</m>.</li>
+	  <li>
+	        Suppose that <m>a\equiv b \pmod{m}</m>. Then <m>(a-b)=km</m> for some integer
+    <m>k</m>. Therefore <m>(b-a)=-km</m>, so <m>b\equiv a \pmod{m}</m>.
+	  </li>
+	  <li>
+    Suppose <m>a\equiv b \pmod{m}</m> and <m>b\equiv c \pmod{m}</m>. Then
+    <m>(a-b)=km</m> for some <m>k</m>, and <m>(b-c)=\ell m</m> for some
+    <m>\ell</m>. Therefore <m>(a-c) = (a-b)+(b-c) = km+\ell m=(k+\ell)m</m>, so
+    <m>a\equiv c \pmod{m}</m>.
+	  </li>
+	</ol>    
+</p>
+</aside>
+  
+  
+  <exercise xml:id="modopswelldef"><statement><p>
+	Let <m>m</m> be a positive integer.
+	Show that if <m>a_1\equiv b_1 \pmod{m}</m> and <m>a_2\equiv b_2
+    \pmod{m}</m>, then
+	<ol><li>  <m>a_1+a_2\equiv b_1+b_2 \pmod{m}</m>, and
+	  </li>
+	  <li>
+       <m>a_1a_2\equiv b_1b_2 \pmod{m}</m>.
+	  </li>
+	</ol>
+    </p>
+  </statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="modopswelldef"/></title>
+  <p>
+	<ol><li>
+Suppose that <m>a_1\equiv b_1 \pmod{m}</m> and <m>a_2\equiv b_2
+	      \pmod{m}</m>. By definition of equivalence
+modulo <m>m</m>, we have <m>m|(a_1-b_1)</m> and <m>m|(a_2-b_2)</m>. By
+definition of <q>divides</q>, this means that <m>a_1-b_1=km</m> and <m>a_2-b_2=\ell m</m>
+for some <m>k,\ell\in \Z</m>. Rearranging, we have
+<md><mrow>a_1\amp =b_1+km, \text{ and}</mrow>
+  <mrow>a_2\amp =b_2+\ell m.</mrow></md>
+Adding left sides and right sides
+  of these last two equations, we get
+<m>a_1+a_2=b_1+b_2+(k+\ell)m</m>. Therefore <m>m|((a_1+a_2)-(b_1+b_2))</m>,
+and thus we have <m>a_1+a_2\equiv b_1+b_2
+      \pmod{m}</m>.	    
+	  </li>
+	  <li>
+      Using the same <m>k,\ell</m> from the previous part, we multiply
+      left and right sides of equations <m>a_1=b_1+km</m> and <m>a_2=b_2+\ell m</m> to obtain
+      <me>a_1a_2 = b_1b_2+m(kb_2+\ell b_1 + mk\ell)</me>
+      so <m>m|(a_1a_2-b_1b_2)</m>. We conclude that 
+      <m>a_1a_2\equiv b_1b_2 \pmod{m}</m>, as desired.
+	  </li>
+	</ol>	    
+</p>
+</aside>
+  
+
+  <exercise xml:id="nonlinsolzmnonprimeexer"><statement><p>
+	            Suppose that <m>m</m> is not prime. Show that there exist nonzero
+		    elements <m>a,b</m> in <m>\Z_m</m> for which there
+	            exists <em>no</em>
+		    <m>x</m> in <m>\Z_m</m> such that
+      <m>ax\equiv b \pmod{m}</m>.               
+    </p>
+  </statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="nonlinsolzmnonprimeexer"/></title>
+  <p>
+              Suppose <m>m</m> is not prime, so we can write <m>m=rs</m> for some
+              integers <m>r,s</m> with <m>1\lt r,s\lt m</m>. Let <m>a=r</m> and let
+              <m>b=1</m>. Suppose <m>x</m> exists such that
+              <m>rx\equiv 1\pmod{m}</m>. Multiplying both sides by <m>s</m>, we have
+              <m>mx\equiv s\pmod{m}</m>. But <m>mx\equiv 0</m> and <m>s</m> is not a
+              multiple of <m>m</m>. We conclude that there exists an equation
+              <m>ax\equiv b \pmod{m}</m> with nonzero elements <m>a,b</m> that has no solution
+              for <m>x</m>.	
+</p>
+</aside>
+  
+  <exercise xml:id="unitmultinzmisinvertibleexer"><statement><p>
+        Let <m>m</m> be a prime. Let <m>a</m> be a nonzero element of
+      <m>\Z_m</m> and let <m>b</m> be any element of
+      <m>\Z_m</m>. Show that there exists some <m>x</m> in <m>\Z_m</m> such that
+      <m>ax\equiv b \pmod{m}</m>. Hint: consider the function <m>\mu_a\colon \Z_m \to \Z_m</m>
+      given by <m>n\to an \MOD m</m>. Notice that <m>ax\equiv b
+      \pmod{m}</m> is the same thing as <m>\mu_a(x)=b</m> (say why!). Show that
+      <m>\mu_a</m> is one-to-one, then cite an appropriate result from this
+     text to conclude that <m>\mu_a</m> is onto. Finally, explain how this
+      solves the problem by guaranteeing the existence of the <m>x</m> that
+      you need.	
+    </p>
+  </statement>
+</exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="unitmultinzmisinvertibleexer"/></title>
+  <p>
+    Let <m>m,a,b,\mu_a</m> be given as in the statement of the
+    problem. Applying <xref ref="modMODequivprop"/>, we have <m>ax\equiv
+    b \pmod{m}</m> is the same as <m>ax \MOD m = b \MOD m</m>. Noting
+    that <m>ax \MOD m =\mu_a(x)</m> (by definition) and that <m>b
+    \MOD m =b</m> (because <m>b\in \Z_m</m>), we have that <m>ax\equiv b
+    \pmod{m}</m> is equivalent to <m>\mu_a(x)=b</m>. Thus, showing that
+    there exists an <m>x</m> such that <m>ax \equiv b \pmod{m}</m> is
+    equivalent to showing that the preimage of <m>b</m>
+    under <m>\mu_a</m> has at least one element. This will follow if we
+    can show that <m>\mu_a</m> is surjective. Rather than showing
+    surjectivity directly, we will start by showing that <m>\mu_a</m> is
+    injective, and then apply results from previous exercises to
+    conclude that <m>\mu_a</m> is surjective.
+  </p>
+  <p>
+    First we show that <m>\mu_a</m> is one-to-one. Suppose that
+        <m>\mu_a(x)= \mu_a(y)</m>, that is, suppose we have <m>ax \MOD m =ay \MOD
+        m</m>. Again by <xref ref="modMODequivprop"/>, this is
+        equivalent to <m>ax\equiv ay
+        \pmod{m}</m>, which is in turn equivalent to <m>m|a(x-y)</m>. By
+        <xref ref="primedividesexer"/> above, we conclude
+        that <m>m|a</m> or
+        <m>m|(x-y)</m>. Because <m>1\leq a\leq m-1</m>, it cannot be the case that <m>m|a</m>.
+	Thus we have <m>m|(x-y)</m>. Because <m>0\leq x,y \leq m-1</m>,
+	we have <m>0\leq |x-y|\leq m-1</m>. The only multiple
+	of <m>m</m> in <m>\Z_m</m> is 0, so we have <m>x-y=0</m>,
+        i.e., <m>x=y</m>. We conclude that <m>\mu_a</m> is one-to-one.
+	</p>
+
+<p> Next, we apply <xref ref="intoisontofinite"/> of the previous
+  subsection to conclude that <m>\mu_a</m> is onto. Therefore, <m>b</m> has
+  at least one preimage, say <m>x</m>, under <m>\mu_a</m>. As explained
+  in the first paragraph above, <m>x</m> satisfies <m>ax\equiv b
+  \pmod{m}</m>. This concludes the proof.
+</p>
+
+<p>
+  (Comment on the proof: In fact we have shown more than was asked. Not
+  only does <m>x</m> exist, but <m>x</m> is unique. The proof shows that <m>\mu_a</m> is
+  both injective and surjective, so <m>\mu_a</m> is
+  invertible. Now we can let <m>x=\mu_a^{-1}(b)</m>, from which we
+  have <m>\mu_a(x)=b</m>. Further, we see that <m>x</m> is the only
+  possible solution.)
+</p>
+</aside>
+  
+
+  
+</exercises>
+
+
+</section>
+

@@ -1,0 +1,810 @@
+<section xml:id="linear_transformations_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Linear Mappings
+</title>
+
+
+<p>
+  A function <m>L\colon \R^2\to \R^2</m> is
+   called a <term>linear mapping</term><idx><h>linear mapping (or map)</h></idx> (or <term>linear map</term>)
+  if <m>L</m> 
+respects the operations of vector addition and scalar multiplication, that is, if
+  <mdn>
+<mrow xml:id="linsumprop">L({\mathbf u}+{\mathbf v}) \amp = L({\mathbf u})+L({\mathbf v}),
+  \text{ and }</mrow>
+<mrow xml:id="linscaleprop">
+  L(\alpha{\mathbf u}) \amp = \alpha L({\mathbf u})</mrow>
+  </mdn>
+for all <m>{\mathbf u},{\mathbf v}\in \R^2</m> and all <m>\alpha\in \R</m>. It is
+customary to omit the parentheses in the expression <m>L({\mathbf u})</m> and simply write
+ <m>L{\mathbf u}</m> to denote the value of a linear mapping.
+With this convention, equations <xref ref="linsumprop"/>
+and <xref ref="linscaleprop"/> become
+  <md><mrow>
+      L({\mathbf u}+{\mathbf v}) \amp = L{\mathbf u}+L{\mathbf v}, \text{ and }</mrow>
+  <mrow>L(\alpha{\mathbf u}) \amp = \alpha L{\mathbf u}.</mrow>
+  </md>
+  </p>
+
+
+<exercise xml:id="isitlinearexer"><statement><p>
+              For each of the following functions, determine whether or not it is
+    linear. If a given function is linear, show that it satisfies
+    properties <xref ref="linsumprop"/> and <xref ref="linscaleprop"/>. If a given
+    function is not linear, give a specific example to show that it
+    fails at least one of the properties <xref ref="linsumprop"/>
+    or <xref ref="linscaleprop"/>.
+	      <ol>
+		<li>
+		the function that sends every input point to its
+		  reflection across
+		  the <m>x</m>-axis</li>
+		<li>the function <m>g</m> given by
+		  <m>g(a,b)=(a+b,\sqrt{a^2+b^2})</m></li>
+		<li>the constant function that sends every input point to the
+		  origin</li>
+		<li>the constant function that sends every input point to the
+		  point <m>(1,0)</m></li>
+		<li>the function <m>h</m> given by <m>h(a,b)=(a+b,a-b)</m></li>
+		<li>the function that sends input
+		  vector <m>\mathbf{x}</m> to
+		  output <m>\mathbf{x}+\mathbf{b}</m>,
+		  where <m>\mathbf{b}</m> is a constant nonzero vector
+		  <!--the function called counterclockwise rotation about the
+           origin by <m>1/4</m>-revolution", that is, the function that sends every input point <m>(r\cos t,r\sin
+	   t)</m> to <m>(r\cos(t+\pi/2),r\sin(t+\pi/2))</m>-->
+		</li>
+		
+	      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="isitlinearexer"/></title>
+  <p>
+      <ol>
+	<li>The reflection of <m>(a,b)</m> across the <m>x</m>-axis
+	  is given by <m>f(a,b)=(a,-b)</m>. For
+	  <xref ref="linsumprop"/>, we have	
+  <md>
+	    <mrow>f((a,b)+(c,d))\amp =f(a+c,b+d)\amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =(a+c,-b-d)\amp \amp (\text{reflection})
+	    </mrow>
+	    <mrow>\amp =(a,-b)+(c,-d) \amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =f(a,b)+f(c,d).\amp \amp (\text{reflection})
+	    </mrow>
+	  </md>
+	  For <xref ref="linscaleprop"/>, we have
+	  <md>
+	    <mrow>f(\alpha(a,b))\amp =f(\alpha a,\alpha b)
+	      \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow> \amp = (\alpha a,-\alpha b) \amp \amp (\text{reflection})
+	    </mrow>
+	    <mrow>\amp =\alpha (a,-b)  \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow>\amp = \alpha f(a,b). \amp \amp (\text{reflection})
+	    </mrow>
+	  </md>
+	  We conclude that <m>f</m> is linear.
+	</li>
+	<li>Let <m>\mathbf{u}=(1,0)</m> and <m>\mathbf{v}=(0,1)</m>. We
+	  have
+	  <me> g(\mathbf{u}+\mathbf{v})= g(1,1) = (1,\sqrt{2})</me>
+	  but
+	  <me>g\mathbf{u}+g\mathbf{v}=(1,1)+(1,1)=(2,2).</me>
+	  We see that <xref ref="linsumprop"/> fails for <m>g</m>,
+	  so <m>g</m> is not linear.
+	</li>
+	<li>Both sides of <xref ref="linsumprop"/> and
+	  <xref ref="linscaleprop"/> evaluate to <m>(0,0)</m> for all
+	  inputs, so this function is linear.
+	</li>
+	<li>Let <m>\mathbf{u}=(1,0)</m> and <m>\mathbf{v}=(0,1)</m>. We
+	  have
+	  <me> g(\mathbf{u}+\mathbf{v})= g(1,1) = (1,0)</me>
+	  but
+	  <me>g\mathbf{u}+g\mathbf{v}=(1,0)+(1,0)=(2,0).</me>
+	  We see that <xref ref="linsumprop"/> fails for <m>g</m>,
+	  so <m>g</m> is not linear.
+	</li>
+	<li>
+For
+	  <xref ref="linsumprop"/>, we have
+	  <md>
+	    <mrow>h((a,b)+(c,d))\amp =h((a+c,b+d)\amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =(a+c+b+d,a+c-b-d)
+	    </mrow>
+	    <mrow>\amp =(a+b,a-b)+(c+d,c-d) \amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =h(a,b)+h(c,d).
+	    </mrow>
+	  </md>
+	  For <xref ref="linscaleprop"/>, we have
+	  <md>
+	    <mrow>h(\alpha(a,b))\amp =h(\alpha a,\alpha b)
+	      \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow> \amp = (\alpha a+\alpha b,\alpha a-\alpha b)
+	    </mrow>
+	    <mrow>\amp =\alpha (a+b,a-b)  \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow>\amp = \alpha h(a,b). 
+	    </mrow>
+	  </md>
+	  We conclude that <m>h</m> is linear.	  
+	</li>
+	<li>Let <m>f(\mathbf{x})=\mathbf{x}+\mathbf{b}</m>.
+	  We have 
+	  <me>f(\mathbf{x}+\mathbf{y})=\mathbf{x}+\mathbf{y}+\mathbf{b}</me>
+	  but
+	  <me>f(\mathbf{x})+f(\mathbf{y})=\mathbf{x}+\mathbf{y}+2\mathbf{b}.
+	  </me>
+	  If these two equations are equal, we get <m>\mathbf{b}=0</m>,
+	  but this contradicts the choice of <m>\mathbf{b}</m>. We
+	  conclude that these equations cannot be equal, that is,
+	  <xref ref="linsumprop"/> fails for <m>f</m>. So <m>f</m> is
+	  not linear.
+	  <!--Using angle sum formulas
+	  <m>\cos(a+b)=\cos a\cos b -\sin a\sin b</m>
+	  and
+	  <m>\sin(a+b) = \sin a\cos b + \cos a \sin b</m>,
+	  the formula for counterclockwise rotation
+	  by <m>1/4</m> turn is
+	  <m>f(r\cos t,r\sin t) = (-r\sin t, r\cos t)</m>, or <m>f(a,b)=(-b,a)</m>. Using this formula, checking
+	  <xref ref="linsumprop"/>, we have
+	  <md>
+	    <mrow>f((a,b)+(c,d))\amp =f((a+c,b+d)\amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =(-(b+d),a+c)\amp \amp (\text{rotation})
+	    </mrow>
+	    <mrow>\amp =(-b,a)+(-d,c) \amp \amp (\text{vector addition})
+	    </mrow>
+	    <mrow>\amp =f(a,b)+f(c,d).\amp \amp (\text{rotation})
+	    </mrow>
+	  </md>
+	  For <xref ref="linscaleprop"/>, we have
+	  <md>
+	    <mrow>f(\alpha(a,b))\amp =f(\alpha a,\alpha b)
+	      \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow> \amp = (-\alpha b,\alpha a) \amp \amp (\text{rotation})
+	    </mrow>
+	    <mrow>\amp =\alpha (-b,a)  \amp \amp (\text{scalar mult.})
+	    </mrow>
+	    <mrow>\amp = \alpha f(a,b). \amp \amp (\text{rotation})
+	    </mrow>
+	  </md>
+	  We conclude that <m>f</m> is linear.-->
+	</li>
+      </ol>
+</p>
+</commentary>
+
+
+<!--
+<exercise><statement><p>Find an example of a function <m>f\colon \R^2
+	\to \R^2</m> that:
+	<ol>
+	  <li>satisfies <xref ref="linsumprop"/>, but does not satisfy
+	    <xref ref="linscaleprop"/></li>
+	  	  <li>does not satisfy <xref ref="linsumprop"/>, but does satisfy
+		    <xref ref="linscaleprop"/></li>
+	  <li>satisfies neither <xref ref="linsumprop"/> nor
+	    <xref ref="linscaleprop"/></li>		  
+	</ol>
+    </p>
+</statement>
+<NOanswer><p>(there are many correct answers; here is a sample)
+    <ol>
+      <li><m>f(x,y)=\begin{cases} (x,y) \amp x=0\\ (0,0) \amp x\neq 0 \end{cases}
+	</m>
+      </li>
+      <li><m>f(x,y)=)(x^3+y^3)^{1/3},0)</m>
+      </li>
+      <li><m>f(x,y)=(\sqrt{x^2+y^2},0)</m>
+      </li>
+    </ol>
+  </p>
+</NOanswer>
+</exercise>
+-->
+
+  <p>
+  If <m>L</m> is linear, and <m>{\mathbf u}=(x,y)</m> is an arbitrary input value, then
+  <mdn><mrow>L{\mathbf u} \amp = L(x{\mathbf e}_1 + y{\mathbf e}_2)\amp
+  \amp (\text{using } <xref ref="stdbasisexpansion"/>)</mrow>
+    <mrow>\amp = L(x{\mathbf e}_1) + L(y{\mathbf e}_2)\amp\amp
+    (\text{by }<xref ref="linsumprop"/>) </mrow>
+    <mrow xml:id="linmapvalueislincomb">
+      \amp = xL{\mathbf e}_1 + yL{\mathbf e}_2\amp\amp (\text{by }<xref ref="linscaleprop"/>).</mrow>
+  </mdn>
+If we write <m>L{\mathbf e_1} = (a_1,b_1)</m> and <m>L{\mathbf e_2} =
+(a_2,b_2)</m>, then the last expression <xref ref="linmapvalueislincomb"/>
+above becomes
+  <men xml:id="linvalueexpandform">L{\mathbf u}=x(a_1,b_1)+y(a_2,b_2)=(a_1x+a_2y,b_1x+b_2y).</men>
+Thus, a linear mapping has a particularly simple form, and is
+summarized by four real constants <m>a_1,b_1,a_2,b_2</m> that are the components of
+the two values <m>L{\mathbf e}_1,L{\mathbf e}_2</m>. The square array of numbers
+  <m>\twotwo{a_1}{a_2}{b_1}{b_2}</m> is called the <term>matrix</term><idx><h>matrix</h></idx>
+  for <m>L</m>,
+  denoted <m>[L]</m><notation><usage><m>[L]</m>
+    </usage><description>matrix
+      for a linear map <m>L</m>
+    </description></notation>. The
+array
+<m>\begin{bmatrix}
+  x\\y\end{bmatrix}</m>
+ is called the <term>column vector</term><idx><h>column vector</h></idx>
+that represents <m>{\mathbf u}=(x,y)</m>. 
+Equation <xref ref="linvalueexpandform"/> motivates the following definition of the
+  operation that multiplies a matrix times a column vector. 
+<men xml:id="mattimescolvectdef">\twotwo{a_1}{a_2}{b_1}{b_2}\begin{bmatrix}
+  x\\y\end{bmatrix} =
+  \begin{bmatrix}
+  a_1x+a_2y\\b_1x+b_2y\end{bmatrix}</men>
+</p>
+
+  <exercise xml:id="usemattoevalexer"><statement><p>
+	<ol><li>Suppose that <m>f\colon \R^2\to\R^2</m> is given
+	    by <m>f(x,y)=(ax+by,cx+dy)</m> for some real
+	    constants <m>a,b,c,d</m>. Show that <m>f</m> is linear.
+	  </li>
+	  <li>Suppose that the matrix for a linear map <m>L</m>
+	    is <m>\twotwo{2}{1}{1}{-1}</m>. Find <m>L(3,2)</m>.
+	  </li>
+	  <li>Suppose that a linear map <m>L</m>
+	    satisfies <m>L(2,0)=(3,4)</m> and <m>L(0,3)=(2,1)</m>. Find
+	    the matrix for <m>L</m>.
+	  </li>
+	</ol>
+      </p>
+    </statement>
+</exercise>
+
+  <commentary component="instructor"><title>Instructor's solution for
+<xref ref="usemattoevalexer"/></title>
+    <p>
+      <ol>
+	<li>
+	  We
+	  have
+	  <md>
+	    <mrow>f((x,y)+(r,s))\amp =f(x+r,y+s)</mrow>
+	    <mrow>\amp =(a(x+r)+b(y+s),c(x+r)+d(y+s))</mrow>
+	    <mrow>\amp = (ax+by+ar+bs,cx+dy+cr+ds)</mrow>
+	    <mrow>\amp = (ax+by,cx+dy) + (ar+bs,cr+ds)</mrow>
+	    <mrow>\amp = f(x,y)+f(r,s)</mrow>
+	  </md>
+	  and
+	  <md>
+	    <mrow>f(\alpha(x,y))\amp =f(\alpha x,\alpha y)</mrow>
+	    <mrow>\amp = (a\alpha x+b\alpha y,c\alpha x+d\alpha y) </mrow>
+	    <mrow>\amp = \alpha f(x,y).</mrow>
+	  </md>
+	</li>
+	<li><m>(8,1)</m>
+	  </li>
+	  <li><m>\twotwo{3/2}{2/3}{2}{1/3}</m>
+	  </li>
+	</ol>
+</p>
+</commentary>
+
+  <exercise xml:id="findthematexer"><statement><p>Find the matrix for each of the linear functions in
+  <xref ref="isitlinearexer"/>.</p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="findthematexer"/></title>
+  <p>
+<ol>
+	  <li><m>\twotwo{1}{0}{0}{-1}</m>
+	  </li>
+	  <li>(not linear)</li>
+	  <li><m>\twotwo{0}{0}{0}{0}</m>
+	  </li>
+	  <li>(not linear)</li>
+	  <li><m>\twotwo{1}{1}{1}{-1}</m>
+	  </li>
+	  <li>(not linear)<!--<m>\twotwo{0}{-1}{1}{0}</m>-->
+	  </li>
+	</ol>    
+</p>
+</commentary>
+
+<p>
+  Putting together <xref ref="linvalueexpandform"/> and part 1 of <xref ref="usemattoevalexer"/>, we have
+  the following.
+  </p>
+
+<p>
+  <proposition xml:id="characterizatonlinmapsprop"><title>Characterization
+  of linear maps</title>
+    <statement><p>A map <m>L\colon \R^2\to
+      \R^2</m> is linear if and only if it has the form
+    <me>L(x,y)=(ax+by,cx+dy)</me>
+    for some real constants <m>a,b,c,d</m>.</p>
+    </statement>
+  </proposition>
+</p>
+
+<p>
+  Given linear maps <m>L,M\colon \R^2\to \R^2</m> and a real number <m>\alpha</m>,
+we define linear maps <m>\alpha L</m>, <m>L+M</m> and <m>LM</m> by
+<mdn>
+  <mrow xml:id="scalelintransfdef">(\alpha L){\mathbf u} \amp = \alpha (L{\mathbf u})</mrow>
+<mrow xml:id="sumlintransfdef">
+  (L+M){\mathbf u} \amp = L{\mathbf u} + M{\mathbf u}</mrow>
+<mrow xml:id="composelintransfdef">
+  (LM){\mathbf u} \amp = (L\circ M){\mathbf u} = L(M{\mathbf u}).</mrow>
+</mdn>
+
+  </p>
+
+  <exercise xml:id="verifymatopslinearexer"><statement><p>Verify that <m>\alpha L</m>, <m>L+M</m>,
+and <m>LM</m> are indeed linear maps, that is, that they satisfy
+properties <xref ref="linsumprop"/> and <xref ref="linscaleprop"/>.</p>
+    </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="verifymatopslinearexer"/></title>
+  <p>
+(Solution for <m>LM</m>).
+	Let <m>\mathbf{u},\mathbf{v}\in \R^2</m> and let <m>c\in
+	  \R</m>. To show that
+	<xref ref="linsumprop"/> holds, we have
+	<md>
+	  <mrow>(LM)(\mathbf{u}+\mathbf{v}) \amp =
+	  L(M(\mathbf{u}+\mathbf{v}))\amp \amp (\text{def. of } LM)
+	  </mrow>
+	  <mrow>\amp = L(M\mathbf{u} + M\mathbf{v})\amp \amp
+	    (\text{linearity of } M)</mrow>
+	  <mrow>\amp = L(M(\mathbf{u})) + L(M(\mathbf{v}))\amp \amp
+	    (\text{linearity of } L)</mrow>
+	  <mrow>\amp = (LM)\mathbf{u} + (LM)\mathbf{v}\amp \amp (\text{def. of }
+	    LM).</mrow>
+	</md>
+	To show that <xref ref="linscaleprop"/> holds, we have
+	<md>
+	  <mrow> (LM)(c\mathbf{u})\amp = L(M(c\mathbf{u})) \amp \amp
+	  (\text{def. of } LM)
+	  </mrow>
+	  <mrow> \amp = L(c(M\mathbf{u})) \amp \amp (\text{linearity of
+	    } M)</mrow>
+	  <mrow> \amp = c(L(M\mathbf{u})) \amp \amp (\text{linearity of
+	    } L)</mrow>	  
+	  <mrow> \amp = c(LM)\mathbf{u} \amp \amp (\text{def. of
+	    } LM).</mrow>	 
+	</md>    
+</p>
+</commentary>
+  
+  <p>
+
+If the matrix for <m>L</m> is <m>\twotwo{a}{b}{c}{d}</m>, and the matrix
+for <m>M</m> is <m>\twotwo{e}{f}{g}{h}</m>, then the matrices (the
+plural of <em>matrix</em> is <em>matrices</em>) for the linear
+maps <m>\alpha L</m>, <m>L+M</m>, and <m>LM</m> are given by the following.
+<mdn><mrow xml:id="scalelintransfmat">
+    (\text{matrix for } \alpha L) \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}</mrow>
+<mrow xml:id="sumlintransfmat">
+  (\text{matrix for } L+M) \amp = \twotwo{a+e}{b+f}{c+g}{d+h}</mrow>
+<mrow xml:id="composelintransfmat">
+  (\text{matrix for } LM) \amp = \twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}</mrow>
+</mdn>
+These natural constructions motivate the following <term>matrix
+operations</term>, called <term>matrix scalar
+multiplication</term><idx><h>matrix scalar
+multiplication</h></idx>, <term>matrix addition</term><idx><h>matrix
+addition</h></idx>, and <term>matrix multiplication</term><idx><h>matrix
+multiplication</h></idx>, respectively.
+<mdn><mrow>\alpha
+    \twotwo{a}{b}{c}{d} \amp = \twotwo{\alpha a}{\alpha b}{\alpha c}{\alpha d}</mrow>
+<mrow>\twotwo{a}{b}{c}{d} + \twotwo{e}{f}{g}{h} \amp =
+  \twotwo{a+e}{b+f}{c+g}{d+h}</mrow>
+<mrow xml:id="matmultdef">\twotwo{a}{b}{c}{d}\twotwo{e}{f}{g}{h} \amp =
+  \twotwo{ae+bg}{af+bh}{ce+dg}{cf+dh}</mrow>
+</mdn>
+Notice that every entry in the matrix on the right side of
+<xref ref="matmultdef"/> is a dot product.
+For example, the entry <m>af+bh</m> in the upper right corner (top row,
+right column) of the
+matrix on the right side of <xref ref="matmultdef"/> is the dot product
+<me>(a,b)\cdot (f,h) = af+bh</me> of the top row
+of <m>\twotwo{a}{b}{c}{d}</m> with the right column
+of <m>\twotwo{e}{f}{g}{h}</m>. The row and column matching pattern works
+for every entry in the product matrix.
+  </p>
+
+  <!-- <p> -->
+  <!--   <alert>Order matters in matrix multiplication:</alert> Because order -->
+  <!--   matters in the composition of functions (that is, <m>L\circ M</m> is -->
+  <!--   not usually the same as <m>M\circ L</m> for functions <m>L,M\colon </m>), it follows that order -->
+  <!--   matters in matrix multiplication (that is, <m>AB</m> is -->
+  <!--   not usually the same as <m>BA</m> for matrices <m>A,B</m>).  -->
+  <!-- </p> -->
+
+  <exercise xml:id="matopsexer">
+    <statement>
+      <p> <ol><li>Choose random integer values between <m>-5</m> and <m>+5</m>
+	for the
+	constants <m>\alpha,a,b,c,d,e,f,g,h,x,y</m>. Set <m>S=\twotwo{a}{b}{c}{d}</m>,
+	let <m>T=\twotwo{e}{f}{g}{h}</m>, and let <m>\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}</m>. Calculate <m>\alpha
+	  S</m>, <m>S+T</m>, <m>ST</m>, <m>TS</m>, <m>S\mathbf{u}</m>,
+	and <m>T\mathbf{u}</m>. Check your
+	answers with an online matrix algebra calculator. Repeat the
+	exercise until you can do matrix multiplication quickly and
+	    accurately, without having to look at the formula
+	    <xref ref="matmultdef"/>.</li>
+	  <li>Find a set of values for <m>a,b,c,d,e,f,g,h</m> for
+	    which <m>ST\neq TS</m>. Find another set of values
+	    for <m>a,b,c,d,e,f,g,h</m>, all of them nonzero, for which <m>ST=TS</m>.
+	  </li>
+	</ol>
+      </p>
+    </statement>
+  </exercise>
+  
+<p>
+  The identity function <m>\Id\colon \R^2\to\R^2</m> is linear, and the
+  matrix <m>\twotwo{1}{0}{0}{1}</m> for the identity function is called
+  the <term>identity matrix</term><idx><h>identity matrix</h></idx>.
+It is easy to check that
+  <men xml:id="bothsideinvcomp">
+\twotwo{a}{b}{c}{d}\twotwo{d}{-b}{-c}{a} =
+\twotwo{d}{-b}{-c}{a}\twotwo{a}{b}{c}{d} =
+\twotwo{ad-bc}{0}{0}{ad-bc}.</men>
+  If <m>ad-bc\neq 0</m>, then we can multiply 
+  <xref ref="bothsideinvcomp"/> by <m>\frac{1}{ad-bc}</m> to obtain
+    <men xml:id="bothsideinvcomprescaled">
+\twotwo{a}{b}{c}{d}\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}} =
+\twotwo{\frac{d}{ad-bc}}{\frac{-b}{ad-bc}}{\frac{-c}{ad-bc}}{\frac{a}{ad-bc}}\twotwo{a}{b}{c}{d} =
+\twotwo{1}{0}{0}{1}.</men>
+    If <m>L,M</m> are linear mappings such that <m>[L] =
+    \twotwo{a}{b}{c}{d}</m> and <m>[M] =
+      \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}</m>, then <xref ref="bothsideinvcomprescaled"/> becomes
+    <men xml:id="rewrite1"> [L][M] = [M][L] = [\Id] </men>
+    which is the same as 
+    <men xml:id="rewrite2"> [LM] = [ML] = [\Id]. </men>
+    From this, it follows that
+    <men xml:id="rewrite3"> L\of M = M\of L = \Id </men>
+    and we conclude that <m>L,M</m> are inverses to one another. This
+    shows that, if <m>[L]=\twotwo{a}{b}{c}{d}</m> and <m>ad-bc\neq 0</m>,
+    then <m>[L^{-1}]=\frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a}</m>, and 
+motivates the following definition of the <term>inverse</term>
+ <idx><h>inverse of a matrix</h></idx> of a matrix.
+<mdn><mrow xml:id="matinvdef">\twotwo{a}{b}{c}{d}^{-1}
+    = \frac{1}{ad-bc}\twotwo{d}{-b}{-c}{a} \amp \amp (\text{ if } ad-bc\neq 0)</mrow>
+</mdn>
+</p>
+
+<p><alert>Comment:</alert> The quantity <m>ad-bc</m> is called
+  the <term>determinant</term><idx><h>determinant</h>
+  </idx> of the matrix <m>\twotwo{a}{b}{c}{d}</m>,
+  denoted <m>\det\left(\twotwo{a}{b}{c}{d}\right)</m><notation><usage><m>\det</m>
+    </usage><description>determinant of a matrix</description>
+  </notation>.
+</p>
+
+
+
+<exercise xml:id="idandinvcheckexer"><statement><p>
+      <ol>
+	<li>Verify that the identity function <m>\Id\colon \R^2\to \R^2</m>
+        is linear, and that the matrix for the identity function is
+        <m>\twotwo{1}{0}{0}{1}</m>.</li>
+	<li>Verify each of the equalities in <xref ref="bothsideinvcomp"/>.</li>
+	<li>Explain each of the connecting phrases "which is the same
+	  as", "it follows that", and "we conclude that" immediately following 
+          equations <xref ref="rewrite1"/>,
+	  <xref ref="rewrite2"/>, and <xref ref="rewrite3"/>. 
+	  <hint><p>For
+	      the last statement, use
+	      <xref ref="invertibilityconditions"/>.</p>
+	  </hint>
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="idandinvcheckexer"/></title>
+  <p>
+      <ol>
+	<li>For <m>L=\Id</m>, 
+	  the left and right sides of
+	  <xref ref="linsumprop"/> are both <m>\mathbf{u}+\mathbf{v}</m>
+	  and the left and right sides of <xref ref="linscaleprop"/> are
+	  both <m>\alpha \mathbf{u}</m>. It is clear that the matrix <m>\twotwo{1}{0}{0}{1}</m>
+	  multiplied by the column
+	  vector <m>\begin{bmatrix}x\\y\end{bmatrix}</m>
+	  is <m>\begin{bmatrix}x\\y\end{bmatrix}</m>. 
+	</li>
+	<li>(just perform the matrix multiplications in the expression
+	on the left side and in the expression in the center to see that
+	they both equal the matrix on the right side)
+	</li>
+	<li>("which is the same as") The fact that <m>[L][M] = [LM]</m>
+	  and <m>[M][L] = [ML]</m>
+	  is simply definition <xref ref="matmultdef"/>. ("it follows
+	  that") Suppose that <m>T,S</m> are linear
+	  maps. If <m>[T]=[S]</m>,
+	  then <m>T\mathbf{e}_1=S\mathbf{e}_1</m>
+	  and <m>T\mathbf{e}_2=S\mathbf{e}_2</m>, so it must be
+	  that <m>T=S</m>. ("we conclude that") This follows directly
+	  from <xref ref="invertibilityconditions"/>.
+	</li>
+      </ol>
+</p>
+</commentary>
+
+
+
+<exercises>
+
+  <exercise xml:id="verifymatformatopsexer"><statement><p>Verify the matrix formulas
+        <xref ref="scalelintransfmat"/>, <xref ref="sumlintransfmat"/>,
+        and <xref ref="composelintransfmat"/>.
+    </p>
+  </statement>
+    <hint><p>To obtain the matrix for a linear map <m>L</m>, use the fact that the
+      first column of the matrix is the column
+      vector <m>L\mathbf{e}_1</m>, and the second column is the column
+      vector <m>L\mathbf{e}_2</m>.
+    </p>
+  </hint>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="verifymatformatopsexer"/></title>
+  <p>
+(solution for <xref ref="composelintransfmat"/>) We have
+	<me>(LM)\mathbf{e}_1= L(M\mathbf{e}_1)=L(e,g)=(ae+bg,ce+dg).</me>
+	It follows that the first column of the matrix for <m>LM</m> is
+	<m>\begin{bmatrix}ae+bg\\ce+dg\end{bmatrix}</m>. Similarly, we
+	have
+		<me>(LM)\mathbf{e}_2= L(M\mathbf{e}_2)=L(f,h)=(af+bh,cf+gh),</me>
+		so the second column of the matrix for <m>LM</m> is
+		<m>\begin{bmatrix}af+bh\\cf+dh\end{bmatrix}</m>.    
+</p>
+</commentary>
+  
+  <exercise xml:id="distlawlintransexer"><title>Distributive law for linear
+  functions<idx><h>distributive law for linear mappings</h>
+      </idx>
+    </title><statement><p>Prove the following property of
+	linear mappings, called the <em>distributive law</em>. For
+	linear mappings <m>K,L,M</m> from <m>\R^2</m> to  <m>\R^2</m>,
+	we have
+	<men xml:id="distlawlinmaps">K(L+M)=KL+KM.</men>
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="distlawlintransexer"/></title>
+  <p>
+	Let <m>\mathbf{u}</m> be an element of <m>\R^2</m>. We have
+	<mdn>
+	  <mrow>(K(L+M))(\mathbf{u})\amp = K((L+M)(\mathbf{u}))</mrow>
+	  <mrow>\amp = K(L\mathbf{u}+M\mathbf{u})</mrow>
+	  <mrow>\amp = K(L\mathbf{u})+ K(M\mathbf{u})</mrow>
+	  <mrow>\amp = (KL)\mathbf{u}+ (KM)\mathbf{u}.</mrow>	  	  
+	</mdn>
+	Since the choice of <m>\mathbf{u}</m> was arbitrary, we have
+	shown that <m>(K(L+M))\mathbf{u}</m>
+	and <m>(KL+KM)\mathbf{u}</m> are equal
+	for every <m>\mathbf{u}\in \R^2</m>. We conclude that <m>K(L+M)=KL+KM</m>.
+</p>
+</commentary>
+  
+  
+  <exercise xml:id="solvelinsysexer"><title>Solving linear systems of equations</title>
+    <statement><p>      
+A pair of equations of the form
+<mdn>
+  <mrow xml:id="linsystorig">ax + by \amp = r</mrow>
+  <mrow number='no'>cx + dy \amp = s</mrow>
+</mdn>
+where <m>a,b,c,d,r,s</m> are constants, and <m>x,y</m> are unknowns, is called
+a <em>linear system of equations</em> in two
+  unknowns. A <em>solution</em>
+is a pair of values for <m>x,y</m> so that both
+equations in <xref ref="linsystorig"/> hold.
+We can use matrix algebra to solve linear systems of equations, as follows. 
+ Using the notation defined
+in <xref ref="mattimescolvectdef"/>, here is the matrix version
+of <xref ref="linsystorig"/>.
+<men xml:id="linsysmatraw">  \twotwo{a}{b}{c}{d}\begin{bmatrix}x\\y\end{bmatrix}
+  =\begin{bmatrix}r\\s\end{bmatrix}</men>
+The matrix <m>A=\twotwo{a}{b}{c}{d}</m> is called the <em>matrix of
+  coefficients</em>
+ for the linear system. If we write <m>\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}</m>
+and  <m>\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}</m>
+then we can write <xref ref="linsysmatraw"/> even more compactly as
+<men xml:id="linsyscptform">  A\mathbf{u} = \mathbf{v}.</men>
+If <m>A</m> is invertible, we can multiply both sides
+of <xref ref="linsyscptform"/> by <m>A^{-1}</m> on the left, and we have
+<men xml:id="linsystsol">  \mathbf{u} = A^{-1}A\mathbf{u} = A^{-1}\mathbf{v}.</men>
+
+<ol><li>Use this matrix method to solve the following linear
+    system. Find <m>A</m>, <m>A^{-1}</m>, <m>x</m>, and <m>y</m>.
+    <me>
+      \begin{array}{ccccc}
+      3x \amp - \amp y \amp = \amp -2\\
+      x \amp + \amp 2y \amp = \amp 3
+      \end{array}
+    </me>
+  <!--   <md> -->
+  <!-- <mrow> 3x  -  y \amp = -2</mrow> -->
+  <!-- <mrow>x  +  2y \amp  = 3</mrow> -->
+  <!--   </md> -->
+  </li>
+  <li>
+    Choose random integer values between <m>-5</m> and <m>+5</m>
+	for the
+	constants <m>a,b,c,d,r,s</m>. Let <m>A=\twotwo{a}{b}{c}{d}</m>,
+    let <m>\mathbf{u}=\begin{bmatrix}x\\y\end{bmatrix}</m>,
+	and let <m>\mathbf{v}=\begin{bmatrix}r\\s\end{bmatrix}</m>. 
+    Solve the linear system <m>A\mathbf{u}=\mathbf{v}</m> for <m>\mathbf{u}</m>.
+    Check your
+	answers with an online matrix algebra calculator. Repeat the
+	exercise until you can do matrix inversion and solve the system quickly and
+	accurately, without having to look at the formula <xref ref="matinvdef"/>.
+  </li>
+</ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="solvelinsysexer"/></title>
+  <p>
+We have <m>A=\twotwo{3}{-1}{1}{2}</m>,
+	so <m>A^{-1}=\frac{1}{7}\twotwo{2}{1}{-1}{3}</m>. Thus we have
+	<me>\begin{bmatrix}x\\y\end{bmatrix}=A^{-1}\begin{bmatrix}-2\\3\end{bmatrix}=\begin{bmatrix}-1/7\\
+	11/7 \end{bmatrix}.</me>    
+</p>
+</commentary>
+
+
+  <exercise xml:id="rotislinexer"><title>Rotations</title>
+    <statement><p>Let <m>R_\theta\colon \R^2 \to \R^2</m> be the counterclockwise
+          rotation by <m>\theta</m> radians about the origin, that is,
+          <men xml:id="rottransfdef">R_\theta(r\cos
+        \phi,r\sin\phi)=(r\cos(\phi+\theta),r\sin(\phi+\theta)).</men>
+	Show that
+          <m>R_\theta</m> is linear for all <m>\theta</m>, and that its
+          matrix is 
+	  <men xml:id="rthetamat">[R_\theta]=\twotwo{\cos \theta}{-\sin \theta}{\sin \theta}{\cos \theta}</men>.
+    </p>
+    </statement>
+    <hint><p>Use the trigonometric identities below, and use part 1 of
+    <xref ref="usemattoevalexer"/>.
+		    <md><mrow>\cos (\theta + \phi) \amp = \cos \theta \cos \phi
+		- \sin\theta \sin \phi</mrow>
+	      <mrow>\sin(\theta+\phi) \amp = \cos \theta \sin\phi + \sin\theta\cos\phi</mrow>
+	    </md>
+      </p>
+    </hint>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="rotislinexer"/></title>
+  <p>
+	Intuition that <xref ref="linsumprop"/> holds for a
+	    rotation comes from
+	    the geometric picture of vector addition called the
+	    parallelogram rule
+	    <xref ref="parallelogramruleexer"/>. Rotation of a
+	    parallelogram  does not distort the sides or the
+	    diagonals of the parallelogram, so it makes sense that the
+	    diagonal of the parallelogram (the sum of two vectors), rotated, is the same as
+	    the diagonal of the rotated parallelogram. Likewise, it is
+	    geometrically nearly obvious that <xref ref="linscaleprop"/>
+	    holds for a rotation: you can scale, then rotate a vector,
+	    or you can rotate, then scale. Either order of scaling and
+	    rotating has the same end effect. Here is a more
+	    precise analysis.
+	    </p>
+	    <p>
+	    Let <m>x=r\cos \phi</m> and <m>y=r\sin\phi</m>.
+	    Using the angle sum formulas given in the hint,
+	    we get (after a few steps)
+	    <me>R_{\theta}(x,y) = ((\cos \theta)x -(\sin
+	      \theta)y,(\sin\theta) x + (\cos\theta)y).</me>
+	    We recognize this as the form of a linear map by part 1 of <xref ref="usemattoevalexer"/>.
+	    The formula <xref ref="rthetamat"/> for the
+	      matrix <m>[R_\theta]</m> follows by the definition of the
+	      matrix of a linear map.
+</p>
+</commentary>
+  
+
+  <exercise xml:id="reflectislinearexer"><title>Reflections</title>
+    <statement><p>
+	<ol>
+	  <li>Show that the reflection <m>F_X</m> across the <m>x</m>-axis is linear.
+	  </li>
+	  <li>Find the matrix for <m>F_X</m>.
+	  </li>
+	  <li>Let <m>\ell</m> be a line through the origin. Show that
+          reflection <m>F_\ell</m> across the line <m>\ell</m> can be written as a
+          composition
+          <m>R_{\theta}\of F_X \of R_{-\theta}</m> for some appropriate value
+          of <m>\theta</m>. Find the matrix for <m>F_\ell</m>.
+	  </li>
+	</ol>
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="reflectislinearexer"/></title>
+  <p>
+<ol><li>Check the linearity properties
+	    <xref ref="linsumprop"/> and <xref ref="linscaleprop"/>
+	    for <m>F_X(x,y) = (x,-y)</m>
+	    (this is the same as item 1 in
+	    <xref ref="isitlinearexer"/>)</li>
+	  <li><m>\twotwo{1}{0}{0}{-1}</m>
+	    (this is the same as item 1 in
+	    <xref ref="findthematexer"/>)</li>
+	  <li>Let <m>\theta</m> be the oriented angle made by the
+	  line <m>\ell</m> with the positive real axis. Geometric
+	    thinking goes like this: to reflect point <m>P</m>
+	    across <m>\ell</m>, first rotate the plane by
+	    angle <m>-\theta</m>. This rotation takes <m>\ell</m> to 
+	    line up with real axis, and takes <m>P</m> to a new
+	    point <m>P'</m>. Now reflect <m>P'</m> across the real axis,
+	    say, to <m>Q'</m>. Last, rotate everything back
+	    by <m>\theta</m> to bring <m>\ell</m> back to where it
+	    started. This brings <m>Q'</m> to <m>Q</m>, which is the
+	    reflection of <m>P</m> across <m>\ell</m> (draw some
+	  pictures!). This sequence of mappings is the
+	  composition <m>R_{\theta}\of F_X \of R_{-\theta}</m>. To
+	    compute the matrix for <m>F_{\ell}</m>, we multiply the
+	    known matrices for <m>R_{\theta}</m>,<m>F_X</m>,
+	    and <m>R_{-\theta}</m>. We get
+	    <me>\twotwo{\cos\theta}{-\sin\theta}{\sin\theta}{\cos\theta}
+	      \twotwo{1}{0}{0}{-1}
+	      \twotwo{\cos\theta}{\sin\theta}{-\sin\theta}{\cos\theta}=\twotwo{\cos^2\theta-1}{2\cos\theta\sin\theta}{2\cos\theta\sin\theta}{1-\cos^2\theta}.</me>
+	    Using angle sum formulas to simplify, we get the following
+	    matrix for <m>F_{\ell}</m>.
+	    <me>F_{\ell} \leftrightarrow \twotwo{\cos(2\theta)}{\sin(2\theta)}{\sin(2\theta)}{-\cos(2\theta)}</me>
+	  </li>
+	</ol>    
+</p>
+</commentary>
+  
+
+</exercises>
+
+          
+
+
+
+<!-- exercise template
+-->
+
+<!-- index template
+    <idx><h></h></idx>
+    -->
+
+<!-- notation template
+     <notation><usage>
+	        </usage>
+	 <description>
+	 </description>
+     </notation>
+  -->
+
+</section>

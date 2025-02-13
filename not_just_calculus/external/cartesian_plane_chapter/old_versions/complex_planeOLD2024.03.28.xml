@@ -1,0 +1,628 @@
+<section xml:id="complex_plane_sectionOLD"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+The Complex Plane (Spring 2024 version)
+</title>
+
+<p>
+  Elements in the set of complex numbers <m>\C</m> are in one-to-one
+ correspondence with points in the Cartesian plane <m>\R^2</m>.  We will
+ write <m>z\leftrightarrow (x,y)</m> to denote that the complex number <m>z</m>
+  corresponds to the ordered pair <m>(x,y)</m> in <m>\R^2</m>.
+</p>
+
+<p>
+  Given a complex number <m>z\leftrightarrow P</m> corresponding to the
+  point <m>P=(x,y)=(r\cos \theta,r\sin \theta)</m> with <m>r\geq 0</m>,
+  we say that <m>x</m> is the <term>real part</term><idx><h>real part
+  of a complex number</h></idx>
+   of <m>z</m>, and that <m>y</m> is the
+  <term>imaginary part</term><idx><h>imaginary part of a complex number</h></idx>
+  of <m>z</m>, denoted <m>\re(z)=x</m>,<notation><usage><m>\re(z)</m>
+	        </usage>
+    <description>real part of the complex number <m>z</m>
+	 </description>
+  </notation> and <m>\im(z)=y</m>,     <notation><usage><m>\im(z)</m>
+	        </usage>
+    <description>imaginary part of the complex number <m>z</m>
+	 </description>
+     </notation>
+  respectively. We say that <m>r</m> is the <term>norm</term><idx><h>norm of a complex number</h></idx>
+  or <term>modulus</term><idx><h>modulus of a complex number</h></idx>
+  of <m>z</m>,  and we say
+      that <m>\theta</m> is an <term>argument</term><idx><h>argument of a complex number</h></idx>
+      of <m>z</m>, denoted <m>|z|=r</m><notation><usage><m>|z|</m>
+    </usage><description>norm of the complex
+    number <m>z</m></description></notation> and <m>\arg(z)=\theta</m><notation><usage><m>\arg(z)</m>
+	</usage><description>argument of the complex
+	  number <m>z</m>
+    </description>
+  </notation>, respectively.
+</p>
+
+<p>
+  The set <m>\C</m> contains the set <m>\R</m> as a subset in the
+ following way. The real number <m>x</m>, which is also the complex number
+ <m>x</m>, corresponds to the ordered pair <m>(x,0)</m>.  A complex number that
+  corresponds to an ordered pair <m>(0,y)</m> is called <term>(pure)
+   imaginary</term><idx><h>pure imaginary number</h></idx>. The complex number that corresponds to the ordered pair
+ <m>(0,1)</m> is called <m>i</m>     <notation><usage><m>i</m>
+	        </usage>
+   <description>the complex number <m>i</m>
+	 </description>
+     </notation>. The complex number 1 is the same as the real
+ number 1 and corresponds to the point <m>(1,0)</m>, and the complex number 0
+ is the same as the real number 0 and corresponds to the origin
+ <m>(0,0)</m>.
+
+</p>
+
+<p>
+  Let <m>z \leftrightarrow (a,b)=(r\cos \theta,r\sin\theta)</m> and <m>w\leftrightarrow
+    (c,d)=(s\cos\phi,s\sin\phi)</m> be complex numbers with <m>r,s\geq
+    0</m>.
+  The <term>sum</term><idx><h>sum of two complex numbers</h></idx>
+   of <m>z</m> and <m>w</m>, denoted <m>z+w</m>, is defined by
+  <men xml:id="complexsumOLD">z+w \leftrightarrow (a+c,b+d).</men>
+  The <term>product</term><idx><h>product of two complex numbers</h></idx>
+   of <m>z</m> and <m>w</m>,
+denoted <m>zw</m>, is defined by
+<men xml:id="complexproductOLD">zw \leftrightarrow 
+  rs(\cos(\theta+\phi),\sin(\theta+\phi)).</men>
+If <m>\alpha</m> is real and <m>z\leftrightarrow P</m>, then
+  <xref ref="complexproductOLD"/> takes the following form.
+<men xml:id="complexrealscalingOLD">\alpha z \leftrightarrow 
+  \alpha P</men>
+</p>
+
+<exercise xml:id="complexmultfirstexerOLD"><statement><p>
+      <ol>
+	<li>Use definition <xref ref="complexproductOLD"/> to
+	  multiply <m>-1</m> times <m>-1</m> as <em>complex
+	  numbers</em>, that is, using <xref ref="complexproductOLD"/>.
+	</li>
+	<li>Use <xref ref="complexproductOLD"/> to show that <m>i^2=-1</m>.
+	</li>
+	<li>Use <xref ref="complexproductOLD"/> to prove <xref ref="complexrealscalingOLD"/>.
+	</li>	
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexmultfirstexerOLD"/></title>
+  <p>
+    <ol>
+      <li>The complex number <m>-1</m> corresponds to the
+	point <m>(-1,0)=(\cos \pi,\sin \pi)</m> in <m>\R^2</m>. Thus we have
+	that <m>(-1)(-1)</m> corresponds to 
+	<me>(\cos(\pi+\pi),\sin(\pi+\pi))= (1,0)</me>
+	which corresponds to the complex number 1.
+	</li>
+	<li>We have <m>i\leftrightarrow (\cos\pi/2,\sin\pi/2)</m>, so <m>i^2 \leftrightarrow
+	(\cos \pi,\sin \pi)=(-1,0)\leftrightarrow -1</m>.
+	</li>
+	<li>Let <m>z\leftrightarrow P=(r\cos\theta,r\sin\theta)</m>. 
+      If <m>\alpha \gt 0</m>, we have <m>\alpha\leftrightarrow
+      (\alpha,0)=(\alpha \cos 0,\alpha \sin 0)</m>. By definition
+      <xref ref="complexproductOLD"/>, we have
+      <me>\alpha z \leftrightarrow
+	(\alpha r\cos\theta,\alpha r\sin\theta)
+	= \alpha (r\cos\theta,r\sin\theta)
+	=\alpha P.</me>
+      For <m>\alpha\lt 0</m>, we
+      have <m>\alpha\leftrightarrow (\alpha,0)=(|\alpha| \cos \pi, |\alpha|\sin\pi)</m>, so
+      <me>\alpha z \leftrightarrow
+(|\alpha| r \cos(\theta+\pi),|\alpha|r\sin(\theta+\pi))
+	=\alpha (r\cos\theta,r\sin\theta)
+	= \alpha P.</me>
+	    If <m>\alpha=0</m>, we have <m>\alpha z \leftrightarrow
+              (0,0) = \alpha P</m>. In all cases, we have <m>\alpha
+              z\leftrightarrow \alpha P</m>, as claimed.
+	</li>
+      </ol>
+</p>
+</commentary>
+
+
+<p>Next we establish two basic ways to represent complex numbers, called
+  the <term>rectangular
+     form</term><idx><h>rectangular form for a complex number</h></idx> 
+ (or the <term>Cartesian form</term>) and the <term>polar
+     form</term><idx><h>polar form for a complex number</h></idx>.
+Let <m>\expi(\theta)</m> denote the complex number that corresponds to the point
+  <m>\wrap(\theta)=(\cos\theta,\sin\theta)</m> on the unit circle, and
+  let <m>z\leftrightarrow (a,b)=(r\cos\theta,r\sin\theta)</m>
+  with <m>r\geq 0</m>. 
+  We have the following.
+ <mdn>
+   <mrow xml:id="rectformzOLD">z\amp = a+bi \amp \amp (\text{rectangular form})</mrow>
+   <mrow xml:id="polarformzOLD">z\amp = rE(\theta)\amp \amp (\text{polar form})</mrow>
+ </mdn>
+ In particular, we have the following expression for <m>E(\theta)</m> in
+ rectangular form.<fn>The function <m>E</m> is also called the "cis"
+   function (for "cosine <m>i</m> sine"), implemented in many software libraries.
+ </fn>
+ <!--, called <term>Euler's formula</term><idx><h>Euler's formula</h>
+ </idx>.-->
+ <men xml:id="cisfndefOLD">\expi(\theta)=\cos\theta + i\sin\theta</men>
+   <xref ref="zxyrthetafigOLD"/> shows a summary of the geometric content of
+   the rectangular and polar forms for a complex number <m>z</m>.
+</p>
+
+    	         <figure xml:id="zxyrthetafigOLD">
+       <caption>Rectangular and polar forms for a complex number.
+      </caption>
+            <image width="80%" source="images/complex_rect_polar.png"></image>
+           </figure>
+
+ <p>
+  Complex multiplication and addition obey the
+  following <term>distributive law</term><idx><h>distributive law for
+  complex numbers</h></idx>, for all complex numbers <m>z,u,v</m>.
+  <men xml:id="complexdistlawOLD">z(u+v) = zu+zv</men>
+  Here is how complex addition looks in rectangular form.
+ <men>(a+ib)+ (c+id)   = (a+c) + i(b+d)
+ </men>
+ Here is how complex multiplication looks in rectangular and polar
+ forms.
+ <mdn>
+<mrow xml:id="complexmultrectangularOLD">  (a+ib)(c+id)  \amp = (ac-bd) +
+  i(ad+bc)</mrow>
+<mrow xml:id="complexmultpolarOLD">(r\expi(\theta))(s\expi(\phi)) \amp = rs\expi(\theta + \phi)</mrow>
+ </mdn>
+</p>
+
+
+ <exercise xml:id="complexalg2ndexerOLD"><statement><p>Express each of the following in rectangular and
+      polar form.
+      <ol>
+	<li> <m>3(2-i) + 6(1+i)</m></li>
+	<li> <m>\left(2\expi({\pi/6})\right)\left(3\expi({-\pi/3})\right)</m></li>
+	<li> <m>(2+3i)(4-i)</m></li>
+	<li>	 <m>(1+i)^3</m></li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+ <commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexalg2ndexerOLD"/></title>
+<p><ol>
+	<li>	   <m>12+3i=3\sqrt{17}\;\expi({\arctan(1/4)})</m></li>
+	<li>	   <m>6\expi({-\pi/6})=3\sqrt{3}-3i</m></li>
+	<li>	   <m>11+10i=\sqrt{221}\;\expi({\arctan(10/11)})</m></li>
+	<li>	   <m>-2+2i=2\sqrt{2}\;\expi({3\pi/4})</m></li>
+      </ol>
+</p>
+</commentary>
+ 
+ <p>
+   Using <xref ref="complexmultpolarOLD"/>, we have the following for <m>r\neq 0</m>.
+ <men>\left(r\expi(\theta)\right)\; \left(\frac{1}{r}\expi(-\theta)\right) = 1</men>
+For <m>z=r\expi(\theta)</m> with <m>r\neq 0</m>, we call <m>\frac{1}{r}\expi(-\theta)</m>
+ the <term>multiplicative inverse</term><idx><h>multiplicative inverse
+     of a complex number</h></idx>
+  of <m>z</m>, denoted <m>{1}/{z}</m> or
+ <m>z^{-1}</m>. We define the <term>quotient</term><idx><h>quotient of
+ two complex numbers</h></idx>
+  <m>z/w</m> or <m>\frac{z}{w}</m> by
+ <men>\frac{z}{w} = zw^{-1}.</men>
+ </p>
+
+
+ 
+ <p>
+   The <term>conjugate</term><idx><h>conjugate of a complex number</h></idx>
+         of the complex number <m>z=x+iy=r\expi(\theta)</m>,
+      denoted <m>\overline{z}</m><notation><usage><m>\overline{z}</m>
+	        </usage>
+     <description>conjugate of the complex number <m>z</m>
+	 </description>
+     </notation>
+      or <m>z^\ast</m><notation><usage><m>{z}^\ast</m>
+	        </usage>
+     <description>conjugate of the complex number <m>z</m>
+	 </description>
+     </notation>, is defined to be <m>z^\ast = x-iy =
+r\expi(-\theta)</m>. Geometrically, <m>z^\ast</m> is the reflection of <m>z</m> across
+the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
+      involving conjugates. For all <m>z,w\in \C</m>, we have the following.
+<mdn>
+  <mrow xml:id="realpartformulaOLD">\re(z)  \amp  = \frac{z + z^\ast}{2}</mrow>
+<mrow xml:id="imagpartformulaOLD">
+  \im(z)  \amp  = \frac{z - z^\ast}{2i}</mrow>
+<mrow xml:id="zzbarisnormsqOLD">
+  |z|^2  \amp  = zz^\ast</mrow>
+<mrow>2\arg z  \amp  = \frac{z}{z^\ast} \;\;(\text{for } z\neq 0)</mrow>
+<mrow>\frac{1}{z}
+   \amp  = \frac{z^\ast}{zz^\ast}= \frac{z^\ast}{|z|^2} \;\;(\text{for } z\neq 0)</mrow>
+<mrow>(zw)^\ast  \amp  = z^\ast w^\ast</mrow>
+</mdn>
+ </p>
+
+ <exercise xml:id="complexdivisionexerOLD"><statement><p>Express each of the following in rectangular and
+      polar form.
+      <ol>
+	<li> <m>\displaystyle \frac{2+i}{3-i}</m></li>
+	<li> <m>\displaystyle \frac{1+2i}{1-2i}</m></li>
+	<li> <m>\displaystyle \frac{2\expi({\pi/4})}{3\expi({-\pi/2})}</m>	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexdivisionexerOLD"/></title>
+  <p>
+      <ol>
+	<li> <m>\displaystyle \frac{1}{2} + \frac{1}{2}i=\frac{\sqrt{2}}{2}\expi({\pi/4})</m></li>
+	<li> <m>\displaystyle -\frac{3}{5} +\frac{4}{5}i=\expi({(\arctan(-4/3))+\pi)}</m></li>
+        <li> <m>\displaystyle \frac{2}{3}\expi({3\pi/4})=-\frac{\sqrt{2}}{3} +
+  \frac{\sqrt{2}}{3}i</m>	</li>
+      </ol>
+</p>
+</commentary>
+ 
+<exercises>
+
+<exercise xml:id="justifyrectpolaraddmultexerOLD"><statement><p>Verify <xref ref="rectformzOLD"/> and
+      <xref ref="polarformzOLD"/>. That is, justify both equations
+      using the definitions of complex addition and multiplication. 
+      </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="justifyrectpolaraddmultexerOLD"/></title>
+<p>Let <m>z\leftrightarrow (a,b) = (r\cos
+	\theta,r\sin\theta)</m>. Then we have
+      <md>
+	<mrow>z\amp \leftrightarrow (a,b) = a(1,0)+b(0,1)\leftrightarrow
+	  a+bi</mrow>
+	<mrow>z\amp \leftrightarrow (r\cos\theta,r\sin\theta) =
+	r(\cos\theta,\sin\theta)\leftrightarrow rE(\theta).</mrow>
+      </md>
+      The rightmost double arrow "<m>\leftrightarrow</m>" in each of the
+      lines above is justified by <xref ref="complexrealscalingOLD"/>.
+</p>
+</commentary>
+
+<exercise xml:id="triangleineqcomplexexerOLD"><title>The triangle
+	  inequality</title><idx><h>triangle inequality for complex numbers</h>
+	</idx><statement><p>Prove the following property of norm, called
+      the <em>triangle inequality</em>:
+		For any two complex numbers <m>z,w</m>, we have
+	  <men xml:id="triangleineqcomplexOLD">|z+w|\leq |z|+|w|.</men>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="triangleineqcomplexexerOLD"/></title>
+  <p>
+    The simplest approach is geometric:
+Sketch the parallelogram for vector addition and use the fact
+that the length of any side of a triangle is less than the sum of the
+lengths of the other two sides.
+    </p>
+    <p>
+  Here is one route to an algebraic proof: Let <m>z=a+bi</m>, <m>w=c+di</m>.
+  Manipulate the triangle
+  inequality (start by squaring both sides) to obtain 
+  <me>2abcd \leq b^2c^2 + a^2d^2.</me>
+  This is the same as the clearly true statement
+  <me>0\leq  b^2c^2 + a^2d^2 - 2abcd = (bc-ad)^2.</me>
+   Conclude by
+  observing that all steps of the derivation are reversible.
+</p>
+</commentary>
+
+<exercise xml:id="zzbarisnormsqexerOLD"><statement><p>Prove <xref ref="zzbarisnormsqOLD"/>.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="zzbarisnormsqexerOLD"/></title>
+  <p>
+    Let <m>z=r\expi({\theta})</m>.  Then <m>\overline{z}=r\expi({-\theta})</m>, and we
+have
+      <md>
+	<mrow>z\overline{z} \amp  = r\expi({\theta})r\expi({-\theta})</mrow>
+	<mrow>  \amp = r^2 \expi(0)</mrow>
+	<mrow>  \amp  = r^2 = |z|^2.</mrow>
+      </md>
+</p>
+</commentary>
+
+<exercise xml:id="complexdiffnormisdistexerOLD"><statement>Let <m>p</m> and <m>q</m> be complex numbers.  Prove that the distance
+(ordinary distance between points in the plane) between <m>p</m> and <m>q</m> is
+    <m>|p-q|</m>.</statement>
+  <hint><p>Use rectangular form.</p>
+  </hint>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexdiffnormisdistexerOLD"/></title>
+  <p>
+    Let <m>p=a+ib</m> and <m>q=c+id</m>.
+We have 
+<md>
+  <mrow>|p-q| \amp = |(a+ib)-(c+id)| </mrow>
+  <mrow>\amp = |(a-c)+i(b-d)|</mrow>
+  <mrow>\amp = \sqrt{(a-c)^2 + (b-d)^2}.</mrow>
+</md>
+The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.</p>
+</commentary>
+
+<exercise xml:id="realimagpartsformulaexerOLD">
+<statement>Verify the formulas <xref ref="realpartformulaOLD" /> and
+  <xref ref="imagpartformulaOLD" />.
+</statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="realimagpartsformulaexerOLD"/></title>
+<p>Let <m>z=x+iy</m>.  Then we have
+<ul>
+<li> <m>\displaystyle \frac{z+\overline{z}}{2}= \frac{2x}{2}=x=\re(z)</m>, and</li>
+<li><m>\displaystyle
+    \frac{z-\overline{z}}{2i}=\frac{2iy}{2i}=y=\im(z)</m>.</li>
+</ul>
+</p>
+</commentary>
+
+<exercise xml:id="twosqrootsexerOLD"><statement><p>Given a nonzero complex number <m>z</m>, explain why <m>z</m> has exactly
+  two square roots, and explain how to find them.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="twosqrootsexerOLD"/></title>
+  <p>
+    Since squaring a number squares the norm and doubles the argument,
+a square root can be found by taking the square root of the norm and
+dividing the argument by two.  That is, for <m>z=r\expi({\theta})</m>, a square
+root of <m>z</m> is <m>\sqrt{r}\expi({\theta/2})</m>.  Another square root of <m>z</m> is
+the negative of that expression.  Any other square root of <m>z</m> would
+have to have norm <m>\sqrt{|z|}</m> and argument <m>\theta/2</m> plus or minus an
+  integer multiple of <m>\pi</m>, so these must be all the square roots of <m>z</m>.
+</p>
+</commentary>
+
+<exercise xml:id="solvecomplexquadraticsexerOLD">
+  <statement>Find all complex solutions of the following
+equations. 
+<ol>
+<li><m>\displaystyle z^2 + 3z + 5 = 0</m></li>
+<li><m>(z - i)(z + i) = 1</m></li>
+<li><m>\displaystyle \frac{2z + i}{-z+3i} = z</m></li>
+</ol>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="solvecomplexquadraticsexerOLD"/></title>
+<p><ol>
+      <li><m>\displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}</m></li>
+      <li><m>0</m></li>
+      <li><m>\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
+    281^{1/4}\sin \varphi)]</m>, where <m>\varphi=(\arctan(16/5)+\pi)/2</m></li>
+</ol></p>
+</commentary>
+
+<exercise xml:id="anglesumformulascomplexexerOLD"><statement><p>Use the fact that
+      <m>\expi({a})\expi({b})=\expi({a+b})</m>
+       together with <xref ref="cisfndefOLD"/>
+       to derive the
+      trigonometric angle sum formulas below.
+<md>  
+  <mrow>    \cos(a+b) \amp = \cos a \cos b -\sin a \sin b</mrow>
+  <mrow>    \sin(a+b) \amp = \cos a \sin b + \sin a \cos b</mrow>
+</md>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="anglesumformulascomplexexerOLD"/></title>
+<p>  Using <xref ref="cisfndefOLD"/> for the first equality below, and then using
+  complex multiplication for the second equality, we have
+<mdn>  
+<mrow number='no'>   \expi({a})\expi({b}) \amp = (\cos a + i\sin a)(\cos b + i\sin b)</mrow>
+<mrow xml:id="localtag1OLD" tag="star">    \amp = (\cos a\cos b - \sin a \sin b) + i(\cos a \sin b + \sin a\cos b).</mrow>
+</mdn>
+On the other hand, <xref ref="cisfndefOLD"/> also gives
+<mdn><mrow xml:id="localtag2OLD" tag="dstar"> \expi{(a+b)}   = \cos(a+b) + i\sin
+    (a+b).</mrow></mdn>
+Equating real and and imaginary parts of <xref ref="localtag1OLD" /> and
+<xref ref="localtag2OLD"/> gives the desired trigonometric identities.
+</p>
+</commentary>
+
+<exercise xml:id="complexnosasrealmatalgOLD"><title>Complex numbers as <m>2\times 2</m> real matrices
+  </title>
+  <statement><p>Let <m>{\mathcal M}_\C</m> denote the set of <m>2\times
+	2</m> matrices of the form <m>\left[\begin{array}{cc}a\amp
+	b\\-b\amp a\end{array}\right]</m> with <m>a,b\in \R</m>. Given a complex
+      number <m>z</m> with Cartesian form  <m>z=a+bi</m>, let <m>M(z)</m> denote the matrix
+	<m>\left[\begin{array}{cc}a\amp
+	b\\-b\amp a\end{array}\right]</m> in <m>{\mathcal
+	M}_\C</m>. Conversely, given a matrix <m>M\in {\mathcal M}_\C</m>
+      with top left entry <m>a</m> and top right entry <m>b</m>,
+      let <m>C(M)</m> denote the complex number <m>a+bi</m>. It is clear
+      that the mappings <m>z\to M(z)</m> and <m>M\to C(M)</m> are
+	inverses to one another, and establish a one-to-one
+      correspondence <m>\C\leftrightarrow {\mathcal M}_\C</m>.
+      <ol><li>Show that <m>{\mathcal M}_\C</m> is closed under addition
+	  and multiplication. That is, suppose that <m>M,N</m> are
+	  elements of <m>{\mathcal M}_\C</m>. Show that <m>M+N</m>
+	  and <m>MN</m> are also elements of <m>{\mathcal M}_\C</m>.
+	</li>
+	<li>Show that complex addition and multiplication are
+	  "mirrored" in <m>{\mathcal M}_\C</m>. That is, show that
+  	<mdn>
+  	  <mrow xml:id="ctomatsumOLD">M(z+w)\amp =M(z)+M(w)</mrow>
+	  <mrow xml:id="ctmatmultOLD">M(zw)\amp =M(z)M(w).</mrow>
+	</mdn>
+	</li>
+	<li>Use these results to justify the distributive law <xref ref="complexdistlawOLD"/>.</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="complexnosasrealmatalgOLD"/></title>
+  <p>
+    <ol>
+      <li>Let <m>T(a,b)</m> denote the
+	matrix <m>\twotwo{a}{b}{-b}{a}</m> in <m>{\mathcal M}_\C</m>.
+	We have the following.
+	<md>
+	  <mrow>T(a,b)+T(c,d)\amp = \twotwo{a}{b}{-b}{a} + \twotwo{c}{d}{-d}{c} 
+	  </mrow>
+	  <mrow>\amp = \twotwo{a+c}{b+d}{-b-d}{a+c}
+	  </mrow>
+	  <mrow>\amp = T(a+c,b+d)</mrow>
+	  <mrow>T(a,b)T(c,d)\amp = \twotwo{a}{b}{-b}{a} \twotwo{c}{d}{-d}{c} 
+	  </mrow>
+	  <mrow>\amp =\twotwo{ac-bd}{ad+bc}{-ad-bc}{ac-bd}
+	  </mrow>
+	  <mrow>\amp = T(ac-bd,ad+bc)</mrow>
+	</md>
+      </li>
+      <li>Let <m>z=a+bi</m> and <m>w=c+di</m> so that <m>M(z)=T(a,b)</m>
+	and <m>M(w)=T(c,d)</m>.
+	We have the following.
+	<md>
+	  <mrow>	 M(z+w)\amp = M((a+ib)+(c+id)</mrow>
+	  <mrow>\amp = M((a+c)+i(b+d))</mrow>
+	  <mrow>\amp = T(a+c,b+d)</mrow>
+	  <mrow>\amp = T(a,b)+T(c,d)</mrow>
+	  <mrow>\amp = M(z)+M(w)</mrow>	  
+	  <mrow>M(zw)\amp = M((a+ib)(c+id))</mrow>
+	  <mrow>\amp = M((ac-bd)+i(ad+bc))</mrow>
+	  <mrow>\amp = T(ac-bd,ad+bc)</mrow>
+	  <mrow>\amp = T(a,b)T(c,d)</mrow>
+	  <mrow>\amp = M(z)M(w)</mrow>	  	  	  	  
+	</md>
+      </li>
+      <li>
+	For complex
+	numbers <m>z,u,v</m>, we have
+	<md>
+	  <mrow>  M(z(u+v)) \amp = M(z)M(u+v) </mrow>
+	  <mrow>  \amp = M(z)(M(u)+M(v)) </mrow>
+	  <mrow>  \amp = M(z)M(u)+M(z)M(v) \amp \amp (\text{dist. law
+	  for linear maps})</mrow>
+	  <mrow>  \amp = M(zu)+M(zv) </mrow>
+	  <mrow>  \amp = M(zu+zv). </mrow>
+	  	</md>
+	  Applying <m>C</m> to the first and last expressions in this
+	sequence of equalities, we have the distributive law
+	<me>z(u+v) = zu+av.</me>
+      </li>
+    </ol>
+</p>
+</commentary>
+
+<exercise xml:id="verifyeulersformulaexerOLD"><title>The complex exponential
+    function</title><statement><p>
+      The Taylor series for the real function <m>y=e^x</m> is
+<me> e^x = 1 +x +\frac{x^2}{2} +\frac{x^3}{3!} + \cdots .
+</me>
+Convergence for sequences and series of complex numbers can be defined
+in a way that naturally extends the definitions for real numbers. It
+turns out that the complex power series
+<me>  1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots 
+</me>
+converges for every <em>complex</em> number <m>z</m>, so we define the <em>complex</em> exponential function by 
+<me> e^z= 1 +z +\frac{z^2}{2} +\frac{z^3}{3!} + \cdots .
+</me>
+The complex exponential obeys familiar laws of the real exponential. For
+<m>z,w</m> in <m>\C</m>, we have
+<md>
+  <mrow>e^ze^w \amp = e^{z+w}</mrow>
+  <mrow>e^0 \amp =1</mrow>
+</md>
+A key property of the complex exponential is the following,
+called <term>Euler's formula</term>.
+    <assemblage><title>Euler's
+   formula</title><p><men xml:id="eulersformulaOLD"><idx>Euler's formula</idx>
+   e^{it}= \cos t + i\sin t \;\;\text{(for $t$ real)}
+    </men></p></assemblage>
+    Verify Euler's formula by manipulating terms in the
+    series <m>\sum_{n=0}^{\infty} \frac{(it)^n}{n!}</m>.
+    </p>
+    <p><alert>Comment on usage:</alert> In these notes, we have
+      used <m>E(\theta)</m> in place of <m>e^{i\theta}</m> for the
+      complex number <m>\cos \theta+i\sin\theta</m>
+      because the definition of <m>E(\theta)</m>
+      does not require the theory of infinite series. Virtually all texts and
+      reference materials use <m>e^{i\theta}</m> instead
+      of <m>E(\theta)</m>. The fact that 
+      <m>E(\theta)=e^{i\theta}</m>
+      for all real values of <m>\theta</m> means that it is not
+      necessary to justify the details of the complex exponential
+      function in order to use the complex algebra described in these
+      notes. Nonetheless, it is useful to have at least the basic idea
+      of where Euler's formula comes from, and that is the purpose of
+      this exercise.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="verifyeulersformulaexerOLD"/></title>
+<p>
+      We have <me>i^n =\begin{cases} 1 \amp n\equiv 0 \pmod{4}\\
+	i \amp n\equiv 1 \pmod{4}\\
+	-1 \amp n\equiv 2 \pmod{4}\\
+	-i \amp n\equiv 3 \pmod{4}.
+	\end{cases}</me>
+      For even <m>n</m>, the terms in the sum
+      <m>\sum_{n=0}^{\infty}\frac{(it)^n}{n!}</m> are
+      <me>1,-\frac{t^2}{2!},\frac{t^4}{4!},-\frac{t^6}{6!},\ldots</me>
+      and for odd <m>n</m>, the terms are
+      <me>i\frac{t}{1!},-i\frac{t^3}{3!},i\frac{t^5}{5!},\ldots</me>
+      and we recognize the Taylor series for cosine and (<m>i</m> times) sine.
+      <md>
+	<mrow>\cos t \amp = 1-\frac{t^2}{2}+\frac{t^4}{4!} \pm \ldots</mrow>
+	<mrow>i\sin t \amp =i\left( t-\frac{t^3}{3!}+\frac{t^5}{5!} \pm \ldots\right)</mrow>	
+      </md>
+      Using facts from analysis, we can justify rearranging the terms in the
+      series <m>\sum_{n=0}^{\infty}\frac{(it)^n}{n!}</m> and that we factoring <m>i</m> out of the
+      odd <m>n</m> terms. Thus we have 
+      <me>e^{it}=\cos t + i\sin t.</me>
+    </p>
+  </commentary>
+
+</exercises>
+
+<!-- exercise template
+<exercise><statement><p>
+    </p>
+  </statement>
+  <NOanswer><p>
+    </p>
+  </NOanswer>
+</exercise>
+-->
+
+<!-- index template
+<idx><h></h></idx>
+    -->
+
+<!-- notation template
+     <notation><usage>
+	        </usage>
+	 <description>
+	 </description>
+     </notation>
+  -->
+
+
+</section>

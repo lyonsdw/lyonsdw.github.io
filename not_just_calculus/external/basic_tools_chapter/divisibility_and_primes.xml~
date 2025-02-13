@@ -1,0 +1,357 @@
+<section xml:id="divisibility_and_primes_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Divisibility and Primes
+</title>
+
+<!--<subsection>
+  <title>Divisibility</title>-->
+
+  <p>  The set 
+    <me> \Z=\{ \ldots,-3,-2,-1,0,1,2,3,\ldots \}</me>    <notation>
+      <usage><m>\Z</m>
+      </usage>
+      <description>the set of integers</description>
+    </notation>
+ of all the whole
+    numbers is called the <term>integers</term><idx><h>the set of
+    integers</h></idx>. We say that an
+    integer <m>a</m> <term>divides</term><idx><h>divides</h></idx> an
+    integer <m>b</m>, written <m>a|b</m>    <notation>
+      <usage><m>a|b</m>
+      </usage>
+      <description><m>a</m> divides <m>b</m>
+      </description>
+    </notation>, if <m>b=ak</m> for some
+    integer <m>k</m>.  If <m>a|b</m>, we say that <m>b</m>
+    is <term>divisible</term><idx><h>divisible</h></idx> by <m>a</m>,
+    and we say <m>a</m> is
+    a <term>divisor</term><idx><h>divisor</h></idx> of <m>b</m>.  We
+    write <m>a\nmid b</m>    <notation>
+      <usage><m>a\nmid b</m>
+      </usage>
+      <description><m>a</m> does not divide <m>b</m>
+      </description>
+    </notation>
+ to indicate that <m>a</m> does not
+    divide <m>b</m>.  An integer <m>p>1</m> whose only positive
+    divisors are <m>1</m> and <m>p</m> is
+    called <term>prime</term><idx><h>prime</h></idx>. </p>
+
+  <exercise xml:id="parsedividesexer"><statement><p>Say which of the following are true, or
+	false, or neither. Explain.
+	<md><mrow>
+	    6|3 \amp \amp 3|6 \amp \amp 6/3 </mrow>
+	</md>
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="parsedividesexer"/></title>
+  <p>
+The statement <m>6|3</m> is false. There is no
+	integer <m>k</m> such that <m>3=6k</m>. The statement <m>3|6</m>
+	is true, because <m>6=3\cdot 2</m>. The symbols "<m>6/3</m>"
+	denotes the number 2. The number 2 is not a statement; it is
+	neither true nor false. 
+</p>
+</commentary>
+  
+
+<p>  Here are two
+  important facts about divisibility and primes.</p>
+
+  <theorem xml:id ="divisionalgorithm">  <title>The Division
+  Algorithm</title><idx><h>Division Algorithm</h></idx>
+<statement>    <p>Let <m>m</m> be a positive
+integer. For every integer <m>n</m> there are unique integers <m>q,r</m> that
+satisfy
+    <md><mrow>n=mq + r, \amp \amp 0\leq r\lt m.</mrow>
+    </md>
+    The number <m>q</m> is called the <term>quotient</term><idx><h>quotient</h></idx>
+    and the number <m>r</m> is called the <term>remainder</term><idx><h>remainder</h></idx>
+    for <term>dividing <m>n</m>  by <m>m</m></term>.</p>
+</statement>
+  </theorem>
+  
+  <theorem xml:id="fundthmarith"><title>The Fundamental Theorem of Arithmetic</title><idx><h>
+	Fundamental Theorem of Arithmetic</h></idx>
+    <statement><p>
+	 Every integer <m>n\gt 1</m> can be written as a product of primes. Further, this prime
+factorization is unique. That means that if
+<me>n=p_1p_2\cdots p_k=q_1q_2\cdots q_\ell</me> for primes <m>p_i,q_j</m>, then
+<m>k=\ell</m> and there is a rearrangement of the subscripts for which
+<m>p_i=q_i</m> for <m>1\leq i\leq k</m>. 	
+      </p>
+    </statement>
+  </theorem>
+
+<p>  Here is a useful corollary that relates divisibility to the
+  Division Algorithm.
+</p>
+
+  <corollary xml:id="dividesiffr0"><statement><p>Let <m>m</m> be a positive integer,
+	let <m>n</m> be any integer, and let <m>n=qm+r</m>, where 
+	<m>q,r</m> are integers, with <m>r</m> in the range <m>0\leq r\lt
+	  m</m>, as guaranteed by the Division Algorithm. Then we
+	have <m>m|n</m> if and only if <m>r=0</m>.
+      </p>
+    </statement><proof><p>Suppose <m>r=0</m>. Then <m>n=mq+r</m> reduces
+	to <m>n=mq</m>, so <m>m|n</m>. Conversely, suppose that <m>m|n</m>. Then
+	we have <m>n=mk</m> for some integer <m>k</m>. The Division
+	algorithm says that <m>n=mq+r</m> is the <em>only</em> possible
+	way to write <m>n</m> as a multiple of <m>m</m> with a remainder
+	in the range <m>0\leq r\lt m</m>. Therefore we conclude
+	that <m>q=k</m> and <m>r=0</m>.
+      </p>
+    </proof>
+  </corollary>
+
+  <p><alert>Remark on the statement and proof of <xref ref="dividesiffr0"/>.</alert>
+  The phrase "if and only if"<idx><h>if and only if</h>
+  </idx>
+  means that the following two statements hold.
+    <ol>
+      <li>If <m>r=0</m>, then <m>m|n</m>.
+      </li>
+      <li>If <m>m|n</m>, then <m>r=0</m>.
+      </li>
+    </ol>
+     It often works well to construct a proof for an "if and only
+     if" statement in two parts, one part for each of the two
+     "if-then" statements. Statement 1 is called the "if" part of the
+     "if and only if" statement, and statement 2 is called the "only if"
+     part of the "if and only if" statement.
+</p>
+
+  <exercise xml:id="trivialiffproofexer">
+    <statement>
+      <p>Prove the following statement: An integer <m>n</m> is divisible
+	by 6 if and only if <m>n</m> can be written as a
+	product <m>n=ab</m> of integers <m>a,b</m>
+	such that <m>a</m> is divisible by 2
+	and <m>b</m> is divisible by 3. Write a proof in two parts.
+	For part 1, suppose that <m>a</m> is divisible by 2 and <m>b</m>
+	is divisible by 3, and then show that <m>n=ab</m> is divisible
+	by <m>6</m>. For part 2, suppose that <m>n</m> is divisible by
+	6, and then show that there exist integers <m>a,b</m> so
+	that <m>n=ab</m>, and that <m>a</m> is divisible by 2
+	and <m>b</m> is divisible by 3.
+      </p>
+    </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="trivialiffproofexer"/></title>
+  <p>Suppose that <m>a=2k</m> for some integer <m>k</m> and
+    that <m>b=3\ell</m> for some
+    integer <m>\ell</m>. Then <m>ab=6k\ell</m> is divisible
+    by <m>6</m>. Conversely, suppose that <m>n=6k</m> for some
+    integer <m>k</m>. Let <m>a=2</m> and let <m>b=3k</m>. Then we
+    have <m>n=ab</m>, where <m>a</m> is divisible by 2 and <m>b</m> is
+    divisible by 3.
+  </p>
+</commentary>
+  
+  
+  <p>Here is a fact that demonstrates the power of the Division
+  Algorithm and the Fundamental Theorem of Arithmetic.</p>
+
+<proposition xml:id="infprimeprop">
+  <statement><p>There are infinitely many prime numbers.</p>
+  </statement>
+  <proof><p>
+We wish to show that there are
+infinitely many primes. Suppose, on the contrary, that there exist only
+finitely many primes, say <m>p_1,p_2,\ldots,p_r</m>. Let <m>s=p_1p_2\cdots
+p_r+1</m>. Using the division algorithm to divide <m>s</m> by <m>p_1</m>, we have
+<m>s= p_1q+r</m> with <m>q=p_2p_3\cdots p_r</m> and <m>r=1</m>. By
+<xref ref="dividesiffr0"/>, the fact that <m>r=1</m>
+means that <m>p_1</m> does <em>not</em>
+divide <m>s</m>, so <m>p_1</m> cannot appear in
+the prime factorization of <m>s</m>. A similar argument shows that none of
+the <m>p_j</m>'s can appear in the prime factorization of <m>s</m>. This
+contradicts the Fundamental Theorem of Arithmetic, that says <m>s</m> can be
+expressed as a product of primes. We conclude that there are
+infinitely many primes.
+    </p>
+  </proof>
+</proposition>
+
+<p>
+  <alert>Remark on the proof of <xref ref="infprimeprop"/>.</alert> The
+    proof uses a logic structure called <term>proof by
+    contradiction</term><idx><h>proof by contradiction</h>
+    </idx>. To show that a claim is true ("there are infinitely many primes"), a proof by contradiction
+    begins by supposing that the opposite of the claim is true ("suppose
+    there are only finitely many primes"). Next,
+    we show that there is an impossible consequence ("the Fundamental
+    Theorem of Arithmetic is false"). We conclude that the opposite
+    claim ("there are only finitely many primes") must be false, so the
+    original claim ("there are infinitely many primes") is true.
+</p>
+
+<exercise xml:id="infmanyprimeproofexer">
+  <statement>
+    <p>In the proof of <xref ref="infprimeprop"/>, a number <m>s</m> is
+    constructed by multiplying together a collection of prime numbers
+      and then adding 1. Then we conclude that <m>s</m> is not divisible
+    by any of the primes in the original collection. Must it be the case
+    that <m>s</m> itself must be prime, but just not
+    equal to any of the
+    primes in the original collection? Does it always
+    turn out that the product of a collection of primes, plus 1, is a
+    prime number?
+    If not, give an example of a collection of prime numbers
+    that, when multiplied together and increased by 1, is not prime.
+    </p>
+  </statement>
+</exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+    <xref ref="infmanyprimeproofexer"/></title>
+  <p>No. For example, we have <m>3\cdot 5+1=16</m>, which is not prime.
+  </p>
+</commentary>
+
+
+
+
+<exercises>
+
+  <exercise xml:id="evenoddexer"><statement><p>
+	An integer is called <term>even</term> if it is divisible
+	by <m>2</m>, and otherwise it is called <term>odd</term>. Use
+	the Division Algorithm to show that an integer <m>n</m> is odd
+	if and only if <m>n=2k+1</m> for some integer <m>k</m>. Then use this fact to show that the product
+    of two odd integers must be odd.
+    </p>    
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="evenoddexer"/></title>
+  <p>Let <m>n</m> be an integer. Use the Division Algorithm to
+    write <m>n=2q+r</m> for unique integers <m>q,r</m> with <m>r</m> in
+    the range <m>0\leq r\lt 2</m>. If <m>n</m> is odd, we must
+    have <m>r=1</m>. On the other hand, if <m>n=2k+1</m>, then it must
+    be that <m>2\nmid n</m>. This proves the "if and only if"
+    statement. Now, let <m>n=2k+1</m>, <m>m=2\ell+1</m> be odd. The we
+    have <m>nm=(2k+1)(2\ell+1) = 2(2k\ell + k+\ell) + 1</m>, which is odd.
+</p>
+</commentary>
+  
+  
+  <exercise xml:id="primedividesexer"><statement><p> Let <m>p</m> be
+  prime and suppose that <m>p|(ab)</m> for some integers 
+    <m>a,b</m>. Show that it must be the case that <m>p|a</m>
+    or <m>p|b</m> (or both). 
+    </p>    
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="primedividesexer"/></title>
+  <p>
+    The assumption that <m>p|(ab)</m> means that <m>ab=pc</m> for some integer <m>c</m>.
+    Use the Fundamental Theorem of Arithmetic to write <m>a,b,c</m> as products
+    of primes <m>a=p_1\cdots p_n</m>, <m>b=q_1\cdots q_m</m>, <m>c=r_1\cdots
+    r_\ell</m>. Thus we have
+    <me>p_1\cdots p_nq_1\cdots q_m = pr_1\cdots r_\ell.</me>
+    By the uniqueness statement in the Fundamental Theorem of
+    Arithmetic, it must be that <m>p</m> is equal to one of the <m>p_i</m>'s or
+    <m>p</m> is equal to one of the <m>q_i</m>'s (or both). We conclude that it
+    must be the case that <m>p|a</m> or <m>p|b</m> or both.    
+</p>
+</commentary>
+
+<exercise xml:id="consolidatingprimefactorsexer"><title>Consolidating
+      prime factors</title><statement>
+    <p>
+ Here is another version of <xref ref="fundthmarith"/> (the FTA).
+      <blockquote><p><alert>The Fundamental Theorem of Arithmetic, version
+	  2 (FTAv2).</alert>
+	Every integer <m>n\gt 1</m> can be written in the form
+	<men xml:id="fta2eqn">n=p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r}</men>
+	where <m>p_1,p_2,\ldots,p_r</m> are primes with <m>p_1\lt
+	  p_2\lt \cdots \lt p_r</m>, and the
+	numbers <m>e_1,e_2,\ldots,e_r</m> and the number <m>r</m> are
+	positive integers. Further, this expression is unique in the
+	sense that if <m>n=q_1^{f_1}q_2^{f_2}\cdots q_s^{f_s}</m> for
+	some increasing sequence of primes <m>q_1,q_2,\ldots,q_s</m> and
+	positive integers <m>f_1,f_2,\ldots,f_s</m>,
+	then <m>s=r</m>, <m>q_i=p_i</m> for all <m>i</m>,
+	and <m>f_i=e_i</m> for all <m>i</m>.</p>
+      </blockquote>
+      <ol>
+	<li>Consider the products
+	  <me>108 = p_1p_2p_3p_4p_5 = q_1q_2q_3q_4q_5</me>
+	  where <m>p_1=p_3=2</m>, <m>p_2=p_4=p_5=3</m>, <m>q_1=q_3=q_5=3</m>,
+	  and <m>q_2=q_4=2</m>.
+	  <!--<m>108 = 3\cdot 2\cdot 3\cdot 2
+	    \cdot 3=2\cdot 3\cdot 2\cdot 3\cdot 3</m>.-->
+	  Does the fact that <m>p_1\neq q_1</m> violate the FTA? Write
+	  the factorization for 108 given by the FTAv2. Find the values
+	of <m>r</m>, <m>p_1,p_2,\ldots,p_r</m>, and <m>e_1,e_2,\ldots,e_r</m>.
+	</li>
+	<li>Why do the FTA and the FTAv2 assume that <m>n\gt 1</m>? What
+	  happens if <m>n=1</m>? What happens if we change the
+	  definition of prime numbers to allow 1 to be a prime number?
+	</li>
+	<li>Suppose that an integer <m>a\gt 1</m> has prime
+	  factorization
+	<m>a=p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r}</m> as given FTAv2, and suppose a
+	positive integer <m>m</m> divides <m>a</m>. What can be said
+	about the FTAv2 prime factorization of <m>m</m>?
+	</li>
+<!--	<li>
+	  Suppose that integers <m>a,b</m> can be written
+	  <md>
+	    <mrow>a \amp = p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r}\\
+	          b \amp = p_1^{f_1}p_2^{f_2}\cdots p_r^{f_r}
+	    </mrow>
+	  </md>
+	  for some primes <m>p_1\lt p_2 \lt\cdots \lt p_r</m> and
+	    some <em>nonnegative</em>
+	    integers <m>e_1,e_2,\ldots,e_r</m>
+	    and <m>f_1,f_2,\ldots,f_r</m> (that is, one or more of those
+	    exponents may be zero), and suppose that <m>m</m> is a
+	    positive integer such that
+	    <m>m|a</m> and <m>m|b</m>. What can be said about the
+	    prime factorization of <m>m</m>? 
+	</li>-->
+      </ol>
+    </p>    
+  </statement>
+  </exercise>
+
+<commentary component="instructor"><title>Instructor's solution for
+<xref ref="consolidatingprimefactorsexer"/></title>
+  <p>
+    <ol>
+      <li>No, this does not violate the FTA. The FTA says that we may
+	have <m>p_i=q_i</m> for every <m>i</m>, but possibly <em>after</em> 
+	rearranging the subscripts. The FTAv2 factorization of 108 is
+	<me>108 = 2^23^3,</me>
+	with <m>r=2</m>, <m>p_1=2</m>, <m>p_2=3</m>, <m>e_1=2</m>, and <m>e_2=3</m>.
+      </li>
+      <li>There is no prime factorization for <m>n=1</m> (unless, maybe,
+      you make a special definition for an empty factorization). If 1 is
+      included in the set of prime numbers, then you lose uniqueness in
+      the FTA and FTAv2. 
+      </li>
+      <li>If <m>m| \prod_i p_i{e^i}</m>, then we must have <m>m=\prod_i
+	  p_i^{f_i}</m> with <m>0\leq f^i\leq e_i</m>. This is a
+	  straightforward FTA argument.
+      </li>
+    </ol>
+</p>
+</commentary>
+
+
+  
+</exercises>
+
+
+</section>
+

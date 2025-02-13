@@ -1,0 +1,217 @@
+<section xml:id="partitions_and_counting_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Partitions and Counting
+</title>
+
+<p>
+  A <term>partition</term><idx><h>partition</h></idx> of a set <m>S</m> is a collection of 
+  nonempty subsets of <m>S</m> whose union is all of <m>S</m> and any two of which have
+  empty intersection.
+</p>
+
+<exercise xml:id="partitionexer"><statement><p>
+      Let <m>S=\{a,b,c\}</m>.
+	  <ol>
+	    <li> Write out all possible partitions of <m>S</m>.</li>
+    <li>Give an example of a collection of subsets of <m>S</m>
+      whose union is all of <m>S</m>, but some two of which have nonempty
+      intersection.</li>
+      <li>Give an example of a collection of subsets of <m>S</m>,
+      any two of which have empty intersection, but whose union is not
+	all of <m>S</m>.</li>
+</ol>
+    </p>
+  </statement>
+    </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="partitionexer"/></title>
+  <p>
+	  <ol>
+	    <li>Here are the 5 partitions of <m>S</m>.
+	      <md>
+		<mrow>\{\{a,b,c\}\}</mrow>
+		<mrow>\{\{a,b\},\{c\}\}</mrow>
+		<mrow>\{\{a,c\},\{b\}\}</mrow>
+		<mrow>\{\{b,c\},\{a\}\}</mrow>
+		<mrow>\{\{a\},\{b\},\{c\}\}</mrow>
+	      </md>
+	      </li>
+	    <li> <m>\{\{a,b\}, \{b,c\}\}</m> (there are many correct answers)</li>
+	    <li> <m>\{\{a\},\{b\}\}</m> (there are many correct answers)</li>
+	  </ol>
+</p>
+</aside>
+
+<proposition xml:id="preimagespartitionprop"><title>Partitions from
+    functions</title>
+<p>  Let <m>f\colon S \to T</m> be a function. The collection
+  <me>\mathcal{U} = \{f^{-1}(t)\colon t\in f(S)\}</me>
+  is a partition of <m>S</m>.</p>
+</proposition>
+
+<exercise xml:id="partitionfromfunexer"><statement><p>
+      Let <m>f\colon S\to T</m> be a function. (Do <em>not</em> assume
+	      that <m>f</m> is invertible!)
+	  <ol>
+	    <li>Show that <m>\bigcup_{t\in T}f^{-1}(t) = S</m>.
+	    </li>
+	    <li>Suppose that <m>t,t'\in T</m> with <m>t\neq t'</m>. Show
+	      that <m>f^{-1}(t)\cap f^{-1}(t')=\emptyset</m>. 
+	      </li>
+	    <li>The previous two parts show that <m>\mathcal{U}=\{f^{-1}(t)\colon
+		t\in T\}</m> is a collection of subsets of <m>S</m>
+	      whose union is all of <m>S</m> and any two of which have
+	      empty intersection. Does this guarantee
+		that <m>\mathcal{U}</m> is a partition of <m>S</m>?
+	    </li>
+</ol>
+    </p>
+  </statement>
+    </exercise>
+
+
+<p>
+   A set is called <term>finite</term><idx><h>set</h><h>finite set</h></idx>
+   if it contains a
+finite number of elements. A set that is not finite is called 
+  <term>infinite</term><idx><h>set</h><h>infinite set</h></idx>. The number of elements in a finite set <m>S</m> is called the
+  <term>size</term>
+  of <m>S</m>, denoted <m>|S|</m>  <notation><usage><m>|S|</m>
+      </usage>
+   <description>size of a finite set <m>S</m>
+   </description>
+   </notation>. Formally, we say <m>|S|=n</m>, where <m>n</m> is a
+positive integer, if there exists a one-to-one correspondence
+<m>\{1,2,\ldots,n\} \to S</m>.
+</p>
+
+<proposition><title>Counting elements in a set using partitions</title>
+  <statement><p>Let <m>\mathcal{U}</m> be a partition of a finite set
+      <m>S</m>. We have
+      <me>|S| = \sum_{U\in \mathcal{U}} |U|.</me>
+    </p>
+  </statement>
+</proposition>
+
+
+  <corollary xml:id="countusingpreimages"><title>Counting elements in a set using preimages</title>
+<statement><p>Let <m>f\colon S\to T</m> be a function, where <m>S,t</m> are
+  finite sets. We have 
+<men xml:id="domainsizepartition">
+  |S|=\sum_{t\in T} |f^{-1}(t)|.</men>
+  </p>
+  </statement>
+<proof><p>Because every <m>s</m> in
+<m>S</m> is a preimage of its image <m>f(s)</m>, we have <m>s\in f^{-1}(\{f(s)\})</m>. If
+<m>t\neq f(s)</m>, we have <m>s\not\in f^{-1}(t)</m>. It
+follows that every <m>s</m> in <m>S</m> is an element of exactly one of
+the preimage sets
+<m>\{f^{-1}(t)\colon t\in T\}</m>. </p>
+</proof>
+  </corollary>
+
+<exercises>
+
+  <exercise xml:id="partitionfromfunegexer"><statement><p>
+	Let <m>S</m> be the 5-element set <m>S=\{a,b,c,d,e\}</m>. Given
+	a partition <m>\mathcal{U}</m> of <m>S</m>,
+	let <m>\text{SIZE_LIST}(\mathcal{U})</m> be the list of sizes of the sets that are
+	elements of <m>\mathcal{U}</m>, listed in descending order. For example, the
+	partition <m>\mathcal{U}=\{\{a,b\},\{c,d\},\{e\}\}</m> has <m>\text{SIZE_LIST}(\mathcal{U})=(2,2,1)</m>.
+	<ol>
+	  <li>Find all possible size lists for
+	    partitions of <m>S</m>. (Hint: there are 7 in all.)
+	  </li>
+	  <li>For each of the size lists in part a, give an example of a
+	    function <m>f\colon S\to S</m> for which the corresponding
+	    partition given by <xref ref="preimagespartitionprop"/> has that size list.
+	  </li>
+	</ol>
+    </p></statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="partitionfromfunegexer"/></title>
+  <p>
+    Here are the 7 size lists and example functions, using the <q>output
+      row of the input/output table</q>
+     notation
+    from previous sections.
+    <me>\begin{array}{l|c}
+      \text{SIZE_LIST} \amp \text{sample } f\\ \hline
+      (5) \amp [a,a,a,a,a] \\
+      (4,1) \amp [a,a,a,a,b]\\
+      (3,2) \amp [a,a,a,b,b]\\
+      (3,1,1) \amp [a,a,a,b,c]\\
+      (2,2,1) \amp [a,a,b,b,c]\\
+      (2,1,1,1) \amp [a,a,b,c,d]\\
+      (1,1,1,1,1) \amp [a,b,c,d,e]\\      
+    \end{array}</me>
+</p>
+</aside>
+  
+
+  <exercise xml:id="setsizecompareexer"><statement><p>
+Let <m>f\colon S\to T</m> be a function, where <m>S,T</m> are finite
+      sets. Use <xref ref="domainsizepartition"/>
+      to show the following.
+<ol> <li>Suppose that <m>f</m> is injective. Show that <m>|S|\leq |T|</m>.</li>
+  <li>Suppose that <m>f</m> is surjective. Show that <m>|S|\geq |T|</m>.</li>
+</ol>
+    </p></statement>
+  </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="setsizecompareexer"/></title>
+  <p>
+     <ol>
+      <li>If <m>f</m> is injective, we have <m>|f^{-1}(t)|</m> is zero or one for all <m>t\in
+  T</m>. Using <xref ref="domainsizepartition"/>, we have
+	<me>|S| = \sum_{t\in T} |f^{-1}(t)| \leq \sum_{t\in T} 1 = |T|.</me></li>
+  <li>If <m>f</m> is surjective, we have <m>|f^{-1}(t)|\geq 1</m> for all <m>t\in
+  T</m>. Using <xref ref="domainsizepartition"/>, we have
+    <me>|S| = \sum_{t\in T} |f^{-1}(t)| \geq \sum_{t\in T} 1 = |T|.</me>
+    </li>
+</ol>    
+</p>
+</aside>
+  
+  <exercise xml:id="intoisontofinite"><statement><p>
+	Let <m>f\colon S\to T</m> be a function, where <m>S,T</m> are finite sets.
+<ol>   <li>Show that if <m>f</m> is injective and <m>|S|=|T|</m>, then <m>f</m> is
+    surjective.</li>
+<li>Show that if <m>f</m> is surjective and <m>|S|=|T|</m>, then <m>f</m> is
+  injective.          </li>
+</ol>
+    </p></statement>
+   </exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="intoisontofinite"/></title>
+  <p>
+    <ol>
+      <li>If <m>f</m> is injective, we have <m>|f^{-1}(t)|</m> is zero or one for all <m>t\in
+  T</m>. Using <xref ref="domainsizepartition"/>, we have
+	<me>|S| = \sum_{t\in T} |f^{-1}(t)| \leq \sum_{t\in T} 1 = |T|.</me>
+	The only way that the sum <m>\sum_{t\in T} |f^{-1}(t)|</m> can be equal to 
+	<m>\sum_{t\in T} 1 </m> is for every preimage set <m>f^{-1}(t)</m> to have exactly
+	one element, never zero elements. This means that
+	if <m>|S|=|T|</m>, then <m>f</m> must be surjective.
+      </li>
+  <li>If <m>f</m> is surjective, we have <m>|U_t|\geq 1</m> for all <m>t\in
+  T</m>. Using <xref ref="domainsizepartition"/>, we have
+    <me>|S| = \sum_{t\in T} |f^{-1}(t)| \geq \sum_{t\in T} 1 = |T|.</me>
+	The only way that the sum <m>\sum_{t\in T} |f^{-1}(t)|</m> can be equal to 
+	<m>\sum_{t\in T} 1 </m> is for every preimage set <m>f^{-1}(t)</m> to have exactly
+	one element, never more than one element. This means that
+	if <m>|S|=|T|</m>, then <m>f</m> must be injective.
+    </li>
+</ol>
+</p>
+</aside>
+
+</exercises>
+
+</section>
+
