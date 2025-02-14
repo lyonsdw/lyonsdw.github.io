@@ -72,6 +72,7 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -94,70 +95,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.1';
+eBookConfig.runestone_version = '7.5.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.87cabc2515250052.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97f3ae4f7a71ba18.css">
-<style>
-#vectnotationexer-1-9 { counter-set: vectnotationexer-1-9 0; }
-#vectnotationexer-1-9 > li::marker { content: "("counter(vectnotationexer-1-9,lower-alpha)")"; }
-#vectnotationexer-1-9 > li { counter-increment: vectnotationexer-1-9; }
-#vectnotationexer-2-1-1 { counter-set: vectnotationexer-2-1-1 0; }
-#vectnotationexer-2-1-1 > li::marker { content: "("counter(vectnotationexer-2-1-1,lower-alpha)")"; }
-#vectnotationexer-2-1-1 > li { counter-increment: vectnotationexer-2-1-1; }
-#vectnormexer-1-15 { counter-set: vectnormexer-1-15 0; }
-#vectnormexer-1-15 > li::marker { content: "("counter(vectnormexer-1-15,lower-alpha)")"; }
-#vectnormexer-1-15 > li { counter-increment: vectnormexer-1-15; }
-#linmapdefsubsect-2-6 { counter-set: linmapdefsubsect-2-6 0; }
-#linmapdefsubsect-2-6 > li::marker { content: "("counter(linmapdefsubsect-2-6,lower-roman)")"; }
-#linmapdefsubsect-2-6 > li { counter-increment: linmapdefsubsect-2-6; }
-#matrices_section-6-1-1-1 { counter-set: matrices_section-6-1-1-1 0; }
-#matrices_section-6-1-1-1 > li::marker { content: "("counter(matrices_section-6-1-1-1,lower-alpha)")"; }
-#matrices_section-6-1-1-1 > li { counter-increment: matrices_section-6-1-1-1; }
-#matrices_section-6-1-2-1-1 { counter-set: matrices_section-6-1-2-1-1 0; }
-#matrices_section-6-1-2-1-1 > li::marker { content: "("counter(matrices_section-6-1-2-1-1,lower-alpha)")"; }
-#matrices_section-6-1-2-1-1 > li { counter-increment: matrices_section-6-1-2-1-1; }
-#matrices_section-6-2-1-5 { counter-set: matrices_section-6-2-1-5 0; }
-#matrices_section-6-2-1-5 > li::marker { content: "("counter(matrices_section-6-2-1-5,lower-alpha)")"; }
-#matrices_section-6-2-1-5 > li { counter-increment: matrices_section-6-2-1-5; }
-#matrices_section-6-2-2-1-1 { counter-set: matrices_section-6-2-2-1-1 0; }
-#matrices_section-6-2-2-1-1 > li::marker { content: "("counter(matrices_section-6-2-2-1-1,lower-alpha)")"; }
-#matrices_section-6-2-2-1-1 > li { counter-increment: matrices_section-6-2-2-1-1; }
-#matrices_section-6-3-1-3 { counter-set: matrices_section-6-3-1-3 0; }
-#matrices_section-6-3-1-3 > li::marker { content: "("counter(matrices_section-6-3-1-3,lower-alpha)")"; }
-#matrices_section-6-3-1-3 > li { counter-increment: matrices_section-6-3-1-3; }
-#matrices_section-6-3-2-1-1 { counter-set: matrices_section-6-3-2-1-1 0; }
-#matrices_section-6-3-2-1-1 > li::marker { content: "("counter(matrices_section-6-3-2-1-1,lower-alpha)")"; }
-#matrices_section-6-3-2-1-1 > li { counter-increment: matrices_section-6-3-2-1-1; }
-#matmultexer-1-13 { counter-set: matmultexer-1-13 0; }
-#matmultexer-1-13 > li::marker { content: "("counter(matmultexer-1-13,lower-alpha)")"; }
-#matmultexer-1-13 > li { counter-increment: matmultexer-1-13; }
-#matrices_section-6-5-1-6 { counter-set: matrices_section-6-5-1-6 0; }
-#matrices_section-6-5-1-6 > li::marker { content: "("counter(matrices_section-6-5-1-6,lower-alpha)")"; }
-#matrices_section-6-5-1-6 > li { counter-increment: matrices_section-6-5-1-6; }
-#matrices_section-6-5-1-7-1-1 { counter-set: matrices_section-6-5-1-7-1-1 0; }
-#matrices_section-6-5-1-7-1-1 > li::marker { content: "("counter(matrices_section-6-5-1-7-1-1,lower-alpha)")"; }
-#matrices_section-6-5-1-7-1-1 > li { counter-increment: matrices_section-6-5-1-7-1-1; }
-#linmatalg-7-1-4-1 { counter-set: linmatalg-7-1-4-1 0; }
-#linmatalg-7-1-4-1 > li::marker { content: ""counter(linmatalg-7-1-4-1,decimal)"."; }
-#linmatalg-7-1-4-1 > li { counter-increment: linmatalg-7-1-4-1; }
-#linmatalg-7-1-4-2 { counter-set: linmatalg-7-1-4-2 0; }
-#linmatalg-7-1-4-2 > li::marker { content: ""counter(linmatalg-7-1-4-2,decimal)"."; }
-#linmatalg-7-1-4-2 > li { counter-increment: linmatalg-7-1-4-2; }
-</style>
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
 </head>
 <body class="pretext article ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="linmatalg.html"><span class="title">Linear and Matrix Algebra for Multivariable Calculus</span></a></h1>
 <p class="byline">David W. Lyons</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="linmatalg-7-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -269,7 +221,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Matrix notation</span>
 </h3>
 <div class="para logical" id="matrices_section-2-2">
-<div class="para">A <dfn class="terminology">real matrix</dfn> is a rectangular array of real numbers, called the <dfn class="terminology">entries</dfn> or <dfn class="terminology">elements</dfn> in the matrix.  Matrix entries are indexed by a pair of integers <span class="process-math">\(i,j\)</span> that indicate the row and column, respectively, of the entry. Rows are counted from top to bottom and columns are counted from left to right. A matrix with <span class="process-math">\(m\)</span> rows and <span class="process-math">\(n\)</span> columns is called an <dfn class="terminology"><span class="process-math">\(m\times n\)</span> matrix</dfn> (pronounced "<span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix"). We write <span class="process-math">\([a_{ij}]\)</span> to denote a matrix with entries <span class="process-math">\(a_{ij}\)</span> (here, we adopt the common practice of omitting the comma between the subscripted indices <span class="process-math">\(i,j\)</span>).</div>
+<div class="para">A <dfn class="terminology">real matrix</dfn> is a rectangular array of real numbers, called the <dfn class="terminology">entries</dfn> or <dfn class="terminology">elements</dfn> in the matrix.  Matrix entries are indexed by a pair of integers <span class="process-math">\(i,j\)</span> that indicate the row and column, respectively, of the entry. Rows are counted from top to bottom and columns are counted from left to right. A matrix with <span class="process-math">\(m\)</span> rows and <span class="process-math">\(n\)</span> columns is called an <dfn class="terminology"><span class="process-math">\(m\times n\)</span> matrix</dfn> (pronounced “<span class="process-math">\(m\)</span> by <span class="process-math">\(n\)</span> matrix”). We write <span class="process-math">\([a_{ij}]\)</span> to denote a matrix with entries <span class="process-math">\(a_{ij}\)</span> (here, we adopt the common practice of omitting the comma between the subscripted indices <span class="process-math">\(i,j\)</span>).</div>
 <div class="displaymath process-math" id="aijdisplayed">
 \begin{equation}
 [a_{ij}] =
@@ -285,7 +237,7 @@ a_{m1} \amp a_{m2} \amp \cdots \amp a_{mj} \amp \cdots\amp a_{mn}
 </div>
 </div>
 <div class="para logical" id="matrices_section-2-3">
-<div class="para">A matrix with only 1 row is called a <dfn class="terminology">row matrix</dfn> and a matrix with only 1 column is a <dfn class="terminology">column matrix</dfn>. Entries of row and column matrices (the plural of "matrix" is "matrices") are usually given with just one index.</div>
+<div class="para">A matrix with only 1 row is called a <dfn class="terminology">row matrix</dfn> and a matrix with only 1 column is a <dfn class="terminology">column matrix</dfn>. Entries of row and column matrices (the plural of “matrix” is “matrices”) are usually given with just one index.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \mbox{a row matrix } \left[
@@ -403,7 +355,7 @@ L \amp\longleftrightarrow \amp [L]
 <article class="exercise exercise-like" id="matrices_section-6-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para logical" id="matrices_section-6-1-1">
 <div class="para">Perform the matrix multiplications below.</div>
-<ol class="lower-alpha" id="matrices_section-6-1-1-1">
+<ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-1-1-1">
 <li id="matrices_section-6-1-1-1-1"><div class="para" id="p-derived-matrices_section-6-1-1-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{cc}
@@ -431,7 +383,7 @@ L \amp\longleftrightarrow \amp [L]
 </div></div></li>
 </ol>
 </div>
-<details id="matrices_section-6-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-1-2-1"><ol class="lower-alpha" id="matrices_section-6-1-2-1-1">
+<details id="matrices_section-6-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-1-2-1"><ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-1-2-1-1">
 <li id="matrices_section-6-1-2-1-1-1"><div class="para" id="p-derived-matrices_section-6-1-2-1-1-1"><span class="process-math">\(\displaystyle \left[\begin{array}{cc}
 -2 \amp
 4\\
@@ -448,7 +400,7 @@ L \amp\longleftrightarrow \amp [L]
 <div class="para logical" id="matrices_section-6-2-1">
 <div class="para">Let <span class="process-math">\(L\colon \R^3\to\R^2\)</span> be a linear map with <span class="process-math">\(L\mathbf{e}_1=(1,2)\text{,}\)</span> <span class="process-math">\(L\mathbf{e}_2=(-1,1)\text{,}\)</span> and <span class="process-math">\(L\mathbf{e}_3=(0,1)\text{.}\)</span>
 </div>
-<ol class="lower-alpha" id="matrices_section-6-2-1-5">
+<ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-2-1-5">
 <li id="matrices_section-6-2-1-5-1"><div class="para" id="p-derived-matrices_section-6-2-1-5-1">Write the matrix for L.</div></li>
 <li id="matrices_section-6-2-1-5-2"><div class="para" id="p-derived-matrices_section-6-2-1-5-2">Evaluate <span class="process-math">\(L(2,1,3)\text{.}\)</span>
 </div></li>
@@ -456,7 +408,7 @@ L \amp\longleftrightarrow \amp [L]
 </div></li>
 </ol>
 </div>
-<details id="matrices_section-6-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-2-2-1"><ol class="lower-alpha" id="matrices_section-6-2-2-1-1">
+<details id="matrices_section-6-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-2-2-1"><ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-2-2-1-1">
 <li id="matrices_section-6-2-2-1-1-1"><div class="para" id="p-derived-matrices_section-6-2-2-1-1-1"><span class="process-math">\(\displaystyle \left[\begin{array}{ccc}
 1 \amp  -1 \amp
 0\\
@@ -477,14 +429,14 @@ L \amp\longleftrightarrow \amp [L]
 \end{array}\right]
 \end{equation*}
 </div>
-<ol class="lower-alpha" id="matrices_section-6-3-1-3">
+<ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-3-1-3">
 <li id="matrices_section-6-3-1-3-1"><div class="para" id="p-derived-matrices_section-6-3-1-3-1">Evaluate <span class="process-math">\(L(1,2)\text{.}\)</span>
 </div></li>
 <li id="matrices_section-6-3-1-3-2"><div class="para" id="p-derived-matrices_section-6-3-1-3-2">Evaluate <span class="process-math">\(L(-2,1)\text{.}\)</span>
 </div></li>
 </ol>
 </div>
-<details id="matrices_section-6-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-3-2-1"><ol class="lower-alpha" id="matrices_section-6-3-2-1-1">
+<details id="matrices_section-6-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-3-2-1"><ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-3-2-1-1">
 <li id="matrices_section-6-3-2-1-1-1"><div class="para" id="p-derived-matrices_section-6-3-2-1-1-1"><span class="process-math">\(\displaystyle (5,1,2)\)</span></div></li>
 <li id="matrices_section-6-3-2-1-1-2"><div class="para" id="p-derived-matrices_section-6-3-2-1-1-2"><span class="process-math">\(\displaystyle (0,-7,1)\)</span></div></li>
 </ol></div></div></details></article><article class="exercise exercise-like" id="matmultexer"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
@@ -503,7 +455,7 @@ L \amp\longleftrightarrow \amp [L]
 \end{align*}
 </div>
 <div class="para">Justify each step in the derivation below.</div>
-<ol class="lower-alpha" id="matmultexer-1-13">
+<ol class="lower-alpha lower-alpha-level-1" id="matmultexer-1-13">
 <li id="matmultexer-1-13-1"><div class="para" id="p-derived-matmultexer-1-13-1">For <span class="process-math">\(\mathbf{x}\)</span> in <span class="process-math">\(\R^n\text{,}\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
 L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
@@ -539,7 +491,7 @@ L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 <div class="para logical" id="matrices_section-6-5-1">
 <div class="para">Let <span class="process-math">\(L\colon \R^2\to \R\)</span> and <span class="process-math">\(K\colon \R\to\R^3\)</span> be linear maps such that <span class="process-math">\(L{\mathbf i}=1\text{,}\)</span> <span class="process-math">\(L{\mathbf j}=-2\)</span> and <span class="process-math">\(K(1)=(2,1,3)\text{.}\)</span>
 </div>
-<ol class="lower-alpha" id="matrices_section-6-5-1-6">
+<ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-5-1-6">
 <li id="matrices_section-6-5-1-6-1"><div class="para" id="p-derived-matrices_section-6-5-1-6-1">Write the matrices for <span class="process-math">\(L\)</span> and <span class="process-math">\(K\text{.}\)</span>
 </div></li>
 <li id="matrices_section-6-5-1-6-2"><div class="para" id="p-derived-matrices_section-6-5-1-6-2">Find the matrix for <span class="process-math">\(KL\text{.}\)</span>
@@ -547,7 +499,7 @@ L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 <li id="matrices_section-6-5-1-6-3"><div class="para" id="p-derived-matrices_section-6-5-1-6-3">Find <span class="process-math">\(KL(2,-1)\text{.}\)</span>
 </div></li>
 </ol>
-<div class="para"><details id="matrices_section-6-5-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-5-1-7-1"><ol class="lower-alpha" id="matrices_section-6-5-1-7-1-1">
+<div class="para"><details id="matrices_section-6-5-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="matrices_section-6-5-1-7-1"><ol class="lower-alpha lower-alpha-level-1" id="matrices_section-6-5-1-7-1-1">
 <li id="matrices_section-6-5-1-7-1-1-1"><div class="para" id="p-derived-matrices_section-6-5-1-7-1-1-1">
 <span class="process-math">\(L=
 \left[\begin{array}{cc}
@@ -570,7 +522,7 @@ L\mathbf{x} = x_1\mathbf{c}_1 + x_2\mathbf{c}_2 + \cdots + x_n\mathbf{c}_n
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
