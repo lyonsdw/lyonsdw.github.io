@@ -1,0 +1,47 @@
+.aside-like {
+    position: relative !important;
+    margin-left: 0 !important;
+    width: unset !important;
+    max-width: 100% !important;
+    max-height: unset !important;
+    overflow: unset !important;
+    border-left: solid 3px var(--aside-like-border-color) !important;
+    padding: 0.5em 1em !important;
+  }
+  
+  .aside-like::after {
+    display: none !important;
+  }
+  
+  .aside-like:hover, .aside-like:focus {
+    padding: 0.5em 1em !important;
+    border: none !important;
+    border-left: solid 3px var(--aside-like-border-color) !important;
+  }
+  
+  .aside-like.front:hover, .aside-like.front:focus {
+    padding: 0.5em 1em !important;
+    border: none !important;
+    border-left: solid 3px var(--aside-like-border-color) !important;
+  }
+  
+  .aside-like:hover:after, .aside-like:focus:after {
+    display: none !important;
+  }
+  
+  @media screen and (max-width: 1099px) {
+    .aside-like {
+      position: relative;
+      float: unset !important;
+      z-index: 0;
+      overflow-x: inherit !important;
+      margin-left: 0 !important;
+      margin-top: 14.4px !important;
+      max-width: 100% !important;
+      max-height: unset !important;
+      margin-right: unset !important;
+    }
+    li > .aside-like:last-child {
+      position: relative !important;
+    }
+  }

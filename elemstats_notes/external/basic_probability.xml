@@ -12,8 +12,8 @@ note on p.227 at the end of Exercise Set B.]
     is a sequence of tickets obtained by random
 draws, either with or without replacement. For example, here are the 12
 possible outcomes for 2 draws, without replacement, from the box
-  <m>\{A,K,Q,J\}</m>. (This is a box model for "two cards are dealt from a 4-card
-  deck containing an ace, a king, a queen, and a jack".)
+  <m>\{A,K,Q,J\}</m>. (This is a box model for <q>two cards are dealt from a 4-card
+    deck containing an ace, a king, a queen, and a jack</q>.)
   <me> \text{set of all outcomes} = \{AK,AQ,AJ,KA,KQ,KJ,QA,QK,QJ,JA,JK,JQ\}</me>
   In this notation, <m>AK</m> means the ace is drawn first, and the king
   second, while <m>KA</m> means the king is first and the ace is second.
@@ -21,19 +21,24 @@ possible outcomes for 2 draws, without replacement, from the box
 
 <p>
   An <term>event</term>
-  is a set of outcomes. For example, the events "get a queen" and
-  "get a king on the first draw" are 
+  is a set of outcomes. For example, the events <q>get a queen</q>
+   and
+  <q>get a king on the first draw</q>
+   are 
 <md>
   <mrow>\text{"get a queen"} \amp = \{QA,QK,QJ,AQ,KQ,JQ\}</mrow>
   <mrow>\text{"get a king on draw 1"} \amp = \{KA,KQ,KJ\}.</mrow>
 </md>
-Another example is the event "get the hand ace-king". In a "hand", it does
+Another example is the event <q>get the hand ace-king</q>. In
+a <q>hand</q>, it does
 not matter what order the cards are dealt in, so we have
 <me>  \text{"get the hand ace-king"} = \{AK,KA\}.</me>
 To say that two events <m>E</m>
 and <m>F</m>
-"both happen" can be rephrased <m>\text{"}E \AND F\text{"}</m>. To say that "at least one of the events <m>E,F</m>
-happens" can be
+<q>both happen</q>
+ can be rephrased <m>\text{"}E \AND F\text{"}</m>. To say that <q>at least one of the events <m>E,F</m>
+  happens</q>
+ can be
 rephrased <m>\text{"}E \OR F\text{"}</m>. For example, for the events
 <md>
   <mrow>  E = \text{"get an ace"} = \{AK,AQ,AJ,KA,QA,JA\}</mrow>
@@ -51,8 +56,11 @@ event <m>\text{"}E \AND F\text{"}</m> is the same thing as the intersection of t
 and the event <m>\text{"}E \OR F\text{"}</m> is the same thing as the union of the sets <m>E,F</m>.]
 </p>
 
-<p>We will use the correct terms "outcome" and "event" instead of the vague
-term "thing" used in the text in Ch 13.
+<p>We will use the correct terms <q>outcome</q>
+  and <q>event</q>
+   instead of the vague
+  term <q>thing</q>
+   used in the text in Ch 13.
 </p>
 
 <p>We will write <m>P(E)</m>
@@ -69,18 +77,20 @@ probability for getting the hand ace-king is
 <me>
   P(\text{get the hand ace-king}) = 2/12 \approx 16.7\%
 </me>
-because there are 2 equally likely outcomes in the event "get the hand
-ace-king", and there are 12 equally likely outcomes in all for the 2
+because there are 2 equally likely outcomes in the event <q>get the hand
+  ace-king</q>, and there are 12 equally likely outcomes in all for the 2
 draws. The probability of getting a queen is
 <me>
   P(\text{get a queen}) = 6/12 = 50\%
 </me>
-because there are 6 equally likely outcomes in the event "get a queen". The
+because there are 6 equally likely outcomes in the event <q>get a
+  queen</q>. The
 probability of getting king on the first draw is
 <me>
   P(\text{get a king on draw 1}) = 3/12 = 25\%
 </me>
-because there are 3 equally likely outcomes in the event "get a king on draw 1".
+because there are 3 equally likely outcomes in the event <q>get a king
+  on draw 1</q>.
 </p>
 
 <p>The textbook does not give a definition of the term conditional
@@ -93,7 +103,8 @@ probability; instead, they explain by example in Ch 13 Sec. 2
 <men xml:id="condprobdefbasic">
    P(E|F) = \frac{P(E \AND F)}{P(F)}
 </men>
-where the event "<m>E \AND F</m>" is the set of all outcomes that belong to both
+where the event <q><m>E \AND F</m></q>
+ is the set of all outcomes that belong to both
 events <m>E</m> and <m>F</m>. For example, in 2 draws with replacement from the box
 <m>\{A,K,Q,J\}</m>, we have
 <me>
@@ -109,18 +120,19 @@ the 6 outcomes that have a <m>Q</m>.
 </p>
 
 <p>The definitions of independent and dependent events (box on p.230)
-  should be replaced by the following: "Two events <m>E,F</m>
+  should be replaced by the following: <q>Two events <m>E,F</m>
   are <term>independent</term>
   if
   <m>P(F|E) = P(F)</m>. Otherwise, the events <m>E,F</m>
-  are <term>dependent</term>." Or in words,
-  "Two events <m>E,F</m>
+  are <term>dependent</term>.</q>
+   Or in words,
+  <q>Two events <m>E,F</m>
   are independent if the probability of <m>F</m>
   given that <m>E</m>
   has
   happened is equal to the probability of <m>F</m>. Otherwise, the
   events <m>E,F</m>
-  are dependent." 
+    are dependent.</q>
 </p>
 </subsection>
   
