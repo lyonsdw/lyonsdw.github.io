@@ -147,13 +147,12 @@
   </statement>
 </exercise>
 
-<p><aside component="instructor"><title>Instructor's solution for <xref ref="subgpgenbysetexer"/></title>
+<aside component="instructor"><title>Instructor's solution for <xref ref="subgpgenbysetexer"/></title>
   <p>By construction, <m>\langle S\rangle</m> passes the 2-step subgroup
     test. If <m>S</m> were empty, then <m>\langle S\rangle</m> would be empty,
     so could not be a subgroup of <m>G</m>.
   </p>
 </aside>
-</p>
 
 <exercise xml:id="generators-reading-exer"><statement><p>
       <ol><li>Find <m>\langle F_H,F_V\rangle\subseteq D_4</m>.</li>
@@ -231,7 +230,32 @@ Prove <xref ref="subgrouptests"/>.
 
     <aside component="instructor"><title>Instructor's solution for <xref ref="subgrouptestsexer"/>
 	(proof of <xref ref="subgrouptests"/>)</title>
-      <p>It is clear that (i) implies (ii) and (ii) implies (iii). Now
+      <p>Suppose that (i) holds. Because <m>H</m> is a group, it must
+	have an identity element, say <m>e_H</m>, with the property
+	that <m>e_H a=ae_H = a</m> for all <m>a\in
+	H</m>. Let <m>x=e_H^{-1}</m>, that is, the element that is
+	inverse to <m>e_H</m> in <m>G</m>, and consider the
+	product <m>y=xe_He_H</m>. On the one hand, we have
+	<me>y=(xe_H)e_H=e_Ge_H=e_H</me>
+	and on the other hand we have
+	<me>y=x(e_He_H)=xe_H=e_G.</me>
+	Thus we have <m>e_H=e_G</m>. Now let <m>a</m> be an element
+	of <m>H</m>, let <m>u</m> denote the element that is inverse
+	to <m>a</m> in <m>G</m>, and let <m>v</m> be the element that is
+	inverse to <m>a</m> in <m>H</m>. We have
+	<me>vau=(va)u=e_Hu=e_Gu=u</me>
+	and we have
+	<me>vau=v(au)=ve_G=v</me>
+	so that we have <m>u=v</m>. The consequence of this discussion
+	up to this point is that, if <m>H</m> is a subgroup of <m>G</m>,
+	then the identity element and the inverse elements in <m>H</m>
+	are the same as in <m>G</m>. Thus we can unambiguously
+	write <m>a^{-1}</m> to denote the inverse of an element <m>a</m>
+	in <m>H</m>, whether we are viewing that element <m>a</m> as an
+	element of <m>H</m> or of <m>G</m>.</p>
+      <p>
+	It follows easily that (i) implies
+	(ii). It is clear that (ii) implies (iii). Now
 	suppose (iii) holds. Let <m>a</m> be an element
 	of <m>H</m>. Then <m>aa^{-1}=e</m> is in <m>H</m>, and
 	therefore <m>ea^{-1}=a^{-1}</m> is in <m>H</m>, and furthermore,
