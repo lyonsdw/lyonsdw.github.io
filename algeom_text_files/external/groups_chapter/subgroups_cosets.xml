@@ -224,19 +224,33 @@
     <exercise xml:id="subgrouptestsexer">
       <statement>
 	<p>
-Prove <xref ref="subgrouptests"/>.
+	  Prove <xref ref="subgrouptests"/>. Be aware of the following
+	  subtlety: a subgroup <m>H</m> of a group <m>G</m> must have an
+	  identity element, but <xref ref="subgroupdefn"/>
+	  does <em>not</em> require that it be the <em>same</em> as the
+	  identity element for <m>G</m>. Similarly, an element
+	  of <m>H</m> must have in inverse, but
+	  <xref ref="subgroupdefn"/> does not require that it be the
+	  same as the inverse in <m>G</m>. Suggestion: start by proving
+	  a lemma that says if <m>H</m> is a subgroup of <m>G</m>, then the
+	  identity element for <m>H</m> must be the same as the identity
+	  element for <m>G</m>, and that inverses of elements
+	  in <m>H</m> are the same as inverses in <m>G</m>. Then use the
+	  lemma in your proof that statements (i), (ii), and (iii) are
+	  equivalent. 
 	</p>
       </statement>
     </exercise>
 
     <aside component="instructor"><title>Instructor's solution for <xref ref="subgrouptestsexer"/>
 	(proof of <xref ref="subgrouptests"/>)</title>
-      <p>Suppose that (i) holds. Because <m>H</m> is a group, it must
-	have an identity element, say <m>e_H</m>, with the property
-	that <m>e_H a=ae_H = a</m> for all <m>a\in
-	H</m>. Let <m>x=e_H^{-1}</m>, that is, the element that is
-	inverse to <m>e_H</m> in <m>G</m>, and consider the
-	product <m>y=xe_He_H</m>. On the one hand, we have
+      <p>Suppose that <m>H</m> is a subgroup of a
+	group <m>G</m>. Because <m>H</m> is a group, it must have an
+	identity element, say <m>e_H</m>, with the property that <m>e_H
+	a=ae_H = a</m> for all <m>a\in H</m>. Let <m>x=e_H^{-1}</m>,
+	that is, the element that is inverse to <m>e_H</m> in <m>G</m>,
+	and consider the product <m>y=xe_He_H</m>. On the one hand, we
+	have
 	<me>y=(xe_H)e_H=e_Ge_H=e_H</me>
 	and on the other hand we have
 	<me>y=x(e_He_H)=xe_H=e_G.</me>
@@ -247,22 +261,25 @@ Prove <xref ref="subgrouptests"/>.
 	<me>vau=(va)u=e_Hu=e_Gu=u</me>
 	and we have
 	<me>vau=v(au)=ve_G=v</me>
-	so that we have <m>u=v</m>. The consequence of this discussion
-	up to this point is that, if <m>H</m> is a subgroup of <m>G</m>,
-	then the identity element and the inverse elements in <m>H</m>
-	are the same as in <m>G</m>. Thus we can unambiguously
+	so that we have <m>u=v</m>. This proves the lemma suggested in
+	the directions for the exercise. A consequence of the lemma
+	is that, if <m>H</m> is a subgroup of <m>G</m>,
+	then we can unambiguously
 	write <m>a^{-1}</m> to denote the inverse of an element <m>a</m>
 	in <m>H</m>, whether we are viewing that element <m>a</m> as an
 	element of <m>H</m> or of <m>G</m>.</p>
       <p>
 	It follows easily that (i) implies
 	(ii). It is clear that (ii) implies (iii). Now
-	suppose (iii) holds. Let <m>a</m> be an element
-	of <m>H</m>. Then <m>aa^{-1}=e</m> is in <m>H</m>, and
-	therefore <m>ea^{-1}=a^{-1}</m> is in <m>H</m>, and furthermore,
-	<m>H</m> is closed under inversion. Now	let <m>a,b</m> be
-	in <m>H</m>. Then <m>b^{-1}</m> is in <m>H</m>,
-	so <m>a(b^{-1})^{-1}=ab</m> is in <m>H</m>. This shows that (i) holds.
+	suppose (iii) holds. Let <m>c</m> be an element
+	of <m>H</m>, and let <m>a=b=c</m>. Then <m>ab^{-1}=e</m> is in <m>H</m>, and
+	therefore <m>eb^{-1}=c^{-1}</m> is in <m>H</m>. Further,
+	let <m>d</m> be another element of <m>H</m>, and let <m>a=d,
+	  b=c^{-1}</m>. Then <m>ab^{-1}=dc</m> is in <m>H</m>. We
+	conclude that the associative binary group operation on <m>G</m> restricts
+	to <m>H</m>, and that <m>H</m> meets the requirements of a group
+	(existence of an identity, and existence of inverses) with
+	respect to this binary operation. This shows that (i) holds.
       </p>
     </aside>
 
