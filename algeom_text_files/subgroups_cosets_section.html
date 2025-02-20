@@ -173,6 +173,19 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\MOD}{\mathbin{\text{MOD}}}
 \newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
                         #3 \amp #4 \end{array} \right]}
+
+
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}
+{
+  \renewcommand{\divisionnameptx}{#1}
+  \renewcommand{\titleptx}{#2}
+  \renewcommand{\subtitleptx}{#3}
+  \renewcommand{\shortitleptx}{#4}
+  \renewcommand{\authorsptx}{#5}
+  \renewcommand{\epigraphptx}{#6}
+  \newpage\section[{#4}]{#2}
+  \label{#7}
+  }{}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -361,11 +374,10 @@ G\)</span> to indicate that <span class="process-math">\(H\)</span> is a subgrou
 gH := \{gh \colon h\in H\}
 \end{equation*}
 </div>
-<div class="para">is called a <dfn class="terminology">(left) coset</dfn> of <span class="process-math">\(H\text{.}\)</span> The set of all cosets of <span class="process-math">\(H\)</span> is denoted <span class="process-math">\(G/H\text{.}\)</span>
-</div>
+<div class="para">is called a <dfn class="terminology">(left) coset</dfn> of <span class="process-math">\(H\text{.}\)</span> The set of all cosets of <span class="process-math">\(H\)</span> is denoted <span class="process-math">\(G/H\text{,}\)</span> that is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-G/H := \{gH\colon g\in G\}
+G/H := \{gH\colon g\in G\}.
 \end{equation*}
 </div>
 </div></article></div>

@@ -173,6 +173,19 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\MOD}{\mathbin{\text{MOD}}}
 \newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
                         #3 \amp #4 \end{array} \right]}
+
+
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}
+{
+  \renewcommand{\divisionnameptx}{#1}
+  \renewcommand{\titleptx}{#2}
+  \renewcommand{\subtitleptx}{#3}
+  \renewcommand{\shortitleptx}{#4}
+  \renewcommand{\authorsptx}{#5}
+  \renewcommand{\epigraphptx}{#6}
+  \newpage\section[{#4}]{#2}
+  \label{#7}
+  }{}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -396,7 +409,8 @@ U(\Quat)\approx SU(2).
 <article class="definition definition-like" id="elliptic_geometry_section-3-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span>
 </h4>
-<dfn class="terminology">quaternion model</dfn><span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span></article><details id="unitquatactionons2exer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="elliptic_geometry_section-3-7-1">The <dfn class="terminology">quaternion model</dfn>  of elliptic geometry is <span class="process-math">\((S^2_\Quat,U(\Quat))\text{.}\)</span>
+</div></article><details id="unitquatactionons2exer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="unitquatactionons2exer-1-1">
 <div class="para">Show that the map <span class="process-math">\(U(\Quat)\to
@@ -437,7 +451,8 @@ R_r\)</span> is <span class="process-math">\(\{\pm 1\}\text{.}\)</span>
 <div class="solutions"><details id="s2rotisgpexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="s2rotisgpexer-2-1">Use <a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>.</div></div></details></div></article></details><article class="definition definition-like" id="rotgp-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
 </h4>
-<dfn class="terminology">spherical model</dfn><span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span></article><div class="para" id="rotgp-8">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</div>
+<div class="para" id="rotgp-7-1">The <dfn class="terminology">spherical model</dfn>  of elliptic geometry is <span class="process-math">\((S^2,\Rot(S^2))\text{.}\)</span>
+</div></article><div class="para" id="rotgp-8">We conclude with a useful fact about constructing arbitrary rotations by composing rotations from a specific set elementary types, namely, rotations about the <span class="process-math">\(z\)</span>-axis by arbitrary angles, and rotations about the <span class="process-math">\(x\)</span>-axis by <span class="process-math">\(\pi/2\)</span> radians. We start with a Lemma that shows how to do this for <span class="process-math">\(y\)</span>-axis rotations.</div>
 <article class="lemma theorem-like" id="rotgp-9"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Rotations about the <span class="process-math">\(y\)</span>-axis.</span>
 </h4>
@@ -519,7 +534,8 @@ R_{X,\pi/2}\circ s^{-1}\)</span> is the Möbius transformation <span class="proc
 <article class="definition definition-like" id="ellipticsubgpssubsec-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.12</span><span class="period">.</span>
 </h4>
-<dfn class="terminology">Möbius subgeometry model</dfn><span class="process-math">\((\extC,\S)\text{.}\)</span></article><div class="para logical" id="ellipticsubgpssubsec-7">
+<div class="para" id="ellipticsubgpssubsec-6-1">The <dfn class="terminology">Möbius subgeometry model</dfn>  of elliptic geometry is <span class="process-math">\((\extC,\S)\text{.}\)</span>
+</div></article><div class="para logical" id="ellipticsubgpssubsec-7">
 <div class="para">We can say more about the specific form of elements in <span class="process-math">\(\S\)</span> in terms of the group homomorphism <span class="process-math">\({\mathcal
 T}\colon GL(2,\C)\to \M\)</span> that sends the matrix <span class="process-math">\(\left[\begin{array}{cc} a\amp b\\ c\amp
 d\end{array}\right]\)</span> to the Möbius transformation <span class="process-math">\(z\to \frac{az+b}{cz+d}\)</span> (see <a href="mobiusgeomsect.html#gl2tomobgp" class="xref" data-knowl="./knowl/xref/gl2tomobgp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.2">(3.2.2)</a>). Observe that the transformations</div>

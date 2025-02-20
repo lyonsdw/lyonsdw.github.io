@@ -10,7 +10,7 @@
       \usetikzlibrary{arrows,matrix}
               \usetikzlibrary{positioning}        % for Dave R's worksheet
               \usepackage{circuitikz}             % for Virgil P's  worksheet
-              </latex-image-preamble>
+    </latex-image-preamble>
     <brandlogo url="http://quantum.lvc.edu/lyons"
 	       source="images/durerperspective.jpg" />
 
@@ -63,6 +63,18 @@
 \newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
                         #3 \amp #4 \end{array} \right]}
 <!--\newcommand{\Mob}{Möbius}-->
+<!-- experiment works 2/20/2025, starts sections on new pages  -->
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}
+{%
+  \renewcommand{\divisionnameptx}{#1}%
+  \renewcommand{\titleptx}{#2}%
+  \renewcommand{\subtitleptx}{#3}%
+  \renewcommand{\shortitleptx}{#4}%
+  \renewcommand{\authorsptx}{#5}%
+  \renewcommand{\epigraphptx}{#6}%
+  \newpage\section[{#4}]{#2}% experiment 2/20/2025
+  \label{#7}%
+  }{}%
     </macros>
   </docinfo>
 
