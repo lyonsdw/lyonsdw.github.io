@@ -230,31 +230,29 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
   <exercises>
 
     <exercise xml:id="signofpermexer"><title>The sign of a permutation</title>
-      <statement><p>
-	  In this exercise we establish a function <m>\sgn\colon S_n\to
-	    \{-1,+1\}</m>, called the <term>sign
-	    function</term><idx><h>permutation</h>
-	    <h>sign function</h>
-	  </idx>. We start by defining an action of the symmetric group <m>S_n</m> on a set of two polynomials.
-	  Let <m>\Delta</m> be the polynomial
-	  <me>\Delta = \prod_{1\leq i\lt j\leq n} (x_i-x_j)</me>
-	  in the variables <m>x_1,x_2,\ldots,x_n</m>.
-	  Let <m>X</m> be the set <m>X=\{\Delta,-\Delta\}</m>. Given a
-	  permutation <m>\alpha</m> in <m>S_n</m>, let <m>\alpha \Delta</m>
-	  be the polynomial
-	  <me>\alpha \Delta = \prod_{1\leq i\lt j\leq n}
-	    (x_{\alpha(i)}-x_{\alpha(j)})</me>
-	  and let <m>\alpha(-\Delta) = -\alpha \Delta</m>. In the
-	  exercises below, you will show that <m>\alpha\Delta=\pm
-	    \Delta</m> for all <m>\alpha</m> in <m>S_n</m>. This allows
-	  us to define the sign of a permutation <m>\alpha</m> to be
+      <statement><p> Let <m>n</m> be a positive integer, and let
+	  <m>\Delta_n</m> be the polynomial
+	  <me>\Delta_n = \prod_{1\leq i\lt j\leq n} (x_i-x_j)</me> in the
+	  variables <m>x_1,x_2,\ldots,x_n</m>. For example, we
+	  have <m>\Delta_3 = (x_1-x_2)(x_1-x_3)(x_2-x_3)</m>.
+	  Given a
+	  permutation <m>\alpha</m> in <m>S_n</m>, let <m>\alpha
+	  \Delta_n</m> be the polynomial
+	  <me>\alpha \Delta_n = \prod_{1\leq i\lt j\leq n}
+	    (x_{\alpha(i)}-x_{\alpha(j)}).</me>
+	   In the exercises below,
+	    you will show that <m>\alpha\Delta_n=\pm \Delta_n</m> for
+	    all <m>\alpha</m> in <m>S_n</m>. This allows us to define
+	  the <term>sign</term><idx><h>permutation</h>
+	    <h>sign of a permutation</h>
+	  </idx> of a permutation <m>\alpha</m>, denoted <m>\sgn(\alpha)</m>, to be
 	  <m>+1</m> or <m>-1</m>
 	  according
-	  to whether <m>\alpha\Delta=\Delta</m>
-	  or <m>\alpha\Delta=-\Delta</m>, respectively.
+	  to whether <m>\alpha\Delta_n=\Delta_n</m>
+	  or <m>\alpha\Delta_n=-\Delta_n</m>, respectively.
 	  <me>\sgn(\alpha) = \begin{cases}
-	    +1 \amp \text{if }  \alpha\Delta = \Delta\\
-	    -1 \amp \text{if } \alpha\Delta = -\Delta
+	    +1 \amp \text{if }  \alpha\Delta_n = \Delta_n\\
+	    -1 \amp \text{if } \alpha\Delta_n = -\Delta_n
 	    \end{cases}
 	  </me>
 	  We say that a permutation <m>\alpha</m>
@@ -263,40 +261,60 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	  is <term>odd</term><idx><h>permutation</h><h>odd permutation</h>
 	  </idx> if <m>\sgn(\alpha)=-1</m>.
 	  <ol>
-	    <li>Write out <m>\Delta</m> for <m>n=4</m> variables
-	      without using
-	      the product notation symbol <m>\prod</m>.
+	    <li>Write expressions for <m>\Delta_4</m>,  
+	    <m>(134)\Delta_4</m>,  and <m>(1324)\Delta_4</m> (write all
+	      the factors). All three expressions consist of the same
+	    factors, possibly times <m>\pm 1</m>. Identify which factors
+	      of <m>(134)\Delta_4</m> and <m>(1324)\Delta_4</m> have the
+	    opposite sign of the corresponding factor in <m>\Delta_4.</m>
+	      Use your expressions to
+	      find <m>\sgn(134)</m> and <m>\sgn(1324)</m>.
 	    </li>
-	    <li>Continuing with <m>n=4</m>, write out <m>(134)\Delta</m>
-	    and <m>(1324)\Delta</m>. In both cases, match the factors
-	      with <m>\Delta</m> and identify which factors experience
-	      a sign change. Use this calculation to
-	      find <m>\sgn(134)</m> and <m>\sgn(1324)</m> directly and
-	    explicitly from the definition.
+	    <li>Generalize the examples in part (a) above to show
+	      that <m>\alpha \Delta_n = \pm \Delta_n</m> for
+	      all <m>\alpha</m> in <m>S_n</m>. This justifies the
+	      definition of the sign of a permutation.
 	    </li>
-	    <li>Show that <m>\alpha \Delta = \pm \Delta</m> for
-	      all <m>\alpha</m> in <m>S_n</m>.
+	    <li>Show that <m>\tau\Delta_n=-\Delta_n</m> for any
+	      transposition <m>\tau</m> in <m>S_n</m>. Suggestion:
+	      Let <m>\tau=(ab)</m> be a transposition with <m>a\lt
+		b</m>. Count the number of factors <m>(x_i-x_j)</m>
+	      of <m>\Delta_n</m> such that <m>x_{\tau(i)}-x_{\tau(j)} =
+	      -(x_i-x_j)</m>. 
 	    </li>
-	    <li>Show that <m>\tau\Delta=-\Delta</m> for any
-	      transposition <m>\tau</m> in <m>S_n</m>.
+	    <li>Define <m>\alpha(-\Delta_n)</m>
+	      by <m>\alpha(-\Delta_n)=-\alpha\Delta_n</m>
+	      for <m>\alpha</m> in <m>S_n</m>. Show that
+	      <men xml:id="permsactondelta">(\alpha \beta)\Delta_n =
+		\alpha(\beta\Delta_n)</men>
+	      for all <m>\alpha,\beta</m> in <m>S_n</m>.
+	      <hint><p>Both are equal to
+		  <m>\prod_{i\lt j}
+	      \left(x_{\alpha\beta(i)}-x_{\alpha\beta(j)}\right)</m>
+		</p>
+	      </hint>
 	    </li>
-	    <li>Show that <m>\phi\colon S_n \to \Perm(X)</m> given
- by <m>\phi(\alpha)(\pm \Delta) = \alpha (\pm \Delta)</m>
-	      is a group action.
-	    </li>
-	    <li>Use the group action property <m>(\alpha\beta)\Delta =
-		\alpha(\beta\Delta)</m>
-		to explain why <m>\sgn(\alpha\beta)=\sgn(\alpha)\sgn(\beta)</m> for
-	      all <m>\alpha,\beta</m> in <m>S_n</m>. In other words, the
-	      sign function is a homomorphism of groups <m>S_n\to C_2</m>.
-	    </li>
-	    <li>Conclude that, if <m>\alpha</m> is expressible as a
+	    <li>Let <m>\alpha</m> be an element
+	      of <m>S_n</m>. By
+	      <xref ref="permtransprodexer"/>, <m>\alpha</m> may be
+	      written as a product of
+	      transpositions <m>\alpha=\tau_1\tau_2\cdots\tau_k</m>. Use
+	      <xref ref="permsactondelta"/> to show
+	      that <m>\sgn(\alpha)=(-1)^k</m>. Consequence: if <m>\alpha</m> is expressible as a
 	      product of an even number of transpositions,
-	      then <m>\alpha</m> is an even permutation, and that any
+	      then <m>\alpha</m> is an even permutation. Further, any
 	      product of transpositions that equals <m>\alpha</m> must
 	      have an even number of transpositions. (A similar statement
 	      holds replacing the word <q>even</q>
 	      by the word <q>odd</q>.)
+	    </li>
+	    <li> Show that <m>\phi(\alpha)(\pm \Delta_n) = \pm
+	      \alpha\Delta_n</m> defines a group action <m>\phi\colon S_n
+	      \to \Perm(X)</m> of the group <m>S_n</m> on the
+	      set <m>X=\{\Delta_n,-\Delta_n\}</m>.
+	    </li>
+	    <li>Show that the sign function <m>\sgn\colon S_n\to C_2</m>
+	      is a homomorphism of groups.
 	    </li>
 	    <li>The subset of even permutations of <m>S_n</m> is denoted
 	      <m>A_n</m>. 
@@ -318,27 +336,26 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     <aside component="instructor"><title>Instructor's solution for <xref ref="signofpermexer"/></title>
       <p>
 	<ol>
-	  <li><me>\Delta_4 = (x_1-x_2)(x_1-x_3)(x_1-x_4)(x_2-x_3)(x_2-x_4)(x_3-x_4)</me>
-	  </li>
-	  <li>Red factors have orientation reversal, so each contributes
-	  a minus sign. Do this in class with colored markers or chalk,
-	    match factors with <m>\Delta_4</m> with arrows, and circle
-	    the orientation reversed factors with red to show
-	    how <m>(134)\Delta_4=\Delta_4</m>
-	    and <m>(1324)\Delta_4=-\Delta_4</m>, so we
-	    have <m>\sgn(134)=1</m> and <m>\sgn(1324)=-1</m>.
+	  <li>
 	    <md>
+	      <mrow>\Delta_4 \amp = (x_1-x_2)(x_1-x_3)(x_1-x_4)(x_2-x_3)(x_2-x_4)(x_3-x_4)</mrow>
 	      <mrow>(134)\Delta_4 \amp =
 		\textcolor{red}{(x_3-x_2)}(x_3-x_4)\textcolor{red}{(x_3-x_1)}(x_2-x_4)\textcolor{red}{(x_2-x_1)}\textcolor{red}{(x_4-x_1)}</mrow>
 	      <mrow>(1324)\Delta_4 \amp = (x_3-x_4)\textcolor{red}{(x_3-x_2)}\textcolor{red}{(x_3-x_1)}\textcolor{red}{(x_4-x_2)}\textcolor{red}{(x_4-x_1)}\textcolor{red}{(x_2-x_1)}</mrow>	      
 	    </md>
+	  Red factors have orientation reversal, so each contributes
+	    a minus sign. We have <m>(134)\Delta_4=\Delta_4</m>
+	    and <m>(1324)\Delta_4=-\Delta_4</m>, so we
+	    have <m>\sgn(134)=1</m> and <m>\sgn(1324)=-1</m>.
 	  </li>
 	  <li>A permutation <m>\alpha</m> transforms the
 	    factor <m>(x_i-x_j)</m> of <m>\Delta</m>
 	    to <m>(x_{\alpha(i)}-x_{\alpha(j)})</m>. The latter is
 	    either <m>+1</m> or <m>-1</m> times a factor
 	    in <m>\Delta</m>, depending on whether <m>\alpha(i)\lt
-	      \alpha(j)</m> or <m>\alpha(j)\lt \alpha(i)</m>, respectively.
+	      \alpha(j)</m> or <m>\alpha(j)\lt \alpha(i)</m>,
+	    respectively. A thorough proof might justify a one-to-one
+	    correspondence between the factors of <m>\Delta_n</m> and <m>\alpha\Delta_n</m>.
 	  </li>
 	  <li>Let <m>\tau = (ab)</m> with <m>a\lt b</m>. The
 	  transposition <m>\tau</m> effects an order reversal, and hence
@@ -357,13 +374,17 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	    to <m>\pm\prod_{i\lt j}
 	    (x_{\alpha\beta(i)}-x_{\alpha\beta(j)})</m>. 
 	  </li>
+	  <li>This follows immediately from the previous parts of this
+	    exercise. A thorough proof might use induction.</li>
+	  <li>This follows immediately from the previous parts of this
+	    exercise. A thorough proof will check
+	    that <m>\phi(\alpha)</m> is indeed a permutation of <m>X</m>.
+	  </li>
 	  <li>From <m>(\alpha\beta)\Delta=\alpha(\beta\Delta)</m>,
 	  we have
 	    <me>\sgn(\alpha\beta)\Delta=\sgn(\alpha)\sgn(\beta)\Delta</me>
 	    and therefore <m>\sgn(\alpha\beta)=\sgn(\alpha)\sgn{\beta}</m>.
 	  </li>
-	  <li>This follows immediately from the previous parts of this
-	    exercise.</li>
 	  <li>For (i), just write all the group elements that appear in
 	  the necessary checks as products of transpositions and count
 	  them. For (ii), we have that <m>A_n=\ker(\sgn)</m>.

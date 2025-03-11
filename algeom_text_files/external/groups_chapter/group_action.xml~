@@ -92,6 +92,11 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	  stabilizer of a group element <m>x</m>.</li>
       </ol>
     </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
   </statement>
   <answer><ol>
       <li><m>\Orb((1,1))=\{(1,1),(1,-1),(-1,1),(-1,-1)\}</m>, <m>\Orb((1,0))=\{(1,0),(-1,0),(0,1),(0,-1)\}</m>,
@@ -106,8 +111,8 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
       <li><m>\Orb(1)=\Z</m>, <m>\Orb(\pi)=\{\pi+n\colon n\in \Z\}</m>, <m>\Stab(1)=\{0\}=\Stab(\pi)</m>
       </li>
 -->
-      <li><m>\Orb(x)=\{gxg^{-1}\colon g\in G\}</m>, <m>\Stab(x)=C(x)</m>
-	(the centralizer of <m>x</m>)
+      <li><m>\Orb(x)=\{gxg^{-1}\colon g\in G\}</m>, the stabilizer
+	of <m>x</m> is the centralizer subgroup <m>C(x)</m> (see <xref ref="center"/>)
       </li>
     </ol>
   </answer>
@@ -121,7 +126,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="showstabisgpexer"/></title>
   <p>We use the 2-step subgroup test. First, note that <m>\Stab(x)</m> is not empty, because <m>\Stab(x)</m>
     contains <m>e_G</m> (the action <m>G\to \Perm(X)</m> is a group
@@ -134,7 +139,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
       =g^{-1}(gx)=g^{-1}x</me>, so <m>g^{-1}\in \Stab(x)</m>. This
     completes the proof.
   </p>
-</commentary>
+</aside>
 
 <definition xml:id="orbitspacedefn">  <notation><usage><m>X/G</m>
     </usage><description>set of orbits of the action
@@ -161,7 +166,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="orbitspaceexer"/></title>
   <p>
 <ol>
@@ -192,7 +197,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
   classes. How many orbits and how they look depends on the group.</li>
 </ol>
   </p>
-</commentary>
+</aside>
 
 <proposition xml:id="orbitspartition">
   <statement>
@@ -269,12 +274,17 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	      find <m>\sgn(134)</m> and <m>\sgn(1324)</m> directly and
 	    explicitly from the definition.
 	    </li>
+	    <li>Show that <m>\tau\Delta=-\Delta</m> for any
+	      transposition <m>\tau</m> in <m>S_n</m>. Suggestion:
+	      Let <m>\tau=(ab)</m> be a transposition with <m>a\lt
+		b</m>. Count the number of factors <m>(x_i-x_j)</m>
+	      of <m>\Delta</m> such that <m>x_{\tau(i)}-x_{\tau(j)} =
+	      -(x_i-x_j)</m>. 
+	    </li>
 	    <li>Show that <m>\alpha \Delta = \pm \Delta</m> for
 	      all <m>\alpha</m> in <m>S_n</m>.
 	    </li>
-	    <li>Show that <m>\tau\Delta=-\Delta</m> for any
-	      transposition <m>\tau</m> in <m>S_n</m>.
-	    </li>
+
 	    <li>Show that <m>\phi\colon S_n \to \Perm(X)</m> given
  by <m>\phi(\alpha)(\pm \Delta) = \alpha (\pm \Delta)</m>
 	      is a group action.
@@ -310,7 +320,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
       </statement>
     </exercise>
     
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="signofpermexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="signofpermexer"/></title>
       <p>
 	<ol>
 	  <li><me>\Delta_4 = (x_1-x_2)(x_1-x_3)(x_1-x_4)(x_2-x_3)(x_2-x_4)(x_3-x_4)</me>
@@ -365,7 +375,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 	  </li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
     
     
     <exercise xml:id="gpselfactionexer"><title>Actions of a group on
@@ -402,7 +412,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     
 
     <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
     <xref ref="gpselfactionexer"/></title>
   <p>
@@ -431,7 +441,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
   </ol>
 
   </p>
-</commentary>
+</aside>
 
 
     <exercise xml:id="cosetsrevisitedexer"><title>Cosets, revisited</title><statement><p>Let <m>H</m>
@@ -458,7 +468,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="cosetsrevisitedexer"/></title>
   <p>An orbit of the group action <m>H\to \Perm(G)</m> is a set of the
     form
@@ -471,7 +481,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     so we conclude that <m>i\colon \Orb(g)\to gH</m> is bijective. Thus
     we have established that <m>\Orb(g)=gH</m>, as desired.
   </p>
-</commentary>
+</aside>
     
     <exercise xml:id="gpactonvectspaceexer"><title>The natural action of a matrix group on a vector
 	space</title><statement><p>Let <m>G</m> be a group whose
@@ -491,7 +501,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     </exercise>
 
     <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="gpactonvectspaceexer"/></title>
   <p>Let <m>\phi</m> denote the map <m>\phi\colon G\to \Perm(X)</m>
     given by <me>g\to [v\to g\cdot v],</me> so that <m>(\phi(g))(v)=gv</m>
@@ -502,7 +512,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     fact that matrix multiplication is associative.] We conclude
     that <m>\phi(gh)=\phi(g)\circ \phi(h)</m>, as required.
   </p>
-</commentary>
+</aside>
 
 <exercise xml:id="orbitspartitionexer">
   <statement><p>Prove <xref ref="orbitspartition"/>.
@@ -518,7 +528,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="orbitspartitionexer"/>
   (proof of <xref ref="orbitspartition"/>)</title>
   <p>First, we check that <m>\sim_G</m> is an equivalence
@@ -529,7 +539,7 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
     classes <m>X/\!\!\sim_G</m> forms a partition of <m>X</m>. Since <m>X/G=X/\!\!\sim_G</m> by
     definition, it follows that orbits form a partition.
   </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="orbitstabthmpfexer">
@@ -541,7 +551,7 @@ Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />).
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="orbitstabthmpfexer"/></title>
   <p>Let <m>x_0\in X</m> and consider the function <m>f_{x_0}\colon G\to X</m> given
     by <m>f_{x_0}(g)= gx_0</m>. Applying
@@ -568,7 +578,7 @@ Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />).
     </ul>
     
   </p>
-</commentary>
+</aside>
 
 <exercise xml:id="projspaceandgroupexer"><title>The projective linear
     group action on projective space</title>
@@ -639,7 +649,7 @@ Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />).
 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="projspaceandgroupexer"/></title>
   <p>
     <ol>
@@ -707,7 +717,7 @@ Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />).
 
     </ol>
   </p>
-</commentary>
+</aside>
 
 
 
