@@ -97,14 +97,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.9';
+eBookConfig.runestone_version = '7.5.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.c2d04816128ebb44.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body class="pretext book ignore-math">
@@ -485,8 +485,11 @@ U_{a,b}=\{E(t)\colon a\lt t\lt b\}.
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h4>
 <div class="para" id="intptsdenseins1prop-1-1">The set <span class="process-math">\(\mathcal{I}\)</span> is dense in <span class="process-math">\(S^1\text{.}\)</span>
-</div></article><details id="intptsdenseins1prop-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><span class="process-math">\(a,b\)</span><span class="process-math">\(a\lt b\text{,}\)</span><span class="process-math">\(\epsilon=b-a\text{.}\)</span><span class="process-math">\(\epsilon \geq 2\pi\text{,}\)</span><span class="process-math">\(U_{a,b}=S^1\text{,}\)</span><span class="process-math">\(U_{a,b}\)</span><span class="process-math">\(\mathcal{I}\)</span><span class="process-math">\(U_{a,b}\)</span><span class="process-math">\(\mathcal{I}\text{.}\)</span><span class="process-math">\(\epsilon\lt 2\pi\text{.}\)</span><ol class="decimal" id="intptsdenseins1prop-2-11">
-<li id="intptsdenseins1prop-2-11-1"><div class="para" id="p-derived-intptsdenseins1prop-2-11-1">Choose a finite collection of open intervals <span class="process-math">\(\{U_k\}_{k=1}^N\text{,}\)</span> where <span class="process-math">\(N\)</span> is a positive integer and each <span class="process-math">\(U_k\)</span> is an arc of length <span class="process-math">\(\epsilon\text{,}\)</span> that is,<div class="displaymath process-math">
+</div></article><details id="intptsdenseins1prop-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="intptsdenseins1prop-2-1">
+<div class="para">(This is an outline of the main points of the proof. You will complete the details in the exercises below.) Let <span class="process-math">\(a,b\)</span> be given, with <span class="process-math">\(a\lt b\text{,}\)</span> and let <span class="process-math">\(\epsilon=b-a\text{.}\)</span> If <span class="process-math">\(\epsilon \geq 2\pi\text{,}\)</span> then <span class="process-math">\(U_{a,b}=S^1\text{,}\)</span> so <span class="process-math">\(U_{a,b}\)</span> contains an element of <span class="process-math">\(\mathcal{I}\)</span> because <span class="process-math">\(U_{a,b}\)</span> contains all of <span class="process-math">\(\mathcal{I}\text{.}\)</span> For the remainder of the proof, we assume <span class="process-math">\(\epsilon\lt 2\pi\text{.}\)</span>
+</div>
+<ol class="decimal" id="intptsdenseins1prop-2-1-11">
+<li id="intptsdenseins1prop-2-1-11-1"><div class="para" id="p-derived-intptsdenseins1prop-2-1-11-1">Choose a finite collection of open intervals <span class="process-math">\(\{U_k\}_{k=1}^N\text{,}\)</span> where <span class="process-math">\(N\)</span> is a positive integer and each <span class="process-math">\(U_k\)</span> is an arc of length <span class="process-math">\(\epsilon\text{,}\)</span> that is,<div class="displaymath process-math">
 \begin{equation*}
 U_k =U_{a_k,a_k+\epsilon}
 \end{equation*}
@@ -496,20 +499,21 @@ S^1=\bigcup_{k=1}^N U_k.
 \end{equation*}
 </div>
 </div></li>
-<li id="intptsdenseins1prop-2-11-2"><div class="para" id="p-derived-intptsdenseins1prop-2-11-2">At least one of the intervals <span class="process-math">\(U_k\)</span> in the previous part must contain at least two elements of <span class="process-math">\(\mathcal{I}\text{,}\)</span> say <span class="process-math">\(E(m)\)</span> and <span class="process-math">\(E(n)\text{,}\)</span> with <span class="process-math">\(E(m)\neq E(m)\text{.}\)</span>
+<li id="intptsdenseins1prop-2-1-11-2"><div class="para" id="p-derived-intptsdenseins1prop-2-1-11-2">At least one of the intervals <span class="process-math">\(U_k\)</span> in the previous part must contain at least two elements of <span class="process-math">\(\mathcal{I}\text{,}\)</span> say <span class="process-math">\(E(m)\)</span> and <span class="process-math">\(E(n)\text{,}\)</span> with <span class="process-math">\(E(m)\neq E(m)\text{.}\)</span>
 </div></li>
-<li id="intptsdenseins1prop-2-11-3"><div class="para" id="p-derived-intptsdenseins1prop-2-11-3">For the two points <span class="process-math">\(E(m),E(n)\)</span> in the previous part, choose real numbers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(0\leq s\lt t\lt
+<li id="intptsdenseins1prop-2-1-11-3"><div class="para" id="p-derived-intptsdenseins1prop-2-1-11-3">For the two points <span class="process-math">\(E(m),E(n)\)</span> in the previous part, choose real numbers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(0\leq s\lt t\lt
 2\pi\text{,}\)</span> such that <span class="process-math">\(\{E(m),E(n)\}=\{E(s),E(t)\}\text{.}\)</span> Without loss of generality, we may assume <span class="process-math">\(E(m)=E(s)\)</span> and <span class="process-math">\(E(n)=E(t)\text{.}\)</span>
 </div></li>
-<li id="intptsdenseins1prop-2-11-4"><div class="para" id="p-derived-intptsdenseins1prop-2-11-4">Let <span class="process-math">\(t_0=t-s\text{,}\)</span> so that <span class="process-math">\(0\lt t_0\lt \epsilon\text{.}\)</span> We have<div class="displaymath process-math">
+<li id="intptsdenseins1prop-2-1-11-4"><div class="para" id="p-derived-intptsdenseins1prop-2-1-11-4">Let <span class="process-math">\(t_0=t-s\text{,}\)</span> so that <span class="process-math">\(0\lt t_0\lt \epsilon\text{.}\)</span> We have<div class="displaymath process-math">
 \begin{equation*}
 E(n)E(-m)=E(n-m)=E(t-s)=E(t_0).
 \end{equation*}
 </div>
 </div></li>
-<li id="intptsdenseins1prop-2-11-5"><div class="para" id="p-derived-intptsdenseins1prop-2-11-5">Choose an integer <span class="process-math">\(k\)</span> so that <span class="process-math">\(a\lt kt_0 \lt
+<li id="intptsdenseins1prop-2-1-11-5"><div class="para" id="p-derived-intptsdenseins1prop-2-1-11-5">Choose an integer <span class="process-math">\(k\)</span> so that <span class="process-math">\(a\lt kt_0 \lt
 b\text{.}\)</span> Now we have <span class="process-math">\(E(kt_0)=E(k(n-m))\in U_{a,b}\cap \mathcal{I}\text{,}\)</span> as desired.</div></li>
-</ol></article></details>
+</ol>
+</div></article></details>
 </div>
 <section class="exercises" id="additional_exercises_section-5-7"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
