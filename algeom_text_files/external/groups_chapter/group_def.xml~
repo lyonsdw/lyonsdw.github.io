@@ -144,13 +144,13 @@
       </statement>
 	</exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="idunique"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="idunique"/></title>
 	  <p>Let <m>e,e'</m> satisfy the requirement for an identity
 	    element. Then <m>e'\ast e=e</m> (because <m>e'</m> is an
 	    identity) and also <m>e'\ast e=e'</m> (because <m>e</m> is
 	    an identity). So <m>e=e'</m>.
 	  </p>
-	</commentary>
+	</aside>
 	
 
         <exercise xml:id="invunique">
@@ -163,13 +163,13 @@
       </statement>
     </exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="invunique"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="invunique"/></title>
 	  <p>Let <m>h,h'</m> be inverses for <m>g</m>. Then we
 	    have <m>e=gh=gh'</m>. Multiplying on the left by <m>h</m>,
 	    we have <m>hgh = hgh'</m>. Since <m>hg=e</m>, we
 	    have <m>eh=eh'</m>, so <m>h=h'</m>.
 	  </p>
-	</commentary>
+	</aside>
 
         <exercise xml:id="cancellation">
       <title>The cancellation law</title>
@@ -181,11 +181,11 @@
       </statement>
 	</exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="cancellation"/></title>
 	  <p>Multiply both sides of <m>gx=hx</m> by <m>x^{-1}</m> on the right.
 	  </p>
-	</commentary>
+	</aside>
 
 	<exercise xml:id="socksandshoes">
 	  <title>The <q>socks and shoes</q> property</title>
@@ -196,13 +196,13 @@
       </statement>
 	</exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="socksandshoes"/></title>
 	  <p>We
 	    have <me>(gh)(h^{-1}g^{-1})=g(hh^{-1})g^{-1}=geg^{-1}=gg^{-1}=e,</me>
 	    and similarly for <m>(h^{-1}g^{-1})(gh)=e</m>.
 	  </p>
-	</commentary>
+	</aside>
 	
 	    <exercise xml:id="productgroupexer"><title>Product Groups</title><idx>product group</idx>
 	      <statement><p>Given two groups <m>G,H</m> with
@@ -216,14 +216,14 @@
 	      </statement>
 	    </exercise>
 
-	    <commentary component="instructor"><title>Instructor's solution for
+	    <aside component="instructor"><title>Instructor's solution for
 		<xref ref="productgroupexer"/></title>
 	      <p>The fact that the required properties of a group
 		operation hold for <m>\ast_G,\ast_H</m> separately
 		immediately implies that the required properties hold
 		for <m>\ast_{G\times H}</m>.
 	      </p>
-	    </commentary>
+	    </aside>
 
 	    
 	    <exercise xml:id="cyclicgroups">
@@ -236,8 +236,7 @@
 		  \Z}=(\ldots,g^{-3},g^{-2},g^{-1},g^0,g^1,g^2,g^3,\ldots)</me>
 		  contains all of the elements in <m>G</m>.
 		  <ol>
-		    <li>Suppose that a group <m>G</m> is finite, and
-		      cyclic, with generator <m>g</m>. Show that
+		    <li>Suppose that a group <m>G</m> is finite and cyclic, with generator <m>g</m>. Show that
 		      <me>G=\{g,g^2,g^3,\ldots,g^{|G|}\}.</me>
 		    </li>
 		    <li>The group of integers is cyclic. Find all of
@@ -277,7 +276,7 @@
 	      </hint>
 	      </exercise>
 
-	    <commentary component="instructor"><title>Instructor's solution for
+	    <aside component="instructor"><title>Instructor's solution for
 		<xref ref="cyclicgroups"/></title>
 	      <p>
 		<ol><li>Because <m>G</m> is finite, the
@@ -336,7 +335,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 -->
 		  </ol>
 	      </p>
-	    </commentary>
+	    </aside>
 	    
     <exercise xml:id="cyclicpermutations">
       <title>Cyclic permutations</title><idx><h>cyclic permutations</h>
@@ -412,7 +411,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="cyclicpermutations"/></title>
       <p>
 	<ol>
@@ -428,7 +427,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	   <me>(1234),(1432),(1324),(1423),(1243),(1342) </me></li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
     
     <exercise xml:id="disjointcycleproductexer"><statement><p> Cycles <m>(a_1a_2\cdots a_k)</m> and <m>(b_1b_2\cdots b_\ell)</m> are
 	  called <term>disjoint</term><idx><h>disjoint cyclic permutations</h>
@@ -436,12 +435,12 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  if the sets <m>\{a_1,a_2,\ldots,a_k\}</m>
 	  and <m>\{b_1,b_2,\ldots,b_\ell\}</m> are disjoint, that is,
 	  if <m>a_i\neq b_j</m> for all <m>i,j</m>. Show that every
-	  permutation in <m>S_n</m> is a product of disjoint cycles.
+	  permutation in <m>S_n</m> is either a cycle or a product of disjoint cycles.
 	</p>
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="disjointcycleproductexer"/></title>
       <p>This result is <q>obvious</q>, so the exercise is about how to say
 	it nicely. Here's one approach: Given <m>\pi</m> in <m>S_n</m>,
@@ -457,7 +456,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	hypothesis to <m>S_{n-j}</m> (with suitable relabelings of
 	indices).
       </p>
-    </commentary>
+    </aside>
     
     <exercise xml:id="permtransprodexer"><title>Every permutation is a
     product of transpositions</title>
@@ -473,7 +472,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="permtransprodexer"/></title>
       <p><ol><li>By the previous problem
       <xref ref="disjointcycleproductexer"/>, it is enough to show that
@@ -485,7 +484,7 @@ and <m>L=mn</m> if and only if <m>m,n</m> are relatively prime. Next,
 	  </li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
 
     
     <exercise xml:id="cayleytable">
@@ -550,8 +549,12 @@ R_0\amp  \amp  \amp  \amp  \amp  \amp    \amp   \amp
 	    </li>
 	  </ol>
 	</p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
       </statement>
-
       	  <answer>
 <p><me>	    
 \begin{array}
@@ -567,7 +570,6 @@ e \amp e \amp (23) \amp (13) \amp (12) \amp (123) \amp (132) \\
 \end{array}
 </me></p>
 	  </answer>
-
 	  <answer>
 <p><me>	    
 \begin{array}
@@ -588,7 +590,7 @@ R_0 \amp     F_V   \amp   F_H  \amp   F_D  \amp   F_{D'} \amp    R_{1/4}  \amp  
 
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="cayleytable"/>, part b</title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="cayleytable"/>, part b</title>
       <p>Let <m>G</m> be a group and let <m>g\in G</m>. In row <m>h</m>,
 	the element <m>g</m> appears in
 	column <m>h^{-1}g</m>. If <m>g</m> appears in column <m>a</m>
@@ -597,6 +599,6 @@ R_0 \amp     F_V   \amp   F_H  \amp   F_D  \amp   F_{D'} \amp    R_{1/4}  \amp  
 	similar argument shows that <m>g</m> appears exactly once in
 	each column.
       </p>
-    </commentary>
+    </aside>
   </exercises>
 </section>
