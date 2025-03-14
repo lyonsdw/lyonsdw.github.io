@@ -565,9 +565,19 @@ What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
 <exercise xml:id="orbitstabthmpfexer">
   <statement>
     <p>
-Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />). Your proof
-must address the issue of well-definedness of the map <m>G/\Stab(x) \to
+      Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm"/>).
+      <hint><p>Let <m>x\in X</m>, and define a map <m>f_x\colon G\to X</m> given
+      by <m>f_x(g)= gx</m>. Apply
+	  <xref ref="constructequivrelpart"/> to get a one-to-one
+      correspondence 
+	  <me>G/\!\!\sim_{f_x} \leftrightarrow f_x(G)=\Orb(x).</me> Then use
+	  <xref ref="cosetspartition"/> to show that <m>G/\!\!\sim_{f_x} =
+	    G/\Stab(x)</m>.
+	  Whatever proof method you
+      use, you must address the issue of well-definedness of the map <m>G/\Stab(x) \to
 	\Orb(x)</m> given by <m>g\Stab(x)\to \Orb(x).</m>
+	</p>
+      </hint>
     </p>
   </statement>
 </exercise>
@@ -577,11 +587,24 @@ must address the issue of well-definedness of the map <m>G/\Stab(x) \to
   <title>Instructor's solution for <xref ref="orbitstabthmpfexer"/></title>
   <p>Let <m>x_0\in X</m> and consider the function <m>f_{x_0}\colon G\to X</m> given
     by <m>f_{x_0}(g)= gx_0</m>. Applying
-    <xref ref="constructequivrelpart"/> to <m>f_{x_0}</m>, we
-    have <m>G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)</m>, and <m>f_{x_0}(G)=\Orb(x_0)</m>.
+    <xref ref="constructequivrelpart"/>, we
+    have a one-to-one correspondence
+    <me>G/\!\!\sim_{f_{x_0}} \leftrightarrow f_{x_0}(G)=\Orb(x_0).</me>
+    Further, we have
+    <md>
+      <mrow>g\sim_{f_{x_0}} h\amp \Leftrightarrow gx_0=hx_0</mrow>
+      <mrow>\amp \Leftrightarrow h^{-1}gx_0=x_0</mrow>
+      <mrow>\amp \Leftrightarrow h^{-1}gx_0\in \Stab(x_0)</mrow>
+      <mrow>\amp \Leftrightarrow g\Stab(x_0)=h\Stab(x_0) (\text{ by}
+      <xref ref="cosetspartition"/>).</mrow>      
+    </md>
+    Thus we have <m>G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)</m>.
+    Putting these together, we have a one-to-one correspondence
+    <me>G/\Stab(x_0)=G/\!\!\sim_{f_{x_0}} \leftrightarrow f_{x_0}(G)=\Orb(x_0).</me>
   </p>
-  <p>Alternatively, one can check that the given map
-    is well-defined, one-to-one, and onto. Let <m>\pi</m> denote the map <m>\pi(g\Stab(x))=gx</m>.
+  <p>Alternatively, one can check that the given map is well-defined,
+    one-to-one, and onto, in three separate steps. Let <m>\pi</m> denote
+    the map <m>\pi(g\Stab(x))=gx</m>.
     <ul>
       <li>(<m>\pi</m> is well-defined)
 	Suppose <m>g\Stab(x)=h\Stab(x)</m>. By
