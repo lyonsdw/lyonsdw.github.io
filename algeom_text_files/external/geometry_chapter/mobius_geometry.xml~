@@ -49,7 +49,7 @@
 	</exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiustransinvertcriterionexer"/></title>
   <p>
     <ol>
@@ -81,7 +81,7 @@
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
 
 <p>
   A Möbius transformation <m>f(z)=\frac{az+b}{cz+d}</m> determines a
@@ -107,7 +107,7 @@
   </exercise>-->
 
 <!-- Instructor's solution -->
-<!--<commentary component="instructor">
+<!--<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiustranslimitexer"/></title>
   <p><ol><li>We have <m>a(-d/c)+b = -\frac{ad-bc}{c}\neq 0</m> (by assumption),
     so <m>ax+b\to -\frac{ad-bc}{c}\neq 0</m> and <m>cx+d \to 0</m>
@@ -120,7 +120,7 @@
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
 -->
 
     <exercise xml:id="mobiustranscomposeexer"><statement><p>
@@ -133,7 +133,7 @@ calculation to check that <m>ru-ts\neq 0</m>, use <xref ref="mobiustransinvertcr
   </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiustranscomposeexer"/></title>
   <p>Let <m>f(z)=\frac{az+b}{cz+d}</m>
     and <m>g(z)=\frac{ez+f}{gz+h}</m>. Then we have
@@ -151,7 +151,7 @@ The composition is invertible
   previous exercise 
   that <m>ru-ts\neq 0</m>.
   </p>
-</commentary>
+</aside>
 
 <p>
 
@@ -212,7 +212,7 @@ The composition is invertible
 	</exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiusgpaspgl2exer"/></title>
   <p>Using the same letters as in the solution to
     <xref ref="mobiustranscomposeexer"/>, the computation
@@ -225,7 +225,7 @@ The composition is invertible
       \frac{az+b}{cz+d}\right]</m> is the identity if and only
     if <m>a=d\neq 0</m> and <m>b=c=0</m>.
   </p>
-</commentary>
+</aside>
 	
 
 	<p>
@@ -257,7 +257,7 @@ The composition is invertible
   </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="littlemobiusexer"/></title>
   <p>
     <ol>
@@ -276,7 +276,7 @@ The composition is invertible
       </li>
    </ol>
   </p>
-</commentary>
+</aside>
   
 
   <corollary xml:id="mobtransconformal"><statement><p>Möbius transformations are conformal.</p>
@@ -334,6 +334,11 @@ The composition is invertible
 	    cases <m>z_1=\infty</m>, <m>z_2=\infty</m>
 	    and <m>z_3=\infty</m>.
 	  </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
 	</statement>
 	<answer>
 	  <p>
@@ -347,7 +352,7 @@ The composition is invertible
       </exercise>
 
 	<!--
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="std3ptsetlemmaexer"/></title>
   <p>
   It is clear by inspection the following transformations make
@@ -361,7 +366,7 @@ The composition is invertible
 	    \frac{z-z_2}{z_1-z_2}\right]</mrow>
 	</md>
   </p>
-  </commentary>
+  </aside>
 -->
 
 <p>The next Lemma lays lays the groundwork for proving the uniqueness of
@@ -388,7 +393,7 @@ The composition is invertible
   </hint>
 </exercise>
 
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="threefixptsisidlemmaexer"/></title>
   <p>
 	Solving <m>z=\frac{az+b}{cz+d}</m>, we
@@ -401,7 +406,7 @@ The composition is invertible
 	  point. Finally, if <m>c=0</m>, <m>d=a</m>,
 	and <m>b=0</m>, then <m>Tz=z</m>.
   </p>
-</commentary>
+</aside>
 
 
   <p>
@@ -508,7 +513,7 @@ The cross ratio <m>(z_0,z_1,z_2,z_3)</m> is real if and only
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
     <xref ref="crossratiorealcriterionexer"/></title>
   <p>
@@ -522,7 +527,7 @@ The cross ratio <m>(z_0,z_1,z_2,z_3)</m> is real if and only
     <xref ref="mobinvrealisclineprop"/>, we have <m>C=T^{-1}(\extR)</m>,
     so it must be that <m>Tz_0=(z_0,z_1,z_2,z_3)</m> is real.
   </p>
-  </commentary>
+  </aside>
     
     
     <corollary xml:id="clinesinvariant"><statement><p>
@@ -549,14 +554,14 @@ The cross ratio <m>(z_0,z_1,z_2,z_3)</m> is real if and only
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
     <xref ref="clinesinvariantexer"/></title>
   <p>Transformations <m>T</m> and <m>V^{-1}U</m> agree on three
   points <m>z_1,z_2,z_3</m>, so must be equal by the Fundamental Theorem
   of Möbius Geometry.
   </p>
-  </commentary>
+  </aside>
     
     <corollary xml:id="clinescongruent"><statement><p>
 All clines are congruent in Möbius geometry.
@@ -578,14 +583,14 @@ All clines are congruent in Möbius geometry.
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
     <xref ref="clinesinvariantexer"/></title>
   <p>By <xref ref="mobinvrealisclineprop"/>, we
   have <m>C=U^{-1}(\extR)</m> and <m>D=V^{-1}(\extR)</m>. It follows
   that <m>D=V^{-1}(U(C))=T(C)</m>.
   </p>
-  </commentary>
+  </aside>
     
     
     </subsection>
@@ -906,7 +911,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     
   <exercises>
 
-    <commentary component="instructor">
+    <aside component="instructor">
       <p><alert>Essential exercises:</alert>
 	<xref text="local" ref="mobiusdecompexer"/>,
 	<xref text="local" ref="ftomgexer"/>,
@@ -922,7 +927,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	    <xref text="local" ref="degneratenormalformexer"/>,
   <xref text="local" ref="apolloniuscircexer"/> 
    	  </p>
-</commentary>
+</aside>
     
     <exercise xml:id="mobiusdecompexer"><title>Decomposition of Möbius
     transformations into four basic types</title>
@@ -955,7 +960,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiusdecompexer"/></title>
   <p>
     <ol>
@@ -984,7 +989,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       </li>      
     </ol>
   </p>
-</commentary>
+</aside>
     
 
     <exercise xml:id="ftomgexer">
@@ -1004,7 +1009,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
   </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="ftomgexer"/></title>
   <p>   By <xref ref="std3ptsetlemma"/>, there exists a Möbius
 	transformation <m>U</m> that maps <m>z_1,z_2,z_3</m>
@@ -1019,7 +1024,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	<xref ref="threefixptsisidlemma"/>, we have <m>S\circ
 	  T^{-1}=\Id</m>, so <m>S=T</m>.
   </p>
-</commentary>
+</aside>
     
     
     <exercise xml:id="mobiustargetpracticeexer"><statement><p>Find Möbius transformations that make the
@@ -1034,7 +1039,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobiustargetpracticeexer"/></title>
   <p>
     <ol>
@@ -1071,7 +1076,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       </li>      
     </ol>
   </p>
-</commentary>
+</aside>
     
 
     <exercise xml:id="mobinvrealisclineexer">      <statement>	<p>
@@ -1106,7 +1111,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="mobinvrealisclineexer"/>
   (proof of <xref ref="mobinvrealisclineprop"/>)</title>
   <p>Starting with <m>Tz=(Tz)^\ast</m>, we get
@@ -1124,7 +1129,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     becomes <m>\im(\gamma z+\delta)=0</m>, which is the equation
       for a line.
   </p>
-</commentary>
+</aside>
     
       	         <figure xml:id="symmptsfig">
 		   <caption>Geometry for symmetric points <m>z,z^{\ast C}</m>
@@ -1216,7 +1221,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="symmetricpointexer"/></title>
   <p>
     
@@ -1274,7 +1279,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
 
     <exercisegroup><title>Normal forms and Steiner circles</title>
 
@@ -1329,7 +1334,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     </exercisegroup>
     
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="normalformlemmaexer"/>
   (proof of <xref ref="normalformlemma"/>)</title>
   <p>
@@ -1349,10 +1354,10 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     identity, but that contradicts our assumption that <m>T</m> has a
     single fixed point. Thus <m>Tz=z+\beta</m> for some <m>\beta\neq 0</m>.
   </p>
-</commentary>
+</aside>
 
     <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="normalformegexer"/></title>
   <p>
     <ol>
@@ -1375,10 +1380,10 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       </li>
     </ol>
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="degneratenormalformexer"/></title>
   <p>We have
     <md>
@@ -1396,10 +1401,10 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	=\frac{1}{\beta} = \frac{\beta^\ast}{|\beta|^2}\propto
 	\beta^\ast</m>, as claimed.
   </p>
-</commentary>
+</aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="apolloniuscircexer"/></title>
   <p>By definition, Steiner circles of the second kind are sets of the
     form <m>S^{-1}(\{w\colon |w|=r\})</m> for some <m>w=Sz=\frac{z-p}{z-q}</m>
@@ -1408,7 +1413,7 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
     <me>S^{-1}(\{|w|=r\}) = \left\{P\colon
       \frac{d(P,A)}{d(Q,B)}=k\right\}.</me>
   </p>
-</commentary>
+</aside>
 
 
   </exercises>
