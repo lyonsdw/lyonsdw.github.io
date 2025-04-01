@@ -48,8 +48,9 @@
     the integers <m>\Z</m><notation><usage><m>\Z</m></usage><description>the
       integers</description></notation> given by
     <me>x\sim_n y \Leftrightarrow n|(x-y)</me>
-    (recall that the symbols "<m>a|b</m>" for integers <m>a,b</m>,
-    pronounced "<m>a</m> divides <m>b</m>", means <m>b=ka</m> for some
+    (recall that the symbols <q><m>a|b</m></q>
+     for integers <m>a,b</m>,
+    pronounced <q><m>a</m> divides <m>b</m></q>, means <m>b=ka</m> for some
     integer <m>k</m>). It is easy to show that <m>\sim_n</m> is an
     equivalence relation, and that the equivalence classes are precisely
     the set
@@ -57,8 +58,8 @@
   This set of equivalence classes is fundamental and pervasive in
     mathematics. Using standard notation, we write
     <me>x=y \hspace{-.5em}\pmod{n}</me>
-    (pronounced "<m>x</m> is equivalent to <m>y</m> mod <m>n</m>") to
-    denote "<m>x\sim_n y</m>". In this text, we will follow the common practice
+    (pronounced <q><m>x</m> is equivalent to <m>y</m> mod <m>n</m></q>) to
+    denote <q><m>x\sim_n y</m></q>. In this text, we will follow the common practice
     of using <m>\Z_n</m> to denote <m>\Z/\!\!\sim_n</m>.
 </p>
 
@@ -84,7 +85,7 @@
       </statement>
 	</exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="equivmodnisequivrelnexer"/></title>
 	  <p><ol>
 	      <li>
@@ -135,7 +136,7 @@
 	      </li>
 	    </ol>
 	  </p>
-	</commentary>
+	</aside>
 
   </subsection>
 
@@ -177,7 +178,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	  </statement>
 		</exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="equivclassesdisjointexer"/></title>
 	    <p>It suffices to show that <m>[x]\cap [y]\neq \emptyset</m>
 	      implies that <m>[x]=[y]</m>. Suppose that <m>[x]\cap
@@ -192,7 +193,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	    roles of <m>x,y</m>, shows that <m>[y]\subseteq [x]</m>. We
 	      conclude that <m>[x]=[y]</m>, as desired.
 	    </p>
-	</commentary>
+	</aside>
 
 <p> <fact xml:id="welldefinedness"><title>Construction of
       functions on sets of equivalence classes</title><statement> <p>
@@ -275,7 +276,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	  </exercise>
 	
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="rationalsequivrelnexer"/></title>
 	  <p>
 	    <ol>
@@ -302,7 +303,8 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 		minus all points on the <m>y</m>-axis. Equivalence
 		classes are points that lie on lines through the origin.)
 	      </li>
-	      <li>The "map" <m>\overline{f}</m> is not well-defined. For
+	      <li>The <q>map</q>
+		 <m>\overline{f}</m> is not well-defined. For
 		example, we have <m>[(1,2)]=[(2,4)]</m>,
 		but <m>1^2+2^2=5\neq 20 = 2^2+4^2</m>. 
 	      </li>
@@ -325,11 +327,12 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 		if <m>m/n=m'/n'</m>. Because <m>g</m> is onto, the fact
 		that  <m>X/\!\!\sim</m> is in
 		one-to-one correspondence with <m>\Q</m> follows from
-		the "furthermore" statement in	<xref ref="constructequivrelpart"/>.
+		the <q>furthermore</q>
+		 statement in	<xref ref="constructequivrelpart"/>.
 	      </li>
 	    </ol>
 	  </p>
-	</commentary>
+	</aside>
     
         <exercisegroup xml:id="zmodn">
   <title>
@@ -396,30 +399,30 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 
 	</exercisegroup>
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="zmodnins1"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="zmodnins1"/></title>
 	  <p>If <m>\omega^s=\omega^t</m>,
 	    then <m>\omega^{s-t}=1</m>. This means
 	    that <m>\frac{s-t}{n}</m> is an integer, which is the same
 	    as <m>n|(s-t)</m>.
 	  </p>
-	</commentary>
+	</aside>
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="intmodnadd"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="intmodnadd"/></title>
 	  <p>Suppose that <m>x-x'=kn</m> and <m>y-y'=\ell n</m>. Then
 	    <me>(x+y)-(x'+y')= (x-x')+(y-y')=(k+\ell)n</me>
 	    so it is indeed the case that <m>[x+y]=[x'+y']</m>.
 	  </p>
-	</commentary>
+	</aside>
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="intmodnmult"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="intmodnmult"/></title>
 	  	  <p>Suppose that <m>x-x'=kn</m> and <m>y-y'=\ell n</m>. Then
 	    <me>(xy)-(x'y')= xy-xy'+xy'-x'y'=x(y-y')+(x-x')y'=(x\ell+ky')n</me>
 	    so it is indeed the case that <m>[xy]=[x'y']</m>.
 	  </p>
-	</commentary>
+	</aside>
 
 
-	<commentary component="instructor"><title>Instructor's solution for <xref ref="zmodnaltconstr"/></title>
+	<aside component="instructor"><title>Instructor's solution for <xref ref="zmodnaltconstr"/></title>
 	  <p>We need to show that <m>x+_n y\leftrightarrow [x]+[y]</m>
 	    under the correspondence <m>x\leftrightarrow [x]</m>. This
 	    is the same as showing <m>(x+y)\MOD n = [x+y]</m>. Use the
@@ -429,7 +432,7 @@ x\sim_{\mathcal P} y \Leftrightarrow x,y \text{ lie in the same element of } {\m
 	    of <m>\sim_n</m>). A similar argument
 	    establishes <m>x\cdot_n y\leftrightarrow [x][y]</m>.
 	  </p>
-	</commentary>
+	</aside>
 
 
   </exercises>

@@ -95,7 +95,7 @@ We will write
 	</statement>
       </exercise>
 
-  <commentary component="instructor"><title>Instructor's solution for
+  <aside component="instructor"><title>Instructor's solution for
     <xref ref="quatmatalgpropexer"/></title><p> (This is similar to the
     solution to <xref ref="complexnosasrealmatalg"/>.)  Let <m>T(u,v)</m>
     denote the matrix <m>\twotwo{u}{v}{-v^\ast}{u^\ast}</m>
@@ -113,7 +113,7 @@ We will write
 	  <mrow>\amp = T(ur-vs^\ast,us+vr^\ast)</mrow>
 	</md>
 	</p>
-  </commentary>
+  </aside>
 
   </subsection>
   
@@ -159,7 +159,7 @@ We will write
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="quatmultrulesexer"/></title><p> We
 	have <m>M(1) = \Id</m>,
 	<m>M(i)=\twotwo{i}{0}{0}{-i}</m>, <m>M(j)=\twotwo{0}{1}{-1}{0}</m>,
@@ -182,7 +182,7 @@ Then we work out all the equations
 	  </mrow>
 	</md>
       </p>
-    </commentary>
+    </aside>
     
 <p>
       For
@@ -214,14 +214,14 @@ Multiplication looks like this.
 	    </exercise>
   </subsection>
 
-  <commentary component="instructor"><title>Instructor's solution for
+  <aside component="instructor"><title>Instructor's solution for
       <xref ref="purequatproduct"/></title><p>
       <ol>
 	<li>Just put <m>a=a'=0</m> in
 	  <xref ref="quatmultcartesian"/>.</li>
       </ol>
     </p>
-  </commentary>
+  </aside>
   
   <subsection xml:id="quatconjnormsubsect"><title>Conjugate, modulus, and polar form</title>
     <p>The <term>conjugate</term><idx>conjugate of a
@@ -268,7 +268,7 @@ Multiplication looks like this.
 	</statement>
       </exercise>
 
-      <commentary component="instructor"><title>Instructor's solution for
+      <aside component="instructor"><title>Instructor's solution for
 	  <xref ref="quatpolarformdetailsexer"/></title><p>
 	  <ol>
 	    <li>(just check)</li>
@@ -294,7 +294,7 @@ Multiplication looks like this.
 	    </li>
 	  </ol>
 	</p>
-      </commentary>
+      </aside>
 
       <p>
       Continuing the analogy with complex numbers, we have the following, for all
@@ -318,7 +318,7 @@ Multiplication looks like this.
 	    </hint>
     </exercise>
 
-	<commentary component="instructor"><title>Instructor's solution for
+	<aside component="instructor"><title>Instructor's solution for
 	    <xref ref="quatconjnormmultexer"/></title><p>
 	    All three equations can be verified by computing the left and
 	    right hand sides using rectangular coordinates. A better approach is to
@@ -370,7 +370,7 @@ Multiplication looks like this.
 	    last matrix corresponds to the quaternion <m>|r|^2</m>, so
 		    this establishes <xref ref="quatnormsquare"/>.
 	  </p>
-	</commentary>
+	</aside>
 	
   </subsection>
 
@@ -383,19 +383,21 @@ Multiplication looks like this.
       quaternion. 
     </p>
 
-    <exercise xml:id="rvrastispureexer"><statement><p>Explain how "we conclude" that <m>R_r(v)</m>
+    <exercise xml:id="rvrastispureexer"><statement><p>Explain how <q>we
+	    conclude</q>
+	   that <m>R_r(v)</m>
 	  is pure when <m>r</m> is a unit quaternion and 
 	  <m>v</m> is a pure quaternion. 
 	</p>
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="rvrastispureexer"/></title>
       <p>Just like for complex numbers, where if <m>z^\ast=-z</m>,
       then it follows that <m>z</m> is pure imaginary, the analogous property holds for quaternions.
       </p>
-    </commentary>
+    </aside>
     
     <p>It is easy to see that <m>R_r</m> is a linear map from the real vector
       space of unit quaternions to itself. That means that the following
@@ -413,7 +415,7 @@ Multiplication looks like this.
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="quatrotislinearexer"/></title>
       <p>Using the distributive law, we have
 	<me>R_r(v+w)=r(v+w)r^\ast = rvr^\ast +rwr^\ast =
@@ -421,7 +423,7 @@ Multiplication looks like this.
 	  multiplicatively with all quaternions, we have
 	<me>R_r(\alpha v)= r(\alpha v)r^\ast=\alpha rvr^\ast=\alpha R_r(v).</me>
 	</p>
-    </commentary>
+    </aside>
 
     <p>We conclude with the main result of this section that shows how
     rotations of 3-dimensional real space are encoded in the algebra of quaternions.</p>
@@ -476,7 +478,7 @@ Multiplication looks like this.
 	
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="quatrotpropexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="quatrotpropexer"/></title>
       <p>
 	<ol>
 	  <li>First, check that, for any pure, unit quaternion <m>u</m>,
@@ -522,7 +524,7 @@ perpendicular to <m>u</m>).
 	  </li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
 
     <exercise xml:id="quatrotcompinvexer"><statement><p>Show that the
             following hold for all <m>r,s\in U(\Quat)</m>.
@@ -533,7 +535,7 @@ perpendicular to <m>u</m>).
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="quatrotcompinvexer"/></title>
       <p>
 	<ol>
@@ -548,7 +550,7 @@ perpendicular to <m>u</m>).
 	  </li>	  
 	</ol>
       </p>
-    </commentary>
+    </aside>
     
   </exercises>
   </section>
