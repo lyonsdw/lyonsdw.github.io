@@ -92,7 +92,7 @@
 	 </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="transpreservesdiskpropexer"/></title>
   <p>Let <m>C</m> be the unit circle, and let <m>E</m>
   be <m>\extC\setminus (C\cup \D)</m> be the set of points on the
@@ -112,7 +112,7 @@
   when restricted to regions <m>\D</m> and <m>E</m>, it must be
   that <m>T</m> maps <m>C</m> onto itself.
   </p>
-</commentary>
+</aside>
 	 
 	 
    <corollary xml:id="hyperbolictransfixunitcirc"><statement><p>If <m>T\in
@@ -218,7 +218,7 @@
  </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hypclinetypespreservedexer"/></title>
   <p>
     Let <m>T\in \H</m>. Because <m>T</m> is a Möbius
@@ -226,7 +226,7 @@
     properties that define the four categories of clines in
     <xref ref="hyperbolicclinesummary"/>.
   </p>
-</commentary>
+</aside>
 
 			  
  <exercise xml:id="hyplinewith0isdiam">
@@ -241,7 +241,7 @@
  </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyplinewith0isdiam"/></title>
   <p>(Proof of the contrapositive) Suppose <m>C</m> is a hyperbolic straight line that is also a
     Euclidean circle, and suppose that <m>C</m> intersects the unit
@@ -250,7 +250,7 @@
     at <m>p</m>, and therefore <m>C</m> lies on one side
     of <m>L</m>. Therefore <m>C</m> can not contain <m>0</m>.
   </p>
-</commentary>
+</aside>
 
  <exercise xml:id="hyplinescongruentexer">
    <statement><p>
@@ -263,7 +263,7 @@
  </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyplinescongruentexer"/></title>
   <p>
     First, we show that any hyperbolic straight line is congruent
@@ -277,7 +277,7 @@
     to <m>\extR</m>. Now <m>V^{-1}U</m> is our desired congruence that
     takes <m>C</m> to <m>D</m>.
   </p>
-</commentary>
+</aside>
 
 			  
     </subsection>
@@ -318,7 +318,7 @@
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperbolicfixptcaseexer"/></title>
   <p>By <xref ref="hyperbolicfixptlemma"/>, fixed points are symmetric with respect to the
     unit circle <m>C</m>.
@@ -329,7 +329,7 @@
     less than 1 and the other is greater. Finally, a single (degenerate)
     fixed point must have norm 1.
   </p>
-</commentary>
+</aside>
       
 
             	         <figure xml:id="hyp_transf_fig">
@@ -460,7 +460,13 @@
       <exercise xml:id="hyperbolicdisttransexer"><statement><p>Use
 	  <xref ref="hyperbolictransformulaprop"/> to write a formula
 	  for the transformation <m>T</m> in the previous
-	  paragraph.</p></statement>
+	  paragraph.</p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
+	</statement>
 	<solution>  <p>Let <m>Sz=\frac{z-z_1}{1-z_1^\ast z}</m>, let <m>t=-\arg
       (Sz_2)</m>, and let <m>Tz=e^{it}Sz</m>, so that we have <m>Tz_1=0</m> and <m>Tz_2=u\gt 0</m>. 
      Because <m>T\in \H</m>,  <m>T</m> is determined by the two parameters <m>z_1,t</m>. 
@@ -484,11 +490,11 @@
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperbolicdistbasiccalcexer"/></title>
   <p><me>(0,u,1,-1) = \frac{0-1}{0+1}\frac{u+1}{u-1} = \frac{1+u}{1-u}</me>
   </p>
-</commentary>
+</aside>
       
       
       
@@ -513,12 +519,12 @@
 	    </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperbolicdistformexer2"/></title>
   <p>It is clear that <m>u=|Tz_2|</m>, where <m>T</m> is the
   transformation found in <xref ref="hyperbolicdisttransexer"/>.
   </p>
-</commentary>
+</aside>
 	    
 
             <proposition xml:id="hyperbolic_metric_is_invariant"><statement><p>The
@@ -536,7 +542,7 @@
       </exercise>
 	    
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperbolic_metric_is_invariant"/></title>
   <p>Let <m>z_1,z_2\in \D</m>, and let <m>q_1,q_2</m> be points on the
     hyperbolic line through <m>z_1,z_2</m> that lie on the unit circle,
@@ -546,7 +552,7 @@
     ratio under Möbius transformations, we have
     <me>d(z_1,z_2)=\ln(z_1,z_2,q_2,q_1)=\ln(Tz_1,Tz_2,Tq_2,Tq_1)=d(Tz_1,Tz_2).</me>
   </p>
-</commentary>
+</aside>
 
       <p>The following Proposition shows that <m>d</m> is
 	a <em>metric</em> on hyperbolic space, and justifies referring
@@ -603,14 +609,14 @@
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="taylorseriesinvhyptanexer"/></title>
   <p>Using the Taylor series <me>\ln(1+u) =
       u-\frac{u^2}{2}+\frac{u^3}{3} -\cdots</me>
     and the fact <m>\ln[(1+u)/(1-u)]=\ln(1+u)-\ln(1-u)</m> we get
     <me>\ln\left(\frac{1+u}{1-u}\right)=2\left(u+\frac{u^3}{3}+\frac{u^5}{5}+\cdots\right) .</me>
   </p>
-</commentary>
+</aside>
     
     
     <exercise xml:id="hyperboliccirclecircumexer"><p>Find the length of the hyperbolic circle parameterized
@@ -619,7 +625,7 @@
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperboliccirclecircumexer"/></title>
   <p>For <m>z(t)=\alpha e^{it}</m>, we have <m>z'(t)=i\alpha
   e^{it}</m>, and  <m>|z(t)|=|z'(t)|=\alpha</m>. The circumference of
@@ -640,7 +646,7 @@
     
 
   </p>
-</commentary>
+</aside>
     
 
     <p>We conclude this subsection on hyperbolic length and area with an
@@ -673,7 +679,7 @@
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hypdiskareaexer"/></title>
   <p>We have
     <md>
@@ -694,7 +700,7 @@
     solve for <m>\alpha</m> in terms of <m>r</m>, then simplify. We get
     <me>\text{Area }= \pi(e^r+e^{-r}-2) = 4\pi \sinh^2\left(\frac{r}{2}\right).</me>
   </p>
-</commentary>
+</aside>
     
 
     </subsection>
@@ -771,7 +777,7 @@
 
   <exercises>
 
-        <commentary component="instructor">
+        <aside component="instructor">
       <p><alert>Essential exercises:</alert>
 	<xref text="local" ref="hyperbolictransformulaexer"/>,
 	<xref text="local" ref="twopts2lineexer"/>,
@@ -788,7 +794,7 @@
 	</p>
 	  <p><alert>May be omitted:</alert>
    	  </p>
-</commentary>
+</aside>
 
     <exercise xml:id="hyperbolictransformulaexer">
       <statement><p>Prove <xref ref="hyperbolictransformulaprop"/> using the following outline.
@@ -817,7 +823,7 @@
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
   <xref ref="hyperbolictransformulaexer"/> (proof of <xref ref="hyperbolictransformulaprop"/>)</title>
   <p>
@@ -855,7 +861,7 @@
       </li>      
     </ol>
   </p>
-</commentary>
+</aside>
     
 
     <exercise xml:id="twopts2lineexer"><title>Two points determine a
@@ -868,7 +874,7 @@
     </exercise>
     
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="twopts2lineexer"/></title>
   <p>Let <m>Tz=\frac{z-p}{1-p^\ast z}</m>, so that <m>Tp=0</m>.
     Let <m>L</m> be the diameter that passes
@@ -876,7 +882,7 @@
     line that contains <m>p,q</m>. Uniqueness is a direct consequence of 
 <xref ref="hyplinewith0isdiam"/>.
   </p>
-</commentary>
+</aside>
     
     
     <exercise xml:id="dropperpexer"><title>Dropping a perpendicular from a point to a
@@ -891,7 +897,7 @@
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="dropperpexer"/></title>
   <p>Let <m>Tz=\frac{z-p}{1-p^\ast z}</m>, so
     that <m>Tp=0</m>. Let <m>a,b</m> be the points where <m>T(L)</m>
@@ -902,7 +908,7 @@
     is orthogonal to <m>L</m>. Uniqueness is a direct consequence of 
 <xref ref="hyplinewith0isdiam"/>.
   </p>
-</commentary>
+</aside>
 
     <exercise xml:id="hyperbolictriangleineqexer"><title>The triangle inequality for the hyperbolic
 	metric</title>
@@ -948,7 +954,7 @@
            </figure>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="hyperbolictriangleineqexer"/></title>
   <p>
     <ol>
@@ -999,7 +1005,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
       </li>      
     </ol>
   </p>
-</commentary>
+</aside>
     
     
     <exercise xml:id="upperhalfplanetransfpropexer"><statement><p>Prove
@@ -1018,7 +1024,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for
   <xref ref="upperhalfplanetransfpropexer"/> (proof of <xref ref="upperhalfplanetransfprop"/>)</title>
   <p>First we prove the "only if" direction. Suppose <m>T\in
@@ -1037,7 +1043,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     with <m>y\gt 0</m>. It is straightforward to check that the imaginary
     part of <m>Tz</m> is <m>\frac{y(ad-bc)}{(cx+d)^2 + c^2y^2}\gt 0</m>.
   </p>
-</commentary>
+</aside>
     
       <exercise xml:id="upperhalfplanelengthexer"><title>Length integral in the upper half-plane
 	  model</title><statement><p>This exercise is to establish
@@ -1082,7 +1088,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
       </exercise>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="upperhalfplanelengthexer"/></title>
   <p>
     <ol>
@@ -1115,7 +1121,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
       </li>      
     </ol>
   </p>
-</commentary>
+</aside>
       
 
           <exercise xml:id="upperhalfplaneareaintformulaexer"><title>Area integral in the upper half-plane
@@ -1129,7 +1135,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
 
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="upperhalfplaneareaintformulaexer"/></title>
   <p>Consider parameterized curves <m>x=x(t)+y_0</m>, <m>y=x_0+y(s)</m>
     with <m>x(0)=x_0, y(0)=y_0</m>. The arc length
@@ -1138,20 +1144,23 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     and <m>\frac{y'(t)dt}{y}=\frac{dy}{y}</m> (for <m>y(t)</m>) so the
     area differential is <m>dA=\frac{dx\;dy}{y^2}</m>.
   </p>
-</commentary>
+</aside>
 	  
-
+<!--
+    this figure reworked using tikz 2/2025, source is in images/hyperbolic_triangle_area2.tex
+    -->
 	       <figure xml:id="hyperbolic_triangle_area_fig">
   <caption>Hyperbolic triangle <m>\triangle ABC</m>
       </caption>
-            <image width="50%" source="images/hyperbolic_triangle_area.png"></image>
+            <image width="50%" source="images/hyperbolic_triangle_area2.png"></image>
            </figure>
 
 	  
 	  <exercisegroup><title>Area of a hyperbolic
-	  triangle.</title><introduction>The following sequence of
+	  triangle</title><introduction><p>The following sequence of
 	  exercises establishes the area formula for hyperbolic
-	      triangles.</introduction>
+		triangles.</p>
+	    </introduction>
 
 	    <exercise xml:id="doubasymptriareaexer"><title>Area of a doubly-asymptotic
 		triangle</title>
@@ -1239,7 +1248,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
 		    </exercise>
 	  </exercisegroup>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="doubasymptriareaexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="doubasymptriareaexer"/></title>
       <p><ol>
 	  <li>Let <m>\triangle ABC</m> be a doubly-asymptotic triangle
 	    in the upper half-plane, and suppose <m>B,C\in
@@ -1272,10 +1281,10 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
 	  </md></li>
 	</ol>
 		      </p>
-			    </commentary>
+			    </aside>
 
 <!-- Instructor's solution -->
-<commentary component="instructor">
+<aside component="instructor">
   <title>Instructor's solution for <xref ref="asympngonareaexer"/></title>
   <p>Making the hint more explicit, draw a radius from 0 to each of the
     vertices of the asymptotic <m>n</m>-gon. This partitions the
@@ -1285,10 +1294,10 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
     to <m>2\pi</m>, so the areas of the doubly-asymptotic triangles sum
     to <m>\sum_i (\pi-\alpha_i) = n\pi -2\pi = (n-2)\pi</m>.
   </p>
-</commentary>
+</aside>
     
     
-	  		    <commentary component="instructor"><title>Instructor's solution for
+	  		    <aside component="instructor"><title>Instructor's solution for
 	  		    <xref ref="hyperbolic_triangle_area_exer"/></title> 
 			<p>Using
 		      <xref ref="doubasymptriareaexer"/>, the sum of the areas of the six
@@ -1304,7 +1313,7 @@ From this we have <m>d(a,b)= d(a,c)+d(c,b)</m>. Degenerate cases where two or mo
 		      <me>2((\pi-\angle A)+(\pi-\angle B)+(\pi-\angle
 			  C))-2\text{ Area}(\triangle ABC)=4\pi</me>
 		      to get the desired area formula.</p>
-		      </commentary>
+		      </aside>
 
   </exercises>
 
