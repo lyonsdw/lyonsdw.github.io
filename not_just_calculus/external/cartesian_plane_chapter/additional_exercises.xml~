@@ -60,7 +60,7 @@ Problems
 	For example, <m>R_{\pi}</m> is the
 	linear map <m>\R^2\to \R^2</m>
 	given by the
-	matrix <m>\twotwo{-1}{0}{0}{-1}</m>. Alternatively, <m>\R_{\pi}</m>
+	matrix <m>\twotwo{-1}{0}{0}{-1}</m>. Alternatively, <m>R_{\pi}</m>
 	is the map <m>\C\to\C</m> given
 	by <m>R_{\pi}(z)=-z</m>. Let <m>F_H,F_V,F_D,F_{D'}</m> be the
 	reflections across the lines <m>H: y=0</m>, <m>V:
@@ -112,12 +112,14 @@ The matrices for
     <statement><p>Let <m>\mathbf{u}</m> be a vector in <m>\R^2</m> such
 	that <m>\left\Vert\mathbf{u}\right\Vert=1</m>, 
 	let <m>\ell</m> be the line
-	<me>\ell=\{\alpha \mathbf{u}\colon \alpha \in \R\}</me>
-	and let <m>\mathbf{v}=\overrightarrow{OQ}</m> be another vector
+	<me>\ell=\{\alpha \mathbf{u}\colon \alpha \in \R\}</me> and
+	let <m>\mathbf{v}=\overrightarrow{OQ}</m> be another vector
 	in <m>\R^2</m>, where <m>O=(0,0)</m> is the origin and <m>Q</m>
-	is some point in the plane. Let <m>P</m> be the point on <m>\ell</m> such
-	that <m>\triangle OPQ</m> is a right triangle.
-	Use <xref ref="dotprodgeom"/> and draw a sketch to explain why
+	is some point in the plane. Let <m>m</m> be the line that passes
+	through <m>Q</m> that is perpendicular to <m>\ell</m>, and
+	let <m>P</m> be the intersection point of lines <m>\ell</m>
+	and <m>m</m>.  Use <xref ref="dotprodgeom"/> and draw sketches
+	to explain why
 	<me>\overrightarrow{OP}=(\mathbf{u}\cdot
 	  \mathbf{v})\mathbf{u}.</me>
 	The vector <m>\overrightarrow{OP}</m> is called
@@ -370,7 +372,7 @@ Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
       linear fractional transformation given by
       <me>T_M(x) = \frac{ax+b}{cx+d}.</me>
       Suppose that <m>N=\twotwo{e}{f}{g}{h}</m> is another invertible
-      matrix, so that <m>T_N(x)=\frac{ex+f}{fx+h}</m>. Let <m>\Id</m> denote the identity matrix, and
+      matrix, so that <m>T_N(x)=\frac{ex+f}{gx+h}</m>. Let <m>\Id</m> denote the identity matrix, and
     let <m>{\rm id}</m> denote the identity function <m>{\rm id}\colon
       \extR\to \extR</m>.
       Show the following.
