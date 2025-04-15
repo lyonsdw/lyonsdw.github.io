@@ -80,8 +80,7 @@ denoted <m>zw</m>, is defined by
 
 <exercise xml:id="complexmultfirstexer"><statement><p>
       <ol>
-	<li>Use definition <xref ref="complexproduct"/> to
-	  multiply <m>-1</m> times <m>-1</m> as <em>complex
+	<li>Multiply <m>-1</m> times <m>-1</m> as <em>complex
 	  numbers</em>, that is, using <xref ref="complexproduct"/>.
 	</li>
 	<li>Use <xref ref="complexproduct"/> to show that <m>i^2=-1</m>.
@@ -93,7 +92,7 @@ denoted <m>zw</m>, is defined by
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="complexmultfirstexer"/></title>
   <p>
     <ol>
@@ -126,7 +125,7 @@ denoted <m>zw</m>, is defined by
 	</li>
       </ol>
 </p>
-</commentary>
+</aside>
 
 <p>
 Equations <xref ref="complexsum"/> and <xref ref="complexrealscaling"/>
@@ -147,12 +146,12 @@ where <m>R_\theta,R_\phi</m> denote rotations (see <xref ref="rottransfdef"/>).
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="complexmultasscalerotexer"/></title>
   <p>Just write out <m>rR_{\theta}(Q)</m> and <m>sR_{\phi}(P)</m> and
     notice that both are equal to <m>rs(\cos(\theta+\phi),\sin(\theta+\phi))</m>.
   </p>
-    </commentary>
+    </aside>
 
  <p>
   Complex multiplication and addition obey the
@@ -169,7 +168,7 @@ where <m>R_\theta,R_\phi</m> denote rotations (see <xref ref="rottransfdef"/>).
    </statement>
  </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="complexdistlawexer"/></title>
   <p> Let <m>z\leftrightarrow (r\cos \theta,r\sin\theta)</m>,
     let <m>u\leftrightarrow Q</m>, and let <m>v\leftrightarrow S</m>. We
@@ -185,7 +184,7 @@ where <m>R_\theta,R_\phi</m> denote rotations (see <xref ref="rottransfdef"/>).
     </md>
 
   </p>
-    </commentary>
+    </aside>
 
 
 <p>Next we establish two basic ways to represent complex numbers, called
@@ -203,8 +202,9 @@ Let <m>\expi(\theta)</m> denote the complex number that corresponds to the point
    <mrow xml:id="polarformz">z\amp = rE(\theta)\amp \amp (\text{polar form})</mrow>
  </mdn>
  In particular, we have the following expression for <m>E(\theta)</m> in
- rectangular form.<fn>The function <m>E</m> is also called the "cis"
-   function (for "cosine <m>i</m> sine"), implemented in many software libraries.
+ rectangular form.<fn>The function <m>E</m> is also called
+ the <q>cis</q>
+   function (for <q>cosine <m>i</m> sine</q>), implemented in many software libraries.
  </fn>
  <!--, called <term>Euler's formula</term><idx><h>Euler's formula</h>
  </idx>.-->
@@ -234,38 +234,6 @@ Let <m>\expi(\theta)</m> denote the complex number that corresponds to the point
  </mdn>
 </p>
 
-<!-- <exercise><statement><p>Below are a number of relationships arising from the definitions of
-complex addition and multiplication.
-Let
- <m>a,b</m> be real numbers and let <m>z,w</m> be complex
-numbers. Show that the following relationships
-hold.
-  <mdn>
-    <mrow xml:id="addextends">a+b \;\;\text{(complex sum)}  \amp = a+b \;\;\text{(real sum)}</mrow>
-    <mrow xml:id="multextends">ab \;\;\text{(complex product)}  \amp = ab \;\;\text{(real product)}</mrow>
-<mrow xml:id="normextends">
-  |a| \;\;\text{(complex norm)}  \amp = |a| \;\;\text{(real absolute value)}</mrow>
-<mrow xml:id="normdistovermult">  |zw|  \amp = |z||w| </mrow>
-<mrow xml:id="multidentity">  1z  \amp = z1 = z </mrow>
-  </mdn>
-       </p>
-       <p><alert>Comments on this exercise.</alert>
-	 <xref ref="addextends"/>, <xref ref="multextends"/>,
-and <xref ref="normextends"/> say
-   that complex addition, multiplication, and norm <em>extend</em>
-    the corresponding
-operations on the reals. <xref ref="multidentity"/> is expressed by saying 1 is the 
-    <em>(complex) multiplicative identity</em>.</p>
-   </statement>
-   <NOanswer>
-     <p>
-       Let <m>a,b</m> be real numbers. As complex numbers, we have
-       <m>a+b \leftrightarrow (a,0)+(b,0)\leftrightarrow</m>
-       </p>
-   </NOanswer>
- </exercise>
--->
-
  <exercise xml:id="complexalg2ndexer"><statement><p>Express each of the following in rectangular and
       polar form.
       <ol>
@@ -275,10 +243,20 @@ operations on the reals. <xref ref="multidentity"/> is expressed by saying 1 is 
 	<li>	 <m>(1+i)^3</m></li>
       </ol>
     </p>
-  </statement>
+   </statement>
+   <answer>
+<p><ol>
+	<li>	   <m>12+3i=3\sqrt{17}\;\expi({\arctan(1/4)})</m></li>
+	<li>	   <m>6\expi({-\pi/6})=3\sqrt{3}-3i</m></li>
+	<li>	   <m>11+10i=\sqrt{221}\;\expi({\arctan(10/11)})</m></li>
+	<li>	   <m>-2+2i=2\sqrt{2}\;\expi({3\pi/4})</m></li>
+      </ol>
+</p>
+   </answer>
 </exercise>
 
- <commentary component="instructor"><title>Instructor's solution for
+ <!--
+ <aside component="instructor"><title>Instructor's solution for
 <xref ref="complexalg2ndexer"/></title>
 <p><ol>
 	<li>	   <m>12+3i=3\sqrt{17}\;\expi({\arctan(1/4)})</m></li>
@@ -287,7 +265,8 @@ operations on the reals. <xref ref="multidentity"/> is expressed by saying 1 is 
 	<li>	   <m>-2+2i=2\sqrt{2}\;\expi({3\pi/4})</m></li>
       </ol>
 </p>
-</commentary>
+</aside>
+ -->
  
  <p>
    Using <xref ref="complexmultpolar"/>, we have the following for <m>r\neq 0</m>.
@@ -326,7 +305,7 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
   \im(z)  \amp  = \frac{z - z^\ast}{2i}</mrow>
 <mrow xml:id="zzbarisnormsq">
   |z|^2  \amp  = zz^\ast</mrow>
-<mrow>2\arg z  \amp  = \frac{z}{z^\ast} \;\;(\text{for } z\neq 0)</mrow>
+<mrow>\expi(2\arg z)  \amp  = \frac{z}{z^\ast} \;\;(\text{for } z\neq 0)</mrow>
 <mrow>\frac{1}{z}
    \amp  = \frac{z^\ast}{zz^\ast}= \frac{z^\ast}{|z|^2} \;\;(\text{for } z\neq 0)</mrow>
 <mrow>(zw)^\ast  \amp  = z^\ast w^\ast</mrow>
@@ -341,10 +320,21 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
 	<li> <m>\displaystyle \frac{2\expi({\pi/4})}{3\expi({-\pi/2})}</m>	</li>
       </ol>
     </p>
-  </statement>
+   </statement>
+   <answer>
+  <p>
+      <ol>
+	<li> <m>\displaystyle \frac{1}{2} + \frac{1}{2}i=\frac{\sqrt{2}}{2}\expi({\pi/4})</m></li>
+	<li> <m>\displaystyle -\frac{3}{5} +\frac{4}{5}i=\expi({(\arctan(-4/3))+\pi)}</m></li>
+        <li> <m>\displaystyle \frac{2}{3}\expi({3\pi/4})=-\frac{\sqrt{2}}{3} +
+  \frac{\sqrt{2}}{3}i</m>	</li>
+      </ol>
+</p>
+   </answer>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+ <!--
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="complexdivisionexer"/></title>
   <p>
       <ol>
@@ -354,8 +344,9 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
   \frac{\sqrt{2}}{3}i</m>	</li>
       </ol>
 </p>
-</commentary>
- 
+</aside>
+-->
+
 <exercises>
 
 <exercise xml:id="justifyrectpolaraddmultexer"><statement><p>Verify <xref ref="rectformz"/> and
@@ -365,7 +356,7 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="justifyrectpolaraddmultexer"/></title>
 <p>Let <m>z\leftrightarrow (a,b) = (r\cos
 	\theta,r\sin\theta)</m>. Then we have
@@ -375,10 +366,11 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
 	<mrow>z\amp \leftrightarrow (r\cos\theta,r\sin\theta) =
 	r(\cos\theta,\sin\theta)\leftrightarrow rE(\theta).</mrow>
       </md>
-      The rightmost double arrow "<m>\leftrightarrow</m>" in each of the
+      The rightmost double arrow <q><m>\leftrightarrow</m></q>
+       in each of the
       lines above is justified by <xref ref="complexrealscaling"/>.
 </p>
-</commentary>
+</aside>
 
 <exercise xml:id="triangleineqcomplexexer"><title>The triangle
 	  inequality</title><idx><h>triangle inequality for complex numbers</h>
@@ -390,7 +382,7 @@ the real axis (the <m>x</m>-axis) in <m>\R^2</m>. Here are some relations
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="triangleineqcomplexexer"/></title>
   <p>
     The simplest approach is geometric:
@@ -408,14 +400,14 @@ lengths of the other two sides.
    Conclude by
   observing that all steps of the derivation are reversible.
 </p>
-</commentary>
+</aside>
 
 <exercise xml:id="zzbarisnormsqexer"><statement><p>Prove <xref ref="zzbarisnormsq"/>.
     </p>
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="zzbarisnormsqexer"/></title>
   <p>
     Let <m>z=r\expi({\theta})</m>.  Then <m>\overline{z}=r\expi({-\theta})</m>, and we
@@ -426,7 +418,7 @@ have
 	<mrow>  \amp  = r^2 = |z|^2.</mrow>
       </md>
 </p>
-</commentary>
+</aside>
 
 <exercise xml:id="complexdiffnormisdistexer"><statement>Let <m>p</m> and <m>q</m> be complex numbers.  Prove that the distance
 (ordinary distance between points in the plane) between <m>p</m> and <m>q</m> is
@@ -435,7 +427,7 @@ have
   </hint>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="complexdiffnormisdistexer"/></title>
   <p>
     Let <m>p=a+ib</m> and <m>q=c+id</m>.
@@ -446,7 +438,7 @@ We have
   <mrow>\amp = \sqrt{(a-c)^2 + (b-d)^2}.</mrow>
 </md>
 The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.</p>
-</commentary>
+</aside>
 
 <exercise xml:id="realimagpartsformulaexer">
 <statement>Verify the formulas <xref ref="realpartformula" /> and
@@ -454,7 +446,7 @@ The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.
 </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="realimagpartsformulaexer"/></title>
 <p>Let <m>z=x+iy</m>.  Then we have
 <ul>
@@ -463,12 +455,13 @@ The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.
     \frac{z-\overline{z}}{2i}=\frac{2iy}{2i}=y=\im(z)</m>.</li>
 </ul>
 </p>
-</commentary>
+</aside>
 
 <exercise xml:id="twosqrootsexer"><title>Square roots</title><statement>
     <p>
       <ol><li>Given a nonzero complex number <m>z</m>, explain why <m>z</m> has exactly
-	  two square roots, and explain how to find them.</li>
+	  two square roots, and explain how to find them. Suggestion:
+	  use polar form.</li>
 	<li>Solve for <m>z</m>.
 	  <me> z^2= -5-16i</me>
 	</li>
@@ -477,7 +470,7 @@ The latter expression is the distance from <m>p</m> to <m>q</m>, so we are done.
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="twosqrootsexer"/></title>
   <p>
 <ol><li>    Since squaring a number squares the norm and doubles the argument,
@@ -494,30 +487,7 @@ have to have norm <m>\sqrt{|z|}</m> and argument <m>\theta/2</m> plus or minus a
   </li>
 </ol>
 </p>
-</commentary>
-
-<!--
-<exercise xml:id="solvecomplexquadraticsexer">
-  <statement>Find all complex solutions of the following
-equations. 
-<ol>
-<li><m>\displaystyle z^2 + 3z + 5 = 0</m></li>
-<li><m>(z - i)(z + i) = 1</m></li>
-<li><m>\displaystyle \frac{2z + i}{-z+3i} = z</m></li>
-</ol>
-  </statement>
-</exercise>
-
-<commentary component="instructor"><title>Instructor's solution for
-<xref ref="solvecomplexquadraticsexer"/></title>
-<p><ol>
-      <li><m>\displaystyle -\frac{3}{2} \pm i\frac{\sqrt{11}}{2}</m></li>
-      <li><m>0</m></li>
-      <li><m>\displaystyle (1/2)[(-2 \pm 281^{1/4}\cos \varphi) + i(3 \pm
-    281^{1/4}\sin \varphi)]</m>, where <m>\varphi=(\arctan(16/5)+\pi)/2</m></li>
-</ol></p>
-</commentary>
--->
+</aside>
 
 <exercise xml:id="anglesumformulascomplexexer"><statement><p>Use the fact that
       <m>\expi({a})\expi({b})=\expi({a+b})</m>
@@ -532,7 +502,7 @@ equations.
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="anglesumformulascomplexexer"/></title>
 <p>  Using <xref ref="cisfndef"/> for the first equality below, and then using
   complex multiplication for the second equality, we have
@@ -546,7 +516,7 @@ On the other hand, <xref ref="cisfndef"/> also gives
 Equating real and and imaginary parts of <xref ref="localtag1" /> and
 <xref ref="localtag2"/> gives the desired trigonometric identities.
 </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="verifyeulersformulaexer"><title>The complex exponential
@@ -598,7 +568,7 @@ called <term>Euler's formula</term>.
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
     <xref ref="verifyeulersformulaexer"/></title>
 <p>
       We have <me>i^n =\begin{cases} 1 \amp n\equiv 0 \pmod{4}\\
@@ -621,7 +591,7 @@ called <term>Euler's formula</term>.
       odd <m>n</m> terms. Thus we have 
       <me>e^{it}=\cos t + i\sin t.</me>
     </p>
-  </commentary>
+  </aside>
 
 
 
