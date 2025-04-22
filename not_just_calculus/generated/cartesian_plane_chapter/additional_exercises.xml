@@ -585,18 +585,20 @@ Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
 	    of <m>\mathcal{I}</m>, say <m>E(m)</m> and <m>E(n)</m>,
 	    with <m>E(m)\neq E(n)</m>.
 	  </li>
-	  <li>For the two points <m>E(m),E(n)</m> in the previous part,
-	    choose real numbers <m>s,t</m> such that <m>0\leq s\lt t\lt
-	      2\pi</m>, such
+	  <li>Let <m>r</m> be a real number so
+	    that <m>U_k=U_{r,r+\epsilon}</m>, where <m>U_k</m> is the
+	    interval from the previous step that contains the two
+	    integral points <m>E(m),E(n)</m>. Let <m>s,t</m> such that <m>r\leq s\lt t\lt
+	      r+\epsilon</m>, such
 	    that <m>\{E(m),E(n)\}=\{E(s),E(t)\}</m>. Without loss of
 	    generality, we may assume <m>E(m)=E(s)</m> and <m>E(n)=E(t)</m>.
 	  </li>
 	  <li>Let <m>t_0=t-s</m>, so that <m>0\lt t_0\lt \epsilon</m>.
 	    We have
-	    <me>E(n)E(-m)=E(n-m)=E(t-s)=E(t_0).</me>
+	    <me>E(n-m)=E(n)E(-m)=E(t)E(-s)=E(t-s)=E(t_0).</me>
 	  </li>
-	  <li>Choose an integer <m>k</m> so that <m>a\lt kt_0 \lt
-	      b</m>. Now we have <m>E(kt_0)=E(k(n-m))\in U_{a,b}\cap \mathcal{I}</m>, as desired.
+	  <li>Choose an integer <m>\ell</m> so that <m>a\lt \ell t_0 \lt
+	      b</m>. Now we have <m>E(\ell t_0)=E(\ell (n-m))\in U_{a,b}\cap \mathcal{I}</m>, as desired.
 	  </li>
 	</ol></p>
       </proof>
@@ -686,9 +688,9 @@ Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
 
 <aside component="instructor">
   <title>Instructor's solution for <xref ref="intptsdensexer4"/></title>
-  <p>We now have <m>m=s+2\pi k</m> and <m>n=t+2\pi\ell</m> for some
-    integers <m>k,\ell</m>. Thus we have
-    <me>E(n-m)=E(t-s+2\pi(\ell -k))=E(t-s).</me>
+  <p>By the definition of complex multiplication, <m>E(u)E(v)=E(u+v)</m>
+    for all <m>u,v\in \R</m>. This justifies two of the inequalities,
+    and substitution does the other two.
     We have <m>t_0\lt \epsilon</m> because the arc from <m>s</m>
     to <m>t</m> radians is <m>t-s=t_0</m> radians. This is the same as
     the shortest arc from <m>E(m)</m> to <m>E(n)</m>, which is less
@@ -700,7 +702,7 @@ Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
 <exercise xml:id="intptsdensexer5">
   <statement>
     <p>In part 5 of the proof, how do we know that it is possible to
-      choose the integer <m>k</m>? (Hint: what if it were not possible?)
+      choose the integer <m>\ell</m>? (Hint: what if it were not possible?)
       Justify the <q>equals</q>
       sign and the <q>is an element of</q>
        sign in the
@@ -714,13 +716,14 @@ Let <m>a,b,c,d</m> be real numbers with <m>ad-bc\neq 0</m>. The
   <p>Picture a ruler with consecutive tick marks spaced
     by <m>t_0</m>. If there is no tick mark on this ruler
     between <m>a</m> and <m>b</m>, then both <m>a,b</m> must lie between
-    consecutive marks <m>\ell t_0,(\ell+1)t_0</m> for some
-    integer <m>\ell</m>, that is, we would
+    consecutive marks <m>j t_0,(j+1)t_0</m> for some
+    integer <m>j</m>, that is, we would
     have
-    <me>\ell t_0 \leq a \lt b \leq (\ell+1)t_0.</me> But then we would
+    <me>j t_0 \leq a \lt b \leq (j+1)t_0.</me> But then we would
     have <m>b-a\leq t_0</m>, which contradicts <m>t_0\lt
       \epsilon=b-a</m>. For the last sentence, use <m>t_0=n-m +2\pi
-      j</m> for some integer <m>j</m> (by the previous exercise), so <m>E(kt_0)=E(k(n-m))</m>.
+      j</m> for some integer <m>j</m> (by the previous exercise),
+    so <m>E(\ell t_0)=E(\ell (n-m))</m>.
   </p>
 </aside>
 
