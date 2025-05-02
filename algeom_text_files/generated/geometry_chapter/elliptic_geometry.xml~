@@ -415,18 +415,28 @@ via the stereographic projection <m>s</m>.
   satisfy <m>|a|^2+|b|^2=1</m>. The fact that Equations <xref ref="tzthetaassu2image"/> and
 	    <xref ref="txpiby2assu2image"/> hold is a byproduct of
   Exercises <xref ref="mobiuszrotations"/> and
-  <xref ref="mobiusxpiby2rotations"/>, respectively. To see why every
+	    <xref ref="mobiusxpiby2rotations"/>, respectively.</p>
+  <p>
+    To see why every
   element in <m>\S</m> is the image under <m>{\mathcal T}</m> of an
-  element of <m>SU(2)</m>, let <m>S\in \S</m>, and write <m>S</m> as a
-  composition <m>S=T_1\circ T_2 \circ \cdots \circ T_k</m>, where each <m>T_i</m>
-is of the form
-  form of one of <m>T_{Z,\theta},T_{X,\pi/2}</m>. Then we have
+  element of <m>SU(2)</m>, let <m>T\in \S</m>, and let <m>R=s^{-1}\circ
+    T\circ s\in \Rot(S^2)</m>. By <xref ref="rotgenprop"/>, <m>R</m> can
+  be written as a composition <m>R=R_1\circ R_2\circ \cdots \circ
+    R_k</m> of rotations <m>R_i</m>, each one of the
+  type <m>R_{Z,\theta}</m> or <m>R_{X,\pi/2}</m>. Let <m>T_i =
+    sR_is^{-1}</m> and let <m>M_i=\mathcal{T_i}</m> for <m>1\leq i\leq
+    k</m>. Thus each <m>T_i</m> is of the
+  form <m>T_{Z,\theta}</m> or <m>T_{X,\pi/2}</m> and each <m>M_i</m> is of the
+  form <m>M_{Z,\theta}</m> or <m>M_{X,\pi/2}</m>.
+  Then we have
   <md>
-    <mrow>S\amp ={\mathcal T}(M_1)\circ {\mathcal T}(M_2) \circ \cdots \circ {\mathcal T}(M_k)</mrow>
-    <mrow>\amp = {\mathcal T}(M_1M_2\cdots M_k)</mrow>
+    <mrow>T= sRs^{-1} \amp =
+      (sR_1s^{-1})(sR_2s^{-1})\cdots(sR_ks^{-1})</mrow>
+    <mrow>\amp = T_1\circ T_2\circ \cdots \circ T_k</mrow>
+    <mrow>\amp = \mathcal{T}(M_1)\circ \mathcal{T}(M_2)\circ \cdots
+      \circ \mathcal{T}(M_k)</mrow>
+    <mrow>\amp = \mathcal(T)(M_1M_2\cdots M_k).</mrow>
   </md>
-  where each <m>M_i</m> is of the form of one
-    of <m>M_{Z,\theta},M_{X,\pi/2}</m>.  
   </p>
 </aside>
 	
@@ -640,8 +650,7 @@ is of the form
 </aside>
     
     
-    <p>For the general case, let <m>z_1,z_2\in \extC</m>. Because 
-
+    <p>For the general case, let <m>z_1,z_2\in \extC</m>,
       and let
       <m>Tz=e^{it}\frac{z-z_1}{z_1^\ast z+1}</m> be the
       transformation in <m>\S</m> (using the form <xref ref="ellipticgp0inftyform"/>)

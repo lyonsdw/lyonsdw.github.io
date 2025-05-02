@@ -29,15 +29,13 @@
 	      for <m>f</m> and showing that <m>f\circ g</m>
 	      and <m>g\circ f</m> are both the identity function
 	      on <m>\C</m>. </li>
-<li>	      Show that if <m>c\neq 0</m>,
-	      then  <xref ref="stdlinfractransf"/> defines a one-to-one
-	      and onto map
-  <m>f\colon \C\setminus \{-d/c\}\to \C\setminus\{a/c\}</m> by
-	      finding an explicit inverse <m>g</m>
-	      for <m>f</m> and showing that <m>f\circ g</m> is the
-  identity function on <m>\C\setminus\{a/c\}</m> and 
-	      and <m>g\circ f</m> is the identity function
-	      on <m>\C\setminus \{-d/c\}</m>.
+<li> Show that if <m>c\neq 0</m>, then <xref ref="stdlinfractransf"/>
+	      defines a one-to-one and onto map
+  <m>f\colon \C\setminus \{-d/c\}\to \C\setminus\{a/c\}</m> by finding
+	      an explicit inverse <m>g</m> for <m>f</m> and showing
+	      that <m>f\circ g</m> is the identity function
+	      on <m>\C\setminus\{a/c\}</m> and <m>g\circ f</m> is the
+	      identity function on <m>\C\setminus \{-d/c\}</m>.
 </li>
 <li>For both cases 1 and 2 above, identify precisely where you use the
   condition <m>ad-bc\neq 0</m>. Show that, in fact, <m>f</m> is
@@ -188,7 +186,7 @@ The composition is invertible
 	      \begin{array}{cc}a\amp b\\ c\amp d\end{array}\right]\to
 	  \left[z\to \frac{az+b}{cz+d}\right]</men>
 	is a group homomorphism. The kernel of <m>{\mathcal T}</m> is
-	      the group of nonzero scalar matrices.
+	      the group of nonzero scalar matrices, that is,
 	       	       <me>\ker{\mathcal T}=\left\{\left[
 	      \begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
 			 k\neq 0\right\}</me>. The quotient
@@ -331,7 +329,7 @@ The composition is invertible
         <exercise xml:id="std3ptsetlemmaexer">
 	<statement><p>Prove <xref ref="std3ptsetlemma"/> by finding explicit
 	    formulas for <m>T</m> for each of the three
-	    cases <m>z_1=\infty</m>, <m>z_2=\infty</m>
+	    cases <m>z_1=\infty</m>, <m>z_2=\infty</m>,
 	    and <m>z_3=\infty</m>.
 	  </p>
 <!-- "see solutions in the back" comment -->
@@ -578,10 +576,13 @@ All clines are congruent in Möbius geometry.
 	  <xref ref="mobinvrealisclineprop"/>. 
 	</p>
       </statement>
-      <hint><p>Start here: Let <m>C,D</m> be two clines. Let <m>z_1,z_2,z_3</m> be three points on <m>C</m>
-	and let <m>w_1,w_2,w_3</m> be three points on <m>D</m>. Let <m>U=(\cdot,z_1,z_2,z_3)</m> and
+      <hint><p>Start here: Let <m>C,D</m> be two
+	clines. Let <m>z_1,z_2,z_3</m> be three points on <m>C</m> and
+	let <m>w_1,w_2,w_3</m> be three points
+	on <m>D</m>. Let <m>U=(\cdot,z_1,z_2,z_3)</m>,
 	let <m>V=(\cdot,w_1,w_2,w_3)</m>, and
-	  let <m>T=V^{-1}U</m>. Explain why <m>T</m> takes <m>C</m> to <m>D</m>.</p>
+	let <m>T=V^{-1}U</m>. Explain why <m>T</m> takes <m>C</m>
+	to <m>D</m>.</p>
       </hint>
     </exercise>
 
@@ -810,8 +811,8 @@ All clines are congruent in Möbius geometry.
            </figure>
 
       <p>
-The discussion of normal forms show that any non-identity Möbius
-	  transformation is conjugate to one of two basic forms, <m>w\to
+This discussion of normal forms (above) shows that any non-identity Möbius
+	  transformation is conjugate to one of two basic forms, namely, <m>w\to
 	  \alpha w</m> or <m>w\to w+\beta</m>. The natural coordinate
 	  system for depicting the action of <m>w\to \alpha w</m> is
 	  standard polar coordinates. See

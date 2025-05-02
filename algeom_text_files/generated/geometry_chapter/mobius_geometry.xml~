@@ -369,8 +369,11 @@ The composition is invertible
   </aside>
 -->
 
-<p>The next Lemma lays lays the groundwork for proving the uniqueness of
-  congruences between three-point sets.
+<p>To analyze the structure of Möbius transformations, it is
+  useful to consider their <term>fixed points</term>,
+  <idx>fixed point</idx> that is, values <m>z</m> such
+  that <m>Tz=z</m>. The next Lemma establishes a fact about fixed points that
+  will be used to prove the uniqueness of congruences between three-point sets.
 </p>
 
 <p>
@@ -934,9 +937,8 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       <statement>
 	<p>
 	  <ol>
-	    <li>Explain why a
-	transformation of the form <m>z\to az</m>, with <m>a</m> any
-	nonzero complex constant, is a composition of a homothety and a
+	    <li>Let <m>a</m> be a nonzero complex constant. 
+	      Explain why the transformation <m>z\to az</m> is a composition of a homothety and a
 	  rotation.
 	    </li>
 	    <li>Explicitly identify each homothety, rotation,
@@ -999,11 +1001,8 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	</p>
       </statement>
       <hint>
-	<p>Start by using <xref ref="std3ptsetlemma"/> to get a Möbius
-	transformation <m>U</m> that maps <m>z_1,z_2,z_3</m>
-	to <m>1,0,\infty</m>, and there is a Möbius
-	transformation <m>V</m> that maps <m>w_1,w_2,w_3</m>
-	to <m>1,0,\infty</m>. 
+	<p>Start by applying <xref ref="std3ptsetlemma"/> to the triples 
+	<m>z_1,z_2,z_3</m> and <m>w_1,w_2,w_3</m>.
 	</p>
       </hint>
   </exercise>
@@ -1316,8 +1315,9 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 	takes <m>0,\beta,\infty</m>
 	to <m>\infty,\frac{p\beta+1}{\beta},p</m>. Thus the single
 	degenerate Steiner straight line through <m>p</m>
-      is in the direction given by  <m>\frac{p\beta+1}{\beta}-p
-	    =\frac{1}{\beta}\propto \beta^\ast</m>.</p>
+      is in the direction given by the argument of <m>\frac{p\beta+1}{\beta}-p
+	=\frac{1}{\beta}</m>, that is, in the direction <m>-\arg(\beta)</m>.
+    </p>
       </hint>
 </exercise>
 
@@ -1358,7 +1358,8 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
 
     <!-- Instructor's solution -->
 <aside component="instructor">
-  <title>Instructor's solution for <xref ref="normalformegexer"/></title>
+  <title>Instructor's solution for 
+    <xref ref="normalformegexer"/></title>
   <p>
     <ol>
       <li>The fixed points of <m>T</m> are <m>\pm 1</m>, so the normal
@@ -1380,6 +1381,17 @@ so <m>S^{-1}</m> maps <m>\infty \to p</m>, and <m>S^{-1}</m> maps
       </li>
     </ol>
   </p>
+  <p>Comment on generating examples of Möbius transformations with given
+    fixed points and type (elliptic, hyperbolic, loxodromic, or parabolic): Solve
+    <xref ref="normalform2fixedpts"/> and <xref ref="normalformfixedpt"/> for <m>Tz</m>. The 
+    matrices corresponding to <m>T</m>
+    are the following.
+    <me>\begin{bmatrix}p-\alpha q \amp
+      (\alpha-1)pq\\1-\alpha \amp \alpha p -q\end{bmatrix},
+      \begin{bmatrix}1+\beta p \amp -\beta p^2\\ \beta \amp 1-\beta p
+      \end{bmatrix}
+    </me>
+</p>
 </aside>
 
 <!-- Instructor's solution -->

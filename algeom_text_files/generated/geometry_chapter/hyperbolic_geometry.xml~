@@ -144,7 +144,7 @@
    
    <proposition xml:id="hyperbolictransformulaprop"><statement><p>A
 	 Möbius transformation <m>T</m> is in <m>\H</m>
-	 if an only if <m>T</m> can be written in the form
+	 if and only if <m>T</m> can be written in the form
 	 <men xml:id="diskhypgptrans0inftyform">Tz=e^{it}\frac{z-z_0}{1-z_0^\ast z}</men> for
 	 some <m>t\in \R</m> and <m>z_0\in \D</m>. Alternatively, we
 	 have <m>T\in \H</m> if and only if <m>T</m> can be written in
@@ -328,6 +328,25 @@
     of <m>|z|,|z^{\ast}|</m> are either both 1, or one of the norms is
     less than 1 and the other is greater. Finally, a single (degenerate)
     fixed point must have norm 1.
+  </p>
+  <p>Comment on generating examples <m>T\in H</m> with given
+    fixed points and type (hyperbolic rotation, hyperbolic translation,
+    and parallel displacement): Let <m>T\in H</m> be given by
+    <me>Tz=e^{it}\frac{z-z_0}{1-z_0^\ast z} = \frac{az+b}{b^\ast
+      z+a^\ast}</me> with <m>|a|^2-|b|^2=1</m>. It is an excellent
+      exercise to show that <m>T</m> is a hyperbolic translation,
+      hyperbolic displacement, or a hyperbolic rotation, if and only
+      if <m>(\re a)^2 \gt 1</m>, <m>(\re a)^2=1</m>, or <m>(\re a)^2 \lt
+      1</m>, respectively, which is in turn if and only if <m>|z_0|^2
+      \gt |\sin t/2|</m>, <m>|z_0|^2 = |\sin t/2|</m>, <m>|z_0|^2 \lt
+      |\sin t/2|</m>, respectively. To make a hyperbolic rotation,
+      choose fixed points <m>p,1/(p^\ast)</m> and <m>\alpha</m> with norm
+      1. To make a hyperbolic translation, choose two fixed points
+      with norm 1 and any nonnegative real scalar <m>\alpha</m>. To make
+      a parallel displacement, choose any fixed point <m>p</m> with norm
+      1 and choose any displacement <m>\beta</m> such
+      that <m>\arg(\beta)=\arg(p) \pm \pi/2</m>. Now use recipes in the
+      instructor's solution to <xref ref="normalformegexer"/>.
   </p>
 </aside>
       
