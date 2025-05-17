@@ -28,7 +28,8 @@
 
 <p>  To denote a set that contains a small number of elements, we list the
   elements, separated by commas, and enclosed in curly brackets
-  "<m>\{\ldots\}</m>"<notation><usage><m>\{\ldots\}</m>
+  <q><m>\{\ldots\}</m></q>
+  <notation><usage><m>\{\ldots\}</m>
       </usage>
       <description>curly brackets
       </description>
@@ -43,8 +44,10 @@
 </p>
 
 <p> Another way to denote a set is the notation
-  <m>\{x\colon x \text{ satisfies condition } C\}</m>, where the colon ":" is pronounced
-  "such that". For example, the <em>closed unit interval</em> of the real
+  <m>\{x\colon x \text{ satisfies condition } C\}</m>, where the
+  colon <q>:</q>
+   is pronounced
+  <q>such that</q>. For example, the <em>closed unit interval</em> of the real
   numbers <m>\R</m> is the set <m>\{x\in \R \colon 0\leq x\leq 1\}</m>.
 </p>
 
@@ -103,7 +106,7 @@
 </p></statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="setnotationparseexer"/></title>
   <p>
         <ol>
@@ -115,7 +118,7 @@ consisting of objects <m>1,2,3</m>. Instead it would be correct to say
 </li>
       <li>      The expression on the left is correct. Since every element in the
       empty set is also an element of <m>\{1,2,3\}</m> (we say this is
-      "vacuously true"), the empty set is a subset of <m>\{1,2,3\}</m>. The
+	<q>vacuously true</q>), the empty set is a subset of <m>\{1,2,3\}</m>. The
       expression on the right is not correct. The set <m>\{1,2,3\}</m> has
       exactly three members, and the empty set is not one of them.
       </li>
@@ -127,7 +130,7 @@ consisting of objects <m>1,2,3</m>. Instead it would be correct to say
       </li>
     </ol>
 </p>
-</commentary>
+</aside>
 
 <p>The <term>intersection</term><idx><h>set</h><h>intersection</h></idx>
   of sets <m>A,B</m>, denoted <m>A\cap B</m><notation><usage><m>A \cap B</m>
@@ -146,7 +149,8 @@ The <term>union</term>
     </notation>, is the set
 <me>A\cup B =\{x\colon x\in A \text{ or } x\in B\}
 </me>
-where the word "or" means "one or the other or both".
+where the word <q>or</q>
+means <q>one or the other or both</q>.
 The set 
 <me>A\setminus B =\{x\colon x\in A \text{ and } x\not \in B\}
 </me>
@@ -175,7 +179,7 @@ The set
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="setopspuzzleexer"/></title>
   <p>
 (There are many correct answers. These are just a sample.)
@@ -192,7 +196,7 @@ The set
   and <m>U=</m> are all the same set (the empty set).	</li>
       </ol>    
 </p>
-</commentary>
+</aside>
 
 
 <exercises>
@@ -201,10 +205,12 @@ The set
 	  One of the
 	  following statements is always true, and the other statement
 	  is sometimes true, and sometimes false. Determine which is
-	  which. Demonstrate the "sometimes true" statement by giving
+	  which. Demonstrate the <q>sometimes true</q>
+	   statement by giving
 	  two specific examples <mdash/> one example for which the statement is
 	  true, and one example for which the statement is
-	  false. "Specific" means that you will write all of the sets
+	  false. <q>Specific</q>
+	   means that you will write all of the sets
 	  <m>S,A,B</m> as lists of elements inside curly
 	  brackets, and write both of the sets on the left side and on the right
 	  sides of the equation as lists of elements in curly brackets.
@@ -218,7 +224,7 @@ The set
 	  </ol></p></statement>
   </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="setalgfirstexer"/></title>
   <p>
 Statement a is sometimes true and sometimes false. To see that statement
@@ -236,7 +242,7 @@ Then we have
     point. A proof using characteristic functions is <xref ref="distdemorganlawsexer"/>,
   later in this text.
   </p>
-</commentary>
+</aside>
 
     <exercise xml:id="powersetproblem"><statement><p>
 	  Given a set <m>A</m>, the <term>power set</term><idx><h>power set</h>
@@ -259,7 +265,7 @@ Then we have
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="powersetproblem"/></title>
   <p>
     <ol>
@@ -279,7 +285,7 @@ Then we have
 	    </li>
 	</ol>
 </p>
-</commentary>
+</aside>
 
 
 <exercise xml:id="algofsetsexer"><statement><p>Let <m>S</m> be a set.
@@ -306,7 +312,7 @@ Then we have
   </statement>
     </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="algofsetsexer"/></title>
   <p>
     <ol>
@@ -329,7 +335,7 @@ Then we have
       </li>
     </ol>
 </p>
-</commentary>
+</aside>
 
 
 
@@ -342,7 +348,7 @@ Then we have
     </statement>
   </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="hypergraphegexer"/></title>
   <p>
 Here are the 8 hypergraphs of the form <m>(\{a,b\},E)</m>. 
@@ -356,7 +362,7 @@ Here are the 8 hypergraphs of the form <m>(\{a,b\},E)</m>.
 	  <mrow>E\amp = \{\{a\},\{b\},\{a,b\}\}</mrow>	  
 	</md>    
 </p>
-</commentary>
+</aside>
   
   
 

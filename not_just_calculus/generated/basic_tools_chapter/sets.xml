@@ -58,7 +58,7 @@
       </usage>
       <description>the empty set
       </description>
-    </notation>.
+  </notation>. Any set that is not the empty set is called <term>nonempty</term>.
 </p>
 
 <p>We say that <m>A</m> is a <term>subset</term><idx><h>set</h><h>subset</h></idx>
@@ -294,7 +294,7 @@ Then we have
       </idx> of <m>S</m>
       is a set <m>{\mathcal A}</m> whose elements are subsets of <m>S</m>
       for which the following properties hold.
-<blockquote>	  <ol marker="i"> <li><m>\emptyset \in {\mathcal A}</m></li>
+<blockquote>	  <ol marker="i"> <li><m>{\mathcal A}</m> is nonempty</li>
 	    <li><m>X\cap Y\in {\mathcal A}</m> for every <m>X,Y\in {\mathcal A}</m></li>
 	    <li><m>X\cup Y\in  {\mathcal A}</m> for every <m>X,Y\in {\mathcal A}</m></li>
 	    <li><m>S\setminus X \in {\mathcal A}</m> for every <m>X\in {\mathcal  A}</m></li>
@@ -307,6 +307,10 @@ Then we have
   </li>
      <li>Give an example of a collection of subsets of some set <m>S</m> for which
        exactly  three of the four set algebra properties hold.</li>
+     <li>Let <m>S</m> be a set and let <m>\mathcal{A}</m> be an algebra
+       of subsets of <m>S</m>. Explain why it must be the case that
+       both <m>\emptyset</m> and <m>S</m> are elements of <m>\mathcal{A}</m>.
+     </li>
 </ol>
     </p>
   </statement>
@@ -332,6 +336,13 @@ Then we have
       <li>Here is a minimal example: Let <m>S=\{a\}</m> and
 	consider <m>\mathcal{A}=\{\emptyset\}</m>.
 	This satisfies i, ii, and iii, but not iv.
+      </li>
+      <li>By property i, there must be some set <m>X\subset S</m> that
+	is an element of <m>\mathcal{A}</m>. By property iv, we must
+	have <m>Y:= S\setminus X</m> also in <m>\mathcal{A}</m>. By
+	property ii, we must have <m>X\cap Y=\emptyset \in
+	  \mathcal{A}</m>, and by property iii, we must have <m>X\cup
+	Y=S\in \mathcal{A}</m>.
       </li>
     </ol>
 </p>
