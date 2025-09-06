@@ -13,7 +13,8 @@
               </latex-image-preamble>
 
     <!-- page break does not work here -->
-<!--    <latex-preamble-late>
+    <!--
+<latex-preamble-late>
       \RenewDocumentEnvironment{sectionptx}{mmmmmmm}
 {
   \renewcommand{\divisionnameptx}{#1}
@@ -25,18 +26,13 @@
   \newpage\section[{#4}]{#2}% experiment 2/20/2025
   \label{#7}%
   }{}
-    </latex-preamble-late>
-    -->
+</latex-preamble-late>
+-->
+
     <brandlogo url="http://quantum.lvc.edu/lyons"
 	       source="images/durerperspective.jpg" />
 
     <macros>
-<!-- make sections start on new page 2/20/2025 -->
-<!-- works for print, but breaks \amp in web page versions -->
-<!--
-\RenewDocumentEnvironment{sectionptx}{mmmmmmm}{\renewcommand{\divisionnameptx}{#1}\renewcommand{\titleptx}{#2}\renewcommand{\subtitleptx}{#3}\renewcommand{\shortitleptx}{#4}\renewcommand{\authorsptx}{#5}\renewcommand{\epigraphptx}{#6}\newpage\section[{#4}]{#2}\label{#7}}{}
-  -->
-
 \DeclareMathOperator{\sgn}{sgn}
       \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
@@ -83,9 +79,20 @@
 \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
 \newcommand{\MOD}{\mathbin{\text{MOD}}}
 \newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
-                        #3 \amp #4 \end{array} \right]}
+#3 \amp #4 \end{array} \right]}
+<!-- this makes newpage for new section, works! 8/2025 -->
+\let\oldsection\section % Saves the original section command
+\renewcommand{\section}{\clearpage\oldsection} % Redefines section to include a clearpage
 <!--\newcommand{\Mob}{Möbius}-->
+<!-- make sections start on new page 2/20/2025 -->
+<!-- works for print, but breaks \amp in web page versions -->
+<!-- experiment 8/11/2025 
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}{\renewcommand{\divisionnameptx}{#1}\renewcommand{\titleptx}{#2}\renewcommand{\subtitleptx}{#3}\renewcommand{\shortitleptx}{#4}\renewcommand{\authorsptx}{#5}\renewcommand{\epigraphptx}{#6}\newpage\section[{#4}]{#2}\label{#7}}{}-->
     </macros>
+    <!-- does not work in a second macros tag 8/2025 
+    <macros component="print-latex">
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}{\renewcommand{\divisionnameptx}{#1}\renewcommand{\titleptx}{#2}\renewcommand{\subtitleptx}{#3}\renewcommand{\shortitleptx}{#4}\renewcommand{\authorsptx}{#5}\renewcommand{\epigraphptx}{#6}\newpage\section[{#4}]{#2}\label{#7}}{}
+    </macros>-->
   </docinfo>
 
   <book xml:id="algeom_text"  xmlns:xi="http://www.w3.org/2001/XInclude">

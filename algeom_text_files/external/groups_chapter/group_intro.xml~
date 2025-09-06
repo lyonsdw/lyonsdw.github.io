@@ -58,23 +58,29 @@
 
 <p>
   <alert>Notation:</alert> We will denote the element <m>\sigma</m>
-  in <m>S_n</m> using the symbols <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m>, that is, 
-  the list of values of <m>\sigma</m>, separated by commas and enclosed in 
-  square
-  brackets.<fn>Writing <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m> to
-    denote <m>\sigma \in S_n</m>
-    is a compact
-	    replacement for the standard 2-row notation
+  in <m>S_n</m> using the
+  symbols <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m>, that is, the
+  list of values of <m>\sigma</m>, separated by commas and enclosed in
+  square brackets.<fn>Writing <m>[\sigma(1),\sigma(2),\ldots,\sigma(n)]</m> to
+    denote <m>\sigma \in S_n</m> is a compact replacement for the
+    standard ``input-ouput'' 2-row notation
     <me>\begin{bmatrix} 1 \amp 2\amp \cdots \amp n\\
       \sigma(1) \amp \sigma(2)\amp \cdots \amp \sigma(n)\end{bmatrix}
     </me>
-    that is used in most introductory textbooks. We choose to use square
-    brackets, rather than rounded parentheses, to avoid confusion with the standard notation for
-    <em>cyclic</em> permutations, introduced in <xref ref="cyclicpermutations" />. 
-	     </fn> 
-  For example, we write <m>[3,1,2]</m> to denote the permutation
+    that is used in most introductory textbooks.</fn>
+  For example, we write <m>[3,1,2]</m> to denote the
+  permutation
 	    <m>\sigma\colon \{1,2,3\}\to\{1,2,3\}</m> given by
 	    <me>\sigma(1)=3, \; \sigma(2)=1,\; \sigma(3)=2.</me>
+<!--
+	    Note
+	    that we use square brackets
+	    rather than rounded parentheses, to avoid
+  confusion with the standard notation for
+    <em>cyclic</em> permutations that will be introduced in
+    <xref ref="cyclicpermutations"/>.
+    -->
+    
     </p>
 
       <exercise xml:id="permutation-reading-exercise">
@@ -135,14 +141,13 @@ are reflections across lines of the form <m>\overline{OP}</m>
 	  point <m>O</m>.		
 	    <idx><h>rotation (in the plane)</h></idx>
 		<notation><usage><m>R_\theta</m>
-		  </usage><description>planar rotation by angle <m>\theta</m></description></notation>
-	We observe the usual
-	  convention that positive values of <m>\theta</m> denote
-	  counterclockwise rotations and negative values of <m>
-	  \theta</m> denote clockwise rotations.<fn>Angle units can be whatever is most convenient <mdash/>
-	radians, degrees, revolutions, or other units. It is the
-		responsibility of the user to be clear about what
-	      units are being used.</fn>
+		  </usage><description>planar rotation by
+	angle <m>\theta</m></description></notation> We observe the
+	usual convention that positive values of <m>\theta</m> denote
+	counterclockwise rotations and negative values of <m> \theta</m>
+	denote clockwise rotations.<fn>Angle units can be radians,
+	degrees, revolutions, or whatever is most convenient. It is the
+	responsibility of the user to be clear.</fn>
 	</p>
 </assemblage></p>
 

@@ -1,0 +1,721 @@
+  <section xml:id="group_action_sect">
+    <title>Group actions
+    </title>	       
+
+    <definition>
+	<title>Group action, orbit, stabilizer</title>
+  	<idx>group action</idx>
+	<idx><h>group action</h><h>orbit of an element
+	under a group action</h></idx>
+	<idx><h>group action</h><h>stabilizer of an
+	element under a group action</h></idx>
+		<idx><h>action of a group on a set</h><h>isotropy
+		    subgroup</h></idx>
+		<idx><h>group action</h><h><m>G</m>-space
+		</h></idx>		
+		<notation><usage><m>\Orb(x)</m>
+		  </usage><description>orbit
+	      of <m>x</m> under a group action</description></notation>
+		<notation><usage><m>\Stab(x)</m>
+		  </usage><description>stabilizer of an
+       element <m>x</m> under a group action</description></notation>
+	<statement>
+	  <p>Let <m>G</m> be a group and let <m>X</m> be a
+	  set. An <term>action</term> of the group <m>G</m> on the
+	    set <m>X</m> is a group homomorphism
+	    <me>\phi \colon G\to \Perm(X).</me> We say that the
+	    group <m>G</m> <term>acts</term> on the set <m>X</m>, and we
+	    call <m>X</m> a <term><m>G</m>-space
+	    </term>.
+	    For <m>g\in G</m>
+	    and <m>x\in X</m>, we write <m>gx</m> to
+	    denote <m>(\phi(g))(x)</m>.<fn>Other notations
+	      for <m>(\phi(g))(x)</m> are <m>g(x)</m>, <m>g\cdot x</m>,
+	      and <m>g.x</m>.</fn>
+	    We write <m>\Orb(x)</m> to
+	    denote the set 
+	    <me>\Orb(x)=\{gx\colon g\in G\},</me> called
+	    the <term>orbit</term> of <m>x</m>, 
+	    and we write <m>\Stab(x)</m> to denote the set
+	    <me>\Stab(x) = \{g\in G\colon gx=x\},</me>
+	    called the <term>stabilizer</term> or <term>isotropy</term>
+	    subgroup<fn>It must be proved that <m>\Stab(x)</m> is indeed
+	    a subgroup of <m>G</m>. See <xref ref="showstabisgpexer"/> below.
+	    </fn>
+	    of <m>x</m>. A group
+	    action is <term>transitive</term><idx>transitive group
+	      action</idx><idx><h>action of a group on a set</h>
+	      <h>transitive group
+		action</h>
+	    </idx> if there is only one orbit. A group action
+	    is <term>faithful</term><idx>faithful group
+	      action</idx><idx><h>group action</h>
+	      <h>faithful group action</h>
+	    </idx> if the map <m>G\to \Perm(X)</m> has a trivial kernel.
+	  </p>
+	</statement>
+      </definition>
+
+<exercise xml:id="actionegexer">
+  <statement>
+    <p>Find the indicated orbits and stabilizers for each of the following
+    group actions.
+      <ol>
+	<li><m>D_4</m> acts on the square  <m>X=\{(x,y)\in \R^2\colon
+	  -1\leq x,y\leq 1\}</m> by rotations and reflections.
+	  What is the orbit of <m>(1,1)</m>? What is the orbit
+	  of <m>(1,0)</m>? What is the
+	  stabilizer of <m>(1,1)</m>? What is the stabilizer
+	  of <m>(1,0)</m>?</li>
+	<li>The circle group <m>S^1</m> (see <xref ref="s1grpdef"/>) acts on
+	  the two-sphere <m>S^2</m> by rotation about
+	  the <m>z</m>-axis. Given an element <m>e^{i\alpha}</m> in <m>S^1</m>
+	  a point <m>(\theta,\phi)</m> in <m>S^2</m> (in spherical
+	  coordinates), the action is given by
+	  <me>e^{i\alpha}\cdot (\theta,\phi)=(\theta,\phi+\alpha).</me>
+What is the orbit of <m>(\pi/4,\pi/6)</m>? What is the orbit of the
+	  north pole <m>(0,0)</m>?
+	  What is the stabilizer
+	  of <m>(\pi/4,\pi/6)</m>? What is the stabilizer of the north pole?
+	</li>
+<!--
+	<li><m>\Z</m> acts on <m>\R</m> by <em>translation</em>, that
+	    is, by <m>(\phi(n))(x)= x+n</m>. What is the orbit of <m>1</m>? What is the orbit
+	    of <m>\pi</m>? What is the
+	  stabilizer of <m>1</m>? What is the stabilizer
+	  of <m>\pi</m>?</li>
+-->	
+	<li>Any group <m>G</m> acts on itself
+	  by <em>conjugation</em>, that is,
+	  by <m>(\phi(g))(x)=gxg^{-1}=C_g(x)</m> (see
+	  <xref ref="conjugationexer" />). Describe the orbit and
+	  stabilizer of a group element <m>x</m>.</li>
+      </ol>
+    </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
+  </statement>
+  <answer><ol>
+      <li><m>\Orb((1,1))=\{(1,1),(1,-1),(-1,1),(-1,-1)\}</m>, <m>\Orb((1,0))=\{(1,0),(-1,0),(0,1),(0,-1)\}</m>,
+	<m>\Stab((1,1))=  \{R_0,F_{D'}\}</m>, <m>\Stab((1,0))=\{R_0,F_H\}</m>
+      </li>
+      <li><m>\Orb(\pi/4,\pi/6)</m> is the horizontal circle
+	on <m>S^2</m> with <q>latitude</q>
+	 <m>\pi/4</m>, <m>\Orb(0,0)=\{(0,0)\}</m>,
+	<m>\Stab(\pi/4,\pi/6)=\{1\}</m>, <m>\Stab{(0,0)}=S^1</m>
+      </li>
+<!--      
+      <li><m>\Orb(1)=\Z</m>, <m>\Orb(\pi)=\{\pi+n\colon n\in \Z\}</m>, <m>\Stab(1)=\{0\}=\Stab(\pi)</m>
+      </li>
+-->
+      <li><m>\Orb(x)=\{gxg^{-1}\colon g\in G\}</m>, the stabilizer
+	of <m>x</m> is the centralizer subgroup <m>C(x)</m> (see <xref ref="center"/>)
+      </li>
+    </ol>
+  </answer>
+</exercise>
+
+<exercise xml:id="showstabisgpexer"><statement><p>Show that the
+      stabilizer of an element <m>x</m> in a <m>G</m>-space <m>X</m> is
+      a subgroup of <m>G</m>.
+    </p>
+  </statement>
+</exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="showstabisgpexer"/></title>
+  <p>We use the 2-step subgroup test. First, note that <m>\Stab(x)</m> is not empty, because <m>\Stab(x)</m>
+    contains <m>e_G</m> (the action <m>G\to \Perm(X)</m> is a group
+    homomorphism, so <m>e_G</m> must go to the identity transformation
+    on <m>X</m> by Property 1 of
+    <xref ref="homismbasicproperties"/>). Now suppose <m>g,h\in
+      \Stab(x)</m>. Then we have
+    <me>(gh)(x)=g(hx)=gx=x</me>
+    so <m>gh\in \Stab(x)</m>. Also, we have <me>x=(g^{-1}g)x
+      =g^{-1}(gx)=g^{-1}x</me>, so <m>g^{-1}\in \Stab(x)</m>. This
+    completes the proof.
+  </p>
+</aside>
+
+<definition xml:id="orbitspacedefn">  <notation><usage><m>X/G</m>
+    </usage><description>set of orbits of the action
+      of group <m>G</m> on set <m>X</m></description></notation>
+  <title>Orbit space</title>
+<statement> <p> We write <m>X/G</m> to denote the set
+  <me>X/G=\{\Orb(x)\colon x\in X\}</me>
+  of orbits of the group <m>G</m> acting on a set <m>X</m>. The
+  set <m>X/G</m> is also called the <term>orbit
+    space</term><idx><h>group action</h><h>orbit space</h>
+  </idx>
+  of the
+  group action.</p></statement>
+</definition>
+
+
+<exercise xml:id="orbitspaceexer">
+  <statement>
+    <p>
+      Describe <m>X/G</m> for each of the three group actions in
+      <xref ref="actionegexer" />.
+    </p>
+  </statement>
+</exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="orbitspaceexer"/></title>
+  <p>
+<ol>
+<li><p>There are 3 types of orbits for the action
+	of <m>D_4</m> on the square.
+	<ul><li>the 1-point set <m>\{(0,0)\}</m> (a single orbit)
+	  </li>
+	  <li>a 4-point set, the vertices of a square, of the
+	    form <m>(\pm a,\pm a)</m> or <m>\{(\pm a,0),(0\pm a)\}</m>
+	    (infinitely many orbits, one for each <m>a</m> in the
+	    range <m>0\lt a\leq 1)</m></li>
+	  <li>an 8-point set of the form <m>\{(\pm a,\pm b),(\pm b,\pm
+	      a)\}</m> (infinitely many orbits, one for each <m>0\leq a\lt b</m>)
+	  </li>
+  </ul></p>
+</li>
+<li>The orbits are all the latitude circles with latitude <m>\theta</m>,
+  for <m>0\lt \theta\lt \pi/2</m>, and two 1-point orbits, the north and
+  south poles.
+</li>
+<!--
+<li>There is 1 type of orbit for the action of the integers on the real
+	line. That is <m>\{x+n\colon n\in \Z\}</m> (infinitely
+  many orbits, one for each <m>0\leq x\lt 1</m>).</li>
+-->
+<li>For the action
+	of a group on itself by conjugation, the orbits are conjugacy
+  classes. How many orbits and how they look depends on the group.</li>
+</ol>
+  </p>
+</aside>
+
+<proposition xml:id="orbitspartition">
+  <statement>
+    <p>Let group <m>G</m> act on set <m>X</m>. Let <m>\sim_G</m> denote
+      the relation on <m>X</m> given by <m>x\sim_G y</m> if and only if <m>y=gx</m> for
+      some <m>g\in G</m>. Then we have that <m>\sim_G</m> is an
+      equivalence relation, and further, we have <m>x\sim_G y</m> if
+      and only if <m>y\in \Orb(x)</m>. In other words, we have
+      <me>X/G=X/\!\!\sim_G.</me>
+      In particular, we have that the orbit space <m>X/G</m> is a
+      partition of <m>X</m>.
+    </p>
+  </statement>
+</proposition>
+
+    <theorem xml:id="orbitstabthm"><title>The Orbit-Stabilizer
+	Theorem</title><idx>Orbit-Stabilizer
+	Theorem</idx><idx><h>action of a group on a set</h>
+	<h>Orbit-Stabilizer Theorem</h>
+      </idx>
+      <statement><p>Let <m>G</m> be a group acting on a
+	set <m>X</m>, and let <m>x</m> be an element of <m>X</m>. There
+	is a one-to-one correspondence
+	<me>G/\Stab(x)\leftrightarrow \Orb(x)</me> given by
+	<me>g\Stab(x) \leftrightarrow gx.</me></p></statement>
+    </theorem>
+
+    
+
+  <exercises>
+
+    <exercise xml:id="signofpermexer"><title>The sign of a permutation</title>
+      <statement><p>
+	  In this exercise we establish a function <m>\sgn\colon S_n\to
+	    \{-1,+1\}</m>, called the <term>sign
+	    function</term><idx><h>permutation</h>
+	    <h>sign function</h>
+	  </idx>. We start by defining an action of the symmetric group <m>S_n</m> on a set of two polynomials.
+	  Let <m>\Delta</m> be the polynomial
+	  <me>\Delta = \prod_{1\leq i\lt j\leq n} (x_i-x_j)</me>
+	  in the variables <m>x_1,x_2,\ldots,x_n</m>.
+	  Let <m>X</m> be the set <m>X=\{\Delta,-\Delta\}</m>. Given a
+	  permutation <m>\alpha</m> in <m>S_n</m>, let <m>\alpha \Delta</m>
+	  be the polynomial
+	  <me>\alpha \Delta = \prod_{1\leq i\lt j\leq n}
+	    (x_{\alpha(i)}-x_{\alpha(j)})</me>
+	  and let <m>\alpha(-\Delta) = -\alpha \Delta</m>. In the
+	  exercises below, you will show that <m>\alpha\Delta=\pm
+	    \Delta</m> for all <m>\alpha</m> in <m>S_n</m>. This allows
+	  us to define the sign of a permutation <m>\alpha</m> to be
+	  <m>+1</m> or <m>-1</m>
+	  according
+	  to whether <m>\alpha\Delta=\Delta</m>
+	  or <m>\alpha\Delta=-\Delta</m>, respectively.
+	  <me>\sgn(\alpha) = \begin{cases}
+	    +1 \amp \text{if }  \alpha\Delta = \Delta\\
+	    -1 \amp \text{if } \alpha\Delta = -\Delta
+	    \end{cases}
+	  </me>
+	  We say that a permutation <m>\alpha</m>
+	  is <term>even</term><idx><h>permutation</h><h>even permutation</h>
+	  </idx> if <m>\sgn(\alpha)=+1</m>, and we say <m>\alpha</m>
+	  is <term>odd</term><idx><h>permutation</h><h>odd permutation</h>
+	  </idx> if <m>\sgn(\alpha)=-1</m>.
+	  <ol>
+	    <li>Write out <m>\Delta</m> for <m>n=4</m> variables
+	      without using
+	      the product notation symbol <m>\prod</m>.
+	    </li>
+	    <li>Continuing with <m>n=4</m>, write out <m>(134)\Delta</m>
+	    and <m>(1324)\Delta</m>. In both cases, match the factors
+	      with <m>\Delta</m> and identify which factors experience
+	      a sign change. Use this calculation to
+	      find <m>\sgn(134)</m> and <m>\sgn(1324)</m> directly and
+	    explicitly from the definition.
+	    </li>
+	    <li>Show that <m>\alpha \Delta = \pm \Delta</m> for
+	      all <m>\alpha</m> in <m>S_n</m>.
+	    </li>
+	    <li>Show that <m>\tau\Delta=-\Delta</m> for any
+	      transposition <m>\tau</m> in <m>S_n</m>.
+	    </li>
+	    <li>Show that <m>\phi\colon S_n \to \Perm(X)</m> given
+ by <m>\phi(\alpha)(\pm \Delta) = \alpha (\pm \Delta)</m>
+	      is a group action.
+	    </li>
+	    <li>Use the group action property <m>(\alpha\beta)\Delta =
+		\alpha(\beta\Delta)</m>
+		to explain why <m>\sgn(\alpha\beta)=\sgn(\alpha)\sgn(\beta)</m> for
+	      all <m>\alpha,\beta</m> in <m>S_n</m>. In other words, the
+	      sign function is a homomorphism of groups <m>S_n\to C_2</m>.
+	    </li>
+	    <li>Conclude that, if <m>\alpha</m> is expressible as a
+	      product of an even number of transpositions,
+	      then <m>\alpha</m> is an even permutation, and that any
+	      product of transpositions that equals <m>\alpha</m> must
+	      have an even number of transpositions. (A similar statement
+	      holds replacing the word <q>even</q>
+	      by the word <q>odd</q>.)
+	    </li>
+	    <li>The subset of even permutations of <m>S_n</m> is denoted
+	      <m>A_n</m>. 
+	      Give two arguments why <m>A_n</m> is a normal
+	      subgroup of <m>S_n</m>. Use (i) the 1-step or the 2-step
+	      subgroup test and definition
+	      <xref ref="normalsubgroupdefn"/>, and (ii) using criterion
+	      1 of <xref ref="normalsubgroupcharacterization"/>. This
+	      group <m>A_n</m> is called the <term>alternating group</term><idx>alternating
+	    group</idx><idx><h>groups, list of</h><h>alternating
+	      group</h> </idx><notation><usage><m>A_n</m></usage><description>the
+	      alternating group</description></notation>.
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+    </exercise>
+    
+    <aside component="instructor"><title>Instructor's solution for <xref ref="signofpermexer"/></title>
+      <p>
+	<ol>
+	  <li><me>\Delta_4 = (x_1-x_2)(x_1-x_3)(x_1-x_4)(x_2-x_3)(x_2-x_4)(x_3-x_4)</me>
+	  </li>
+	  <li>Red factors have orientation reversal, so each contributes
+	  a minus sign. Do this in class with colored markers or chalk,
+	    match factors with <m>\Delta_4</m> with arrows, and circle
+	    the orientation reversed factors with red to show
+	    how <m>(134)\Delta_4=\Delta_4</m>
+	    and <m>(1324)\Delta_4=-\Delta_4</m>, so we
+	    have <m>\sgn(134)=1</m> and <m>\sgn(1324)=-1</m>.
+	    <md>
+	      <mrow>(134)\Delta_4 \amp =
+		\textcolor{red}{(x_3-x_2)}(x_3-x_4)\textcolor{red}{(x_3-x_1)}(x_2-x_4)\textcolor{red}{(x_2-x_1)}\textcolor{red}{(x_4-x_1)}</mrow>
+	      <mrow>(1324)\Delta_4 \amp = (x_3-x_4)\textcolor{red}{(x_3-x_2)}\textcolor{red}{(x_3-x_1)}\textcolor{red}{(x_4-x_2)}\textcolor{red}{(x_4-x_1)}\textcolor{red}{(x_2-x_1)}</mrow>	      
+	    </md>
+	  </li>
+	  <li>A permutation <m>\alpha</m> transforms the
+	    factor <m>(x_i-x_j)</m> of <m>\Delta</m>
+	    to <m>(x_{\alpha(i)}-x_{\alpha(j)})</m>. The latter is
+	    either <m>+1</m> or <m>-1</m> times a factor
+	    in <m>\Delta</m>, depending on whether <m>\alpha(i)\lt
+	      \alpha(j)</m> or <m>\alpha(j)\lt \alpha(i)</m>, respectively.
+	  </li>
+	  <li>Let <m>\tau = (ab)</m> with <m>a\lt b</m>. The
+	  transposition <m>\tau</m> effects an order reversal, and hence
+	  incurs a sign flip, in the
+	    following factors of <m>\Delta</m>.
+	    <md><mrow>\{(x_a-x_k)\colon a\lt k\lt b\}</mrow>
+	      <mrow>\{(x_k-x_b) \colon a\lt k\lt b\}</mrow>
+	      <mrow>\{(x_a-x_b)\}</mrow>
+	    </md>
+	    The total number of sign flips is <m>2(b-a-1)+1</m>, which
+	    is odd.
+	  </li>
+	  <li>From the definitions, it is clear that
+	    both <m>(\alpha\beta)(\pm\Delta)</m>
+	    and <m>\alpha(\beta(\pm\Delta))</m> are equal
+	    to <m>\pm\prod_{i\lt j}
+	    (x_{\alpha\beta(i)}-x_{\alpha\beta(j)})</m>. 
+	  </li>
+	  <li>From <m>(\alpha\beta)\Delta=\alpha(\beta\Delta)</m>,
+	  we have
+	    <me>\sgn(\alpha\beta)\Delta=\sgn(\alpha)\sgn(\beta)\Delta</me>
+	    and therefore <m>\sgn(\alpha\beta)=\sgn(\alpha)\sgn{\beta}</m>.
+	  </li>
+	  <li>This follows immediately from the previous parts of this
+	    exercise.</li>
+	  <li>For (i), just write all the group elements that appear in
+	  the necessary checks as products of transpositions and count
+	  them. For (ii), we have that <m>A_n=\ker(\sgn)</m>.
+	  </li>
+	</ol>
+      </p>
+    </aside>
+    
+    
+    <exercise xml:id="gpselfactionexer"><title>Actions of a group on
+	itself</title><statment><p>Let <m>G</m> be a group. Here are
+	  three actions <m>G\to \Perm(G)</m> of <m>G</m> on itself. 
+	  <term>Left multiplication</term><idx>left multiplication</idx>
+	  is given
+	  by <me>g\to L_g</me> where <m>L_g</m> is given
+	  by <m>L_g(h)=gh</m>.
+	  	  <term>Right inverse multiplication</term>
+	  is given
+		  by <me>g\to R_g</me> where <m>R_g</m> is given
+	  by <m>R_g(h)=hg^{-1}</m>.
+	  <term>Conjugation</term>
+	  is given
+	by <me>g\to C_g</me> where <m>C_g</m> is given
+	  by <m>C_g(h)=ghg^{-1}</m>.
+	  <ol>
+	    <li>Show that, for <m>g\in G</m>, the
+	      maps <m>L_g,R_g,C_g</m> are elements of <m>\Perm(G)</m>.
+	      </li>
+	    <li>	  Show that each of these
+	      maps <m>L,R,C</m> is indeed a group action.</li>
+	    <li>Show that the map <m>L</m> is injective, so
+	    that <m>G\approx L(G)</m>.
+	    </li>
+	  </ol>
+	</p>
+	<p><alert>Consequence of this exercise:</alert> Every group is
+	isomorphic to a subgroup of a permutation group.
+	</p>
+      </statment>
+    </exercise>
+    
+
+    <!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for
+    <xref ref="gpselfactionexer"/></title>
+  <p>
+    <ol>
+      <li>We will show that <m>L_g</m> is invertible. Similar arguments
+	show that <m>R_g,C_g</m> are invertible. We have
+	<me>L_{g^{-1}}(L_g(x))=g^{-1}gx=x</me>
+	for all <m>x\in G</m>. A similar argument shows
+	that <m>L_g(L_{g^{-1}}(x))=x</m> for all <m>x</m>. We conclude
+	that <m>L_g</m> is invertible, with
+	inverse <m>(L_g)^{-1}=L_{g^{-1}}</m>. Thus <m>L_g</m> is an
+	element of <m>\Perm(G)</m>, as desired.
+      </li>
+    <li>You just have to check that <m>L_{gh}=L_g\circ
+  L_h</m>, <m>R_{gh}=R_g\circ R_h</m> (here you see why the inverse is needed!), 
+      and <m>C_{gh}=C_g\circ C_h</m>. Here is the argument
+      for <m>L</m>. Similar arguments work
+      for <m>R,C</m>. Let <m>g,h\in G</m>. We have
+      <m>L_g(L_h(x))=g(hx) = (gh)x = L_{gh}(x)</m> for all <m>x\in
+	G</m>, so we have <m>L_g\circ L_h = L_{gh}</m>.
+    </li>
+    <li>For injectivity, if <m>L_g=L_h</m>,
+    then <m>g=L_g(e)=L_h(e)=h</m>. By the First Isomorphism Theorem, we
+      conclude that <m>G\approx L(G)</m>, which is subgroup of <m>\Perm(G)</m>.
+    </li>
+  </ol>
+
+  </p>
+</aside>
+
+
+    <exercise xml:id="cosetsrevisitedexer"><title>Cosets, revisited</title><statement><p>Let <m>H</m>
+	  be a subgroup of a group <m>G</m>, and consider the map
+	  <me>R\colon H\to \Perm(G)</me> given by <m>h\to R_h</m>,
+	  where <m>R_h(g)=gh^{-1}</m> (this is the restriction of right
+	  inverse multiplication action in
+	  <xref ref="gpselfactionexer"/> to <m>H</m>).
+	  Show that the orbits of this action of <m>H</m> on <m>G</m>
+	  are the same as the cosets of <m>H</m>. This shows that the
+	  two potentially different meanings of <m>G/H</m> (one is the
+	  set of cosets, the other is the set of orbits of the action
+	  of <m>H</m> on <m>G</m> via <m>R</m>), are in fact
+	  in agreement. 
+	</p>
+	<!--
+	<p><alert>Comment:</alert> The orbits of the left multiplication
+	  action of <m>H</m> on <m>G</m> are called the <term>right
+	    cosets</term> of <m>H</m>. A right coset <m>Hg</m> is a set
+	  of the form <m>Hg=\{hg\colon h\in H\}</m>. The set of all
+	  right cosets is denoted <m>H\backslash G</m>.
+	</p>-->
+      </statement>
+    </exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="cosetsrevisitedexer"/></title>
+  <p>An orbit of the group action <m>H\to \Perm(G)</m> is a set of the
+    form
+    <me>\Orb(g)=\{gh^{-1}\colon h\in H\}</me> for some <m>g\in
+      G</m>. Consider the map <m>x\to gx^{-1}g</m>. For <m>x=gh^{-1}\in
+      \Orb(g)</m>, we have <m>i(gh^{-1})=g(gh^{-1})g=gh</m>, so the
+    image of <m>i</m> is contained in the coset <m>gH</m>. The map <m>i</m>
+     is its own inverse:
+    <me>i(i(x))= i(gxg^{-1})= g(gxg^{-1})g=x</me>,
+    so we conclude that <m>i\colon \Orb(g)\to gH</m> is bijective. Thus
+    we have established that <m>\Orb(g)=gH</m>, as desired.
+  </p>
+</aside>
+    
+    <exercise xml:id="gpactonvectspaceexer"><title>The natural action of a matrix group on a vector
+	space</title><statement><p>Let <m>G</m> be a group whose
+	  elements are <m>n\times n</m> matrices with entries in a field
+	  <m>\F</m>
+	  and with the group
+	  operation of matrix multiplication. The <term>natural
+	    action</term> <m>G\to \Perm(X)</m>
+	  of 
+	  <m>G</m> on the vector space <m>X=\F^n</m> is given by
+	  <me>g\to [v\to g\cdot v],</me> where the <q>dot</q> in the
+	  expression <m>g\cdot v</m> is ordinary multiplication of a
+	  matrix times a column vector. Show that this is indeed a group
+	  action. 
+	</p>
+      </statement>
+    </exercise>
+
+    <!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="gpactonvectspaceexer"/></title>
+  <p>Let <m>\phi</m> denote the map <m>\phi\colon G\to \Perm(X)</m>
+    given by <me>g\to [v\to g\cdot v],</me> so that <m>(\phi(g))(v)=gv</m>
+    for <m>g\in G</m>, <m>v\in X</m>. To see that <m>\phi</m> is a
+    homomorphism, we have, 
+    <me>(\phi(gh))(v)=(gh)v = g(hv) =(\phi(g)\circ\phi(h))(v)</me> for
+    all <m>v\in X</m>. [Note: the equality <m>(gh)v=g(hv)</m> uses the
+    fact that matrix multiplication is associative.] We conclude
+    that <m>\phi(gh)=\phi(g)\circ \phi(h)</m>, as required.
+  </p>
+</aside>
+
+<exercise xml:id="orbitspartitionexer">
+  <statement><p>Prove <xref ref="orbitspartition"/>.
+     <ol> <li>Show
+	 that <m>\sim_G</m> is an equivalence relation.</li>
+       <li>Show
+	 that <m>x\sim_G y</m> if and only if <m>y\in \Orb(x)</m>.</li>
+       <li>Explain
+	 why <m>X/G</m> is a partition of <m>X</m>.</li>
+     </ol>
+    </p>
+  </statement>
+</exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="orbitspartitionexer"/>
+  (proof of <xref ref="orbitspartition"/>)</title>
+  <p>First, we check that <m>\sim_G</m> is an equivalence
+    relation. For symmetry, we have <m>x=e_Gx</m> for all <m>x\in
+      X</m>. For reflexivity, if <m>y=gx</m>, then <m>x=g^{-1}y</m>. For
+    transitivity, if <m>y=gx</m> and <m>z=hy</m>,
+    then <m>z=hy=h(gx)=(hg)x</m>. It follows that the set of equivalence
+    classes <m>X/\!\!\sim_G</m> forms a partition of <m>X</m>. Since <m>X/G=X/\!\!\sim_G</m> by
+    definition, it follows that orbits form a partition.
+  </p>
+</aside>
+
+
+<exercise xml:id="orbitstabthmpfexer">
+  <statement>
+    <p>
+Prove The Orbit-Stabilizer Theorem (<xref ref="orbitstabthm" />). 
+    </p>
+  </statement>
+</exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="orbitstabthmpfexer"/></title>
+  <p>Let <m>x_0\in X</m> and consider the function <m>f_{x_0}\colon G\to X</m> given
+    by <m>f_{x_0}(g)= gx_0</m>. Applying
+    <xref ref="constructequivrelpart"/> to <m>f_{x_0}</m>, we
+    have <m>G/\!\!\sim_{f_{x_0}}=G/\Stab(x_0)</m>, and <m>f_{x_0}(G)=\Orb(x_0)</m>.
+  </p>
+  <p>Alternatively, one can check that the given map
+    is well-defined, one-to-one, and onto. Let <m>\pi</m> denote the map <m>\pi(g\Stab(x))=gx</m>.
+    <ul>
+      <li>(<m>\pi</m> is well-defined)
+	Suppose <m>g\Stab(x)=h\Stab(x)</m>. By
+	<xref ref="cosetspartition"/>, we have <m>g^{-1}h\in
+	  \Stab(x)</m>. Thus we have <m>g^{-1}hx=x</m>,
+	so <m>gx=hx</m>. We conclude that <m>\pi</m> is onto.
+      </li>
+      <li>(<m>\pi</m> is one-to-one)
+	Suppose <m>\pi(g\Stab(x))=gx=hx=\pi(h\Stab(x))</m>. Then <m>g^{-1}hx=x</m>,
+	so <m>g^{-1}h\in \Stab(x)</m>, so <m>g\Stab(x)=h\Stab(x)</m>. We
+	conclude that <m>\pi</m> is one-to-one.
+      </li>
+      <li>(<m>\pi</m> is onto) Given <m>gx\in \Orb(x)</m>, we
+	have <m>\pi(g\Stab(x))=gx</m>. We conclude that <m>\pi</m> is onto.
+      </li>
+    </ul>
+    
+  </p>
+</aside>
+
+<exercise xml:id="projspaceandgroupexer"><title>The projective linear
+    group action on projective space</title>
+      <p>
+	Let <m>V</m> be a vector space over a field <m>\F</m> (in this
+	course, the base field <m>\F</m> is either the real
+	numbers <m>\R</m> or the complex
+	numbers <m>\C</m>).
+        The group <m>\F^\ast</m> of nonzero elements in <m>\F</m>
+	acts on the set <m>V\setminus \!\{0\}</m> of nonzero elements
+	in <m>V</m> by scalar
+	multiplication, that is, by the map
+	<m>\alpha \to [v\to \alpha v]</m>.
+	 The set of orbits
+	<m>(V\setminus\!\{0\})/\F^\ast</m>
+	is called the <em>projectivization</em> of <m>V</m>, or simply
+	<term>projective space</term><idx>projective
+	  space</idx>, and is
+	denoted <m>\Proj(V).</m><notation><usage><m>\Proj(V)</m>
+	  </usage><description>projective space</description>
+	</notation>
+	<ol>
+	  <li>Let <m>\sim_{\text{proj}}</m> denote the equivalence relation that defines the orbits
+	    <m>(V\setminus \!\{0\})/\F^\ast</m>.
+	    Verify that <m>\sim_{\text{proj}}</m> is given by <m>x\sim_{\text{proj}} y</m> if
+	and only if <m>x=\alpha y</m> for some
+	 <m>\alpha\in\F^\ast</m>.
+	  </li>
+	  <li>Verify that the group <m>GL(V)</m> (the group of invertible
+	linear transformations of <m>V</m>) acts on <m>\Proj(V)</m> by
+	<men xml:id="glnprojaction">g\cdot [{v}] = [g({v})]</men>
+	for <m>g\in GL(V)</m> and <m>{v}\in V\setminus\!\{0\}</m>.</li>
+	  <li>Show that the kernel of the map <m>GL(V)\to
+	    \Perm(\Proj(V))</m> given by  <xref ref="glnprojaction"/> is the
+	  subgroup <m>K=\{\alpha\Id\colon \alpha\in \F^\ast\}</m>.</li>
+		<li>Conclude that the <term>projective linear
+		    group</term>
+		  <idx>projective linear group</idx>
+		  <idx><h>groups, list of</h><h>projective linear
+		      group</h>
+		  </idx>		  
+		  <m>PGL(V):=GL(V)/K</m><notation><usage><m>PGL(V)</m>
+		    </usage><description>the
+	projective linear group</description>
+		  </notation>
+		  acts
+		  on <m>\Proj(V)</m>. </li>
+		<li>Show that <m>\F^\ast</m> acts on <m>GL(V)</m>
+		  by <m>\alpha\cdot T=\alpha T</m>, and
+		  that <m>PGL(V)\approx GL(V)/\F^\ast</m>. 
+		</li>
+		<!--
+		<li>Show that the map <m>\Proj(\R^2)\to S^1</m> given by
+		  <m>[(x,y)]\to \frac{(x+iy)^2}{x^2+y^2}</m> is
+		  well-defined and is a bijection.
+		</li>
+-->
+		<li>Let <m>s\colon S^2 \to \extC</m> denote the
+		stereographic projection (see
+		<xref ref="stereoprojdefn"/>). Show that the
+		map <m>\Proj(\C^2)\to S^2</m> given by
+		  <m>[(\alpha,\beta)]\to s^{-1}(\alpha/\beta)</m>
+		  if <m>\beta\neq 0</m> and given by <m>[(\alpha,\beta)]\to (0,0,1)</m>
+		  if <m>\beta=0</m> is  well-defined and is a bijection.
+		</li>
+	</ol>
+      </p>
+</exercise>
+
+<!-- Instructor's solution -->
+<aside component="instructor">
+  <title>Instructor's solution for <xref ref="projspaceandgroupexer"/></title>
+  <p>
+    <ol>
+      <li>Apply <xref ref="orbitspartition"/>.</li>
+      <li>Apply <xref ref="welldefinedness"/> (check that the action
+	of <m>g</m> is constant on projective equivalence classes of vectors).</li>
+      <li>Let <m>\phi\colon GL(V)\to \Perm(\Proj(V))</m> be the action
+  defined by Equation <xref ref="glnprojaction"/>. It is easy to check that <m>K\subseteq \ker(\phi)</m>. Containment in the other direction
+	requires a short linear algebra argument. Suppose <m>g\in
+	  \ker(\phi)</m>. This means that for every <m>v\in V</m>, there
+	is a nonzero scalar <m>\lambda_v</m> such that <m>gv=\lambda_v
+	  v</m> (that is, every vector in <m>V</m> is an eigenvector of
+	the operator <m>g</m>). If <m>\dim(V)=1</m>, we are
+	done. If <m>\dim(V)\gt 1</m>, choose independent
+	vectors <m>v,w\in V</m>. We
+	have <m>\lambda_{v+w}(v+w)=g(v+w)=\lambda_v v+\lambda_w
+	  w</m>. Because <m>v,w</m> are independent, it follows
+	that <m>\lambda_v=\lambda_w=\lambda_{v+w}</m>. Thus it must be
+	that there is a single <m>\lambda\in \F^\ast</m> such
+	that <m>gv=\lambda v</m> for all <m>v\in V</m>, that
+	is, <m>g</m> is an element of <m>K</m>.
+      </li>
+      <li>Apply the First Isomorphism Theorem (<xref ref="firstisothm"/>)
+	to <m>\phi\colon GL(V)\to \Perm(\Proj(V))</m> to obtain
+	<me>GL(V)/K \approx \phi(G) \stackrel{\text{inclusion}}{\longrightarrow} \Perm(\Proj(V)).</me>
+      </li>
+      <li>Given <m>\alpha,\beta</m> in <m>\F^\ast</m> and <m>T</m>
+	in <m>GL(V)</m>, the fact that <m>(\alpha \beta)T=\alpha(\beta
+	  T)</m>
+	verifies that the map <m>\F^\ast \to \Perm(GL(V))</m> given
+	by <m>\alpha\to [T\to \alpha T]</m> is a homomorphism. The
+	equivalence relation that corresponds to this action is given by
+	<m>T\sim_{\F^\ast} S</m> if and only if <m>S=\alpha T</m> for
+	some <m>\alpha\in \F^\ast</m>. Because <m>S=\alpha T</m> if and
+	only if <m>S=(\alpha \Id)T</m>, the equivalence classes that
+	define <m>PGL(V)</m> in the previous part of this problem are
+	the same as the equivalence classes <m>GL(V)/\F^\ast</m>.
+      </li>
+      <li>Factor the given map as <m>\Proj(\C^2)\to \extC\to S^2</m>
+	given by
+	<me>[(\alpha,\beta)] \to \alpha/\beta \to s^{-1}(\alpha/\beta).
+	</me>
+	Let <m>\mu</m> denote the map
+	<m>[(\alpha,\beta)] \to \alpha/\beta </m>. That <m>\mu</m>
+	is
+	well-defined follows from the observation
+	that <m>(k\alpha)/(k\beta)=\alpha/\beta</m> for all <m>k\in
+	  \F^\ast</m>. To see that <m>\mu</m> is 
+	bijective, we will exhibit an inverse map.
+	Let <m>\nu\colon \extC\to
+	  \Proj(\C^2)</m> be given by <m>\gamma \to [(\gamma,1)]</m>
+	for <m>\gamma \in \C</m> and <m>\infty \to [(1,0)]</m>. To check
+	that <m>\nu\circ\mu=\Id</m>, for <m>\beta\neq 0</m>, we have
+	<me>(\nu\circ \mu)([(\alpha,\beta)])=\nu(\alpha/\beta) =
+	  [(\alpha/\beta,1)]=[(\alpha,\beta)]</me>
+	and for <m>\beta=0</m>, we have
+		<me>(\nu\circ \mu)([(\alpha,0)])=\nu(\infty) =
+		  [(1,0)]=[(\alpha,0)].</me>
+		Reading the two displayed equations from right to left
+		establishes that <m>\mu\circ \nu=\Id</m>. We conclude
+		that <m>\nu=\mu^{-1}</m>. Using the fact that
+		stereographic projection <m>s</m> is bijective, we
+		  have <m>s^{-1}\circ \mu</m> is bijective, as desired.
+      </li>
+
+    </ol>
+  </p>
+</aside>
+
+
+
+  </exercises>  
+
+  </section>

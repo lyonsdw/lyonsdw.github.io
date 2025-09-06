@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Quaternions</title>
-<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,11 +75,11 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
-<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Introduction to Groups and Geometries">
-<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="David W. Lyons">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Groups and Geometries">
+<meta property="book:author" content="David W. Lyons">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -96,16 +102,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.3';
+eBookConfig.runestone_version = '7.9.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
-<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -114,7 +120,7 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="algeom_text.html"><span class="title">Introduction to Groups and Geometries</span></a></h1>
 <p class="byline">David W. Lyons</p>
 </div>
-</div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-3.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -127,7 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="complex_plane_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="basics_chapter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="stereoprojsect.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
       \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
@@ -173,7 +179,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
 \newcommand{\MOD}{\mathbin{\text{MOD}}}
 \newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
-                        #3 \amp #4 \end{array} \right]}
+#3 \amp #4 \end{array} \right]}
+
+\let\oldsection\section 
+\renewcommand{\section}{\clearpage\oldsection} 
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -181,7 +190,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -341,19 +350,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-1.html" class="internal"><span class="title">Further topics</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Further topics</span></a></div></li>
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">References</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-glossary"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Notation</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="quaternionsection"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Quaternions</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="quaternionsection"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quaternions</span>
 </h2>
-<section class="introduction" id="quaternionsection-2"><div class="para" id="quaternionsection-2-1">The quaternions, discovered by William Rowan Hamilton in 1843, were invented to capture the algebra of rotations of 3-dimensional real space, extending the way that the complex numbers capture the algebra of rotations of 2-dimensional real space.</div>
-<div class="para" id="quaternionsection-2-2">Elements in the set of quaternions <span class="process-math">\(\Quat\)</span> are in one-to-one correspondence with points in 4-dimensional real space <span class="process-math">\(\R^4\text{.}\)</span> We will write <span class="process-math">\(r\leftrightarrow (t,x,y,z)\)</span> to denote that the quaternion <span class="process-math">\(r\)</span> corresponds to the 4-tuple <span class="process-math">\((t,x,y,z)\)</span> of real numbers.</div></section><section class="subsection" id="quaternionsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Cartesian form and pure quaternions</span>
+<section class="introduction" id="quaternionsection-2"><div class="para" id="quaternionsection-2-1">The quaternions, discovered by William Rowan Hamilton in 1843, were invented to capture the algebra of rotations of 3-dimensional real space, extending the way that the complex numbers capture the algebra of rotations of 2-dimensional real space.<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quaternionsection-2-2">Elements in the set of quaternions <span class="process-math">\(\Quat\)</span> are in one-to-one correspondence with points in 4-dimensional real space <span class="process-math">\(\R^4\text{.}\)</span> We will write <span class="process-math">\(r\leftrightarrow (t,x,y,z)\)</span> to denote that the quaternion <span class="process-math">\(r\)</span> corresponds to the 4-tuple <span class="process-math">\((t,x,y,z)\)</span> of real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="quaternionsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cartesian form and pure quaternions</span>
 </h3>
 <div class="para logical" id="quaternionsection-3-2">
 <div class="para">The quaternions <span class="process-math">\(i,j,k\)</span> are defined as follows.</div>
@@ -367,8 +378,10 @@ k \amp \leftrightarrow (0,0,0,1)\tag{1.2.3}
 <div class="para">The expression <span class="process-math">\(r=a+bi+cj+dk\)</span> is called the <dfn class="terminology">Cartesian form</dfn> of the quaternion that corresponds to the vector <span class="process-math">\((a,b,c,d)\)</span> in <span class="process-math">\(\R^4\text{.}\)</span> A quaternion of the form <span class="process-math">\(a=a+0i+0j+0k\leftrightarrow
 (a,0,0,0)\)</span> is called a <dfn class="terminology">scalar</dfn> quaternion or a <dfn class="terminology">real</dfn> quaternion. A quaternion of the form <span class="process-math">\(xi+yj+zk\leftrightarrow
 (0,x,y,z)\)</span> is called a <dfn class="terminology">pure</dfn> quaternion or an <dfn class="terminology">imaginary</dfn> quaternion. For a quaternion <span class="process-math">\(r=a+bi+cj+dk\text{,}\)</span> we call the real quaternion <span class="process-math">\(a\)</span> the <dfn class="terminology">scalar part</dfn> or <dfn class="terminology">real part</dfn> of <span class="process-math">\(r\text{,}\)</span> and we call the quaternion <span class="process-math">\(xi+yj+zk\)</span> the <dfn class="terminology">vector part</dfn> or the <dfn class="terminology">imaginary part</dfn> of <span class="process-math">\(r\text{.}\)</span> To reflect the natural correspondence of the pure quaternion <span class="process-math">\(xi+yj+zk\)</span> with the vector <span class="process-math">\((x,y,z)\)</span> in <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(\R^3_\Quat\)</span> to denote the space of pure quaternions.</div>
-</div></section><section class="subsection" id="quaternionsection-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Correspondence with complex matrices</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.2.1: Cartesian form and pure quaternions"><a href="#quaternionsection-3" title="Copy heading and permalink for Subsection 1.2.1: Cartesian form and pure quaternions" aria-label="Copy heading and permalink for Subsection 1.2.1: Cartesian form and pure quaternions">🔗</a></div></section><section class="subsection" id="quaternionsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Correspondence with complex matrices</span>
 </h3>
 <div class="para logical" id="quaternionsection-4-2">
 <div class="para">Analogous to the way that the complex numbers <span class="process-math">\(\C\)</span> can be realized as the set <span class="process-math">\({\mathcal M}_\C\)</span> of <span class="process-math">\(2\times 2\)</span> real matrices  (see <a href="complex_plane_section.html#complexnosasrealmatalg" class="xref" data-knowl="./knowl/xref/complexnosasrealmatalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.1.3: Complex numbers as 2\times 2 real matrices">Exercise 1.1.3</a>), the quaternions can be realized by a set of <span class="process-math">\(2\times 2\)</span> complex matrices, as follows.  Let <span class="process-math">\({\mathcal M}_\Quat\)</span> denote the set of <span class="process-math">\(2\times 2\)</span> complex matrices of the form <span class="process-math">\(\left[\begin{array}{cc} u \amp v\\ -v^\ast \amp
@@ -381,16 +394,20 @@ u^\ast\end{array}\right].
 </div>
 <div class="para">Conversely, given a matrix <span class="process-math">\(M\in {\mathcal M}_\Quat\text{,}\)</span> with top left entry <span class="process-math">\(a+bi\)</span> and top right entry <span class="process-math">\(c+di\text{,}\)</span> let <span class="process-math">\(Q(M)\)</span> denote the quaternion <span class="process-math">\(r=a+bi+cj+dk\text{.}\)</span> It is clear that the mappings <span class="process-math">\(r\to M(r)\)</span> and <span class="process-math">\(M\to Q(M)\)</span> are inverses to one another, thus establishing a one-to-one correspondence <span class="process-math">\(\Quat\leftrightarrow {\mathcal M}_\Quat\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="quatmatalgprop"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\({\mathcal M}_\Quat\)</span> is closed under addition and multiplication.</span>
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\({\mathcal M}_\Quat\)</span> is closed under addition and multiplication.</span>
 </h4>
 <div class="para" id="quatmatalgprop-2-1">Let <span class="process-math">\(M,N\)</span> be elements of <span class="process-math">\({\mathcal
-M}_\Quat\text{.}\)</span> Then the sum <span class="process-math">\(M+N\)</span> and the product <span class="process-math">\(MN\)</span> are also elements of <span class="process-math">\({\mathcal M}_\Quat\text{.}\)</span>
-</div></article><details id="quatmatalgpropexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatmatalgpropexer-1-1">Prove <a href="quaternionsection.html#quatmatalgprop" class="xref" data-knowl="./knowl/xref/quatmatalgprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication">Proposition 1.2.1</a>.</div></article></details></section><section class="subsection" id="quaternionsection-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="space"> </span><span class="title">Addition and multiplication</span>
+M}_\Quat\text{.}\)</span> Then the sum <span class="process-math">\(M+N\)</span> and the product <span class="process-math">\(MN\)</span> are also elements of <span class="process-math">\({\mathcal M}_\Quat\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quatmatalgprop-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication"><a href="#quatmatalgprop" title="Copy heading and permalink for Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication" aria-label="Copy heading and permalink for Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication">🔗</a></div></article><details id="quatmatalgpropexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatmatalgpropexer-1-1">Prove <a href="quaternionsection.html#quatmatalgprop" class="xref" data-knowl="./knowl/xref/quatmatalgprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication">Proposition 1.2.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#quatmatalgpropexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.2"><a href="#quatmatalgpropexer" title="Copy heading and permalink for Checkpoint 1.2.2" aria-label="Copy heading and permalink for Checkpoint 1.2.2">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.2: Correspondence with complex matrices"><a href="#quaternionsection-4" title="Copy heading and permalink for Subsection 1.2.2: Correspondence with complex matrices" aria-label="Copy heading and permalink for Subsection 1.2.2: Correspondence with complex matrices">🔗</a></div></section><section class="subsection" id="quaternionsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition and multiplication</span>
 </h3>
 <div class="para logical" id="quaternionsection-5-2">
 <div class="para">By virtue of <a href="quaternionsection.html#quatmatalgprop" class="xref" data-knowl="./knowl/xref/quatmatalgprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.1: {\mathcal M}_\Quat is closed under addition and multiplication">Proposition 1.2.1</a>, we can define addition and multiplication of quaternions <span class="process-math">\(r,s\)</span> as follows.</div>
@@ -408,6 +425,7 @@ q(r+s)\amp = qr+qs \;\; \text{ (distributive law)}\tag{1.2.7}\\
 ar\amp =ra \;\; \text{ (real quaternions commute with all quaternions)}\tag{1.2.8}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="quaternionsection-5-3">
 <div class="para">In practice, it is not necessary to convert quaternions to matrices in order to add and multiply. Quaternion addition and multiplication in Cartesian form is analogous to complex multiplication, using the following basic multiplication rules.</div>
@@ -417,10 +435,13 @@ i^2=j^2=k^2=-1 \tag{1.2.9}\\
 ij=-ji=k, \;\; jk=-kj=i, \;\; ki=-ik=j\tag{1.2.10}
 \end{gather}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="quatmultrulesexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatmultrulesexer-1-1">Verify <a href="quaternionsection.html#quaternionsection-5-3-1" class="xref" data-knowl="./knowl/xref/ijksquaretominus1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.9">(1.2.9)</a> and <a href="quaternionsection.html#quaternionsection-5-3-1" class="xref" data-knowl="./knowl/xref/quatmultrules.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.10">(1.2.10)</a>.</div></article></details><div class="para logical" id="quaternionsection-5-5">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatmultrulesexer-1-1">Verify <a href="quaternionsection.html#quaternionsection-5-3-1" class="xref" data-knowl="./knowl/xref/ijksquaretominus1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.9">(1.2.9)</a> and <a href="quaternionsection.html#quaternionsection-5-3-1" class="xref" data-knowl="./knowl/xref/quatmultrules.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.10">(1.2.10)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#quatmultrulesexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.3"><a href="#quatmultrulesexer" title="Copy heading and permalink for Checkpoint 1.2.3" aria-label="Copy heading and permalink for Checkpoint 1.2.3">🔗</a></div></article></details><div class="para logical" id="quaternionsection-5-5">
 <div class="para">For <span class="process-math">\(r=a+bi+cj+dk\)</span> and <span class="process-math">\(r'=a'+b'i+c'j+d'k\text{,}\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatmultcartesian.html" id="quaternionsection-5-5-3">
 \begin{equation}
@@ -449,11 +470,14 @@ uv = -(u\cdot v) + u\times v \;\;(\text{for pure quaternions
 }u,v)\tag{1.2.13}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="quaternionsection-5-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quaternionsection-5-6-1-1">Verify <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>.</div></article></details></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="space"> </span><span class="title">Conjugate, modulus, and polar form</span>
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quaternionsection-5-6-1-1">Verify <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-5-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.4"><a href="#quaternionsection-5-6" title="Copy heading and permalink for Checkpoint 1.2.4" aria-label="Copy heading and permalink for Checkpoint 1.2.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.3: Addition and multiplication"><a href="#quaternionsection-5" title="Copy heading and permalink for Subsection 1.2.3: Addition and multiplication" aria-label="Copy heading and permalink for Subsection 1.2.3: Addition and multiplication">🔗</a></div></section><section class="subsection" id="quatconjnormsubsect"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conjugate, modulus, and polar form</span>
 </h3>
 <div class="para logical" id="quatconjnormsubsect-2">
 <div class="para">The <dfn class="terminology">conjugate</dfn> of a quaternion <span class="process-math">\(r=a+bi+cj+dk\)</span> is <span class="process-math">\(r^\ast =
@@ -467,17 +491,31 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(u\)</span> is a pure unit quaternion and <span class="process-math">\(\theta\)</span> is a real number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatconjnormsubsect-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="quatpolarformdetailsexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="quatpolarformdetailsexer-1-1"><ol class="decimal" id="quatpolarformdetailsexer-1-1-1">
-<li id="quatpolarformdetailsexer-1-1-1-1"><div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-1">Show that the following construction produces a polar form for a nonzero quaternion <span class="process-math">\(r\text{.}\)</span> Let <span class="process-math">\(r'=\frac{r}{|r|}=a'+b'i+c'j+d'k\text{.}\)</span> If <span class="process-math">\(|a'|\lt 1\text{,}\)</span> let <span class="process-math">\(u=\frac{1}{\sqrt{1-(a')^2}}(b'i+c'j+d'k)\text{,}\)</span> and let <span class="process-math">\(\theta=\arccos a'\text{.}\)</span>
-</div></li>
-<li id="quatpolarformdetailsexer-1-1-1-2"><div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-2">Fill in the remaining details on polar form for quaternions. What happens if <span class="process-math">\(r=0\text{?}\)</span> What happens if <span class="process-math">\(|a'|=1\text{?}\)</span>
-</div></li>
-<li id="quatpolarformdetailsexer-1-1-1-3"><div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-3">Are <span class="process-math">\(u,\theta\)</span> uniquely determined by <span class="process-math">\(r\text{?}\)</span> If not, describe the possible choices for <span class="process-math">\(u,\theta\text{.}\)</span>
-</div></li>
-</ol></div></article></details><div class="para logical" id="quatconjnormsubsect-4">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="quatpolarformdetailsexer-1-1">
+<ol class="decimal" id="quatpolarformdetailsexer-1-1-1">
+<li id="quatpolarformdetailsexer-1-1-1-1">
+<div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-1">Show that the following construction produces a polar form for a nonzero quaternion <span class="process-math">\(r\text{.}\)</span> Let <span class="process-math">\(r'=\frac{r}{|r|}=a'+b'i+c'j+d'k\text{.}\)</span> If <span class="process-math">\(|a'|\lt 1\text{,}\)</span> let <span class="process-math">\(u=\frac{1}{\sqrt{1-(a')^2}}(b'i+c'j+d'k)\text{,}\)</span> and let <span class="process-math">\(\theta=\arccos a'\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1.2.5.1"><a href="#quatpolarformdetailsexer-1-1-1-1" title="Copy heading and permalink for Item 1.2.5.1" aria-label="Copy heading and permalink for Item 1.2.5.1">🔗</a></div>
+</li>
+<li id="quatpolarformdetailsexer-1-1-1-2">
+<div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-2">Fill in the remaining details on polar form for quaternions. What happens if <span class="process-math">\(r=0\text{?}\)</span> What happens if <span class="process-math">\(|a'|=1\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1.2.5.2"><a href="#quatpolarformdetailsexer-1-1-1-2" title="Copy heading and permalink for Item 1.2.5.2" aria-label="Copy heading and permalink for Item 1.2.5.2">🔗</a></div>
+</li>
+<li id="quatpolarformdetailsexer-1-1-1-3">
+<div class="para" id="p-derived-quatpolarformdetailsexer-1-1-1-3">Are <span class="process-math">\(u,\theta\)</span> uniquely determined by <span class="process-math">\(r\text{?}\)</span> If not, describe the possible choices for <span class="process-math">\(u,\theta\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1.2.5.3"><a href="#quatpolarformdetailsexer-1-1-1-3" title="Copy heading and permalink for Item 1.2.5.3" aria-label="Copy heading and permalink for Item 1.2.5.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatpolarformdetailsexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.5"><a href="#quatpolarformdetailsexer" title="Copy heading and permalink for Checkpoint 1.2.5" aria-label="Copy heading and permalink for Checkpoint 1.2.5">🔗</a></div></article></details><div class="para logical" id="quatconjnormsubsect-4">
 <div class="para">Continuing the analogy with complex numbers, we have the following, for all quaternions <span class="process-math">\(r,s\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="quatconjnormsubsect-4-2">
@@ -487,17 +525,27 @@ r=|r|(\cos \theta + u\sin \theta)\tag{1.2.14}
 |rs|=|r||s|\text{.}\tag{1.2.17}
 \end{gather}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatconjnormsubsect-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="quatconjnormmultexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatconjnormmultexer-1-1">Verify the three equations above.</div>
-<div class="solutions"><details id="quatconjnormmultexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="quatconjnormmultexer-2-1">Work in <span class="process-math">\({\mathcal M}_\Quat\text{.}\)</span> Start by checking that <span class="process-math">\((M(r^\ast)) = (M(r))^\dagger\text{,}\)</span> where <span class="process-math">\(\dagger\)</span> denotes the conjugate transpose of a matrix. Alternatively, write <span class="process-math">\(r,s\)</span> in polar form and use <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>.</div></div></details></div></article></details></section><section class="subsection" id="quaternionsection-7"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="space"> </span><span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span>
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatconjnormmultexer-1-1">Verify the three equations above.<div class="autopermalink" data-description="Paragraph"><a href="#quatconjnormmultexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="quatconjnormmultexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="quatconjnormmultexer-2-1">Work in <span class="process-math">\({\mathcal M}_\Quat\text{.}\)</span> Start by checking that <span class="process-math">\((M(r^\ast)) = (M(r))^\dagger\text{,}\)</span> where <span class="process-math">\(\dagger\)</span> denotes the conjugate transpose of a matrix. Alternatively, write <span class="process-math">\(r,s\)</span> in polar form and use <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#quatconjnormmultexer-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.6.1"><a href="#quatconjnormmultexer-2" title="Copy heading and permalink for Hint 1.2.6.1" aria-label="Copy heading and permalink for Hint 1.2.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.2.6"><a href="#quatconjnormmultexer" title="Copy heading and permalink for Checkpoint 1.2.6" aria-label="Copy heading and permalink for Checkpoint 1.2.6">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.4: Conjugate, modulus, and polar form"><a href="#quatconjnormsubsect" title="Copy heading and permalink for Subsection 1.2.4: Conjugate, modulus, and polar form" aria-label="Copy heading and permalink for Subsection 1.2.4: Conjugate, modulus, and polar form">🔗</a></div></section><section class="subsection" id="quaternionsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quaternions as rotations of <span class="process-math">\(\R^3_\Quat\)</span></span>
 </h3>
-<div class="para" id="quaternionsection-7-2">Let <span class="process-math">\(r\)</span> be a unit quaternion and let <span class="process-math">\(v\)</span> be a pure quaternion. Let <span class="process-math">\(R_r(v)\)</span> denote the quaternion <span class="process-math">\(R_r(v)=rvr^\ast\text{.}\)</span> It is easy to check that <span class="process-math">\((R_r(v))^\ast = -R_r(v)\text{.}\)</span> From this we conclude that <span class="process-math">\(rvr^\ast\)</span> is a pure quaternion.</div>
+<div class="para" id="quaternionsection-7-2">Let <span class="process-math">\(r\)</span> be a unit quaternion and let <span class="process-math">\(v\)</span> be a pure quaternion. Let <span class="process-math">\(R_r(v)\)</span> denote the quaternion <span class="process-math">\(R_r(v)=rvr^\ast\text{.}\)</span> It is easy to check that <span class="process-math">\((R_r(v))^\ast = -R_r(v)\text{.}\)</span> From this we conclude that <span class="process-math">\(rvr^\ast\)</span> is a pure quaternion.<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="rvrastispureexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rvrastispureexer-1-1">Explain how “we conclude” that <span class="process-math">\(R_r(v)\)</span> is pure when <span class="process-math">\(r\)</span> is a unit quaternion and <span class="process-math">\(v\)</span> is a pure quaternion.</div></article></details><div class="para logical" id="quaternionsection-7-4">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rvrastispureexer-1-1">Explain how “we conclude” that <span class="process-math">\(R_r(v)\)</span> is pure when <span class="process-math">\(r\)</span> is a unit quaternion and <span class="process-math">\(v\)</span> is a pure quaternion.<div class="autopermalink" data-description="Paragraph"><a href="#rvrastispureexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.7"><a href="#rvrastispureexer" title="Copy heading and permalink for Checkpoint 1.2.7" aria-label="Copy heading and permalink for Checkpoint 1.2.7">🔗</a></div></article></details><div class="para logical" id="quaternionsection-7-4">
 <div class="para">It is easy to see that <span class="process-math">\(R_r\)</span> is a linear map from the real vector space of unit quaternions to itself. That means that the following properties hold for all pure quaternions <span class="process-math">\(v,w\)</span> and all real scalars <span class="process-math">\(\alpha\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="quaternionsection-7-4-4">
@@ -506,32 +554,45 @@ R_r(v+w) \amp = R_r(v) + R_r(w)\tag{1.2.18}\\
 R_r(\alpha v) \amp = \alpha R_r(v)\tag{1.2.19}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="quatrotislinearexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatrotislinearexer-1-1">Show the details to prove that <span class="process-math">\(R_r\)</span> is linear.</div></article></details><div class="para" id="quaternionsection-7-6">We conclude with the main result of this section that shows how rotations of 3-dimensional real space are encoded in the algebra of quaternions.</div>
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="quatrotislinearexer-1-1">Show the details to prove that <span class="process-math">\(R_r\)</span> is linear.<div class="autopermalink" data-description="Paragraph"><a href="#quatrotislinearexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.2.8"><a href="#quatrotislinearexer" title="Copy heading and permalink for Checkpoint 1.2.8" aria-label="Copy heading and permalink for Checkpoint 1.2.8">🔗</a></div></article></details><div class="para" id="quaternionsection-7-6">We conclude with the main result of this section that shows how rotations of 3-dimensional real space are encoded in the algebra of quaternions.<div class="autopermalink" data-description="Paragraph"><a href="#quaternionsection-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="proposition theorem-like" id="quatrotprop"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Quaternions and rotations of <span class="process-math">\(\R^3_\Quat\)</span>.</span>
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Quaternions and rotations of <span class="process-math">\(\R^3_\Quat\)</span>.</span>
 </h4>
-<div class="para" id="quatrotprop-2-1">Let <span class="process-math">\(r=\cos\theta + u\sin\theta\)</span> be a unit quaternion in polar form, and let <span class="process-math">\(R_r\)</span> be the linear transformation of the space of pure quaternions given by <span class="process-math">\(v\to rvr^\ast\text{.}\)</span> The action of <span class="process-math">\(R_r\)</span> is a rotation by <span class="process-math">\(2\theta\)</span> radians about the axis given by the unit vector <span class="process-math">\(u\text{.}\)</span>
-</div></article></section><section class="exercises" id="quaternionsection-8"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="space"> </span><span class="title">Exercises</span>
+<div class="para" id="quatrotprop-2-1">Let <span class="process-math">\(r=\cos\theta + u\sin\theta\)</span> be a unit quaternion in polar form, and let <span class="process-math">\(R_r\)</span> be the linear transformation of the space of pure quaternions given by <span class="process-math">\(v\to rvr^\ast\text{.}\)</span> The action of <span class="process-math">\(R_r\)</span> is a rotation by <span class="process-math">\(2\theta\)</span> radians about the axis given by the unit vector <span class="process-math">\(u\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quatrotprop-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat"><a href="#quatrotprop" title="Copy heading and permalink for Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat" aria-label="Copy heading and permalink for Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">🔗</a></div></article><div class="autopermalink" data-description="Subsection 1.2.5: Quaternions as rotations of \R^3_\Quat"><a href="#quaternionsection-7" title="Copy heading and permalink for Subsection 1.2.5: Quaternions as rotations of \R^3_\Quat" aria-label="Copy heading and permalink for Subsection 1.2.5: Quaternions as rotations of \R^3_\Quat">🔗</a></div></section><section class="exercises" id="quaternionsection-8"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="quatrotpropexer"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<article class="exercise exercise-like" id="quatrotpropexer"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="quatrotpropexer-1-1">
 <div class="para">Prove <a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a> using the following outline. Let <span class="process-math">\(r=\cos\theta + u\sin\theta\)</span> be a polar form for a unit quaternion <span class="process-math">\(r\text{.}\)</span>
 </div>
 <ol class="lower-alpha lower-alpha-level-1" id="quatrotpropexer-1-1-4">
-<li id="quatrotpropexer-1-1-4-1"><div class="para" id="p-derived-quatrotpropexer-1-1-4-1">Show that <span class="process-math">\(R_r(u)=u\text{.}\)</span>
-</div></li>
-<li id="quatrotpropexer-1-1-4-2"><div class="para" id="p-derived-quatrotpropexer-1-1-4-2">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/purequatproduct.html" id="quatrotpropformula">
+<li id="quatrotpropexer-1-1-4-1">
+<div class="para" id="p-derived-quatrotpropexer-1-1-4-1">Show that <span class="process-math">\(R_r(u)=u\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1.2.6.1.a"><a href="#quatrotpropexer-1-1-4-1" title="Copy heading and permalink for Item 1.2.6.1.a" aria-label="Copy heading and permalink for Item 1.2.6.1.a">🔗</a></div>
+</li>
+<li id="quatrotpropexer-1-1-4-2">
+<div class="para" id="p-derived-quatrotpropexer-1-1-4-2">Let <span class="process-math">\(v\)</span> be any pure unit quaternion orthogonal to <span class="process-math">\(u\text{,}\)</span> and let <span class="process-math">\(w=u\times v\text{,}\)</span> so that the triple <span class="process-math">\(u,v,w\)</span> forms a right-handed coordinate system for <span class="process-math">\(\R^3\text{.}\)</span> Show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/purequatproduct.html" id="quatrotpropformula">
 \begin{equation}
 R_r(v) = \cos(2\theta)v + \sin(2\theta)w\tag{1.2.20}
 \end{equation}
-</div>(use equation <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. </div></li>
+</div>(use equation <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a>) and then explain how this proves the Proposition. </div>
+<div class="autopermalink" data-description="Item 1.2.6.1.b"><a href="#quatrotpropexer-1-1-4-2" title="Copy heading and permalink for Item 1.2.6.1.b" aria-label="Copy heading and permalink for Item 1.2.6.1.b">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatrotpropexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="quatrotpropexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para logical" id="quatrotpropexer-2-1">
+<div class="solutions"><details id="quatrotpropexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="quatrotpropexer-2-1">
 <div class="para">In deriving equation <a href="quaternionsection.html#quatrotpropformula" class="xref" data-knowl="./knowl/xref/quatrotpropformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.20">(1.2.20)</a>, you will obtain expressions <span class="process-math">\(uv-vu\)</span> and <span class="process-math">\(uvu\text{.}\)</span> Use equation <a href="quaternionsection.html#purequatproduct" class="xref" data-knowl="./knowl/xref/purequatproduct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.13">(1.2.13)</a> to show that <span class="process-math">\(uv-vu=2w\)</span> and <span class="process-math">\(uvu=v\text{.}\)</span> Show that the quaternion on the right side of <a href="quaternionsection.html#quatrotpropformula" class="xref" data-knowl="./knowl/xref/quatrotpropformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.2.20">(1.2.20)</a> has norm 1. Finally, use the fact that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotpropformula.html ./knowl/xref/purequatproduct.html ./knowl/xref/quatrotpropformula.html">
 \begin{equation*}
@@ -541,21 +602,33 @@ a\cdot b =
 </div>
 <div class="para">for real vectors <span class="process-math">\(a,b\)</span> that make an angle <span class="process-math">\(t\)</span> at the origin to determine the angle made by <span class="process-math">\(v,R_r(v)\text{.}\)</span>
 </div>
-</div></div></details></div></article><article class="exercise exercise-like" id="quatrotcompinvexer"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatrotpropexer-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.6.1.1"><a href="#quatrotpropexer-2" title="Copy heading and permalink for Hint 1.2.6.1.1" aria-label="Copy heading and permalink for Hint 1.2.6.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1.2.6.1"><a href="#quatrotpropexer" title="Copy heading and permalink for Exercise 1.2.6.1" aria-label="Copy heading and permalink for Exercise 1.2.6.1">🔗</a></div></article><article class="exercise exercise-like" id="quatrotcompinvexer"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="quatrotcompinvexer-1-1">
 <div class="para">Show that the following hold for all <span class="process-math">\(r,s\in U(\Quat)\text{.}\)</span>
 </div>
 <ol class="lower-alpha lower-alpha-level-1" id="quatrotcompinvexer-1-1-2">
-<li id="quatrotcompinvexer-1-1-2-1"><div class="para" id="p-derived-quatrotcompinvexer-1-1-2-1"><span class="process-math">\(\displaystyle R_r\circ R_s = R_{rs}\)</span></div></li>
-<li id="quatrotcompinvexer-1-1-2-2"><div class="para" id="p-derived-quatrotcompinvexer-1-1-2-2"><span class="process-math">\(\displaystyle (R_r)^{-1}=R_{r^\ast}\)</span></div></li>
+<li id="quatrotcompinvexer-1-1-2-1">
+<div class="para" id="p-derived-quatrotcompinvexer-1-1-2-1"><span class="process-math">\(\displaystyle R_r\circ R_s = R_{rs}\)</span></div>
+<div class="autopermalink" data-description="Item 1.2.6.2.a"><a href="#quatrotcompinvexer-1-1-2-1" title="Copy heading and permalink for Item 1.2.6.2.a" aria-label="Copy heading and permalink for Item 1.2.6.2.a">🔗</a></div>
+</li>
+<li id="quatrotcompinvexer-1-1-2-2">
+<div class="para" id="p-derived-quatrotcompinvexer-1-1-2-2"><span class="process-math">\(\displaystyle (R_r)^{-1}=R_{r^\ast}\)</span></div>
+<div class="autopermalink" data-description="Item 1.2.6.2.b"><a href="#quatrotcompinvexer-1-1-2-2" title="Copy heading and permalink for Item 1.2.6.2.b" aria-label="Copy heading and permalink for Item 1.2.6.2.b">🔗</a></div>
+</li>
 </ol>
-</div></article></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="complex_plane_section.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="stereoprojsect.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<div class="autopermalink" data-description="Paragraph"><a href="#quatrotcompinvexer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.2.6.2"><a href="#quatrotcompinvexer" title="Copy heading and permalink for Exercise 1.2.6.2" aria-label="Copy heading and permalink for Exercise 1.2.6.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.2.6"><a href="#quaternionsection-8" title="Copy heading and permalink for Exercises 1.2.6" aria-label="Copy heading and permalink for Exercises 1.2.6">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Quaternions"><a href="#quaternionsection" title="Copy heading and permalink for Section 1.2: Quaternions" aria-label="Copy heading and permalink for Section 1.2: Quaternions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="complex_plane_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="stereoprojsect.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

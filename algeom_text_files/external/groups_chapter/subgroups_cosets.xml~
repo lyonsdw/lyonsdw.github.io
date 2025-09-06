@@ -20,8 +20,8 @@
 	  is called a <term>(left)
 		    coset</term> of <m>H</m>.
 	  The set of all cosets
-	  of <m>H</m> is denoted <m>G/H</m>.
-	  <me>G/H := \{gH\colon g\in G\}</me>
+	  of <m>H</m> is denoted <m>G/H</m>, that is,
+	  <me>G/H := \{gH\colon g\in G\}.</me>
 	</p>
       </statement>
 	</definition>
@@ -40,7 +40,13 @@
 			of reflections a subgroup of <m>D_4</m>? Why or
 			why not? </li>	      
 	    </ol>
-	</p></statement>
+	  </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
+	</statement>
 	<answer>
 	  <ol>
 	    <li>Yes. The composition of any two rotations
@@ -57,12 +63,18 @@
 
 <exercise><statement><p>Find <m>G/H</m> for <m>G=S_3</m>, <m>H=\{e,(12)\}</m>.
     </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
   </statement>
   <answer><md>
       <mrow>G/H \amp =\{eH, (12)H, (13)H, (23)H, (123)H, (132)H\}</mrow>
-      <mrow>\amp =
-	\{\{e,(12)\},\{(12),e\},\{(13),(123)\},\{(23),(132)\},\{(13),(123)\},\{(132),(23)\}\}</mrow>
-      <mrow>\amp = \{H,\{(13),(123)\},\{(23),(132)\}\}</mrow>
+      <mrow> \amp =
+	\left\{ \{e,(12)\},\{(12),e\},\{(13),(123)\},\right.</mrow>
+	<mrow>  \amp \left.\{(23),(132)\},\{(123),(13)\},\{(132),(23)\}\right\}</mrow>
+      <mrow>\amp = \{ H,\{(13),(123)\},\{(23),(132)\}\}</mrow>
     </md>
   </answer>
 </exercise>
@@ -136,13 +148,12 @@
   </statement>
 </exercise>
 
-<p><commentary component="instructor"><title>Instructor's solution for <xref ref="subgpgenbysetexer"/></title>
+<aside component="instructor"><title>Instructor's solution for <xref ref="subgpgenbysetexer"/></title>
   <p>By construction, <m>\langle S\rangle</m> passes the 2-step subgroup
     test. If <m>S</m> were empty, then <m>\langle S\rangle</m> would be empty,
     so could not be a subgroup of <m>G</m>.
   </p>
-</commentary>
-</p>
+</aside>
 
 <exercise xml:id="generators-reading-exer"><statement><p>
       <ol><li>Find <m>\langle F_H,F_V\rangle\subseteq D_4</m>.</li>
@@ -150,6 +161,11 @@
 	</li>
       </ol>
     </p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
   </statement>
   <answer><ol><li><m>\langle F_H,F_V\rangle=\{R_0,R_{1/2},F_H,F_V\}</m>
       </li>
@@ -158,7 +174,7 @@
   </answer>
 </exercise>
 
-<commentary component="instructor"><title>Comments for the instructor on
+<aside component="instructor"><title>Comments for the instructor on
     <xref ref="generators-reading-exer"/></title>
   <p>This is a great opportunity for classroom entertainment. Perform
     the party trick <q>George Washington does a flip</q>
@@ -172,7 +188,7 @@
     way that you have accomplished <m>F_V</m>. Now unfold the long edge
     to finish <m>F_H</m>. Voila! George is facing the audience, upside down.
   </p>
-</commentary>
+</aside>
 
 
 
@@ -208,22 +224,64 @@
     <exercise xml:id="subgrouptestsexer">
       <statement>
 	<p>
-Prove <xref ref="subgrouptests"/>.
+	  Prove <xref ref="subgrouptests"/>. Be aware of the following
+	  subtlety: a subgroup <m>H</m> of a group <m>G</m> must have an
+	  identity element, but <xref ref="subgroupdefn"/>
+	  does <em>not</em> require that it be the <em>same</em> as the
+	  identity element for <m>G</m>. Similarly, an element
+	  of <m>H</m> must have in inverse, but
+	  <xref ref="subgroupdefn"/> does not require that it be the
+	  same as the inverse in <m>G</m>. Suggestion: start by proving
+	  a lemma that says if <m>H</m> is a subgroup of <m>G</m>, then the
+	  identity element for <m>H</m> must be the same as the identity
+	  element for <m>G</m>, and that inverses of elements
+	  in <m>H</m> are the same as inverses in <m>G</m>. Then use the
+	  lemma in your proof that statements (i), (ii), and (iii) are
+	  equivalent. 
 	</p>
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="subgrouptestsexer"/>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="subgrouptestsexer"/>
 	(proof of <xref ref="subgrouptests"/>)</title>
-      <p>It is clear that (i) implies (ii) and (ii) implies (iii). Now
-	suppose (iii) holds. Let <m>a</m> be an element
-	of <m>H</m>. Then <m>aa^{-1}=e</m> is in <m>H</m>, and
-	therefore <m>ea^{-1}=a^{-1}</m> is in <m>H</m>, and furthermore,
-	<m>H</m> is closed under inversion. Now	let <m>a,b</m> be
-	in <m>H</m>. Then <m>b^{-1}</m> is in <m>H</m>,
-	so <m>a(b^{-1})^{-1}=ab</m> is in <m>H</m>. This shows that (i) holds.
+      <p>Suppose that <m>H</m> is a subgroup of a
+	group <m>G</m>. Because <m>H</m> is a group, it must have an
+	identity element, say <m>e_H</m>, with the property that <m>e_H
+	a=ae_H = a</m> for all <m>a\in H</m>. Let <m>x=e_H^{-1}</m>,
+	that is, the element that is inverse to <m>e_H</m> in <m>G</m>,
+	and consider the product <m>y=xe_He_H</m>. On the one hand, we
+	have
+	<me>y=(xe_H)e_H=e_Ge_H=e_H</me>
+	and on the other hand we have
+	<me>y=x(e_He_H)=xe_H=e_G.</me>
+	Thus we have <m>e_H=e_G</m>. Now let <m>a</m> be an element
+	of <m>H</m>, let <m>u</m> denote the element that is inverse
+	to <m>a</m> in <m>G</m>, and let <m>v</m> be the element that is
+	inverse to <m>a</m> in <m>H</m>. We have
+	<me>vau=(va)u=e_Hu=e_Gu=u</me>
+	and we have
+	<me>vau=v(au)=ve_G=v</me>
+	so that we have <m>u=v</m>. This proves the lemma suggested in
+	the directions for the exercise. A consequence of the lemma
+	is that, if <m>H</m> is a subgroup of <m>G</m>,
+	then we can unambiguously
+	write <m>a^{-1}</m> to denote the inverse of an element <m>a</m>
+	in <m>H</m>, whether we are viewing that element <m>a</m> as an
+	element of <m>H</m> or of <m>G</m>.</p>
+      <p>
+	It follows easily that (i) implies
+	(ii). It is clear that (ii) implies (iii). Now
+	suppose (iii) holds. Let <m>c</m> be an element
+	of <m>H</m>, and let <m>a=b=c</m>. Then <m>ab^{-1}=e</m> is in <m>H</m>, and
+	therefore <m>eb^{-1}=c^{-1}</m> is in <m>H</m>. Further,
+	let <m>d</m> be another element of <m>H</m>, and let <m>a=d,
+	  b=c^{-1}</m>. Then <m>ab^{-1}=dc</m> is in <m>H</m>. We
+	conclude that the associative binary group operation on <m>G</m> restricts
+	to <m>H</m>, and that <m>H</m> meets the requirements of a group
+	(existence of an identity, and existence of inverses) with
+	respect to this binary operation. This shows that (i) holds.
       </p>
-    </commentary>
+    </aside>
 
     <exercise>
       <statement>
@@ -231,6 +289,11 @@ Prove <xref ref="subgrouptests"/>.
 		      Find all the subgroups
 		      of <m>S_3</m>. 
 	</p>
+<!-- "see solutions in the back" comment -->
+<p component="printstudent">
+(See <em>Solutions to Exercises</em> in <xref ref="solutionsintheback"/>.)
+</p>
+<!-- end of "see solutions" comment -->
       </statement>
       <answer><p>In the <q>list of values</q>
 	   permutation notation of
@@ -258,12 +321,12 @@ Prove <xref ref="subgrouptests"/>.
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="d4cosetexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="d4cosetexer"/></title>
       <p>The cosets of <m>J=\{R_0,R_{1/2}\}</m> are
 	<m>R_0J=R_{1/2}J=J</m>, <m>R_{1/4}J=R_{3/4}J=\{R_{1/4},R_{3/4}\}</m>, <m>F_HJ=F_VJ=\{F_H,F_V\}=</m>,
 	and <m>F_DJ=F_{D'}J=\{F_D,F_{D'}\}</m>.
       </p>
-    </commentary>
+    </aside>
 
     <exercise xml:id="subgpsofzexer"><title>Subgroups of <m>\Z</m> and <m>\Z_n</m>
       </title>
@@ -296,7 +359,7 @@ Prove <xref ref="subgrouptests"/>.
 		</statement>
       </exercise>
 
-      <commentary component="instructor"><title>Instructor's solution for
+      <aside component="instructor"><title>Instructor's solution for
 	  <xref ref="subgpsofzexer"/></title>
 	<p>
 	  <ol>
@@ -332,7 +395,7 @@ Prove <xref ref="subgrouptests"/>.
 	    </li>
 	  </ol>
 	</p>
-      </commentary>
+      </aside>
       
     
     <exercise xml:id="center">
@@ -369,7 +432,7 @@ Prove <xref ref="subgrouptests"/>.
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="center"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="center"/></title>
       <p><ol>
 	  <li>First, observe that <m>C(a)</m> is not empty
 	    because <m>e\in C(a)</m>.
@@ -389,7 +452,7 @@ Prove <xref ref="subgrouptests"/>.
 	  </li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
 
 
     <exercise xml:id="orderofaneltexer"><title>The order of a group element</title>
@@ -409,12 +472,12 @@ Prove <xref ref="subgrouptests"/>.
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="orderofaneltexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="orderofaneltexer"/></title>
       <p>The set on the right is contained in the set on the left by
 	definition. To show containment in the other direction, let <m>g^k</m> be an element of <m>\langle g\rangle</m>. Use the division
 	algorithm to write <m>k=qn+r</m> with <m>0\leq r\leq
 	  n-1</m>. Then we have <me>g^k=g^{qn+r}= (g^{n})^qg^r=g^r.</me></p>
-    </commentary>
+    </aside>
     
     
     <exercise xml:id="cosetspartitionexer">
@@ -447,7 +510,7 @@ Prove <xref ref="subgrouptests"/>.
 	      </hint>
     </exercise>      
 
-    <commentary component="instructor"><title>Instructor's solution for <xref ref="cosetspartitionexer"/></title>
+    <aside component="instructor"><title>Instructor's solution for <xref ref="cosetspartitionexer"/></title>
       <p>
 	<ol>
 	  <li>Proof of <xref ref="cosetspartition"/>. For reflexivity of
@@ -485,7 +548,7 @@ Prove <xref ref="subgrouptests"/>.
 	  </li>
 	</ol>
       </p>
-    </commentary>
+    </aside>
     
     <exercise xml:id="lagrangeconseqexer"><title>Consequences of Lagrange's Theorem</title>
       <statement>
@@ -501,7 +564,7 @@ Prove <xref ref="subgrouptests"/>.
       </statement>
     </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 	<xref ref="lagrangeconseqexer"/></title>
 	      <p><ol>
 		  <li>Apply Lagrange's theorem to the
@@ -521,7 +584,7 @@ Prove <xref ref="subgrouptests"/>.
 		  </li>
 		</ol>
 	      </p>
-    </commentary>
+    </aside>
     
   </exercises>
 
