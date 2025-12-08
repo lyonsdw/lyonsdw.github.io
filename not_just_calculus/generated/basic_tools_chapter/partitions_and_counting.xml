@@ -1,8 +1,109 @@
 <section xml:id="partitions_and_counting_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>
-Partitions and Counting
+Enumeration and Partitions
 </title>
 
+<subsection>
+  <title>Finite Sets</title>
+  <p>
+    A nonempty set <m>S</m> is called <term>finite</term><idx><h>set</h><h>finite
+	set</h></idx> if there exists a one-to-one correspondence
+    <m>f\colon \{1,2,\ldots,n\} \to S</m> for some positive
+    number <m>n</m>. A one-to-one
+    correspondence <m>f\colon\{1,2,\ldots,n\} \to S</m> is called
+    an <term>enumeration</term> of <m>S</m> (or a <term>counting</term>, or
+    an <term>ordering</term> of <m>S</m>). We often use the notation <m>s_1,s_2,\ldots,s_n</m>
+    to denote <m>f(1),f(2),\ldots,f(n)</m>. We write <m>|S|</m><notation><usage><m>|S|</m>
+      </usage>
+   <description>size of a finite set <m>S</m>
+   </description>
+   </notation> to
+    denote the <term>size</term>
+    of <m>S</m> (or the <em>number of elements
+    in </em> <m>S</m>) for a finite set with an
+    enumeration <m>f\colon\{1,2,\ldots,n\} \to S</m>. The empty set is
+    defined to be finite, with size zero.
+    A set that is not finite is called 
+    <term>infinite</term><idx><h>set</h><h>infinite set</h></idx>.
+  </p>
+
+  <exercise><p>
+    Show that enumerations of a finite set with more than one element
+    are not unique. Find three different enumerations of the
+    set <m>X=\{a,b,c\}</m>. How may enumerations of <m>X</m>
+    are there in all?
+    </p>
+  </exercise>
+</subsection>
+
+<subsection>
+  <title>Indexing</title>
+  <p>An enumeration of a finite set is an example
+    of <em>indexing</em>. When we refer to  <q>the indexed
+    set  <m>S=\{s_1,s_2,\ldots,s_n\}</m></q>, we mean that there exists 
+    a one-to-one correspondence <m>f\colon
+    \{1,2,\ldots,n\}\to S</m> with the values <m>s_k=f(k)</m>. This
+    allows us to enjoy the benefits of the enumeration without
+    having to explicitly mention <m>f</m>. We say that <m>s_k=f(k)</m>
+    is the <m>k</m>th element of <m>S</m> and we refer to <m>k</m> as
+    the <em>index</em> of the element <m>s_k</m>. More generally, we may
+    refer to any one-to-one correspondence <m>f\colon \Lambda \to A</m>,
+    between any two sets <m>\Lambda,A</m> (finite or not) as an
+    idexing. In this context, we may write <m>a_\lambda=f(\lambda)</m>
+    and refer to <m>\lambda</m> as the index of the element <m>a_\lambda
+    \in A</m>.
+  </p>
+
+  <p>Indexing is used in notation for unions
+    and intersections of sets, and for sums and
+    products of sets of numbers.
+    Given an indexed set of
+    sets <m>\mathcal{U}=\{U_1,U_2,\ldots,U_n\}</m>, we
+    write <m>\bigcup_{k=1}^n U_k</m> to denote the union
+        <me>\bigcup_{k=1}^n U_k = U_1\cup U_2\cup \cdots  \cup U_n
+    </me>
+	of all the elements in <m>\mathcal{U}</m>.
+	Similarly, we
+    write <m>\bigcap_{k=1}^n U_k</m> to denote the intersection
+        <me>\bigcap_{k=1}^n U_k = U_1\cap U_2\cap \cdots  \cap U_n
+    </me>
+	of all the elements in <m>\mathcal{U}</m>.
+    Given an indexed set of real numbers <m>A=\{a_1,a_2,\ldots,a_n\}</m>, we
+    write <m>\sum_{k=1}^n a_n</m> to denote the sum
+    <me>\sum_{k=1}^n a_k = a_1+a_2+ \cdots + a_n
+    </me>
+    of all the elements in <m>A</m>.
+    Similarly, we write <m>\prod_{k=1}^n a_n</m> to denote the product
+        <me>\prod_{k=1}^n a_k = a_1\cdot a_2\cdot \cdots \cdot a_n
+	</me>
+	of the elements in <m>A</m>.
+	</p>
+	<p>
+	It is often the case that the indexing of a set plays no
+	particular role. For this reason, it is common to write
+	<me>\bigcup_{U\in \mathcal{U}}U,\;\; \bigcap_{U\in \mathcal{U}}U,\;\; \sum_{a\in A}a,\;\; \prod_{a\in A} a</me>
+	to denote the union of all the sets in <m>\mathcal{U}</m>, the intersection of all the sets in <m>\mathcal{U}</m>, 
+	the sum of all the numbers in <m>A</m>, and the product of all the numbers in <m>A</m>, respectively.
+	</p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Write <me>[0,1)\cap [1/2,1/3) \cap \cdots \cap [1/17,1/18)</me> using indexed
+	  intersection notation. </li>
+	<li>Write <me>1+(1-1/2) + (1-3/4) + \cdots + (1-255/256)</me> using
+	  indexed summation notation. Write </li>
+	<li>Write
+	  <me>1\cdot 4\cdot 7\cdot \cdots \cdot 104</me> using indexed product notation.
+	</li>
+</ol>
+    </p>
+  </exercise>
+  
+</subsection>
+
+<subsection>
+  <title>Partitions</title>
 <p>
   Two sets are called <term>disjoint</term><idx><h>set</h><h>disjoint sets</h></idx>
   if their intersection is empty. A collection of sets is
@@ -75,20 +176,6 @@ Partitions and Counting
     </exercise>
 
 
-<p>
-   A set is called <term>finite</term><idx><h>set</h><h>finite set</h></idx>
-   if it contains a
-finite number of elements. A set that is not finite is called 
-  <term>infinite</term><idx><h>set</h><h>infinite set</h></idx>. The number of elements in a finite set <m>S</m> is called the
-  <term>size</term>
-  of <m>S</m>, denoted <m>|S|</m>  <notation><usage><m>|S|</m>
-      </usage>
-   <description>size of a finite set <m>S</m>
-   </description>
-   </notation>. Formally, we say <m>|S|=n</m>, where <m>n</m> is a
-positive integer, if there exists a one-to-one correspondence
-<m>\{1,2,\ldots,n\} \to S</m>.
-</p>
 
 <proposition><title>Counting elements in a set using partitions</title>
   <statement><p>Let <m>\mathcal{U}</m> be a partition of a finite set
@@ -114,6 +201,8 @@ the preimage sets
 <m>\{f^{-1}(t)\colon t\in T\}</m>. </p>
 </proof>
   </corollary>
+
+</subsection>
 
 <exercises>
 

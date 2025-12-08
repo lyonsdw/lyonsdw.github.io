@@ -268,7 +268,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Injectivity and Surjectivity",
-  "body": " Injectivity and Surjectivity  In , we note that a function is invertible if every element in the codomain has exactly one preimage. A function is surjective function surjective function , or onto function onto function , if every element of the codomain has at least one preimage. A function is injective function injective function , or one-to-one function one-to-one function , if every element of the codomain has at most one preimage. A function is bijective function bijective function if it is both injective and surjective, that is, if every element in the codomain is the right entry of exactly one element of the function. Thus, the adjectives bijective and invertible mean the same thing. A bijective function is also called a one-to-one correspondence function one-to-one correspondence .    Let be a function, and suppose that there exists a function such that . Then is surjective.    Let be an element of , and let . Applying to both sides of the last equation, we have . Because , the last expression simplifies to . This shows that the preimage of under has at least one element, namely . Because was an arbitrary choice, we conclude that every element in has at least one element in its preimage under . Therefore is surjective.      Let be a function, and suppose that there exists a function such that . Then is injective.    Let be an element of , and let . If is a preimage of under , then . Applying to both sides of , we have . On the right side, we have . On the left, we have . Therefore we have . This shows that any preimage of under must be equal to . Because was an arbitrary choice, we conclude that every element in has at most one preimage under . Therefore is injective.      The proofs for the two previous propositions both begin with the sentence Let be an element of , and let .  In the first proof, we end up concluding that is a preimage of under . Do we get the same conclusion in the second proof? If the answer is no , then give an explicit example that shows why the answer is no.  In the first proof, do we show that is the only preimage of under , or could there be others? If the answer is no , then give an explicit example that shows why the answer is no.   Explicit means you must list all the elements of the sets and all the ordered pairs in the functions .  The answer to both questions is indeed no . Use small finite sets for your examples.     Putting together , , and we have the following.   Characterization of invertibility  The following conditions are equivalent for a function .  The inverse relation is a function .  The function is surjective and injective.  There exists a function such that and .      The statement that the conditions 1, 2, and 3 in are equivalent means that if satisfies any one of the three conditions, then satisfies the other two conditions as well.   This exercise refers to the collections of functions is .  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?        Is the composition of two injective functions always injective? Is the composition of two surjective functions always surjective? For each question, if the answer is yes, give a proof. If the answer is no, give an example.    Find examples illustrating possibilities for surjectivity and injectivity for which the domain and codomain are the same set  .  Give an example of a one-to-one function that is not onto.  Give an example of an onto function that is not one-to-one.     Suppose that and are both invertible, and that the composition is defined. Show that is invertible and that . This fact is referred to as the \"socks and shoes\" property.   Let . Find a function such that for all .    "
+  "body": " Injectivity and Surjectivity  In , we note that a function is invertible if every element in the codomain has exactly one preimage. A function is surjective function surjective function , or onto function onto function , if every element of the codomain has at least one preimage. A function is injective function injective function , or one-to-one function one-to-one function , if every element of the codomain has at most one preimage. A function is bijective function bijective function if it is both injective and surjective, that is, if every element in the codomain is the right entry of exactly one element of the function. Thus, the adjectives bijective and invertible mean the same thing. A bijective function is also called a one-to-one correspondence function one-to-one correspondence .   This exercise refers to the collections of functions is .  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?        Let be a function, and suppose that there exists a function such that . Then is surjective.    Let be an element of , and let . Applying to both sides of the last equation, we have . Because , the last expression simplifies to . This shows that the preimage of under has at least one element, namely . Because was an arbitrary choice, we conclude that every element in has at least one element in its preimage under . Therefore is surjective.      Let be a function, and suppose that there exists a function such that . Then is injective.    Let be an element of , and let . If is a preimage of under , then . Applying to both sides of , we have . On the right side, we have . On the left, we have . Therefore we have . This shows that any preimage of under must be equal to . Because was an arbitrary choice, we conclude that every element in has at most one preimage under . Therefore is injective.      The proofs for the two previous propositions both begin with the sentence Let be an element of , and let .  In the first proof, we end up concluding that is a preimage of under . Do we get the same conclusion in the second proof? If the answer is no , then give an explicit example that shows why the answer is no.  In the first proof, do we show that is the only preimage of under , or could there be others? If the answer is no , then give an explicit example that shows why the answer is no.   Explicit means you must list all the elements of the sets and all the ordered pairs in the functions .  The answer to both questions is indeed no . Use small finite sets for your examples.     Putting together , , and we have the following.   Characterization of invertibility  The following conditions are equivalent for a function .  The inverse relation is a function .  The function is surjective and injective.  There exists a function such that and .      The statement that the conditions 1, 2, and 3 in are equivalent means that if satisfies any one of the three conditions, then satisfies the other two conditions as well.    Is the composition of two injective functions always injective? Is the composition of two surjective functions always surjective? For each question, if the answer is yes, give a proof. If the answer is no, give an example.    Find examples illustrating possibilities for surjectivity and injectivity for which the domain and codomain are the same set  .  Give an example of a one-to-one function that is not onto.  Give an example of an onto function that is not one-to-one.     Suppose that and are both invertible, and that the composition is defined. Show that is invertible and that . This fact is referred to as the \"socks and shoes\" property.   Let . Find a function such that the number of elements in the set is , for all .    "
 },
 {
   "id": "inj_and_surj_section-2",
@@ -280,11 +280,20 @@ var ptx_lunr_docs = [
   "body": "surjective onto injective one-to-one bijective one-to-one correspondence "
 },
 {
+  "id": "writeoutfunsexeragain",
+  "level": "2",
+  "url": "inj_and_surj_section.html#writeoutfunsexeragain",
+  "type": "Checkpoint",
+  "number": "1.3.1",
+  "title": "",
+  "body": " This exercise refers to the collections of functions is .  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?     "
+},
+{
   "id": "rightinvimpliessurjective",
   "level": "2",
   "url": "inj_and_surj_section.html#rightinvimpliessurjective",
   "type": "Proposition",
-  "number": "1.3.1",
+  "number": "1.3.2",
   "title": "",
   "body": "  Let be a function, and suppose that there exists a function such that . Then is surjective.    Let be an element of , and let . Applying to both sides of the last equation, we have . Because , the last expression simplifies to . This shows that the preimage of under has at least one element, namely . Because was an arbitrary choice, we conclude that every element in has at least one element in its preimage under . Therefore is surjective.   "
 },
@@ -293,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "inj_and_surj_section.html#leftinvimpliesinjective",
   "type": "Proposition",
-  "number": "1.3.2",
+  "number": "1.3.3",
   "title": "",
   "body": "  Let be a function, and suppose that there exists a function such that . Then is injective.    Let be an element of , and let . If is a preimage of under , then . Applying to both sides of , we have . On the right side, we have . On the left, we have . Therefore we have . This shows that any preimage of under must be equal to . Because was an arbitrary choice, we conclude that every element in has at most one preimage under . Therefore is injective.   "
 },
@@ -302,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "inj_and_surj_section.html#onesidedinvproofsexer",
   "type": "Checkpoint",
-  "number": "1.3.3",
+  "number": "1.3.4",
   "title": "",
   "body": "  The proofs for the two previous propositions both begin with the sentence Let be an element of , and let .  In the first proof, we end up concluding that is a preimage of under . Do we get the same conclusion in the second proof? If the answer is no , then give an explicit example that shows why the answer is no.  In the first proof, do we show that is the only preimage of under , or could there be others? If the answer is no , then give an explicit example that shows why the answer is no.   Explicit means you must list all the elements of the sets and all the ordered pairs in the functions .  The answer to both questions is indeed no . Use small finite sets for your examples.    "
 },
@@ -311,18 +320,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "inj_and_surj_section.html#invertibilityconditions",
   "type": "Corollary",
-  "number": "1.3.4",
+  "number": "1.3.5",
   "title": "Characterization of invertibility.",
   "body": " Characterization of invertibility  The following conditions are equivalent for a function .  The inverse relation is a function .  The function is surjective and injective.  There exists a function such that and .     "
-},
-{
-  "id": "writeoutfunsexeragain",
-  "level": "2",
-  "url": "inj_and_surj_section.html#writeoutfunsexeragain",
-  "type": "Checkpoint",
-  "number": "1.3.5",
-  "title": "",
-  "body": " This exercise refers to the collections of functions is .  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?  Of all the functions from to , which are injective? Which are surjective?     "
 },
 {
   "id": "surjinjcompexer",
@@ -358,7 +358,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.3.4",
   "title": "",
-  "body": "Let . Find a function such that for all .  "
+  "body": "Let . Find a function such that the number of elements in the set is , for all .  "
 },
 {
   "id": "partitions_and_counting_section",
@@ -366,13 +366,40 @@ var ptx_lunr_docs = [
   "url": "partitions_and_counting_section.html",
   "type": "Section",
   "number": "1.4",
-  "title": "Partitions and Counting",
-  "body": " Partitions and Counting  Two sets are called disjoint set disjoint sets if their intersection is empty. A collection of sets is called pairwise disjoint set pairwise disjoint sets if every pair of distinct sets in the collection is disjoint. A partition set partition of a set of a set is a collection of pairwise disjoint nonempty subsets of whose union is all of .  Let .  Write out all possible partitions of .  Give an example of a collection of subsets of whose union is all of , but some two of which have nonempty intersection.  Give an example of a collection of subsets of , any two of which have empty intersection, but whose union is not all of .      Partitions from functions  Let be a function. The collection is a partition of .   Let be a function. (Do not assume that is invertible!)  Show that .  Suppose that with . Show that .  The previous two parts show that is a collection of subsets of whose union is all of and any two of which have empty intersection. Does this guarantee that is a partition of ?      A set is called finite set finite set if it contains a finite number of elements. A set that is not finite is called infinite set infinite set . The number of elements in a finite set is called the size of , denoted    size of a finite set   . Formally, we say , where is a positive integer, if there exists a one-to-one correspondence .  Counting elements in a set using partitions  Let be a partition of a finite set . We have     Counting elements in a set using preimages  Let be a function, where are finite sets. We have    Because every in is a preimage of its image , we have . If , we have . It follows that every in is an element of exactly one of the preimage sets .     Let be the 5-element set . Given a partition of , let be the list of sizes of the sets that are elements of , listed in descending order. For example, the partition has .  Find all possible size lists for partitions of . (Hint: there are 7 in all.)  For each of the size lists in part a, give an example of a function for which the corresponding partition given by has that size list.     Let be a function, where are finite sets. Use to show the following.  Suppose that is injective. Show that .  Suppose that is surjective. Show that .     Let be a function, where are finite sets.  Show that if is injective and , then is surjective.  Show that if is surjective and , then is injective.      "
+  "title": "Enumeration and Partitions",
+  "body": " Enumeration and Partitions   Finite Sets  A nonempty set is called finite set finite set if there exists a one-to-one correspondence for some positive number . A one-to-one correspondence is called an enumeration of (or a counting , or an ordering of ). We often use the notation to denote . We write   size of a finite set   to denote the size of (or the number of elements in  ) for a finite set with an enumeration . The empty set is defined to be finite, with size zero. A set that is not finite is called infinite set infinite set .  Show that enumerations of a finite set with more than one element are not unique. Find three different enumerations of the set . How may enumerations of are there in all?     Indexing  An enumeration of a finite set is an example of indexing . When we refer to the indexed set , we mean that there exists a one-to-one correspondence with the values . This allows us to enjoy the benefits of the enumeration without having to explicitly mention . We say that is the th element of and we refer to as the index of the element . More generally, we may refer to any one-to-one correspondence , between any two sets (finite or not) as an idexing. In this context, we may write and refer to as the index of the element .  Indexing is used in notation for unions and intersections of sets, and for sums and products of sets of numbers. Given an indexed set of sets , we write to denote the union of all the elements in . Similarly, we write to denote the intersection of all the elements in . Given an indexed set of real numbers , we write to denote the sum of all the elements in . Similarly, we write to denote the product of the elements in .  It is often the case that the indexing of a set plays no particular role. For this reason, it is common to write to denote the union of all the sets in , the intersection of all the sets in , the sum of all the numbers in , and the product of all the numbers in , respectively.     Write using indexed intersection notation.  Write using indexed summation notation. Write  Write using indexed product notation.       Partitions  Two sets are called disjoint set disjoint sets if their intersection is empty. A collection of sets is called pairwise disjoint set pairwise disjoint sets if every pair of distinct sets in the collection is disjoint. A partition set partition of a set of a set is a collection of pairwise disjoint nonempty subsets of whose union is all of .  Let .  Write out all possible partitions of .  Give an example of a collection of subsets of whose union is all of , but some two of which have nonempty intersection.  Give an example of a collection of subsets of , any two of which have empty intersection, but whose union is not all of .      Partitions from functions  Let be a function. The collection is a partition of .   Let be a function. (Do not assume that is invertible!)  Show that .  Suppose that with . Show that .  The previous two parts show that is a collection of subsets of whose union is all of and any two of which have empty intersection. Does this guarantee that is a partition of ?      Counting elements in a set using partitions  Let be a partition of a finite set . We have     Counting elements in a set using preimages  Let be a function, where are finite sets. We have    Because every in is a preimage of its image , we have . If , we have . It follows that every in is an element of exactly one of the preimage sets .      Let be the 5-element set . Given a partition of , let be the list of sizes of the sets that are elements of , listed in descending order. For example, the partition has .  Find all possible size lists for partitions of . (Hint: there are 7 in all.)  For each of the size lists in part a, give an example of a function for which the corresponding partition given by has that size list.     Let be a function, where are finite sets. Use to show the following.  Suppose that is injective. Show that .  Suppose that is surjective. Show that .     Let be a function, where are finite sets.  Show that if is injective and , then is surjective.  Show that if is surjective and , then is injective.      "
 },
 {
-  "id": "partitions_and_counting_section-2",
+  "id": "partitions_and_counting_section-2-2",
   "level": "2",
-  "url": "partitions_and_counting_section.html#partitions_and_counting_section-2",
+  "url": "partitions_and_counting_section.html#partitions_and_counting_section-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "finite enumeration counting ordering size infinite "
+},
+{
+  "id": "partitions_and_counting_section-2-3",
+  "level": "2",
+  "url": "partitions_and_counting_section.html#partitions_and_counting_section-2-3",
+  "type": "Checkpoint",
+  "number": "1.4.1",
+  "title": "",
+  "body": "Show that enumerations of a finite set with more than one element are not unique. Find three different enumerations of the set . How may enumerations of are there in all?  "
+},
+{
+  "id": "partitions_and_counting_section-3-5",
+  "level": "2",
+  "url": "partitions_and_counting_section.html#partitions_and_counting_section-3-5",
+  "type": "Checkpoint",
+  "number": "1.4.2",
+  "title": "",
+  "body": "   Write using indexed intersection notation.  Write using indexed summation notation. Write  Write using indexed product notation.    "
+},
+{
+  "id": "partitions_and_counting_section-4-2",
+  "level": "2",
+  "url": "partitions_and_counting_section.html#partitions_and_counting_section-4-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -383,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#partitionexer",
   "type": "Checkpoint",
-  "number": "1.4.1",
+  "number": "1.4.3",
   "title": "",
   "body": "Let .  Write out all possible partitions of .  Give an example of a collection of subsets of whose union is all of , but some two of which have nonempty intersection.  Give an example of a collection of subsets of , any two of which have empty intersection, but whose union is not all of .     "
 },
@@ -392,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#preimagespartitionprop",
   "type": "Proposition",
-  "number": "1.4.2",
+  "number": "1.4.4",
   "title": "Partitions from functions.",
   "body": "Partitions from functions  Let be a function. The collection is a partition of .  "
 },
@@ -401,25 +428,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#partitionfromfunexer",
   "type": "Checkpoint",
-  "number": "1.4.3",
+  "number": "1.4.5",
   "title": "",
   "body": "Let be a function. (Do not assume that is invertible!)  Show that .  Suppose that with . Show that .  The previous two parts show that is a collection of subsets of whose union is all of and any two of which have empty intersection. Does this guarantee that is a partition of ?     "
 },
 {
-  "id": "partitions_and_counting_section-6",
+  "id": "partitions_and_counting_section-4-6",
   "level": "2",
-  "url": "partitions_and_counting_section.html#partitions_and_counting_section-6",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "finite infinite size "
-},
-{
-  "id": "partitions_and_counting_section-7",
-  "level": "2",
-  "url": "partitions_and_counting_section.html#partitions_and_counting_section-7",
+  "url": "partitions_and_counting_section.html#partitions_and_counting_section-4-6",
   "type": "Proposition",
-  "number": "1.4.4",
+  "number": "1.4.6",
   "title": "Counting elements in a set using partitions.",
   "body": "Counting elements in a set using partitions  Let be a partition of a finite set . We have    "
 },
@@ -428,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#countusingpreimages",
   "type": "Corollary",
-  "number": "1.4.5",
+  "number": "1.4.7",
   "title": "Counting elements in a set using preimages.",
   "body": "Counting elements in a set using preimages  Let be a function, where are finite sets. We have    Because every in is a preimage of its image , we have . If , we have . It follows that every in is an element of exactly one of the preimage sets .   "
 },
@@ -437,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#partitionfromfunegexer",
   "type": "Exercise",
-  "number": "1.4.1",
+  "number": "1.4.4.1",
   "title": "",
   "body": "Let be the 5-element set . Given a partition of , let be the list of sizes of the sets that are elements of , listed in descending order. For example, the partition has .  Find all possible size lists for partitions of . (Hint: there are 7 in all.)  For each of the size lists in part a, give an example of a function for which the corresponding partition given by has that size list.    "
 },
@@ -446,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#setsizecompareexer",
   "type": "Exercise",
-  "number": "1.4.2",
+  "number": "1.4.4.2",
   "title": "",
   "body": "Let be a function, where are finite sets. Use to show the following.  Suppose that is injective. Show that .  Suppose that is surjective. Show that .    "
 },
@@ -455,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "partitions_and_counting_section.html#intoisontofinite",
   "type": "Exercise",
-  "number": "1.4.3",
+  "number": "1.4.4.3",
   "title": "",
   "body": "Let be a function, where are finite sets.  Show that if is injective and , then is surjective.  Show that if is surjective and , then is injective.    "
 },

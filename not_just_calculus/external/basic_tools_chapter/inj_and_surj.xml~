@@ -23,7 +23,9 @@ if every element of
   if it is both
 injective and surjective, that is, if every element in the codomain is
 the right entry of exactly one element of the function. Thus, the
-  adjectives "bijective" and "invertible" mean the same thing. A bijective
+  adjectives <q>bijective</q>
+  and <q>invertible</q>
+   mean the same thing. A bijective
   function is also called a <term>one-to-one
     correspondence</term><idx><h>function</h><h>one-to-one
       correspondence</h></idx>.
@@ -80,7 +82,7 @@ the right entry of exactly one element of the function. Thus, the
     </proof>
   </proposition>
 
-    <commentary component="instructor"><title>Comment on
+    <aside component="instructor"><title>Comment on
 	<xref ref="rightinvimpliessurjective"/> and
 	<xref ref="leftinvimpliesinjective"/> and the Axiom of
 	Choice</title>
@@ -90,36 +92,37 @@ the right entry of exactly one element of the function. Thus, the
       converse of <xref ref="leftinvimpliesinjective"/> does not require
       the Axiom of Choice.
       </p>
-      </commentary>
+      </aside>
   
 
   <exercise xml:id="onesidedinvproofsexer">
     <statement>
       <p>The proofs for the two previous propositions both begin with
-      the sentence "Let <m>t_0</m> be an element of <m>T</m>, and
-	let <m>s_0=g(t_0)</m>."
-	<ol><li>In the first proof, we end up concluding
+      the sentence <q>Let <m>t_0</m> be an element of <m>T</m>, and
+	  let <m>s_0=g(t_0)</m>.</q>
+		<ol><li>In the first proof, we end up concluding
 	    that <m>s_0</m> is a preimage of <m>t_0</m>
 	    under <m>f</m>. Do we get the same conclusion in the second
-	    proof? If the answer is "no", then
+		    proof? If the answer is <q>no</q>, then
 	give an explicit example that shows why the answer is
 	no.</li>
 	  <li>	In the first proof, do we show that <m>s_0</m> is
 	    the <em>only</em> preimage of <m>t_0</m> under <m>f</m>, or
-	    could there be others? If the answer is "no", then
+	    could there be others? If the answer is <q>no</q>, then
 	give an explicit example that shows why the answer is
 	no.</li>
 	</ol>
-	"Explicit" means you must list all the elements of the
+		<q>Explicit</q>
+		 means you must list all the elements of the
 	sets <m>S,T</m> and all the ordered pairs in the functions <m>f,g</m>.
       </p>
-      <hint><p>The answer to both questions is indeed "no". Use small
+      <hint><p>The answer to both questions is indeed <q>no</q>. Use small
       finite sets for your examples.</p>
       </hint>
     </statement>
   </exercise>
 
-    <commentary component="instructor"><title>Instructor's solution for
+    <aside component="instructor"><title>Instructor's solution for
 <xref ref="onesidedinvproofsexer"/></title>
       <p>
 	<ol><li>
@@ -146,7 +149,7 @@ the right entry of exactly one element of the function. Thus, the
 	  </li>
 	</ol>
 </p>
-  </commentary>
+  </aside>
   
     <p>
     Putting together <xref ref="bijectiveimpliestwosidedinverse"/>,
@@ -198,7 +201,7 @@ the right entry of exactly one element of the function. Thus, the
   </statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="writeoutfunsexeragain"/></title>
   <p>
     <ol>
@@ -224,7 +227,7 @@ Of the 27 functions, 6 are injective, and the same 6 are surjective
 	</li>
       </ol>
 </p>
-</commentary>
+</aside>
 
 
 
@@ -238,7 +241,7 @@ Of the 27 functions, 6 are injective, and the same 6 are surjective
   </p></statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="surjinjcompexer"/></title>
   <p>
     The answer to both questions is yes. Let <m>f\colon S\to T</m>
@@ -258,7 +261,7 @@ Of the 27 functions, 6 are injective, and the same 6 are surjective
     at least one element, say <m>s\in S</m>. Therefore <m>s\in (g\circ
       f)^{-1}(u)</m>. We conclude that <m>g\circ f</m> is surjective.
 </p>
-</commentary>
+</aside>
   
   
 <exercise xml:id="surjinjegexer">  	<statement><p>Find examples illustrating possibilities
@@ -273,7 +276,7 @@ is not onto.</li>
   </p></statement>
 </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="surjinjegexer"/></title>
   <p>
 <ol><li>Let <m>T=\{1,2,3,\ldots\}</m> and consider <m>g\colon T \to T</m> defined
@@ -282,7 +285,7 @@ is not onto.</li>
   <m>g(n)=\lfloor n/2\rfloor</m>. It is clear that <m>g</m> is onto but
   not one-to-one.</li></ol>    
 </p>
-</commentary>
+</aside>
 
 
   <exercise xml:id="socksnshoesexer"><statement><p>
@@ -293,7 +296,7 @@ is not onto.</li>
     </p></statement>
   </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="socksnshoesexer"/></title>
   <p>
       Let <m>h=f^{-1} \of g^{-1}</m>. Let <m>s</m> be in the domain of <m>f</m>. We have
@@ -313,7 +316,7 @@ is not onto.</li>
       <m>(g\of f)</m> is invertible, with inverse <m>(g\of f)^{-1} = h = f^{-1}
       \of g^{-1}</m>, as desired.    
 </p>
-</commentary>
+</aside>
   
   <exercise xml:id="allsizepreimageexer"><statement><p>
 	Let <m>\N=\{0,1,2,3,\ldots\}</m>. Find a function 
@@ -322,15 +325,16 @@ is not onto.</li>
     </p></statement>
   </exercise>
 
-<commentary component="instructor"><title>Instructor's solution for
+<aside component="instructor"><title>Instructor's solution for
 <xref ref="allsizepreimageexer"/></title>
   <p>
     Let <m>f(0)=1</m>, <m>f(1)=f(2)=2</m>, <m>f(3)=f(4)=f(5)=3</m>,
-    etc. In "output row of the input/output table" notation, this
+    etc. In <q>output row of the input/output table</q>
+     notation, this
     function is
     <me>f=[1,2,2,3,3,3,4,4,4,4,\ldots ].</me>
 </p>
-</commentary>
+</aside>
 
 
 </exercises>

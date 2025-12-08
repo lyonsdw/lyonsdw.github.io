@@ -31,6 +31,53 @@ the right entry of exactly one element of the function. Thus, the
       correspondence</h></idx>.
 </p>
 
+<exercise xml:id="writeoutfunsexeragain">
+  <statement><p>This exercise refers to the collections of functions is
+  <xref ref="writeoutfunsexer"/>.
+      <ol>
+	<li>  Of all the functions from <m>\{x,y,z\}</m> to
+  <m>\{A,B\}</m>, which are injective? Which are surjective? 
+	</li>
+	<li>
+    Of all the functions from <m>\{A,B\}</m> to
+  <m>\{x,y,z\}</m>, which are injective? Which are surjective? 
+	</li>
+	<li>  Of all the functions from <m>\{x,y,z\}</m> to
+          <m>\{x,y,z\}</m>, which are injective? Which are surjective?
+	</li>
+      </ol>
+    </p>
+  </statement>
+</exercise>
+
+<aside component="instructor"><title>Instructor's solution for
+<xref ref="writeoutfunsexeragain"/></title>
+  <p>
+    <ol>
+	<li>
+Of the 8 functions
+    <me>(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B),</me>
+    none are injective because each function list contains
+    two occurrences of at least one of the two output values. All of
+    the functions are surjective except for <m>(A,A,A)</m>
+    and <m>(B,B,B)</m>.
+	</li>
+	<li>
+    Of the 9 functions
+    <me>(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z),</me>
+     6 are injective, that is, all but <m>(x,x), (y,y),(z,z)</m>.
+     None are surjective because none of the lists contains all
+    three letters <m>x,y,z</m>.
+	</li>
+	<li>
+Of the 27 functions, 6 are injective, and the same 6 are surjective 
+   Here are those 6.
+	      <me>    (x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)</me>
+	</li>
+      </ol>
+</p>
+</aside>
+
   <proposition xml:id="rightinvimpliessurjective">
     <statement>
       <p>Let <m>f\colon S\to T</m> be a function, and suppose that
@@ -182,52 +229,6 @@ the right entry of exactly one element of the function. Thus, the
 	conditions, then <m>f</m> satisfies the other two conditions as well.
     </p>
 
-<exercise xml:id="writeoutfunsexeragain">
-  <statement><p>This exercise refers to the collections of functions is
-  <xref ref="writeoutfunsexer"/>.
-      <ol>
-	<li>  Of all the functions from <m>\{x,y,z\}</m> to
-  <m>\{A,B\}</m>, which are injective? Which are surjective? 
-	</li>
-	<li>
-    Of all the functions from <m>\{A,B\}</m> to
-  <m>\{x,y,z\}</m>, which are injective? Which are surjective? 
-	</li>
-	<li>  Of all the functions from <m>\{x,y,z\}</m> to
-          <m>\{x,y,z\}</m>, which are injective? Which are surjective?
-	</li>
-      </ol>
-    </p>
-  </statement>
-</exercise>
-
-<aside component="instructor"><title>Instructor's solution for
-<xref ref="writeoutfunsexeragain"/></title>
-  <p>
-    <ol>
-	<li>
-Of the 8 functions
-    <me>(A,A,A),(A,A,B),(A,B,A),(A,B,B),(B,A,A),(B,A,B),(B,B,A),(B,B,B),</me>
-    none are injective because each function list contains
-    two occurrences of at least one of the two output values. All of
-    the functions are surjective except for <m>(A,A,A)</m>
-    and <m>(B,B,B)</m>.
-	</li>
-	<li>
-    Of the 9 functions
-    <me>(x,x),(x,y), (x,z), (y,x), (y,y), (y,z),(z,x),(z,y),(z,z),</me>
-     6 are injective, that is, all but <m>(x,x), (y,y),(z,z)</m>.
-     None are surjective because none of the lists contains all
-    three letters <m>x,y,z</m>.
-	</li>
-	<li>
-Of the 27 functions, 6 are injective, and the same 6 are surjective 
-   Here are those 6.
-	      <me>    (x,y,z),(x,z,y), (y,x,z), (y,z,x), (z,x,y), (z,y,x)</me>
-	</li>
-      </ol>
-</p>
-</aside>
 
 
 
@@ -320,8 +321,8 @@ is not onto.</li>
   
   <exercise xml:id="allsizepreimageexer"><statement><p>
 	Let <m>\N=\{0,1,2,3,\ldots\}</m>. Find a function 
-	<m>f\colon \N\to \N</m> such that <m>|f^{-1}(j)|=j</m> for
-	all <m>j\in \N</m>.
+	<m>f\colon \N\to \N</m> such that the number of elements in the
+	set <m>f^{-1}(j)</m> is <m>j</m>, for all <m>j\in \N</m>.
     </p></statement>
   </exercise>
 
