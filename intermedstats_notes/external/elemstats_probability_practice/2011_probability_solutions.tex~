@@ -1,0 +1,169 @@
+% solutions to exercises
+% supplementary notes, basic probability
+% spring 2011
+
+
+\subsection{Probability Solutions}
+
+\begin{enumerate}
+
+\item   $P(\mbox{even gender split}) = {4 \choose 2}/16 = 6/16 = 3/8$\\
+  $P(\mbox{3-1 gender split}) =  2{4 \choose 3}/16 = 8/16 = 1/2$, the greater
+  of the two
+
+\item 
+\begin{enumerate}
+\item 
+  \begin{eqnarray*}
+& &     P(\mbox{2 draws different})\\
+&=&   P(\mbox{1st draw is a letter AND 2nd draw is something else})\\
+  &=& P(\mbox{1st draw is a letter})P(\mbox{2nd is something else} | \mbox{1st is something})\\
+  &=& 1 \cdot 4/5 = 4/5
+  \end{eqnarray*}
+\item 
+  \begin{eqnarray*}
+& &     P(\mbox{at least one vowel})\\
+ &=& 1 - P(\mbox{no vowels})\\
+  &=& 1 - P(\mbox{2 consonants})\\
+  &=& 1 - P(\mbox{1st draw consonant AND 2nd draw consonant})\\
+  &=& 1 - 3/5 \cdot 3/5 = 16/25
+  \end{eqnarray*}
+\item $P(\mbox{2 draws different})=1$, 
+  \begin{eqnarray*}
+& &     P(\mbox{at least one vowel})\\
+ &=& 1 - P(\mbox{no vowels})\\
+  &=& 1 - P(\mbox{2 consonants})\\
+  &=& 1 - P(\mbox{1st draw consonant AND 2nd draw consonant})\\
+  &=& 1 - P(\mbox{1st draw consonant})P(\mbox{2nd draw consonant} | \mbox{1st draw consonant})\\
+  &=& 1 - 3/5 \cdot 2/4 = 7/10
+  \end{eqnarray*}
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item $P(\mbox{no diamonds}) = 39/52 \cdot 38/51 \cdot 37/50 \cdot 36/49$
+\item $P(\mbox{all diamonds}) = 13/52 \cdot 12/51 \cdot 11/50 \cdot 10/49$
+\item $ P(\mbox{all same suit}) = 4 \cdot\mbox{(above)}$
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item (with replacement)
+$  P(\mbox{exactly 3 R in 4 draws}) = {4 \choose 3} \cdot (1/6)^3 \cdot 5/6$
+\item (without replacement)
+$  P(\mbox{exactly 3 R in 4 draws}) = 0$
+\end{enumerate}
+
+\item  
+\begin{enumerate}
+\item $ 3^5 = 243$
+\item ${5 \choose 2} \cdot 2^3 = 80$
+\item $P(E) = {5 \choose 2} \cdot (2/9)^2 \cdot (7/9)^3 \approx .232$,
+        this does not equal $80/243 \approx .329$
+\item $P(F) = {5 \choose 2} \cdot (4/9)^2 \cdot (5/9)^3 \approx .339$,\\
+        $|E \cap F| = {5 \choose 2}\cdot{3 \choose 2} = 30$,\\
+        $P(E \cap F) = 30 \cdot (2/9)^2 \cdot (4/9)^2 \cdot 3/9 \approx .098$,\\
+        $P(E \cap F)$ does not equal $P(E)P(F)$, so $E,F$ are dependent
+\end{enumerate}
+
+\item  
+\begin{enumerate}
+\item $P(\mbox{100 T} | \mbox{at least 99 T}) = 1/101$
+\item $P(\mbox{100 T} | \mbox{first 99 T}) = 1/2$
+\end{enumerate}
+
+\item $P(\mbox{win lottery}) = 1/{36 \choose 6}$
+
+\item 
+\begin{enumerate}
+\item $P(\mbox{RRBB}) = 26/52 \cdot 25/51 \cdot 26/50 \cdot 25/49$
+\item $P(\mbox{exactly 2R}) = {4 \choose 2} \cdot\mbox{(above)}$
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item $P(E) = {5 \choose 3}(.54)^3 (.46)^2$
+\item $P(F) = (.54)^2$
+\item Event $E \cap F$ consists of the 3 outcomes RRBBR, RBRBR, and
+     RBBRR.  Each of these outcomes has probability $(.54)^3(.46)^2$,
+     so $P(E \cap F) = 3(.54)^3(.46)^2$, which does not equal
+     $P(E)P(F)$, so we conclude that $E$ and $F$ are dependent.
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}
+\item $P(\mbox{all rolls even}) = (1/2)^5 = 1/32  \approx .0313$
+\item $P(\mbox{not all rolls even}) = 1 - 1/32 \approx .969$
+\item $P(\mbox{all rolls odd}) = 1/32 \approx .0313$
+\item $P(\mbox{exactly 3 even}) = {5 \choose 3} (1/2)^3 (1/2)^2 \approx .313$
+\end{enumerate}
+
+\item $P(c) = 1/6$, $P(d) = 1/12$
+
+\item  
+\begin{enumerate}
+\item
+  \begin{eqnarray*}
+  & & P(\mbox{both black OR both hearts})\\
+  &=& P(\mbox{both black}) + P(\mbox{both hearts})\\
+  &=& 26/52 \cdot 25/51  +  13/52 \cdot 12/51    
+  \end{eqnarray*}
+\item
+  \begin{eqnarray*}
+& &  P(\mbox{both black OR both aces}) \\
+  &=& P(\mbox{both black}) + P(\mbox{both aces}) - P(\mbox{both black aces})\\
+  &=& 26/52 \cdot 25/51 + 4/52 \cdot 3/51  - 2/52 \cdot 1/51
+  \end{eqnarray*}
+\end{enumerate}
+
+ \item 
+ \begin{eqnarray*}
+ P(\mbox{draw at least one K in N draws}) &=& 1 - P(\mbox{draw no K in N draws})\\
+ &=& 1 - (12/13)^N
+ \end{eqnarray*}
+   So we want to solve $1 - (12/13)^N \geq .7$, or equivalently
+                       $.3 \leq (12/13)^N$.
+   You can find $N$ by trial and error, or solve as follows.
+\begin{eqnarray*}
+\log(.3) &\leq& N \log(12/13)\hspace*{.1in}   \mbox{(take log both sides)}\\
+\log(.3) / \log(12/13) &\geq& N   \hspace*{.1in}   \mbox{(divide both sides by $\log(12/13)$)}
+\end{eqnarray*}
+   Get $N$ slightly less than 16, so the smallest whole number solution is
+   $N= 16$.
+
+\item 
+\begin{enumerate}
+\item   Dependent.  $P(U \cap V) = P(b) = 1/3$.  This does not equal
+  $P(U)P(V) = 2/3 \cdot 2/3 = 4/9$.
+\item   $P(b) = 1/2$ and $P(c) = 0$ makes $U$ and $V$ independent.
+\item  $ \emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}$
+\end{enumerate}
+
+\item 
+  \begin{eqnarray*}
+P(E \cup F) &=& P(E) + P(F) - P(E \cap F)\\
+ &=& 2/3  + 1/3  - 2/3 \cdot 1/3 = 7/9    
+  \end{eqnarray*}
+
+\item 
+\begin{enumerate}
+\item $P(\mbox{{\em i}}) = 1 - P(\mbox{no heads}) = 1 - (1/2)^5 = 31/32$\\
+      $P(\mbox{{\em ii}}) = 1 - P(\mbox{zero H or one H})
+               = 1 - (1/2)^10 - {10 \choose 1}(1/2)^10 = 1013/1024$\\
+       $P(\mbox{{\em ii}})$ is greater
+\item $P(\mbox{exactly 2 H in first 5 flips AND exactly 4 H in last 5 flips})$\\
+       $  = {5 \choose 2}(1/2)^5  {5 \choose 4}(1/2)^5 = 50/1024 \approx .0488$
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item $P(\mbox{all red}) = 26/52 \cdot 25/51 \cdot 24/50 \cdot 23/49 \cdot 22/48$
+\item $P(\mbox{AKQJten diamonds in order}) =
+  1/(52\cdot 51\cdot 50\cdot 49\cdot 48)$
+\item $P(\mbox{AKQJten diamonds in any order}) = 5!\cdot\mbox{(above)}$
+\end{enumerate}
+
+\item ${5 \choose 3}(1/2)^5(1 - (1/2)^5) = 310/(32^2) \approx .303$
+
+\end{enumerate}

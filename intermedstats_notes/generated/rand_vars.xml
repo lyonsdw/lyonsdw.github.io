@@ -1,0 +1,206 @@
+<section xml:id="rand_vars_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Random Variables
+</title>
+
+<subsection><title>Definitions and properties for random variables</title>
+
+  <definition><title>Random variable</title>
+    <p>Let <m>(\Omega,P)</m> be a finite probability model and
+      let <m>Y</m> be a set. A function <m>X\colon\Omega \to Y</m> is
+      called a <term>random variable</term>.
+  If <m>Y</m> is a subset of the
+    real numbers, then <m>X</m> is called a <term>quantitative</term>
+    random variable; otherwise, <m>X</m> is
+  called <term>qualitative</term>.
+</p>
+</definition>
+
+  <definition>
+    <title>Events defined by random variables</title>
+    <p>
+      Let <m>X\colon \Omega\to Y</m> be a random variable
+      on a finite probability model <m>(\Omega,P)</m>.
+  Given a subset <m>A\subseteq Y</m>,
+  we define the event <m>\text{"}X\in A\text{"}</m>
+  by
+    <men>\text{"}X\in A\text{"} = X^{-1}(A)=\{\omega \in \Omega\colon X(\omega)\in A\}.
+    </men>
+    In particular, if <m>X</m> is a quantitative random variable
+    and <m>\lambda</m> is a real number, the event <m>\text{"} X\leq
+      \lambda\text{"}</m> is the event
+    <men>\text{"}X\leq \lambda\text{"} = (X^{-1}((-\infty,\lambda])=
+    \{\omega \in \Omega\colon X(\omega)\leq \lambda\}.</men>
+</p>
+  </definition>
+
+  <exercise>
+    <p>exercises in definitions, examples</p>
+  </exercise>
+
+  
+  <definition>
+    <title>Distribution function</title>
+<p>    Let <m>X</m> be random variable.
+    The <term>(cumulative) distribution function</term> (or <term>c.d.f.</term>) for <m>X</m>
+    is the function <m>F_X\colon \R\to [0,1]</m> defined by
+  <men>F_X(\lambda)= P(X\leq \lambda).</men></p>
+  </definition>
+
+    <exercise>
+    <p>exercises in definitions, examples</p>
+    </exercise>
+    
+  <proposition>
+    <title>Properties of distribution functions</title>
+    <p>Let <m>X</m> be a random variable. The distribution
+      function <m>F_X</m> has the following properties.
+      <ol>
+	<li><m>F_X</m> is nondecreasing, that is, if <m>a\leq b</m>
+	then <m>F_X(a)\leq F_X(b)</m>.
+	</li>
+	<li><m>F_X</m> is continuous from the right, that
+	  is, <m>\lim_{x\to c^+}F_X(x)=F_X(c)</m> for all <m>c\in \R</m>.
+	</li>
+	<li><m>\lim_{x\to-\infty}F_X(x)=0</m> and <m>\lim_{x\to\infty}F_X(x)=1</m>. 
+	</li>
+      </ol>
+    </p>
+  </proposition>
+
+  <p>define terms median, percentile, etc, box plot for a random variable</p>
+  
+  <p>define independence of random variables, give exercises</p>
+  
+</subsection>
+
+<subsection>
+  <title>Generalized probability models and distribution
+    functions</title>
+
+  <!--
+  Reference: Statistical Inference, 2nd edition,
+  George Casella and Roger L. Berger
+  p.31 Theorem 1.5.3 says F is a cdf if and only if it
+  satisfies the properties of the Proposition
+  -->
+
+  <p>define general distribution function by properties in proposition
+  above, state facts that there is a more general definition of
+    probability models <m>(\Omega,\mathcal{E},P)</m>, our attitude in
+  this course will be that we can simulate any distribution with a basic
+  box model
+  </p>
+
+  <p>how we can assume differentiability of a continuous distribution
+  (by approximation, if necessary), how the derivative (probability
+  density function) corresponds to the
+  continuous limit of histograms</p>
+  
+  <p>exercise set with many examples</p>
+</subsection>
+
+<subsection>
+  <title>Histograms</title>
+
+    <p>
+      Let <m>F_X</m> be a distribution function for a random variable <m>X</m>.
+      Let <m>[a,b]</m> be a closed interval of the real line, and let 
+      <m>\mathcal{P}=\{x_0,x_1,\ldots, x_n\}</m> be a
+    partition <m>[a,b]</m>, that is, we have
+      <me>a=x_0\lt x_1\lt x_2 \lt \cdots \lt x_n=b.</me>
+      Let <m>I_k</m> denote the interval <m>(x_{k-1},x_k]</m>. Let
+      <m>(\Delta x)_k</m> denote the width <m>(\Delta
+      x)_k=x_k-x_{k-1}</m> of <m>I_k</m>, and let  <m>P_k=P(X\in I_k)=F_X(x_k)-F_X(x_{k-1})</m>. We define <m>R_k</m> to
+      be a rectangular region
+      <men>R_k = I_k \times [0,P_k/(\Delta x)_k]</men>
+      so that the area of <m>R_k</m> is <m>P_k</m>.
+    The <term>histogram</term> for <m>X</m> on <m>[a,b]</m>
+    with
+    partition <m>\mathcal{P}</m> is a collection of <m>n</m>
+    rectangular regions <m>R_1,R_2,\ldots,R_n</m>.
+    </p>
+
+    <exercise>
+    <p>exercises in definitions, examples</p>
+    </exercise>
+    
+</subsection>
+
+
+
+<subsection><title>Expectation</title>
+
+  <p>Here is a simple example that motivates the notion of expected
+  value. Suppose you play a dice game in which you win two dollars every
+  time your dice roll comes up showing the six face, and you lose a
+  dollar if you roll something different from a six. In 600 rolls, you
+  would expect to roll a six about 100 times. From this you would
+  gain 200 dollars. You would expect to roll something different from a
+  six about 500 times. From this you would lose 500 dollars. Your net
+    gain is <m>200-500=-300</m> dollars, which averages to <m>-.50</m>
+    dollars per roll. You could have found this by the calculation
+    <me>\text{average net gain per win }= 2\cdot 1/6 +(-1)\cdot 5/6.</me>
+    This is a sum of the form <m>\sum
+      (\text{value})(\text{probability})</m>, where <q>value</q> is the
+    value of a random variable <mdash/> in this case, win/loss per roll. Here
+    is the formal mathematical definition.
+  </p>
+
+  <p> Let <m>X</m> be a random variable on a finite probability
+    space <m>(\Omega,P)</m> with probability
+    function <m>p</m>. The <term>expected value of <m>X</m></term>,
+    denoted <m>E(X)</m>, is defined to be
+    <men xml:id="expectvaldef">E(X) = \sum_{\omega\in\Omega}X(\omega)
+      p(\omega).</men>
+    The
+    expected value is also called its <em>average</em> or <em>mean</em>,
+    and we write <m>\mu_X</m> (or just <m>\mu</m>, if <m>X</m> is clear
+    from context) for <m>E(X)</m>. It is sometimes useful to group the
+    summands in <xref ref="expectvaldef"/> as follows.
+    <men xml:id="expectvalregrouped">E(X) = \sum_{x\in X(\Omega)}x P(X=x).</men>
+  </p>
+
+  <exercise>
+    <p>examples, linearity properties, explain sum grouped by values</p>
+  </exercise>
+  
+    <p>Variance and standard deviation are measures of the spread of a
+    random variable about its mean. The <term>variance</term>
+    of <m>X</m>, denoted <m>\var(X)</m> or <m>\sigma_X^2</m> (or
+    just <m>\sigma</m>, if <m>X</m> is understood), is
+    <men>\var(X)=E((X-\mu_X)^2)=E(X^2)-(E(X))^2.</men>
+    The <term>standard deviation</term> of <m>X</m>,
+    denoted <m>\SD(X)</m> or 
+    <m>\sigma_X</m> (or just <m>\sigma</m>), is the square root of the variance.
+    </p>
+
+      <exercise>
+    <p>examples, show the two expressions for variance are equal,
+    scalar properties for SD</p>
+  </exercise>
+    
+</subsection>
+
+<subsection>
+  <title>A few key random variables</title>
+
+  <p>Bernoulli, binomial, geometric, exponential, normal: definitions,
+  properties, distribution, histogram, mean, variance</p>
+  
+    <definition>
+    <title>Bernoulli variable</title>
+    <p>A random variable <m>X\colon \Omega\to \R</m> 
+      is called a <term>Bernoulli</term>
+      variable if <m>X</m> has exactly two values, that is, if <m>X(\Omega)
+	= \{a,b\}</m> for some real numbers <m>a,b</m> with <m>a\neq
+	b</m>. If <m>X</m> is a Bernoulli variable, then a sequence of
+      variables <m>X_1,X_2,\ldots,X_n</m> on <m>\Omega^n</m> defined
+      by <m>X_k(x_1,x_2,\ldots,x_n)=X(x_k)</m> is called a sequence
+      of <m>n</m> <term>Bernoulli trials</term>.
+    </p>
+  </definition>
+
+</subsection>
+
+</section>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sampling Theory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.10.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="def_thm_prf_text.html"><span class="title">Intermediate Statistics</span></a></h1>
+<p class="byline">David W. Lyons</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="rand_vars_cts_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="def_thm_prf_text.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="hypoth_testing_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\covar}{cov}            
+\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+      \DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\SD}{SD}      
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+      \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}      
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\M}{{\rm MOB}} 
+\newcommand{\E}{{\rm EUC}} 
+\renewcommand{\H}{{\rm HYP}} 
+\newcommand{\HU}{\rm HYP_{\U}} 
+\renewcommand{\S}{{\rm ELL}} 
+
+
+
+
+
+
+
+
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+#3 \amp #4 \end{array} \right]}
+
+\let\oldsection\section 
+\renewcommand{\section}{\clearpage\oldsection} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets_counting_section.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-3" class="internal"><span class="codenumber">1.1</span> <span class="title">Addition Principle(s)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-4" class="internal"><span class="codenumber">1.2</span> <span class="title">Multiplication Principle(s)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-5" class="internal"><span class="codenumber">1.3</span> <span class="title">Sequences and Permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-6" class="internal"><span class="codenumber">1.4</span> <span class="title">Subsets and Combinations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-7" class="internal"><span class="codenumber">1.5</span> <span class="title">Infinite sets and sequences</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-8" class="internal"><span class="codenumber">1.6</span> <span class="title">Sets and Counting Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="probability_finite_section.html" class="internal"><span class="codenumber">2</span> <span class="title">Finite Probability Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_finite_section.html#probability_finite_section-3" class="internal"><span class="codenumber">2.1</span> <span class="title">Vocabulary and Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_finite_section.html#finiterandsampsect" class="internal"><span class="codenumber">2.2</span> <span class="title">Random Samples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_finite_section.html#probability_finite_section-5" class="internal"><span class="codenumber">2.3</span> <span class="title">Simple Random Samples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_finite_section.html#probability_finite_section-6" class="internal"><span class="codenumber">2.4</span> <span class="title">Bayes’ Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="probability_finite_section.html#probability_finite_section-7" class="internal"><span class="codenumber">2.5</span> <span class="title">Probability Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="probability_general_section.html" class="internal"><span class="codenumber">3</span> <span class="title">General Probability Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_general_section.html#probability_general_section-3" class="internal"><span class="codenumber">3.1</span> <span class="title">Discrete Probability Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_general_section.html#probability_general_section-4" class="internal"><span class="codenumber">3.2</span> <span class="title">Uncountable probability spaces</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="probability_general_section.html#probability_general_section-5" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rand_vars_discrete_section.html" class="internal"><span class="codenumber">4</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_discrete_section.html#rand_vars_discrete_section-3" class="internal"><span class="codenumber">4.1</span> <span class="title">Definitions and properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_discrete_section.html#rand_vars_discrete_section-4" class="internal"><span class="codenumber">4.2</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_discrete_section.html#rand_vars_discrete_section-5" class="internal"><span class="codenumber">4.3</span> <span class="title">Expectation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_discrete_section.html#rand_vars_discrete_section-6" class="internal"><span class="codenumber">4.4</span> <span class="title">One basic example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_discrete_section.html#rand_vars_discrete_section-7" class="internal"><span class="codenumber">4.5</span> <span class="title">Independence and covariance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rand_vars_cts_section.html" class="internal"><span class="codenumber">5</span> <span class="title">Continuous Random Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_cts_section.html#genldistfnsubsect" class="internal"><span class="codenumber">5.1</span> <span class="title">General distribution functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sampling_section.html" class="internal"><span class="codenumber">6</span> <span class="title">Sampling Theory</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-2" class="internal"><span class="codenumber">6.1</span> <span class="title">Sampling Random Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-3" class="internal"><span class="codenumber">6.2</span> <span class="title">Simple random sample variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-4" class="internal"><span class="codenumber">6.3</span> <span class="title">Some important variables arising from sampling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-5" class="internal"><span class="codenumber">6.4</span> <span class="title">The Central Limit Theorem</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sampling_section.html#sampling_section-6" class="internal"><span class="codenumber">6.5</span> <span class="title">Estimating population parameters</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-6-4" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="hypoth_testing_section.html" class="internal"><span class="codenumber">7</span> <span class="title">Hypothesis Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="hypoth_testing_section.html#hypoth_testing_section-2" class="internal"><span class="codenumber">7.1</span> <span class="title">1-tail <span class="process-math">\(z\)</span> test</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="regression_section.html" class="internal"><span class="codenumber">8</span> <span class="title">Regression</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="regression_section.html#regression_section-3" class="internal"><span class="codenumber">8.1</span> <span class="title">Measuring fit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="regression_section.html#regression_section-4" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear regression</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="regression_section.html#regression_section-5" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="projects_appdx.html" class="internal"><span class="codenumber">A</span> <span class="title">Projects</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-references"><div class="toc-title-box"><a href="backmatter-1.html" class="internal"><span class="title">References</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sampling_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sampling Theory</span>
+</h2>
+<section class="subsection" id="sampling_section-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sampling Random Variables</span>
+</h3>
+<div class="para logical" id="sampling_section-2-2">
+<div class="para">Let <span class="process-math">\((\Omega,P)\)</span> be a probability space.  Recall that an element <span class="process-math">\((\omega_1,\omega_2,\ldots,\omega_n)\)</span> of <span class="process-math">\(\Omega^n\)</span> is called a <em class="emphasis">random sample</em> from <span class="process-math">\(\Omega\text{.}\)</span> We extend this sampling language to random variables on <span class="process-math">\(\Omega\)</span> as follows. Given a random variable <span class="process-math">\(X\colon
+\Omega\to \R\text{,}\)</span> let <span class="process-math">\(X_1,X_2,\ldots,X_n\)</span> be random variables given by</div>
+<div class="displaymath process-math" id="sampvardef">
+\begin{equation}
+X_k(\omega_1,\omega_2,\ldots,\omega_n)=X(\omega_k)\tag{6.1}
+\end{equation}
+</div>
+<div class="para">for <span class="process-math">\(1\leq k\leq n\text{.}\)</span> We call the collection <span class="process-math">\((X_1,X_2,\ldots,X_n)\)</span> a <dfn class="terminology">(random) sample</dfn> of <span class="process-math">\(X\text{.}\)</span> Intuitively, the variables <span class="process-math">\(X_k\)</span> behave like independent copies of <span class="process-math">\(X\text{.}\)</span> That this is the case is the content of the following proposition.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="sampvarbasicprop"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="sampvarbasicprop-1">
+<div class="para">Let <span class="process-math">\((X_1,X_2,\ldots,X_n)\)</span> be a sample of a random variable <span class="process-math">\(X\colon \Omega\to \R\)</span> with <span class="process-math">\(E(X)=\mu\)</span> and <span class="process-math">\(\var(X)=\sigma^2\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math" id="sampvarbasicprop-1-5">
+\begin{align}
+F_{X_k} \amp= F_X \text{   for }1\leq k\leq n\tag{6.2}\\
+E(X_k)\amp = \mu \text{   for }1\leq k\leq n\tag{6.3}\\
+\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n\tag{6.4}\\
+\covar(X_j,X_k)\amp = 0 \text{   for }j\neq k\tag{6.5}\\
+F_{X_j,X_k}\amp = F_{X_j}F_{X_k} \text{   for }1\leq
+j,k\leq n\tag{6.6}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampvarbasicprop-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 6.1"><a href="#sampvarbasicprop" title="Copy heading and permalink for Proposition 6.1" aria-label="Copy heading and permalink for Proposition 6.1">🔗</a></div></article><details id="sampling_section-2-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sampling_section-2-4-1">Prove <a href="sampling_section.html#sampvarbasicprop" class="xref" data-knowl="./knowl/xref/sampvarbasicprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.1">Proposition 6.1</a> for the case of discrete variables.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sampling_section-2-4-2">Prove <a href="sampling_section.html#sampvarbasicprop" class="xref" data-knowl="./knowl/xref/sampvarbasicprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.1">Proposition 6.1</a> for the case of continuous variables that have density functions.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2"><a href="#sampling_section-2-4" title="Copy heading and permalink for Checkpoint 6.2" aria-label="Copy heading and permalink for Checkpoint 6.2">🔗</a></div></article></details><div class="para logical" id="sampling_section-2-5">
+<div class="para">Next, we consider random variables <span class="process-math">\(\overline{X}\)</span> and <span class="process-math">\(s^2\text{,}\)</span> called the <dfn class="terminology">sample average</dfn> and the <dfn class="terminology">sample variance</dfn>, defined as follows.</div>
+<div class="displaymath process-math" id="sampling_section-2-5-5">
+\begin{align}
+\overline{X} \amp =\frac{1}{n}\sum_k X_k\tag{6.7}\\
+s^2 \amp = \frac{1}{n-1}\sum_k (X_k-\overline{X})^2\tag{6.8}
+\end{align}
+</div>
+<div class="para">The quantity</div>
+<div class="displaymath process-math" id="sampling_section-2-5-6">
+\begin{equation}
+n\overline{X}=\sum_k X_k\tag{6.9}
+\end{equation}
+</div>
+<div class="para">is called the <dfn class="terminology">sample sum</dfn>. In general, any random variable written as a function of <span class="process-math">\(X_1,X_2,\ldots,X_n\)</span> is called a <dfn class="terminology">(sample) statistic</dfn>. The sample statistics <span class="process-math">\(n\overline{X},\overline{X},s^2\)</span> play a key role in sampling theory. Here are some important properties.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="sampstatsbasicprop"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="sampstatsbasicprop-1">
+<div class="para">Let <span class="process-math">\((\Omega,P)\)</span> be a probability model and let <span class="process-math">\(X\colon \Omega\to \R\)</span> be a random variable.  Let <span class="process-math">\(X_1,X_2,\ldots,X_n\)</span> be sample variables for a sample of <span class="process-math">\(X\)</span> of size <span class="process-math">\(n\text{.}\)</span>  Let <span class="process-math">\(\mu=E(X)\text{,}\)</span> and let <span class="process-math">\(\sigma^2 = \var(X) = E(X^2)-(E(X))^2\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math" id="sampstatsbasicprop-1-8">
+\begin{align}
+E(\overline{X})\amp = \mu\tag{6.10}\\
+\var(\overline{X})\amp = \frac{\sigma^2}{n}\tag{6.11}\\
+E(n\overline{X})\amp = n\mu\tag{6.12}\\
+\var(n\overline{X})\amp = n\sigma^2\tag{6.13}\\
+E(s^2)\amp = \sigma^2\tag{6.14}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampstatsbasicprop-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 6.3"><a href="#sampstatsbasicprop" title="Copy heading and permalink for Proposition 6.3" aria-label="Copy heading and permalink for Proposition 6.3">🔗</a></div></article><div class="para" id="sampling_section-2-7">
+<em class="alert">Comments and terminology.</em> The last equation <a href="sampling_section.html#sampstatsbasicprop-1-8" class="xref" data-knowl="./knowl/xref/esampvar.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.14">(6.14)</a> explains the strange-looking denominator <span class="process-math">\(n-1\)</span> in <a href="sampling_section.html#sampling_section-2-5-5" class="xref" data-knowl="./knowl/xref/samplevardef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8">(6.8)</a>. The square roots of the variances <a href="sampling_section.html#sampstatsbasicprop-1-8" class="xref" data-knowl="./knowl/xref/sesampave.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.11">(6.11)</a> and <a href="sampling_section.html#sampstatsbasicprop-1-8" class="xref" data-knowl="./knowl/xref/sesampsum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.13">(6.13)</a> are usually denoted <span class="process-math">\(\sigma_{\overline{X}}\)</span> and <span class="process-math">\(\sigma_{n\overline{X}}\text{,}\)</span> respectively. The quantity <span class="process-math">\(\sigma_{\overline{X}}\)</span> is called the <dfn class="terminology">standard error</dfn> for the sample average. The quantity <span class="process-math">\(\sigma_{n\overline{X}}\)</span> is called the <dfn class="terminology">standard error</dfn> for the sample sum.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sampling_section-2-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sampling_section-2-8-1">Prove <a href="sampling_section.html#sampstatsbasicprop" class="xref" data-knowl="./knowl/xref/sampstatsbasicprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.3">Proposition 6.3</a> for the case of discrete variables.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sampling_section-2-8-2">Prove <a href="sampling_section.html#sampstatsbasicprop" class="xref" data-knowl="./knowl/xref/sampstatsbasicprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.3">Proposition 6.3</a> for the case of continuous variables that have density functions.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-2-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.4"><a href="#sampling_section-2-8" title="Copy heading and permalink for Checkpoint 6.4" aria-label="Copy heading and permalink for Checkpoint 6.4">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.1: Sampling Random Variables"><a href="#sampling_section-2" title="Copy heading and permalink for Subsection 6.1: Sampling Random Variables" aria-label="Copy heading and permalink for Subsection 6.1: Sampling Random Variables">🔗</a></div></section><section class="subsection" id="sampling_section-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simple random sample variables</span>
+</h3>
+<div class="para" id="sampling_section-3-2">Let <span class="process-math">\((\Omega,P)\)</span> be a finite probability space with <span class="process-math">\(N=|\Omega|\)</span> and with constant probability function <span class="process-math">\(p(\omega)=\frac{1}{N}\)</span> for all <span class="process-math">\(\omega\in\Omega\text{.}\)</span> Recall that <span class="process-math">\(\Omega^{n\ast}\)</span> denotes the set of all one-to-one sequences of length <span class="process-math">\(n\)</span> in <span class="process-math">\(\Omega\text{,}\)</span> called <em class="emphasis">simple random samples</em> of size <span class="process-math">\(n\)</span> taken from <span class="process-math">\(\Omega\text{.}\)</span> Recall that the probability function <span class="process-math">\(p_{\Omega^{n\ast}}\)</span> is constant, with constant value <span class="process-math">\(\frac{1}{N(N-1)\cdots (N-n+1)}\text{.}\)</span> Given a random variable <span class="process-math">\(X\colon \Omega \to \R\text{,}\)</span> we define sample random variables <span class="process-math">\(X_1,X_2,\ldots,X_n\)</span> on <span class="process-math">\(\Omega^{n\ast}\)</span> by the same formula <a href="sampling_section.html#sampvardef" class="xref" data-knowl="./knowl/xref/sampvardef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.1">(6.1)</a>as for ordinary sample variables. We call the <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((X_1,X_2,\ldots,X_n)\)</span> of variables on <span class="process-math">\(\Omega^{n\ast}\)</span> a <dfn class="terminology">simple random sample</dfn> of size <dfn class="terminology"></dfn> <span class="process-math">\(n\)</span> of <span class="process-math">\(X\text{.}\)</span>  As for ordinary samples, the simple random sample variables look like copies of <span class="process-math">\(X\text{.}\)</span> However, in contrast with the ordinary sample case, the simple random sample variables <span class="process-math">\(X_k\)</span> are <em class="emphasis">dependent</em>. Here are some key properties.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="simprandsampprop"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simple random samples of a random variable.</span>
+</h4>
+<div class="para logical" id="simprandsampprop-2">
+<div class="para">Let <span class="process-math">\((\Omega,P)\)</span> be a finite probability space with <span class="process-math">\(N=|\Omega|\)</span> and with a constant probability function. Let <span class="process-math">\((X_1,X_2,\ldots,X_n)\)</span> be a simple random sample of a random variable <span class="process-math">\(X\colon \Omega\to \R\)</span> with <span class="process-math">\(E(X)=\mu\)</span> and <span class="process-math">\(\var(X)=\sigma^2\text{.}\)</span> We have the following.</div>
+<div class="displaymath process-math" id="simprandsampprop-2-7">
+\begin{align}
+F_{X_k} \amp= F_X \text{   for }1\leq k\leq n\tag{6.15}\\
+E(X_k)\amp = \mu \text{   for }1\leq k\leq n\tag{6.16}\\
+\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n\tag{6.17}\\
+\covar(X_i,X_j)\amp =
+-\frac{\sigma^2}{N-1}\text{ if }i\neq j\tag{6.18}\\
+\var(\overline{X})\amp = \frac{\sigma^2}{n}\left(\frac{N-n}{N-1}\right)\tag{6.19}\\
+\var(n\overline{X})\amp =
+n\sigma^2\left(\frac{N-n}{N-1}\right)\tag{6.20}\\
+E\left(s^2\frac{N-n}{N}\right)\amp = \sigma^2\tag{6.21}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#simprandsampprop-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 6.5: Simple random samples of a random variable"><a href="#simprandsampprop" title="Copy heading and permalink for Proposition 6.5: Simple random samples of a random variable" aria-label="Copy heading and permalink for Proposition 6.5: Simple random samples of a random variable">🔗</a></div></article><div class="para" id="sampling_section-3-4">
+<em class="alert">Terminology:</em> Simple random samples are also called <em class="emphasis">samples taken without replacement</em>, or <em class="emphasis">survey samples</em>. This refers to the applied scenario in which the probability space <span class="process-math">\(\Omega\)</span> models a human population, where each individual in the population has the same chance of being selected for a survey (or some kind of measurement). Once surveyed, that individual will not be surveyed again; in other words, survey samples produce one-to-one sequences. As for ordinary samples, the quantities <span class="process-math">\(\sigma_{\overline{X}},\sigma_{n\overline{X}}\)</span> (the square roots of the variances <a href="sampling_section.html#simprandsampprop-2-7" class="xref" data-knowl="./knowl/xref/sesimpsampave.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.19">(6.19)</a> and <a href="sampling_section.html#simprandsampprop-2-7" class="xref" data-knowl="./knowl/xref/varsumsimplesampvars.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.20">(6.20)</a>, respectively) are called <em class="emphasis">standard errors</em>. The quantity <span class="process-math">\(\sqrt{\frac{N-n}{N-1}}\)</span> that occurs in both standard errors is called the <dfn class="terminology">correction factor</dfn> for the standard errors when sampling without replacement (or for simple random sampling, or for survey sampling).<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sampling_section-3-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sampling_section-3-5-1">Prove <a href="sampling_section.html#simprandsampprop" class="xref" data-knowl="./knowl/xref/simprandsampprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 6.5: Simple random samples of a random variable">Proposition 6.5</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.6"><a href="#sampling_section-3-5" title="Copy heading and permalink for Checkpoint 6.6" aria-label="Copy heading and permalink for Checkpoint 6.6">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.2: Simple random sample variables"><a href="#sampling_section-3" title="Copy heading and permalink for Subsection 6.2: Simple random sample variables" aria-label="Copy heading and permalink for Subsection 6.2: Simple random sample variables">🔗</a></div></section><section class="subsection" id="sampling_section-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some important variables arising from sampling</span>
+</h3>
+<div class="para" id="sampling_section-4-2">Let <span class="process-math">\(X\)</span> be a Bernoulli variable with <span class="process-math">\(p=P(X=1)\)</span> and <span class="process-math">\(q=1-p=P(X=0)\text{.}\)</span> Let <span class="process-math">\(X_1,X_2,X_3\ldots\)</span> be an infinite sequence of samples of <span class="process-math">\(X\text{.}\)</span> Each random variable <span class="process-math">\(S_n=\sum_{k=1}^n X_k\)</span> is called a <dfn class="terminology">binomial</dfn> random variable. Let <span class="process-math">\(G\)</span> be defined by <span class="process-math">\(G(X_1,X_2,\ldots) =
+k\)</span> if <span class="process-math">\(k\)</span> is the lowest index such that <span class="process-math">\(X_k=1\text{,}\)</span> that is, if <span class="process-math">\(0=X_1=X_2=\cdots \ X_{k-1}\)</span> and <span class="process-math">\(X_k=1\text{.}\)</span> The variable <span class="process-math">\(Z\)</span> is called a <dfn class="terminology">geometric</dfn> random variable. It is easy to show that the cdf <span class="process-math">\(F_G\)</span> is given by <span class="process-math">\(F_G(k) = 1-q^k\)</span> for <span class="process-math">\(k=1,2,3,\ldots\text{.}\)</span> The continuous function <span class="process-math">\(F\colon \R\to\R\)</span> given by <span class="process-math">\(F(x)=1-q^x\)</span> satisfies the properties of a distribution function. By the fact alluded to in the opening paragraph of <a href="rand_vars_cts_section.html#genldistfnsubsect" class="internal" title="Subsection 5.1: General distribution functions">Subsection 5.1</a>, it follows that there exists a random variable <span class="process-math">\(H\)</span> such that <span class="process-math">\(F\)</span> is the distribution function <span class="process-math">\(F_H\)</span> of <span class="process-math">\(H\text{.}\)</span> The variable <span class="process-math">\(H\)</span> is called the <dfn class="terminology">exponential</dfn> random variable with parameter <span class="process-math">\(\lambda=-\ln q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sampling_section-4-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="sampling_section-4-3-1">
+<ol class="decimal" id="sampling_section-4-3-1-1">
+<li id="sampling_section-4-3-1-1-1">
+<div class="para" id="p-derived-sampling_section-4-3-1-1-1">Find the probability function, the distribution function, and find the mean and the variance for the binomial distribution.</div>
+<div class="autopermalink" data-description="Item 6.7.1"><a href="#sampling_section-4-3-1-1-1" title="Copy heading and permalink for Item 6.7.1" aria-label="Copy heading and permalink for Item 6.7.1">🔗</a></div>
+</li>
+<li id="sampling_section-4-3-1-1-2">
+<div class="para" id="p-derived-sampling_section-4-3-1-1-2">Find the probability function, the distribution function, and find the mean and the variance for the geometric distribution.</div>
+<div class="autopermalink" data-description="Item 6.7.2"><a href="#sampling_section-4-3-1-1-2" title="Copy heading and permalink for Item 6.7.2" aria-label="Copy heading and permalink for Item 6.7.2">🔗</a></div>
+</li>
+<li id="sampling_section-4-3-1-1-3">
+<div class="para" id="p-derived-sampling_section-4-3-1-1-3">Find the probability density function and find the mean and the variance for the exponential distribution.</div>
+<div class="autopermalink" data-description="Item 6.7.3"><a href="#sampling_section-4-3-1-1-3" title="Copy heading and permalink for Item 6.7.3" aria-label="Copy heading and permalink for Item 6.7.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.7"><a href="#sampling_section-4-3" title="Copy heading and permalink for Checkpoint 6.7" aria-label="Copy heading and permalink for Checkpoint 6.7">🔗</a></div></article></details><div class="para logical" id="sampling_section-4-4">
+<div class="para">The <dfn class="terminology">(standard) normal</dfn> variable plays a key role in sampling theory, due to the Central Limit Theorem, which we study below. In this paragraph we describe how the standard normal variable arises as a limit process applied to a sequence of binomial variables. Let <span class="process-math">\(Y\)</span> be a Bernoulli variable with <span class="process-math">\(P(Y=1)=1/2=P(Y=0)\text{.}\)</span> It is easy to check that <span class="process-math">\(\mu_Y=1/2\)</span> and <span class="process-math">\(\sigma_Y=1/2\text{.}\)</span> Let <span class="process-math">\(Y_1,Y_2,Y_3,\ldots\)</span> be an infinite sequence of samples of <span class="process-math">\(Y\text{,}\)</span> and let <span class="process-math">\(S_n\)</span> be the binomial variable <span class="process-math">\(S_n=Y_1+Y_2+\ldots Y_n\text{.}\)</span> Using the sampling formulas <a href="sampling_section.html#sampstatsbasicprop-1-8" class="xref" data-knowl="./knowl/xref/expectsampsum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.12">(6.12)</a> and <a href="sampling_section.html#sampstatsbasicprop-1-8" class="xref" data-knowl="./knowl/xref/sesampsum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.13">(6.13)</a>, we have <span class="process-math">\(E(S_n)=n\mu\)</span> and <span class="process-math">\(\var(S_n)=n\sigma\text{.}\)</span> Let <span class="process-math">\(T_n=(S_n-n\mu)/(\sigma\sqrt{n})\)</span> be the normalized version of <span class="process-math">\(S_n\text{.}\)</span> It turns out that there is exists a limit function <span class="process-math">\(\Phi = \lim_{n\to\infty}T_n\text{,}\)</span> which means that <span class="process-math">\(\Phi(x) = \lim_{n\to\infty} T_n(x)\)</span> for every real number <span class="process-math">\(x\text{.}\)</span> The limit function <span class="process-math">\(\Phi\)</span> satisfies the properties of a distribution function. By the fact alluded to in the opening paragraph of <a href="rand_vars_cts_section.html#genldistfnsubsect" class="internal" title="Subsection 5.1: General distribution functions">Subsection 5.1</a>, it follows that there exists a random variable <span class="process-math">\(Z\)</span> such that <span class="process-math">\(\Phi\)</span> is the distribution function <span class="process-math">\(F_Z\)</span> of <span class="process-math">\(Z\text{.}\)</span> The variable <span class="process-math">\(Z\)</span> is called the <em class="emphasis">(standard) normal</em> variable. It is also called a <dfn class="terminology">Gaussian</dfn> variable, in honor of C.F. Gauss, who discovered it. The standard normal distribution has a mean of zero, a standard deviation of 1, and has probability density function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/expectsampsum.html ./knowl/xref/sesampsum.html ./knowl/xref/genldistfnsubsect.html" id="sampling_section-4-4-28">
+\begin{equation}
+f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}.\tag{6.22}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sampling_section-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sampling_section-4-5-1">Work through the examples in Section 1.4.2 and the exercises in Section 1.4.3 in <a class="external" href="https://mathvista.org/elemstats_notes/basic_normal_dist.html" target="_blank">Section 1.4</a> in <a href="backmatter-1.html#lyons_elemstats" class="xref" data-knowl="./knowl/xref/lyons_elemstats.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3: Elementary Statistics Supplementary Notes">[3]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.8"><a href="#sampling_section-4-5" title="Copy heading and permalink for Checkpoint 6.8" aria-label="Copy heading and permalink for Checkpoint 6.8">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.3: Some important variables arising from sampling"><a href="#sampling_section-4" title="Copy heading and permalink for Subsection 6.3: Some important variables arising from sampling" aria-label="Copy heading and permalink for Subsection 6.3: Some important variables arising from sampling">🔗</a></div></section><section class="subsection" id="sampling_section-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Central Limit Theorem</span>
+</h3>
+<div class="para" id="sampling_section-5-2">Recall that <span class="process-math">\(\Phi\)</span> denotes the cumulative distribution function for the standard normal distribution.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="sampling_section-5-3"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Central Limit Theorem.</span>
+</h4>
+<div class="para logical" id="sampling_section-5-3-2">
+<div class="para">Let <span class="process-math">\(X_1,X_2,X_3,\ldots\)</span> be a sequence of sample variables for a random variable <span class="process-math">\(X\)</span> with <span class="process-math">\(E(X)=\mu\)</span> and <span class="process-math">\(\var(X)=\sigma^2\text{.}\)</span> Let <span class="process-math">\(S_n\)</span> denote the variable <span class="process-math">\(S_n=X_1+X_2+\cdots + X_n\text{,}\)</span> so that we have <span class="process-math">\(E(S_n)=n\mu\)</span> and <span class="process-math">\(\var{S_n}=n\sigma^2\text{.}\)</span> Let <span class="process-math">\(T_n=(S_n-n\mu)/(\sqrt{n}\sigma)\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="sampling_section-5-3-2-10">
+\begin{equation*}
+\lim_{n\to\infty} F_{T_n}(x) = \Phi(x)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x \in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 6.9: The Central Limit Theorem"><a href="#sampling_section-5-3" title="Copy heading and permalink for Proposition 6.9: The Central Limit Theorem" aria-label="Copy heading and permalink for Proposition 6.9: The Central Limit Theorem">🔗</a></div></article><details id="sampling_section-5-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sampling_section-5-4-1">Do the exercises in in <a class="external" href="https://mathvista.org/elemstats_notes/basic_sampling" target="_blank">Section 1.8.3 1.4</a> in <a href="backmatter-1.html#lyons_elemstats" class="xref" data-knowl="./knowl/xref/lyons_elemstats.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3: Elementary Statistics Supplementary Notes">[3]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.10"><a href="#sampling_section-5-4" title="Copy heading and permalink for Checkpoint 6.10" aria-label="Copy heading and permalink for Checkpoint 6.10">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.4: The Central Limit Theorem"><a href="#sampling_section-5" title="Copy heading and permalink for Subsection 6.4: The Central Limit Theorem" aria-label="Copy heading and permalink for Subsection 6.4: The Central Limit Theorem">🔗</a></div></section><section class="subsection" id="sampling_section-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Estimating population parameters</span>
+</h3>
+<div class="para logical" id="sampling_section-6-2">
+<div class="para">Let <span class="process-math">\(X\)</span> be a random variable with <span class="process-math">\(E(X)=\mu\)</span> and <span class="process-math">\(\var(X)=\sigma^2\text{.}\)</span> Let <span class="process-math">\(\overline{X}=\frac{1}{n}\sum_{i=1}^n X_i\)</span> be the average of a sample of size <span class="process-math">\(n\)</span> of <span class="process-math">\(X\text{.}\)</span> For <span class="process-math">\(\alpha\)</span> in the range <span class="process-math">\(0\lt \alpha \lt 1\text{,}\)</span> let <span class="process-math">\(z_\alpha\)</span> be the value of a standard normal variable such that <span class="process-math">\(P(|z|\leq z_\alpha)=\alpha \text{.}\)</span> The Central Limit Theorem says that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cltinspireconfint.html ./knowl/xref/cltinspireconfint.html" id="cltinspireconfint">
+\begin{equation}
+P(|\overline{X}-\mu| \leq z_\alpha \sigma_{\overline{X}})
+\approx \alpha.\tag{6.23}
+\end{equation}
+</div>
+<div class="para">Equation <a href="sampling_section.html#cltinspireconfint" class="xref" data-knowl="./knowl/xref/cltinspireconfint.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.23">(6.23)</a> motivates the following procedure for estimating an unknown population parameter <span class="process-math">\(\mu\)</span> from sample data. Intuitively, <span class="process-math">\(\overline{X}\)</span> estimates <span class="process-math">\(\mu\)</span> with an error estimated by <span class="process-math">\(\sigma_{\overline{X}}\text{.}\)</span> If the population variance <span class="process-math">\(\sigma^2\)</span> is unknown, we can use the sample SD <span class="process-math">\(s\)</span> to estimate <span class="process-math">\(\sigma\text{,}\)</span> and we can use <span class="process-math">\(s/\sqrt{n}\)</span> to estimate <span class="process-math">\(\sigma_{\overline{X}}\text{.}\)</span> Inspired by <a href="sampling_section.html#cltinspireconfint" class="xref" data-knowl="./knowl/xref/cltinspireconfint.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.23">(6.23)</a>, we say that the interval</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cltinspireconfint.html ./knowl/xref/cltinspireconfint.html" id="sampling_section-6-2-23">
+\begin{equation}
+\overline{X}\pm z_\alpha s/\sqrt{n}\tag{6.24}
+\end{equation}
+</div>
+<div class="para">is a <span class="process-math">\(100z_\alpha\%\)</span> confidence interval for the population mean <span class="process-math">\(\mu\text{.}\)</span> Notice that the confidence interval is a random quantity, that is, it depends on the sample. Roughly speaking, we estimate that approximately <span class="process-math">\(100z_\alpha\%\)</span> of all <span class="process-math">\(100z_\alpha\%\)</span> confident intervals will contain <span class="process-math">\(\mu\text{,}\)</span> and approximately <span class="process-math">\(100(1-z_\alpha)\%\)</span> of these intervals will fail to contain <span class="process-math">\(\mu\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sampling_section-6-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="sampling_section-6-3-1">
+<ol class="decimal" id="sampling_section-6-3-1-1">
+<li id="sampling_section-6-3-1-1-1">
+<div class="para" id="p-derived-sampling_section-6-3-1-1-1">Show that <span class="process-math">\(z_\alpha = \Phi^{-1}((\alpha+1)/2)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 6.11.1"><a href="#sampling_section-6-3-1-1-1" title="Copy heading and permalink for Item 6.11.1" aria-label="Copy heading and permalink for Item 6.11.1">🔗</a></div>
+</li>
+<li id="sampling_section-6-3-1-1-2">
+<div class="para" id="p-derived-sampling_section-6-3-1-1-2">Explain why <a href="sampling_section.html#cltinspireconfint" class="xref" data-knowl="./knowl/xref/cltinspireconfint.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.23">(6.23)</a> holds.</div>
+<div class="autopermalink" data-description="Item 6.11.2"><a href="#sampling_section-6-3-1-1-2" title="Copy heading and permalink for Item 6.11.2" aria-label="Copy heading and permalink for Item 6.11.2">🔗</a></div>
+</li>
+<li id="sampling_section-6-3-1-1-3">
+<div class="para" id="p-derived-sampling_section-6-3-1-1-3">Read Section 5.2 and do odd numbered exercises at the end of the section in <a href="backmatter-1.html#openintro_stats" class="xref" data-knowl="./knowl/xref/openintro_stats.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 7: OpenIntro Statistics, 4th edition">[7]</a>.</div>
+<div class="autopermalink" data-description="Item 6.11.3"><a href="#sampling_section-6-3-1-1-3" title="Copy heading and permalink for Item 6.11.3" aria-label="Copy heading and permalink for Item 6.11.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.11"><a href="#sampling_section-6-3" title="Copy heading and permalink for Checkpoint 6.11" aria-label="Copy heading and permalink for Checkpoint 6.11">🔗</a></div></article></details><section class="exercises" id="sampling_section-6-4"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h4>
+<article class="exercise exercise-like" id="sampling_section-6-4-1"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="sampling_section-6-4-1-1">Do the exercises in <a class="external" href="https://mathvista.org/elemstats_notes/basic_sampling.html" target="_blank">Section 1.8.3</a> of <a href="backmatter-1.html#lyons_elemstats" class="xref" data-knowl="./knowl/xref/lyons_elemstats.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3: Elementary Statistics Supplementary Notes">[3]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sampling_section-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.5.1"><a href="#sampling_section-6-4-1" title="Copy heading and permalink for Exercise 6.5.1" aria-label="Copy heading and permalink for Exercise 6.5.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 6.5"><a href="#sampling_section-6-4" title="Copy heading and permalink for Exercises 6.5" aria-label="Copy heading and permalink for Exercises 6.5">🔗</a></div></section><div class="autopermalink" data-description="Subsection 6.5: Estimating population parameters"><a href="#sampling_section-6" title="Copy heading and permalink for Subsection 6.5: Estimating population parameters" aria-label="Copy heading and permalink for Subsection 6.5: Estimating population parameters">🔗</a></div></section><div class="autopermalink" data-description="Section 6: Sampling Theory"><a href="#sampling_section" title="Copy heading and permalink for Section 6: Sampling Theory" aria-label="Copy heading and permalink for Section 6: Sampling Theory">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="rand_vars_cts_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="hypoth_testing_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<section xml:id="probability_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Probability
+</title>
+
+<subsection><title>Some vocabulary from set theory</title>
+
+  <p>Let <m>S</m> be a set. A function <m>f\colon \{1,2,\ldots,n\}\to
+      S</m> is called a <em>sequence</em> in <m>S</m> of
+      length <m>n</m>. A sequence is denoted by an ordered
+      list <m>(s_1,s_2,\ldots,s_n)</m> of elements in <m>S</m>,
+      where <m>s_k=f(k)</m> for <m>1\leq k\leq n</m>.  The set of all
+      possible sequences in <m>S</m> of length <m>n</m> is denoted
+    <m>S^n</m>, and is also called the <m>n</m>-fold <em>Cartesian
+      product</em> of <m>S</m> with itself.
+    <men>S^n = \underbrace{S\times S \times \cdots \times S}_{n \text{
+      factors}}=\{(s_1,s_2,\ldots,s_n)\colon s_k\in S\text{ for } 1\leq
+      k\leq n\}</men>
+    Elements of <m>S^n</m> are also
+    called <em>ordered <m>n</m>-tuples</em>. It is convenient to have a
+    name for the subset of sequences <m>f\colon \{1,2,\ldots,n\}\to
+      S</m> that are one-to-one, which is the same as the set of 
+    <m>n</m>-tuples <m>(s_1,s_2,\ldots,s_n)</m> that have no repeated
+    values, that is, for
+    which <m>s_i\neq s_j</m> for <m>i\neq j</m>. In these notes, we will
+    write <m>S^{n\ast}</m> to denote the set of sequences that are
+    one-to-one.<fn>The notation <m>S^{n\ast}</m> is not standard. In
+      these notes, we do <em>not</em> use the standard notation is <m>P_n(S)</m> (where <m>P</m> stands
+      for <em>permutations</em>) in order to avoid confusion with
+      probability measures, which are also denoted using <m>P</m>.
+    </fn>
+    <men>S^{n\ast} =\{(s_1,s_2,\ldots,s_n)\in S^n\colon s_i\neq
+      s_j\text{ for }i\neq j\}</men>
+<!--    Recall that the <em>power set</em> of a set <m>X</m> is the set of
+    all subsets of <m>X</m>.
+    We will write <m>\mathcal{P}(X)</m> to denote the power set
+    <men>\mathcal{P}(X)=\{A\colon A\subseteq X\}</men>
+    of a set <m>X</m>. Given <m>A\in \mathcal{P}(X)</m>, we will
+    write <m>A^c</m> to denote the <em>complement</em> of <m>A</m>
+    relative to <m>\Omega</m>, which means all of the elements
+    in <m>\Omega</m> that are <em>not</em> in <m>A</m>. The complement
+    of <m>A</m> is the same as the <em>set difference </em> <m>\Omega
+      \setminus A</m> (also written or <m>\Omega - A</m>).
+    <men>A^c = \Omega\setminus A = \{\omega\in \Omega\colon \omega \not\in A\}</men>
+    Recall that
+    sets <m>A,B</m> in <m>\mathcal{P}(X)</m> are said to
+    be <em>disjoint</em> if <m>A\cap B = \emptyset</m>.
+    Finally, if <m>X</m> is finite, we will write <m>|X|</m> to denote the
+    number of elements in <m>X</m>.-->
+    
+  </p>
+
+  <exercise><p>
+      Let <m>\Omega=\{x,y\}</m>.
+      <ol>
+	<li>Write out the elements of the set <m>\Omega^3</m>.
+	</li>
+	<li>Write out the elements of the set <m>\Omega^{2\ast}</m>.
+	</li>
+	<li>Write out the elements of the set <m>\mathcal{P}(\Omega)</m>.
+	</li>
+	<li>Write out the elements of the set <m>\mathcal{P}(\Omega^{2\ast})</m>.
+	</li>	
+      </ol>
+    </p>
+  </exercise>
+  
+</subsection>
+
+<subsection><title>Basic Probability Models</title>
+
+  <p>The most basic probability scenario is a chance process that
+  has a finite number of outcomes, each of which occurs with equal
+  likelihood. Here is the mathematical model.
+  </p>
+
+  <definition><title>Basic probability model</title>
+<p>    Let <m>\Omega</m> be a finite set. Let <m>P\colon
+      \mathcal{P}(\Omega)\to [0,1]</m> be given by
+    <men xml:id="basicprobmeasdef">P(E)=\frac{|E|}{|\Omega|}</men>
+    for <m>E\subseteq \Omega</m>. The set <m>\Omega</m> is called a
+    <term>probability space</term> and the function <m>P</m> is called
+    a <term>probability measure</term>. Elements of <m>\Omega</m> are
+    called <term>outcomes</term>, and elements
+    of <m>\mathcal{P}(\Omega)</m> (that is, subsets of <m>\Omega</m>)
+    are called <term>events</term>
+    in <m>\Omega</m>. We
+    will call the pair <m>(\Omega,P)</m> a <term>basic probability model</term>.
+</p>
+  </definition>
+
+    <exercise>
+    <p>exercises, examples here</p>
+  </exercise>
+
+  <p>In what follows below, we will sometimes need to discuss several
+  probability models at the same time. For probability spaces <m>\Omega,\Psi</m>, we will
+    write <m>P_{\Omega},P_{\Psi}</m> to denote their respective
+  probability measures.
+    </p>
+  
+  <p>Repetitions of a chance process produce a sequence of outcomes
+    called <em>samples</em>. A basic sampling scenario is a sequence of
+    draws taken from a box of tickets, as in a lottery drawing. A
+    sequence of draws may be taken <em>with replacement</em>
+    or <em>without replacement</em>. These terms refer to whether or not each ticket drawn
+    from the box is replaced in the box before the next draw. In
+    a <em>fair</em> sequence of draws, every ticket in the box
+    at any given moment has an equal chance to be selected on the next
+    draw. Here is the mathematical definition that captures the
+    intuitive idea of a fair lottery game. 
+  </p>
+
+  <definition>
+    <title>Box models</title>
+    <p>Let <m>(B,P_B)</m> be a basic probability model.
+      The basic
+      probability model <m>(B^n,P_{B^n})</m> is called the <em>box
+      model</em> for samples of size <m>n</m> taken <em>with</em>
+      replacement from <m>B</m>.
+            The basic
+      probability model <m>(B^{n\ast},P_{B^{n\ast}})</m> is called the <em>box
+      model</em> for samples of size <m>n</m> taken <em>without</em>
+      replacement from <m>B</m>. 
+    </p>
+  </definition>
+
+    <exercise>
+    <p>exercises, examples here</p>
+  </exercise>
+  
+</subsection>
+
+<subsection>
+  <title>Vocabulary and properties of probability</title>
+
+  <definition><title>More probability terminology</title>
+  <p>Let <m>(\Omega,P)</m> be a basic probability model.
+    The complement <m>A^c</m> of an event <m>A</m>
+    is also called the <term>opposite</term> of <m>A</m>. Disjoint
+    events <m>A,B</m> are also called <term>mutually exclusive</term>.
+    Given events <m>U,V</m> with <m>P(V)\neq 0</m>, the <term>conditional probability
+      of <m>U</m> given <m>V</m></term>, denoted <m>P(U|V)</m>, is
+    defined to be
+    <men xml:id="condprobdef">P(U|V)=\frac{P(U\cap V)}{P(V)}.</men> Events <m>U,V</m> are
+    called <term>independent</term> if <m>P(U\cap
+      V)=P(U)P(V)</m>. Otherwise, <m>U,V</m> are
+    called <term>dependent</term>.
+    </p>
+  </definition>
+
+      <exercise>
+    <p>exercises, examples here</p>
+      </exercise>
+
+      
+  <proposition><title>Properties of probability</title>
+    <p>Let <m>(\Omega,P)</m> be a basic probability model. The following
+      properties hold.
+      <ol>
+      <li><m>P(\Omega)=1</m>.
+      </li>
+      <li>If <m>A\subseteq B</m> for some events <m>A,B</m>,
+      then <m>P(A)\leq P(B)</m>.
+      </li>      
+      <li>If events <m>A,B</m> are disjoint, then <m>P(A\cup B)=P(A)+P(B)</m>.
+      </li>
+      <li><term>(addition rule)</term>
+	For any two events <m>A,B</m>, we have <m>P(A\cup
+      B)=P(A)+P(B)-P(A\cap B)</m>.
+      </li>
+      <li><term>(opposite rule)</term>
+	For any event <m>A</m>, we have <m>P(A^c)=1-P(A)</m>.
+      </li>
+      <li><term>(multiplication rule)</term>
+	For any events <m>U,V</m> such that <m>P(U)\neq 0</m>, we
+      have <m>P(U\cap V) = P(U)P(V|U)</m>.
+      </li>
+      <li>If events <m>U,V</m> are independent and <m>P(U)\neq 0</m>,
+	then <m>P(V)=P(V|U)</m>.
+      </li>
+      </ol>
+    </p>
+  </proposition>
+
+    <exercise>
+    <p>prove the proposition</p>
+  </exercise>
+
+    
+
+    
+    <proposition><title>Independence for draws taken with
+	replacement</title>
+      <p>
+	Let <m>(B,P_B)</m> be a basic box
+	model and let <m>E,F</m> be events
+	in <m>B</m>. Let <m>E',F'</m> be events in <m>B^2</m> defined by
+	<md>
+	  <mrow>E' \amp= \{(x,y)\in B^2\colon x\in E\}
+	  </mrow>
+	  <mrow>F' \amp= \{(x,y)\in B^2\colon y\in F\}.
+	  </mrow>	  
+	</md>
+	Then we have
+	<mdn>
+	  <mrow>E'\cap F' \amp = E\times F</mrow>
+	  <mrow xml:id="probeventmult">P_{B^2}(E') \amp = P_B(E)
+	  </mrow>
+	  <mrow xml:id="probeventmult2">P_{B^2}(F') \amp = P_B(F)
+	  </mrow>
+	  <mrow xml:id="repldrawsindepeqn">P_{B^2}(E'\cap F') \amp = P_{B^2}(E')P_{B^2}(F').
+	  </mrow>
+      </mdn>
+      <xref ref="repldrawsindepeqn"/> shows that <m>E',F'</m> are independent
+      events in <m>B^2</m>. Putting that together with
+      <xref ref="probeventmult"/> and <xref ref="probeventmult2"/> gives
+      the following useful probability equation.
+      <men xml:id="probmultdrawseqn">P_{B^2}(E'\cap F')=P_{B}(E)P_{B}(F)
+      </men>
+      </p>
+    </proposition>
+
+    <exercise><p>Prove all the parts of the proposition.</p>
+    </exercise>
+    
+    <exercise>
+      <p>State and prove a generalization of the proposition
+	for <m>n</m> draws with replacement. In particular, prove this
+	generalization of <xref ref="probmultdrawseqn"/>.
+	<men xml:id="probmultdraweqnmany">
+	  P_{B^n}(E_1'\cap E_2'\cap \cdots \cap
+	  E'_n)=P_{B}(E_1)P_B(E_2)\cdots P_{B}(E_n)
+	</men>
+	
+
+      </p>
+    </exercise>
+    
+</subsection>
+
+<!--
+<subsection>
+  <title>Bernoulli probability models</title>
+
+  <p>Let <m>(B,P)</m> be a basic probability model, and let <m>B=X\cup
+      Y</m> be a partition of <m>B</m>. (This means that <m>X,Y</m> are
+    nonempty, disjoint subsets of <m>B</m> whose union is <m>B</m>.) 
+    Let <m>p=P(X)</m> and let <m>q=P(Y)</m>. In a
+    scenario where our only concern is whether a random draw
+      from <m>B</m> belongs
+    to <m>X</m> or <m>Y</m>, we call <m>(B,P)</m> a Bernoulli model, and
+    we call <m>(B^n,P_{B^n})</m> the box model
+    for <m>n</m> <term>Bernoulli trials</term> taken from <m>B</m>. The
+      following probability formula turns out to be very useful.
+</p>
+
+  <proposition>
+    <title>Binomial probability formula</title>
+  <p>Let <m>B</m> be a Bernoulli model with subsets <m>X,Y</m> as
+    described above, and with <m>p=P(X)</m>, <m>q=P(Y)</m>.
+    Let <m>n</m> be a positive
+    integer, and let <m>k</m> in the range <m>0\leq k\leq
+      n</m>. Let <m>E_k</m> denote the event in the basic box
+    model <m>(B^n,P_{B^n})</m>
+    that consists of all sequences of length <m>n</m> in <m>B^n</m> for
+    which exactly <m>k</m> entries are elements of <m>X</m> and
+    exactly <m>n-k</m> entries are elements of <m>Y</m>. Then we have
+    <men>P(E_k) = {n\choose k} p^k q^{n-k}.</men>
+  </p>
+  </proposition>
+  
+      <exercise>
+    <p>warm ups, and then prove the proposition</p>
+  </exercise>
+  
+  
+</subsection>
+-->
+
+<!--
+<subsection><title>Basic probability models with two outcomes</title>
+
+  <p>Let <m>B=\{x,y\}</m>, so that outcomes in the basic box
+    model <m>(B^n,P_{B^n})</m> are sequences of <m>x</m>'s
+    and <m>y</m>'s with a total length <m>n</m>. 
+  </p>
+
+  <exercise>
+    <p>List all of the outcomes in <p>B^4</p>.
+    </p>
+  </exercise>
+
+  <p>Let <m>k</m> be a whole number in the range <m>0\leq k\leq n</m>,
+    and let <m>E_k\subseteq B^n</m> be the event consisting of all
+    sequences that have exactly <m>k</m> <m>x</m>'s
+    and <m>n-k</m> <m>y</m>'s. 
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Write out the events <p>E_0,E_1,E_2,E_2,E_4</p>
+	  in <p>B^4</p>.</li>
+	<li>Show that <m>|E_k|</m> is equal to the exponent of <m>x</m>
+	  in the expansion of <m>(x+y)^n</m> as sum of monomials.
+	</li>
+	<li>Show that <m>|E_k| = {n\choose k}</m>.
+	</li>
+      </ol>
+    </p>
+  </exercise>
+
+  <proposition>
+    <title>Summary: specialty probability formula for two-outcome box
+      model</title>
+    <p>Let <m>B,n,E_k</m> be defined as above in this subsection. We
+      have
+      <men>P(E_k) = \frac{{n\choose k}}{2^n}.</men>
+    </p>
+  </proposition>
+
+</subsection>
+-->
+
+<subsection><title>Bayes' Rule</title>
+
+  <p><term>Bayes' Rule</term>
+    can be viewed as a practical method
+    for finding conditional probabilities. For events <m>A,B</m> in a
+    probability space <m>\Omega</m>, where
+    both probabilities <m>P(A),P(B)</m> are nonzero, the definition of
+    conditional probability <xref ref="condprobdef"/> gives us two ways
+    to write <m>P(A\cap B)</m>, namely
+    <me>P(A\cap B)= P(A)P(B|A) = P(B)P(A|B).</me>
+    Dividing the last two terms by <m>P(A)</m> leads to the following,
+    which is a basic form of Bayes' Rule.
+      <men xml:id="bayesrulebasic">  P(B|A) =\frac{P(B)P(A|B)}{P(A)}</men>      
+    A use case for this version of Bayes' Rule is a problem in which you
+    know the probabilities in the expression on the right, and you wish
+    to find the probability on the left. In effect, this allows you to
+    use <m>P(A|B)</m> to find <m>P(B|A)</m>.
+  </p>
+
+<p>In a more nuanced form of Bayes' Rule, the event <m>B</m> is one of
+    of a collection of events <m>B_1,B_2,\ldots,
+    B_r</m> that form a partition of <m>\Omega</m>, say, <m>B=B_k</m>. In this case, we
+  have
+  <mdn>
+    <mrow>A \amp = \bigcup_{i=1}^r (A\cap B_i)</mrow>
+    <mrow>P(A) \amp = \sum_{i=1}^r P(A\cap B_i)</mrow>
+    <mrow xml:id="partcondprob">\amp = \sum_{i=1}^r P(B_i)P(A|B_i)</mrow>        
+  </mdn>
+  Substituting <m>B=B_k</m>, and substituting the last expression <xref ref="partcondprob"/>
+  for <m>P(A)</m> in <xref ref="bayesrulebasic"/>, we have the following usual form
+  of Bayes' Rule.
+  <men xml:id="bayesrule">P(B_k|A)  =  \frac{P(B_k)P(A|B_k)}{\sum_i P(B_i)P(A|B_i)}
+  </men>
+</p>
+
+<p>exercises: explain all the steps in the derivation for Bayes'
+  Rule, find A's and B's for medical testing scenario (what is the
+  chance of having the disease given a positive test result?), do some
+  basic application problems</p>
+
+</subsection>
+  
+
+<p>a set of exercises here with standard and non-standard probability
+  problems: limitations of the box model, but ability to simulate any
+  probability to any error threshold</p>
+
+<p>include an exercise with the definition of a discrete probability
+  model (countable probability space <m>\Omega</m> with probability measure
+  function <m>p\colon \Omega\to [0,1]</m> that satisfies <m>\sum_i p_i
+    = 1</m> and probability measure <m>P\colon \mathcal{P}(\Omega)\to
+    [0,1]</m> given by <m>P(E)=\sum_{\omega\in E} p(\omega))</m>, show
+  that this definition is okay, show it satisfies all the properties above
+  with </p>
+</section>

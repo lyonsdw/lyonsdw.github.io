@@ -1,0 +1,169 @@
+<section xml:id="probability_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Probability
+</title>
+
+<subsection><title>Intuition for probability definitions</title>
+
+  <p>When we say <q>game of chance</q>
+    or <q>chance process</q>, we imagine some
+  kind of orderly procedure (for example: flipping coins, rolling dice, drawing
+  lottery tickets, etc.) that produces an outcome that we cannot predict
+    with certainty. In the face of uncertainty, we do the next best
+  thing, which is to assign likelihood. For example, we don't know for
+  certain in advance whether a roll of a fair die will land showing the
+  6 face, or whether the die will land showing a face with an even or an
+  odd number. But
+    we can predict that the 6 face outcome will occur in
+  about <m>1/6\approx 16.7\%</m> of many rolls, and that a roll
+  will show a face with an odd number in about half of many rolls. This is what we
+  mean when we say <q>the probability that a roll of a fair die comes up 6
+      is <m>1/6</m></q>, and <q>the probability that a fair dies comes up odd
+      is <m>1/2</m></q>.
+  </p>
+
+  <p>This simple example introduces the three components of the
+    mathematical definition of probability. For a roll of a fair die, there is a <em>set of
+      outcomes</em>
+    <m>\Omega=\{1,2,3,4,5,6\}</m>. Subsets of <m>\Omega</m> are
+    called <em>events</em>. For example, the sets
+    <m>A=\{6\}</m>
+    and  <m>B=\{1,3,5\}</m> the <em>events</em>
+    described in words by  <m>A=\text{"roll a 6"}</m> and <m>B=\text{"roll an odd number"}</m>, respectively. The probabilities
+    <m>P(A)=1/6</m> and <m>P(B)=1/2</m> are assignments given to events
+    by a function <m>P</m> called a
+    <em>probability measure</em>. The subsection that follow give the
+    complete formal definition of a probability space.</p>
+</subsection>
+
+<subsection>
+  <title>Algebras of sets</title>
+
+  <p>We begin with some definitions from set theory.</p>
+
+  <definition><title>Power set of a set</title>
+<p>    Let <m>X</m> be a set. The <term>power set</term> of <m>X</m>,
+    denoted <m>\mathcal{P}(X)</m>, is the set of all subsets
+    of <m>X</m>. In symbols,
+  <me>\mathcal{P}(X) = \{A\colon A\subseteq X\}.</me></p>
+  </definition>
+  
+  <definition><title>Algebra of subsets of a set</title>
+<p>    Let <m>X</m> be a set and let <m>\mathcal{A}\subseteq
+      \mathcal{P}(X)</m>, that is, <m>\mathcal{A}</m> is a set of
+  subsets of <m>X</m>. We say that <m>\mathcal{A}</m> is
+  an <term>algebra of subsets</term> of <m>X</m> if the following
+  conditions hold.
+  <mdn>
+    <mrow>X\in \mathcal{A}
+    </mrow>
+    <mrow xml:id="complementclosure">\text{if } A\in \mathcal{A}, \text{ then }(X \setminus A)\in
+	\mathcal{A} 
+    </mrow>
+    <mrow xml:id="unionclosure">\text{if }A,B \in \mathcal{A}, 
+    \text{ then }(A\cup B)\in \mathcal{A}
+    </mrow>
+  </mdn></p>
+  </definition>
+
+  <exercise xml:id="intersectionclosure">
+    <p>Let <m>\mathcal{A}</m> be an algebra of subsets of a
+	set <m>X</m>. Show that <m>\emptyset\in \mathcal{A}</m> and that
+	if <m>A,B</m> are elements of <m>\mathcal{A}</m>, then 
+       <m>(A\cap B)\in \mathcal{A}</m>.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>Show that the power set <m>\mathcal{P}(X)</m> of a set <m>X</m>
+      is an algebra of subsets of <m>X</m>.
+    </p>
+  </exercise>
+
+  <p>
+  <alert>Terminology:</alert> We express condition in words
+    <xref ref="complementclosure"/> by saying that an algebra of sets is 
+    <em>closed under complementation</em>. Condition
+  <xref ref="unionclosure"/> is expressed
+  by saying that an algebra of sets is <em>closed under
+  unions</em>. <xref ref="intersectionclosure"/> says that an algebra of
+  sets is <em>closed under intersections</em>.
+</p>
+
+  <!--
+  <p>comments, replace closure under finite unions by closure under
+  countable unions</p>
+  
+  <definition><title><m>\sigma</m>-algebra of subsets of a set</title>
+<p>    Let <m>X</m> be a set and let <m>\mathcal{A}\subseteq
+      \mathcal{P}(X)</m>, that is, <m>\mathcal{A}</m> is a set of
+  subsets of <m>X</m>. We say that <m>\mathcal{A}</m> is
+  a <term><m>\sigma</m>-algebra of subsets</term> of <m>X</m> if the following
+  conditions hold.
+  <mdn>
+    <mrow>X\in \mathcal{A}
+    </mrow>
+    <mrow >\text{if } A\in \mathcal{A}, \text{ then }(X \setminus A)\in
+	\mathcal{A} 
+    </mrow>
+    <mrow xml:id="countableunionclosure">\text{if }A_n \in
+    \mathcal{A}\text{ for } n\in \N, 
+    \text{ then }(\bigcup_n A_n)\in \mathcal{A}
+    </mrow>
+  </mdn></p>
+  </definition>
+  
+  <p>put an exercise here to see that closure under countable unions
+  does not follow from closure under finite unions, and give an example
+    of a <m>\sigma</m>-algebra of sets
+  </p>
+-->
+</subsection>
+
+<subsection><title>Probability Spaces</title>
+
+  <p>disclaimer needed, some comment about finite versus infinite
+  outcome spaces</p>
+  
+  <definition>
+    <p>A <term>finite probability space</term> is a
+  triple <m>(\Omega,\mathcal{E},P)</m>, where 
+    <m>\Omega</m> is a set, <m>\mathcal{E}</m> is a finite algebra of subsets of <m>\Omega</m>, 
+and <m>P</m> is a function <m>P\colon \mathcal{E}\to
+      [0,1]</m> that satisfies the following properties.
+  <mdn>
+    <mrow>P(\Omega)=1
+    </mrow>
+    <mrow>\text{if }A,B \in \mathcal{E}\text{ and } A\cap B=\emptyset, \text { then } P(A\cup B)=P(A)+P(B)
+    </mrow>
+  </mdn>
+    </p>
+  <p>
+  Elements of <m>\Omega</m> are called <term>outcomes</term>. Elements
+  of <m>\mathcal{E}</m> are called <term>events</term>, and <m>P</m> is
+  called a <term>probability measure</term>. 
+</p>    
+</definition>
+
+
+
+  <p><alert>Notes on terminology:</alert> In the same way that we refer
+    to a function <m>f\colon X\to Y</m> simply by the
+    name <q><m>f</m></q>, we often refer to the probability
+    space <m>(\Omega,\mathcal{E},P)</m> simply by the name <q><m>\Omega</m></q>.
+    In words, the condition
+
+    <fn>If <m>\mathcal{E}</m> is infinite, then a stronger version
+  </fn>
+    </p>
+
+  <p><alert>Comment on the general definition of probability:</alert> To
+    define a probability space without the qualifying
+    adjective <q>finite</q>, it is necessary to replace condition
+    <xref ref="unionclosure"/> by a the following:
+hmm this needs work    
+  </p>
+    
+</subsection>
+
+</section>

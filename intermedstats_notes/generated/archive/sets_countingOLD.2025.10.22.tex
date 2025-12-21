@@ -1,0 +1,244 @@
+<section xml:id="sets_counting_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Sets and Counting
+</title>
+
+<subsection><title>Multiplication Principle(s)</title>
+
+  <p>Given a finite set <m>S</m>, recall that <m>|S|</m> denotes the
+    number of elements in <m>S</m>, also called the <em>size</em> of the
+    set <m>S</m>.
+    Given sets <m>U,V</m>, recall that <m>U\times V</m>
+    (called the <em>Cartesian product</em>) is 
+    set of all ordered pairs
+    <me>U\times V = \{(u,v)\colon u\in U,v\in V\}.</me>
+  </p>
+  
+  <proposition><title>The multiplication principle</title>
+    <p>Let <m>A,B</m> be finite sets. We have
+      <men>|A\times B|=|A|\;|B|.</men>
+    </p>
+  </proposition>
+
+  <exercise><statement><p>Give an argument to explain why the
+  multiplication rule is true.</p>
+    </statement>
+  </exercise>
+
+  <p>Recall that two sets are <em>disjoint</em> if their intersection is
+    empty. We say that a collection <m>\mathcal{A}</m>
+    of sets is <term>pairwise
+      disjoint</term> if <m>U,V</m> are disjoint for every pair of
+    sets <m>U,V</m> in <m>\mathcal{A}</m>.
+    Recall that a <em>partition</em> of a set <m>S</m> is a collection
+    of nonempty, pairwise disjoint subsets of <m>S</m> whose union
+    is <m>S</m>.
+  </p>
+  
+  <proposition>
+    <title>Counting by partitions</title>
+    <statement>
+      <p>Let <m>\mathcal{A}</m> be a partition of a finite
+	set <m>S</m>. Then we have
+	<men>|S|=\sum_{U\in \mathcal{A}}|U|. </men>
+      </p>
+    </statement>
+  </proposition>
+
+  <corollary xml:id="partmultprin">
+    <title>Partition version of the multiplication principle</title>
+    <statement><p>
+	Suppose a finite set <m>S</m> is partitioned into <m>k</m>
+	subsets, each of which has the same size <m>\ell</m>. Then
+	<me>|S|=k\ell.</me>
+      </p>
+    </statement>
+  </corollary>
+
+  <p><xref ref="partmultprin"/> provides a way to count the elements in
+    a set using a sequence of <em>decisions</em>, or <em>choices</em>. If a set <m>S</m>
+    is partitioned into subsets of equal size, we can choose an element
+    of <m>S</m> as follows.
+    <ol>
+      <li>First, choose one of the partition subsets.</li>
+      <li>Second, choose an element from that subset.</li>      
+    </ol>
+    Since there are <m>k</m> ways to make the first choice, and then,
+    having made the first choice, there
+    are <m>\ell</m> ways to make the second choice, then we conclude
+    that <m>|S|=k\ell</m>.
+    This thinking generalizes to longer choice sequences, as follows.
+  </p>
+
+  <proposition>
+    <title>Sequence-of-decisions version of the multiplication
+      principle</title>
+<statement>    <p>Suppose that every element of a finite set <m>S</m> is uniquely
+      specified by a sequence of <m>r</m>
+      choices, such that there are <m>m_1</m>
+      ways to make the first choice; then, having made the first choice,
+      there are <m>m_2</m> ways to make the second choice; and so on;
+      finally, having made the <m>(r-1)</m>st choice, there
+      are <m>m_r</m> ways to make the <m>r</m>th choice. Then we have
+      <men>|S|=m_1m_2\cdots m_r.</men>
+       </p>
+  </statement>
+  </proposition>
+
+  <p>As an application, we count the number of orderings of a finite
+    set. Recall that a bijection is a function that is one-to-one and
+    onto. An <em>ordering</em> or <em>permutation</em>
+    of a finite set <m>A</m> of
+    size <m>|A|=n</m> is given by a
+    bijection <m>f\colon \{1,2,\ldots,n\}\to A</m>. We say the first
+    element of <m>A</m> is <m>f(1)</m>, the second element
+    is <m>f(2)</m>, and so on. We can specify an ordering of <m>A</m> by
+    making the following sequence of choices.
+    <ol>
+      <li>First, choose a value for <m>f(1)</m>. There are <m>n</m> ways
+      to make this choice.
+      </li>
+      <li>Second, from the <m>n-1</m> elements of <m>A</m> that were not
+	chosen in step 1, choose a value for <m>f(2)</m>. There
+	are <m>n-1</m> ways to make this choice.
+      </li>
+	<li>And so on. </li>      
+    </ol>
+    From this sequence of <m>n</m> choices, we conclude that the number
+    of orderings of <m>A</m> is <m>n!= n(n-1)(n-2)\ldots 3\cdot 2\cdot
+    1</m>. We record this result as a proposition.
+  </p>
+
+  <proposition>
+    <title>Counting orderings of a finite set</title>
+    <statement><p>Let <m>A</m> be a finite set of size <m>|A|=n</m>. The number of orderings
+	(or permutations) of the elements of <m>A</m> is <m>n!</m>.
+      </p>
+    </statement>
+  </proposition>
+  
+  <!--
+  <definition>
+  <statement><p>Let <m>S,T</m> be sets. We write <m>T^S</m> to denote the set of
+    all functions from <m>S</m> to <m>T</m>.
+      <me>T^S = \{f\colon S\to T\}</me></p>
+  </statement>    
+  </definition>
+
+  <proposition xml:id="countfunctionsprop">
+    <p>Let <m>S,T</m> be finite sets. We have
+            <men>|T^S| = |T|^{|S|}.</men>
+    </p>
+  </proposition>
+
+  <exercise>
+    <statement><p>Use the multiplication principle to prove
+    <xref ref="countfunctionsprop"/>. </p>
+    </statement>
+  </exercise>
+  -->
+</subsection>
+
+<subsection>
+  <title>Sequences</title>
+  
+  <p>Let <m>S</m> be a set. A function <m>f\colon \{1,2,\ldots,n\}\to
+      S</m> is called a <em>sequence</em> in <m>S</m> of
+      length <m>n</m>. A sequence is denoted by an ordered
+      list <m>(s_1,s_2,\ldots,s_n)</m> of elements in <m>S</m>,
+      where <m>s_k=f(k)</m> for <m>1\leq k\leq n</m>.  The set of all
+      possible sequences in <m>S</m> of length <m>n</m> is denoted
+    <m>S^n</m>, and is also called the <m>n</m>-fold <em>Cartesian
+      product</em> of <m>S</m> with itself.
+    <men>S^n = \underbrace{S\times S \times \cdots \times S}_{n \text{
+      factors}}=\{(s_1,s_2,\ldots,s_n)\colon s_k\in S\text{ for } 1\leq
+      k\leq n\}</men>
+    Elements of <m>S^n</m> are also
+    called <em>ordered <m>n</m>-tuples</em>. It is convenient to have a
+    name for the subset of sequences <m>f\colon \{1,2,\ldots,n\}\to
+      S</m> that are one-to-one, which is the same as the set of 
+    <m>n</m>-tuples <m>(s_1,s_2,\ldots,s_n)</m> that have no repeated
+    values, that is, for
+    which <m>s_i\neq s_j</m> for <m>i\neq j</m>. In these notes, we will
+    write <m>S^{n\ast}</m> to denote the set of sequences that are
+    one-to-one.<fn>The notation <m>S^{n\ast}</m> is not standard. In
+      these notes, we do <em>not</em> use the standard notation is <m>P_n(S)</m> (where <m>P</m> stands
+      for <em>permutations</em>) in order to avoid confusion with
+      probability measures, which are also denoted using <m>P</m>.
+    </fn>
+    <men>S^{n\ast} =\{(s_1,s_2,\ldots,s_n)\in S^n\colon s_i\neq
+      s_j\text{ for }i\neq j\}</men>
+  </p>
+
+    <exercise><p>
+      Let <m>\Omega=\{x,y\}</m>.
+      <ol>
+	<li>Write out the elements of the set <m>\Omega^3</m>.
+	</li>
+	<li>Write out the elements of the set <m>\Omega^{2\ast}</m>.
+	</li>
+	<li>Write out the elements of the set <m>\mathcal{P}(\Omega)</m>.
+	</li>
+	<li>Write out the elements of the set <m>\mathcal{P}(\Omega^{2\ast})</m>.
+	</li>	
+      </ol>
+    </p>
+  </exercise>
+
+    <proposition>
+      <title>Counting sequences</title>
+      <statement>
+	<p>Let <m>S</m> be a finite set, with <m>|S|=N</m>. We have the following.
+	  <mdn>
+	    <mrow>|S^n| = N^n</mrow>
+	    <mrow xml:id="permNnformula">|S^{n\ast}| = N(N-1)(N-2)\cdots (N-n+1)</mrow>	    
+	  </mdn>
+	</p>
+      </statement>
+    </proposition>
+    
+    <exercise><statement><p>give arguments why, use decision sequence
+	  version of multiplication principle for <m>S^{n\ast}</m>
+	</p>
+      </statement>
+    </exercise>
+
+
+    <p>As an application, we count the number of subsets of a fixed size
+      that come from a given finite set. Let <m>S</m> be a finite set of size <m>|S|=N</m>, let <m>n</m>
+      be an integer in the range <m>0\leq n\leq N</m>,
+      and let <m>\mathcal{A}</m> be the set of
+      all subsets of <m>S</m> of size <m>n</m>. An element 
+      of <m>S^{n\ast}</m> is specified by the following sequence of
+      decisions.
+      <ol>
+	<li>First, choose an element <m>A</m>
+	  of <m>\mathcal{A}</m>.
+	</li>
+	<li>Second, choose an ordering of <m>A</m>.
+	</li>	
+      </ol>
+The sequence-of-choices version of the multiplication principle applies,
+      and we have
+      <me>\#(\text{subsets of }S\text{ of size }n) \cdot \#(\text{orderings of an }n\text{ element set}) = |S^{n*}|.</me>
+      Putting this together with results above, we have
+            <men xml:id="cNnformula">\#(\text{subsets of }S\text{ of size } n)
+            =\frac{N(N-1)\cdots (N-n+1)}{n!}=\frac{N!}{n! \;
+              (N-n)!}.</men>
+	    The number given in <xref ref="permNnformula"/> is called the <term>number
+              of permutations of <m>N</m> items chosen <m>n</m> at a time
+	    </term>. The number given in <xref ref="cNnformula"/> the
+	    <term>number of combinations of <m>N</m> items
+	    chosen <m>n</m> at a time</term>. The usual mathematical
+	    notation for the latter is <m>{N \choose n}</m>.
+	    
+  </p>
+
+    <p>exercise section: connect N choose n to binomial expansion, give
+    terminology binomial coefficient</p>
+    
+</subsection>
+
+
+
+</section>

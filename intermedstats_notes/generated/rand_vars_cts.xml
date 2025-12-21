@@ -1,0 +1,172 @@
+<section xml:id="rand_vars_cts_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Continuous Random Variables
+</title>
+
+<subsection xml:id="genldistfnsubsect">
+  <title>General distribution
+    functions</title>
+
+  <!--
+  Reference: Statistical Inference, 2nd edition,
+  George Casella and Roger L. Berger
+  p.31 Theorem 1.5.3 says F is a cdf if and only if it
+  satisfies the properties of the Proposition
+  -->
+
+  <p>
+    <!--For all types of probability models <m>(\Omega,P)</m>,
+    where <m>\Omega</m> may be finite, countably infinite, or
+    uncountably infinite, a quantitative random variable is a
+    function <m>X\colon \Omega \to \R</m>. For discrete probability
+    spaces, this is the end of the definition. Further technical
+    specifications are required to define random variables on general
+    (possibly uncountable) probability spaces. Alternatively,-->
+
+    It turns out that the properties given in <xref ref="distribfunproperties"/>
+    hold for all quantitative random variables, whether discrete or
+    continuous, and no matter whether the underlying probability
+    model is discrete or general. Even better, it turns out<fn>See
+    <xref ref="casella_stats_infer"/>, Theorem 1.5.3, p.31.</fn> that if <m>F\colon \R\to\R</m> is
+    any function that satisfies the three properties in
+    <xref ref="distribfunproperties"/>, then there exists a probability
+    model <m>(\Omega,P)</m> and a random variable <m>X\colon \Omega\to
+    \R</m> such that <m>F=F_X</m>. 
+    </p>
+
+  <p>Distribution functions for discrete random variables are piecewise
+  constant functions that are discontinuous. The properties in
+  <xref ref="distribfunproperties"/> allow for the possibility of
+  continuous distribution functions. The simplest of these is the following.
+
+  <definition xml:id="unifdistfndef">
+    <p>The <term>uniform</term> distribution function on the
+      interval <m>[a,b]</m> is given by
+      <men>F(x) =
+		\begin{cases}
+	0 \amp x\lt a\\
+	\frac{x-a}{b-a} \amp a\leq x\leq b\\
+	1 \amp x\geq b.
+      \end{cases}</men>
+    </p>
+  </definition>
+
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Sketch the graph of the uniform distribution function.
+	</li>
+	<li>Show that the uniform distribution function satisfies the
+	  three properties of <xref ref="distribfunproperties"/>.</li>
+	<li>Show that the uniform distribution function <m>F</m> defined
+	  in  <xref ref="unifdistfndef"/> is the
+	  distribution function <m>F_X</m> for the variable <m>X\colon \R\to\R</m> given
+	  by <m>X(\omega)=\omega</m>, and where probability measure
+	  on <m>\Omega=\R</m> is the uniform
+	  probability measure <xref ref="unifprobmeas"/> for subsets
+	  of <m>[a,b]</m>, and the probability measure is zero for
+	  subsets outside of <m>[a,b]</m>.
+	</li>
+      </ol>
+    </p>
+  </exercise>
+
+      <p>A random variable is called <term>continuous</term> if its
+    distribution function is continuous on all of the real line. If the
+    distribution function <m>F_X</m> of a random variable <m>X</m> is
+    differentiable (or piecewise differentiable, with at most a finite or
+    countably infinite number of points of nondifferentiability), then
+    the derivative <m>f_X = F_X'</m> is called the <term>probability
+    density</term> function for <m>X</m>. If <m>X</m> has a probability
+    density function <m>f_X</m>, then we have, for all
+    intervals <m>[a,b]</m>,
+	<men xml:id="intforprobformula">P(X\in [a,b]) =
+	  F_X(b)-F_X(a)=\int_a^b f_X(x)\; dx.</men>
+
+      </p>
+
+      <exercise>
+	<p>
+	  <ol>
+	    <li>Sketch the graph of the probability density function
+	    for the uniform distribution function.</li>
+	    <li>Show that, if <m>f\colon \R\to [0,\infty)</m> is an integrable
+	function with <m>\int_{-\infty}^{\infty} f(x)\;dx = 1</m>,
+	then <m>f</m> is the probability density function of some random
+	variable <m>X</m> with distribution function <m>F_X</m> that
+    satisfies <m>F_X'=f</m>.
+</li>
+  <li>Justify <xref ref="intforprobformula"/>.</li>
+</ol>
+  </p>
+</exercise>
+
+      <p>
+	If <m>X</m> is a continuous random variable with probability
+	density function <m>f_X</m>, then <m>E(X)</m> is given by
+	<men xml:id="expectvalcts">	  E(X) = \int_{-\infty}^{\infty} xf_X(x)\;dx</men>
+	if the improper integral on the right converges. If both of the
+	integrals <m>\int_{-\infty}^{\infty} x f_X(x)\;dx,
+	  \int_{-\infty}^{\infty} x^2 f_X(x)\;dx </m> converge,
+	then the variance
+	of <m>X</m> is given by
+	<mdn>
+	  <mrow>
+	    \var(X) \amp = E(X^2)-E(X)^2
+	  </mrow>
+	  <mrow> \amp = \int_{-\infty}^{\infty} x^2
+	f_X(x)\;dx - \left(\int_{-\infty}^{\infty} x f_X(x)\;dx\right).
+	  </mrow>
+	</mdn>
+      </p>
+      
+      <exercise><p>
+Explain how the formula <xref ref="expectvalcts"/> for expected value of a continuous random
+    variable connects to expected value for a discrete variable.
+	</p>
+      </exercise>
+      
+  
+
+</subsection>
+
+<exercises>
+
+  <exercise>
+	<p>Let <m>k,p</m> be constants, and let <m>f_{k,p}\colon \R\to
+	    \R</m>  be given by
+	  <me>f_{k,p}(x)=
+	    \begin{cases}
+	    k/x^p \amp x\geq 1\\
+	    0 \amp x\lt 1
+	    \end{cases}.</me>
+	  <ol>
+	  <li>Find all values of <m>k,p</m> such that <m>f_{k,p}</m> is a
+	    density function.</li>
+	  <li>For each density function <m>f_{k,p}</m>, find the
+	    corresponding distribution function <m>F_{k,p}</m>.
+	  </li>
+	  <li>Let <m>X_{k,p}</m> be a random variable with distribution
+	    function <m>F_{k,p}</m>. Find all values of <m>k,p</m> such
+	    that <m>E(X)</m> exists. Find all values of <m>k,p</m> such
+	    that <m>\var(X)</m> exists. 
+	  </li>
+	  </ol>
+	</p>
+  </exercise>
+
+  <exercise>
+    <p>Let <m>X,Y</m> be continuous random variables, and suppose there
+      exist intervals <m>A=(a_1,a_2]</m>, <m>B=(b_1,b_2]</m> such that
+      <m>P(X\in A \text{ and } Y\in B)\neq P(X\in A)P(Y\in B)</m>. Show
+      that <m>X,Y</m> are dependent variables. That is, show
+      that <m>F_{XY}\neq F_XF_Y</m>.
+    </p>
+  </exercise>
+  
+
+</exercises>
+
+</section>

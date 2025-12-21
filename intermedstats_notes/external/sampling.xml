@@ -1,0 +1,387 @@
+<section xml:id="sampling_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Sampling Theory
+</title>
+
+<subsection>
+  <title>Sampling Random Variables</title>
+
+  <p>
+    Let <m>(\Omega,P)</m> be a probability space.  Recall that
+    an element <m>(\omega_1,\omega_2,\ldots,\omega_n)</m>
+    of <m>\Omega^n</m> is called a <em>random sample</em>
+    from <m>\Omega</m>. We extend this sampling language to random variables
+    on <m>\Omega</m> as follows. Given a random variable <m>X\colon
+    \Omega\to \R</m>, let <m>X_1,X_2,\ldots,X_n</m> be random variables
+    given by
+ <men xml:id="sampvardef">X_k(\omega_1,\omega_2,\ldots,\omega_n)=X(\omega_k)</men>
+ for <m>1\leq k\leq n</m>. We call the
+ collection <m>(X_1,X_2,\ldots,X_n)</m> a <term>(random) sample</term> 
+ of <m>X</m>. Intuitively, the variables <m>X_k</m>
+    behave like independent copies of <m>X</m>. That this is the case is
+    the content of the following proposition.
+ </p>
+
+ <proposition xml:id="sampvarbasicprop">>
+    <p>Let <m>(X_1,X_2,\ldots,X_n)</m> be a sample of a random
+    variable <m>X\colon \Omega\to \R</m> with <m>E(X)=\mu</m>
+    and <m>\var(X)=\sigma^2</m>. 
+    We have the following.
+    <mdn>
+      <mrow>F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
+      <mrow>E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
+      <mrow>\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
+      <mrow>\covar(X_j,X_k)\amp = 0 \text{   for }j\neq k</mrow>
+      <mrow>F_{X_j,X_k}\amp = F_{X_j}F_{X_k} \text{   for }1\leq
+      j,k\leq n</mrow>      
+    </mdn>
+    </p>
+ </proposition>
+
+ <exercise>
+   <p>Prove <xref ref="sampvarbasicprop"/> for the case of discrete variables.
+		       </p>
+      <p>Prove <xref ref="sampvarbasicprop"/> for the case of continuous
+      variables that have density functions.
+   </p>
+ </exercise>
+ 
+  <p>
+    Next, we consider random variables <m>\overline{X}</m>
+ and <m>s^2</m>, called
+    the <term>sample average</term> and
+    the <term>sample variance</term>, defined as follows.
+    <mdn>
+      <mrow>\overline{X} \amp =\frac{1}{n}\sum_k X_k</mrow>
+      <mrow xml:id="samplevardef">s^2 \amp = \frac{1}{n-1}\sum_k (X_k-\overline{X})^2</mrow>
+    </mdn>
+    The quantity <men>n\overline{X}=\sum_k X_k</men>
+    is called the <term>sample sum</term>.
+    In general, any random variable written as a function of <m>X_1,X_2,\ldots,X_n</m> is called
+    a <term>(sample) statistic</term>.
+    The sample
+    statistics <m>n\overline{X},\overline{X},s^2</m> play a key role in
+    sampling theory. Here are some important properties.
+  </p>
+
+  <proposition xml:id="sampstatsbasicprop">
+    <p>  Let <m>(\Omega,P)</m> be a probability model
+    and let <m>X\colon \Omega\to \R</m> be a
+    random variable.  Let <m>X_1,X_2,\ldots,X_n</m> be sample variables
+    for a sample of <m>X</m> of size <m>n</m>.  Let <m>\mu=E(X)</m>, and
+    let <m>\sigma^2 = \var(X) = E(X^2)-(E(X))^2</m>. We have the following.
+    <mdn>
+      <mrow>E(\overline{X})\amp = \mu</mrow>
+      <mrow xml:id="sesampave">\var(\overline{X})\amp = \frac{\sigma^2}{n}</mrow>
+      <mrow xml:id="expectsampsum">E(n\overline{X})\amp = n\mu</mrow>
+      <mrow xml:id="sesampsum">\var(n\overline{X})\amp = n\sigma^2</mrow>
+      <mrow xml:id="esampvar">E(s^2)\amp = \sigma^2</mrow>      
+    </mdn>
+    </p>
+  </proposition>
+
+  <p><alert>Comments and terminology.</alert> The last equation <xref ref="esampvar"/> explains the
+      strange-looking denominator <m>n-1</m> in
+      <xref ref="samplevardef"/>. The square roots of the variances
+      <xref ref="sesampave"/> and <xref ref="sesampsum"/> are usually
+      denoted <m>\sigma_{\overline{X}}</m>
+      and <m>\sigma_{n\overline{X}}</m>, respectively. The
+      quantity <m>\sigma_{\overline{X}}</m> is called
+      the <term>standard error</term> for the sample average. The
+      quantity <m>\sigma_{n\overline{X}}</m> is called
+      the <term>standard error</term> for the sample sum.
+  </p>
+
+   <exercise>
+   <p>Prove <xref ref="sampstatsbasicprop"/> for the case of discrete variables.
+		       </p>
+      <p>Prove <xref ref="sampstatsbasicprop"/> for the case of continuous
+      variables that have density functions.
+   </p>
+ </exercise>
+
+   
+</subsection>
+
+<subsection>
+  <title>Simple random sample variables</title>
+  
+  <p>Let <m>(\Omega,P)</m> be a finite probability space
+    with <m>N=|\Omega|</m> and with constant probability
+    function <m>p(\omega)=\frac{1}{N}</m> for
+    all <m>\omega\in\Omega</m>. Recall that <m>\Omega^{n\ast}</m>
+    denotes the set of all one-to-one sequences of length <m>n</m>
+    in <m>\Omega</m>,
+    called <em>simple random samples</em> of size <m>n</m> taken
+    from <m>\Omega</m>. Recall that the probability
+    function <m>p_{\Omega^{n\ast}}</m> is constant, with constant
+    value <m>\frac{1}{N(N-1)\cdots (N-n+1)}</m>. Given a random
+    variable <m>X\colon \Omega \to \R</m>, we define sample random variables
+    <m>X_1,X_2,\ldots,X_n</m> on <m>\Omega^{n\ast}</m> by the same
+    formula <xref ref="sampvardef"/>as for ordinary sample variables. We
+    call the <m>n</m>-tuple <m>(X_1,X_2,\ldots,X_n)</m> of variables
+    on <m>\Omega^{n\ast}</m> a <term>simple random sample</term> of
+    size <term></term> <m>n</m> of <m>X</m>.  As for ordinary samples,
+    the simple random sample variables look like copies of <m>X</m>. 
+    However, in contrast with the
+    ordinary sample case, the simple random sample variables <m>X_k</m>
+    are <em>dependent</em>. Here are some key properties.
+ </p>
+
+ <proposition xml:id="simprandsampprop">
+   <title>Simple random samples of a random variable</title>
+   <p>Let <m>(\Omega,P)</m> be a finite probability space with <m>N=|\Omega|</m>
+     and with a constant probability function.
+     Let <m>(X_1,X_2,\ldots,X_n)</m> be a simple random sample of a random
+    variable <m>X\colon \Omega\to \R</m> with <m>E(X)=\mu</m>
+    and <m>\var(X)=\sigma^2</m>. 
+    We have the following.
+    <mdn>
+      <mrow>F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
+      <mrow>E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
+      <mrow>\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
+      <mrow xml:id="covarsimplesampvars">\covar(X_i,X_j)\amp =
+	-\frac{\sigma^2}{N-1}\text{ if }i\neq j</mrow>
+      <mrow xml:id="sesimpsampave">\var(\overline{X})\amp = \frac{\sigma^2}{n}\left(\frac{N-n}{N-1}\right)</mrow>      
+      <mrow xml:id="varsumsimplesampvars">\var(n\overline{X})\amp =
+	n\sigma^2\left(\frac{N-n}{N-1}\right)</mrow>
+          <!-- see Rice, Mathematical statistics and data analysis, 3rd ed.
+           p.212 Cor A -->
+      <mrow>E\left(s^2\frac{N-n}{N}\right)\amp = \sigma^2</mrow>
+    </mdn>
+    </p>
+ </proposition>
+
+   <p><alert>Terminology:</alert> Simple random samples are also
+    called <em>samples taken without replacement</em>, or <em>survey
+      samples</em>. This refers to the applied scenario in which the
+    probability space <m>\Omega</m> models a human population, where
+    each individual in the population has the same chance of being
+    selected for a survey (or some kind of measurement). Once surveyed,
+    that individual will not be surveyed again; in other words, survey
+     samples produce one-to-one sequences. As for ordinary samples, the
+     quantities <m>\sigma_{\overline{X}},\sigma_{n\overline{X}}</m> (the
+    square roots of the variances <xref ref="sesimpsampave"/> and <xref ref="varsumsimplesampvars"/>,
+     respectively) are called <em>standard errors</em>.
+     The
+    quantity <m>\sqrt{\frac{N-n}{N-1}}</m> that occurs in both
+    standard errors is called the <term>correction factor</term> for the
+    standard errors when sampling without replacement (or for simple
+    random sampling, or for survey sampling).
+  </p>
+
+     <exercise>
+    <p>Prove <xref ref="simprandsampprop"/>.</p>
+    </exercise>
+
+<aside component="instructor"><title>Some derivations for <xref ref="simprandsampprop"/></title>   
+  <p><alert>A derivation of <xref ref="covarsimplesampvars"/>.</alert>
+    Start with
+    <mdn><mrow>E^\ast(X_1X_2)\amp =\sum_{(\omega_1,\ldots,\omega_n)\in\Omega^{n\ast}}X(\omega_1)X(\omega_2)\frac{1}{N(N-1)\cdots
+	(N-n+1)}</mrow>
+      <mrow xml:id="estarx1x2">\amp= \frac{1}{N(N-1)}\sum_{\omega_1\neq\omega_2}X(\omega_1)X(\omega_2).</mrow>
+    </mdn> 
+Next consider
+    <men>\left(\sum_{\omega} X(\omega)\right)^2=\sum_{\omega} (X(\omega))^2
+      + \sum_{\omega\neq \omega'}X(\omega)X(\omega').</men>
+    Multiply through by <m>\frac{1}{N(N-1)}</m> and substitute <xref ref="estarx1x2"/>.
+    <men>\frac{N}{N-1}\left(\frac{\sum_{\omega} X(\omega)}{N}\right)^2=
+      \frac{1}{N-1}E(X^2)+ E^\ast(X_1X_2).</men>
+    Now we have
+    <mdn>
+      <mrow>\covar^\ast(X_1,X_2) \amp =
+      \frac{1}{N-1}\left(N\mu^2-E(X^2)\right) - \frac{N-1}{N-1}\mu^2
+      </mrow>
+      <mrow>\amp = \frac{1}{N-1}\left(\mu^2 - E(X^2)\right) = -\frac{\sigma^2}{N-1}.
+      </mrow>
+    </mdn>
+  </p>
+
+
+  <p><alert>A derivation of <xref ref="varsumsimplesampvars"/>.</alert>
+    Start with
+    <mdn>
+      <mrow>\var\left(\sum_k X_k\right) \amp = \sum_k \var(X_k) + 2\sum_{j\neq k} \covar(X_j,X_k)
+      </mrow>
+      <mrow>\amp = n\sigma^2  -2\frac{n(n-1)}{2}\left(\frac{\sigma^2}{N-1}\right)</mrow>
+    </mdn>
+    (by <xref ref="covarsimplesampvars"/>), then simplify.
+  </p>
+</aside>
+
+    
+</subsection>
+
+
+
+
+<subsection>
+  <title>Some important variables arising from sampling</title>
+
+  <p>Let <m>X</m> be a Bernoulli variable with <m>p=P(X=1)</m>
+    and <m>q=1-p=P(X=0)</m>. Let <m>X_1,X_2,X_3\ldots</m> be an infinite
+    sequence of samples of <m>X</m>. Each random
+    variable <m>S_n=\sum_{k=1}^n X_k</m> is called a <term>binomial</term>
+    random variable. Let <m>G</m> be defined by <m>G(X_1,X_2,\ldots) =
+      k</m> if <m>k</m> is the lowest index such that <m>X_k=1</m>, that
+    is, if <m>0=X_1=X_2=\cdots \ X_{k-1}</m> and <m>X_k=1</m>. The
+    variable <m>Z</m> is called a <term>geometric</term> random
+    variable. It is easy to show that the cdf <m>F_G</m> is given by
+    <m>F_G(k) = 1-q^k</m> for <m>k=1,2,3,\ldots</m>. The
+    continuous function <m>F\colon \R\to\R</m> given by <m>F(x)=1-q^x</m> satisfies
+    the properties of a distribution function. By the fact alluded to in
+    the opening paragraph of <xref ref="genldistfnsubsect"/>, it follows
+    that there exists a random variable <m>H</m> such that <m>F</m>
+    is the distribution function <m>F_H</m> of <m>H</m>. The
+    variable <m>H</m> is called the <term>exponential</term> random variable
+    with parameter <m>\lambda=-\ln q</m>.
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Find the probability function, the
+    distribution function, and find the mean and the variance for the
+	  binomial distribution.</li>
+	<li>Find the probability function, the
+    distribution function, and find the mean and the variance for the
+	  geometric distribution.</li>
+	<li>Find the probability density function and find the mean and the variance for the
+    exponential distribution.</li>		
+    </ol>
+    </p>
+  </exercise>
+
+  <p>The <term>(standard) normal</term> variable plays a key role in sampling theory, due to
+    the Central Limit Theorem, which we study below. In this paragraph
+    we describe how the standard normal variable arises as a limit
+    process applied to a sequence of binomial variables.
+    Let <m>Y</m> be a Bernoulli variable
+    with <m>P(Y=1)=1/2=P(Y=0)</m>. It is easy to check
+    that <m>\mu_Y=1/2</m>
+    and <m>\sigma_Y=1/2</m>. Let <m>Y_1,Y_2,Y_3,\ldots</m> be an
+    infinite sequence of samples of <m>Y</m>, and
+    let <m>S_n</m> be the binomial variable <m>S_n=Y_1+Y_2+\ldots Y_n</m>. Using the sampling formulas
+    <xref ref="expectsampsum"/> and <xref ref="sesampsum"/>, we have <m>E(S_n)=n\mu</m>
+    and <m>\var(S_n)=n\sigma</m>. Let <m>T_n=(S_n-n\mu)/(\sigma\sqrt{n})</m> be the normalized
+    version of <m>S_n</m>. It turns out that there is exists a limit
+    function <m>\Phi = \lim_{n\to\infty}T_n</m>, which means
+    that <m>\Phi(x) = \lim_{n\to\infty} T_n(x)</m> for every real
+    number <m>x</m>. The limit function <m>\Phi</m> satisfies the
+    properties of a distribution function. By the fact alluded to in the
+    opening paragraph of <xref ref="genldistfnsubsect"/>, it follows
+    that there exists a random variable <m>Z</m> such that <m>\Phi</m>
+    is the distribution function <m>F_Z</m> of <m>Z</m>. The variable <m>Z</m>
+    is called the <em>(standard) normal</em> variable. It is also
+    called a <term>Gaussian</term> variable, in honor of C.F. Gauss, who
+    discovered it. The standard normal distribution has a mean of zero,
+    a standard deviation of 1, and has probability density function
+    <men>f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}.</men>
+  </p>
+
+    <exercise>
+    <p>Work through the examples in Section 1.4.2 and the exercises in
+      Section 1.4.3
+      in <url href="https://mathvista.org/elemstats_notes/basic_normal_dist.html">Section
+      1.4</url> in <xref ref="lyons_elemstats"/>.
+    </p>
+    </exercise>
+
+    <!-- make this an in-class activity
+  <exercise>
+    <p>Explore software, calculators, and tables to become familiar
+      with evaluating <m>\Phi,\Phi^{-1}</m>.
+    </p>
+  </exercise>
+  -->
+    
+</subsection>
+
+<subsection><title>The Central Limit Theorem</title>
+
+  <p>Recall that <m>\Phi</m> denotes the cumulative distribution
+  function for the standard normal distribution.
+  </p>
+  
+  <proposition>
+    <title>The Central Limit Theorem</title>
+    <p>
+      Let <m>X_1,X_2,X_3,\ldots</m> be a sequence of sample variables
+      for a random variable <m>X</m> with <m>E(X)=\mu</m> and <m>\var(X)=\sigma^2</m>.
+      Let <m>S_n</m> denote the
+      variable <m>S_n=X_1+X_2+\cdots + X_n</m>, so that we
+      have <m>E(S_n)=n\mu</m>
+      and <m>\var{S_n}=n\sigma^2</m>. Let <m>T_n=(S_n-n\mu)/(\sqrt{n}\sigma)</m>. We
+      have
+      <me>\lim_{n\to\infty} F_{T_n}(x) = \Phi(x)</me>
+      for all <m>x \in \R</m>.
+    </p>
+  </proposition>
+
+    <exercise>
+    <p>Do the exercises in
+      in <url href="https://mathvista.org/elemstats_notes/basic_sampling">Section 1.8.3
+      1.4</url> in <xref ref="lyons_elemstats"/>.
+    </p>
+    </exercise>
+  
+    
+</subsection>
+
+<subsection><title>Estimating population parameters</title>
+
+  <p>Let <m>X</m> be a random variable with <m>E(X)=\mu</m>
+  and <m>\var(X)=\sigma^2</m>. Let <m>\overline{X}=\frac{1}{n}\sum_{i=1}^n X_i</m> be the average of
+  a sample of size <m>n</m> of <m>X</m>. For <m>\alpha</m> in the
+  range <m>0\lt \alpha \lt 1</m>, let <m>z_\alpha</m> be the value of a
+  standard normal variable such that <m>P(|z|\leq z_\alpha)=\alpha </m>.
+  The Central Limit Theorem says that
+    <men xml:id="cltinspireconfint">P(|\overline{X}-\mu| \leq z_\alpha \sigma_{\overline{X}})
+      \approx \alpha.</men>
+    Equation <xref ref="cltinspireconfint"/> motivates the following
+    procedure for estimating an unknown population parameter <m>\mu</m>
+    from sample data. Intuitively, <m>\overline{X}</m>
+    estimates <m>\mu</m> with an error estimated
+    by <m>\sigma_{\overline{X}}</m>. If the population
+    variance <m>\sigma^2</m> is unknown, we can use the sample
+    SD <m>s</m> to estimate <m>\sigma</m>, and we can
+    use <m>s/\sqrt{n}</m> to
+      estimate <m>\sigma_{\overline{X}}</m>. Inspired by
+    <xref ref="cltinspireconfint"/>, we say that the interval
+    <men>\overline{X}\pm z_\alpha s/\sqrt{n}</men>
+    is a <m>100z_\alpha\%</m> confidence interval for the population
+    mean <m>\mu</m>. Notice that the confidence interval is a random
+    quantity, that is, it depends on the sample. Roughly speaking, we
+    estimate that approximately <m>100z_\alpha\%</m> of
+    all <m>100z_\alpha\%</m> confident intervals will
+    contain <m>\mu</m>, and approximately <m>100(1-z_\alpha)\%</m> of
+    these intervals will fail to contain <m>\mu</m>.
+  </p>
+  
+    <exercise>
+      <p>
+	<ol>
+	<li>Show that <m>z_\alpha = \Phi^{-1}((\alpha+1)/2)</m>.
+	</li>
+	<li>Explain why <xref ref="cltinspireconfint"/> holds.</li>
+	<li>Read Section 5.2 and do odd numbered exercises at the end
+	of the section in <xref ref="openintro_stats"/>.</li>
+	</ol>
+      </p>
+    </exercise>
+
+    <exercises>
+
+      <exercise>
+	<p>Do the exercises in <url href="https://mathvista.org/elemstats_notes/basic_sampling.html">Section 1.8.3</url>
+	  of <xref ref="lyons_elemstats"/>.
+	</p>
+      </exercise>
+
+      
+    </exercises>
+    
+</subsection>
+
+
+</section>

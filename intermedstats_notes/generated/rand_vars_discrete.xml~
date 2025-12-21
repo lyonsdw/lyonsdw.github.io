@@ -1,0 +1,390 @@
+<section xml:id="rand_vars_discrete_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Discrete Random Variables
+</title>
+
+<introduction>
+
+ <p>A <term>random variable</term> is a function <m>X\colon \Omega\to
+    Y</m>, where <m>(\Omega,P)</m> is a probability model and <m>Y</m>
+    is a set.<fn>For discrete probability models, this is the end of the
+    definition; for general (possibly uncountable) probability models,
+    further technical specifications are required to define random
+    variables. Fortunately, the theory of random variables on discrete
+    probability spaces will provide practical ways to think about and
+    use continuous random variables without having to be concerned about
+    every detail of general probability spaces.</fn> A random variable
+    is called <term>quantitative</term> if its image is any subset of
+    the real numbers; otherwise, a random variable is
+    called <term>qualitative</term>. A random variable is
+    called <term>discrete</term> if its image is finite or countably
+    infinite; otherwise, a random variable is
+    called <term>continuous</term>. In this section, we will develop
+    vocabulary and facts for quantitative random variables whose domains
+    whose underlying probability models are discrete.
+ </p>
+
+</introduction>
+
+<subsection><title>Definitions and properties</title>
+
+  <!--
+  <definition xml:id="discreterandvardef">
+    <p>A function <m>X\colon\Omega \to Y</m>, where <m>(\Omega,P)</m> is a
+      discrete probability model (finite or countably infinite)
+      and <m>Y</m> is a set, is called a <term>discrete random variable</term>.
+  If <m>Y</m> is a subset of the
+    real numbers, then <m>X</m> is called a <term>quantitative</term>
+    random variable; otherwise, <m>X</m> is
+  called <term>qualitative</term>.
+</p>
+  </definition>
+
+  <p><alert>Caveat on <xref ref="discreterandvardef"/>.</alert> Any
+  function whose domain is a discrete probability space is a discrete
+  random variable, but there are discrete random variables whose domains
+  are general (not discrete) probability spaces. In this section, we will consider only
+  discrete random variables on discrete probability spaces. Fortunately,
+  this is not a serious limitation, as we shall see in the next section.
+  </p>
+  -->
+  
+  <definition>
+    <title>Events defined by random variables</title>
+    <p>
+      Let <m>(\Omega,P)</m> be a discrete probability model and let 
+      <m>X\colon \Omega\to Y</m> be a random variable.
+  Given a subset <m>A\subseteq Y</m>,
+  we define the event <m>\text{"}X\in A\text{"}</m>
+  by
+    <men>\text{"}X\in A\text{"} = X^{-1}(A)=\{\omega \in \Omega\colon X(\omega)\in A\}.
+    </men>
+    In particular, if <m>X</m> is a quantitative random variable
+    and <m>\lambda</m> is a real number, the event <m>\text{"} X\leq
+      \lambda\text{"}</m> is the event
+    <men>\text{"}X\leq \lambda\text{"} = (X^{-1}((-\infty,\lambda])=
+    \{\omega \in \Omega\colon X(\omega)\leq \lambda\}.</men>
+</p>
+  </definition>
+
+  <exercise>
+    <p>Make up one or more examples of a qualitative random variable and
+    a quantitative random variable on
+      a finite probability with five or so elements. For both variables, choose some subsets <m>A</m> of the codomain and
+      find the events <m>X\in A</m>.
+      </p>
+  </exercise>
+
+  
+  <definition>
+<p>    Let <m>X</m> be discrete random variable.
+    The <term>(cumulative) distribution function</term> (or <term>c.d.f.</term>) for <m>X</m>
+    is the function <m>F_X\colon \R\to [0,1]</m> defined by
+  <men>F_X(\lambda)= P(X\leq \lambda).</men></p>
+  </definition>
+
+    <exercise>
+    <p>Make up one or more examples of a quantitative random variable
+    on a finite probability space with five or so elements and sketch a graph of the distribution function.</p>
+    </exercise>
+    
+  <proposition xml:id="distribfunproperties">
+    <title>Properties of distribution functions</title>
+    <p>Let <m>X</m> be a discrete random variable. The distribution
+      function <m>F_X</m> has the following properties.
+      <ol>
+	<li><m>F_X</m> is nondecreasing, that is, if <m>a\leq b</m>
+	then <m>F_X(a)\leq F_X(b)</m>.
+	</li>
+	<li><m>F_X</m> is continuous from the right, that
+	  is, <m>\lim_{x\to c^+}F_X(x)=F_X(c)</m> for all <m>c\in \R</m>.
+	</li>
+	<li><m>\lim_{x\to-\infty}F_X(x)=0</m> and <m>\lim_{x\to\infty}F_X(x)=1</m>. 
+	</li>
+      </ol>
+    </p>
+  </proposition>
+
+  <exercise><p>Prove the properties in
+  <xref ref="distribfunproperties"/>. Illustrate how the properties
+  look in the examples you made up in the Checkpoints above.</p>
+  </exercise>
+  
+  <p><alert>Vocabulary related to the distribution function.</alert> The
+    distribution function provides a ranking of the values of a random
+    variable, for which we use the following vocabulary.
+    Let <m>\lambda</m> be a real number, and let  <m>p=F_X(\lambda)</m>. We say that <m>\lambda</m> has
+    the <term>quantile</term> rank <m>p</m>, and we say that <m>\lambda</m>
+    has <m>100p</m>-th <term>percentile</term> rank. These terms are
+    used whether or not <m>\lambda</m> is an actual
+    value <m>\lambda=X(\omega)</m> of <m>X</m> for some <m>\omega</m>.
+  </p>
+
+  <p>If <m>F_X</m> were invertible, then we could choose any <m>p\in
+      (0,1)</m> and solve the equation <m>F_X(\lambda)=p</m>. It would
+    be natural to say that the solution <m>\lambda</m>
+    is <em>the</em> <m>100p</m>-th percentile value of <m>X</m>. 
+    But distribution functions of discrete random variables are not
+      invertible. The set of solutions to an equation <m>F_X(\lambda)=p</m>
+    is either empty or consists of an interval <m>[u,v)</m>. This means
+      that we have to make slightly artificial definitions if we wish to
+    refer to <q>the <m>100p</m>-th percentile</q> value for <m>X</m>. If
+     <m>F_X^{-1}(p)=\emptyset</m>, then
+    the <m>100p</m>-th percentile value of <m>X</m> is defined to the be
+    smallest number <m>\xi</m> such that <m>F_X(\xi)\gt
+       p</m>. If <m>F_X^{-1}(p)=[u,v)</m>, then the <m>100p</m>th
+     percentile value of <m>X</m> is defined to be <m>(u+v)/2</m>. With
+     these definitions, the <term>median</term> is
+     the <m>50</m>-th percentile value. The <term>upper quartile</term>
+     is the <m>75</m>-th percentile value, and the <term>lower quartile</term>
+     is the <m>25</m>-th percentile value. The <term>interquartile
+    range</term> (IQR) is the upper quartile minus the lower quartile.
+  </p>
+
+  <exercise><p>Explain and give examples about the statements regarding
+      the possibilities for <m>F_X^{-1}(p)</m> for a discrete random variable.
+    </p>
+  </exercise>
+
+  <p><alert>Box plots.</alert> A <em>box plot</em> (or a <em>box and
+    whiskers</em> plot) is a visual representation of some basic
+    features of a random variable. One dimension of the box (it can be
+    horizontal width or the vertical height, let's say it is the
+    horizontal width) is arbitrary; the other dimension (the vertical
+    height, in this description) is equal to the interquartile range. A
+    vertical scale is drawn on one side or the other of the box. A
+    horizontal line from one vertical side of the box to the other is
+    drawn at the height of the median. Vertical extensions
+    (the <q>whiskers</q>) from the top and bottom of the box extend to
+    the maximum and minimum values of the random variable.
+    </p>
+
+  <exercise>
+    <p>Find examples of box plots. Pick a style you like and make a
+    bunch for yourself.</p>
+  </exercise>
+  
+</subsection>
+
+
+<subsection>
+  <title>Histograms</title>
+
+    <p>
+      Let <m>F_X</m> be a distribution function for a random variable <m>X</m>.
+      Let <m>[a,b]</m> be a closed interval of the real line, and let 
+      <m>\mathcal{P}=\{x_0,x_1,\ldots, x_n\}</m> be a
+    partition <m>[a,b]</m>, that is, we have
+      <me>a=x_0\lt x_1\lt x_2 \lt \cdots \lt x_n=b.</me>
+      Let <m>I_k</m> denote the interval <m>(x_{k-1},x_k]</m>. Let
+      <m>(\Delta x)_k</m> denote the width <m>(\Delta
+      x)_k=x_k-x_{k-1}</m> of <m>I_k</m>, and let  <m>P_k=P(X\in I_k)=F_X(x_k)-F_X(x_{k-1})</m>. We define <m>R_k</m> to
+      be a rectangular region
+      <men>R_k = I_k \times [0,P_k/(\Delta x)_k]</men>
+      so that the area of <m>R_k</m> is <m>P_k</m>.
+    The <term>histogram</term> for <m>X</m> on <m>[a,b]</m>
+    with
+    partition <m>\mathcal{P}</m> is a collection of <m>n</m>
+      rectangular regions <m>R_1,R_2,\ldots,R_n</m>. The
+      intervals <m>I_k</m> are called the <term>class intervals</term>
+      for the histogram.
+    </p>
+
+    
+    
+    <exercise>
+      <p>
+	<ol><li>A frequently used alternative convention for histograms
+	is to switch the closed and open ends of the class intervals,
+	      that is, to use <m>I_k=[x_{k-1},x_k)</m>.
+	      When the
+	distinction has to be made clear, we say
+	that <m>I_k=[x_{k-1},x_k)</m> uses the <term>left endpoint
+	convention</term>, while the usual
+	definition <m>I_k=(x_{k-1},x_k]</m> uses the <term>right
+	endpoint convention</term>. In the case of the left endpoint convention, <m>P_k</m> is
+	      still defined to be <m>P_k=P(X\in I_k)</m>. Write an expression for the left
+	endpoint convention version <m>P_k</m> in terms of the
+	    distribution function <m>F_X</m>.</li>
+
+	  <li>What would be wrong about using <m>I_k=[x_{k-1},x_k]</m>?
+	  </li>
+
+	  <li>For a random variable <m>X</m> whose values are whole
+	  numbers only, it is common to use class intervals with edges
+	    on half-integers (that is, <m>x_k=n_k+1/2</m> for some
+	    integer <m>n_k</m>, for every <m>k</m>). Why is this better
+	  than using class intervals with edge points on whole numbers?
+	  </li>
+	    
+<li>      Generate data (a list of numbers) in the
+	interval <m>[50,150]</m>. Choose three different partitions: one
+	partition with 3 intervals, another partition with 5 intervals,
+	and another partition with 7 intervals. Draw the histogram for
+  each partition.</li>
+	</ol>
+      </p>
+
+    </exercise>
+    
+</subsection>
+
+<subsection><title>Expectation</title>
+
+  <p>Here is a simple example that motivates the notion of expected
+  value. Suppose you play a dice game in which you win two dollars every
+  time your dice roll comes up showing the six face, and you lose a
+  dollar if you roll something different from a six. In 600 rolls, you
+  would expect to roll a six about 100 times. From this you would
+  gain 200 dollars. You would expect to roll something different from a
+  six about 500 times. From this you would lose 500 dollars. Your net
+    gain is <m>200-500=-300</m> dollars, which averages to <m>-.50</m>
+    dollars per roll. You could have found this by the calculation
+    <me>\text{average net gain per win }= 2\cdot 1/6 +(-1)\cdot 5/6.</me>
+    This is a sum of the form <m>\sum
+      (\text{value})(\text{probability})</m>, where <q>value</q> is the
+    value of a random variable <mdash/> in this case, win/loss per roll. Here
+    is the formal mathematical definition.
+  </p>
+
+  <p> Let <m>X</m> be a random variable on a discrete probability
+    space <m>(\Omega,P)</m> with probability
+    function <m>p</m>. The <term>expected value of <m>X</m></term>,
+    denoted <m>E(X)</m>, is defined to be
+    <men xml:id="expectvaldef">E(X) = \sum_{\omega\in\Omega}X(\omega)
+      p(\omega).</men> The expected value of a random variable is also
+      called its <em>average</em> or <em>mean</em>, and we
+      write <m>\mu_X</m> (or just <m>\mu</m>, if <m>X</m> is clear from
+      context) for <m>E(X)</m>. It is sometimes useful to group the
+      summands in <xref ref="expectvaldef"/> as follows.
+    <men xml:id="expectvalregrouped">E(X) = \sum_{x\in X(\Omega)}x P(X=x).</men>
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Make up several random variables on small finite
+	probability spaces. Calculate their expected values.</li>
+	<li>Let <m>X</m> be a random variable and
+	  let <m>Y=aX+b</m>. Show that <m>E(Y)=aE(X)+b</m>.
+	</li>
+	<li>Justify <xref ref="expectvalregrouped"/>.
+	</li>
+      </ol>
+      </p>
+  </exercise>
+  
+    <p>Variance and standard deviation are measures of the spread of a
+    random variable about its mean. The <term>variance</term>
+    of <m>X</m>, denoted <m>\var(X)</m> or <m>\sigma_X^2</m> (or
+    just <m>\sigma</m>, if <m>X</m> is understood), is
+    <men xml:id="variancedef">\var(X)=E((X-\mu_X)^2)=E(X^2)-(E(X))^2.</men>
+    The <term>standard deviation</term> of <m>X</m>,
+    denoted <m>\SD(X)</m> or 
+    <m>\sigma_X</m> (or just <m>\sigma</m>), is the square root of the variance.
+    </p>
+
+      <exercise>
+    <p>
+      <ol>
+	<li>Calculate the variance for each of the examples you made up
+	in the previous Checkpoint.</li>
+	<li>Let <m>X</m> be a random variable and
+	  let <m>Y=aX+b</m>. Show that <m>\var(Y)=a^2\var(X)</m>.
+	</li>
+	<li>Show the two expressions for variance
+    <xref ref="variancedef"/> are equal.
+	</li>
+      </ol>
+      </p>
+  </exercise>
+
+      <p><alert>Standardized random variables.</alert>
+A random variable <m>X</m> is said to be <term>standardized</term>
+    if <m>E(X)=0</m> and <m>\var(X)=1</m>. If <m>X</m> is any random
+    variable with <m>E(X)=\mu_X</m> and <m>\var(X)=\sigma_X^2</m>, then
+    the variable <m>X' = \frac{X-\mu_X}{\sigma_X}</m> is standardized.	
+      </p>
+
+        <exercise><p>Verify the last claim above.</p>
+  </exercise>
+</subsection>
+
+<subsection>
+  <title>One basic example</title>
+
+  <p>In a later section, we will introduce several important random
+  variables that arise naturally from samples taken from
+  probability spaces. Many of these sample variables begin with the
+  simplest possible probability with just two outcomes. Here are the definitions.</p>
+
+  <definition>
+      <p>A <term>Bernoulli</term> variable is a discrete random variable <m>X</m>
+      that has exactly two values, <m>0</m> and <m>1</m>. 
+      It is traditional to use the symbols <m>p,q</m> to
+      denote the probabilities <m>p=P(X=1)</m> and <m>q=1-p = P(X=0)</m>.
+    </p>
+  </definition>
+
+  <p>In the definition of Bernoulli variable, the probability space is
+  not specified. The simplest possible probability space for a Bernoulli
+    variable is a 2-element set <m>\Omega=\{A,B\}</m> (where <m>A,B</m>
+    might represent outcomes <em>heads</em> and <em>tails</em>, or <em>win</em>
+  and <em>lose</em>, or <em>yes</em> and <em>no</em>, etc.), with
+    probability function <m>p(a)=p</m>, <m>p(b)=q=1-p</m>. However, the
+  sample space for a Bernoulli variable could have any number of elements.
+  </p>
+
+    <exercise><p>Show that <m>E(X)=p</m> and <m>\var(X)=pq</m> for a
+	Bernoulli variable <m>X</m>.
+      </p>
+      <p>Find a 10-element probability space and probability function
+	for a Bernoulli variable <m>X</m> with <m>p(X=1)=.6</m>. Find an
+	infinite probability space and probability function for a
+	Bernoulli variable with <m>P(X=1)=.6</m>.
+      </p>
+    </exercise>
+
+    
+</subsection>
+
+<subsection><title>Independence and covariance</title>
+
+  <definition><p>
+    Let <m>X,Y\colon \Omega\to \R</m> be random variables on the same
+    sample space. The <term>joint distribution
+      function</term> <m>F_{XY}\colon \R^2\to \R</m> is given by
+    <men>F_{XY}(\lambda,\mu) = P(X\leq \lambda\text{ and }Y\leq
+      \mu).</men>
+    Variables <m>X,Y</m> are
+    called <term>independent</term>
+    if <m>F_{XY}=F_XF_Y</m>. If <m>X,Y</m> are not independent, they are
+    called <term>dependent</term>.
+    The <term>covariance</term> of <m>X</m> and <m>Y</m>,
+    denoted <m>\covar(X,Y)</m>
+    is
+    <men>\covar(X,Y)=E(XY)-E(X)E(Y).</men>
+  </p>
+  </definition>
+
+  <proposition xml:id="indepimpliescovarzero">
+    <p>If <m>X,Y</m> are independent, then <m>\covar(X,Y)=0</m>.
+    </p>
+  </proposition>
+
+  <exercise>
+        <p>
+      <ol><li>Show by example that the converse of <xref ref="indepimpliescovarzero"/>
+	  is false.</li>
+<li>Show that, if <m>X,Y</m> are independent discrete random
+      variables, then <m>P(X\in A\text{ and }Y\in B)=P(X\in A)P(Y\in
+	B)</m> for every pair of intervals <m>A=[a_1,a_2],
+	B=[b_1,b_2]</m>. This demonstrates why we use the
+  term <em>independent</em>.</li>
+      </ol>
+    </p>
+  </exercise>
+  
+</subsection>
+
+</section>

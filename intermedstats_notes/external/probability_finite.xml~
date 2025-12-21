@@ -1,0 +1,284 @@
+<section xml:id="probability_finite_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Finite Probability Models
+</title>
+
+<introduction>  <p>Probability models are mathematical frameworks that help us think
+  about chance processes whose outcomes cannot be predicted
+  with certainty. We begin with one of the simplest
+  types of probability models, in which the set of possible outcomes of
+    a chance process is finite.
+  </p>
+</introduction>
+
+<subsection><title>Vocabulary and Properties</title>
+  
+  <definition xml:id="finprobfndef">
+    <p>A <term>finite probability function</term> is a function
+      <m>p\colon \Omega	\to [0,1]</m>, where <m>\Omega</m> is a finite set,
+      and where <m>p</m> satisfies
+      <men xml:id="probfunsum1">\sum_{\omega\in\Omega} p(\omega)=1.</men>
+    </p>
+  </definition>
+
+  <p>The next definition extends the assignments of probabilities to <em>subsets</em> of <m>\Omega</m>.
+    Recall that the <em>power set</em> <m>\mathcal{P}(S)</m> of a
+    set <m>S</m> is the set of all subsets of <m>S</m>.
+  </p>
+
+  <definition xml:id="finprobmeasdef">
+    <p>A <term>finite probability measure</term> is a function
+      <m>P\colon \mathcal{P}(\Omega)\to [0,1]</m> be given by
+    <men xml:id="discreteprobmeasdef">P(E)=\sum_{\omega \in E} p(\omega)</men>
+    for <m>E\subseteq \Omega</m>, where <m>p\colon \Omega\to [0,1]</m> is a finite probability function.
+</p>
+  </definition>
+
+    <p><alert>Comment on notation:</alert> For a single
+    element <m>\omega</m> in <m>\Omega</m>, it is common practice to
+      write <m>P(\omega)</m> as a shorthand
+      for <m>P(\{\omega\})</m>.
+    </p>
+
+  
+  <definition xml:id="finiteprobmodeldef"><title>Finite probability model</title>
+    <p>
+      A <term>finite probability model</term> is a
+	pair <m>(\Omega,P)</m>, where <m>\Omega</m>
+	is a finite set, and where <m>P</m> is a finite
+  probability measure on <m>\Omega</m>.
+      The set <m>\Omega</m> is called
+    the <term>probability space</term> of the model. Elements
+    of <m>\Omega</m> are called <term>outcomes</term>, and elements
+  of <m>\mathcal{P}(\Omega)</m> are called <term>events</term>.</p>
+  </definition>
+  
+    <exercise>
+      <p>Write the probability function for the probability space <m>\Omega=\{a,b,c\}</m>
+	where outcome <m>b</m> is twice as likely as outcome <m>a</m>,
+	and outcome <m>c</m> is three times as likely as outcome <m>b</m>.
+      </p>
+  </exercise>
+
+  <definition xml:id="finprobmodelvocabdef"><title>More probability terminology</title>
+  <p>Let <m>(\Omega,P)</m> be a finite probability model.
+    The complement <m>A^c=\Omega\setminus A</m> of an event <m>A</m>
+    is also called the <term>opposite</term> of <m>A</m>. Disjoint
+    events <m>A,B</m> (that is, <m>A\cap B=\emptyset)</m>
+    are also called <term>mutually exclusive</term>.
+    Given events <m>U,V</m> with <m>P(V)\neq 0</m>, the <term>conditional probability
+      of <m>U</m> given <m>V</m></term>, denoted <m>P(U|V)</m>, is
+    defined to be
+    <men xml:id="condprobdef">P(U|V)=\frac{P(U\cap V)}{P(V)}.</men> Events <m>U,V</m> are
+    called <term>independent</term> if <m>P(U\cap
+      V)=P(U)P(V)</m>. Otherwise, <m>U,V</m> are
+    called <term>dependent</term>.
+    </p>
+  </definition>
+
+      <exercise>
+	<p>Let <m>\Omega=\{a,b,c\}</m>, let <m>U=\{a,b\}</m>, and
+	let <m>V=\{b,c\}</m>. Give an example of a probability function
+	on <m>\Omega</m> for which <m>U,V</m> are independent. Give an
+	example of a probability function on <m>\Omega</m> for
+	which <m>U,V</m> are dependent.
+	</p>
+      </exercise>
+
+      
+      <proposition xml:id="probprops">
+	<title>Properties of probability</title>
+    <p>Let <m>(\Omega,P)</m> be a finite probability model. The following
+      properties hold.
+      <ol>
+      <li><m>P(\Omega)=1</m>.
+      </li>
+      <li>If <m>A\subseteq B</m> for some events <m>A,B</m>,
+      then <m>P(A)\leq P(B)</m>.
+      </li>      
+      <li><term>(addition rule)</term> If events <m>A,B</m> are disjoint, then <m>P(A\cup B)=P(A)+P(B)</m>.
+      </li>
+      <!--
+      <li>
+	For any two events <m>A,B</m>, we have <m>P(A\cup
+      B)=P(A)+P(B)-P(A\cap B)</m>.
+      </li>
+      -->
+      <li><term>(opposite rule)</term>
+	For any event <m>A</m>, we have <m>P(A^c)=1-P(A)</m>.
+      </li>
+      <li><term>(multiplication rule)</term>
+	For any events <m>U,V</m> such that <m>P(U)\neq 0</m>, we
+      have <m>P(U\cap V) = P(U)P(V|U)</m>.
+      </li>
+      <li>Let <m>U,V</m> be events with <m>P(U)\neq 0</m>.
+	Events <m>U,V</m> are independent if and only if
+	<m>P(V)=P(V|U)</m>.
+      </li>
+      </ol>
+    </p>
+  </proposition>
+
+    <exercise>
+    <p>Prove all the parts of <xref ref="probprops"/>.</p>
+  </exercise>
+    
+</subsection>
+
+
+<subsection xml:id="finiterandsampsect">
+  <title>Random Samples</title>
+
+    <p>Let <m>(\Omega,P)</m> be a finite probability model with
+    probability function <m>p</m>, and let <m>n</m> be a positive integer. Let <m>p_{\Omega^n}\colon
+      \Omega^n\to [0,1]</m> be defined by
+    <men xml:id="randsampprobfn">p_{\Omega^n}(\omega_1,\omega_2,\ldots,\omega_n)=p(\omega_1)p(\omega_2)\cdots
+      p(\omega_n).</men> It is easy to check (see <xref ref="productprobfnexer"/> below)
+    that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>P_{\Omega^n}</m> denote the corresponding
+    probability measure. The probability
+    model <m>(\Omega^n,P_{\Omega^n})</m> is called the space
+    of <term>(random) samples of size <m>n</m>
+    </term> taken from the space <m>\Omega</m>. 
+    The space <m>\Omega^n</m> models the outcomes that are obtained by
+    <m>n</m> repetitions of the process chance process that produces
+    outcomes in <m>\Omega</m>.
+</p>
+
+  <exercise xml:id="productprobfnexer">
+    <p>Show that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>E,F</m> be events in <m>\Omega</m>, and
+      let <m>E',F'</m> be the events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
+      and <m>F'=\{\vec{\omega}\colon\omega_k\in F\}</m>. Show that <m>E',F'</m> are
+      independent in <m>\Omega^n</m> if <m>j\neq k</m>.
+    </p>
+  </exercise>
+
+</subsection>
+
+<subsection>
+  <title>Simple Random Samples</title>
+
+  <p>Let <m>(\Omega,P)</m> be a finite probability space
+    with <m>N=|\Omega|</m>, and with the constant
+    probability function <m>p(\omega)=\frac{1}{N}</m> for
+    all <m>\omega\in \Omega</m>. Let <m>\Omega^{n\ast}</m> denote the
+    set of all one-to-one sequences<fn>We use the nonstandard
+      notation <m>\Omega^{n\ast}</m>, rather than the standard
+      notation <m>P_n(\Omega)</m>, to denote the set of permutations
+      of <m>n</m> elements of <m>\Omega</m>, in order to avoid confusion
+    with probability measures, which are also denoted using capital
+    letter P.
+    </fn>
+    in <m>\Omega</m> of size <m>n</m>.
+    An element <m>(\omega_1,\omega_2,\ldots,\omega_n)</m>
+    of <m>\Omega^{n\ast}</m> is called a
+    <term>simple random sample of size <m>n</m>
+    </term> taken from a probability
+    space <m>\Omega</m>. Let <m>p_{\Omega^{n\ast}}</m> be given by the
+    constant function
+    <men>p_{\Omega^{n\ast}}(\omega_1,\omega_2,\ldots,\omega_n)=\frac{1}{N(N-1)\cdots
+      (N-n+1)}</men>
+    for all <m>(\omega_1,\omega_2,\ldots,\omega_n)\in
+      \Omega^{n\ast}</m>. It is easy to check (see <xref ref="simprandsampprobfnexer"/> below)
+    that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>P_{\Omega^{n\ast}}</m> denote the corresponding
+    probability measure. The probability
+    model <m>(\Omega^n,P_{\Omega^{n\ast}})</m> is called the space
+    of <term>simple random samples of size <m>n</m> 
+    </term> taken from the space <m>\Omega</m> (or the space of samples of size <m>n</m>
+    taken from <m>\Omega</m>
+    <term>without replacement</term>).
+
+  </p>
+
+    <exercise xml:id="simprandsampprobfnexer">
+    <p>Show that <m>p_{\Omega^{n\ast}}</m> is a probability
+      function. Let <m>E</m> be an event in <m>\Omega</m>, and
+      let <m>E',F'</m> be the
+      events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>, <m>F'=\{\vec{\omega}\colon\omega_k\in E\}</m>, 
+      Show that <m>E',F'</m> are
+      <em>dependent</em>
+      in <m>\Omega^{n\ast}</m> if <m>j\neq k</m>.
+    </p>
+  </exercise>
+
+</subsection>
+
+<subsection><title>Bayes' Rule</title>
+
+  <p><term>Bayes' Rule</term>
+    can be viewed as a practical method
+    for finding conditional probabilities. For events <m>A,B</m> in a
+    probability space <m>\Omega</m>, where
+    both probabilities <m>P(A),P(B)</m> are nonzero, the definition of
+    conditional probability <xref ref="condprobdef"/> gives us two ways
+    to write <m>P(A\cap B)</m>, namely
+    <me>P(A\cap B)= P(A)P(B|A) = P(B)P(A|B).</me>
+    Dividing the last two terms by <m>P(A)</m> leads to the following,
+    which is a basic form of Bayes' Rule.
+      <men xml:id="bayesrulebasic">  P(B|A) =\frac{P(B)P(A|B)}{P(A)}</men>      
+    A use case for this version of Bayes' Rule is a problem in which you
+    know the probabilities in the expression on the right, and you wish
+    to find the probability on the left. In effect, this allows you to
+    use <m>P(A|B)</m> to find <m>P(B|A)</m>.
+  </p>
+
+<p>In a more nuanced form of Bayes' Rule, the event <m>B</m> is one of
+    of a collection of events <m>B_1,B_2,\ldots,
+    B_r</m> that form a partition of <m>\Omega</m>, say, <m>B=B_k</m>. In this case, we
+  have
+  <mdn>
+    <mrow>A \amp = \bigcup_{i=1}^r (A\cap B_i)</mrow>
+    <mrow xml:id="lawoftotalprobeqn">P(A) \amp = \sum_{i=1}^r P(A\cap B_i)</mrow>
+    <mrow xml:id="partcondprob">\amp = \sum_{i=1}^r P(B_i)P(A|B_i)</mrow>        
+  </mdn>
+  Substituting <m>B=B_k</m>, and substituting the last expression <xref ref="partcondprob"/>
+  for <m>P(A)</m> in <xref ref="bayesrulebasic"/>, we have the following form
+  of Bayes' Rule.
+  <men xml:id="bayesrule">P(B_k|A)  =  \frac{P(B_k)P(A|B_k)}{\sum_i P(B_i)P(A|B_i)}
+  </men>
+</p>
+
+<p><alert>Terminology comment:</alert> Equations
+  <xref ref="lawoftotalprobeqn"/> and <xref ref="partcondprob"/> are
+  sometimes called the <em>law of total probability</em>.
+</p>
+
+<exercise>
+  <p>
+    <ol>
+      <li>Justify all the steps in the derivation for Bayes'
+	Rule.</li>
+      <li>Find the sets <m>A_i</m> and <m>B_j</m>
+	for medical testing scenario (what is the
+	chance of having the disease given a positive test result?)
+	</li>
+    </ol>
+  </p>
+</exercise>
+</subsection>
+
+
+<exercises><title>Probability Exercises</title>
+
+<exercise> <p> Do exercises 1 and 2
+      in <url href="https://mathvista.org/elemstats_notes/basic_probability.html">Section
+      1.7.2</url> of <xref ref="lyons_elemstats"/>.
+  </p>
+</exercise>
+
+<exercise><p>
+    <url href="https://quantum.lvc.edu/lyons/courses/mas270_supp_materials/probability_problem_set.pdf">More exercises with solutions.
+    </url>
+  </p>
+</exercise>
+
+<exercise><p>Work the <q>Probability Exercises</q>
+    set posted on Canvas.</p>
+</exercise>
+
+
+</exercises>
+
+</section>

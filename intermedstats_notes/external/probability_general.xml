@@ -1,0 +1,189 @@
+<section xml:id="probability_general_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  General Probability Models
+</title>
+
+<introduction>
+  <p>
+    In general, a probability model is a pair <m>(\Omega,P)</m>,
+    where <m>\Omega</m> is a set, and where <m>P</m> is a function on
+    a <em>subset</em> of the power set of <m>\Omega</m>. What all
+    probability models have in common are the vocabulary
+    (<xref ref="finprobmodelvocabdef"/>) and properties
+    (<xref ref="probprops"/>) that you have already seen for finite
+    probability models in the previous section. We begin with a
+    generalization of the finite probability model.
+  </p>
+</introduction>
+
+
+<subsection>
+  <title>Discrete Probability Models</title>
+
+  <p>The definitions (<xref ref="finprobfndef"/>,
+  <xref ref="finprobmeasdef"/>, <xref ref="finiteprobmodeldef"/>) for a
+  finite probability model generalize naturally for
+  countably infinite probability spaces. The only
+  necessary change is to replace the word <q>finite</q> with the
+  phrase <q>finite or countably infinite</q>.  Together, finite
+  probability models and their countably infinite generalizations are
+  called <em>discrete probability models</em>.
+    </p>
+
+    <definition>
+      <p>A <em>probability function</em> on a finite or countably
+	infinite set <m>\Omega</m> is a function <m>p\colon \Omega\to
+	[0,1]</m> that
+	satisfies <m>\sum_{\omega\in\Omega}p(\omega)=1</m>. A <em>discrete
+	  probability measure</em> on a finite or countably infinite
+	space <m>\Omega</m> is a function <m>P\colon \mathcal{P}(\Omega)\to
+	  [0,1]</m> given by <m>P(E)=\sum_{e\in E}p(e)</m> for <m>E\subseteq
+	  \Omega</m>, where <m>p</m> is a probability function
+	on <m>\Omega</m>. A <term>discrete probability model</term> is a
+	pair <m>(\Omega,P)</m>, where <m>\Omega</m>
+	is a finite or
+	countably infinite set, and where <m>P</m> is a discrete
+	probability measure on <m>\Omega</m>.
+      </p>
+    </definition>
+
+    <exercise>
+      <p>
+	<ol>
+	  <li>Show that the definition of the probability
+	  space <m>\Omega^n</m> (see <xref ref="finiterandsampsect"/>)
+	  works for countably infinite descrete
+	  models <m>(\Omega,P)</m>.
+	  </li>
+	  <li>Do simple random samples make sense for infinite
+	  probability spaces?</li>
+	</ol>
+      </p>
+    </exercise>
+
+    <p><alert>Example.</alert> Let <m>\Omega=\{1,2,3,\ldots\}</m>, and
+	  let <m>p\colon \Omega\to [0,1]</m> given by <m>p(n)=1/2^n</m>.
+    </p>
+
+    <exercise><p>
+	<ol>
+	  <li>Show that <m>p</m> is a probability function.</li>
+	  <li>Find the probability of the event <m>E=\{1,2,3,\ldots, n\}</m>. 
+	  </li>
+	  <li>Find the probability of the event <m>F=\{5k\colon k=1,2,3,\ldots\}</m>.
+	  </li>
+	</ol>
+      </p>
+    </exercise>
+
+    <p><alert>Samples from probability models.</alert> For a discrete
+      probability model <m>(\Omega,P)</m> with probability
+      function <m>p</m>, we define the probability space of <term>samples of
+	size <m>n</m></term> from <m>\Omega</m> to be the
+      space <m>\Omega^n</m> with probability function <m>p_{\Omega^n}</m>
+      defined by <xref ref="randsampprobfn"/>. 
+    </p>
+
+    <exercise><p>Show that the function <m>p_{\Omega^n}</m> is indeed a
+    probability function.
+      </p>
+    </exercise>
+    
+</subsection>
+
+<subsection>
+  <title>Uncountable probability spaces</title>
+
+  <p>For an uncountable set <m>\Omega</m>, it is impossible to have a
+    probability function. That is, there does not exist any
+    function <m>p\colon \Omega \to [0,1]</m> that
+    satisfies <m>\sum_{\omega\in \Omega}p(\omega)=1</m>. Nevertheless,
+    it is possible to define a probability measure in a way that
+    satisfies all of the properties in <xref ref="probprops"/>
+    by restricting the set of events to a proper <em>subset</em> of the
+    power set <m>\mathcal{P}(\Omega)</m>. In these notes, we will omit
+    the technical details for how this is done. Instead we will
+    illustrate with two examples.
+  </p>
+
+  <exercise><p>Why not? Why is it impossible to have a probability
+  function on an uncountable set?</p>
+  </exercise>
+
+  <p><alert>Uniform probability measures.</alert> Let <m>\Omega</m> be
+  the set of points inside of a geometric figure with a finite area or volume, say, a two-dimensional
+    figure with area equal to <m>A</m> square units. Given any
+    rectangle <m>R\subset\Omega</m>, define <m>P(R)</m> to be
+    <men xml:id="unifprobmeas">P(R)=\frac{\text{area of }R}{A}.</men> This probability measure
+    is <em>uniform</em> in the sense that it doesn't matter
+    where <m>R</m> is located with <m>\Omega</m>. The probability
+    of <m>R</m> is completely determined by its area. Similarly, the
+    uniform probability measure on an interval <m>\Omega=[a,b]</m> of real
+    numbers is given by <m>P([c,d]) = \frac{d-c}{b-a}</m> for any
+    interval <m>[c,d]\subseteq \Omega</m>.
+
+  </p>
+  
+  <p><alert>Infinite sequences of coin tosses</alert> Let <m>\Omega</m>
+    be the set of infinite sequences of tosses of a fair
+    coin. For <m>(\omega_1,\omega_2,\omega_3,\ldots)\in \Omega</m>, each entry <m>\omega_k</m> 
+    is one of the two outcomes in the probability
+    space <m>C=\{H,T\}</m> (<m>C</m> is for <q>coin</q>, <m>H</m> is
+    for <q>heads</q>, and <m>T</m> is for <q>tails</q>) with probability
+    function <m>p(H)=p(T)=1/2</m>. Now suppose that <m>E\subseteq
+    C^n</m>, so that <m>P_{C^n}(E)=|E|/2^n</m> (see
+    <xref ref="randsampprobfn"/>). Let <m>E'</m> is the subset
+    of <m>\Omega</m> defined by
+    <me>E'=\{(\omega_1,\omega_2,\omega_3,\ldots)\in \Omega\colon
+      (\omega_1,\omega_2,\ldots,\omega_n)\in E\}.</me>
+    If it is possible to define a probability measure <m>P_{\Omega}</m>,
+      then intuition demands 
+    that we must have <men xml:id="infseqcointossmeas">P_{\Omega}(E')=P_{C^n}(E).</men> In fact it turns
+      out that such a probability measure exists. We will not give the
+      full details for how it is constructed. Happily, it turns out that
+      <xref ref="infseqcointossmeas"/> give us what we need to work with
+      the probability space <m>(\Omega,P_{\Omega})</m>.
+  </p>
+
+  <exercise>
+    <p>Explain why <m>\Omega</m> is uncountable. Explain why
+      there can be no probability function on <m>\Omega^\infty</m>. Find
+      the probability that the first head in an infinite sequence of tosses occurs
+      on toss number 5.
+      <!--Example of a nonmeasureable set?-->
+    </p>
+  </exercise>
+
+      <p><alert>Samples from uncountable probability models.</alert> For
+      an uncountable probability model <m>(\Omega,P)</m>, we define the probability space of <term>samples of
+	size <m>n</m></term> from <m>\Omega</m> to be the
+      space <m>\Omega^n</m> with probability measure <m>P_{\Omega^n}</m>
+	defined by
+	<men>P_{\Omega^n}(E_1\times E_2\times \cdots \times E_n) =
+	  P(E_1)P(E_2)\cdots P(E_n)</men>
+	where <m>E_1,E_2,\ldots,E_n</m> are events in <m>\Omega</m>.
+    </p>
+
+      <exercise><p>Check one or more properties of probability for one
+	  or more special cases for <m>P_{\Omega^n}</m>.
+	</p>
+      </exercise>
+      
+</subsection>
+
+<exercises>
+
+  <exercise>
+  <p>Solve one or more problems in <xref ref="mosteller_fifty_problems"/>.</p>
+</exercise>
+
+  <exercise>
+    <p>Search for probability problems. Present one or more problems
+    and solutions that you found instructive, or amusing, or both.</p>
+  </exercise>
+
+</exercises>
+
+
+</section>
+

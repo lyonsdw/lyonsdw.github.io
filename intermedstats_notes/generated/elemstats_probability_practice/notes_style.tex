@@ -1,0 +1,138 @@
+% style file for course supplementary notes
+% 5/2003
+
+%%%%%%%%%%%%%%% page setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%this sets paragraph indentation to zero
+     \setlength{\parindent}{0in}
+     \parskip = 5pt plus 0pt minus 0pt
+%this sets the width of the text
+%    \setlength{\textwidth}{6.5in}
+%    \setlength{\textwidth}{6.0in}
+%this sets the left margin; zero is one inch from left edge
+%    \setlength{\oddsidemargin}{-.25in}
+%    \setlength{\oddsidemargin}{0in}
+     \addtolength{\oddsidemargin}{.75in}
+%this sets text height
+%    \setlength{\textheight}{9.0in}
+%     \addtolength{\textheight}{1in}
+%this sets top margin; zero is one inch from top edge
+%    \setlength{\topmargin}{0in}
+ %   \addtolength{\topmargin}{-.5in}
+%     \addtolength{\topmargin}{.25in}
+%this produces 1.5-spaced lines
+%    \renewcommand{\baselinestretch}{1.2} 
+%headings
+
+%\pagestyle{empty}
+
+%puts margin notes on left
+     \reversemarginpar
+     \addtolength{\headsep}{.25in}
+
+% invisible text ``spacer''
+     \newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+
+%%%%%%%%%%%%%%%%%%%%% end page setup %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%% load packages %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage{xypic}
+%\usepackage{epsfig}
+\usepackage{epsfig}
+%\usepackage{mathrsfs}
+
+%%%%%%%%%%%%%%  end package loading %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%% theorems, remarks and proofs %%%%%%%%%%%%%%%%%%%%%%
+
+%statements are numbered on the left (use leqno option in documentstyle)
+%equations and statements share a consistent numbering scheme
+%\renewcommand{\theequation}{\thesection .\arabic{equation}}
+\renewcommand{\theequation}{\thesubsection .\arabic{equation}}
+
+%thm environment
+\newenvironment{thm}[2]{\refstepcounter{equation} \label{#2}
+\par \noindent (\theequation) {\bf #1.}
+\begin{em}}{\end{em} \par}
+
+%rem environment
+\newenvironment{rem}[2]{\refstepcounter{equation} \label{#2}
+\par \noindent (\theequation) {\bf #1.}}{\par}
+
+\newcommand{\proofend}{$\rule{2mm}{2mm}$}
+
+%proof environment
+\newenvironment{proof}{\par \noindent
+ {\sc Proof:}}{\nopagebreak \hfill \proofend \par}
+
+%%%%%%%%%%%%%%%%%% end of thm, rem, proof set up %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% placement of figures in the margin %%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{figurecount}
+%\renewcommand{\thefigurecount}{\thesection .\arabic{figurecount}}
+
+% command for figures in the margin
+% arguments: figure input file name, reference label, figure horizontal
+% offset, figure vertical offset, ``Figure'' label horizontal offset,
+% ``Figure'' label vertical offset, caption
+
+\newcommand{\marginfig}[7]{
+\marginpar{
+\refstepcounter{figurecount}      % increment margin figure counter
+\label{#2}                        % label the figure
+\vspace*{#4}                      % vertical adjustment for figure
+\spacer\\
+\hspace*{#3}                      % horizontal adjustment for figure
+\input{#1}\\
+\vspace*{#6}                      % vertical adjustment for ``Figure'' label
+\spacer\\
+\hspace*{#5}                      % horizontal adjustment for ``Figure'' label
+\shortstack{
+Figure~\ref{#2}\\ #7
+}
+\spacer}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% capital D derivative symbol
+\def\D{\mbox{D}}
+% space for dx in integrands
+\def\d{\; d}
+% -1 exponent for inverse
+\def\inv{^{-1}}
+% composition of functions circle
+% \def\of{\, \mbox{\small{$\circ$}} \:}
+\def\of{\mathbin{\circ}}
+% shortcut for displaystyle
+\def\dsp{\displaystyle}
+% shortcut for displaystyle in math mode
+\def\mb{$\begin{displaystyle}}
+\def\me{\end{displaystyle}$\ }
+\def\id{\mbox{\rm id}}
+
+% L'Hopital's rule
+\def\LHop{L'H\^{o}pital's Rule }
+
+%bold face caps
+\newcommand{\R}{{\rm \bf R}}
+\newcommand{\Aff}{{\rm \bf A}}
+\newcommand{\Proj}{{\rm \bf P}}
+\newcommand{\C}{{\rm \bf C}}
+\newcommand{\F}{{\rm \bf F}}
+\newcommand{\A}{{\rm \bf A}}
+\newcommand{\Q}{{\rm \bf Q}}
+\newcommand{\Z}{{\rm \bf Z}}
+\newcommand{\N}{{\rm \bf N}}
+
+% degrees and readians
+\newcommand{\degr}{^\circ}
+\newcommand{\rad}{\mbox{ \rm rad}}
+
+%bold face italics for definitions
+\font\bfit=cmbxti10
+%\newfont{\bfit}{cmbxti10 scaled \magstep1}

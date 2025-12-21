@@ -1,0 +1,478 @@
+% basic probability
+
+\newpage
+
+\section{Probability}\label{probability}
+
+The theory of probability was developed to analyze processes involving
+chance.  In this section we give the basic vocabulary, properties, and
+examples of the simplest type of the probability model, called a {\em
+finite discrete probability space}.  The general case of infinite
+probability spaces is much more technical.  However, it is fair to say
+that many aspects of the general case are approximated by large finite
+probability spaces.
+
+\subsubsection*{Notation preliminaries}
+
+In the definitions below, we use the Greek letter capital omega
+$\Omega$ as the name of a finite set.  We use lower case omega
+$\omega$ to denote an element in $\Omega$.  Given a finite set $S$
+consisting of distinct elements $s_1,s_2,\ldots,s_N$, and a function
+$f\colon S\to \R$, we write $\displaystyle \sum_{s\in S} f(s)$ to denote
+the sum $f(s_1)+f(s_2) + \ldots + f(s_N)$.
+
+\setcounter{equation}{0}
+\subsection{Probability function and probability space}
+
+A function $P\colon \Omega\to \R$ on a finite set $\Omega$ is called a
+{\bfit probability function} if it satisfies the following properties.
+\begin{enumerate}
+\item [(i)] $P(\omega)\geq 0$ for all $\omega$ in $\Omega$
+\item [(ii)] $\displaystyle \sum_{\omega \in \Omega} P(\omega) = 1$
+\end{enumerate}
+The set $\Omega$ is called the {\bfit probability space} or {\bfit sample
+space} of the probability function $P$.  Elements of $\Omega$ are called
+{\bfit outcomes} and subsets of $\Omega$ are called {\bfit events}.
+Given an event $E$, we define the {\bfit probability of $E$}, denoted
+$P(E)$, to be the sum
+$$P(E)=\sum_{\omega \in E} P(\omega).$$ We define the probability of the
+empty set to be zero.  Given a single outcome $\omega$, we call
+$P(\omega)=P(\{\omega\})$ the {\bfit probability of $\omega$}.
+If $P$ is a
+constant function given by $P(\omega)=1/N$ for all $\omega$, where $N$
+is the number of elements in $\Omega$, we say $P$ is a {\bfit
+uniform} probability function.
+
+\begin{rem}
+{Examples}{boxmodeleg}
+\begin{enumerate}
+
+\item Tossing a fair coin is modeled by the probability space $\Omega
+= \{H,T\}$ with probability function $p$ given by $P(H)=P(T)=1/2$.
+
+\item A single roll of a fair die is modeled by the probability space
+$\Omega=\{1,2,3,4,5,6\}$ with the uniform probability distribution
+$p(\omega)=1/6$ for all six outcomes.
+
+\item A gambling game in which your chance of winning is 25\% is modeled
+by the probability space $\Omega=\{W,L\}$ with $P(W)=.25$ and $P(L)=.75$.
+\end{enumerate}
+\end{rem}
+
+Given events $E$ and $F$ in a probability space $\Omega$, we refer to the intersection $E\cap
+F$ as the event ``$E$ and $F$,'' and refer to the union $E\cup F$ as the
+event ``$E$ or $F$,'' where ``or'' has the meaning ``one or the other
+or both.''  The event $\Omega\setminus E
+= \{\omega \in \Omega\colon \omega\not\in E\}$, also denoted $E^c$, is called the {\bfit
+complement} or {\bfit opposite} of $E$.
+Two events that have no outcomes in common (that is, subsets of the
+sample space whose intersection is the empty set) are called {\bfit
+disjoint} or {\bfit mutually exclusive}.  
+
+\begin{rem}
+{Example}{andoreg}  
+In example~2 above
+that models a single roll of a fair die.  Let $E=\{2,4,6\}$ be the event
+``roll an even number'' and $F=\{4,5,6\}$ be the event ``roll a number
+greater than 3.''  Then the event ``$E$ and $F$'' is the set $E\cap
+F=\{4,6\}$.  In words, this is the set of all rolls that fit the
+description ``roll an even number that is also greater than 3.''  The
+event ``$E$ or $F$'' is the set $E\cup F=\{2,4,5,6\}$.  The is the set
+of all rolls that fit the description ``roll an even {\em or} roll a
+number greater than 3.''  The opposite of $E$ is the event $\{1,3,5\}$
+described by the phrase ``roll an odd number.''
+\end{rem}
+
+\setcounter{equation}{0}
+\subsection{The Addition Rule}
+
+Given events $E$ and $F$ in a sample space $\Omega$, regrouping the
+terms in the sum
+$$P(E) + P(F) = \sum_{\omega \in E} P(\omega) + \sum_{\omega \in F}
+P(\omega)$$
+yields the sum
+$$\sum_{\omega \in E\cup F} + \sum_{\omega \in E\cap F}=P(E\cup F) +
+P(E\cap F).$$
+Solving for $P(E\cup F)$ gives the {\bfit union rule}, also called the
+{\bfit sum rule} or {\bfit addition rule}.
+\begin{equation}
+\label{unionrule}
+P(E\cup F) = P(E) + P(F) - P(E\cap F)
+\end{equation}
+When $E$ and $F$ are mutually exclusive, that is, when $E\cap F$ is
+empty, the union rule takes on a simpler form, sometimes called the {\em
+sum rule} or {\em addition rule} for mutually exclusive events.
+\begin{equation}
+\label{sumrule}
+P(E\cup F) = P(E) + P(F) \hspace*{.1in} \mbox{($E$, $F$
+mutually exclusive)}
+\end{equation}
+When $F=E^c$, we have $E\cup F=\Omega$ and the sum rule yields
+\begin{equation}
+1 = P(S) = P(E\cup E^c) = P(E) + P(E^c).
+\end{equation}
+Rearranging by solving for $P(E)$, we get a formula called the {\bfit complement
+rule} or {\bfit opposite rule}.
+\begin{equation}
+\label{complementrule}
+P(E) = 1 - P(E^c)
+\end{equation}
+In words, the opposite rule says that the probability of an event equals
+one hundred percent minus the probability of the opposite event.  This
+rule is useful because sometimes $P(E^c)$ is easier to determine
+than $P(E)$.  See example~2 in~\ref{egprobs} below.
+
+\setcounter{equation}{0}
+\subsection{Conditional Probability and Multiplication Rule}
+
+Let $E$ and $F$ be two events in a sample space $\Omega$, with $P(F)\neq
+0$.
+The {\bfit conditional probability of $E$ given $F$}, denoted $P(E|F)$, is
+defined to be
+\begin{equation}
+\label{condprobdef}
+P(E|F) = \frac{P(E\cap F)}{P(F)}.
+\end{equation}
+Conditional probability has the following meaning.  Suppose it is known
+that event $F$ has occurred in the game of chance modeled by $\Omega$,
+and we wish to assess the probability that the selected outcome belongs
+to the set $E$.  In effect, the knowledge that the given outcome lies in
+$F$ allows us to reduce the sample space from $\Omega$ to $F$.  We
+replace $P\colon \Omega \to \R$ by $P'\colon F\to \R$ given by
+$P'(\omega) = P(\omega)/P(F)$.  We ignore all the outcomes in $E$ that
+don't belong to $F$, which means that we replace $E$ by $E\cap F$ and
+calculate the ``new'' probability of $E$ as $\frac{P(E\cap F)}{P(F)}$.
+In words, $P(E|F)$ is the probability that the event $E$ occurs {\bfit
+given that} the event $F$ has occurred.
+
+A rearrangement of~(\ref{condprobdef}) is called the {\bfit multiplication
+rule}. Given events $E,F$ with $P(F)\neq 0$, we have
+\begin{equation} 
+\label{multrule}
+P(E\cap F) = P(E|F)P(F).
+\end{equation}
+In words, the multiplication rule says that the probability that events
+$E$ and $F$ both happen is equal to the probability that $E$ happens
+given that $F$ has happened, times the probability that $F$ happens.
+This rule is useful because it gives us a way to calculate $P(E\cap F)$,
+which is often complicated, in terms of $P(E|F)$ and $P(F)$, which are
+often simpler.
+
+\begin{rem}
+{Example}{condprobeg} Problem: Two cards are dealt from a well-shuffled
+standard 52 card deck.  What is the probability that both cards are red?
+
+Comment: When we use the multiplication rule~(\ref{multrule}) we think
+of $F$ as ``happening first'' and work out the right hand side from
+right to left.  Here is the solution for this example.
+
+Solution: The probability we wish to find is the probability that the
+first card is red and the second card is red.  Working on the right hand
+side of~(\ref{multrule}) from right to left, let $F$ be the event
+``first card is red'' and $E$ be the event ``second card is red.'' It is
+easy to see that $P(F) = 1/2$ (there are 26 red cards in the 52 card
+deck; each card has the same chance of being drawn first) and that
+$P(E|F) = 25/51$ (once $F$ has happened, there are 51 cards left, 25 of
+which are red; each of the 51 cards has the same chance of being drawn
+next).  Therefore, the multiplication rule gives us
+$$P(E\cap F) = 1/2 \cdot 25/51 = 25/102.$$
+\end{rem}
+
+\setcounter{equation}{0}
+\subsection{Independence and Dependence}
+
+Two events $E,F$ are called {\bfit independent} if 
+\begin{equation}\label{indepdefn}
+P(E\cap F)=P(E)P(F)
+\end{equation}
+and are called {\bfit dependent} otherwise.  
+If $P(F)\neq 0$, dividing both sides of~(\ref{indepdefn}) by $P(F)$ yields
+$P(E|F)=P(E)$.  The intuitive practical interpretation
+of the equation $P(E|F)=P(E)$ is that the likelihood of $E$ occurring
+does not depend on knowledge that $F$ has occurred.
+Conversely, if the likelihood of $E$ occurring {\em does} depend on
+knowledge that $F$ has occurred, that is, if $P(E|F)\neq P(E)$, then
+$E,F$ are dependent.  
+
+We use equation~(\ref{indepdefn}) in two distinct ways: as the {\em
+definition} of independence for two events; and as a {\em formula} where
+we use the right hand side to find the unknown probability on the left
+hand side when $E,F$ are known to be independent.  In the latter case,
+we think of~(\ref{indepdefn}) as a special case of the multiplication
+rule~(\ref{multrule}).
+
+\begin{rem}
+{Examples}{indepdepeg}
+\begin{enumerate}
+\item (Using~(\ref{indepdefn}) as a formula for an unknown probability)
+What is the chance that a fair coin comes up heads in two 
+consecutive tosses?  It is intuitively clear that the probability that
+the second toss comes up heads is $1/2$ whether or not we know that the
+first toss comes up heads.  In other words, the events $E=\mbox{``first
+toss is heads''}$ and $F=\mbox{``second toss is heads''}$ are
+independent.  We use~(\ref{indepdefn}) to get
+$$P(E\cap F) = P(E) P(F) = 1/2 \cdot 1/2 = 1/4.$$
+\item (Using~(\ref{indepdefn}) as a definition to check independence)
+Problem: Let $S$ be a sample space consisting of twelve marbles labeled
+by the letters A through L.  Let $U$ be the event consisting of the letters
+A through F, let $V$ be the event consisting of the letters D through I,
+and let $W$ be the letters H, I, J.  For each pair $U,V$, $U,W$ and
+$V,W$, decide if the pair is independent or dependent.
+
+Solution: We have $U\cap V=\{\mbox{D,E,F}\}$, $U\cap W=\emptyset$ and
+$V\cap W =\{\mbox{H,I}\}$.  We see that $P(U\cap V)=3/12=1/4$ and
+$P(U)P(V) = 1/2\cdot 1/2 = 1/4$, so $U$ and $V$ are independent of one
+another.  We have $P(U\cap W) = 0$, whereas $P(U)P(W)$ is certainly not
+zero, so $U$ and $W$ are dependent events.  Finally, we have $P(V\cap W)
+= 2/12 = 1/6$, but $P(V)P(W) = 1/2\cdot 3/12 = 1/8$, so $V$ and $W$ are
+dependent. 
+\end{enumerate}
+\end{rem}
+
+%\setcounter{equation}{0}
+\subsubsection*{Many independent events}
+
+To say that events in a finite collection ${\cal E}$ are {\bfit
+independent} means that the multiplication rule
+$$P(E_1\cap E_2\cap \cdots \cap E_k) = P(E_1)P(E_2)\cdots P(E_k)$$
+holds for for every subset $\{E_1,E_2,\ldots,E_k\}$ of ${\cal E}$.
+
+The classic example is in a game of many tosses, say $n$, of a fair coin.  Let
+$E_i$ be the event ``get a head on toss $i$''.  The events
+$E_1,\ldots,E_n$ are independent.
+
+
+\setcounter{equation}{0}
+\subsection{Example problems}\label{egprobs}
+
+\begin{enumerate}
+\item Three cards are dealt from a well-shuffled, standard 52 card
+deck.  Find the probability that all three are diamonds.
+
+Solution: Working from right to left, let $G$ be the event ``first card is a diamond,'' let $F$ be
+``second card is a diamond,'' and let $E$ be ``third card is a
+diamond.''  We wish to find $P(E\cap F\cap G)$.  Using the
+multiplication rule, we have
+$$P(E\cap F\cap G) = P(E|(F\cap G)) \cdot P(F\cap G).$$
+Using the multiplication rule again, we have
+$$P(F\cap G) = P(F|G) \cdot P(G).$$
+Putting this together, we get
+$$P(E\cap F\cap G) = P(E|(F\cap G)) \cdot P(F|G) \cdot P(G).$$ The
+probabilities on the right are easy.  Since there are 13 diamonds in the
+deck of 52 cards, we have $P(G) = 13/52 = 1/4$.  If we know the first
+card is a diamond, there are 12 diamonds left among 51 cards, so
+$P(F|G)=12/51$.  If we know the first and second cards are diamonds,
+there are 11 diamonds left among 50 cards, so $P(E|(F\cap G)) = 11/50$.
+Putting these together (in reverse order), we get
+$$P(E\cap F\cap G) = 13/52 \cdot 12/51 \cdot 11/50.$$
+
+\item A fair die is rolled three times.  Find the probability that one
+or more of the rolls are sixes.
+
+Solution: Let $E$ be the event ``one or more of the rolls are sixes.''
+Notice that the opposite event $E^c$ is ``none of the rolls are sixes,''
+which is the same thing as ``all of the rolls are in the range one
+through five.''  Let $A$ be the event ``get a non-six on the first roll,''
+let $B$ be ``get a non-six on the second roll,'' and let $C$ be ``get a
+non-six on the third roll,'' so that $E^c=A\cap B\cap C$.  Using the
+opposite rule, we have
+$$P(E) = 1 - P(E^c) = 1 - P(A\cap B\cap C).$$
+Since $A$, $B$ and $C$ are independent (the rolls of the die do not know
+about or affect one another) we have, 
+$$P(A\cap B\cap C) = P(A)P(B)P(C) = 5/6 \cdot 5/6 \cdot 5/6 = (5/6)^3.$$
+So we have our solution
+$$P(E) = 1 - (5/6)^3.$$
+
+\item In five card poker, a {\em full house} is a collection of five
+cards of which three have the same face value and the remaining two have
+the same face value, but all five cards do not share the same face
+value.  What is the probability that five cards dealt from a
+well-shuffled, standard 52 card deck is a full house?
+
+Solution (using counting techniques from \S\ref{counting}): Let
+$S$ be the set of all five card hands, and let $E$ be the subset of $S$
+which is the set of full houses, so $P(E)=|E|/|S|$.  The size of $S$ is
+$|S|={52 \choose 5}$.  To count the size of $E$, we see that we can make
+a full house by the following sequence of choices: first, choose a face
+value for three cards; second, choose three suits for the three cards;
+third, choose a face value for the two remaining cards; last, choose two
+suits for the two cards.  Clearly, there are $13$ ways to make the first
+choice, ${4 \choose 3}=4$ ways to make the second choice, 12 ways to
+make the third choice, and ${4\choose 2}=6$ ways to make the final choice.
+Thus we have a total of $13\cdot 12\cdot 4\cdot 6 = 3744$ full houses,
+and so $P(E) = 3744/{52\choose 5} \approx 0.144\%$, or about 1 chance in
+700. 
+
+\item A sample space consists of 4 outcomes called $a,b,c,d$.  Outcome
+$a$ is twice as likely as outcome $b$, and outcomes $b,c,d$ are equally
+likely.  What is the probability of outcome $a$?
+
+Solution: We know $P(a) + P(b) + P(c) + P(d) = 1$, that $P(a)
+= 2P(b)$, and that $P(b) = P(c) = P(d)$.  Substituting, we get 
+$$P(a) + \frac{1}{2}P(a) + \frac{1}{2}P(a) + \frac{1}{2}P(a) = 1.$$
+Solving for $P(a)$, we get $P(a) = 2/5$.
+
+\end{enumerate}
+
+
+\setcounter{equation}{0}
+\subsection{Exercises}
+
+\begin{enumerate}
+
+\item In a family of four children, what is more likely:  two boys and
+two girls, or three of one gender and one of the other?
+
+\item A box contains five letters A, B, C, D, and E, all equally likely
+to be drawn at random.  Two draws are made at random with replacement.
+(Drawing ``with replacement'' means that after the first draw, the item
+drawn in replaced and the box is reshuffled, so that all the letters
+have the same chance of being drawn on the second draw as they did on
+the first.)
+\begin{enumerate}
+\item Find the probability that the two letters drawn are different.
+\item Find the probability that at least one of the letters drawn is a vowel.
+\item Work the same probability problems as in parts (a) and (b) where
+the two draws are taken {\em without} replacement.  (``Without
+replacement'' means that the first item is {\em not} placed back in the
+box after the first draw.)
+\end{enumerate}
+
+\item Four cards are dealt from a well-shuffled, standard 52 card deck.
+\begin{enumerate}
+\item Find the probability that none of the cards are diamonds.
+\item Find the probability that all four cards are diamonds.
+\item Find the probability that all four cards are the same suit.
+\end{enumerate}
+
+\item A box contains 1 red and 5 green marbles; each marble is equally
+likely to be selected on a random draw from the box.  You draw four
+marbles from the box at random.
+\begin{enumerate}
+\item Find the probability that a red appears exactly three times if the
+draws are made with replacement.
+\item Find the probability that a red appears exactly three times if the
+draws are made without replacement.
+\end{enumerate}
+
+\item  Let $S$ be the sample space of all
+possible outcomes for the experiment which is making 5 random draws,
+with replacement, from a jar containing 2 red marbles, 3 green marbles
+and 4 blue marbles.  For each individual draw, all marbles have the same
+chance of being selected.  Outcomes in $S$ are strings of 5 letters using the letters
+R, G and B, where the order counts.  For example, the outcome RGGBR
+indicates draws of red, green, green, blue, and red marbles, in that
+order.
+\begin{enumerate}
+\item  How many outcomes are in $S$?
+\item  Let $E$ be the event ``draw exactly 2 reds in 5 draws.''  How
+many outcomes are in $E$?
+\item  Is $P(E)$ equal to the number you found in (b) divided by the
+number you found in (a)?  Why or why not?  And if not, find $P(E)$.  Give
+$P(E)$ as a decimal approximation correct to 3 significant digits.
+\item  Let $F$ be the event ``draw exactly 2 blues in 5 draws.''  Are $E$
+and $F$ independent?  Show your calculations to support your answer.  Give
+$P(F)$ and $P(E \cap F)$ as decimal approximations correct to 3
+significant digits.
+\end{enumerate}
+
+\item  A fair coin is flipped 100 times.
+\begin{enumerate}
+\item Suppose you know that at least 99 of the flips are tails.
+What are the chances that all 100 are tails?
+\item Suppose you know that the first 99 tosses are tails.  What
+are the chances that all 100 are tails?
+\end{enumerate}
+
+\item You play a lottery where you win if you correctly predict the six
+numbers that will be randomly chosen (without replacement) from the
+numbers 1--36.  What are your chances of winning?
+
+\item Four cards are dealt face down from a well-shuffled, standard 52
+card deck.
+\begin{enumerate}
+\item Find the probability that the first two cards are red and the second two cards black.
+\item Find the probability that exactly two of the cards are red.
+\end{enumerate}
+
+\item 100 marbles are in a box; 54 are red, 46 are blue.  Each marble
+has the same chance of being selected on a random draw from the box.
+Let $E$ be the event ``get exactly 3 reds in 5 random draws with
+replacement,'' and let $F$ be the event ``get a red on the first and
+last of 5 random draws with replacement.''
+\begin{enumerate}
+\item Find $P(E)$.
+\item Find $P(F)$.
+\item Are $E$ and $F$ dependent or independent?
+\end{enumerate}
+
+
+\item  A fair die is rolled 5 times.  Give the probabilities for each of
+the following events as a decimal approximation correct to 3 significant
+digits.
+\begin{enumerate}
+         \item All rolls have an even number of spots.
+         \item It is not the case that all rolls have an even number of
+         spots.
+         \item All rolls have an odd number of spots.
+          \item Exactly 3 of the rolls show an even number of spots.
+\end{enumerate}
+
+\item Given $\Omega=\{a,b,c,d\}$, with $p(a)=1/2$ and $p(b)=1/4$.  Find
+$p(c)$ and $p(d)$ if events $E=\{a,c\}$ and $F=\{c,d\}$ are independent.
+
+\item  Two cards are dealt from a well-shuffled standard 52-card deck.
+\begin{enumerate}
+\item What is the probability that either both cards are black or both
+          cards are hearts?
+\item What is the probability that either
+          both cards are black or both cards are aces?
+\end{enumerate}
+
+\item A card is drawn at random from a well-shuffled standard 52 card
+deck, replaced, then the deck is reshuffled.    Imagine this
+procedure is repeated N times. What is the smallest value of N for which
+there is a 70\% or better chance that a king was drawn at least once?
+
+
+\item A sample space $S$ consists of 3 outcomes $a$, $b$, and $c$.
+Events $U$ and $V$ in $S$ are given by $U=\{a,b\}$ and $V=\{b,c\}$.
+\begin{enumerate}
+\item Suppose the 3 outcomes are equally likely.  Are $U$ and $V$
+dependent or independent?  Explain.
+\item If $p(a)=1/2$, find values for $p(b)$ and $p(c)$ so that $U$ and
+$V$ are independent, or explain why this cannot be done.
+\item If possible, give a complete list of events in $S$.
+\end{enumerate}
+
+\item Independent events $E$ and $F$ in a sample space $\Omega$ have
+probabilities $P(E)=2/3$ and $P(F)=1/3$.
+Find the probability of the event $E \cup F$, or say why there is not
+enough information.
+
+\item A fair coin is flipped ten times.
+\begin{enumerate}
+\item Which is more likely: (i) getting at least one head in the first
+five flips or (ii) getting at least two heads in all ten flips?  Show
+your work.
+\item Find the probability of getting exactly two heads on the first
+five flips and exactly four heads on the last five flips.  Give a
+decimal approximation correct to three significant digits.
+\end{enumerate}
+
+\item Five cards are dealt face down from a well shuffled standard 52
+card deck.
+\begin{enumerate}
+\item Find the probability that all the cards are red.
+\item Find the probability that the cards are, in order, the ace, king,
+queen, jack and ten of diamonds.
+\item Find the probability that the five cards are the ace, king, queen,
+jack and ten of diamonds, in any order.
+\end{enumerate}
+
+\item A fair coin is tossed 10 times.  Find the probability that exactly
+3 of the first five tosses are heads, while at least 1 of the last five
+tosses is a head.  Calculate and give the probability as a decimal
+approximation correct to 2 decimal places.
+
+\end{enumerate}

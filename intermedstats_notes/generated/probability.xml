@@ -1,0 +1,539 @@
+<section xml:id="probability_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Probability
+</title>
+
+<introduction>  <p>Probability models are mathematical frameworks that help us think
+  about chance processes that produce outcomes that cannot be predicted
+  with certainty. In this section, we begin with one of the simplest
+  types of probability models, in which the set of possible outcomes of
+    a chance process is finite, and for which every outcome has an associated
+  number, called its <m>probability</m>, that indicates how likely it is
+  for that outcome to occur in a single repetition of the chance process. 
+  </p>
+</introduction>
+
+<subsection><title>Finite Probability Models</title>
+  
+  <definition>
+    <p>A <term>finite probability function</term> is a function
+      <m>p\colon \Omega	\to [0,1]</m>, where <m>\Omega</m> is a finite set,
+      and where <m>p</m> satisfies
+      <men xml:id="probfunsum1">\sum_{\omega\in\Omega} p(\omega)=1.</men>
+    </p>
+  </definition>
+
+  <p>The next definition extends the assignments of probabilities to <em>subsets</em> of <m>\Omega</m>.
+    Recall that the <em>power set</em> <m>\mathcal{P}(S)</m> of a
+    set <m>S</m> is the set of all subsets of <m>S</m>.
+  </p>
+
+  <definition>
+    <p>A <term>finite probability measure</term> is a function
+      <m>P\colon \mathcal{P}(\Omega)\to [0,1]</m> be given by
+    <men xml:id="discreteprobmeasdef">P(E)=\sum_{\omega \in E} p(\omega)</men>
+    for <m>E\subseteq \Omega</m>, where <m>p\colon \Omega\to [0,1]</m> is a finite probability function.
+</p>
+  </definition>
+
+    <p><alert>Comment on notation:</alert> For a single
+    element <m>\omega</m> in <m>\Omega</m>, it is common practice to
+      write <m>P(\omega)</m> as a shorthand
+      for <m>P(\{\omega\})</m>.
+    </p>
+
+    <!--
+  <p><alert>Observation:</alert>
+    Each of the functions <m>p,P</m>
+    completely determines the other. If we
+    know <m>p</m>, then <m>P</m> is defined by
+    <xref ref="discreteprobmeasdef"/>. If we know <m>P</m>, we can
+    recover <m>p</m> by the using <m>p(\omega)=P(\{\omega\})</m>
+    for <m>\omega \in \Omega</m>. 
+  </p>
+  -->
+  
+  <definition xml:id="finiteprobmodeldef"><title>Finite probability model</title>
+    <p>
+      A <term>finite probability model</term> is a
+	pair <m>(\Omega,P)</m>, where <m>\Omega</m>
+	is a finite set, and where <m>P</m> is a finite
+  probability measure on <m>\Omega</m>.
+      The set <m>\Omega</m> is called
+    the <term>probability space</term> of the model. Elements
+    of <m>\Omega</m> are called <term>outcomes</term>, and elements
+  of <m>\mathcal{P}(\Omega)</m> are called <term>events</term>.</p>
+  </definition>
+  
+    <exercise>
+    <p>exercises, examples here</p>
+  </exercise>
+
+    <!-- 
+  <p>In what follows below, we will sometimes need to discuss several
+  probability models at the same time. For probability spaces <m>\Omega,\Psi</m>, we will
+    write <m>P_{\Omega},P_{\Psi}</m> to denote their respective
+  probability measures.
+    </p>
+  
+  <p>Repetitions of a chance process produce a sequence of outcomes
+    called <em>samples</em>. A basic sampling scenario is a sequence of
+    draws taken from a box of tickets, as in a lottery drawing. A
+    sequence of draws may be taken <em>with replacement</em>
+    or <em>without replacement</em>. These terms refer to whether or not each ticket drawn
+    from the box is replaced in the box before the next draw. In
+    a <em>fair</em> sequence of draws, every ticket in the box
+    at any given moment has an equal chance to be selected on the next
+    draw. Here is the mathematical definition that captures the
+    intuitive idea of a fair lottery game. 
+  </p>
+
+  <definition>
+    <title>Box models</title>
+    <p>Let <m>(B,P_B)</m> be a basic probability model.
+      The basic
+      probability model <m>(B^n,P_{B^n})</m> is called the <em>box
+      model</em> for samples of size <m>n</m> taken <em>with</em>
+      replacement from <m>B</m>.
+            The basic
+      probability model <m>(B^{n\ast},P_{B^{n\ast}})</m> is called the <em>box
+      model</em> for samples of size <m>n</m> taken <em>without</em>
+      replacement from <m>B</m>. 
+    </p>
+  </definition>
+    -->
+
+  <exercise>
+    <p>exercises, examples here</p>
+  </exercise>    
+</subsection>
+
+<subsection>
+  <title>Vocabulary and properties of probability</title>
+
+  <definition><title>More probability terminology</title>
+  <p>Let <m>(\Omega,P)</m> be a finite probability model.
+    The complement <m>A^c=\Omega\setminus A</m> of an event <m>A</m>
+    is also called the <term>opposite</term> of <m>A</m>. Disjoint
+    events <m>A,B</m> (that is, <m>A\cap B=\emptyset)</m>
+    are also called <term>mutually exclusive</term>.
+    Given events <m>U,V</m> with <m>P(V)\neq 0</m>, the <term>conditional probability
+      of <m>U</m> given <m>V</m></term>, denoted <m>P(U|V)</m>, is
+    defined to be
+    <men xml:id="condprobdef">P(U|V)=\frac{P(U\cap V)}{P(V)}.</men> Events <m>U,V</m> are
+    called <term>independent</term> if <m>P(U\cap
+      V)=P(U)P(V)</m>. Otherwise, <m>U,V</m> are
+    called <term>dependent</term>.
+    </p>
+  </definition>
+
+      <exercise>
+    <p>exercises, examples here</p>
+      </exercise>
+
+      
+  <proposition><title>Properties of probability</title>
+    <p>Let <m>(\Omega,P)</m> be a finite probability model. The following
+      properties hold.
+      <ol>
+      <li><m>P(\Omega)=1</m>.
+      </li>
+      <li>If <m>A\subseteq B</m> for some events <m>A,B</m>,
+      then <m>P(A)\leq P(B)</m>.
+      </li>      
+      <li>If events <m>A,B</m> are disjoint, then <m>P(A\cup B)=P(A)+P(B)</m>.
+      </li>
+      <li><term>(addition rule)</term>
+	For any two events <m>A,B</m>, we have <m>P(A\cup
+      B)=P(A)+P(B)-P(A\cap B)</m>.
+      </li>
+      <li><term>(opposite rule)</term>
+	For any event <m>A</m>, we have <m>P(A^c)=1-P(A)</m>.
+      </li>
+      <li><term>(multiplication rule)</term>
+	For any events <m>U,V</m> such that <m>P(U)\neq 0</m>, we
+      have <m>P(U\cap V) = P(U)P(V|U)</m>.
+      </li>
+      <li>If events <m>U,V</m> are independent and <m>P(U)\neq 0</m>,
+	then <m>P(V)=P(V|U)</m>.
+      </li>
+      </ol>
+    </p>
+  </proposition>
+
+    <exercise>
+    <p>prove the proposition</p>
+  </exercise>
+
+    
+
+    <!--
+    <proposition><title>Independence for draws taken with
+	replacement</title>
+      <p>
+	Let <m>(B,P_B)</m> be a basic box
+	model and let <m>E,F</m> be events
+	in <m>B</m>. Let <m>E',F'</m> be events in <m>B^2</m> defined by
+	<md>
+	  <mrow>E' \amp= \{(x,y)\in B^2\colon x\in E\}
+	  </mrow>
+	  <mrow>F' \amp= \{(x,y)\in B^2\colon y\in F\}.
+	  </mrow>	  
+	</md>
+	Then we have
+	<mdn>
+	  <mrow>E'\cap F' \amp = E\times F</mrow>
+	  <mrow xml:id="probeventmult">P_{B^2}(E') \amp = P_B(E)
+	  </mrow>
+	  <mrow xml:id="probeventmult2">P_{B^2}(F') \amp = P_B(F)
+	  </mrow>
+	  <mrow xml:id="repldrawsindepeqn">P_{B^2}(E'\cap F') \amp = P_{B^2}(E')P_{B^2}(F').
+	  </mrow>
+      </mdn>
+      <xref ref="repldrawsindepeqn"/> shows that <m>E',F'</m> are independent
+      events in <m>B^2</m>. Putting that together with
+      <xref ref="probeventmult"/> and <xref ref="probeventmult2"/> gives
+      the following useful probability equation.
+      <men xml:id="probmultdrawseqn">P_{B^2}(E'\cap F')=P_{B}(E)P_{B}(F)
+      </men>
+      </p>
+    </proposition>
+
+    <exercise><p>Prove all the parts of the proposition.</p>
+    </exercise>
+    
+    <exercise>
+      <p>State and prove a generalization of the proposition
+	for <m>n</m> draws with replacement. In particular, prove this
+	generalization of <xref ref="probmultdrawseqn"/>.
+	<men xml:id="probmultdraweqnmany">
+	  P_{B^n}(E_1'\cap E_2'\cap \cdots \cap
+	  E'_n)=P_{B}(E_1)P_B(E_2)\cdots P_{B}(E_n)
+	</men>
+	
+
+      </p>
+    </exercise>
+    -->
+    
+</subsection>
+
+<!--
+<subsection>
+  <title>Bernoulli probability models</title>
+
+  <p>Let <m>(B,P)</m> be a basic probability model, and let <m>B=X\cup
+      Y</m> be a partition of <m>B</m>. (This means that <m>X,Y</m> are
+    nonempty, disjoint subsets of <m>B</m> whose union is <m>B</m>.) 
+    Let <m>p=P(X)</m> and let <m>q=P(Y)</m>. In a
+    scenario where our only concern is whether a random draw
+      from <m>B</m> belongs
+    to <m>X</m> or <m>Y</m>, we call <m>(B,P)</m> a Bernoulli model, and
+    we call <m>(B^n,P_{B^n})</m> the box model
+    for <m>n</m> <term>Bernoulli trials</term> taken from <m>B</m>. The
+      following probability formula turns out to be very useful.
+</p>
+
+  <proposition>
+    <title>Binomial probability formula</title>
+  <p>Let <m>B</m> be a Bernoulli model with subsets <m>X,Y</m> as
+    described above, and with <m>p=P(X)</m>, <m>q=P(Y)</m>.
+    Let <m>n</m> be a positive
+    integer, and let <m>k</m> in the range <m>0\leq k\leq
+      n</m>. Let <m>E_k</m> denote the event in the basic box
+    model <m>(B^n,P_{B^n})</m>
+    that consists of all sequences of length <m>n</m> in <m>B^n</m> for
+    which exactly <m>k</m> entries are elements of <m>X</m> and
+    exactly <m>n-k</m> entries are elements of <m>Y</m>. Then we have
+    <men>P(E_k) = {n\choose k} p^k q^{n-k}.</men>
+  </p>
+  </proposition>
+  
+      <exercise>
+    <p>warm ups, and then prove the proposition</p>
+  </exercise>
+  
+  
+</subsection>
+-->
+
+<!--
+<subsection><title>Basic probability models with two outcomes</title>
+
+  <p>Let <m>B=\{x,y\}</m>, so that outcomes in the basic box
+    model <m>(B^n,P_{B^n})</m> are sequences of <m>x</m>'s
+    and <m>y</m>'s with a total length <m>n</m>. 
+  </p>
+
+  <exercise>
+    <p>List all of the outcomes in <p>B^4</p>.
+    </p>
+  </exercise>
+
+  <p>Let <m>k</m> be a whole number in the range <m>0\leq k\leq n</m>,
+    and let <m>E_k\subseteq B^n</m> be the event consisting of all
+    sequences that have exactly <m>k</m> <m>x</m>'s
+    and <m>n-k</m> <m>y</m>'s. 
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+	<li>Write out the events <p>E_0,E_1,E_2,E_2,E_4</p>
+	  in <p>B^4</p>.</li>
+	<li>Show that <m>|E_k|</m> is equal to the exponent of <m>x</m>
+	  in the expansion of <m>(x+y)^n</m> as sum of monomials.
+	</li>
+	<li>Show that <m>|E_k| = {n\choose k}</m>.
+	</li>
+      </ol>
+    </p>
+  </exercise>
+
+  <proposition>
+    <title>Summary: specialty probability formula for two-outcome box
+      model</title>
+    <p>Let <m>B,n,E_k</m> be defined as above in this subsection. We
+      have
+      <men>P(E_k) = \frac{{n\choose k}}{2^n}.</men>
+    </p>
+  </proposition>
+
+</subsection>
+-->
+
+<subsection>
+  <title>Random Samples</title>
+
+    <p>Let <m>(\Omega,P)</m> be a finite probability model with
+    probability function <m>p</m>, and let <m>n</m> be a positive integer. Let <m>p_{\Omega^n}\colon
+      \Omega^n\to [0,1]</m> be defined by
+    <men>p_{\Omega^n}(\omega_1,\omega_2,\ldots,\omega_n)=p(\omega_1)p(\omega_2)\cdots
+      p(\omega_n).</men> It is easy to check (see <xref ref="productprobfnexer"/> below)
+    that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>P_{\Omega^n}</m> denote the corresponding
+    probability measure. The probability
+    model <m>(\Omega^n,P_{\Omega^n})</m> is called the space
+    of <term>(random) samples of size <m>n</m>
+    </term> taken from the space <m>\Omega</m>. 
+    The space <m>\Omega^n</m> models the outcomes that are obtained by
+    <m>n</m> repetitions of the process chance process that produces
+    outcomes in <m>\Omega</m>.
+</p>
+
+  <exercise xml:id="productprobfnexer">
+    <p>Show that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>E,F</m> be events in <m>\Omega</m>, and
+      let <m>E',F'</m> be the events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
+      and <m>F'=\{\vec{\omega}\colon\omega_k\in F\}</m>. Show that <m>E',F'</m> are
+      independent in <m>\Omega^n</m> if <m>j\neq k</m>.
+    </p>
+  </exercise>
+
+</subsection>
+
+<subsection>
+  <title>Simple Random Samples</title>
+
+  <p>Let <m>(\Omega,P)</m> be a finite probability space
+    with <m>N=|\Omega|</m>, and with the constant
+    probability function <m>p(\omega)=\frac{1}{N}</m> for
+    all <m>\omega\in \Omega</m>. Let <m>\Omega^{n\ast}</m> denote the
+    set of all one-to-one sequences<fn>We use the nonstandard
+      notation <m>\Omega^{n\ast}</m>, rather than the standard
+      notation <m>P_n(\Omega)</m>, to denote the set of permutations
+      of <m>n</m> elements of <m>\Omega</m>, in order to avoid confusion
+    with probability measures, which are also denoted using capital
+    letter P.
+    </fn>
+    in <m>\Omega</m> of size <m>n</m>.
+    An element <m>(\omega_1,\omega_2,\ldots,\omega_n)</m>
+    of <m>\Omega^{n\ast}</m> is called a
+    <term>simple random sample of size <m>n</m>
+    </term> taken from a probability
+    space <m>\Omega</m>. Let <m>p_{\Omega^{n\ast}}</m> be given by the
+    constant function
+    <men>p_{\Omega^{n\ast}}(\omega_1,\omega_2,\ldots,\omega_n)=\frac{1}{N(N-1)\cdots
+      (N-n+1)}</men>
+    for all <m>(\omega_1,\omega_2,\ldots,\omega_n)\in
+      \Omega^{n\ast}</m>. It is easy to check (see <xref ref="simprandsampprobfnexer"/> below)
+    that <m>p_{\Omega^n}</m> is a probability
+      function. Let <m>P_{\Omega^{n\ast}}</m> denote the corresponding
+    probability measure. The probability
+    model <m>(\Omega^n,P_{\Omega^{n\ast}})</m> is called the space
+    of <term>simple random samples of size <m>n</m> 
+    </term> taken from the space <m>\Omega</m> (or the space of samples of size <m>n</m>
+    taken from <m>\Omega</m>
+    <term>without replacement</term>).
+
+  </p>
+
+    <exercise xml:id="simprandsampprobfnexer">
+    <p>Show that <m>p_{\Omega^{n\ast}}</m> is a probability
+      function. Let <m>E</m> be an event in <m>\Omega</m>, and
+      let <m>E',F'</m> be the
+      events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>, <m>F'=\{\vec{\omega}\colon\omega_k\in E\}</m>, 
+      Show that <m>E',F'</m> are
+      <em>dependent</em>
+      in <m>\Omega^{n\ast}</m> if <m>j\neq k</m>.
+    </p>
+  </exercise>
+
+</subsection>
+
+<subsection><title>Bayes' Rule</title>
+
+  <p><term>Bayes' Rule</term>
+    can be viewed as a practical method
+    for finding conditional probabilities. For events <m>A,B</m> in a
+    probability space <m>\Omega</m>, where
+    both probabilities <m>P(A),P(B)</m> are nonzero, the definition of
+    conditional probability <xref ref="condprobdef"/> gives us two ways
+    to write <m>P(A\cap B)</m>, namely
+    <me>P(A\cap B)= P(A)P(B|A) = P(B)P(A|B).</me>
+    Dividing the last two terms by <m>P(A)</m> leads to the following,
+    which is a basic form of Bayes' Rule.
+      <men xml:id="bayesrulebasic">  P(B|A) =\frac{P(B)P(A|B)}{P(A)}</men>      
+    A use case for this version of Bayes' Rule is a problem in which you
+    know the probabilities in the expression on the right, and you wish
+    to find the probability on the left. In effect, this allows you to
+    use <m>P(A|B)</m> to find <m>P(B|A)</m>.
+  </p>
+
+<p>In a more nuanced form of Bayes' Rule, the event <m>B</m> is one of
+    of a collection of events <m>B_1,B_2,\ldots,
+    B_r</m> that form a partition of <m>\Omega</m>, say, <m>B=B_k</m>. In this case, we
+  have
+  <mdn>
+    <mrow>A \amp = \bigcup_{i=1}^r (A\cap B_i)</mrow>
+    <mrow xml:id="lawoftotalprobeqn">P(A) \amp = \sum_{i=1}^r P(A\cap B_i)</mrow>
+    <mrow xml:id="partcondprob">\amp = \sum_{i=1}^r P(B_i)P(A|B_i)</mrow>        
+  </mdn>
+  Substituting <m>B=B_k</m>, and substituting the last expression <xref ref="partcondprob"/>
+  for <m>P(A)</m> in <xref ref="bayesrulebasic"/>, we have the following form
+  of Bayes' Rule.
+  <men xml:id="bayesrule">P(B_k|A)  =  \frac{P(B_k)P(A|B_k)}{\sum_i P(B_i)P(A|B_i)}
+  </men>
+</p>
+
+<p><alert>Terminology comment:</alert> Equations
+  <xref ref="lawoftotalprobeqn"/> and <xref ref="partcondprob"/> are
+  sometimes called the <em>law of total probability</em>.
+</p>
+
+<p>exercises: explain all the steps in the derivation for Bayes'
+  Rule, find A's and B's for medical testing scenario (what is the
+  chance of having the disease given a positive test result?), do some
+  basic application problems</p>
+
+</subsection>
+
+<subsection>
+  <title>Discrete Probability Models</title>
+
+  <p>The definitions of probability function and its associated
+    probability measure for finite probability models generalize naturally to countably infinite
+    probability spaces.<fn>Recall that a set <m>X</m> is countably infinite if there
+    exists a one-to-one and onto function between <m>X</m> and the set
+    of nonnegative integers. </fn> Together, finite probability models
+    and their countably infinite generalizations are called <em>discrete
+      probability models</em>.
+    </p>
+
+    <definition>
+      <p>A <em>probability function</em> on a finite or countably
+	infinite set <m>\Omega</m> is a function <m>p\colon \Omega\to
+	[0,1]</m> that
+	satisfies <m>\sum_{\omega\in\Omega}p(\omega)=1</m>. A <em>discrete
+	  probability measure</em> on a finite or countably infinite
+	space <m>\Omega</m> is a function <m>P\colon \mathcal{P}(\Omega)\to
+	  [0,1]</m> given by <m>P(E)=\sum_{e\in E}p(e)</m> for <m>E\subseteq
+	  \Omega</m>, where <m>p</m> is a probability function
+	on <m>\Omega</m>. A <term>discrete probability model</term> is a
+	pair <m>(\Omega,P)</m>, where <m>\Omega</m>
+	is a finite or
+	countably infinite set, and where <m>P</m> is a discrete
+	probability measure on <m>\Omega</m>.
+      </p>
+    </definition>
+
+    <exercise><p>think about the subtleties of convergence of infinite
+    series required by this definition</p>
+    </exercise>
+
+  <p>
+    <alert>Example of a countably infinite discrete probability model.</alert>
+    Let <m>\Omega=\{1,2,3,\ldots\}</m> and let <m>p\colon \Omega\to
+      [0,1]</m> given by <m>p(n)=1/2^n</m>. It is easy to check
+    that <m>p</m> is a probability function.
+  </p>
+
+  <exercise>
+    <p>do some stuff with this example</p>
+  </exercise>
+
+</subsection>
+
+<subsection>
+  <title>General Probability Models</title>
+
+  <p>countably infinite spaces are not enough, a little motivation,
+  disclaimer about omitting details</p>
+  
+  <p><alert>Infinite sequences of coin tosses.</alert> The chance process
+    of flipping a fair coin is modeled by the finite probability
+    space <m>\Omega=\{H,T\}</m>, with <m>p(H)=1/2=p(T)</m>. A sequence
+    of coin tosses looks like a string of
+    letters <m>H,H,T,H,T,T,H,\ldots</m>. We already have the
+    model <m>\Omega^n</m> for sequences of <m>n</m> coin tosses, but it
+    is natural to also consider infinite sequences. Let's call this
+    space <m>\Omega^\infty</m>. This space contains
+    an uncountable number of elements. A consequence is that the
+    probability of any given infinite sequence must be zero. Thus, there
+    exists no probability function for <m>\Omega^\infty</m>. However, it is still
+    possible to define a meaningful probability measure <m>P_{\Omega^\infty}</m>
+    for some, but not all, subsets of <m>\Omega^\infty</m>. For
+    example, we can say that there is a probability of <m>1/4</m> that
+    the first two entries of a sequence are a heads followed by a
+    tails. Happily, this probability assignment is compatible with the
+    finite probability measure on <m>\Omega^2</m>. We will not address
+    the full details of how we assign a probability measure on the space
+    of infinite sequences of coin tosses. But we will nevertheless use
+    this space in the sections that follow. To work with probability on
+    <m>\Omega^\infty</m>, it will be sufficient to use the following intuitive
+    fact. Given an event <m>E\subseteq \Omega^n</m>, let <m>E'</m> be
+    the set of infinite sequences <m>(\omega_1,\omega_2,\ldots)</m>
+    such that <m>(\omega_1,\omega_2,\ldots,\omega_n)\in E</m>. Then we
+    <m>P_{\Omega^\infty}(E')=P_{\Omega^n}(E)</m>.
+  </p>
+
+  <exercise>
+    <p>Explain why <m>\Omega^\infty</m> is uncountable. Explain why
+      there can be no probability function on <m>\Omega^\infty</m>. Find
+      the probability that the first head in an infinite sequence of tosses occurs
+      on toss number 5.
+    </p>
+  </exercise>
+
+
+  <p><alert>Summary.</alert>
+    In all cases, finite and infinite, a probability model is completely
+    described by a set of outcomes <m>\Omega</m> and a probability
+    measure <m>P</m> that assigns numbers to some, but not necessarily
+    all, subsets of <m>\Omega</m>. While we will not give the complete
+    definitions here for non-finite spaces, we will continue to consider
+    both finite and infinite models. Fortunately, we can navigate
+    infinite models using intuition from finite models. Best of all, all of the
+    propositions in this section are valid for all probability models, finite
+    and infinite.
+  </p>
+  
+</subsection>
+
+<subsection><title>Probability Exercises</title>
+  <p>a set of exercises here with standard and non-standard probability
+  problems: limitations of the box model, but ability to simulate any
+  probability to any error threshold</p>
+</subsection>
+
+</section>

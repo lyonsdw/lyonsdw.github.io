@@ -1,0 +1,164 @@
+<section xml:id="sampling2_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Sampling II
+</title>
+
+
+<subsection><title>The Central Limit Theorem</title>
+
+  <p>Recall that <m>\Phi</m> denotes the cumulative distribution
+  function for the standard normal distribution.
+  </p>
+  
+  <proposition>
+    <title>The Central Limit Theorem</title>
+    <p>
+      Let <m>X_1,X_2,X_3,\ldots</m> be a sequence of sample variables
+      for a random variable <m>X</m> with <m>E(X)=\mu</m> and <m>\var(X)=\sigma^2</m>.
+      Let <m>S_n</m> denote the
+      variable <m>S_n=X_1+X_2+\cdots + X_n</m>, so that we
+      have <m>E(S_n)=n\mu</m>
+      and <m>\var{S_n}=n\sigma^2</m>. Let <m>T_n=(S_n-n\mu)/(\sqrt{n}\sigma)</m>. We
+      have
+      <me>\lim_{n\to\infty} F_{T_n}(x) = \Phi(x)</me>
+      for all <m>x \in \R</m>.
+    </p>
+  </proposition>
+
+    <exercise>
+    <p>Do the exercises in
+      in <url href="https://mathvista.org/elemstats_notes/basic_sampling">Section 1.8.3
+      1.4</url> in <xref ref="lyons_elemstats"/>.
+    </p>
+    </exercise>
+  
+    
+</subsection>
+
+<subsection><title>Estimating population parameters</title>
+
+  <p>Let <m>X</m> be a random variable with <m>E(X)=\mu</m>
+  and <m>\var(X)=\sigma^2</m>. Let <m>\overline{X}=\frac{1}{n}\sum_{i=1}^n X_i</m> be the average of
+  a sample of size <m>n</m> of <m>X</m>. For <m>\alpha</m> in the
+  range <m>0\lt \alpha \lt 1</m>, let <m>z_\alpha</m> be the value of a
+  standard normal variable such that <m>P(|z|\leq z_\alpha)=\alpha </m>.
+  The Central Limit Theorem says that
+    <men xml:id="cltinspireconfint">P(|\overline{X}-\mu| \leq z_\alpha \sigma_{\overline{X}})
+      \approx \alpha.</men>
+    Equation <xref ref="cltinspireconfint"/> motivates the following
+    procedure for estimating an unknown population parameter <m>\mu</m>
+    from sample data. Intuitively, <m>\overline{X}</m>
+    estimates <m>\mu</m> with an error estimated
+    by <m>\sigma_{\overline{X}}</m>. If the population
+    variance <m>\sigma^2</m> is unknown, we can use the sample
+    SD <m>s</m> to estimate <m>\sigma</m>, and we can
+    use <m>s/\sqrt{n}</m> to
+      estimate <m>\sigma_{\overline{X}}</m>. Inspired by
+    <xref ref="cltinspireconfint"/>, we say that the interval
+    <men>\overline{X}\pm z_\alpha s/\sqrt{n}</men>
+    is a <term><m>100z_\alpha\%</m> confidence interval</term>
+    for the population
+    mean <m>\mu</m>. Notice that the confidence interval is a random
+    quantity, that is, it depends on the sample. Roughly speaking, we
+    estimate that approximately <m>100z_\alpha\%</m> of
+    all <m>100z_\alpha\%</m> confident intervals will
+    contain <m>\mu</m>, and approximately <m>100(1-z_\alpha)\%</m> of
+    these intervals will fail to contain <m>\mu</m>.
+  </p>
+  
+    <exercise>
+      <p>
+	<ol>
+	<li>Show that <m>z_\alpha = \Phi^{-1}((\alpha+1)/2)</m>.
+	</li>
+	<li>Explain why <xref ref="cltinspireconfint"/> holds.</li>
+	<li>Read Section 5.2 and do odd numbered exercises at the end
+	of the section in <xref ref="openintro_stats"/>.</li>
+	</ol>
+      </p>
+    </exercise>
+</subsection>
+    
+<subsection><title>Hypothesis Testing
+  </title>
+
+    <p>Hypothesis testing is using sample data to assign numbers for how
+    skeptical you should be about certain claims. In this subsection we
+      describe a hypothesis test called the <em>1-tail <m>z</m> test</em>.
+      We will illustrate using the following example.
+      </p>
+
+    <p>
+      Suppose that you
+    are assigned to check the accuracy of a machine that is supposed to
+    make identical widgets with a weight of <m>\mu_0</m> grams. Your
+      sample of <m>n</m>
+      widgets has an average weight of <m>\overline{X}</m>
+      grams, and your weighings have a sample SD of <m>s</m> grams.
+    There is a difference between your sample
+    average <m>\overline{X}</m> and <m>\mu_0</m>. How do you decide
+    whether the difference is significant? In a hypothesis test, we
+    play <q>what-if?</q>, in the following way. We suppose that the
+    machine actually performs according to the claimed standards,
+    so that the average widget has a weight of <m>\mu_0</m>. Now we ask,
+      what is the probability that a random sample of size <m>n</m>
+      would be as far away or farther from <m>\mu_0</m>
+      as the value <m>\overline{X}</m>
+      that we observed? By the Central Limit Theorem, the answer is
+      <me>1-\Phi\left(
+	\left|\frac{\overline{X}-\mu_0}{s/\sqrt{n}}\right|\right).</me>
+      If this probability is small, we feel skeptical of the claim that
+      the machine produced widgets with an average weight
+	of <m>\mu_0</m>. If this probability is large, we do not feel
+	skeptical. The threshold probability value for skepticism is adjustable. The
+      most common default value is <m>0.05</m>. The formal structure of
+      this type of hypothesis test, called a <term>1-tail <m>z</m> test</term>
+      is this.
+      <ol>
+	<li>A null hypothesis, denoted <m>H_0</m>, is made. This is a
+	  claim that a population average for a certain random
+	  variable <m>X</m> has a certain value <m>\mu_0</m>.</li>
+	<li>A sample of <m>X</m> is taken.</li>
+	<li>A threshold probability <m>\alpha</m> is chosen.
+	</li>
+	<li>The test statistic
+	  <me>P=1-\Phi\left(
+	    \left|\frac{\overline{X}-\mu_0}{s/\sqrt{n}}\right|\right)</me>
+	  is calculated.
+	</li>
+	<li>A conclusion is made: if <m>P\lt \alpha</m>, the data is
+	  called <em>significant</em>. The null hypothesis
+	  is <em>rejected</em>. If <m>P\gt \alpha</m>, the data is
+	  called <em>not significant</em>. The null hypothesis
+	  is <em>not rejected</em>.
+	</li>
+      </ol>
+    </p>
+  
+    <exercise>
+    <p>	Read Section 5.2 in <xref ref="openintro_stats"/>.</p>
+    </exercise>
+    
+</subsection>
+    
+    <exercises>
+
+      <exercise>
+	<p>Do the exercises in <url href="https://mathvista.org/elemstats_notes/basic_sampling.html">Section 1.8.3</url>
+	  of <xref ref="lyons_elemstats"/>.
+	</p>
+      </exercise>
+
+    <exercise>
+    <p>	Work the odd numbered exercises at the end
+	of Section 5.2 in <xref ref="openintro_stats"/>.</p>
+    </exercise>
+      
+      
+    </exercises>
+    
+
+
+
+
+</section>

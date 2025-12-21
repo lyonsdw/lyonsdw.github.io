@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<mathbook>-->
+<pretext>
+  <docinfo>
+    <latex-image-preamble>
+      \usepackage{pgfplots}               % loads tikz package
+              \usepackage{smartdiagram}           % for a circular diagram
+      \pgfplotsset{axis x line = middle, axis y line = middle}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{arrows,matrix}
+              \usetikzlibrary{positioning}        % for Dave R's worksheet
+              \usepackage{circuitikz}             % for Virgil P's  worksheet
+              </latex-image-preamble>
+
+    <!-- page break does not work here -->
+    <!--
+<latex-preamble-late>
+      \RenewDocumentEnvironment{sectionptx}{mmmmmmm}
+{
+  \renewcommand{\divisionnameptx}{#1}
+  \renewcommand{\titleptx}{#2}
+  \renewcommand{\subtitleptx}{#3}
+  \renewcommand{\shortitleptx}{#4}
+  \renewcommand{\authorsptx}{#5}
+  \renewcommand{\epigraphptx}{#6}
+  \newpage\section[{#4}]{#2}% experiment 2/20/2025
+  \label{#7}%
+  }{}
+</latex-preamble-late>
+-->
+
+<!--
+    <brandlogo url="http://quantum.lvc.edu/lyons"
+	       source="images/durerperspective.jpg" />
+-->
+    <macros>
+      \DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\covar}{cov}            
+\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+      \DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\SD}{SD}      
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\C}{\mathbb{C}} <!-- complex numbers -->
+\newcommand{\Quat}{\mathbb{H}} <!-- quaternions -->
+\newcommand{\extC}{\hat{\C}} <!-- extended complex plane -->
+\newcommand{\R}{\mathbb{R}} <!-- real numbers -->
+\newcommand{\extR}{\hat{\R}} <!-- extended real line -->
+\newcommand{\F}{\mathbb{F}} <!-- field F -->
+\newcommand{\extF}{\hat{\F}} <!-- extended field  -->
+      \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}      
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+
+<!-- NEW 4/3/2024, Group of Mobius transformations and some subgroups -->
+\newcommand{\M}{{\rm MOB}} <!-- group of Möbius transformations -->
+\newcommand{\E}{{\rm EUC}} <!-- group of Euclidean Möbius transformations -->
+\renewcommand{\H}{{\rm HYP}} <!-- group of hyperbolic geometry transformations -->
+\newcommand{\HU}{\rm HYP_{\U}} <!-- group of upper half plane hyperbolic geometry transformations -->
+\renewcommand{\S}{{\rm ELL}} <!-- group of elliptic geometry transformations -->
+
+<!-- OLD NOTATION retired 4/2024, Group of Mobius transformations and some subgroups -->
+<!-- \newcommand{\M}{{\rm \bf M}}  group of Möbius transformations -->
+<!-- \newcommand{\E}{{\rm \bf E}}  group of Euclidean Möbius transformations -->
+<!-- \renewcommand{\H}{{\rm \bf H }}  group of hyperbolic geometry transformations -->
+<!-- \newcommand{\HU}{\H_{\U}}  group of upper half plane hyperbolic geometry transformations -->
+<!-- \renewcommand{\S}{{\rm \bf S}}  group of elliptic geometry transformations -->
+
+\newcommand{\D}{\mathbb{D}} <!-- open unit disk -->
+\newcommand{\closedD}{\hat{\D}} <!-- closed unit disk -->
+\newcommand{\U}{\mathbb{U}} <!-- upper half plane -->
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+#3 \amp #4 \end{array} \right]}
+<!-- this makes newpage for new section, works! 8/2025 -->
+\let\oldsection\section % Saves the original section command
+\renewcommand{\section}{\clearpage\oldsection} % Redefines section to include a clearpage
+<!--\newcommand{\Mob}{Möbius}-->
+<!-- make sections start on new page 2/20/2025 -->
+<!-- works for print, but breaks \amp in web page versions -->
+<!-- experiment 8/11/2025 
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}{\renewcommand{\divisionnameptx}{#1}\renewcommand{\titleptx}{#2}\renewcommand{\subtitleptx}{#3}\renewcommand{\shortitleptx}{#4}\renewcommand{\authorsptx}{#5}\renewcommand{\epigraphptx}{#6}\newpage\section[{#4}]{#2}\label{#7}}{}-->
+    </macros>
+    <!-- does not work in a second macros tag 8/2025 
+    <macros component="print-latex">
+\RenewDocumentEnvironment{sectionptx}{mmmmmmm}{\renewcommand{\divisionnameptx}{#1}\renewcommand{\titleptx}{#2}\renewcommand{\subtitleptx}{#3}\renewcommand{\shortitleptx}{#4}\renewcommand{\authorsptx}{#5}\renewcommand{\epigraphptx}{#6}\newpage\section[{#4}]{#2}\label{#7}}{}
+    </macros>-->
+  </docinfo>
+
+  <article xml:id="def_thm_prf_text"  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <!-- switch titles (comment/uncomment) 
+    for printed Instructor's  Solutions version -->
+
+    <title>Intermediate Statistics</title>
+
+<!-- Chapters of the text, Front and Back Matter -->
+
+    <xi:include href="front_matter.xml"/>    
+
+    <xi:include href="sets_counting.xml"/>
+    <xi:include href="probability_finite.xml"/>
+    <xi:include href="probability_general.xml"/>    
+    <xi:include href="rand_vars_discrete.xml"/>
+    <xi:include href="rand_vars_cts.xml"/>    
+    <xi:include href="sampling1.xml"/>
+    <xi:include href="sampling2.xml"/>    
+<!--    <xi:include href="hypoth_testing.xml"/>-->
+    <xi:include href="regression.xml"/>
+<!--    <xi:include href="more_topics.xml"/> -->
+
+ <!-- Projects Appendix -->
+  <xi:include href="projects/projects.xml"/>          
+  <xi:include href="back_matter.xml"/>    
+
+  </article>
+</pretext>
+<!--</mathbook>-->
+
+

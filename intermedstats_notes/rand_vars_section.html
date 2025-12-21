@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Random Variables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.14';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="def_thm_prf_text.html"><span class="title">Intermediate Statistics</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="probability_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="def_thm_prf_text.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sampling_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(      \DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\covar}{cov}            
+\DeclareMathOperator{\sgn}{sgn}
+      \DeclareMathOperator{\Inn}{Inn}
+      \DeclareMathOperator{\lcm}{lcm}            
+\DeclareMathOperator{\Aut}{Aut}      
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Orb}{Orb}
+\DeclareMathOperator{\Rot}{Rot}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{image}
+\DeclareMathOperator{\conj}{conj}
+      \DeclareMathOperator{\Id}{Id}
+      \DeclareMathOperator{\SD}{SD}      
+\def\expi{E}
+\def\wrap{W}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Quat}{\mathbb{H}} 
+\newcommand{\extC}{\hat{\C}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\extR}{\hat{\R}} 
+\newcommand{\F}{\mathbb{F}} 
+\newcommand{\extF}{\hat{\F}} 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+
+
+\newcommand{\M}{{\rm MOB}} 
+\newcommand{\E}{{\rm EUC}} 
+\renewcommand{\H}{{\rm HYP}} 
+\newcommand{\HU}{\rm HYP_{\U}} 
+\renewcommand{\S}{{\rm ELL}} 
+
+
+
+
+
+
+
+
+\newcommand{\D}{\mathbb{D}} 
+\newcommand{\closedD}{\hat{\D}} 
+\newcommand{\U}{\mathbb{U}} 
+\newcommand{\spacer}{\rule[0cm]{0cm}{0cm}}
+\newcommand{\MOD}{\mathbin{\text{MOD}}}
+\newcommand{\twotwo}[4]{\left[ \begin{array}{cc} #1 \amp #2 \\
+#3 \amp #4 \end{array} \right]}
+
+\let\oldsection\section 
+\renewcommand{\section}{\clearpage\oldsection} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets_counting_section.html" class="internal"><span class="codenumber">1</span> <span class="title">Sets and Counting</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-3" class="internal"><span class="codenumber">1.1</span> <span class="title">Addition Principle(s)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-4" class="internal"><span class="codenumber">1.2</span> <span class="title">Multiplication Principle(s)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-5" class="internal"><span class="codenumber">1.3</span> <span class="title">Sequences and Permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets_counting_section.html#sets_counting_section-6" class="internal"><span class="codenumber">1.4</span> <span class="title">Subsets and Combinations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="probability_section.html" class="internal"><span class="codenumber">2</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-3" class="internal"><span class="codenumber">2.1</span> <span class="title">Finite Probability Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-4" class="internal"><span class="codenumber">2.2</span> <span class="title">Vocabulary and properties of probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-5" class="internal"><span class="codenumber">2.3</span> <span class="title">Random Samples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-6" class="internal"><span class="codenumber">2.4</span> <span class="title">Simple Random Samples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-7" class="internal"><span class="codenumber">2.5</span> <span class="title">Bayes’ Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="probability_section.html#probability_section-8" class="internal"><span class="codenumber">2.6</span> <span class="title">Probability Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="rand_vars_section.html" class="internal"><span class="codenumber">3</span> <span class="title">Random Variables</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_section.html#rand_vars_section-2" class="internal"><span class="codenumber">3.1</span> <span class="title">Definitions and properties for random variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_section.html#rand_vars_section-3" class="internal"><span class="codenumber">3.2</span> <span class="title">Generalized probability models and distribution functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_section.html#rand_vars_section-4" class="internal"><span class="codenumber">3.3</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_section.html#rand_vars_section-5" class="internal"><span class="codenumber">3.4</span> <span class="title">Expectation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rand_vars_section.html#rand_vars_section-6" class="internal"><span class="codenumber">3.5</span> <span class="title">A few key random variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sampling_section.html" class="internal"><span class="codenumber">4</span> <span class="title">Sampling</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-2" class="internal"><span class="codenumber">4.1</span> <span class="title">Random Sample Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-3" class="internal"><span class="codenumber">4.2</span> <span class="title">Simple random sample variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-4" class="internal"><span class="codenumber">4.3</span> <span class="title">The Central Limit Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sampling_section.html#sampling_section-5" class="internal"><span class="codenumber">4.4</span> <span class="title">Estimating population parameters</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="hypoth_testing_section.html" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="hypoth_testing_section.html#hypoth_testing_section-2" class="internal"><span class="codenumber">5.1</span> <span class="title">1-tail <span class="process-math">\(z\)</span> test</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="rand_vars_section"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Random Variables</span>
+</h2>
+<section class="subsection" id="rand_vars_section-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definitions and properties for random variables</span>
+</h3>
+<article class="definition definition-like" id="rand_vars_section-2-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Random variable.</span>
+</h4>
+<div class="para" id="rand_vars_section-2-2-2">Let <span class="process-math">\((\Omega,P)\)</span> be a finite probability model and let <span class="process-math">\(Y\)</span> be a set. A function <span class="process-math">\(X\colon\Omega \to Y\)</span> is called a <dfn class="terminology">random variable</dfn>. If <span class="process-math">\(Y\)</span> is a subset of the real numbers, then <span class="process-math">\(X\)</span> is called a <dfn class="terminology">quantitative</dfn> random variable; otherwise, <span class="process-math">\(X\)</span> is called <dfn class="terminology">qualitative</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1: Random variable"><a href="#rand_vars_section-2-2" title="Copy heading and permalink for Definition 3.1: Random variable" aria-label="Copy heading and permalink for Definition 3.1: Random variable">🔗</a></div></article><article class="definition definition-like" id="rand_vars_section-2-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Events defined by random variables.</span>
+</h4>
+<div class="para logical" id="rand_vars_section-2-3-2">
+<div class="para">Let <span class="process-math">\(X\colon \Omega\to Y\)</span> be a random variable on a finite probability model <span class="process-math">\((\Omega,P)\text{.}\)</span> Given a subset <span class="process-math">\(A\subseteq Y\text{,}\)</span> we define the event <span class="process-math">\(\text{"}X\in A\text{"}\)</span> by</div>
+<div class="displaymath process-math" id="rand_vars_section-2-3-2-5">
+\begin{equation}
+\text{"}X\in A\text{"} = X^{-1}(A)=\{\omega \in \Omega\colon X(\omega)\in A\}.\tag{3.1}
+\end{equation}
+</div>
+<div class="para">In particular, if <span class="process-math">\(X\)</span> is a quantitative random variable and <span class="process-math">\(\lambda\)</span> is a real number, the event <span class="process-math">\(\text{"} X\leq
+\lambda\text{"}\)</span> is the event</div>
+<div class="displaymath process-math" id="rand_vars_section-2-3-2-9">
+\begin{equation}
+\text{"}X\leq \lambda\text{"} = (X^{-1}((-\infty,\lambda])=
+\{\omega \in \Omega\colon X(\omega)\leq \lambda\}.\tag{3.2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2: Events defined by random variables"><a href="#rand_vars_section-2-3" title="Copy heading and permalink for Definition 3.2: Events defined by random variables" aria-label="Copy heading and permalink for Definition 3.2: Events defined by random variables">🔗</a></div></article><details id="rand_vars_section-2-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rand_vars_section-2-4-1">exercises in definitions, examples<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.3"><a href="#rand_vars_section-2-4" title="Copy heading and permalink for Checkpoint 3.3" aria-label="Copy heading and permalink for Checkpoint 3.3">🔗</a></div></article></details><article class="definition definition-like" id="rand_vars_section-2-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Distribution function.</span>
+</h4>
+<div class="para logical" id="rand_vars_section-2-5-2">
+<div class="para">Let <span class="process-math">\(X\)</span> be random variable. The <dfn class="terminology">(cumulative) distribution function</dfn> (or <dfn class="terminology">c.d.f.</dfn>) for <span class="process-math">\(X\)</span> is the function <span class="process-math">\(F_X\colon \R\to [0,1]\)</span> defined by</div>
+<div class="displaymath process-math" id="rand_vars_section-2-5-2-6">
+\begin{equation}
+F_X(\lambda)= P(X\leq \lambda).\tag{3.3}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.4: Distribution function"><a href="#rand_vars_section-2-5" title="Copy heading and permalink for Definition 3.4: Distribution function" aria-label="Copy heading and permalink for Definition 3.4: Distribution function">🔗</a></div></article><details id="rand_vars_section-2-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rand_vars_section-2-6-1">exercises in definitions, examples<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.5"><a href="#rand_vars_section-2-6" title="Copy heading and permalink for Checkpoint 3.5" aria-label="Copy heading and permalink for Checkpoint 3.5">🔗</a></div></article></details><article class="proposition theorem-like" id="rand_vars_section-2-7"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of distribution functions.</span>
+</h4>
+<div class="para logical" id="rand_vars_section-2-7-2">
+<div class="para">Let <span class="process-math">\(X\)</span> be a random variable. The distribution function <span class="process-math">\(F_X\)</span> has the following properties.</div>
+<ol class="decimal" id="rand_vars_section-2-7-2-3">
+<li id="rand_vars_section-2-7-2-3-1">
+<div class="para" id="p-derived-rand_vars_section-2-7-2-3-1">
+<span class="process-math">\(F_X\)</span> is nondecreasing, that is, if <span class="process-math">\(a\leq b\)</span> then <span class="process-math">\(F_X(a)\leq F_X(b)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#rand_vars_section-2-7-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="rand_vars_section-2-7-2-3-2">
+<div class="para" id="p-derived-rand_vars_section-2-7-2-3-2">
+<span class="process-math">\(F_X\)</span> is continuous from the right, that is, <span class="process-math">\(\lim_{x\to c^+}F_X(x)=F_X(c)\)</span> for all <span class="process-math">\(c\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#rand_vars_section-2-7-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="rand_vars_section-2-7-2-3-3">
+<div class="para" id="p-derived-rand_vars_section-2-7-2-3-3">
+<span class="process-math">\(\lim_{x\to-\infty}F_X(x)=0\)</span> and <span class="process-math">\(\lim_{x\to\infty}F_X(x)=1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#rand_vars_section-2-7-2-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.6: Properties of distribution functions"><a href="#rand_vars_section-2-7" title="Copy heading and permalink for Proposition 3.6: Properties of distribution functions" aria-label="Copy heading and permalink for Proposition 3.6: Properties of distribution functions">🔗</a></div></article><div class="para" id="rand_vars_section-2-8">define terms median, percentile, etc, box plot for a random variable<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rand_vars_section-2-9">define independence of random variables, give exercises<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.1: Definitions and properties for random variables"><a href="#rand_vars_section-2" title="Copy heading and permalink for Subsection 3.1: Definitions and properties for random variables" aria-label="Copy heading and permalink for Subsection 3.1: Definitions and properties for random variables">🔗</a></div></section><section class="subsection" id="rand_vars_section-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Generalized probability models and distribution functions</span>
+</h3>
+<div class="para" id="rand_vars_section-3-2">define general distribution function by properties in proposition above, state facts that there is a more general definition of probability models <span class="process-math">\((\Omega,\mathcal{E},P)\text{,}\)</span> our attitude in this course will be that we can simulate any distribution with a basic box model<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rand_vars_section-3-3">how we can assume differentiability of a continuous distribution (by approximation, if necessary), how the derivative (probability density function) corresponds to the continuous limit of histograms<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rand_vars_section-3-4">exercise set with many examples<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 3.2: Generalized probability models and distribution functions"><a href="#rand_vars_section-3" title="Copy heading and permalink for Subsection 3.2: Generalized probability models and distribution functions" aria-label="Copy heading and permalink for Subsection 3.2: Generalized probability models and distribution functions">🔗</a></div></section><section class="subsection" id="rand_vars_section-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Histograms</span>
+</h3>
+<div class="para logical" id="rand_vars_section-4-2">
+<div class="para">Let <span class="process-math">\(F_X\)</span> be a distribution function for a random variable <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\([a,b]\)</span> be a closed interval of the real line, and let <span class="process-math">\(\mathcal{P}=\{x_0,x_1,\ldots, x_n\}\)</span> be a partition <span class="process-math">\([a,b]\text{,}\)</span> that is, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a=x_0\lt x_1\lt x_2 \lt \cdots \lt x_n=b.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(I_k\)</span> denote the interval <span class="process-math">\((x_{k-1},x_k]\text{.}\)</span> Let <span class="process-math">\((\Delta x)_k\)</span> denote the width <span class="process-math">\((\Delta
+x)_k=x_k-x_{k-1}\)</span> of <span class="process-math">\(I_k\text{,}\)</span> and let  <span class="process-math">\(P_k=P(X\in I_k)=F_X(x_k)-F_X(x_{k-1})\text{.}\)</span> We define <span class="process-math">\(R_k\)</span> to be a rectangular region</div>
+<div class="displaymath process-math" id="rand_vars_section-4-2-14">
+\begin{equation}
+R_k = I_k \times [0,P_k/(\Delta x)_k]\tag{3.4}
+\end{equation}
+</div>
+<div class="para">so that the area of <span class="process-math">\(R_k\)</span> is <span class="process-math">\(P_k\text{.}\)</span> The <dfn class="terminology">histogram</dfn> for <span class="process-math">\(X\)</span> on <span class="process-math">\([a,b]\)</span> with partition <span class="process-math">\(\mathcal{P}\)</span> is a collection of <span class="process-math">\(n\)</span> rectangular regions <span class="process-math">\(R_1,R_2,\ldots,R_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="rand_vars_section-4-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rand_vars_section-4-3-1">exercises in definitions, examples<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.7"><a href="#rand_vars_section-4-3" title="Copy heading and permalink for Checkpoint 3.7" aria-label="Copy heading and permalink for Checkpoint 3.7">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.3: Histograms"><a href="#rand_vars_section-4" title="Copy heading and permalink for Subsection 3.3: Histograms" aria-label="Copy heading and permalink for Subsection 3.3: Histograms">🔗</a></div></section><section class="subsection" id="rand_vars_section-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expectation</span>
+</h3>
+<div class="para logical" id="rand_vars_section-5-2">
+<div class="para">Here is a simple example that motivates the notion of expected value. Suppose you play a dice game in which you win two dollars every time your dice roll comes up showing the six face, and you lose a dollar if you roll something different from a six. In 600 rolls, you would expect to roll a six about 100 times. From this you would gain 200 dollars. You would expect to roll something different from a six about 500 times. From this you would lose 500 dollars. Your net gain is <span class="process-math">\(200-500=-300\)</span> dollars, which averages to <span class="process-math">\(-.50\)</span> dollars per roll. You could have found this by the calculation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{average net gain per win }= 2\cdot 1/6 +(-1)\cdot 5/6.
+\end{equation*}
+</div>
+<div class="para">This is a sum of the form <span class="process-math">\(\sum
+(\text{value})(\text{probability})\text{,}\)</span> where “value” is the value of a random variable — in this case, win/loss per roll. Here is the formal mathematical definition.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="rand_vars_section-5-3">
+<div class="para">Let <span class="process-math">\(X\)</span> be a random variable on a finite probability space <span class="process-math">\((\Omega,P)\)</span> with probability function <span class="process-math">\(p\text{.}\)</span> The <dfn class="terminology">expected value of <span class="process-math">\(X\)</span></dfn>, denoted <span class="process-math">\(E(X)\text{,}\)</span> is defined to be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/expectvaldef.html" id="expectvaldef">
+\begin{equation}
+E(X) = \sum_{\omega\in\Omega}X(\omega)
+p(\omega).\tag{3.5}
+\end{equation}
+</div>
+<div class="para">The expected value is also called its <em class="emphasis">average</em> or <em class="emphasis">mean</em>, and we write <span class="process-math">\(\mu_X\)</span> (or just <span class="process-math">\(\mu\text{,}\)</span> if <span class="process-math">\(X\)</span> is clear from context) for <span class="process-math">\(E(X)\text{.}\)</span> It is sometimes useful to group the summands in <a href="rand_vars_section.html#expectvaldef" class="xref" data-knowl="./knowl/xref/expectvaldef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5">(3.5)</a> as follows.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/expectvaldef.html" id="expectvalregrouped">
+\begin{equation}
+E(X) = \sum_{x\in X(\Omega)}x P(X=x).\tag{3.6}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="rand_vars_section-5-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rand_vars_section-5-4-1">examples, linearity properties, explain sum grouped by values<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.8"><a href="#rand_vars_section-5-4" title="Copy heading and permalink for Checkpoint 3.8" aria-label="Copy heading and permalink for Checkpoint 3.8">🔗</a></div></article></details><div class="para logical" id="rand_vars_section-5-5">
+<div class="para">Variance and standard deviation are measures of the spread of a random variable about its mean. The <dfn class="terminology">variance</dfn> of <span class="process-math">\(X\text{,}\)</span> denoted <span class="process-math">\(\var(X)\)</span> or <span class="process-math">\(\sigma_X^2\)</span> (or just <span class="process-math">\(\sigma\text{,}\)</span> if <span class="process-math">\(X\)</span> is understood), is</div>
+<div class="displaymath process-math" id="rand_vars_section-5-5-7">
+\begin{equation}
+\var(X)=E((X-\mu_X)^2)=E(X^2)-(E(X))^2.\tag{3.7}
+\end{equation}
+</div>
+<div class="para">The <dfn class="terminology">standard deviation</dfn> of <span class="process-math">\(X\text{,}\)</span> denoted <span class="process-math">\(\SD(X)\)</span> or <span class="process-math">\(\sigma_X\)</span> (or just <span class="process-math">\(\sigma\)</span>), is the square root of the variance.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="rand_vars_section-5-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="rand_vars_section-5-6-1">examples, show the two expressions for variance are equal, scalar properties for SD<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-5-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.9"><a href="#rand_vars_section-5-6" title="Copy heading and permalink for Checkpoint 3.9" aria-label="Copy heading and permalink for Checkpoint 3.9">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.4: Expectation"><a href="#rand_vars_section-5" title="Copy heading and permalink for Subsection 3.4: Expectation" aria-label="Copy heading and permalink for Subsection 3.4: Expectation">🔗</a></div></section><section class="subsection" id="rand_vars_section-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A few key random variables</span>
+</h3>
+<div class="para" id="rand_vars_section-6-2">Bernoulli, binomial, geometric, exponential, normal: definitions, properties, distribution, histogram, mean, variance<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="rand_vars_section-6-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli variable.</span>
+</h4>
+<div class="para" id="rand_vars_section-6-3-2">A random variable <span class="process-math">\(X\colon \Omega\to \R\)</span> is called a <dfn class="terminology">Bernoulli</dfn> variable if <span class="process-math">\(X\)</span> has exactly two values, that is, if <span class="process-math">\(X(\Omega)
+= \{a,b\}\)</span> for some real numbers <span class="process-math">\(a,b\)</span> with <span class="process-math">\(a\neq
+b\text{.}\)</span> If <span class="process-math">\(X\)</span> is a Bernoulli variable, then a sequence of variables <span class="process-math">\(X_1,X_2,\ldots,X_n\)</span> on <span class="process-math">\(\Omega^n\)</span> defined by <span class="process-math">\(X_k(x_1,x_2,\ldots,x_n)=X(x_k)\)</span> is called a sequence of <span class="process-math">\(n\)</span> <dfn class="terminology">Bernoulli trials</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#rand_vars_section-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.10: Bernoulli variable"><a href="#rand_vars_section-6-3" title="Copy heading and permalink for Definition 3.10: Bernoulli variable" aria-label="Copy heading and permalink for Definition 3.10: Bernoulli variable">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.5: A few key random variables"><a href="#rand_vars_section-6" title="Copy heading and permalink for Subsection 3.5: A few key random variables" aria-label="Copy heading and permalink for Subsection 3.5: A few key random variables">🔗</a></div></section><div class="autopermalink" data-description="Section 3: Random Variables"><a href="#rand_vars_section" title="Copy heading and permalink for Section 3: Random Variables" aria-label="Copy heading and permalink for Section 3: Random Variables">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="probability_section.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sampling_section.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

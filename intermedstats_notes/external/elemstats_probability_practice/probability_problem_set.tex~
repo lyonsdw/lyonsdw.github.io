@@ -1,0 +1,87 @@
+% probability problem set for elementary statistics
+% spring 2015
+
+\documentclass[leqno]{article}
+
+%%%%%%%%%%%%%%%% title parameters %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursename}  {Intermediate Statistics}
+\newcommand{\semester}    {Spring}
+\newcommand{\acadyear}    {2015}
+\newcommand{\notestitle}  {Supplementary Notes}
+
+%%%%%%%%%%%%%%%% end title parameters %%%%%%%%%%%%%%%%%%%%
+
+\input{notes_style.tex}
+
+\begin{document}
+\bibliographystyle{plain}
+
+% cover page
+\thispagestyle{empty}
+
+\begin{center}
+{\Huge \bf \coursename\\ \medskip  \medskip  \notestitle}\\ \medskip \medskip
+{\LARGE \bf \semester{ }\acadyear}\\
+\medskip
+
+{\Large
+David Lyons\\
+Mathematical Sciences\\
+Lebanon Valley College\\
+}
+\end{center}
+
+
+\newpage
+
+\thispagestyle{empty}
+
+\begin{center}
+{\Large \bf \coursename\\ \notestitle}\\ \semester{ }\acadyear\\
+
+\medskip
+
+David Lyons\\
+Mathematical Sciences\\
+Lebanon Valley College\\
+Copyright \copyright \acadyear
+\end{center}
+
+\vspace*{.2in}
+
+\pagenumbering{roman}
+\thispagestyle{empty}
+
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%\setcounter{section}{-1}
+
+
+\input{../elementary/probability/2011_probability.tex}
+
+
+
+%%%%%%%% solutions
+\newpage
+\addcontentsline{toc}{section}{Solutions to Exercises}
+\section*{Solutions to Exercises}
+
+Note: Most of the ``solutions'' posted here are not solutions at all, but
+are merely final answer keys, although some are complete.  These are
+provided so that you can check your work; reading the answer keys is not a
+substitute for working the problems yourself.  
+
+\setcounter{section}{1}
+\setcounter{subsection}{5}
+\input{../elementary/probability/2011_probability_solutions.tex}
+%\setcounter{section}{5}
+%\setcounter{subsection}{4}
+%\input{sampling/2011_sampling_solutions.tex}
+
+\end{document}
+

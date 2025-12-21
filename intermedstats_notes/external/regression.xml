@@ -1,0 +1,138 @@
+<section xml:id="regression_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+Regression
+</title>
+
+<introduction>
+  <p>The general goal of regression analysis is to find a <q>nice</q>
+    function whose graph provides a <q>good fit</q> to a set of data
+    points. In this section, we explain how regression works for
+    2-dimensional data, that is, points in the plane, and we give the
+    details for the linear function that gives a best fit to the given
+    data.
+  </p>
+</introduction>
+
+<subsection><title>Measuring fit</title>
+
+  <p>Let <m>X,Y\colon \Omega\to \R</m> be random variables on a
+    probability space <m>\Omega</m>. Given a function <m>y=f(x)</m>, we define the
+    variable <m>e\colon \Omega\to \R</m> by
+    <me>e=Y-f(X).</me>
+  (the letter <m>e</m> is for <em>error</em> function).
+  The overall fit of <m>f</m> to the data is measured by the standard
+  deviation <m>\sigma_e</m> of the error variable <m>e</m>. The idea is that if <m>\sigma_e</m> is low,
+    then <m>f</m> is a good fit, in the sense that the overall error
+    incurred by using values <m>f(X)</m> to predict values of <m>Y</m>
+  is minimized. The quantity <m>\sigma_e</m> is called
+    the <term>rms error</term>
+    for the function <m>f</m>.<fn>The acronym <em>rms</em> is
+  for <q>root-mean-square</q>, which comes from the formula for standard
+    deviation, which is the square <em>root</em>
+    of the <em>mean</em>
+    of the <em>square</em>
+    deviation.
+  </fn>
+
+</p>
+
+  
+  <exercise>
+  <p>Plot the graph of <m>y=f(x)=x^2</m> on the
+    interval <m>[1,3]</m>. Make up random variables <m>X,Y</m>
+    on <m>\Omega=\{a,b,c\}</m>, with probability function given by <m>p(\omega)=1/3</m> for <m>\omega\in \Omega</m>.
+    Choose your variable <m>X</m> so that its values 
+    are in the interval <m>[1,3]</m>, and choose your variable <m>Y</m>
+    so that the points <m>(X(a),Y(a)), (X(b),Y(b)), (X(c),Y(c))</m>
+    lie near, but not exactly on, the
+    graph <m>y=x^2</m>. Calculate <m>\sigma_e</m>. Repeat this procedure for two or
+    three more data sets of three points each in a way that illustrates
+    how the size of <m>\sigma_e</m> relates to your visual sense of <q>fit</q>.
+    </p>
+    </exercise>
+    
+</subsection>
+
+<subsection>
+  <title>Linear regression</title>
+
+  <p>The <term>regression line for <m>Y</m> on <m>X</m></term> (also called the line of <em>best
+      fit</em>, or the line of <em>least squares error</em>), is the
+      linear function <m>y=f(x)=mx+b</m> that has the smallest value
+      of <m>\sigma_e</m>, among all possible lines, for a given pair of
+    random variables <m>X,Y</m>.
+      It is not obvious, at first, that such a function should
+      exist, or that is should be unique. But it turns out that there is
+      precisely one such best fit line.
+  </p>
+
+  <p>It is straightforward to use the linearity properties of expected
+    value to solve for the values of <m>m,b</m> that minimize the expression
+    <m>\sigma_e^2=E([Y-(mX+b)]^2)</m>. First consider the case
+    where <m>X,Y</m> are both standardized variables, that is, we
+    have <m>E(X)=E(Y)=0</m> and <m>\var(X)=\var(Y)=1</m>. One quickly
+    obtains the minimum possible
+    value <m>\sigma_e=\sqrt{1-\covar(X,Y)^2}</m> realized by the 
+    the optimizing values <m>b=0</m> and <m>m=\covar(X,Y)</m>.
+    The regression line for standardized variables is the following.
+    <mdn>
+      <mrow xml:id="regrlinestd">y=\covar(X,Y)x \amp \amp (\text{for
+	standardized variables } X,Y)</mrow>
+    </mdn>
+    For the general case, the regression line is given by
+    <mdn>
+      <mrow xml:id="regrlinegen">\frac{y-\mu_Y}{\sigma_Y}=\frac{\covar(X,Y)}{\sigma_X \sigma_Y}\frac{x-\mu_X}{\sigma_X}
+	\amp \amp (\text{for any variables } X,Y)</mrow>
+    </mdn>
+  and the rms error for the regression line is <m>
+    \sigma_e=\sigma_Y\sqrt{1-r^2}</m>,
+    where <m>r=\frac{\covar(X,Y)}{\sigma_X \sigma_Y}</m> is called
+    the <term>(Pearson) correlation coefficient</term>.
+  The regression line passes through the
+  point <m>(\mu_X,\mu_Y)</m>, called the <term>point of
+    averages</term>, and has slope equal
+  to  <m>r\frac{\sigma_Y}{\sigma_X}</m>.
+  </p>
+
+  <exercise>
+    <p>Show the derivations for <xref ref="regrlinestd"/> and <xref ref="regrlinegen"/>.</p>
+  </exercise>
+
+  <p>In practice, as is often the case with applications of sampling
+    theory, we do not have full knowledge of the random
+    variables <m>X,Y</m>, but we have a sample
+    <me>((x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n))</me>
+    where <m>(x_k,y_k)=(X(\omega_k),Y(\omega_k))</m> for some
+    sample <m>(\omega_1,\omega_2,\ldots,\omega)</m> from <m>\Omega</m>. In this case, we
+    must estimate the
+    quantities <m>\mu_X,\mu_Y,\sigma_X,\sigma_Y,\covar(X,Y)</m> from the
+    finite data set. To do this we use the sample
+    average <m>\overline{X}</m> (see <xref ref="sampleavedef"/>) and the sample
+    standard deviation <m>s</m> (see <xref ref="samplevardef"/>) to estimate <m>\mu_X</m>
+    and <m>\sigma_X</m>, respectively. Similarly, we use the sample mean
+    and sample standard deviation for <m>Y</m> to
+    estimate <m>\mu_Y,\sigma_Y</m>. To estimate <m>\covar(X,Y)</m>, we
+    use
+    <men>\covar_{\small \rm samp}(X,Y) = \frac{1}{n-1}\sum_{k=1}^n (x_k-\overline{X})(y_k-\overline{Y}).</men>
+  </p>
+  
+  <p>Read <url href="https://mathvista.org/elemstats_notes/regression_section.html">Section
+  2.2</url> of <xref ref="lyons_elemstats"/> for further vocabulary and
+  facts about the regression line.
+  </p>
+</subsection>
+
+
+
+<exercises>
+
+  <exercise>
+    <p>Work through all of the examples in Section 1.6.2 and all of the
+      problems in problems 1.6.3
+      in <url href="https://mathvista.org/elemstats_notes/basic_regression.html">Section
+      1.6</url> in <xref ref="lyons_elemstats"/>.
+    </p>
+  </exercise>
+</exercises>
+
+</section>
