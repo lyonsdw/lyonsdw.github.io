@@ -1,0 +1,49 @@
+<chapter xml:id="cardinality_chapter"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+Cardinality
+  </title>
+  <!-- Cantor Shroeder Bernstein Theorem -->
+
+  <section><title>Shroeder-Bernstein Theorem</title>
+
+  <theorem><title>(Schroeder-Bernstein)</title>
+    <statement>If <m>f\colon A\to B</m> and <m>g\colon B\to A</m> are
+one-to-one maps, then <m>A\sim B</m>.
+    </statement>
+  </theorem>
+
+
+
+  <p><alert>Proof outline.</alert>
+    <ol>
+      <li>For each <m>a\in A</m>, form a sequence to the right and to the left of
+  <m>a</m>.
+<me>\cdots \to g^{-1}(f^{-1}(g^{-1}(a))) \to f^{-1}(g^{-1}(a)) \to g^{-1}(a) \to a \to f(a) \to g(f(a)) \to f(g(f(a))) \to \cdots
+</me>
+      </li>
+      <li>Observe that theses sequences may or may not terminate on the left.
+      </li>
+      <li>Observe that each of these sequences is one of two types: (i) terminates on the left with an
+  element <m>y\in B</m> (that is, <m>y</m> is not in the image of <m>f</m>); or (ii)
+  does not have the property that defines type (i).
+      </li>
+      <li>Define <m>h\colon A\to B</m> by <m>h(a)=g^{-1}(a)</m>
+	if <m>a</m> lies in a sequence of type (i), and <m>h(a) =
+	f(a)</m> if $<m>a</m> lies in a sequence of type (ii). Now show
+	$h$ is well-defined and is a bijection.
+      </li>
+    </ol>
+    
+  </p>
+  <!--
+\noindent{\bf Hint for a proof.} 
+\begin{enumerate}
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+  -->
+  </section>
+  
+</chapter>

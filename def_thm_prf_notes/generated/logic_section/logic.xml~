@@ -1,0 +1,296 @@
+<chapter xml:id="logic_section"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>
+  Logic
+</title>
+
+<introduction>
+
+  <p>  Logic is the study of the formal structure of reasoning. In
+mathematical sciences, we use logic to construct arguments, and also to
+analyze the validity of arguments.
+</p>
+
+  <p>
+    In this course we consider a traditional and standard version of logic,
+    which has the following basic ingredients.
+    <ul>
+      <li><alert>statements:</alert> declarative sentences that claim something
+  is true
+      </li>
+      <li><alert>two truth values: </alert> every statement must be unambiguously <term>true</term>
+    or <term>false</term>, but not both
+      </li>
+      <li><alert>connectives:</alert> statements can be combined with
+	logical
+	connectives <term>not</term>, <term>and</term>, <term>or</term>, <term>if-then</term>, and
+	others, to form new statements
+      </li>
+      <li><alert>rules of reasoning:</alert> these are rules for establishing
+        the truth of statements based on an established sequence of true statements
+      </li>
+    </ul>
+We will follow the usual approach used in introductory proof writing
+courses that relies on intuition, rather than a formal axiomatic
+treatment of logic.
+  </p>
+  
+</introduction>
+
+<section>
+  <title>Boolean algebra</title>
+
+
+<p>The truth tables for compound statements that are presented in most
+  textbooks are just input-output tables for functions, where every
+  entry is a truth value. In these tables, the actual statements play no
+  role; only their truth values matter. Boolean algebra provides a
+  language for working directly with such functions in a way that
+  bypasses the need for cumbersome input-output tables.</p>
+
+<p>The set <m>\B=\{0,1\}</m>, together with the operations of addition and
+multiplication mod 2, is called the <term>Boolean domain</term>. Multiplication
+mod 2 is the same as ordinary multiplication of integers. Addition mod 2
+is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
+</p>
+<exercise>
+
+<statement>  <p>Show that the following identities hold for <m>x,y,z\in \B</m>.
+  <ol>
+    <li><m>x+y=y+x</m> (the commutative law of addition)</li>
+    <li><m>xy=yx</m>
+       (the commutative law of multiplication)</li>
+    <li><m>x+(y+z)=(x+y)+z</m>
+       (the associative law of addition)</li>
+    <li><m>x(yz)=(xy)z</m>
+       (the associative law of multiplication)</li>
+    <li><m>x+0 = 0+x = x</m>
+       (additive identity)</li>
+    <li><m>x1 = 1x = x</m>
+       (multiplicative identity)  </li>
+    <li><m>x(y+z) = xy+xz</m>
+       (the distributive law)</li>
+    <li><m>x^2=x</m>
+      </li>
+    <li><m>(x+y)^2=x+y</m>
+      </li>
+    <li><m>x(x+1)=0</m>
+      </li>
+  </ol></p>
+</statement>
+</exercise>
+
+<p>  Let <m>\mathcal{S}</m>
+   denote the set of all statements, and let <m>v\colon  \mathcal{S} \to \B</m>
+   given by
+  <me>v(p) = \begin{cases}
+    1 \amp \text{ if } p \text{ is true}\\
+    0 \amp \text{ if } p \text{ is false}.
+    \end{cases}</me>
+</p>
+  
+  <exercise>
+    <statement><p>
+	Let <m>p,q\in \mathcal{S}</m>.
+	<ol>
+	  <li>Show that <m>v(\sim p) = v(p)+1</m>.
+	  </li>
+	  <li>Show that <m>v(p\wedge q) = v(p)v(q)</m>.
+	  </li>
+	  <li>Show that <m>v(p\vee q) = v(p)+v(q)+v(p)v(q)</m>.
+	  </li>	  
+	</ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <p>The exercise above justifies the following
+    associations for <m>p,q\in \mathcal{S}</m> and <m>x=v(p), y=v(q)</m>.
+    <me>\begin{array}{c|c}
+      \text{logical statement } r
+      \amp \text{Boolean expression } v(r)
+      \\ \hline
+       \sim p \amp  x+1\\
+        p\wedge q \amp  xy\\
+       p\vee q \amp  x+y+xy
+      \end{array}</me>
+  </p>
+
+  <exercise>
+    <statement><p>
+	Let <m>\oplus</m> denote the logical connective whose
+	corresponding Boolean function is <m>+</m>, that is, we
+	have <m>v(p\oplus q)=v(p)+v(q)</m>.
+	Use a
+	truth table to verify that a reasonable verbalization
+	of <q><m>p \oplus q</m></q>
+	is <q><m>p</m> or <m>q</m>,
+	  but not both</q>. The connective <m>\oplus</m> is
+	called <term>exclusive or</term>.
+      </p>
+    </statement>
+  </exercise>
+  
+  <exercise xml:id="booleanforimplicationexer">
+    <statement><p>
+	Find the missing Boolean functions for the logical connectives in the
+	table below.
+    <me>\begin{array}{c|c}
+      \text{logical statement } r
+      \amp \text{Boolean expression } v(r)     \\ \hline
+      p \Rightarrow q \amp  \\
+      p \Leftarrow q \amp \\
+       p \Leftrightarrow q \amp \\      
+      \end{array}</me>
+      </p>
+    </statement>
+  </exercise>
+
+  <aside component="instructor"><title>Summary of corresponding logical and Boolean expressions</title>
+    <p> Let <m>p,q\in \mathcal{S}</m> and <m>x=v(p),y=v(q)</m>.
+      <me>\begin{array}{c|c}
+      \text{logical statement } r \amp \text{Boolean expression } v(r)\\
+    \hline
+       \sim p \amp  x+1\\
+        p\wedge q \amp  xy\\
+	p\vee q \amp  x+y+xy\\
+	p\oplus q \amp x+y\\
+      p \Rightarrow q \amp  xy+x+1 \\
+	p \Leftarrow  q \amp   xy+y+1\\
+	p \Leftrightarrow  q \amp   x+y+1	
+      \end{array}</me>
+</p>
+</aside> 
+
+  <exercise xml:id="convertlogicbooleanexer">
+    <p>Let <m>p,q,r</m> be statements, and let <m>x,y,z</m>
+    be <m>v(p),v(q),v(r)</m>, respectively.
+<ol>      <li>
+    Find the Boolean expression
+      that corresponds to the logical expression
+      <me>[p\wedge(q\oplus r)] \vee [r\Leftarrow p] \wedge
+	\sim[q\Leftrightarrow r].  </me></li>
+  <li>Find a logical expression for the Boolean expression <m>xyz+xy+y+z+1</m>.
+  </li>
+      
+
+</ol>
+    </p>
+  </exercise>
+  
+
+  <exercise>
+    <p>Use Boolean expressions instead of truth tables for all of the
+    exercises in Ch 1 of <xref ref="chapterzero"/> that suggest that you
+    use truth tables.
+    </p>
+  </exercise>
+</section>
+
+<section>
+  <title>Equivalence of Logical and Boolean Expressions</title>
+
+  <p><xref ref="convertlogicbooleanexer"/> suggests that there is some
+  kind of equivalence between logical expressions and Boolean
+  expressions. This turns out to be true. Here are some facts.
+  </p>
+
+  <proposition><title>All Boolean functions are polynomial</title>
+    <p>Let <m>x_1,x_2,\ldots,x_n</m> be Boolean variables, and
+      let <m>f\colon \B^n \to \B</m> be a function. Then <m>f(x_1,x_2,\ldots,x_n)</m>
+      may be written as a polynomial
+      <men>f(x_1,x_2,\ldots,x_n)=\sum_{I=(i_1,i_2,\ldots,i_n)\in
+	\B^n}c_I x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}</men>
+      for some constants <m>c_I=c_{i_1,i_2,\ldots,i_n}\in \B</m>.
+    </p>
+  </proposition>
+
+  <exercise>
+    <p>Identify all of the details for the Boolean functions in both
+    parts of <xref ref="convertlogicbooleanexer"/>.</p>
+  </exercise>
+
+  <proposition><title>All Boolean expressions are logical</title>
+    <p>Let <m>f\colon \B^n\to \B</m> be a function. There exists
+      a truth table in whose columns are <m>n</m> statements <m>p_1,p_2,\ldots,p_n</m>
+for a logical expression made using <m>p_1,p_2,\ldots,p_n</m> and the
+      logical connectives <m>\sim,\wedge,\vee</m> whose corresponding
+      Boolean expression is <m>f(x_1,x_2,\ldots,x_n)</m>,
+      where <m>x_k=v(p_k)</m> for <m>1\leq k\leq n</m>.
+    </p>
+  </proposition>
+
+  <exercise><p>Make three random strings 8 letter long using the
+      letters <m>T,H</m>. Make a table whose columns are
+      labeled <m>p,q,r,L</m>, and with 8 rows, filled in with the 8
+      3-letter logical possiblities <m>TTT,TTH,THT,\ldots,HHH</m> for
+      columns <m>p,q,r</m>, and put one of your random 8-letter strings
+      in the column for <m>L</m>. Find a logical expression made
+      using <m>p,q,r</m> and the connectives <m>\sim,\wedge,\vee</m> so
+      that your table is the truth table for that expression. Find the
+      corresponding Boolean polynomial expression. Repeat for your
+      remaining 8-letter strings.
+    </p>
+  </exercise>
+  
+  <corollary><title>The connectives <m>\sim,\wedge,\vee</m> are universal</title>
+<p>    Any truth table made from any number of logical
+    variables <m>p_1,p_2,\ldots,p_n</m> is equivalent to the truth table
+  for a logical expression that used only the logical connectives <m>\sim,\wedge,\vee</m>.</p>
+  </corollary>
+
+  <!-- further topic to develop, Pascal's triangle mod 2 as change of
+  basis for two representations of Boolean functions (truth table of
+  values basis versus polynomial basis)
+      -->
+  
+</section>
+
+
+<section><title>Predicates and quantifiers</title>
+  <p>
+    A predicate is a function <m>f\colon X\to \mathcal{S}</m>,
+    where <m>X</m> is a set and <m>\mathcal{S}</m> is the set of statements.
+  </p>
+
+  <p>
+    We use the symbols <m>\forall,\exists</m> to denote <q>for
+    all</q>, <q>there exists</q>, respectively. It is okay to use these
+    shorthand symbols for informal <q>chalkboard</q> discussion and for
+    scratchwork. In narrative writing, always use words instead. For
+    example, in an informal discussion, one might write
+    <me>\forall x \;\; f(x)</me>
+    but in formal writing, one might write
+    <blockquote><p>for all <m>x</m> in the domain <m>X</m>, the
+	statement <m>f(x)</m> holds.</p>
+    </blockquote>
+  </p>
+
+
+</section>
+
+  <!--
+  <p>
+A function <m>f\colon \mathcal{S}^n\to \mathcal{S}</m> is
+called <em>logical</em> if there is a function <m>g\colon \B^n \to
+  \B</m> so
+that <m>g(v(p_1),v(p_1),\ldots,v(p_n))=v(f(p_1,p_1,\ldots,p_n))</m> for
+all <m>n</m>-tuples of statements <m>p_1,p_2,\ldots,p_n</m>.
+</p>
+  -->
+
+  <!--
+  <p>more topics: univeral sets of connectives
+
+    facts: every logical connective has a Boolean function
+
+    every Boolean function <m>f\colon \B^n \to \B</m>
+    in n variables is expressible as a polynomial
+       <m>\sum_I c_I x_1^{i_1}x_2^{i_2}\cdots x_n^{i_n}</m> where
+     <m>I=i_1,i_2,\ldots,i_n</m> is a bit string
+  </p>
+  -->
+
+
+
+
+</chapter>
