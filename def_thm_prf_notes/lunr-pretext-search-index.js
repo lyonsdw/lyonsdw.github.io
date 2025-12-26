@@ -199,13 +199,40 @@ var ptx_lunr_docs = [
   "body": "Proof using mathematical induction  Read Chapter 10 of and work the odd-numbered exercises and the end of Chapter 10.  "
 },
 {
-  "id": "relations_section",
+  "id": "relations_section-2",
   "level": "1",
-  "url": "relations_section.html",
-  "type": "Chapter",
-  "number": "4",
-  "title": "Relations",
-  "body": " Relations   Further material may be added here.     "
+  "url": "relations_section-2.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Basic objects",
+  "body": "Basic objects  The following definitions clarify and expand the definitions given in .    Let be sets. A relation from to is a subset of the Cartesian product . A relation from a set to itself is called a relation on the set . Given a relation from to , the inverse relation to , denoted , is the relation from to given by    Given a relation on a set , a directed graph is a figure that illustrates . Elements of are depicted as dots, and in is depicted by a segment of a line or an arc that starts at , ends at , and has an arrow pointing from to .    A (simple) graph is a pair , where is a set and is a set of subsets of , where every element of has two elements. An element of is called a vertex and an element of is called an edge . The set is called the set of vertices of the graph , and the set is called the set of edges of .  One can also define graphs that allow loops, that is, edges that connect a vertex to itself. Further generalizations of graphs allow multiple edges that connect the same pair of vertices. In this course, the term graph will always refer to a simple graph, as defined above. The definition of graph given in uses the word pair in the definition of an edge. Unfortunately, this introduces ambiguity as to whether loops are allowed as edges. In mathematics, the word pair usually denotes an ordered list . By default, it is allowable that the objects and may be equal. We avoid this ambiguity by not using the word pair in our definition of graph.   "
+},
+{
+  "id": "relations_section-2-3",
+  "level": "2",
+  "url": "relations_section-2.html#relations_section-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "relation from to relation on the set inverse relation "
+},
+{
+  "id": "relations_section-2-4",
+  "level": "2",
+  "url": "relations_section-2.html#relations_section-2-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "directed graph "
+},
+{
+  "id": "relations_section-2-5",
+  "level": "2",
+  "url": "relations_section-2.html#relations_section-2-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "(simple) graph vertex edge set of vertices set of edges "
 },
 {
   "id": "functions_section",
