@@ -205,16 +205,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Basic objects",
-  "body": "Basic objects  The following definitions clarify and expand the definitions given in .    Let be sets. A relation from to is a subset of the Cartesian product . A relation from a set to itself is called a relation on the set . Given a relation from to , the inverse relation to , denoted , is the relation from to given by    Given a relation on a set , a directed graph is a figure that illustrates . Elements of are depicted as dots, and in is depicted by a segment of a line or an arc that starts at , ends at , and has an arrow pointing from to .    A (simple) graph is a pair , where is a set and is a set of subsets of , where every element of has two elements. An element of is called a vertex and an element of is called an edge . The set is called the set of vertices of the graph , and the set is called the set of edges of .  One can also define graphs that allow loops, that is, edges that connect a vertex to itself. Further generalizations of graphs allow multiple edges that connect the same pair of vertices. In this course, the term graph will always refer to a simple graph, as defined above. The definition of graph given in uses the word pair in the definition of an edge. Unfortunately, this introduces ambiguity as to whether loops are allowed as edges. In mathematics, the word pair usually denotes an ordered list . By default, it is allowable that the objects and may be equal. We avoid this ambiguity by not using the word pair in our definition of graph.   "
-},
-{
-  "id": "relations_section-2-3",
-  "level": "2",
-  "url": "relations_section-2.html#relations_section-2-3",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "relation from to relation on the set inverse relation "
+  "body": "Basic objects  The following definitions clarify and expand the definitions given in .  The following is an amendment to Definition 4.1.4 on p.66 of .    Let be sets. A relation from to is a subset of the Cartesian product . A relation from a set to itself is called a relation on the set . Given a relation from to , the inverse relation to , denoted , is the relation from to given by    The following is a clarification of the term directed graph introduced in Example 4.1.7 on p.67 of .  Given a relation on a set , a directed graph is a figure that illustrates . Elements of are depicted as dots, and in is depicted by a segment of a line or an arc that starts at , ends at , and has an arrow pointing from to .  The following is a correction to Definition 4.4.1 on p.84 of .    A (simple) graph is a pair , where is a set and is a set of subsets of , where every element of has two elements. An element of is called a vertex and an element of is called an edge . The set is called the set of vertices of the graph , and the set is called the set of edges of .  One can also define graphs that allow loops, that is, edges that connect a vertex to itself. Further generalizations of graphs allow multiple edges that connect the same pair of vertices. In this course, the term graph will always refer to a simple graph, as defined above. The definition of graph given in uses the word pair in the definition of an edge. Unfortunately, this introduces ambiguity as to whether loops are allowed as edges. In mathematics, the word pair usually denotes an ordered list . By default, it is allowable that the objects and may be equal. We avoid this ambiguity by not using the word pair in our definition of graph.   "
 },
 {
   "id": "relations_section-2-4",
@@ -223,12 +214,21 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "relation from to relation on the set inverse relation "
+},
+{
+  "id": "relations_section-2-6",
+  "level": "2",
+  "url": "relations_section-2.html#relations_section-2-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "directed graph "
 },
 {
-  "id": "relations_section-2-5",
+  "id": "relations_section-2-8",
   "level": "2",
-  "url": "relations_section-2.html#relations_section-2-5",
+  "url": "relations_section-2.html#relations_section-2-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
