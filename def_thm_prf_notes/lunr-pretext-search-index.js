@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "0.1",
   "title": "Basics of Sets and Functions",
-  "body": "Basics of Sets and Functions  Read and solve the problems in Sections 1.1, 1.2, 1.3 of .  "
+  "body": "Basics of Sets and Functions  Read and solve the problems in Sections 1.1, 1.2, 1.3, 1.4 of .  "
 },
 {
   "id": "logic_section-3",
