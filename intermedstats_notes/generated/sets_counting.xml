@@ -42,10 +42,28 @@ Sets and Counting
 </p></statement>
   </proposition>
 
-  <exercise>
+  <exercise xml:id="partitiondefexer">
     <p>Find all of the possible partitions of the set <m>\{a,b,c\}</m>.
     </p>
   </exercise>
+
+  <aside component="instructor"><title>Instructor solution for <xref ref="partitiondefexer"/></title>
+    <p>Sort possibilities by partitions of 3: 3, 2-1, 1-1-1. This leads
+      to these partitions.
+      <ul>
+	<li><m>\{a,b,c\}</m>
+	</li>
+	<li><m>\{a,b\},\{c\}</m>
+	</li>
+	<li><m>\{a,c\},\{b\}</m>
+	</li>
+	<li><m>\{b,c\},\{a\}</m>
+	</li>
+	<li><m>\{a\},\{b\},\{c\}</m>
+	</li>		
+      </ul>
+    </p>
+  </aside>
 
 </subsection>
 
@@ -73,8 +91,19 @@ Sets and Counting
       </statement>
     </proposition>
 
-<exercise>    <p>Use the addition principle for partitions to prove
+<exercise xml:id="provemultruleforpartsexer">    <p>Use the addition principle for partitions to prove
     the multiplication rule for partitions.</p></exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="provemultruleforpartsexer"/></title>
+		     <p>Let <m>U_1,U_2,\ldots,U_n</m> be a partition
+		       of <m>S</m> such that <m>|U_k|=m</m>
+		       for <m>1\leq k\leq n</m>. We have
+		       <me>|S|=\sum_{k=1}^n |U_k| = \sum_{k=1}^n n =
+			 nm</me>
+		       where the first equality is the addition rule for partitions.
+		     </p>
+</aside>
 
     <p><xref ref="partmultprin"/> provides a way to count the elements in
     a set using a sequence of <em>decisions</em>, or <em>choices</em>. If a set <m>S</m>
@@ -107,11 +136,26 @@ Sets and Counting
   </statement>
   </proposition>
 
-  <exercise>  <p>Use the multiplication principle to show that
+  <exercise xml:id="sizeofcartprodexer">  <p>Use the multiplication principle to show that
       <m>|S\times T| = |S|\cdot |T|</m> for finite sets <m>S,T</m>.
     </p>
   </exercise>
 
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="sizeofcartprodexer"/></title>
+  <p>
+    Consider the partition <m>\{U_s\colon s\in S\}</m> of <m>S\times
+      T</m> given by
+    <me>U_s = \{(s,t)\colon t\in T\}=\pi_1^{-1}(s)</me>
+    for <m>s\in S</m>, where <m>\pi_1\colon S\times T\to S</m> is given
+    by <m>(s,t)\to s</m>. It is clear that the number of elements in the
+    partition is <m>|S|</m>, and the size of each element <m>U_s</m>
+    of the
+    partition is <m>|U_s|=|T|</m>.
+  </p>
+</aside>
+
+  
   <p>As an application of the Multiplication Principle, we count the number of orderings of a finite
     set. Recall that a bijection is a function that is one-to-one and
     onto. An <em>ordering</em> or <em>permutation</em>
@@ -131,7 +175,7 @@ Sets and Counting
       </li>
       <li>And so on, for <m>f(3),f(4),\ldots,f(n-1),f(n)</m>, for which
 	there are <m>n-2,n-3,\ldots,2,1</m> ways to make each of these
-	choices, repsectively.
+	choices, respectively.
       </li>      
     </ol>
     From this sequence of <m>n</m> choices, we conclude that the number
@@ -179,7 +223,7 @@ Sets and Counting
       s_j\text{ for }i\neq j\}</men>
   </p>
 
-    <exercise><p>
+    <exercise xml:id="seqpermdefexer"><p>
       Let <m>S=\{x,y\}</m>.
       <ol>
 	<li>Write out the elements of the set <m>S^3</m>.
@@ -194,7 +238,26 @@ Sets and Counting
 	</li>	
       </ol>
     </p>
-  </exercise>
+    </exercise>
+
+    <aside component="instructor">
+  <title>Instructor solution for <xref ref="seqpermdefexer"/></title>
+  <p>
+      <ol>
+	<li><m>S^3=\{(x,x,x),(x,x,y),(x,y,x),\ldots,(y,y,y)\}</m> (8 elements)
+	</li>
+	<li><m>P_2(S)=\{(x,y),(y,x)\}</m>
+	</li>
+	<li><m>P_3(S)=\emptyset</m>
+	</li>	
+	<li><m>\mathcal{P}(S)=\{\emptyset,\{x\},\{y\},\{x,y\}\}</m>
+	</li>
+	<li><m>\mathcal{P}(P_2(S))=\{\emptyset,\{(x,y)\},\{(y,x)\},\{(x,y),(y,x)\}\}</m>
+	</li>	
+      </ol>
+  </p>
+</aside>
+
 
 <p>    The following sequence counting formulas come from applications of
     the Multiplication Principle.
@@ -228,11 +291,36 @@ Sets and Counting
       </mdn>
     </p>
 
-    <exercise><statement><p>Use the multiplication principle to justify 
+    <exercise xml:id="seqpermcountprfexer"><statement><p>Use the multiplication principle to justify 
 <xref ref="cartprodsize"/> and <xref ref="permnrformula"/>.
 	</p>
       </statement>
     </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="seqpermcountprfexer"/></title>
+  <p>
+For <xref ref="cartprodsize"/>, apply the formula in
+<xref ref="sizeofcartprodexer"/> in the inductive step of a proof by
+induction on <m>r</m>. For <xref ref="permnrformula"/>, apply the
+multiplication principle for a sequence of choices: to specify a
+permutation of <m>r</m> elements of <m>S</m>, first choose some element
+of <m>S</m>. There are <m>|S|</m> ways to make this decision. Having
+made this choice, now choose a second element from the
+remaining <m>|S|-1</m> elements of <m>S</m>. And so on, until you choose
+an <m>r</m>th element of <m>S</m>, for which there are <m>|S|-r+1</m>
+elements remaining to choose from. Alternatively, consider making a
+sequence of two decisions to choose an ordering of all the elements
+in <m>S</m>. First, choose a permutation of length <m>r</m> (there
+are <m>|P_r(S)|</m> ways to make this choice), then choose an ordering
+of the remaining <m>|S|-r</m> elements of <m>S</m> (there
+are <m>(|S|-r)!)</m> ways to make this choice). The multiplication rule
+says that <m>|S|! = |P_r(S)|\cdot (|S|-r)!</m>. Rearranging gives the
+desired result.
+  </p>
+</aside>
+    
+    
 </subsection>
 
 <subsection>
@@ -273,12 +361,23 @@ The sequence-of-choices version of the multiplication principle applies,
 	    </mdn>
     </p>
 
-    <exercise>
+    <exercise xml:id="binomialthmcoeffexer">
       <p>The <em>binomial formula</em> is the algebraic identity
 	<men>(x+y)^n = \sum_{k=0}^n {n\choose k} x^ky^{n-k}.</men>
 	Use counting principles to explain why this is true.
       </p>
     </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="binomialthmcoeffexer"/></title>
+  <p>
+The most important connection for students to see is that
+the monomial <m>x^ky^{n-k}</m> occurs in <m>{n\choose k}</m> products in
+the expansion of <m>(x+y)^n</m>. More careful (but also more pedantic)
+proofs might use induction.
+  </p>
+</aside>
+    
 
 </subsection>
 
@@ -293,7 +392,7 @@ The sequence-of-choices version of the multiplication principle applies,
     infinite.
   </p>
 
-  <exercise><p>
+  <exercise xml:id="countableuncountabledefexer"><p>
       <ol>
 	<li>      Give an example of a function <m>\N\to\N</m> that is
 	  one-to-one and onto, and that is not the identity function.</li>
@@ -316,14 +415,48 @@ The sequence-of-choices version of the multiplication principle applies,
 </ol>
     </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="countableuncountabledefexer"/></title>
+  <p>
+      <ol>
+	<li>     
+	  <m>f(1)=2</m>, <m>f(2)=1</m>, and <m>f(k)=k</m> for <m>k\geq 3</m>
+	</li>
+	<li> <m>f(k)=2k</m>
+	</li>
+	<li>  <m>f(1)=f(2)=1</m>, <m>f(k)=k-1</m> for <m>k\geq 3</m>
+	</li>
+	<li> <m>f(1)=f(2)=2</m>, <m>f(k)=3</m> for <m>k\geq 3</m>
+	</li>
+	<li>No. Suppose, on the contrary, that <m>s=f(m)</m>. By the
+	  construction of <m>s</m>, we have <m>s(m)\neq f(m)(m)</m>, so
+	  it must be that <m>s\neq f(m)</m>. This is a contradiction. We
+	  conclude that <m>s</m> is not in the image of <m>f</m>. We
+	  conclude that <m>S</m> is not countable.
+	</li>
+</ol>
+  </p>
+</aside>
+
 </subsection>
 
 
 <exercises><title>Sets and Counting Exercises</title>
 
-  <exercise><p>Work the <q>Sets and Counting</q>
+  <exercise xml:id="setscountingexerrossandwright"><p>Work the <q>Sets and Counting</q>
       exercise set posted on Canvas.      </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor comment for Sets and Counting exercises <xref ref="setscountingexerrossandwright"/></title>
+  <p>
+Note Spring 2026: using exercises from Section 5.1 of
+<xref ref="ross_and_wright"/>. Exercises and solutions to odd-numbered
+problems are posted on Canvas.
+  </p>
+</aside>
+
 
     </exercises>    
 
