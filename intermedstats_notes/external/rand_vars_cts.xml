@@ -134,7 +134,7 @@ Explain how the formula <xref ref="expectvalcts"/> for expected value of a conti
 
 <exercises>
 
-  <exercise>
+  <exercise xml:id="powerfndensexer">
 	<p>Let <m>k,p</m> be constants, and let <m>f_{k,p}\colon \R\to
 	    \R</m>  be given by
 	  <me>f_{k,p}(x)=
@@ -157,15 +157,66 @@ Explain how the formula <xref ref="expectvalcts"/> for expected value of a conti
 	</p>
   </exercise>
 
-  <exercise>
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="powerfndensexer"/></title>
+  <p>
+    <ol>
+      <li>We have
+	<me>\int_1^{\infty} \frac{1}{x^p}dx = \begin{cases}
+	  \frac{1}{p-1} \amp p\gt 1\\
+	  \text{diverges} \amp p\leq 1
+	  \end{cases}</me>
+	so we see that <m>p\geq 1, k=p-1</m> makes a density function
+	<me>f_{k,p}(x) = \begin{cases}
+	  \frac{p-1}{x^{p}} \amp x\geq 1\\
+	  0 \amp x\leq 1.
+	  \end{cases}
+	</me>
+      </li>
+      <li>Integrating, we have
+	<me>F_{k,p}(x) = \begin{cases}
+	  1-\frac{1}{x^{p-1}} \amp x\geq 1\\
+	  0 \amp x\leq 1.
+	  \end{cases}
+	</me>
+      </li>
+      <li>For <m>E(X)</m> to exist, we need <m>p\gt
+	  2</m>. For <m>\var(X)</m> to exist, we need <m>p\gt 3</m>.
+      </li>
+    </ol>
+  </p>
+</aside>
+
+  
+  <exercise xml:id="dependentctsvarexer">
     <p>Let <m>X,Y</m> be continuous random variables, and suppose there
       exist intervals <m>A=(a_1,a_2]</m>, <m>B=(b_1,b_2]</m> such that
       <m>P(X\in A \text{ and } Y\in B)\neq P(X\in A)P(Y\in B)</m>. Show
       that <m>X,Y</m> are dependent variables. That is, show
-      that <m>F_{XY}\neq F_XF_Y</m>.
+      that <m>F_{XY}(\lambda,\mu_\neq F_X(\lambda)F_Y(\mu)</m> for
+      some <m>\lambda,\mu</m>.
     </p>
   </exercise>
-  
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="dependentctsvarexer"/></title>
+  <p>
+    We have
+    <md>
+      <mrow>P(X\in A) \amp = F_X(a_2)-F_X(a_1)</mrow>
+      <mrow>P(Y\in B) \amp = F_Y(b_2)-F_Y(b_1)</mrow>
+      <mrow>P(X\in A \text{ and } Y\in B) \amp =
+	F_{XY}(a_2,b_2)-F_{XY}(a_1,b_2)</mrow>
+      <mrow>\amp -F_{XY}(a_2,b_1)+F_{XY}(a_1,b_1)</mrow>
+    </md>
+    (draw pictures!).
+    If <m>F_{XY}(u,v)=F_X(u)F_Y(v)</m> for all <m>u,v</m>, then the
+     expression on the right side of the last equation equals the
+    product of the expressions on the right sides of the first two
+    equations. This proves the contrapositive of the desired statement.
+  </p>
+</aside>
+
 
 </exercises>
 

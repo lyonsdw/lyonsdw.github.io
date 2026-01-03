@@ -331,7 +331,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3",
   "title": "General Probability Models",
-  "body": " General Probability Models   In general, a probability model is a pair , where is a set, and where is a function on a subset of the power set of . What all probability models have in common are the vocabulary ( ) and properties ( ) that you have already seen for finite probability models in the previous section. We begin with a generalization of the finite probability model.    Discrete Probability Models  The definitions ( , , ) for a finite probability model generalize naturally for countably infinite probability spaces. The only necessary change is to replace the word finite with the phrase finite or countably infinite . Together, finite probability models and their countably infinite generalizations are called discrete probability models .   A probability function on a finite or countably infinite set is a function that satisfies . A discrete probability measure on a finite or countably infinite space is a function given by for , where is a probability function on . A discrete probability model is a pair , where is a finite or countably infinite set, and where is a discrete probability measure on .   Example. Let , and let given by .    Show that is a probability function.  Find the probability of the event .  Find the probability of the event .     Samples from probability models. For a discrete probability model with probability function , we define the probability space of samples of size from to be the space with probability function defined by .   Show that the function is indeed a probability function.  Do simple random samples make sense for infinite probability spaces?       Uncountable probability spaces  For an uncountable set , it is impossible to have a probability function. That is, there does not exist any function that satisfies . Nevertheless, it is possible to define a probability measure in a way that satisfies all of the properties in by restricting the set of events to a proper subset of the power set . In these notes, we will omit the technical details for how this is done. Instead we will illustrate with two examples.  Why not? Why is it impossible to have a probability function on an uncountable set?   Uniform probability measures. Let be the set of points inside of a geometric figure with a finite area or volume, say, a two-dimensional figure with area equal to square units. Given any rectangle , define to be This probability measure is uniform in the sense that it doesn't matter where is located with . The probability of is completely determined by its area. Similarly, the uniform probability measure on an interval of real numbers is given by for any interval .  Infinite sequences of coin tosses Let be the set of infinite sequences of tosses of a fair coin. For , each entry is one of the two outcomes in the probability space ( is for coin , is for heads , and is for tails ) with probability function . Now suppose that , so that (see ). Let is the subset of defined by If it is possible to define a probability measure , then intuition demands that we must have In fact it turns out that such a probability measure exists. We will not give the full details for how it is constructed. Happily, it turns out that give us what we need to work with the probability space .   Explain why is uncountable. Explain why there can be no probability function on . Find the probability that the first head in an infinite sequence of tosses occurs on toss number 5.    Samples from uncountable probability models. For an uncountable probability model , we define the probability space of samples of size from to be the space with probability measure defined by where are events in .  Check one or more properties of probability for one or more special cases for .      Solve one or more problems in .    Search for probability problems. Present one or more problems and solutions that you found instructive, or amusing, or both.    "
+  "body": " General Probability Models   In general, a probability model is a pair , where is a set, and where is a function on a subset of the power set of . What all probability models have in common are the vocabulary ( ) and properties ( ) that you have already seen for finite probability models in the previous section. We begin with a generalization of the finite probability model.    Discrete Probability Models  The definitions ( , , ) for a finite probability model generalize naturally for countably infinite probability spaces. The only necessary change is to replace the word finite with the phrase finite or countably infinite . Together, finite probability models and their countably infinite generalizations are called discrete probability models .   A probability function on a finite or countably infinite set is a function that satisfies . A discrete probability measure on a finite or countably infinite space is a function given by for , where is a probability function on . A discrete probability model is a pair , where is a finite or countably infinite set, and where is a discrete probability measure on .   Example. Let , and let given by .    Show that is a probability function.  Find the probability of the event .  Find the probability of the event .     Samples from probability models. For a discrete probability model with probability function , we define the probability space of samples of size from to be the space with probability function defined by .   Show that the function is indeed a probability function.  Do simple random samples make sense for infinite probability spaces?       Uncountable probability spaces  For an uncountable set , it is impossible to have a probability function. That is, there does not exist any function that satisfies . Nevertheless, it is possible to define a probability measure in a way that satisfies all of the properties in by restricting the set of events to a proper subset of the power set . In these notes, we will omit the technical details for how this is done. Instead we will illustrate with two examples.  Why not? Why is it impossible to have a probability function on an uncountable set?   Uniform probability measures. Let be the set of points inside of a geometric figure with a finite area or volume, say, a two-dimensional figure with area equal to square units. Given any rectangle , define to be This probability measure is uniform in the sense that it doesn't matter where is located with . The probability of is completely determined by its area. Similarly, the uniform probability measure on an interval of real numbers is given by for any interval .  Infinite sequences of coin tosses Let be the set of infinite sequences of tosses of a fair coin. For , each entry is one of the two outcomes in the probability space ( is for coin , is for heads , and is for tails ) with probability function . Now suppose that , so that (see ). Let is the subset of defined by If it is possible to define a probability measure , then intuition demands that we must have In fact it turns out that such a probability measure exists. We will not give the full details for how it is constructed. Happily, it turns out that give us what we need to work with the probability space .     Explain why is uncountable.  Find the probability that the first head in an infinite sequence of tosses occurs on toss number 5.      Samples from uncountable probability models. For an uncountable probability model , we define the probability space of samples of size from to be the space with probability measure defined by where are events in .  Check one or more properties of probability from for one or more special cases for .      Solve one or more problems in .    Search for probability problems. Present one or more problems and solutions that you found instructive, or amusing, or both.    "
 },
 {
   "id": "probability_general_section-3-3",
@@ -370,22 +370,22 @@ var ptx_lunr_docs = [
   "body": " Show that the function is indeed a probability function.  Do simple random samples make sense for infinite probability spaces?    "
 },
 {
-  "id": "probability_general_section-4-3",
+  "id": "whynoprobfnuncoutableexer",
   "level": "2",
-  "url": "probability_general_section.html#probability_general_section-4-3",
+  "url": "probability_general_section.html#whynoprobfnuncoutableexer",
   "type": "Checkpoint",
   "number": "3.4",
   "title": "",
   "body": "Why not? Why is it impossible to have a probability function on an uncountable set?  "
 },
 {
-  "id": "probability_general_section-4-6",
+  "id": "seqoftossesexer",
   "level": "2",
-  "url": "probability_general_section.html#probability_general_section-4-6",
+  "url": "probability_general_section.html#seqoftossesexer",
   "type": "Checkpoint",
   "number": "3.5",
   "title": "",
-  "body": " Explain why is uncountable. Explain why there can be no probability function on . Find the probability that the first head in an infinite sequence of tosses occurs on toss number 5.   "
+  "body": "   Explain why is uncountable.  Find the probability that the first head in an infinite sequence of tosses occurs on toss number 5.    "
 },
 {
   "id": "probability_general_section-4-7",
@@ -397,13 +397,13 @@ var ptx_lunr_docs = [
   "body": "samples of size "
 },
 {
-  "id": "probability_general_section-4-8",
+  "id": "probpropsuncountableexer",
   "level": "2",
-  "url": "probability_general_section.html#probability_general_section-4-8",
+  "url": "probability_general_section.html#probpropsuncountableexer",
   "type": "Checkpoint",
   "number": "3.6",
   "title": "",
-  "body": "Check one or more properties of probability for one or more special cases for .  "
+  "body": "Check one or more properties of probability from for one or more special cases for .  "
 },
 {
   "id": "probability_general_section-5-1",
@@ -430,7 +430,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4",
   "title": "Discrete Random Variables",
-  "body": " Discrete Random Variables   A random variable is a function , where is a probability model and is a set. For discrete probability models, this is the end of the definition; for general (possibly uncountable) probability models, further technical specifications are required to define random variables. Fortunately, the theory of random variables on discrete probability spaces will provide practical ways to think about and use continuous random variables without having to be concerned about every detail of general probability spaces. A random variable is called quantitative if its image is any subset of the real numbers; otherwise, a random variable is called qualitative . A random variable is called discrete if its image is finite or countably infinite; otherwise, a random variable is called continuous . In this section, we will develop vocabulary and facts for quantitative random variables whose underlying probability models are discrete.   Definitions and properties    Events defined by random variables  Let be a discrete probability model and let be a random variable. Given a subset , we define the event by In particular, if is a quantitative random variable and is a real number, the event is the event     Make up one or more examples of a qualitative random variable and a quantitative random variable on a finite probability with five or so elements. For both variables, choose some subsets of the codomain and find the events .    Let be discrete random variable. The (cumulative) distribution function (or c.d.f. ) for is the function defined by    Make up one or more examples of a quantitative random variable on a finite probability space with five or so elements and sketch a graph of the distribution function.    Properties of distribution functions  Let be a discrete random variable. The distribution function has the following properties.  is nondecreasing, that is, if then .  is continuous from the right, that is, for all .  and .     Prove the properties in . Illustrate how the properties look in the examples you made up in the Checkpoints above.   Vocabulary related to the distribution function. The distribution function provides a ranking of the values of a random variable, for which we use the following vocabulary. Let be a real number, and let . We say that has the quantile rank , and we say that has -th percentile rank. These terms are used whether or not is an actual value of for some .  If were invertible, then we could choose any and solve the equation . It would be natural to say that the solution is the  -th percentile value of . But distribution functions of discrete random variables are not invertible. The set of solutions to an equation is either empty or consists of an interval . This means that we have to make slightly artificial definitions if we wish to refer to the -th percentile value for . If , then the -th percentile value of is defined to the be smallest number such that . If , then the th percentile value of is defined to be . With these definitions, the median is the -th percentile value. The upper quartile is the -th percentile value, and the lower quartile is the -th percentile value. The interquartile range (IQR) is the upper quartile minus the lower quartile.  Explain and give examples about the statements regarding the possibilities for for a discrete random variable.   Box plots. A box plot (or a box and whiskers plot) is a visual representation of some basic features of a random variable. One dimension of the box (it can be horizontal width or the vertical height, let's say it is the horizontal width) is arbitrary; the other dimension (the vertical height, in this description) is equal to the interquartile range. A vertical scale is drawn on one side or the other of the box. A horizontal line from one vertical side of the box to the other is drawn at the height of the median. Vertical extensions (the whiskers ) from the top and bottom of the box extend to the maximum and minimum values of the random variable.   Find examples of box plots. Pick a style you like and make a bunch for yourself.     Histograms  Let be a distribution function for a random variable . Let be a closed interval of the real line, and let be a partition , that is, we have Let denote the interval . Let denote the width of , and let . We define to be a rectangular region so that the area of is . The histogram for on with partition is a collection of rectangular regions . The intervals are called the class intervals for the histogram.    A frequently used alternative convention for histograms is to switch the closed and open ends of the class intervals, that is, to use . When the distinction has to be made clear, we say that uses the left endpoint convention , while the usual definition uses the right endpoint convention . In the case of the left endpoint convention, is still defined to be . Write an expression for the left endpoint convention version in terms of the distribution function .  What would be wrong about using ?  For a random variable whose values are whole numbers only, it is common to use class intervals with edges on half-integers (that is, for some integer , for every ). Why is this better than using class intervals with edge points on whole numbers?  Generate data (a list of numbers) in the interval . Choose three different partitions: one partition with 3 intervals, another partition with 5 intervals, and another partition with 7 intervals. Draw the histogram for each partition.      Expectation  Here is a simple example that motivates the notion of expected value. Suppose you play a dice game in which you win two dollars every time your dice roll comes up showing the six face, and you lose a dollar if you roll something different from a six. In 600 rolls, you would expect to roll a six about 100 times. From this you would gain 200 dollars. You would expect to roll something different from a six about 500 times. From this you would lose 500 dollars. Your net gain is dollars, which averages to dollars per roll. You could have found this by the calculation This is a sum of the form , where value is the value of a random variable in this case, win\/loss per roll. Here is the formal mathematical definition.  Let be a random variable on a discrete probability space with probability function . The expected value of , denoted , is defined to be The expected value of a random variable is also called its average or mean , and we write (or just , if is clear from context) for . It is sometimes useful to group the summands in as follows.      Make up several random variables on small finite probability spaces. Calculate their expected values.  Let be a random variable and let . Show that .  Justify .     Variance and standard deviation are measures of the spread of a random variable about its mean. The variance of , denoted or (or just , if is understood), is The standard deviation of , denoted or (or just ), is the square root of the variance.     Calculate the variance for each of the examples you made up in the previous Checkpoint.  Let be a random variable and let . Show that .  Show the two expressions for variance are equal.     Standardized random variables. A random variable is said to be standardized if and . If is any random variable with and , then the variable is standardized.  Verify the last claim above.     One basic example  In a later section, we will introduce several important random variables that arise naturally from samples taken from probability spaces. Many of these sample variables begin with the simplest possible probability with just two outcomes. Here are the definitions.   A Bernoulli variable is a discrete random variable that has exactly two values, and . It is traditional to use the symbols to denote the probabilities and .   In the definition of Bernoulli variable, the probability space is not specified. The simplest possible probability space for a Bernoulli variable is a 2-element set (where might represent outcomes heads and tails , or win and lose , or yes and no , etc.), with probability function , . However, the sample space for a Bernoulli variable could have any number of elements.  Show that and for a Bernoulli variable .  Find a 10-element probability space and probability function for a Bernoulli variable with . Find an infinite probability space and probability function for a Bernoulli variable with .    Independence and covariance  Let be random variables on the same sample space. The joint distribution function  is given by Variables are called independent if . If are not independent, they are called dependent . The covariance of and , denoted is     If are independent, then .     Show by example that the converse of is false.  Show that two discrete random variables on a finite sample space are independent if and only if for every pair of sets . This demonstrates why we use the term independent .      "
+  "body": " Discrete Random Variables   A random variable is a function , where is a probability model and is a set. For discrete probability models, this is the end of the definition; for general (possibly uncountable) probability models, further technical specifications are required to define random variables. Fortunately, the theory of random variables on discrete probability spaces will provide practical ways to think about and use continuous random variables without having to be concerned about every detail of general probability spaces. A random variable is called quantitative if its image is any subset of the real numbers; otherwise, a random variable is called qualitative . A random variable is called discrete if its image is finite or countably infinite; otherwise, a random variable is called continuous . In this section, we will develop vocabulary and facts for quantitative random variables whose underlying probability models are discrete.   Definitions and properties    Events defined by random variables  Let be a discrete probability model and let be a random variable. Given a subset , we define the event by In particular, if is a quantitative random variable and is a real number, the event is the event     Make up one or more examples of a qualitative random variable and a quantitative random variable on a finite probability with five or so elements. For both variables, choose some subsets of the codomain and find the events .    Let be discrete random variable. The (cumulative) distribution function (or c.d.f. ) for is the function defined by    Make up one or more examples of a quantitative random variable on a finite probability space with five or so elements and sketch a graph of the distribution function.    Properties of distribution functions  Let be a discrete random variable. The distribution function has the following properties.  is nondecreasing, that is, if then .  is continuous from the right, that is, for all .  and .     Prove the properties in . Illustrate how the properties look in the examples you made up in the Checkpoints above.   Vocabulary related to the distribution function. The distribution function provides a ranking of the values of a random variable, for which we use the following vocabulary. Let be a real number, and let . We say that has the quantile rank , and we say that has -th percentile rank. These terms are used whether or not is an actual value of for some .  If were invertible, then we could choose any and solve the equation . It would be natural to say that the solution is the  -th percentile value of . But distribution functions of discrete random variables are not invertible. The set of solutions to an equation is either empty or consists of an interval . This means that we have to make slightly artificial definitions if we wish to refer to the -th percentile value for . If , then the -th percentile value of is defined to the be smallest number such that . If , then the th percentile value of is defined to be . With these definitions, the median is the -th percentile value. The upper quartile is the -th percentile value, and the lower quartile is the -th percentile value. The interquartile range (IQR) is the upper quartile minus the lower quartile.  Explain and give examples about the statements regarding the possibilities for for a discrete random variable.   Box plots. A box plot (or a box and whiskers plot) is a visual representation of some basic features of a random variable. One dimension of the box (it can be horizontal width or the vertical height, let's say it is the horizontal width) is arbitrary; the other dimension (the vertical height, in this description) is equal to the interquartile range. A vertical scale is drawn on one side or the other of the box. A horizontal line from one vertical side of the box to the other is drawn at the height of the median. Vertical extensions (the whiskers ) from the top and bottom of the box extend to the maximum and minimum values of the random variable.   Find examples of box plots. Pick a style you like and make a bunch for yourself.     Histograms  Let be a distribution function for a random variable . Let be a closed interval of the real line, and let be a partition , that is, we have Let denote the interval . Let denote the width of , and let . We define to be a rectangular region so that the area of is . The histogram for on with partition is a collection of rectangular regions . The intervals are called the class intervals for the histogram.    A frequently used alternative convention for histograms is to switch the closed and open ends of the class intervals, that is, to use . When the distinction has to be made clear, we say that uses the left endpoint convention , while the usual definition uses the right endpoint convention . In the case of the left endpoint convention, is still defined to be . Write an expression for the left endpoint convention version in terms of the distribution function .  What would be wrong about using ?  For a random variable whose values are whole numbers only, it is common to use class intervals with edges on half-integers (that is, for some integer , for every ). Why is this better than using class intervals with edge points on whole numbers?  Generate data (a list of numbers) in the interval . Choose three different partitions: one partition with 3 intervals, another partition with 5 intervals, and another partition with 7 intervals. Draw the histogram for each partition.      Expectation  Here is a simple example that motivates the notion of expected value. Suppose you play a dice game in which you win two dollars every time your dice roll comes up showing the six face, and you lose a dollar if you roll something different from a six. In 600 rolls, you would expect to roll a six about 100 times. From this you would gain 200 dollars. You would expect to roll something different from a six about 500 times. From this you would lose 500 dollars. Your net gain is dollars, which averages to dollars per roll. You could have found this by the calculation This is a sum of the form , where value is the value of a random variable in this case, win\/loss per roll. Here is the formal mathematical definition.  Let be a random variable on a discrete probability space with probability function . The expected value of , denoted , is defined to be The expected value of a random variable is also called its average or mean , and we write (or just , if is clear from context) for . It is sometimes useful to group the summands in as follows.      Make up several random variables on small finite probability spaces. Calculate their expected values.  Let be a random variable and let . Show that .  Justify .     Variance and standard deviation are measures of the spread of a random variable about its mean. The variance of , denoted or (or just , if is understood), is The standard deviation of , denoted or (or just ), is the square root of the variance.     Calculate the variance for each of the examples you made up in the previous Checkpoint.  Let be a random variable and let . Show that .  Show the two expressions for variance are equal.     Standardized random variables. A random variable is said to be standardized if and . If is any random variable with and , then the variable is standardized.  Verify the last claim above.     One basic example  In a later section, we will introduce several important random variables that arise naturally from samples taken from probability spaces. Many of these sample variables begin with the simplest possible probability with just two outcomes. Here are the definitions.   A Bernoulli variable is a discrete random variable that has exactly two values, and . It is traditional to use the symbols to denote the probabilities and .   In the definition of Bernoulli variable, the probability space is not specified. The simplest possible probability space for a Bernoulli variable is a 2-element set (where might represent outcomes heads and tails , or win and lose , or yes and no , etc.), with probability function , . However, the sample space for a Bernoulli variable could have any number of elements.   Show that and for a Bernoulli variable .  Find a 10-element probability space and probability function for a Bernoulli variable with . Find an infinite probability space and probability function for a Bernoulli variable with .      Independence and covariance  Let be random variables on the same sample space. The joint distribution function  is given by Variables are called independent if for all . If are not independent, they are called dependent . The covariance of and , denoted is     If are independent, then .     Show by example that the converse of is false.  Show that two discrete random variables on a finite sample space are independent if and only if for every pair of sets . This demonstrates why we use the term independent .      "
 },
 {
   "id": "rand_vars_discrete_section-2-1",
@@ -451,9 +451,9 @@ var ptx_lunr_docs = [
   "body": " Events defined by random variables  Let be a discrete probability model and let be a random variable. Given a subset , we define the event by In particular, if is a quantitative random variable and is a real number, the event is the event   "
 },
 {
-  "id": "rand_vars_discrete_section-3-3",
+  "id": "qualquantrandvarsegexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-3-3",
+  "url": "rand_vars_discrete_section.html#qualquantrandvarsegexer",
   "type": "Checkpoint",
   "number": "4.2",
   "title": "",
@@ -469,9 +469,9 @@ var ptx_lunr_docs = [
   "body": " Let be discrete random variable. The (cumulative) distribution function (or c.d.f. ) for is the function defined by  "
 },
 {
-  "id": "rand_vars_discrete_section-3-5",
+  "id": "distfnegexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-3-5",
+  "url": "rand_vars_discrete_section.html#distfnegexer",
   "type": "Checkpoint",
   "number": "4.4",
   "title": "",
@@ -487,9 +487,9 @@ var ptx_lunr_docs = [
   "body": " Properties of distribution functions  Let be a discrete random variable. The distribution function has the following properties.  is nondecreasing, that is, if then .  is continuous from the right, that is, for all .  and .    "
 },
 {
-  "id": "rand_vars_discrete_section-3-7",
+  "id": "distfnpropexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-3-7",
+  "url": "rand_vars_discrete_section.html#distfnpropexer",
   "type": "Checkpoint",
   "number": "4.6",
   "title": "",
@@ -514,18 +514,18 @@ var ptx_lunr_docs = [
   "body": "median upper quartile lower quartile interquartile range "
 },
 {
-  "id": "rand_vars_discrete_section-3-10",
+  "id": "percentilepossibilitiesexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-3-10",
+  "url": "rand_vars_discrete_section.html#percentilepossibilitiesexer",
   "type": "Checkpoint",
   "number": "4.7",
   "title": "",
   "body": "Explain and give examples about the statements regarding the possibilities for for a discrete random variable.  "
 },
 {
-  "id": "rand_vars_discrete_section-3-12",
+  "id": "boxplotsegexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-3-12",
+  "url": "rand_vars_discrete_section.html#boxplotsegexer",
   "type": "Checkpoint",
   "number": "4.8",
   "title": "",
@@ -541,9 +541,9 @@ var ptx_lunr_docs = [
   "body": "histogram class intervals "
 },
 {
-  "id": "rand_vars_discrete_section-4-3",
+  "id": "historgramvarsexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-4-3",
+  "url": "rand_vars_discrete_section.html#historgramvarsexer",
   "type": "Checkpoint",
   "number": "4.9",
   "title": "",
@@ -559,9 +559,9 @@ var ptx_lunr_docs = [
   "body": "expected value of "
 },
 {
-  "id": "rand_vars_discrete_section-5-4",
+  "id": "expectationintroexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-5-4",
+  "url": "rand_vars_discrete_section.html#expectationintroexer",
   "type": "Checkpoint",
   "number": "4.10",
   "title": "",
@@ -577,9 +577,9 @@ var ptx_lunr_docs = [
   "body": "variance standard deviation "
 },
 {
-  "id": "rand_vars_discrete_section-5-6",
+  "id": "varianceintroexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-5-6",
+  "url": "rand_vars_discrete_section.html#varianceintroexer",
   "type": "Checkpoint",
   "number": "4.11",
   "title": "",
@@ -595,9 +595,9 @@ var ptx_lunr_docs = [
   "body": "standardized "
 },
 {
-  "id": "rand_vars_discrete_section-5-8",
+  "id": "standardvarexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-5-8",
+  "url": "rand_vars_discrete_section.html#standardvarexer",
   "type": "Checkpoint",
   "number": "4.12",
   "title": "",
@@ -613,13 +613,13 @@ var ptx_lunr_docs = [
   "body": " A Bernoulli variable is a discrete random variable that has exactly two values, and . It is traditional to use the symbols to denote the probabilities and .  "
 },
 {
-  "id": "rand_vars_discrete_section-6-5",
+  "id": "bernoulliexpectvarexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-6-5",
+  "url": "rand_vars_discrete_section.html#bernoulliexpectvarexer",
   "type": "Checkpoint",
   "number": "4.14",
   "title": "",
-  "body": "Show that and for a Bernoulli variable .  Find a 10-element probability space and probability function for a Bernoulli variable with . Find an infinite probability space and probability function for a Bernoulli variable with .  "
+  "body": " Show that and for a Bernoulli variable .  Find a 10-element probability space and probability function for a Bernoulli variable with . Find an infinite probability space and probability function for a Bernoulli variable with .    "
 },
 {
   "id": "rand_vars_discrete_section-7-2",
@@ -628,7 +628,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "4.15",
   "title": "",
-  "body": "Let be random variables on the same sample space. The joint distribution function  is given by Variables are called independent if . If are not independent, they are called dependent . The covariance of and , denoted is   "
+  "body": "Let be random variables on the same sample space. The joint distribution function  is given by Variables are called independent if for all . If are not independent, they are called dependent . The covariance of and , denoted is   "
 },
 {
   "id": "indepimpliescovarzero",
@@ -640,9 +640,9 @@ var ptx_lunr_docs = [
   "body": " If are independent, then .  "
 },
 {
-  "id": "rand_vars_discrete_section-7-4",
+  "id": "covarexer",
   "level": "2",
-  "url": "rand_vars_discrete_section.html#rand_vars_discrete_section-7-4",
+  "url": "rand_vars_discrete_section.html#covarexer",
   "type": "Checkpoint",
   "number": "4.17",
   "title": "",
@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5",
   "title": "Continuous Random Variables",
-  "body": " Continuous Random Variables   General distribution functions    It turns out that the properties given in hold for all quantitative random variables, whether discrete or continuous, and no matter whether the underlying probability model is discrete or general. Even better, it turns out See , Theorem 1.5.3, p.31. that if is any function that satisfies the three properties in , then there exists a probability model and a random variable such that .  Distribution functions for discrete random variables are piecewise constant functions that are discontinuous. The properties in allow for the possibility of continuous distribution functions. The simplest of these is the following.  The uniform distribution function on the interval is given by        Sketch the graph of the uniform distribution function.  Show that the uniform distribution function satisfies the three properties of .  Show that the uniform distribution function defined in is the distribution function for the variable given by , and where probability measure on is the uniform probability measure for subsets of , and the probability measure is zero for subsets outside of .     A random variable is called continuous if its distribution function is continuous on all of the real line. If the distribution function of a random variable is differentiable (or piecewise differentiable, with at most a finite or countably infinite number of points of nondifferentiability), then the derivative is called the probability density function for . If has a probability density function , then we have, for all intervals ,      Sketch the graph of the probability density function for the uniform distribution function.  Show that, if is an integrable function with , then is the probability density function of some random variable with distribution function that satisfies .  Justify .     If is a continuous random variable with probability density function , then is given by if the improper integral on the right converges. If both of the integrals converge, then the variance of is given by   Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.      Let be constants, and let be given by   Find all values of such that is a density function.  For each density function , find the corresponding distribution function .  Let be a random variable with distribution function . Find all values of such that exists. Find all values of such that exists.      Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that .    "
+  "body": " Continuous Random Variables   General distribution functions    It turns out that the properties given in hold for all quantitative random variables, whether discrete or continuous, and no matter whether the underlying probability model is discrete or general. Even better, it turns out See , Theorem 1.5.3, p.31. that if is any function that satisfies the three properties in , then there exists a probability model and a random variable such that .  Distribution functions for discrete random variables are piecewise constant functions that are discontinuous. The properties in allow for the possibility of continuous distribution functions. The simplest of these is the following.  The uniform distribution function on the interval is given by        Sketch the graph of the uniform distribution function.  Show that the uniform distribution function satisfies the three properties of .  Show that the uniform distribution function defined in is the distribution function for the variable given by , and where probability measure on is the uniform probability measure for subsets of , and the probability measure is zero for subsets outside of .     A random variable is called continuous if its distribution function is continuous on all of the real line. If the distribution function of a random variable is differentiable (or piecewise differentiable, with at most a finite or countably infinite number of points of nondifferentiability), then the derivative is called the probability density function for . If has a probability density function , then we have, for all intervals ,      Sketch the graph of the probability density function for the uniform distribution function.  Show that, if is an integrable function with , then is the probability density function of some random variable with distribution function that satisfies .  Justify .     If is a continuous random variable with probability density function , then is given by if the improper integral on the right converges. If both of the integrals converge, then the variance of is given by   Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.      Let be constants, and let be given by   Find all values of such that is a density function.  For each density function , find the corresponding distribution function .  Let be a random variable with distribution function . Find all values of such that exists. Find all values of such that exists.      Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that for some .    "
 },
 {
   "id": "genldistfnsubsect-3",
@@ -703,22 +703,22 @@ var ptx_lunr_docs = [
   "body": "Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.  "
 },
 {
-  "id": "rand_vars_cts_section-3-1",
+  "id": "powerfndensexer",
   "level": "2",
-  "url": "rand_vars_cts_section.html#rand_vars_cts_section-3-1",
+  "url": "rand_vars_cts_section.html#powerfndensexer",
   "type": "Exercise",
   "number": "5.2.1",
   "title": "",
   "body": " Let be constants, and let be given by   Find all values of such that is a density function.  For each density function , find the corresponding distribution function .  Let be a random variable with distribution function . Find all values of such that exists. Find all values of such that exists.    "
 },
 {
-  "id": "rand_vars_cts_section-3-2",
+  "id": "dependentctsvarexer",
   "level": "2",
-  "url": "rand_vars_cts_section.html#rand_vars_cts_section-3-2",
+  "url": "rand_vars_cts_section.html#dependentctsvarexer",
   "type": "Exercise",
   "number": "5.2.2",
   "title": "",
-  "body": " Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that .  "
+  "body": " Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that for some .  "
 },
 {
   "id": "sampling1_section",

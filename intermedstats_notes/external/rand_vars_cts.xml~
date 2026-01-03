@@ -39,7 +39,7 @@ Continuous Random Variables
   <xref ref="distribfunproperties"/> allow for the possibility of
   continuous distribution functions. The simplest of these is the following.
 
-  <definition>
+  <definition xml:id="unifdistfndef">
     <p>The <term>uniform</term> distribution function on the
       interval <m>[a,b]</m> is given by
       <men>F(x) =
@@ -60,10 +60,14 @@ Continuous Random Variables
 	</li>
 	<li>Show that the uniform distribution function satisfies the
 	  three properties of <xref ref="distribfunproperties"/>.</li>
-	<li>Show that the uniform distribution function is equal
-	  to <m>F_X</m>, where <m>\Omega=[a,b]</m> has the uniform
-	  probability measure <xref ref="unifprobmeas"/> and <m>X\colon
-	    \Omega\to\R</m> is given by <m>X(\omega)=\omega</m>.
+	<li>Show that the uniform distribution function <m>F</m> defined
+	  in  <xref ref="unifdistfndef"/> is the
+	  distribution function <m>F_X</m> for the variable <m>X\colon \R\to\R</m> given
+	  by <m>X(\omega)=\omega</m>, and where probability measure
+	  on <m>\Omega=\R</m> is the uniform
+	  probability measure <xref ref="unifprobmeas"/> for subsets
+	  of <m>[a,b]</m>, and the probability measure is zero for
+	  subsets outside of <m>[a,b]</m>.
 	</li>
       </ol>
     </p>
@@ -119,16 +123,18 @@ Continuous Random Variables
       </p>
       
       <exercise><p>
-<ol>  <li>Explain how the formula <xref ref="expectvalcts"/> for expected value of a continuous random
-    variable connects to expected value for a discrete variable.</li>
-  <li>Do examples of random variables with no mean, and with a mean but no
-  variance.</li>
-</ol>
+Explain how the formula <xref ref="expectvalcts"/> for expected value of a continuous random
+    variable connects to expected value for a discrete variable.
 	</p>
       </exercise>
       
   
-      <exercise>
+
+</subsection>
+
+<exercises>
+
+  <exercise>
 	<p>Let <m>k,p</m> be constants, and let <m>f_{k,p}\colon \R\to
 	    \R</m>  be given by
 	  <me>f_{k,p}(x)=
@@ -149,9 +155,18 @@ Continuous Random Variables
 	  </li>
 	  </ol>
 	</p>
-</exercise>
+  </exercise>
 
-</subsection>
+  <exercise>
+    <p>Let <m>X,Y</m> be continuous random variables, and suppose there
+      exist intervals <m>A=(a_1,a_2]</m>, <m>B=(b_1,b_2]</m> such that
+      <m>P(X\in A \text{ and } Y\in B)\neq P(X\in A)P(Y\in B)</m>. Show
+      that <m>X,Y</m> are dependent variables. That is, show
+      that <m>F_{XY}\neq F_XF_Y</m>.
+    </p>
+  </exercise>
+  
 
+</exercises>
 
 </section>
