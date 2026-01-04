@@ -562,11 +562,11 @@ established in the previous Checkpoints above.)
   <definition><p>
     Let <m>X,Y\colon \Omega\to \R</m> be random variables on the same
     sample space. The <term>joint distribution
-      function</term> <m>F_{XY}\colon \R^2\to \R</m> is given by
-    <men>F_{XY}(\lambda,\mu) = P(X\leq \lambda\text{ and }Y\leq
+      function</term> <m>F_{X,Y}\colon \R^2\to \R</m> is given by
+    <men>F_{X,Y}(\lambda,\mu) = P(X\leq \lambda\text{ and }Y\leq
       \mu).</men> Variables <m>X,Y</m> are
       called <term>independent</term>
-      if <m>F_{XY}(\lambda,\mu)=F_X(\lambda)F_Y(\mu)</m> for
+      if <m>F_{X,Y}(\lambda,\mu)=F_X(\lambda)F_Y(\mu)</m> for
       all <m>\lambda,\mu</m>. If <m>X,Y</m> are not independent, they
       are called <term>dependent</term>.  The <term>covariance</term>
       of <m>X</m> and <m>Y</m>, denoted <m>\covar(X,Y)</m> is
@@ -607,15 +607,15 @@ established in the previous Checkpoints above.)
 	  c \amp 1 \amp -1 \amp -1
 	  \end{array}
 	</me>
-	We have <m>\covar(XY)=0</m> but <m>F_{XY}(-2,0)=1/3\neq 2/9 = F_X(-2)F_Y(0)</m>.
+	We have <m>\covar(XY)=0</m> but <m>F_{X,Y}(-2,0)=1/3\neq 2/9 = F_X(-2)F_Y(0)</m>.
       </li>
       <li>One direction is easy. If <m>P(X\in A \text{ and } Y\in B)=P(X\in
 	  A)P(Y\in B)</m> for all <m>A,B</m>, just
 	set <m>A=(-\infty,a)</m>, <m>B=(-\infty,b)</m>, and we
-	have <m>P(X\in A \text{ and } Y\in B)=F_{XY}(a,b)</m>, <m>P(X\in
+	have <m>P(X\in A \text{ and } Y\in B)=F_{X,Y}(a,b)</m>, <m>P(X\in
 	  A)=F_X(a)</m>, and <m>P(Y\in B)=F_Y(b)</m>. For the other
 	direction, 
-	<!-- (suppose <m>F_{XY}(a,b)=F_X(a)F_Y(b)</m> for
+	<!-- (suppose <m>F_{X,Y}(a,b)=F_X(a)F_Y(b)</m> for
 	all <m>a,b</m>), we can show that <m>P(X=a \text{ and
 	}Y=b)=P(X=a)P(Y=b)</m> for all <m>a,b</m>, as follows.-->
 	given
@@ -625,15 +625,15 @@ established in the previous Checkpoints above.)
 	    F_X(a+\epsilon)-F_X(a-\epsilon)</mrow>
 	  <mrow>P(Y=b) \amp = P(Y \in (b-\epsilon,b+\epsilon]) =
 	    F_Y(b+\epsilon)-F_Y(b-\epsilon)</mrow>
-	  <mrow>P(X=a \text{ and } Y=b) \amp = F_{XY}(a+\epsilon,b+\epsilon)
-	    - F_{XY}(a-\epsilon,b+\epsilon)
+	  <mrow>P(X=a \text{ and } Y=b) \amp = F_{X,Y}(a+\epsilon,b+\epsilon)
+	    - F_{X,Y}(a-\epsilon,b+\epsilon)
 	    </mrow>
 	  <mrow>
-	    \amp -  F_{XY}(a+\epsilon,b-\epsilon) +   F_{XY}(a-\epsilon,b-\epsilon)
+	    \amp -  F_{X,Y}(a+\epsilon,b-\epsilon) +   F_{X,Y}(a-\epsilon,b-\epsilon)
 	  </mrow>
 	</md>
 	(draw pictures to see why!). Now use the
-	assumption <m>F_{XY}(u,v)=F_X(u)F_Y(v)</m> (for all <m>u,v</m>)
+	assumption <m>F_{X,Y}(u,v)=F_X(u)F_Y(v)</m> (for all <m>u,v</m>)
 	to show that <m>P(X=a \text{ and }Y=b)=P(X=a)P(Y=b)</m>. Having
 	shown this, we get <m>P(X\in A \text{ and }Y\in B)=P(X\in
 	  A)P(Y\in B)</m> for arbitrary <m>A=\{a_1,\ldots,a_n\},B=\{b_1,\ldots,b_m\}</m> by

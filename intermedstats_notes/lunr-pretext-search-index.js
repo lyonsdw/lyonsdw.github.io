@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5",
   "title": "Continuous Random Variables",
-  "body": " Continuous Random Variables   General distribution functions    It turns out that the properties given in hold for all quantitative random variables, whether discrete or continuous, and no matter whether the underlying probability model is discrete or general. Even better, it turns out See , Theorem 1.5.3, p.31. that if is any function that satisfies the three properties in , then there exists a probability model and a random variable such that .  Distribution functions for discrete random variables are piecewise constant functions that are discontinuous. The properties in allow for the possibility of continuous distribution functions. The simplest of these is the following.  The uniform distribution function on the interval is given by        Sketch the graph of the uniform distribution function.  Show that the uniform distribution function satisfies the three properties of .  Show that the uniform distribution function defined in is the distribution function for the variable given by , and where probability measure on is the uniform probability measure for subsets of , and the probability measure is zero for subsets outside of .     A random variable is called continuous if its distribution function is continuous on all of the real line. If the distribution function of a random variable is differentiable (or piecewise differentiable, with at most a finite or countably infinite number of points of nondifferentiability), then the derivative is called the probability density function for . If has a probability density function , then we have, for all intervals ,      Sketch the graph of the probability density function for the uniform distribution function.  Show that, if is an integrable function with , then is the probability density function of some random variable with distribution function that satisfies .  Justify .     If is a continuous random variable with probability density function , then is given by if the improper integral on the right converges. If both of the integrals converge, then the variance of is given by   Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.      Let be constants, and let be given by   Find all values of such that is a density function.  For each density function , find the corresponding distribution function .  Let be a random variable with distribution function . Find all values of such that exists. Find all values of such that exists.      Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that for some .    "
+  "body": " Continuous Random Variables   General distribution functions    It turns out that the properties given in hold for all quantitative random variables, whether discrete or continuous, and no matter whether the underlying probability model is discrete or general. Even better, it turns out See , Theorem 1.5.3, p.31. that if is any function that satisfies the three properties in , then there exists a probability model and a random variable such that .  Distribution functions for discrete random variables are piecewise constant functions that are discontinuous. The properties in allow for the possibility of continuous distribution functions. The simplest of these is the following.  The uniform distribution function on the interval is given by        Sketch the graph of the uniform distribution function.  Show that the uniform distribution function satisfies the three properties of .  Show that the uniform distribution function defined in is the distribution function for the variable given by , and where probability measure on is the uniform probability measure for subsets of , and the probability measure is zero for subsets outside of .     A random variable is called continuous if its distribution function is continuous on all of the real line. If the distribution function of a random variable is differentiable (or piecewise differentiable, with at most a finite or countably infinite number of points of nondifferentiability), then the derivative is called the probability density function for . If has a probability density function , then we have, for all intervals ,      Sketch the graph of the probability density function for the uniform distribution function.  Show that, if is an integrable function with , then is the probability density function of some random variable with distribution function that satisfies .  Justify .     If is a continuous random variable with probability density function , then is given by if the improper integral on the right converges. If both of the integrals converge, then the variance of is given by    Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.      Let be constants, and let be given by   Find all values of such that is a density function.  For each density function , find the corresponding distribution function .  Let be a random variable with distribution function . Find all values of such that exists. Find all values of such that exists.      Let be continuous random variables, and suppose there exist intervals , such that . Show that are dependent variables. That is, show that for some .    "
 },
 {
   "id": "genldistfnsubsect-3",
@@ -667,9 +667,9 @@ var ptx_lunr_docs = [
   "body": "uniform "
 },
 {
-  "id": "genldistfnsubsect-4",
+  "id": "unifdistdefexer",
   "level": "2",
-  "url": "rand_vars_cts_section.html#genldistfnsubsect-4",
+  "url": "rand_vars_cts_section.html#unifdistdefexer",
   "type": "Checkpoint",
   "number": "5.2",
   "title": "",
@@ -685,22 +685,22 @@ var ptx_lunr_docs = [
   "body": "continuous probability density "
 },
 {
-  "id": "genldistfnsubsect-6",
+  "id": "unifdensfnexer",
   "level": "2",
-  "url": "rand_vars_cts_section.html#genldistfnsubsect-6",
+  "url": "rand_vars_cts_section.html#unifdensfnexer",
   "type": "Checkpoint",
   "number": "5.3",
   "title": "",
   "body": "   Sketch the graph of the probability density function for the uniform distribution function.  Show that, if is an integrable function with , then is the probability density function of some random variable with distribution function that satisfies .  Justify .    "
 },
 {
-  "id": "genldistfnsubsect-8",
+  "id": "expectvalueriemannsumtoctsexer",
   "level": "2",
-  "url": "rand_vars_cts_section.html#genldistfnsubsect-8",
+  "url": "rand_vars_cts_section.html#expectvalueriemannsumtoctsexer",
   "type": "Checkpoint",
   "number": "5.4",
   "title": "",
-  "body": "Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.  "
+  "body": " Explain how the formula for expected value of a continuous random variable connects to expected value for a discrete variable.  "
 },
 {
   "id": "powerfndensexer",
@@ -820,9 +820,9 @@ var ptx_lunr_docs = [
   "body": "correction factor "
 },
 {
-  "id": "sampling1_section-3-5",
+  "id": "simprandsamppropexer",
   "level": "2",
-  "url": "sampling1_section.html#sampling1_section-3-5",
+  "url": "sampling1_section.html#simprandsamppropexer",
   "type": "Checkpoint",
   "number": "6.6",
   "title": "",

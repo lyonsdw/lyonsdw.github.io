@@ -32,7 +32,8 @@ Sampling I
       <mrow>E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
       <mrow>\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
       <mrow>\covar(X_j,X_k)\amp = 0 \text{   for }j\neq k</mrow>
-      <mrow>F_{X_j,X_k}\amp = F_{X_j}F_{X_k} \text{   for }1\leq
+      <mrow>F_{X_j,X_k}(u,v)\amp = F_{X_j}(u)F_{X_k}(v) \text{   for all
+      } u,v, \text{ for }1\leq
       j,k\leq n</mrow>      
     </mdn>
     </p>
@@ -172,11 +173,15 @@ Sampling I
     random sampling, or for survey sampling).
   </p>
 
-     <exercise>
+     <exercise xml:id="simprandsamppropexer">
     <p>Prove <xref ref="simprandsampprop"/>.</p>
     </exercise>
 
-<aside component="instructor"><title>Some derivations for <xref ref="simprandsampprop"/></title>   
+<aside component="instructor"><title>Instructor solution for 
+    <xref ref="simprandsamppropexer"/></title>
+
+  <p><alert>Some derivations for <xref ref="simprandsampprop"/>.</alert></p>
+
   <p><alert>A derivation of <xref ref="covarsimplesampvars"/>.</alert>
     Start with
     <mdn><mrow>E^\ast(X_1X_2)\amp =\sum_{(\omega_1,\ldots,\omega_n)\in\Omega^{n\ast}}X(\omega_1)X(\omega_2)\frac{1}{N(N-1)\cdots

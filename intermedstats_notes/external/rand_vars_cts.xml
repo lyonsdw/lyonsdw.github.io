@@ -53,7 +53,7 @@ Continuous Random Variables
 
   </p>
 
-  <exercise>
+  <exercise xml:id="unifdistdefexer">
     <p>
       <ol>
 	<li>Sketch the graph of the uniform distribution function.
@@ -73,6 +73,20 @@ Continuous Random Variables
     </p>
   </exercise>
 
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="unifdistdefexer"/></title>
+  <p>
+    <ol>
+      <li>Graph is three line segments with nodes
+	at <m>(-\infty,0)</m>, <m>(a,0)</m>, <m>(b,1)</m>, <m>(\infty,1)</m>.
+      </li>
+      <li>(by inspection)</li>
+      <li>(again, by inspection)</li>
+    </ol>
+  </p>
+</aside>
+  
+
       <p>A random variable is called <term>continuous</term> if its
     distribution function is continuous on all of the real line. If the
     distribution function <m>F_X</m> of a random variable <m>X</m> is
@@ -87,7 +101,7 @@ Continuous Random Variables
 
       </p>
 
-      <exercise>
+      <exercise xml:id="unifdensfnexer">
 	<p>
 	  <ol>
 	    <li>Sketch the graph of the probability density function
@@ -102,6 +116,28 @@ Continuous Random Variables
 </ol>
   </p>
 </exercise>
+
+      <aside component="instructor">
+  <title>Instructor solution for <xref ref="unifdensfnexer"/></title>
+  <p>
+    <ol>
+      <li>The graph is three horizontal line segments: the nonzero
+	piece on the interval <m>(a,b)</m>
+	has height <m>1/(b-a)</m>, the other two segments on the
+	intervals <m>(-\infty,a),(b,\infty)</m> have height 0.
+      </li>
+      <li>Define <m>F(x) = \int_{-\infty}^x f(t)\;dt</m>. By the
+	Fundamental Theorem of Calculus, we
+	have <m>F'(x)=f(x)</m>. Because <m>f</m> is nonnegative, we
+	have <m>F</m> is nondecreasing. We have <m>F</m> is continuous
+	(and is therefore continuous from the right) because <m>F</m> is
+	differentiable. It is clear that <m>\lim_{x\to -\infty}F(x) =
+	0</m> and <m>\lim_{x\to \infty}F(x) = 1</m>.
+      </li>
+      <li><xref ref="intforprobformula"/> by the Fundamental Theorem of Calculus.</li>
+    </ol>
+  </p>
+</aside>
 
       <p>
 	If <m>X</m> is a continuous random variable with probability
@@ -122,13 +158,21 @@ Continuous Random Variables
 	</mdn>
       </p>
       
-      <exercise><p>
+      <exercise xml:id="expectvalueriemannsumtoctsexer">
+	<p>
 Explain how the formula <xref ref="expectvalcts"/> for expected value of a continuous random
     variable connects to expected value for a discrete variable.
 	</p>
       </exercise>
       
-  
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="expectvalueriemannsumtoctsexer"/></title>
+  <p>
+<xref ref="expectvalregrouped"/> can be viewed as a Riemann sum that
+approximates the integral <xref ref="expectvalcts"/>. 
+  </p>
+</aside>
+
 
 </subsection>
 
@@ -193,7 +237,7 @@ Explain how the formula <xref ref="expectvalcts"/> for expected value of a conti
       exist intervals <m>A=(a_1,a_2]</m>, <m>B=(b_1,b_2]</m> such that
       <m>P(X\in A \text{ and } Y\in B)\neq P(X\in A)P(Y\in B)</m>. Show
       that <m>X,Y</m> are dependent variables. That is, show
-      that <m>F_{XY}(\lambda,\mu_\neq F_X(\lambda)F_Y(\mu)</m> for
+      that <m>F_{X,Y}(\lambda,\mu_\neq F_X(\lambda)F_Y(\mu)</m> for
       some <m>\lambda,\mu</m>.
     </p>
   </exercise>
@@ -206,11 +250,11 @@ Explain how the formula <xref ref="expectvalcts"/> for expected value of a conti
       <mrow>P(X\in A) \amp = F_X(a_2)-F_X(a_1)</mrow>
       <mrow>P(Y\in B) \amp = F_Y(b_2)-F_Y(b_1)</mrow>
       <mrow>P(X\in A \text{ and } Y\in B) \amp =
-	F_{XY}(a_2,b_2)-F_{XY}(a_1,b_2)</mrow>
-      <mrow>\amp -F_{XY}(a_2,b_1)+F_{XY}(a_1,b_1)</mrow>
+	F_{X,Y}(a_2,b_2)-F_{X,Y}(a_1,b_2)</mrow>
+      <mrow>\amp -F_{X,Y}(a_2,b_1)+F_{X,Y}(a_1,b_1)</mrow>
     </md>
     (draw pictures!).
-    If <m>F_{XY}(u,v)=F_X(u)F_Y(v)</m> for all <m>u,v</m>, then the
+    If <m>F_{X,Y}(u,v)=F_X(u)F_Y(v)</m> for all <m>u,v</m>, then the
      expression on the right side of the last equation equals the
     product of the expressions on the right sides of the first two
     equations. This proves the contrapositive of the desired statement.
