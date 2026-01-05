@@ -581,19 +581,29 @@ established in the previous Checkpoints above.)
   </definition>
 
   <exercise xml:id="covarsumexer">
-    <p>Let <m>X,Y\colon \Omega \to \R</m> be random variables. Show that
-      <men xml:id="covarsumformula">\var(X+Y) = \var(X) + \var(Y) + 2\covar(X+Y).</men>
+    <p>Let <m>X,Y\colon \Omega \to \R</m> be random variables and
+    let <m>a,b,c,d</m> be constants.
+      <ol>
+	<li>Show that
+	  <men xml:id="covarscaleprop">\covar(aX+b,cY+d)=ac\covar(X,Y).</men>
+	</li>
+	<li> Show that
+	  <men xml:id="covarsumformula">\var(X+Y) = \var(X) + \var(Y) +
+	  2\covar(X,Y).</men></li>
+      </ol>
     </p>
   </exercise>
 
   <aside component="instructor">
   <title>Instructor solution for <xref ref="covarsumexer"/></title>
   <p>
-    Start with the defintion <m>\var(X+Y)  = E((X+Y)^2) +
+    <ol>
+      <li>Just do the algebra.</li>
+      <li>Start with the definition <m>\var(X+Y)  = E((X+Y)^2) +
     (E(X+Y))^2</m>, then do algebra and use the linearity properties
     <xref ref="expectvallinsumprop"/> and
     <xref ref="expectvallinscaleprop"/> of
-    expected value.
+    expected value.</li></ol>
   </p>
 </aside>
 

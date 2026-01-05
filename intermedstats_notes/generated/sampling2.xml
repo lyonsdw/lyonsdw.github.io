@@ -25,13 +25,21 @@ Sampling II
     </p>
   </proposition>
 
-    <exercise>
+     <exercise xml:id="basicsamplingexer">
     <p>Do the exercises in
       in <url href="https://mathvista.org/elemstats_notes/basic_sampling">Section 1.8.3
       1.4</url> in <xref ref="lyons_elemstats"/>.
     </p>
     </exercise>
-  
+
+    <aside component="instructor">
+  <title>Instructor solution for <xref ref="basicsamplingexer"/></title>
+  <p>
+Note 1/5/2026: using existing exercise set in Elementary Statistics
+notes for now.
+  </p>
+</aside>
+
     
 </subsection>
 
@@ -66,17 +74,33 @@ Sampling II
     these intervals will fail to contain <m>\mu</m>.
   </p>
   
-    <exercise>
+    <exercise xml:id="confintbasicexer">
       <p>
 	<ol>
 	<li>Show that <m>z_\alpha = \Phi^{-1}((\alpha+1)/2)</m>.
 	</li>
 	<li>Explain why <xref ref="cltinspireconfint"/> holds.</li>
-	<li>Read Section 5.2 and do odd numbered exercises at the end
-	of the section in <xref ref="openintro_stats"/>.</li>
 	</ol>
       </p>
     </exercise>
+
+    <aside component="instructor">
+  <title>Instructor solution for <xref ref="confintbasicexer"/></title>
+  <p>
+    <ol>
+      <li>Draw a picture! Put <m>z_\alpha\gt 0</m> on the horizontal
+      axis of a normal curve graph, sketch the symmetric region with
+	area <m>\alpha</m> between the vertical lines at <m>\pm
+	  z_\alpha</m>, see the left tail has area <m>(1-\alpha)/2</m>,
+	then find <m>\Phi(z_\alpha) = (1-\alpha)/2 + \alpha = (\alpha+1)/2.</m>
+      </li>
+      <li> Draw a picture!
+      </li>
+
+    </ol>
+  </p>
+</aside>
+
 </subsection>
     
 <subsection><title>Hypothesis Testing
@@ -135,9 +159,6 @@ Sampling II
       </ol>
     </p>
   
-    <exercise>
-    <p>	Read Section 5.2 in <xref ref="openintro_stats"/>.</p>
-    </exercise>
     
 </subsection>
     
@@ -150,8 +171,8 @@ Sampling II
       </exercise>
 
     <exercise>
-    <p>	Work the odd numbered exercises at the end
-	of Section 5.2 in <xref ref="openintro_stats"/>.</p>
+    <p>	Read Section 5.2 in <xref ref="openintro_stats"/> and work the odd numbered exercises at the end
+	of the section.</p>
     </exercise>
       
       

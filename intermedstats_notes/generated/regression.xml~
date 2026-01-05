@@ -6,63 +6,46 @@ Regression
 <introduction>
   <p>The general goal of regression analysis is to find a <q>nice</q>
     function whose graph provides a <q>good fit</q> to a set of data
-    points. The function can then be used as a rough estimator for the
-    data in the same way that the average value of a random variable can
-    be used as a rough estimator for the random variable. In this
-    section, we explain how regression works for 2-dimensional data,
-    that is, points in the plane, and we give the details for the linear
-    function that gives a best fit to the given data.
+    points. In this section, we explain how regression works for
+    2-dimensional data, that is, points in the plane, and we give the
+    details for the linear function that gives a best fit to the given
+    data.
   </p>
 </introduction>
 
 <subsection><title>Measuring fit</title>
 
-<p>We begin by modeling data with random variables. In many
-  applications, a set of
-  <m>2</m>-dimensional data points 
-  <me>D=\{(x_1,y_1),(x_2,y_2),\ldots, (x_n,y_n)\}\subseteq \R^2</me>
-  arises from sampling random variables <m>X,Y</m> on some probability
-  space <m>\Omega</m>. That is, the data point <m>(x_k,y_k)</m> is given
-  by 
-<me>(x_k,y_k)=(X(\omega_k),Y(\omega_k))</me>
-where <m>(\omega_1,\omega_2,\ldots, \omega_n)</m> is a sample of size <m>n</m> from
-<m>\Omega</m>. For the purposes of
-data fitting, we can use simpler versions of <m>\Omega,X,Y</m>, as follows.
-Let <m>\Omega</m> be any space with 
-<m>n</m> elements, say, <m>\Omega=\{1,2,\ldots,n\}</m>, with the
-  probability function given by <m>p(k)=1/n</m> for
-all <m>k\in\Omega</m>. Let <m>X,Y</m> be random variables on <m>\Omega=\{1,2,\ldots,n\}</m>
-given by
-<me>X(k) = x_k, Y(k)=y_k</me> for <m>k\in \Omega</m>. For the
-  remainder of this section, we use <m>X,Y</m> to refer to these
-  simplified variables.
-</p>
-
-<p>
-Given a
-  function <m>y=f(x)</m>, let <m>e\colon\Omega\to\R</m> the random
-  variable given by
-  <me>e= Y-f(X)</me>
+  <p>Let <m>X,Y\colon \Omega\to \R</m> be random variables on a
+    probability space <m>\Omega</m>. Given a function <m>y=f(x)</m>, we define the
+    variable <m>e\colon \Omega\to \R</m> by
+    <me>e=Y-f(X).</me>
   (the letter <m>e</m> is for <em>error</em> function).
   The overall fit of <m>f</m> to the data is measured by the standard
   deviation <m>\sigma_e</m> of the error variable <m>e</m>. The idea is that if <m>\sigma_e</m> is low,
-  then <m>f</m> is a good fit. The quantity <m>\sigma_e</m> is called
-  the <term>rms error</term><fn>The acronym <em>rms</em> is
+    then <m>f</m> is a good fit, in the sense that the overall error
+    incurred by using values <m>f(X)</m> to predict values of <m>Y</m>
+  is minimized. The quantity <m>\sigma_e</m> is called
+    the <term>rms error</term>
+    for the function <m>f</m>.<fn>The acronym <em>rms</em> is
   for <q>root-mean-square</q>, which comes from the formula for standard
     deviation, which is the square <em>root</em>
     of the <em>mean</em>
     of the <em>square</em>
     deviation.
   </fn>
-  for the function <m>f</m>.
 
 </p>
-<exercise>
+
+  
+  <exercise>
   <p>Plot the graph of <m>y=f(x)=x^2</m> on the
-    interval <m>[1,3]</m>. Plot a data set of three points that
-    have <m>x</m>-coordinates in the interval <m>[1,3]</m>, and such
-    that the points near, but not exactly on, the
-    graph. Calculate <m>\sigma_e</m>. Repeat this procedure for two or
+    interval <m>[1,3]</m>. Make up random variables <m>X,Y</m>
+    on <m>\Omega=\{a,b,c\}</m>, with probability function given by <m>p(\omega)=1/3</m> for <m>\omega\in \Omega</m>.
+    Choose your variable <m>X</m> so that its values 
+    are in the interval <m>[1,3]</m>, and choose your variable <m>Y</m>
+    so that the points <m>(X(a),Y(a)), (X(b),Y(b)), (X(c),Y(c))</m>
+    lie near, but not exactly on, the
+    graph <m>y=x^2</m>. Calculate <m>\sigma_e</m>. Repeat this procedure for two or
     three more data sets of three points each in a way that illustrates
     how the size of <m>\sigma_e</m> relates to your visual sense of <q>fit</q>.
     </p>
@@ -73,11 +56,12 @@ Given a
 <subsection>
   <title>Linear regression</title>
 
-  <p>The <term>regression line</term> (also called the line of <em>best
+  <p>The <term>regression line for <m>Y</m> on <m>X</m></term> (also called the line of <em>best
       fit</em>, or the line of <em>least squares error</em>), is the
       linear function <m>y=f(x)=mx+b</m> that has the smallest value
-      of <m>\sigma_e</m>, among all possible lines, for a given data
-      set. It is not obvious, at first, that such a function should
+      of <m>\sigma_e</m>, among all possible lines, for a given pair of
+    random variables <m>X,Y</m>.
+      It is not obvious, at first, that such a function should
       exist, or that is should be unique. But it turns out that there is
       precisely one such best fit line.
   </p>
@@ -113,13 +97,32 @@ Given a
   <exercise>
     <p>Show the derivations for <xref ref="regrlinestd"/> and <xref ref="regrlinegen"/>.</p>
   </exercise>
+
+  <p>In practice, as is often the case with applications of sampling
+    theory, we do not have full knowledge of the random
+    variables <m>X,Y</m>, but we have a sample
+    <me>((x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n))</me>
+    where <m>(x_k,y_k)=(X(\omega_k),Y(\omega_k))</m> for some
+    sample <m>(\omega_1,\omega_2,\ldots,\omega)</m> from <m>\Omega</m>. In this case, we
+    must estimate the
+    quantities <m>\mu_X,\mu_Y,\sigma_X,\sigma_Y,\covar(X,Y)</m> from the
+    finite data set. To do this we use the sample
+    average <m>\overline{X}</m> (see <xref ref="sampleavedef"/>) and the sample
+    standard deviation <m>s</m> (see <xref ref="samplevardef"/>) to estimate <m>\mu_X</m>
+    and <m>\sigma_X</m>, respectively. Similarly, we use the sample mean
+    and sample standard deviation for <m>Y</m> to
+    estimate <m>\mu_Y,\sigma_Y</m>. To estimate <m>\covar(X,Y)</m>, we
+    use
+    <men>\covar_{\small \rm samp}(X,Y) = \frac{1}{n-1}\sum_{k=1}^n (x_k-\overline{X})(y_k-\overline{Y}).</men>
+  </p>
   
   <p>Read <url href="https://mathvista.org/elemstats_notes/regression_section.html">Section
   2.2</url> of <xref ref="lyons_elemstats"/> for further vocabulary and
   facts about the regression line.
   </p>
-  
 </subsection>
+
+
 
 <exercises>
 
