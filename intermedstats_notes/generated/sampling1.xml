@@ -28,24 +28,130 @@ Sampling I
     and <m>\var(X)=\sigma^2</m>. 
     We have the following.
     <mdn>
-      <mrow>F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
-      <mrow>E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
-      <mrow>\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
-      <mrow>\covar(X_j,X_k)\amp = 0 \text{   for }j\neq k</mrow>
-      <mrow>F_{X_j,X_k}(u,v)\amp = F_{X_j}(u)F_{X_k}(v) \text{   for all
+      <mrow xml:id="sampvaridentdistprop">F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
+      <mrow xml:id="sampvarmeanprop">E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
+      <mrow xml:id="sampvarvarprop">\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
+      <mrow xml:id="sampvarscovarprop">\covar(X_j,X_k)\amp = 0 \text{   for }j\neq k</mrow>
+      <mrow xml:id="sampvarsindepprop">F_{X_j,X_k}(u,v)\amp = F_{X_j}(u)F_{X_k}(v) \text{   for all
       } u,v, \text{ for }1\leq
       j,k\leq n</mrow>      
     </mdn>
     </p>
  </proposition>
 
- <exercise>
-   <p>Prove <xref ref="sampvarbasicprop"/> for the case of discrete variables.
-		       </p>
+ <exercise xml:id="samplevarpropdiscreteexer">
+   <p>Prove <xref ref="sampvarbasicprop"/> for the case of discrete
+   variables.</p>
+ </exercise>
+ 
+ <aside component="instructor">
+  <title>Instructor solution for <xref ref="samplevarpropdiscreteexer"/></title>
+  <p>
+    <alert>Proof of <xref ref="sampvaridentdistprop"/>.</alert> We
+    have
+    <md>
+      <mrow>F_{X_k}(\lambda) \amp = P(X_k\leq \lambda)</mrow>
+      <mrow>\amp = P(X(\omega_k)\leq \lambda)</mrow>
+      <mrow>\amp = \sum_{\vec{\omega}\colon X(\omega_k)\leq
+	\lambda}p(\omega_1)\cdots p(\omega_n)</mrow>
+      <mrow>\amp = \left(\sum_{\omega\in \Omega\colon X(\omega)\leq
+      \lambda}p(\omega)\right)\left( \sum_{\vec{\omega}'\in
+	\Omega^{n-1}}p(\omega'_1)\cdots p(\omega'_{n-1})\right)</mrow>
+      <mrow>\amp = P(X\leq \lambda) \cdot 1</mrow>
+      <mrow>\amp = F_X(\lambda).</mrow>
+    </md>
+  </p>
+
+  <p>
+    <alert>Proof of <xref ref="sampvarmeanprop"/>.</alert> We have
+    <md>
+      <mrow>E(X_k) \amp = \sum_{\vec{\omega}}X_k(\vec{\omega})
+	p(\vec{\omega})</mrow>
+      <mrow>\amp = \sum_{\vec{\omega}}X(\omega_k)p(\omega_1)\cdots
+	p(\omega_n)</mrow>
+      <mrow>\amp = \left(\sum_{\omega\in\Omega}X(\omega)p(\omega)\right)
+      \left(\sum_{\vec{\omega}'\in \Omega^{n-1}}p(\omega'_1)\cdots
+	p(\omega'_{n-1})\right)</mrow>
+      <mrow>\amp = E(X)\cdot 1 = \mu.</mrow>
+    </md>
+  </p>
+
+      <p>
+    <alert>Proof of <xref ref="sampvarvarprop"/>.</alert> It is easy to
+    see that the same idea in the previous argument works to
+    prove <m>E(X_k^2)=E(X^2)</m>. 
+      </p>
+
+        <p>
+    <alert>Proof of <xref ref="sampvarscovarprop"/>.</alert> We use the
+    same idea again to show <m>E(X_jX_k)=E(X_j)E(X_k)=\mu^2</m>. We have
+    <md>
+      <mrow>E(X_jX_k) \amp = \sum_{\vec{\omega}}X_j(\vec{\omega})X_k(\vec{\omega})
+	p(\vec{\omega})</mrow>
+      <mrow>\amp = \sum_{\vec{\omega}}X(\omega_j)X(\omega_k)p(\omega_1)\cdots
+	p(\omega_n)</mrow>
+      <mrow>\amp = \left(\sum_{\omega\in\Omega}X(\omega)p(\omega)\right)\left(\sum_{\omega\in\Omega}X(\omega)p(\omega)\right)
+      \left(\sum_{\vec{\omega}'\in \Omega^{n-2}}p(\omega'_1)\cdots
+	p(\omega'_{n-2})\right)</mrow>
+      <mrow>\amp = E(X)\cdot E(X)\cdot 1 = \mu^2.</mrow>
+    </md>
+	</p>
+
+        <p>
+    <alert>Proof of <xref ref="sampvarsindepprop"/>.</alert> Again, we
+    recycle the same technique. We have
+    <md>
+      <mrow>F_{X_j,X_k}(\lambda,\mu) \amp = P(X_j\leq \lambda\text{ and
+      }X_j\leq \mu)</mrow>
+      <mrow>\amp = P(X(\omega_j)\leq \lambda\text{ and }X(\omega_k)\leq \mu)</mrow>
+      <mrow>\amp = \sum_{\vec{\omega}\colon X(\omega_j)\leq
+	\lambda,X(\omega_k)\leq \mu}p(\omega_1)\cdots p(\omega_n)</mrow>
+      <mrow>\amp = \left(\sum_{\omega\in \Omega\colon X(\omega)\leq
+	\lambda}p(\omega)\right)
+	\left(\sum_{\omega\in \Omega\colon X(\omega)\leq
+	\mu}p(\omega)\right)
+	\left( \sum_{\vec{\omega}'\in
+	\Omega^{n-2}}p(\omega'_1)\cdots p(\omega'_{n-2})\right)</mrow>
+      <mrow>\amp = P(X\leq \lambda)\cdot P(X\leq \mu) \cdot 1</mrow>
+      <mrow>\amp = F_{X_j}(\lambda)F_{X_k}(\mu).</mrow>
+    </md>
+	</p>	
+	
+</aside>
+
+ <!-- Note 1/5/2026: commenting this problem out for now, seems to
+ require too much mulivariable calculus to fit this course
+ 
+  <exercise xml:id="samplevarpropctsexer">
       <p>Prove <xref ref="sampvarbasicprop"/> for the case of continuous
-      variables that have density functions.
+	variables that have density functions.
    </p>
  </exercise>
+
+   <aside component="instructor">
+  <title>Instructor solution for <xref ref="samplevarpropctsexer"/></title>
+  <p>
+    <alert>Proof of <xref ref="sampvaridentdistprop"/>.</alert>
+  </p>
+
+  <p>
+    <alert>Proof of <xref ref="sampvarmeanprop"/>.</alert>
+  </p>
+
+      <p>
+    <alert>Proof of <xref ref="sampvarvarprop"/>.</alert>
+      </p>
+
+        <p>
+    <alert>Proof of <xref ref="sampvarscovarprop"/>.</alert>
+	</p>
+
+        <p>
+    <alert>Proof of <xref ref="sampvarsindepprop"/>.</alert>
+	</p>	
+  
+</aside>
+-->
  
   <p>
     Next, we consider random variables <m>\overline{X}</m>
@@ -97,10 +203,12 @@ Sampling I
 
    <exercise>
    <p>Prove <xref ref="sampstatsbasicprop"/> for the case of discrete variables.
-		       </p>
+   </p>
+   <!-- Note 1/6/2026: commenting this out for now
       <p>Prove <xref ref="sampstatsbasicprop"/> for the case of continuous
       variables that have density functions.
-   </p>
+      </p>
+      -->
  </exercise>
 
    

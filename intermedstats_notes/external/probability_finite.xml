@@ -237,10 +237,10 @@
 	<me>P_{\Omega^n}(E')
 	  = \sum_{\vec{\omega}\colon \omega_j\in E}p(\vec{\omega})
 	  = \left(\sum_{\omega_j\in E}p(\omega_j)\right)
-	  \left(\sum_{\vec{\omega}_{j}}p_{\Omega^{n-1}}(\vec{\omega}_{j})\right)
+	  \left(\sum_{\vec{\omega}_{(-j)}}p_{\Omega^{n-1}}(\vec{\omega}_{(-j)})\right)
 	  = P_{\Omega}(E)\cdot 1
 	</me>
-	where <m>\vec{\omega}_j</m> denotes
+	where <m>\vec{\omega}_{(-j)}</m> denotes
 	the <m>(n-1)</m>-tuple <m>(\omega_1,\omega_2,\ldots,\widehat{\omega_j},\ldots,\omega_n)</m>
 	(that is, <m>\vec{\omega}</m> with the <m>j</m>-th entry
 	deleted). As in the previous part, this is just a rearrangement
@@ -252,9 +252,9 @@
 	  \sum_{\vec{\omega}\colon \omega_j\in E, \omega_k\in F}p(\vec{\omega}) =
 	  \left(\sum_{\omega_j\in E}p(\omega_j)\right)
 	  \left(\sum_{\omega_k\in F}p(\omega_k)\right)
-\left(\sum_{\vec{\omega}_{j,k}}p_{\Omega^{n-2}}(\vec{\omega}_{j,k}\right)	  
+\left(\sum_{\vec{\omega}_{(-j,-k)}}p_{\Omega^{n-2}}(\vec{\omega}_{(-j,-k)})\right)	  
 	</me>
-	where <m>\vec{\omega}_{j,k}</m> denotes <m>\vec{\omega}</m> with
+	where <m>\vec{\omega}_{(-j,-k)}</m> denotes <m>\vec{\omega}</m> with
 	the <m>j</m>-th and the <m>k</m>-th entries deleted.
 	</li>
       </ol>
