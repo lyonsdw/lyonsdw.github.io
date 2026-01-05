@@ -180,7 +180,7 @@ Sampling I
     for a sample of <m>X</m> of size <m>n</m>.  Let <m>\mu=E(X)</m>, and
     let <m>\sigma^2 = \var(X) = E(X^2)-(E(X))^2</m>. We have the following.
     <mdn>
-      <mrow>E(\overline{X})\amp = \mu</mrow>
+      <mrow xml:id="expectsampave">E(\overline{X})\amp = \mu</mrow>
       <mrow xml:id="sesampave">\var(\overline{X})\amp = \frac{\sigma^2}{n}</mrow>
       <mrow xml:id="expectsampsum">E(n\overline{X})\amp = n\mu</mrow>
       <mrow xml:id="sesampsum">\var(n\overline{X})\amp = n\sigma^2</mrow>
@@ -201,7 +201,7 @@ Sampling I
       the <term>standard error</term> for the sample sum.
   </p>
 
-   <exercise>
+   <exercise xml:id="sampstatsbasicpropexer">
    <p>Prove <xref ref="sampstatsbasicprop"/> for the case of discrete variables.
    </p>
    <!-- Note 1/6/2026: commenting this out for now
@@ -210,6 +210,28 @@ Sampling I
       </p>
       -->
  </exercise>
+
+   <aside component="instructor">
+  <title>Instructor solution for <xref ref="sampstatsbasicpropexer"/></title>
+  <p>
+    For <xref ref="expectsampave"/>, start with the definition <m>E(\overline{X}) =
+    E(\frac{1}{n}(X_1+X_2+\cdots + X_n)</m> and then use linearity
+    properties <xref ref="expectvallinsumprop"/>
+    and <xref ref="expectvallinscaleprop"/> of expected value and apply
+    <xref ref="sampvarmeanprop"/>.
+  </p>
+  <p>
+    For <xref ref="sesampave"/>, start with the definition <m>\var(\overline{X}) =
+    \var(\frac{1}{n}(X_1+X_2+\cdots + X_n)</m> and then use properties 
+    <xref ref="variancescaleprop"/> and <xref ref="covarsumformula"/> or variance (and the fact
+    that <m>X_j,X_k</m> are independent for <m>j\neq k</m>), 
+    and finally apply
+    <xref ref="sampvarvarprop"/>.
+  </p>
+
+  <p>The remaining three properties come from applying scaling
+  properties of expected value and variance to the first two properties.</p>
+</aside>
 
    
 </subsection>
@@ -340,7 +362,7 @@ Next consider
     random variable. Let <m>G</m> be defined by <m>G(X_1,X_2,\ldots) =
       k</m> if <m>k</m> is the lowest index such that <m>X_k=1</m>, that
     is, if <m>0=X_1=X_2=\cdots \ X_{k-1}</m> and <m>X_k=1</m>. The
-    variable <m>Z</m> is called a <term>geometric</term> random
+    variable <m>G</m> is called a <term>geometric</term> random
     variable. It is easy to show that the cdf <m>F_G</m> is given by
     <m>F_G(k) = 1-q^k</m> for <m>k=1,2,3,\ldots</m>. The
     continuous function <m>F\colon \R\to\R</m> given by <m>F(x)=1-q^x</m> satisfies
@@ -352,20 +374,66 @@ Next consider
     with parameter <m>\lambda=-\ln q</m>.
   </p>
 
-  <exercise>
+  <exercise xml:id="binomialgeometricexponentialbasicsexer">
     <p>
       <ol>
-	<li>Find the probability function, the
-    distribution function, and find the mean and the variance for the
-	  binomial distribution.</li>
-	<li>Find the probability function, the
-    distribution function, and find the mean and the variance for the
-	  geometric distribution.</li>
+	<li>Find the mean, and the variance for the
+	  binomial random variable <m>S_n</m>.</li>
+	<li>Verify that the distribution function <m>F_G</m>
+	  satisfies <m>F_G(k)=1-q^k</m> for <m>k\in \N</m>.
+	  </li>
 	<li>Find the probability density function and find the mean and the variance for the
     exponential distribution.</li>		
     </ol>
     </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="binomialgeometricexponentialbasicsexer"/></title>
+  <p>
+    <ol>
+      <li>
+	For an integer <m>k</m> in the range <m>0\leq k\leq n</m>, we have
+	<m>P(S_n=k)={n\choose k}p^k(1-p)^{n-k}</m> from basic
+	probability principles. The mean and variance for each sample
+	variable <m>X_k</m> are <m>E(X_k)=p</m>
+	and <m>\var{X_n}=p(1-p)</m> (from
+	<xref ref="bernoulliexpectvarformulas"/> in
+	<xref ref="bernoulliexpectvarexer"/>), so the mean and variance
+	for <m>S_n</m> are <m>E(S_n)=np</m> and <m>\var(S_n)=npq</m>
+	(using <xref ref="expectsampsum"/> and <xref ref="sesampsum"/>).
+      </li>
+      <li>
+	For an integer <m>k</m> in the range <m>0\leq k\leq n</m>, we have
+	<m>P(G=k)=p(1-p)^{k-1}</m> from basic probability
+	principles. From this you get <m>F_G(k) = 1-q^k</m> using the
+	formula for the partial sum of a geometric series
+	<me>\frac{1-q^k}{1-q}=1+q+q^2+\cdots + q^{k-1}.</me>
+      </li>
+      <li>The probability density function for <m>H</m> is
+	<me>H'(x) = \frac{d}{dx} (1-q^x) = \ln q q^x = \lambda
+	  e^{-lambda x}.</me> Using integration by parts, we get the
+	mean and the variance for <m>H</m>.
+	<md>
+	  <mrow>E(H)\amp =\int_0^{\infty} \lambda x e^{-\lambda x}\;dx =
+	    1/\lambda</mrow>
+	  <mrow>E(H)\amp =\int_0^{\infty} \lambda x^2 e^{-\lambda x}\;dx = 1/\lambda^2</mrow>	  
+	</md>
+	<m></m>
+      </li>
+    </ol>
+  </p>
+  <p>A challenging but doable exercise is to find the mean of the
+  geometric distribution. Here is one way to do it using only calc 2
+  methods. The mean is
+	<m>E(G)=\sum_{k=1}^{\infty}kp(1-p){k-1}</m>. Using <m>\frac{1}{1-q}=1+q+q^2+\cdots</m>
+	(for <m>0\lt q\lt 1</m>),
+	we see that the sum <m>1 + 2q + 3q^2+\cdots</m> is the Taylor
+	series for <m>\frac{d}{dq}(1-q)^{-1}=(1-q)^{-2}</m>. From this
+	we get the sum for <m>E(G)</m> is <m>E(G)=p/(1-q)^2=1/p</m>.
+  </p>
+</aside>
+
 
   <p>The <term>(standard) normal</term> variable plays a key role in sampling theory, due to
     the Central Limit Theorem, which we study below. In this paragraph
