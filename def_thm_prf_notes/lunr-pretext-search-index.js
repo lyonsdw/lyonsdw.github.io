@@ -258,26 +258,53 @@ var ptx_lunr_docs = [
   "url": "cardinality_section-2.html",
   "type": "Section",
   "number": "7.1",
-  "title": "Shroeder-Bernstein Theorem",
-  "body": "Shroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   For each , form a sequence to the right and to the left of .   Observe that theses sequences may or may not terminate on the left.  Observe that each of these sequences is one of two types: (i) terminates on the left with an element (that is, is not in the image of ); or (ii) does not have the property that defines type (i).  Define by if lies in a sequence of type (i), and if lies in a sequence of type (ii). Now show is well-defined and is a bijection.     Complete the proof of the Schroeder-Berstein Theorem following the outline given above.   "
+  "title": "More vocabulary and notation",
+  "body": " More vocabulary and notation  We say that sets are equipotent , denoted , if they have the same cardinality. By Theorem 7.1.3 in , equipotence is an equivalence relation. Given a set , we write , pronounced the cardinality of the set , to denote the equivalence class of with respect to . Note that this usage is consistent with the notation for a finite set of size , where is a nonnegative integer.   Explain what it means to say that the notation for the equipotence class of the set is consistent with the notation for the size of a finite set.   "
 },
 {
   "id": "cardinality_section-2-2",
   "level": "2",
   "url": "cardinality_section-2.html#cardinality_section-2-2",
-  "type": "Theorem",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "equipotent "
+},
+{
+  "id": "cardinality_section-2-3",
+  "level": "2",
+  "url": "cardinality_section-2.html#cardinality_section-2-3",
+  "type": "Checkpoint",
   "number": "7.1.1",
+  "title": "",
+  "body": " Explain what it means to say that the notation for the equipotence class of the set is consistent with the notation for the size of a finite set.  "
+},
+{
+  "id": "cardinality_section-3",
+  "level": "1",
+  "url": "cardinality_section-3.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Schroeder-Bernstein Theorem",
+  "body": "Schroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   For each , form a sequence to the right and to the left of .   Observe that theses sequences may or may not terminate on the left.  Observe that each of these sequences is one of two types: (i) terminates on the left with an element (that is, is not in the image of ); or (ii) does not have the property that defines type (i).  Define by if lies in a sequence of type (i), and if lies in a sequence of type (ii). Now show is well-defined and is a bijection.     Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.   "
+},
+{
+  "id": "cardinality_section-3-2",
+  "level": "2",
+  "url": "cardinality_section-3.html#cardinality_section-3-2",
+  "type": "Theorem",
+  "number": "7.2.1",
   "title": "(Schroeder-Bernstein).",
   "body": "(Schroeder-Bernstein)  If and are one-to-one maps, then .  "
 },
 {
-  "id": "cardinality_section-2-4",
+  "id": "cardinality_section-3-4",
   "level": "2",
-  "url": "cardinality_section-2.html#cardinality_section-2-4",
+  "url": "cardinality_section-3.html#cardinality_section-3-4",
   "type": "Checkpoint",
-  "number": "7.1.2",
+  "number": "7.2.2",
   "title": "",
-  "body": " Complete the proof of the Schroeder-Berstein Theorem following the outline given above.  "
+  "body": " Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.  "
 },
 {
   "id": "backmatter-1",
