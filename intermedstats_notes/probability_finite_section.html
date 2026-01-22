@@ -99,15 +99,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.9';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -406,7 +406,7 @@ p(\omega_n).\tag{2.4}
 <div class="autopermalink" data-description="Item 2.9.1"><a href="#productprobfnexer-1-1-1" title="Copy heading and permalink for Item 2.9.1" aria-label="Copy heading and permalink for Item 2.9.1">🔗</a></div>
 </li>
 <li id="productprobfnexer-1-1-2">
-<div class="para" id="p-derived-productprobfnexer-1-1-2">Let <span class="process-math">\(E\)</span> be an event in <span class="process-math">\(\Omega\text{,}\)</span> and let <span class="process-math">\(E'\)</span> be the event <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> in <span class="process-math">\(\Omega^n\text{,}\)</span> where <span class="process-math">\(\vec{\omega}\)</span> denotes <span class="process-math">\(\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)\text{.}\)</span> Show that<div class="displaymath process-math" id="productprobfnexer-1-1-2-8">
+<div class="para" id="p-derived-productprobfnexer-1-1-2">Let <span class="process-math">\(E\)</span> be an event in <span class="process-math">\(\Omega\text{,}\)</span> let <span class="process-math">\(j\)</span> be an integer in the range <span class="process-math">\(1\leq j\leq n\text{,}\)</span> and let <span class="process-math">\(E'\)</span> be the event <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> in <span class="process-math">\(\Omega^n\text{,}\)</span> where <span class="process-math">\(\vec{\omega}\)</span> denotes <span class="process-math">\(\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)\text{.}\)</span> Show that<div class="displaymath process-math" id="productprobfnexer-1-1-2-10">
 \begin{equation*}
 p_{\Omega^n}(E') = p_{\Omega}(E).
 \end{equation*}
@@ -415,7 +415,7 @@ p_{\Omega^n}(E') = p_{\Omega}(E).
 <div class="autopermalink" data-description="Item 2.9.2"><a href="#productprobfnexer-1-1-2" title="Copy heading and permalink for Item 2.9.2" aria-label="Copy heading and permalink for Item 2.9.2">🔗</a></div>
 </li>
 <li id="productprobfnexer-1-1-3">
-<div class="para" id="p-derived-productprobfnexer-1-1-3">Let <span class="process-math">\(E,F\)</span> be events in <span class="process-math">\(\Omega\text{,}\)</span> and let <span class="process-math">\(E',F'\)</span> be the events <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> and <span class="process-math">\(F'=\{\vec{\omega}\colon\omega_k\in F\}\text{.}\)</span> Show that <span class="process-math">\(E',F'\)</span> are independent in <span class="process-math">\(\Omega^n\)</span> if <span class="process-math">\(j\neq k\text{.}\)</span>
+<div class="para" id="p-derived-productprobfnexer-1-1-3">Let <span class="process-math">\(E,F\)</span> be events in <span class="process-math">\(\Omega\text{,}\)</span> let <span class="process-math">\(j,k\)</span> be integers in the range <span class="process-math">\(1\leq j,k\leq n\text{,}\)</span> and let <span class="process-math">\(E',F'\)</span> be the events <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> and <span class="process-math">\(F'=\{\vec{\omega}\colon\omega_k\in F\}\text{.}\)</span> Show that <span class="process-math">\(E',F'\)</span> are independent in <span class="process-math">\(\Omega^n\)</span> if <span class="process-math">\(j\neq k\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Item 2.9.3"><a href="#productprobfnexer-1-1-3" title="Copy heading and permalink for Item 2.9.3" aria-label="Copy heading and permalink for Item 2.9.3">🔗</a></div>
 </li>
@@ -446,7 +446,7 @@ p_{\Omega^{n\ast}}(\omega_1,\omega_2,\ldots,\omega_n)=\frac{1}{N(N-1)\cdots
 <div class="autopermalink" data-description="Item 2.10.1"><a href="#simprandsampprobfnexer-1-1-1" title="Copy heading and permalink for Item 2.10.1" aria-label="Copy heading and permalink for Item 2.10.1">🔗</a></div>
 </li>
 <li id="simprandsampprobfnexer-1-1-2">
-<div class="para" id="p-derived-simprandsampprobfnexer-1-1-2">Let <span class="process-math">\(E\)</span> be an event in <span class="process-math">\(\Omega\text{,}\)</span> and let <span class="process-math">\(E'\)</span> be the event <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> in <span class="process-math">\(\Omega^n\text{,}\)</span> where <span class="process-math">\(\vec{\omega}\)</span> denotes <span class="process-math">\(\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)\text{.}\)</span> Show that<div class="displaymath process-math" id="simprandsampprobfnexer-1-1-2-8">
+<div class="para" id="p-derived-simprandsampprobfnexer-1-1-2">Let <span class="process-math">\(E\)</span> be an event in <span class="process-math">\(\Omega\text{,}\)</span> let <span class="process-math">\(j\)</span> be an integer in the range <span class="process-math">\(1\leq j\leq n\text{,}\)</span> and let <span class="process-math">\(E'\)</span> be the event <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> in <span class="process-math">\(\Omega^n\text{,}\)</span> where <span class="process-math">\(\vec{\omega}\)</span> denotes <span class="process-math">\(\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)\text{.}\)</span> Show that<div class="displaymath process-math" id="simprandsampprobfnexer-1-1-2-10">
 \begin{equation*}
 P_{\Omega^{n\ast}}(E') = P_{\Omega}(E).
 \end{equation*}
@@ -455,7 +455,7 @@ P_{\Omega^{n\ast}}(E') = P_{\Omega}(E).
 <div class="autopermalink" data-description="Item 2.10.2"><a href="#simprandsampprobfnexer-1-1-2" title="Copy heading and permalink for Item 2.10.2" aria-label="Copy heading and permalink for Item 2.10.2">🔗</a></div>
 </li>
 <li id="simprandsampprobfnexer-1-1-3">
-<div class="para" id="p-derived-simprandsampprobfnexer-1-1-3">Let <span class="process-math">\(E,F\)</span> be events in <span class="process-math">\(\Omega\text{,}\)</span> and let <span class="process-math">\(E',F'\)</span> be the events <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> and <span class="process-math">\(F'=\{\vec{\omega}\colon\omega_k\in F\}\text{.}\)</span> Show by example that that <span class="process-math">\(E',F'\)</span> may be <em class="emphasis">dependent</em> in <span class="process-math">\(\Omega^{n\ast}\)</span> if <span class="process-math">\(j\neq k\text{.}\)</span>
+<div class="para" id="p-derived-simprandsampprobfnexer-1-1-3">Let <span class="process-math">\(E,F\)</span> be events in <span class="process-math">\(\Omega\text{,}\)</span> let <span class="process-math">\(j,k\)</span> be integers in the range <span class="process-math">\(1\leq j,k\leq n\text{,}\)</span> and let <span class="process-math">\(E',F'\)</span> be the events <span class="process-math">\(E'=\{\vec{\omega}\colon\omega_j\in E\}\)</span> and <span class="process-math">\(F'=\{\vec{\omega}\colon\omega_k\in F\}\text{.}\)</span> Show by example that that <span class="process-math">\(E',F'\)</span> may be <em class="emphasis">dependent</em> in <span class="process-math">\(\Omega^{n\ast}\)</span> if <span class="process-math">\(j\neq k\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Item 2.10.3"><a href="#simprandsampprobfnexer-1-1-3" title="Copy heading and permalink for Item 2.10.3" aria-label="Copy heading and permalink for Item 2.10.3">🔗</a></div>
 </li>

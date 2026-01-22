@@ -53,12 +53,20 @@
   of <m>\mathcal{P}(\Omega)</m> are called <term>events</term>.</p>
   </definition>
   
-    <exercise>
+    <exercise xml:id="probfnexer">
       <p>Write the probability function for the probability space <m>\Omega=\{a,b,c\}</m>
 	where outcome <m>b</m> is twice as likely as outcome <m>a</m>,
 	and outcome <m>c</m> is three times as likely as outcome <m>b</m>.
       </p>
-  </exercise>
+    </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="probfnexer"/></title>
+  <p>
+    Let <m>p(a)=1/9</m>, <m>p(b)=2/9</m>, and <m>p(c)=6/9</m>.
+  </p>
+</aside>
+    
 
   <definition xml:id="finprobmodelvocabdef"><title>More probability terminology</title>
   <p>Let <m>(\Omega,P)</m> be a finite probability model.
@@ -76,7 +84,7 @@
     </p>
   </definition>
 
-      <exercise>
+      <exercise xml:id="finiteindepdepexer">
 	<p>Let <m>\Omega=\{a,b,c\}</m>, let <m>U=\{a,b\}</m>, and
 	let <m>V=\{b,c\}</m>. Give an example of a probability function
 	on <m>\Omega</m> for which <m>U,V</m> are independent. Give an
@@ -84,6 +92,16 @@
 	which <m>U,V</m> are dependent.
 	</p>
       </exercise>
+
+      <aside component="instructor">
+  <title>Instructor solution for <xref ref="finiteindepdepexer"/></title>
+  <p>
+    For independence, let <m>p(a)=p(c)=0</m> and let <m>p(b)=1.</m> Then
+    we have <m>P(U)P(V)=1=P(U\cap V)</m>. For dependence,
+    let <m>p(a)=p(c)=1/2</m> and let <m>p(b)=0</m>. Then we
+    have <m>P(U)P(V)=1/4\neq P(U\cap V)</m>.
+  </p>
+</aside>
 
       
       <proposition xml:id="probprops">
@@ -93,10 +111,10 @@
       <ol>
       <li><m>P(\Omega)=1</m>.
       </li>
-      <li>If <m>A\subseteq B</m> for some events <m>A,B</m>,
+      <li xml:id="subsetimpliesprobleq">If <m>A\subseteq B</m> for some events <m>A,B</m>,
       then <m>P(A)\leq P(B)</m>.
       </li>      
-      <li><term>(addition rule)</term> If events <m>A,B</m> are disjoint, then <m>P(A\cup B)=P(A)+P(B)</m>.
+      <li xml:id="additionrule"><term>(addition rule)</term> If events <m>A,B</m> are disjoint, then <m>P(A\cup B)=P(A)+P(B)</m>.
       </li>
       <!--
       <li>
@@ -122,6 +140,42 @@
     <exercise>
     <p>Prove all the parts of <xref ref="probprops"/>.</p>
   </exercise>
+
+    <aside component="instructor">
+  <title>Instructor solution for <xref ref="probprops"/></title>
+  <p>
+      <ol>
+      <li> We have <me>P(\Omega)=\sum_{\omega\in\Omega}p(\omega) =
+	  1.</me> The first equality is by
+	  <xref ref="discreteprobmeasdef"/> from the definition of probability
+	  measure. The second equality is by <xref ref="probfunsum1"/>
+	  in the definition of the probability function <m>p</m>.
+      </li>
+      <li>We have <me>P(A)=\sum_{\omega\in A}p(\omega) \leq
+	\sum_{\omega\in A} p(\omega)+ \sum_{\omega\in B\setminus
+	  A}p(\omega) = P(B)</me> because all values of <m>p</m> are
+	nonnegative. Alternatively, prove part 3 first, then
+	write <m>B</m> as the disjoint union <m>B=B\cup (B\setminus A)</m>.
+      </li>      
+      <li>We have <me>P(A\cup B)=\sum_{\omega\in A\cup B}p(\omega) =
+	\sum_{\omega \in A)p(\omega) + \sum_{\omega\in B}p(\omega) =
+	P(A)+P(B).</me> This is just splitting the summands into two
+	disjoint collections.
+      </li>
+      <li>Applying parts 1 and 3 to <m>\Omega= A\cup A^c</m>
+      yields <m>1=P(A)+P(A^c)</m>. Rearranging gives the desired result.
+      </li>
+      <li>This is just a rearrangement of the definition of conditional probability.
+      </li>
+      <li>If <m>U,V</m> are independent, then <m>P(U)P(V|U)=P(U\cap V)=
+	P(U)P(V)</m>. The first equality is part 5, and the second
+	equality is the definition of
+	independence. Cancelling <m>P(U)\neq 0</m>, we have <m>P(V)=P(V|U)</m>.
+      </li>
+      </ol>
+  </p>
+</aside>
+
     
 </subsection>
 
@@ -146,14 +200,68 @@
 </p>
 
   <exercise xml:id="productprobfnexer">
-    <p>Show that <m>p_{\Omega^n}</m> is a probability
-      function. Let <m>E,F</m> be events in <m>\Omega</m>, and
+    <p>
+      <ol><li>Show that <m>p_{\Omega^n}</m> is a probability
+	  function.</li>
+	<li>Let <m>E</m> be an event in <m>\Omega</m>, and let <m>E'</m>
+	  be the event <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
+	  in <m>\Omega^n</m>, where <m>\vec{\omega}</m>
+	  denotes <m>\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)</m>. Show
+	  that
+	  <me>p_{\Omega^n}(E') = p_{\Omega}(E).</me>
+	</li>
+<li>Let <m>E,F</m> be events in <m>\Omega</m>, and
       let <m>E',F'</m> be the events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
       and <m>F'=\{\vec{\omega}\colon\omega_k\in F\}</m>. Show that <m>E',F'</m> are
-      independent in <m>\Omega^n</m> if <m>j\neq k</m>.
+	  independent in <m>\Omega^n</m> if <m>j\neq k</m>.</li>
+      </ol>
     </p>
   </exercise>
 
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="productprobfnexer"/></title>
+  <p>
+    <ol>
+      <li>It is clear that the values of <m>p_{\Omega^n}</m> are in the
+	set <m>[0,1]</m>. We check that the values sum to 1. Indeed, we
+	have
+	<me>\sum_{\vec{\omega}\in \Omega^n}p_{\Omega^n}(\vec{\omega})=
+	\sum_{\vec{\omega}}\prod_{k=1}^n p(\omega_k) = \prod_{k=1}^n
+	  \sum_{\omega\in\Omega}p(\omega) = 1</me>
+	where <m>\vec{\omega}</m>
+	denotes <m>(\omega_1,\omega_2,\ldots,\omega_n)</m>. The
+	inequality in the middle is just a rearrangement of the terms in
+	the sum.
+      </li>
+      <li>We have
+	<me>P_{\Omega^n}(E')
+	  = \sum_{\vec{\omega}\colon \omega_j\in E}p(\vec{\omega})
+	  = \left(\sum_{\omega_j\in E}p(\omega_j)\right)
+	  \left(\sum_{\vec{\omega}_{(-j)}}p_{\Omega^{n-1}}(\vec{\omega}_{(-j)})\right)
+	  = P_{\Omega}(E)\cdot 1
+	</me>
+	where <m>\vec{\omega}_{(-j)}</m> denotes
+	the <m>(n-1)</m>-tuple <m>(\omega_1,\omega_2,\ldots,\widehat{\omega_j},\ldots,\omega_n)</m>
+	(that is, <m>\vec{\omega}</m> with the <m>j</m>-th entry
+	deleted). As in the previous part, this is just a rearrangement
+	of terms in the sum.
+      </li>
+      <li>Again, the derivation is a rearrangement of terms. This one
+      involves the factoring (for <m>j\neq k</m>)
+	<me>
+	  \sum_{\vec{\omega}\colon \omega_j\in E, \omega_k\in F}p(\vec{\omega}) =
+	  \left(\sum_{\omega_j\in E}p(\omega_j)\right)
+	  \left(\sum_{\omega_k\in F}p(\omega_k)\right)
+\left(\sum_{\vec{\omega}_{(-j,-k)}}p_{\Omega^{n-2}}(\vec{\omega}_{(-j,-k)})\right)	  
+	</me>
+	where <m>\vec{\omega}_{(-j,-k)}</m> denotes <m>\vec{\omega}</m> with
+	the <m>j</m>-th and the <m>k</m>-th entries deleted.
+	</li>
+      </ol>
+  </p>
+</aside>
+
+  
 </subsection>
 
 <subsection>
@@ -193,15 +301,50 @@
   </p>
 
     <exercise xml:id="simprandsampprobfnexer">
-    <p>Show that <m>p_{\Omega^{n\ast}}</m> is a probability
-      function. Let <m>E</m> be an event in <m>\Omega</m>, and
-      let <m>E',F'</m> be the
-      events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>, <m>F'=\{\vec{\omega}\colon\omega_k\in E\}</m>, 
-      Show that <m>E',F'</m> are
-      <em>dependent</em>
-      in <m>\Omega^{n\ast}</m> if <m>j\neq k</m>.
-    </p>
+      <p>
+	<!--Show that <m>p_{\Omega^{n\ast}}</m> is a probability
+	  function.-->
+     <ol><li>Show that <m>p_{\Omega^{n\ast}}</m> is a probability
+	  function.</li>
+	<li>Let <m>E</m> be an event in <m>\Omega</m>, and let <m>E'</m>
+	  be the event <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
+	  in <m>\Omega^n</m>, where <m>\vec{\omega}</m>
+	  denotes <m>\vec{\omega}=(\omega_1,\omega_2,\ldots,\omega_n)</m>. Show
+	  that
+	  <me>P_{\Omega^{n\ast}}(E') = P_{\Omega}(E).</me>
+	</li>
+<li>Let <m>E,F</m> be events in <m>\Omega</m>, and
+      let <m>E',F'</m> be the events <m>E'=\{\vec{\omega}\colon\omega_j\in E\}</m>
+      and <m>F'=\{\vec{\omega}\colon\omega_k\in F\}</m>. Show by example
+  that that <m>E',F'</m> may be <em>dependent</em> in <m>\Omega^{n\ast}</m> if <m>j\neq k</m>.</li>
+      </ol>
+      </p>
   </exercise>
+
+       <aside component="instructor">
+  <title>Instructor solution for <xref ref="simprandsampprobfnexer"/></title>
+  <p>
+<ol>    <li>It is clear that <m>p_{\Omega^{n\ast}}</m> takes values
+    in <m>[0,1]</m>. By <xref ref="permnrformula"/>, the size
+    of <m>\Omega^{n\ast}</m> is <m>N(N-1)(N-2)\cdots (N-n+1)</m>, so we
+    see that <m>\sum_{\vec{\omega}\in \Omega^{n\ast}}
+      p_{\Omega^{n\ast}}(\vec{\omega})=1</m>.</li>
+  <li>The main observation here (make it a Lemma, maybe) is that <m>|E'|=|E|(N-1)(N-2)\cdots
+      (N-n+1)</m> (use a counting argument). Now we have
+    <me>P_{\Omega^{n\ast}}(E')= \sum_{\vec{\omega}\in
+    \Omega^{n\ast}}\frac{1}{N(N-1)\cdots (N-n+1)}=
+      \frac{|E'|}{N(N-1)\cdots (N-n+1)}= \frac{|E|}{N}=P_\Omega(E)</me>
+    where the next-to-last equality comes from applying the opening observation/lemma.
+  </li>
+  <li>Let <m>\Omega=\{H,T\}</m> with <m>p(H)=p(T)=1/2</m>,
+    let <m>n=2</m>, let <m>j=1</m>, and
+    let <m>k=2</m>. Let <m>E=\{H\}</m> and let <m>F=\{T\}</m>.
+    We have
+    <m>P(E'\cap F')=1/2</m> but <m>P(E')P(F')=1/4</m>.
+  </li>
+</ol>
+  </p>
+</aside>
 
 </subsection>
 
@@ -229,7 +372,7 @@
     B_r</m> that form a partition of <m>\Omega</m>, say, <m>B=B_k</m>. In this case, we
   have
   <mdn>
-    <mrow>A \amp = \bigcup_{i=1}^r (A\cap B_i)</mrow>
+    <mrow xml:id="startbayes">A \amp = \bigcup_{i=1}^r (A\cap B_i)</mrow>
     <mrow xml:id="lawoftotalprobeqn">P(A) \amp = \sum_{i=1}^r P(A\cap B_i)</mrow>
     <mrow xml:id="partcondprob">\amp = \sum_{i=1}^r P(B_i)P(A|B_i)</mrow>        
   </mdn>
@@ -245,18 +388,38 @@
   sometimes called the <em>law of total probability</em>.
 </p>
 
-<exercise>
+<exercise xml:id="bayesintroexer">
   <p>
     <ol>
       <li>Justify all the steps in the derivation for Bayes'
 	Rule.</li>
-      <li>Find the sets <m>A_i</m> and <m>B_j</m>
+      <li>Find the sets <m>A</m> and <m>B_j</m>
 	for medical testing scenario (what is the
 	chance of having the disease given a positive test result?)
 	</li>
     </ol>
   </p>
 </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="bayesintroexer"/></title>
+  <p>
+<ol><li>Starting with <xref ref="startbayes"/>, we get
+<xref ref="lawoftotalprobeqn"/> by applying the addition rule for the
+disjoint events <m>A\cap B_i</m>. The next equality is the definition of
+conditional probability. From there to the next and final expression
+<xref ref="bayesrule"/> is explicitly described in the narrative.</li>
+  <li>Let <m>A</m> be the event <q>tests positive</q>, let <m>B_1</m> be
+    the event <q>has the disease</q> and let <m>B_2</m> be the
+    event <q>does not have the disease</q>. We know the conditional
+    probabilities <m>P(B_i|A)</m>. Bayes' rule helps us find the unknown
+    conditional probability <m>P(B_1|A)</m> in terms of the known
+    conditional probabilities.
+  </li>
+</ol>
+  </p>
+</aside>
+
 </subsection>
 
 
@@ -274,10 +437,18 @@
   </p>
 </exercise>
 
-<exercise><p>Work the <q>Probability Exercises</q>
+<exercise xml:id="probexerrossandwright"><p>Work the <q>Probability Exercises</q>
     set posted on Canvas.</p>
 </exercise>
 
+  <aside component="instructor">
+  <title>Instructor comment for Probability Exercises <xref ref="probexerrossandwright"/></title>
+  <p>
+Note Spring 2026: using exercises from Section 5.2 of
+<xref ref="ross_and_wright"/>. Exercises and solutions to odd-numbered
+problems are posted on Canvas.
+  </p>
+</aside>
 
 </exercises>
 
