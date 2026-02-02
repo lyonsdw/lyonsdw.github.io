@@ -1,0 +1,284 @@
+<section xml:id="basic_normal_dist"  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Normal Distributions </title>
+
+<subsection>
+  <title>Using the Normal Table
+</title>
+
+  <p>Values for <m>z</m> in the left column of the standard normal table
+    are given in increments of <m>0.05</m>. For <m>z</m> values that
+    fall between rows of the table, use an area estimate
+    that is between the corresponding values in the area column. For
+    example, <m>z=.77</m> is between the row for <m>z=.75</m> with area <m>54.67</m>
+    and the row for <m>z=.80</m> with area <m>57.63</m>, so a reasonable area estimate would
+    be <m>56\%</m>. Use a similar estimation procedure if you want to find a <m>z</m> value that
+    corresponds to an area that falls between rows of the table. For
+    example, the area <m>80\%</m> falls between the row for
+    area <m>78.87\%</m> for <m>z=1.25</m> and the row for the
+    area <m>80.64\%</m> for <m>z=1.30</m>, so a reasonable <m>z</m>
+    estimate would be <m>z=1.27</m> or <m>z=1.28</m>. The procedure of
+    reading between the rows is not technical, and might be off by a
+    little bit, but it is better than rounding off to the values in the
+    nearest row.
+  </p>
+
+  <p>When calculating a <m>z</m>
+  value for normal data, you may round to the nearest 0.01, because
+  that is the level of accuracy in the <m>z</m>
+  column of the normal table. When calculating an area under the normal
+curve, you may usually round the final answer to the nearest whole
+percent. These practices are exceptions to the usual roundoff advice
+  <xref ref="usualroundoffrules"/>.
+</p>
+ 
+</subsection>
+  
+  
+  <subsection><title>Examples</title>
+    
+    <p>Here are some basic problem types about the normal curve.
+    Data called <m>X</m> is approximately normally distributed,
+    with <m>\AVE(X)=72.3</m> and <m>\SD(X)=6.7</m>.
+    <ol>
+      <li>(symmetric region) Estimate the percent of data in the
+      range <m>72.3\pm 3.9</m>.
+      </li>
+      <li>(asymmetric region) Estimate the percent of data in the
+	range <m>69.0</m> to <m>81.0</m>.
+      </li>
+      <li>(left tail region) Estimate the percentile rank for the data
+	values <m>69.0</m> and <m>81.0</m>.
+      </li>
+      <li>(from area to <m>z</m>) Estimate the data values with
+      70th and 35th percentile ranks.
+      </li>
+    </ol>
+    Here are the
+    solutions.
+    Here are the <url href="images/normal_curve_sample_solutions.pdf">drawing
+    method</url> solution steps taught in the textbook. 
+    <ol>
+      <li>The <m>z</m> values for <m>72.3\pm 3.9</m> are <m>\pm
+      \frac{3.9}{6.7} \approx \pm .58</m>. The normal table shows that the
+	area between these <m>z</m> values is about <m>44\%</m>.
+      </li>
+      <li>
+	The <m>z</m> value
+	for <m>69.0</m>
+	is <m>z_L=\frac{69.0-72.3}{6.7}\approx -.49</m>, and
+	the <m>z</m> value for <m>81.0</m>
+	is <m>z_R =
+	  \frac{81.0-72.3}{6.7}\approx 1.30</m>. The
+	corresponding areas in the normal table are 
+	<m>38\%</m> and <m>81\%</m>, respectively. The area
+	from <m>z_L</m> to <m>0</m>
+	is about <m>38/2=19\%</m> and the area from
+	<m>0</m>
+	to <m>z_R</m> is about <m>81/2=40.5\%</m>, so the area
+	from <m>z_L</m> to <m>z_R</m> is about <m>19+40.5=59.5\%\approx
+	  60\%</m>.
+      </li>
+      <li>We have the same values <m>z_L,z_R</m> from the previous part.
+	First, we consider <m>z_L=-.49</m>.
+	Start with the observation that
+	<md><mrow>100\% \amp = (\text{area to the left of }-.49)</mrow>
+	  <mrow>\amp + (\text{area
+	    between }-.49 \text{ and }+.49)</mrow>
+	  <mrow>\amp + (\text{area to the right of }+4.9).</mrow>
+	</md>
+	By mirror symmetry, we have
+	<me>(\text{area to the left of }-.49) = (\text{area to the right
+	  of }+4.9).</me>
+	Putting these together, we get
+	<me>(\text{area to the left of }-.49)= \frac{100\%-(\text{area between }-.49 \text{ and }+.49)}{2}</me>
+	which is <m>(100 -38)/2=31\%</m>. Next, we
+	consider <m>z_R=1.30</m>. Start with
+	<md><mrow>(\text{area to the left of }1.30)\amp = (\text{area
+	left of }0)</mrow>
+	  <mrow>\amp + (\text{area
+	    between }0 \text{ and }1.30)</mrow>
+	  <mrow>\amp = 50\% + 81/2</mrow>
+	  <mrow>\amp \approx 90\%.</mrow>
+	</md>
+      </li>
+      <li>First, we find the <m>z</m> value that has 70th percentile
+	rank. Let's call that value <m>A</m>. Starting with the
+	observation that
+	<md><mrow>100\% \amp = (\text{area to the left of }A)</mrow>
+	  <mrow>\amp + (\text{area to the right of }A)</mrow>
+	  <mrow>\amp = 70 + (\text{area to the right of }A)</mrow>
+	</md>
+        we conclude that the area to the right of <m>A</m>
+        is <m>30\%</m>. By mirror symmetry, it must be that the area to
+        the left of <m>-A</m> is also <m>30\%</m>, so the area
+        between <m>-A</m> and <m>+A</m> must be <m>100 - 2(30)
+        = 40\%</m>. Using the normal curve table, we find
+        that <m>A\approx .52</m>. This converts to an <m>X</m>
+        value of <m>X=(.52)(6.7)+72.3\approx 75.8</m>. Next, we find
+        a <m>z</m> value that has 35th percentile rank. Let's call that
+        value <m>-B</m> (so that <m>-B</m> is to the left of average,
+        and <m>+B</m> is to the right of average). Starting with 
+	<md><mrow>100\% \amp = (\text{area to the left of }-B)</mrow>
+	  <mrow>\amp + (\text{area
+	    between }-B \text{ and }B)</mrow>
+	  <mrow>\amp + (\text{area to the right of }B)</mrow>
+	</md>
+	By mirror symmetry, we have
+	<me>(\text{area to the left of }-B) = (\text{area to the right
+	  of }B).</me> It follows that both sides of this equation
+	  are <m>35\%</m>, so we conclude that <m>(\text{area between
+	  }-B \text{ and }B)= 100 - 2(35)=30\%</m>. From the normal
+	  table, we get <m>-B\approx -.385</m>. This converts to
+	  an <m>X</m> value of <m>X=(-.385)(6.7)+72.3\approx 69.7</m>.
+      </li>
+    </ol>
+  </p>
+</subsection>
+
+  <subsection><title>Normal curve practice problems (Ch 5)</title>
+    <exercises>
+      <exercise>
+	  <title>Convert between <m>X</m> and <m>Z</m> values
+	  </title><p>
+	  Each row in the table below gives three of the four
+	  values <m>\AVE(X)</m>, <m>\SD(X)</m>, <m>X</m>,
+	  and <m>Z=\frac{X-\AVE(X)}{\SD(X)}</m> for some normal data
+	  called <m>X</m>. Find the missing entry in each row.
+	  <md>
+	    <mrow>
+	      \AVE(X)
+	      \amp\spacer\amp \SD(X)
+	      \amp\spacer\amp X
+	      \amp\spacer\amp Z
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	       \rule{.7in}{.1ex} \amp \amp \rule{.6in}{.1ex} \amp \amp
+	       \rule{.5in}{.1ex} \amp \amp \rule{.5in}{.1ex}
+	    </mrow>
+	    <mrow>
+	      32.4
+	      \amp\spacer\amp 2.43
+	      \amp\spacer\amp 35.0
+	      \amp\spacer\amp 
+	    </mrow>
+	    <mrow>
+	      28.6
+	      \amp\spacer\amp 8.62
+	      \amp\spacer\amp 
+	      \amp\spacer\amp -.45
+	    </mrow>
+	    <mrow>
+	      102.3
+	      \amp\spacer\amp 
+	      \amp\spacer\amp 110.0
+	      \amp\spacer\amp .73
+	    </mrow>
+	    <mrow>
+	      
+	      \amp\spacer\amp 3.71
+	      \amp\spacer\amp 22.0
+	      \amp\spacer\amp 1.42
+	    </mrow>
+	  </md>
+	  </p>
+	  <answer><p>
+	  <md>
+	    <mrow>
+	      \AVE(X)
+	      \amp\spacer\amp \SD(X)
+	      \amp\spacer\amp X
+	      \amp\spacer\amp Z
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	       \rule{.7in}{.1ex} \amp \amp \rule{.6in}{.1ex} \amp \amp
+	       \rule{.5in}{.1ex} \amp \amp \rule{.5in}{.1ex}
+	    </mrow>
+	    <mrow>
+	      32.4
+	      \amp\spacer\amp 2.43
+	      \amp\spacer\amp 35.0
+	      \amp\spacer\amp 1.07
+	    </mrow>
+	    <mrow>
+	      28.6
+	      \amp\spacer\amp 8.62
+	      \amp\spacer\amp 24.7
+	      \amp\spacer\amp -.45
+	    </mrow>
+	    <mrow>
+	      102.3
+	      \amp\spacer\amp 10.55
+	      \amp\spacer\amp 110.0
+	      \amp\spacer\amp .73
+	    </mrow>
+	    <mrow>
+	      16.73
+	      \amp\spacer\amp 3.71
+	      \amp\spacer\amp 22.0
+	      \amp\spacer\amp 1.42
+	    </mrow>
+	  </md>
+	    </p>
+	  </answer>
+      </exercise>
+
+      <exercise><title>Convert between <m>Z</m> value and percentile
+	  rank</title>
+	<p>	  Each row in the table below gives either the <p>Z</p>
+	  value or the percentile rank for some value of normally
+	  distributed data. Find the missing entry in each row.
+	  <md>
+	    <mrow>
+	      Z \amp\spacer\amp \text{percentile rank}
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      	       \rule{.3in}{.1ex} \amp \amp \rule{1.2in}{.1ex}
+	    </mrow>
+    	    <mrow>
+	      1.2 \amp\spacer\amp
+		    </mrow>
+    	    <mrow>
+	      -.37 \amp\spacer\amp
+	    </mrow>
+   	    <mrow>
+	      \amp\spacer\amp 43\text{rd percentile}
+	    </mrow>
+    	    <mrow>
+	      \amp\spacer\amp 58\text{th percentile}
+	    </mrow>
+	  </md>
+	</p>
+	<answer>
+	  <p>
+	  <md>
+	    <mrow>
+	      Z \amp\spacer\amp \text{percentile rank}
+	    </mrow>
+	    <!-- kludgey underline for top row of table -->
+	    <mrow>
+	      	       \rule{.3in}{.1ex} \amp \amp \rule{1.2in}{.1ex}
+	    </mrow>
+    	    <mrow>
+	      1.2 \amp\spacer\amp 88\text{th percentile}
+		    </mrow>
+    	    <mrow>
+	      -.37 \amp\spacer\amp 36\text{th percentile}
+	    </mrow>
+   	    <mrow>
+	     -.18 \amp\spacer\amp 43\text{rd percentile}
+	    </mrow>
+    	    <mrow>
+	      .20 \amp\spacer\amp 58\text{th percentile}
+	    </mrow>
+	  </md>
+	  </p>
+	</answer>
+      </exercise>
+  </exercises>
+</subsection>
+</section>
+

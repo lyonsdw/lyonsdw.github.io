@@ -6,14 +6,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Intuition for Hypothesis Testing</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Elementary Statistics Supplementary Notes">
-<meta property="book:author" content="David W. Lyons">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +74,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Elementary Statistics Supplementary Notes">
+<meta property="book:author" content="David W. Lyons">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,15 +101,17 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.12';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
@@ -333,19 +339,25 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="hypoth_test_act"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">A.5</span><span class="space"> </span><span class="title">Intuition for Hypothesis Testing</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intuition for Hypothesis Testing</span>
 </h2>
 <div class="para" id="hypoth_test_act-2">
-<em class="alert">Problem 1, part 1.</em> Your first assignment in your new lab job is to perform measurements of a check weight. The average of 50 weighings is <span class="process-math">\(100.432\)</span> grams and the SD of those weighings is <span class="process-math">\(0.04\)</span> grams. Use your data to find a <span class="process-math">\(95\%\)</span>-confidence interval for the true value of the mass of the check weight.</div>
+<em class="alert">Problem 1, part 1.</em> Your first assignment in your new lab job is to perform measurements of a check weight. The average of 50 weighings is <span class="process-math">\(100.432\)</span> grams and the SD of those weighings is <span class="process-math">\(0.04\)</span> grams. Use your data to find a <span class="process-math">\(95\%\)</span>-confidence interval for the true value of the mass of the check weight.<div class="autopermalink" data-description="Paragraph"><a href="#hypoth_test_act-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="hypoth_test_act-3">
-<em class="alert">Problem 2 part 1.</em> Your first assignment in your new job with the Gambling Inspection Commission is to test a particular roulette wheel for fairness. In 250 test spins, the outcome is red 110 times. Use this data to find a <span class="process-math">\(95\%\)</span>-confidence interval for the probability that a spin of this wheel will land red.</div>
+<em class="alert">Problem 2 part 1.</em> Your first assignment in your new job with the Gambling Inspection Commission is to test a particular roulette wheel for fairness. In 250 test spins, the outcome is red 110 times. Use this data to find a <span class="process-math">\(95\%\)</span>-confidence interval for the probability that a spin of this wheel will land red.<div class="autopermalink" data-description="Paragraph"><a href="#hypoth_test_act-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="hypoth_test_act-4">
-<em class="alert">Problem 1, part 2.</em> After your 50 measurements in Problem 1, part 1, your coworker gives you more data about this check weight, obtained with the same apparatus and the same methods that you used for your measurements. The coworker’s data claims that, over many weighings, the average value is <span class="process-math">\(100.413\)</span> grams, and the SD is <span class="process-math">\(0.038\)</span> grams. It occurs to you to perform a reality check on your own work. Supposing that the coworker’s claims are correct, what is the chance that 50 measurements would have an average of <span class="process-math">\(100.432\)</span> grams (your observed average) or higher?</div>
+<em class="alert">Problem 1, part 2.</em> After your 50 measurements in Problem 1, part 1, your coworker gives you more data about this check weight, obtained with the same apparatus and the same methods that you used for your measurements. The coworker’s data claims that, over many weighings, the average value is <span class="process-math">\(100.413\)</span> grams, and the SD is <span class="process-math">\(0.038\)</span> grams. It occurs to you to perform a reality check on your own work. Supposing that the coworker’s claims are correct, what is the chance that 50 measurements would have an average of <span class="process-math">\(100.432\)</span> grams (your observed average) or higher?<div class="autopermalink" data-description="Paragraph"><a href="#hypoth_test_act-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="hypoth_test_act-5">
-<em class="alert">Problem 2, part 2.</em> After your 250 test spins in Problem 2, part 1, a coworker tells you that this same wheel has been tested many times, and it is fair. In particular, this wheel lands red the expected percentage of the time. Supposing that this coworker is right, what is the chance that 250 spins would produce 110 reds or fewer?</div>
+<em class="alert">Problem 2, part 2.</em> After your 250 test spins in Problem 2, part 1, a coworker tells you that this same wheel has been tested many times, and it is fair. In particular, this wheel lands red the expected percentage of the time. Supposing that this coworker is right, what is the chance that 250 spins would produce 110 reds or fewer?<div class="autopermalink" data-description="Paragraph"><a href="#hypoth_test_act-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="hypoth_test_act-6">
-<em class="alert">Both Problems, part 3.</em> Perform a hypothesis test to determine whether the difference between your observed experimental values and the values expected by the coworker’s claims are significant. Using one or more complete sentences, state a null hypothesis, find the observed level of significance, and state your conclusion.</div></section></div>
-<div class="ptx-content-footer">
+<em class="alert">Both Problems, part 3.</em> Perform a hypothesis test to determine whether the difference between your observed experimental values and the values expected by the coworker’s claims are significant. Using one or more complete sentences, state a null hypothesis, find the observed level of significance, and state your conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#hypoth_test_act-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section A.5: Intuition for Hypothesis Testing"><a href="#hypoth_test_act" title="Copy heading and permalink for Section A.5: Intuition for Hypothesis Testing" aria-label="Copy heading and permalink for Section A.5: Intuition for Hypothesis Testing">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ave_sd_act.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="vocab_practice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
