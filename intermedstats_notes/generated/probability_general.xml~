@@ -47,25 +47,11 @@
       </p>
     </definition>
 
-    <exercise>
-      <p>
-	<ol>
-	  <li>Show that the definition of the probability
-	  space <m>\Omega^n</m> (see <xref ref="finiterandsampsect"/>)
-	  works for countably infinite descrete
-	  models <m>(\Omega,P)</m>.
-	  </li>
-	  <li>Do simple random samples make sense for infinite
-	  probability spaces?</li>
-	</ol>
-      </p>
-    </exercise>
-
     <p><alert>Example.</alert> Let <m>\Omega=\{1,2,3,\ldots\}</m>, and
 	  let <m>p\colon \Omega\to [0,1]</m> given by <m>p(n)=1/2^n</m>.
     </p>
 
-    <exercise><p>
+    <exercise xml:id="infdiscretespaceexampleexer"><p>
 	<ol>
 	  <li>Show that <m>p</m> is a probability function.</li>
 	  <li>Find the probability of the event <m>E=\{1,2,3,\ldots, n\}</m>. 
@@ -76,6 +62,24 @@
       </p>
     </exercise>
 
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="infdiscretespaceexampleexer"/></title>
+  <p>
+    <ol>
+      <li><m>\sum_{\omega\in \Omega}p(\omega)= \sum_{k=1}^{\infty}
+      1/2^k = 1</m>
+      </li>
+      <li><m>P(E)=\sum_{\omega\in E}p(\omega)= \sum_{k=1}^{n}
+      1/2^k = 1-1/2^{n+1}</m>
+      </li>
+      <li><m>P(F)\sum_{\omega\in F}p(\omega)= \sum_{k=1}^{\infty}
+      1/2^{5k} = 1/31</m>
+      </li>      
+    </ol>
+  </p>
+</aside>
+
+
     <p><alert>Samples from probability models.</alert> For a discrete
       probability model <m>(\Omega,P)</m> with probability
       function <m>p</m>, we define the probability space of <term>samples of
@@ -84,10 +88,27 @@
       defined by <xref ref="randsampprobfn"/>. 
     </p>
 
-    <exercise><p>Show that the function <m>p_{\Omega^n}</m> is indeed a
-    probability function.
+    <exercise xml:id="discretesampleprobfnexer"><p>
+	<ol><li>Show that the function <m>p_{\Omega^n}</m> is indeed a
+	    probability function.</li>
+	  <li>Do simple random samples make sense for infinite
+	  probability spaces?</li>
+	</ol>
       </p>
     </exercise>
+
+    <aside component="instructor">
+  <title>Instructor solution for <xref ref="discretesampleprobfnexer"/></title>
+  <p>
+    <ol>
+      <li>The same derivation used in <xref ref="productprobfnexer"/> is valid here as well.</li>
+      <li>No. Simple random samples presume the existence of a constant
+      probability function. This cannot exist for an infinite
+      probability space. </li>
+    </ol>
+  </p>
+</aside>
+
     
 </subsection>
 
@@ -106,9 +127,26 @@
     illustrate with two examples.
   </p>
 
-  <exercise><p>Why not? Why is it impossible to have a probability
+  <exercise xml:id="whynoprobfnuncoutableexer"><p>Why not? Why is it impossible to have a probability
   function on an uncountable set?</p>
   </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="whynoprobfnuncoutableexer"/></title>
+  <p>
+    Let <m>\Omega</m> be an uncountable set, and let <m>p\colon
+      \Omega\to [0,1]</m> be a function such
+    that <m>\sum_{\omega\in\Omega}p(\omega)=1</m>. For
+    each <m>n=1,2,3\ldots</m>, let <m>S_n=\{\omega\in \Omega\colon
+      p(\omega)\geq 1/n\}</m>. We must have <m>|S_n|\leq n</m>. We have
+    <me>\{\omega\in\Omega\colon p(\omega)\gt 0\} =
+      \bigcup_{k=1}^{\infty}S_n</me>
+    which is countable. This makes the notion of a probability function
+      on an uncountable set superfluous, because any probability
+      function can only be nonzero on a countable subset.
+  </p>
+</aside>
+  
 
   <p><alert>Uniform probability measures.</alert> Let <m>\Omega</m> be
   the set of points inside of a geometric figure with a finite area or volume, say, a two-dimensional
@@ -145,14 +183,33 @@
       the probability space <m>(\Omega,P_{\Omega})</m>.
   </p>
 
-  <exercise>
-    <p>Explain why <m>\Omega</m> is uncountable. Explain why
-      there can be no probability function on <m>\Omega^\infty</m>. Find
+  <exercise xml:id="seqoftossesexer">
+    <p>
+      <ol>
+	<li>Explain why <m>\Omega</m> is uncountable.</li>
+	<li>Find
       the probability that the first head in an infinite sequence of tosses occurs
-      on toss number 5.
-      <!--Example of a nonmeasureable set?-->
+	  on toss number 5.</li>
+</ol>
     </p>
   </exercise>
+  <!--Example of a nonmeasureable set?-->
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="seqoftossesexer"/></title>
+  <p>
+<ol>    <li>Use Cantor's diagonal argument. Assume that <m>\Omega</m> is
+      countable, with enumeration <m>\omega_1,\omega_2,\ldots</m>. Now
+      construct a sequence <m>r</m> by <m>r_k = H</m>
+      if <m>(\omega_k)_k=T</m> and <m>r_k = T</m>
+      if <m>(\omega_k)_k=H</m>. It must be that <m>r</m> is not equal to
+      any <m>\omega_k</m>, which is a contradiction.
+    </li>
+    <li><m>P(TTTTH)= 1/32</m>
+</li></ol>
+  </p>
+</aside>
+
 
       <p><alert>Samples from uncountable probability models.</alert> For
       an uncountable probability model <m>(\Omega,P)</m>, we define the probability space of <term>samples of
@@ -164,10 +221,20 @@
 	where <m>E_1,E_2,\ldots,E_n</m> are events in <m>\Omega</m>.
     </p>
 
-      <exercise><p>Check one or more properties of probability for one
+      <exercise xml:id="probpropsuncountableexer"><p>Check one or more properties of probability from
+	  <xref ref="probprops"/> for one
 	  or more special cases for <m>P_{\Omega^n}</m>.
 	</p>
       </exercise>
+
+      <aside component="instructor">
+  <title>Instructor solution for <xref ref="probpropsuncountableexer"/></title>
+  <p>
+Note 1/2/2026: leaving this one open-ended for now. Perhaps make this
+more specific at some point.
+  </p>
+</aside>
+
       
 </subsection>
 
