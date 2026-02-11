@@ -20,7 +20,7 @@ Discrete Random Variables
     called <term>discrete</term> if its image is finite or countably
     infinite; otherwise, a random variable is
     called <term>continuous</term>. In this section, we will develop
-    vocabulary and facts for quantitative random variables whose domains
+    vocabulary and facts for quantitative random variables 
     whose underlying probability models are discrete.
  </p>
 
@@ -67,13 +67,20 @@ Discrete Random Variables
 </p>
   </definition>
 
-  <exercise>
+  <exercise xml:id="qualquantrandvarsegexer">
     <p>Make up one or more examples of a qualitative random variable and
     a quantitative random variable on
       a finite probability with five or so elements. For both variables, choose some subsets <m>A</m> of the codomain and
       find the events <m>X\in A</m>.
       </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="qualquantrandvarsegexer"/></title>
+  <p>
+Note 1/2/2026: this exercise is open-ended for now. 
+  </p>
+</aside>
 
   
   <definition>
@@ -83,10 +90,17 @@ Discrete Random Variables
   <men>F_X(\lambda)= P(X\leq \lambda).</men></p>
   </definition>
 
-    <exercise>
+    <exercise xml:id="distfnegexer">
     <p>Make up one or more examples of a quantitative random variable
     on a finite probability space with five or so elements and sketch a graph of the distribution function.</p>
     </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="distfnegexer"/></title>
+  <p>
+Note 1/2/2026: this exercise is open-ended for now. 
+  </p>
+</aside>
     
   <proposition xml:id="distribfunproperties">
     <title>Properties of distribution functions</title>
@@ -105,10 +119,80 @@ Discrete Random Variables
     </p>
   </proposition>
 
-  <exercise><p>Prove the properties in
+  <exercise xml:id="distfnpropexer"><p>Prove the properties in
   <xref ref="distribfunproperties"/>. Illustrate how the properties
   look in the examples you made up in the Checkpoints above.</p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="distfnpropexer"/></title>
+  <p>
+   Note 1/3/20206: This exercise is probably too hard as stated, but
+   would be reasonable for the special case of a finite probability space. Proof
+   of property 2 needs at least a hint, probably separate set of
+   structured, guided exercises. 
+  </p>
+  <p>Lemma for Properties 2 and 3: Let
+    <me>A_1\subseteq A_2\subseteq A_3 \subseteq \cdots</me>
+    be subsets of <m>\Omega</m>, and
+    let <m>A=\bigcup_{n=1}^{\infty}A_n</m>. Then we have
+    <me>\lim_{n\to \infty} P(A_n)=P(A).</me>
+    Proof of the Lemma: Let <m>B_1=A_1</m> and let
+    <m>B_n=A_n\setminus A_{n-1}</m>
+    for <m>n\geq 2</m> so that we have the disjoint unions
+    <md>
+      <mrow>A_n \amp = B_1\cup B_2\cup \cdots \cup B_n \text{ for all }
+      n\in \N
+      </mrow>
+      <mrow>A \amp = \bigcup_{n=1}^{\infty} B_n.</mrow>
+    </md>
+    Applying <xref ref="additionrule"/> of <xref ref="probprops"/>
+    (using an inductive proof for finite unions, and arguments about
+    series for the infinite union), we have
+    <md>
+      <mrow>P(A_n) \amp = \sum_{k=1}^n P(B_k)
+      </mrow>
+      <mrow>P(A) \amp = \sum_{n=1}^{\infty} P(B_n).</mrow>
+    </md>
+    The last expression can be rewritten
+    <me>\sum_{n=1}^{\infty} P(B_n)=\lim_{n\to \infty} \left(\sum_{k=1}^n
+    P(B_k) \right)=\lim_{n\to \infty} P(A_n).</me> This proves the
+    Lemma. Applying complements and DeMorgan's laws, we get another
+    Lemma: Let
+    <me>A_1\supseteq A_2\supseteq A_3\supseteq \cdots </me>
+    be subsets of <m>\Omega</m> and let <m>A=\bigcap_{n=1}^{\infty} A_n</m>. We
+    have
+    <me>\lim_{n\to \infty}P(A_n) = P(A)</me>. (Apply the first Lemma to
+    the complements of everything in the second Lemma.)
+  </p>
+
+  <p>Now we prove <xref ref="distribfunproperties"/>.
+    <ol> 
+      <li>Let <m>A=\{\omega\colon X(\omega)\leq a\}</m> and
+	  let <m>B=\{\omega\colon X(\omega)\leq
+	  b\}</m>. Then <m>A\subseteq B</m>, so <m>P(A)\leq P(B)</m> by
+	  part <xref ref="subsetimpliesprobleq"/> of
+	  <xref ref="probprops"/>. Thus we have <me>F_X(a)=P(X\leq
+	  a)=P(A)\leq P(B)= P(X\leq b)=F_X(B).</me>
+      </li>
+      <li>Let <m>A_n = X^{-1}((c,c+1/n])</m> for <m>n\in \N</m>, so
+	that we have <m>F_X(c+1/n)-F_X(c)=P(A_n)</m> and 
+	<m>\bigcap_n A_n=\emptyset</m>. Applying the second Lemma
+	above, we have
+	<m>\lim_{n\to \infty}(F_X(c+1/n)-F_X(c))=0 </m>. Using basic facts
+	about limits, we conclude that <m>\lim_{x\to c^+}F_X(x)=F_X(c)</m>.
+      </li>
+      <li>
+	Let <m>A_n = X^{-1}((n,\infty))</m> so that we
+	have <m>1-F_X(n)=P(A_n)</m> and <m>\bigcap_n
+	  A_n=\emptyset</m>. Applying the Lemma, we have
+		<m>\lim_{n\to \infty}(1-F_X(n))=0 </m>. Using basic facts
+	about limits, we conclude that <m>\lim_{x\to
+	\infty}F_X(x)=1</m>. A similar argument works for the second statement.
+      </li>
+    </ol>
+  </p>
+</aside>
   
   <p><alert>Vocabulary related to the distribution function.</alert> The
     distribution function provides a ranking of the values of a random
@@ -141,10 +225,18 @@ Discrete Random Variables
     range</term> (IQR) is the upper quartile minus the lower quartile.
   </p>
 
-  <exercise><p>Explain and give examples about the statements regarding
+  <exercise xml:id="percentilepossibilitiesexer"><p>Explain and give examples about the statements regarding
       the possibilities for <m>F_X^{-1}(p)</m> for a discrete random variable.
     </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="percentilepossibilitiesexer"/></title>
+  <p>
+Note 1/2/2026: this exercise is open-ended for now. 
+  </p>
+</aside>
+  
 
   <p><alert>Box plots.</alert> A <em>box plot</em> (or a <em>box and
     whiskers</em> plot) is a visual representation of some basic
@@ -159,10 +251,18 @@ Discrete Random Variables
     the maximum and minimum values of the random variable.
     </p>
 
-  <exercise>
+  <exercise xml:id="boxplotsegexer">
     <p>Find examples of box plots. Pick a style you like and make a
     bunch for yourself.</p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="boxplotsegexer"/></title>
+  <p>
+Note 1/2/2026: this exercise is open-ended for now. 
+  </p>
+</aside>
+  
   
 </subsection>
 
@@ -192,7 +292,7 @@ Discrete Random Variables
 
     
     
-    <exercise>
+    <exercise xml:id="historgramvarsexer">
       <p>
 	<ol><li>A frequently used alternative convention for histograms
 	is to switch the closed and open ends of the class intervals,
@@ -226,6 +326,38 @@ Discrete Random Variables
       </p>
 
     </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="historgramvarsexer"/></title>
+  <p>
+    <ol>
+      <li>Using <m>P([a,a])=F_X(a)-\lim_{x\to a^-}F_X(x)</m>, we have
+	<md>
+	  <mrow>P_k \amp= P(X\in [x_{k-1},x_k))
+	  </mrow>
+	  <mrow>\amp= F_X(x_k)-F_X(x_{k-1})-P([x_k,x_k])+P([x_{k-1},x_{k-1}])
+	  </mrow>
+	  <mrow>\amp= F_X(x_k)-F_X(x_{k-1})
+	  </mrow>
+	  <mrow>\amp -(F_X(x_k)-\lim_{x\to x_{k}^-}F_X(x))
+	  </mrow>
+	  <mrow>\amp +(F_X(x_{k-1})-\lim_{x\to x_{k-1}^-}F_X(x)).
+	  </mrow>
+	</md>
+      </li>
+      <li>If <m>X(\omega)=x_k</m> for some <m>k</m> in the
+	range <m>1\leq k\leq n-1</m>, the value <m>p(\omega)</m> would
+	be counted twice, once in each interval on either side
+	of <m>x_k</m>. This would make the total histogram area greater
+	than 1.</li>
+      <li>Sketch some examples to see the readability and
+      disambiguation advantages. Do the family size poll and histogram
+      exercise in class to illustrate.</li>
+      <li>Note 1/2/2026: this is open-ended for now.</li>
+    </ol>
+  </p>
+</aside>
+    
     
 </subsection>
 
@@ -260,19 +392,46 @@ Discrete Random Variables
     <men xml:id="expectvalregrouped">E(X) = \sum_{x\in X(\Omega)}x P(X=x).</men>
   </p>
 
-  <exercise>
+  <exercise xml:id="expectationintroexer">
     <p>
       <ol>
 	<li>Make up several random variables on small finite
 	probability spaces. Calculate their expected values.</li>
-	<li>Let <m>X</m> be a random variable and
+<!--	<li>Let <m>X</m> be a random variable and
 	  let <m>Y=aX+b</m>. Show that <m>E(Y)=aE(X)+b</m>.
+	</li>-->
+	<li>Let <m>X,Y\colon \Omega \to \R</m> be random variables on a
+	  discrete probability space. Show that the following hold.
+	  <mdn>
+	    <mrow xml:id="expectvallinsumprop">E(X+Y) \amp = E(X)+E(Y)</mrow>
+	    <mrow xml:id="expectvallinscaleprop">E(aX) \amp = aE(X)</mrow>
+	  </mdn>
 	</li>
 	<li>Justify <xref ref="expectvalregrouped"/>.
 	</li>
       </ol>
       </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="expectationintroexer"/></title>
+  <p>
+    <ol>
+      <li>Note 1/3/2026: This exercise is open-ended for now.</li>
+      <li>Let's do both properties in one derivation. We have
+	<md>
+	  <mrow>E(aX+Y)\amp =\sum_{\omega}(aX(\omega)+Y(\omega))p(\omega)</mrow>
+	  <mrow>\amp =a\sum_{\omega}X(\omega)p(\omega) +
+	    \sum_{\omega}Y(\omega) p(\omega)</mrow>
+	  <mrow>\amp = aE(X)+E(Y).</mrow>
+	</md>
+      </li>
+      <li><xref ref="expectvalregrouped"/> is just a rearrangement of
+      terms in <xref ref="expectvaldef"/>.</li>
+    </ol>
+  </p>
+</aside>
+
   
     <p>Variance and standard deviation are measures of the spread of a
     random variable about its mean. The <term>variance</term>
@@ -284,13 +443,14 @@ Discrete Random Variables
     <m>\sigma_X</m> (or just <m>\sigma</m>), is the square root of the variance.
     </p>
 
-      <exercise>
+      <exercise xml:id="varianceintroexer">
     <p>
       <ol>
 	<li>Calculate the variance for each of the examples you made up
 	in the previous Checkpoint.</li>
 	<li>Let <m>X</m> be a random variable and
-	  let <m>Y=aX+b</m>. Show that <m>\var(Y)=a^2\var(X)</m>.
+	  let <m>a,b</m> be constants. Show that
+	  <men xml:id="variancescaleprop">\var(aX+b)=a^2\var(X).</men>
 	</li>
 	<li>Show the two expressions for variance
     <xref ref="variancedef"/> are equal.
@@ -299,6 +459,26 @@ Discrete Random Variables
       </p>
   </exercise>
 
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="varianceintroexer"/></title>
+  <p>
+    <ol>
+      <li>Note 1/3/2026: This exercise is open-ended for now.</li>
+      <li>We have
+	<md>
+	  <mrow>\var(aX+b)\amp =E((aX+b)^2) - (E(aX+b))^2</mrow>
+	  <mrow>\amp =E(a^2X^2 +2abX +b^2) - (aE(X)+b)^2</mrow>
+	  <mrow>\amp =a^2E(X^2) + 2abE(X) + b^2 - a^2(E(X))^2 - 2abE(X)
+	    -b^2</mrow>
+	  <mrow>\amp = a^2 (E(X^2)-(E(X))^2)</mrow>
+	  <mrow>\amp = a^2 \var(X).</mrow>
+	</md>
+      </li>
+      <li> (Just do the algebra, using properties of expected value.)</li>
+    </ol>
+  </p>
+</aside>
+      
       <p><alert>Standardized random variables.</alert>
 A random variable <m>X</m> is said to be <term>standardized</term>
     if <m>E(X)=0</m> and <m>\var(X)=1</m>. If <m>X</m> is any random
@@ -306,9 +486,18 @@ A random variable <m>X</m> is said to be <term>standardized</term>
     the variable <m>X' = \frac{X-\mu_X}{\sigma_X}</m> is standardized.	
       </p>
 
-        <exercise><p>Verify the last claim above.</p>
+        <exercise xml:id="standardvarexer"><p>Verify the last claim above.</p>
   </exercise>
 </subsection>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="standardvarexer"/></title>
+  <p>
+(Just do the algebra, using properties of expected value and variance
+established in the previous Checkpoints above.)
+  </p>
+</aside>
+
 
 <subsection>
   <title>One basic example</title>
@@ -335,15 +524,41 @@ A random variable <m>X</m> is said to be <term>standardized</term>
   sample space for a Bernoulli variable could have any number of elements.
   </p>
 
-    <exercise><p>Show that <m>E(X)=p</m> and <m>\var(X)=pq</m> for a
-	Bernoulli variable <m>X</m>.
-      </p>
-      <p>Find a 10-element probability space and probability function
+  <exercise xml:id="bernoulliexpectvarexer"><p>
+      <ol><li xml:id="bernoulliexpectvarformulas">Show that <m>E(X)=p</m> and <m>\var(X)=pq</m> for a
+	  Bernoulli variable <m>X</m>.</li>
+      <li>Find a 10-element probability space and probability function
 	for a Bernoulli variable <m>X</m> with <m>p(X=1)=.6</m>. Find an
 	infinite probability space and probability function for a
-	Bernoulli variable with <m>P(X=1)=.6</m>.
+	Bernoulli variable with <m>P(X=1)=.6</m>.</li>
+      </ol>
       </p>
     </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="bernoulliexpectvarexer"/></title>
+  <p>
+    <ol>
+      <li>Using <xref ref="expectvalregrouped"/>, we have
+	<me>E(X) = 1\cdot p + 0\cdot q = p.</me> Using the observation
+	that <m>X^2=X</m>, we have
+	<me>\var(X) = E(X^2)-(E(X))^2 = p-p^2 = p(1-p) = pq.</me>
+      </li>
+      <li>Let <m>\Omega=\{\omega_1,\omega_2,\ldots,\omega_{10}\}</m> be
+	a probability space with constant probability
+	function <m>p=.1</m>, and let <m>X(\omega_k)=1</m> for <m>1\leq
+	  k\leq 6</m>, and <m>X(\omega_k)=0</m> for <m>7\leq k\leq
+	10</m>. Clearly, this works for the finite example. For an
+	infinite example, let <m>\Omega=\{0\}\cup \N</m> with probability
+	function <m>p(k)=\frac{1}{10\cdot 2^{q(k)+1}}</m>,
+	where <m>q(k)</m> is the quotient in from using the division
+	algorithm to write <m>k=10q(k)+r</m>, with <m>0\leq r\leq
+	  9</m>. Now set <m>X(k)=1</m> for <m>k</m> that satisfies <m>k
+	\MOD 10 = 0\ldots 5</m> and <m>X(k)=0</m> otherwise.
+      </li>
+    </ol>
+  </p>
+</aside>
 
     
 </subsection>
@@ -353,38 +568,123 @@ A random variable <m>X</m> is said to be <term>standardized</term>
   <definition><p>
     Let <m>X,Y\colon \Omega\to \R</m> be random variables on the same
     sample space. The <term>joint distribution
-      function</term> <m>F_{XY}\colon \R^2\to \R</m> is given by
-    <men>F_{XY}(\lambda,\mu) = P(X\leq \lambda\text{ and }Y\leq
-      \mu).</men>
-    Variables <m>X,Y</m> are
-    called <term>independent</term>
-    if <m>F_{XY}=F_XF_Y</m>. If <m>X,Y</m> are not independent, they are
-    called <term>dependent</term>.
-    The <term>covariance</term> of <m>X</m> and <m>Y</m>,
-    denoted <m>\covar(X,Y)</m>
-    is
+      function</term> <m>F_{X,Y}\colon \R^2\to \R</m> is given by
+    <men>F_{X,Y}(\lambda,\mu) = P(X\leq \lambda\text{ and }Y\leq
+      \mu).</men> Variables <m>X,Y</m> are
+      called <term>independent</term>
+      if <m>F_{X,Y}(\lambda,\mu)=F_X(\lambda)F_Y(\mu)</m> for
+      all <m>\lambda,\mu</m>. If <m>X,Y</m> are not independent, they
+      are called <term>dependent</term>.  The <term>covariance</term>
+      of <m>X</m> and <m>Y</m>, denoted <m>\covar(X,Y)</m> is
     <men>\covar(X,Y)=E(XY)-E(X)E(Y).</men>
   </p>
   </definition>
 
+  <exercise xml:id="covarsumexer">
+    <p>Let <m>X,Y\colon \Omega \to \R</m> be random variables and
+    let <m>a,b,c,d</m> be constants.
+      <ol>
+	<li>Show that
+	  <men xml:id="covarscaleprop">\covar(aX+b,cY+d)=ac\covar(X,Y).</men>
+	</li>
+	<li> Show that
+	  <men xml:id="covarsumformula">\var(X+Y) = \var(X) + \var(Y) +
+	  2\covar(X,Y).</men></li>
+      </ol>
+    </p>
+  </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="covarsumexer"/></title>
+  <p>
+    <ol>
+      <li>Just do the algebra.</li>
+      <li>Start with the definition <m>\var(X+Y)  = E((X+Y)^2) +
+    (E(X+Y))^2</m>, then do algebra and use the linearity properties
+    <xref ref="expectvallinsumprop"/> and
+    <xref ref="expectvallinscaleprop"/> of
+    expected value.</li></ol>
+  </p>
+</aside>
+
+  
   <proposition xml:id="indepimpliescovarzero">
     <p>If <m>X,Y</m> are independent, then <m>\covar(X,Y)=0</m>.
     </p>
   </proposition>
 
-  <exercise>
+  <exercise xml:id="covarexer">
         <p>
-      <ol><li>Show by example that the converse of <xref ref="indepimpliescovarzero"/>
-	  is false.</li>
-	<li>Show that two discrete random variables on a finite sample
-	  space are independent if and only if <m>P(X\in A\text{ and }Y\in B)=P(X\in A)P(Y\in
-	    B)</m> for every pair of sets <m>A,B\subseteq \R</m>. This demonstrates why we use the
-  term <em>independent</em>.
-	</li>
-      </ol>
+      Show by example that the converse of <xref ref="indepimpliescovarzero"/>
+	  is false.
     </p>
   </exercise>
-  
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="covarexer"/></title>
+  <p>
+Let <m>\Omega=\{a,b,c\}</m> with constant probability
+	function <m>p=1/3</m>. Let <m>X,Y</m> be given by the chart
+	below.
+	<me>
+	  \begin{array}{c|c|c|c}
+	\omega \amp  X \amp Y \amp XY \\ \hline
+	 a \amp -2 \amp 0 \amp 0\\
+	 b \amp 1 \amp 1 \amp 1\\
+	  c \amp 1 \amp -1 \amp -1
+	  \end{array}
+	</me>
+	We have <m>\covar(XY)=0</m> but <m>F_{X,Y}(-2,0)=1/3\neq 2/9 = F_X(-2)F_Y(0)</m>.
+  </p>
+</aside>
+
 </subsection>
+
+<exercises>
+
+  <exercise xml:id="randvarsfiniteindepiffalleventsindepexer">
+    <p>Show that two discrete random variables on a finite sample
+	  space are independent if and only if <m>P(X\in A\text{ and }Y\in B)=P(X\in A)P(Y\in
+	    B)</m> for every pair of sets <m>A,B\subseteq \R</m>. This demonstrates why we use the
+      term <em>independent</em>.</p>
+  </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="randvarsfiniteindepiffalleventsindepexer"/></title>
+  <p>
+ One direction is easy. If <m>P(X\in A \text{ and } Y\in B)=P(X\in
+	  A)P(Y\in B)</m> for all <m>A,B</m>, just
+	set <m>A=(-\infty,a)</m>, <m>B=(-\infty,b)</m>, and we
+	have <m>P(X\in A \text{ and } Y\in B)=F_{X,Y}(a,b)</m>, <m>P(X\in
+	  A)=F_X(a)</m>, and <m>P(Y\in B)=F_Y(b)</m>. For the other
+	direction, 
+	<!-- (suppose <m>F_{X,Y}(a,b)=F_X(a)F_Y(b)</m> for
+	all <m>a,b</m>), we can show that <m>P(X=a \text{ and
+	}Y=b)=P(X=a)P(Y=b)</m> for all <m>a,b</m>, as follows.-->
+	given
+	values <m>a,b</m>, choose <m>\epsilon</m> so that
+	<md>
+	  <mrow>P(X=a) \amp = P(X \in (a-\epsilon,a+\epsilon]) =
+	    F_X(a+\epsilon)-F_X(a-\epsilon)</mrow>
+	  <mrow>P(Y=b) \amp = P(Y \in (b-\epsilon,b+\epsilon]) =
+	    F_Y(b+\epsilon)-F_Y(b-\epsilon)</mrow>
+	  <mrow>P(X=a \text{ and } Y=b) \amp = F_{X,Y}(a+\epsilon,b+\epsilon)
+	    - F_{X,Y}(a-\epsilon,b+\epsilon)
+	    </mrow>
+	  <mrow>
+	    \amp -  F_{X,Y}(a+\epsilon,b-\epsilon) +   F_{X,Y}(a-\epsilon,b-\epsilon)
+	  </mrow>
+	</md>
+	(draw pictures to see why!). Now use the
+	assumption <m>F_{X,Y}(u,v)=F_X(u)F_Y(v)</m> (for all <m>u,v</m>)
+	to show that <m>P(X=a \text{ and }Y=b)=P(X=a)P(Y=b)</m>. Having
+	shown this, we get <m>P(X\in A \text{ and }Y\in B)=P(X\in
+	  A)P(Y\in B)</m> for arbitrary <m>A=\{a_1,\ldots,a_n\},B=\{b_1,\ldots,b_m\}</m> by
+	using <m>P(X\in A)=P(X=a_1)+ \cdots P(X=a_n)</m>, <m>P(Y\in
+	B)=P(Y=b_1)+ \cdots P(Y=b_m)</m>. 
+  </p>
+</aside>
+
+</exercises>
 
 </section>
