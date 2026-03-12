@@ -202,13 +202,14 @@ Sampling I
   </p>
 
    <exercise xml:id="sampstatsbasicpropexer">
-   <p>Prove <xref ref="sampstatsbasicprop"/> for the case of discrete variables.
+     <p>
+       <ol><li>Prove <xref ref="expectsampave"/><mdash/><xref ref="sesampsum"/>. </li>
+	 <li>Optional challenge problem: Prove <xref ref="esampvar"/>. Suggestion. First show
+	 that <me>E(\overline{X}^2)=\frac{E(X^2)+(n-1)\mu^2}{n}=E(X_k\overline{X})</me>
+	   for <m>1\leq k\leq n</m>.
+	 </li>
+       </ol>
    </p>
-   <!-- Note 1/6/2026: commenting this out for now
-      <p>Prove <xref ref="sampstatsbasicprop"/> for the case of continuous
-      variables that have density functions.
-      </p>
-      -->
  </exercise>
 
    <aside component="instructor">
@@ -229,8 +230,12 @@ Sampling I
     <xref ref="sampvarvarprop"/>.
   </p>
 
-  <p>The remaining three properties come from applying scaling
-  properties of expected value and variance to the first two properties.</p>
+  <p>The next two properties come from applying scaling
+  properties of expected value and variance to the first two
+    properties.</p>
+
+  <p>For <xref ref="esampvar"/>, we have the following.</p>
+  
 </aside>
 
    
@@ -270,9 +275,9 @@ Sampling I
     and <m>\var(X)=\sigma^2</m>. 
     We have the following.
     <mdn>
-      <mrow>F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
-      <mrow>E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
-      <mrow>\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
+      <mrow xml:id="simpsampvarcdf">F_{X_k} \amp= F_X \text{   for }1\leq k\leq n</mrow>
+      <mrow xml:id="esimpsampvar">E(X_k)\amp = \mu \text{   for }1\leq k\leq n</mrow>
+      <mrow xml:id="varsimpsampvar">\var(X_k)\amp = \sigma^2 \text{   for }1\leq k\leq n</mrow>                  
       <mrow xml:id="covarsimplesampvars">\covar(X_i,X_j)\amp =
 	-\frac{\sigma^2}{N-1}\text{ if }i\neq j</mrow>
       <mrow xml:id="sesimpsampave">\var(\overline{X})\amp = \frac{\sigma^2}{n}\left(\frac{N-n}{N-1}\right)</mrow>      
@@ -304,7 +309,16 @@ Sampling I
   </p>
 
      <exercise xml:id="simprandsamppropexer">
-    <p>Prove <xref ref="simprandsampprop"/>.</p>
+       <p>
+	 <ol>
+	   <li>Prove <xref ref="simpsampvarcdf"/><mdash/><xref ref="varsimpsampvar"/> for the case
+	   of discrete variables.</li>
+	   <li>Optional challenge problem: Prove
+      <xref ref="covarsimplesampvars"/>. Suggestion: Start by showing
+      <me>E(X_1X_2)=
+	\frac{1}{N(N-1)}\sum_{\omega_1\neq\omega_2}X(\omega_1)X(\omega_2).</me></li>
+      </ol>
+    </p>
     </exercise>
 
 <aside component="instructor"><title>Instructor solution for 
