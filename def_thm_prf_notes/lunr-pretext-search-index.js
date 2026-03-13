@@ -145,9 +145,9 @@ var ptx_lunr_docs = [
   "body": "All Boolean expressions are logical  Let be a function. There exists a truth table in whose columns are statements for a logical expression made using and the logical connectives whose corresponding Boolean expression is , where for .  "
 },
 {
-  "id": "logic_section-4-7",
+  "id": "disjunctivenormalformexer",
   "level": "2",
-  "url": "logic_section-4.html#logic_section-4-7",
+  "url": "logic_section-4.html#disjunctivenormalformexer",
   "type": "Checkpoint",
   "number": "1.2.4",
   "title": "",
@@ -205,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Basic objects",
-  "body": "Basic objects  The following definitions clarify and expand the definitions given in .  The following is an amendment to Definition 4.1.4 on p.66 of .    Let be sets. A relation from to is a subset of the Cartesian product . A relation from a set to itself is called a relation on the set . Given a relation from to , the inverse relation to , denoted , is the relation from to given by    The following is a clarification of the term directed graph introduced in Example 4.1.7 on p.67 of .  Given a relation on a set , a directed graph is a figure that illustrates . Elements of are depicted as dots, and in is depicted by a segment of a line or an arc that starts at , ends at , and has an arrow pointing from to .  The following is a correction to Definition 4.4.1 on p.84 of .    A (simple) graph is a pair , where is a set and is a set of subsets of , where every element of has two elements. An element of is called a vertex and an element of is called an edge . The set is called the set of vertices of the graph , and the set is called the set of edges of .  One can also define graphs that allow loops, that is, edges that connect a vertex to itself. Further generalizations of graphs allow multiple edges that connect the same pair of vertices. In this course, the term graph will always refer to a simple graph, as defined above. The definition of graph given in uses the word pair in the definition of an edge. Unfortunately, this introduces ambiguity as to whether loops are allowed as edges. In mathematics, the word pair usually denotes an ordered list . By default, it is allowable that the objects and may be equal. We avoid this ambiguity by not using the word pair in our definition of graph.   "
+  "body": "Basic objects  The following definitions clarify and expand the definitions given in .  The following is an amendment to Definition 4.1.4 on p.66 of .    Let be sets. A relation from to is a subset of the Cartesian product . A relation from a set to itself is called a relation on the set . Given a relation from to , the inverse relation to , denoted , is the relation from to given by    The following is a clarification of the term directed graph introduced in Example 4.1.7 on p.67 of .   A directed graph (or digraph ) is a pair where is a set and . An element of is called a vertex or a node and an element of is called an edge .    Given a relation on a set , the pair is a digraph. In a drawing, elements of are depicted as dots, and in is depicted by a segment of a line or an arc that starts at , ends at , and has an arrow pointing from to .  The following is an alternative to Definition 4.4.1 on p.84 of .    A (simple) graph is a pair , where is a set and is a set of subsets of , where every element of contains exactly two elements of . An element of is called a vertex or a node and an element of is called an edge .     Note on terminology: The plural of vertex is vertices .  Note on an important and almost hidden assumption in . In general, graphs and digraphs may be finite or infinite. In Remark 1 on p.84, Schumacher says that all graphs in this section are assumed to be finite. Without this assumption, some of the theorems are false.  "
 },
 {
   "id": "relations_section-2-4",
@@ -223,16 +223,16 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "directed graph "
+  "body": "directed graph digraph vertex node edge "
 },
 {
-  "id": "relations_section-2-8",
+  "id": "relations_section-2-9",
   "level": "2",
-  "url": "relations_section-2.html#relations_section-2-8",
+  "url": "relations_section-2.html#relations_section-2-9",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "(simple) graph vertex edge set of vertices set of edges "
+  "body": "(simple) graph vertex node edge "
 },
 {
   "id": "functions_section",

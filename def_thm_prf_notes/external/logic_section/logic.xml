@@ -251,7 +251,7 @@ for a logical expression made using <m>p_1,p_2,\ldots,p_n</m> and the
     </p>
   </proposition>
 
-  <exercise><p>Make three random strings 8 letter long using the
+  <exercise xml:id="disjunctivenormalformexer"><p>Make three random strings 8 letter long using the
       letters <m>T,H</m>. Make a table whose columns are
       labeled <m>p,q,r,L</m>, and with 8 rows, filled in with the 8
       3-letter logical possibilities <m>TTT,TTH,THT,\ldots,HHH</m> for
@@ -263,6 +263,31 @@ for a logical expression made using <m>p_1,p_2,\ldots,p_n</m> and the
       remaining 8-letter strings.
     </p>
   </exercise>
+
+    <aside component="instructor"><title>Instructor solution for <xref ref="disjunctivenormalformexer"/></title>
+      <p>You can read disjunctive normal form directly from the truth
+	table, as follows. Let <m>p_1,p_2,\ldots,p_n</m> be the
+	statements that label the columns of the input <m>T,F</m>
+	strings in the truth table. Let TROWS be the set of rows whose
+	output value is <m>T</m>. For each row <m>r</m>
+	in TROWS, let <m>q^r_k=p_k</m> if the <m>k</m>th input entry in row <m>r</m>
+	is <m>T</m>, and let <m>q^r_k=\sim p_k</m> otherwise. The
+	statement
+	<me>\bigvee_{r\in \text{TROWS}} q^r_1\wedge q^r_2\wedge \cdots\wedge q^r_n</me>
+	is a disjunctive normal form for the statement with the given
+	truth table. This can be expressed more directly in terms of
+	Boolean function. Given table of values <m>f(I)</m> for a
+	function <m>f\colon \B^n\to \B</m>, where
+	<m>I=i_1i_2\ldots i_n</m>, we have the following expression for <m>f</m>.
+   <me>f= \sum_{I\colon f(I)=1} \prod_{k=1}^n (x_k + i_k+1)
+   </me>
+   Note that <m>\wedge</m> is equivalent to <m>\oplus</m> for these
+   monomials, so the translation from disjunctive normal form to the
+   polynomial above (and vice-versa) is direct.
+
+</p>
+</aside> 
+
   
   <corollary><title>The connectives <m>\sim,\wedge,\vee</m> are universal</title>
 <p>    Any truth table made from any number of logical

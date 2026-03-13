@@ -86,6 +86,8 @@ is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
     1 \amp \text{ if } p \text{ is true}\\
     0 \amp \text{ if } p \text{ is false}.
     \end{cases}</me>
+  In these notes we will refer to <m>v</m> as the <term>truth
+    value</term> function.
 </p>
   
   <exercise>
@@ -167,9 +169,10 @@ is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
 <ol>      <li>
     Find the Boolean expression
       that corresponds to the logical expression
-      <me>[p\wedge(q\oplus r)] \vee [r\Leftarrow p] \wedge
-	\sim[q\Leftrightarrow r].  </me></li>
-  <li>Find a logical expression for the Boolean expression <m>xyz+xy+y+z+1</m>.
+      <me>[p\wedge(q\oplus r)] \oplus \left([r\Leftarrow p] \wedge
+	\sim[q\Leftrightarrow r]\right).  </me></li>
+  <li>Find the truth table for the logical expression whose
+  corresponding Boolean expression is <m>xyz+xy+y+z+1</m>.
   </li>
       
 
@@ -177,7 +180,23 @@ is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
     </p>
   </exercise>
   
-
+  <aside component="instructor"><title>Instructor solution for
+      <xref ref="convertlogicbooleanexer"/></title>
+    <p><ol>
+	<li><m>xyz+xz+y+z</m>
+	</li>
+	<li>The point here is that it is easier to find the truth table
+	  directly from the Boolean expression. The vector of values
+	  (that is, the column of values of the logical expression in the truth table)
+	  is <m>(1,0,0,1,1,0,1,1)</m> for logical possibility
+	  inputs <m>000,001,010,\ldots,111</m>. The function is encoded
+	  as <m>(1,1,1,0,0,0,1,1)</m> (coefficients of <m>x^iy^jz^k</m>
+	  for <m>ijk = 000,001,010,\ldots,111</m>).
+	</li>
+      </ol>
+    </p>
+  </aside>
+  
   <exercise>
     <p>Use Boolean expressions instead of truth tables for all of the
     exercises in Ch 1 of <xref ref="chapterzero"/> that suggest that you
@@ -194,7 +213,7 @@ is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
   expressions. This turns out to be true. Here are some facts.
   </p>
 
-  <proposition><title>All Boolean functions are polynomial</title>
+  <proposition xml:id="booleanfunsarepolys"><title>All Boolean functions are polynomial</title>
     <p>Let <m>x_1,x_2,\ldots,x_n</m> be Boolean variables, and
       let <m>f\colon \B^n \to \B</m> be a function. Then <m>f(x_1,x_2,\ldots,x_n)</m>
       may be written as a polynomial
@@ -203,6 +222,19 @@ is defined by <m>0+0=0</m>, <m>1+0=0+1=1</m>, and <m>1+1=0</m>.
       for some constants <m>c_I=c_{i_1,i_2,\ldots,i_n}\in \B</m>.
     </p>
   </proposition>
+
+  <p><alert>Comment on terminology.</alert> A <term>Boolean
+ expression</term>
+    in <m>n</m>
+    variables <m>x_1,x_2,\ldots,x_n</m>
+     is a polynomial in those variables,
+    with coefficients in <m>\B</m>. Polynomials are the expressions that
+    can be made using only the variables <m>x_1,x_2,\ldots,x_n</m>, the
+    constants <m>0,1</m>, and the operations of addition and multiplication.
+    A consequence of
+  <xref ref="booleanfunsarepolys"/> is that Boolean expressions account
+  for <em>all possible</em> Boolean functions <m>\B^n\to \B</m>.
+  </p>
 
   <exercise>
     <p>Identify all of the details for the Boolean functions in both
@@ -222,7 +254,7 @@ for a logical expression made using <m>p_1,p_2,\ldots,p_n</m> and the
   <exercise><p>Make three random strings 8 letter long using the
       letters <m>T,H</m>. Make a table whose columns are
       labeled <m>p,q,r,L</m>, and with 8 rows, filled in with the 8
-      3-letter logical possiblities <m>TTT,TTH,THT,\ldots,HHH</m> for
+      3-letter logical possibilities <m>TTT,TTH,THT,\ldots,HHH</m> for
       columns <m>p,q,r</m>, and put one of your random 8-letter strings
       in the column for <m>L</m>. Find a logical expression made
       using <m>p,q,r</m> and the connectives <m>\sim,\wedge,\vee</m> so
@@ -279,7 +311,7 @@ all <m>n</m>-tuples of statements <m>p_1,p_2,\ldots,p_n</m>.
   -->
 
   <!--
-  <p>more topics: univeral sets of connectives
+  <p>more topics: universal sets of connectives
 
     facts: every logical connective has a Boolean function
 

@@ -35,16 +35,27 @@ The following definitions clarify and expand the definitions given in
 	p.67 of <xref ref="chapterzero"/>.
       </p>
 
+      <p>
+	<definition><p>A <term>directed graph</term>
+	  (or <term>digraph</term>) is a pair <m>G=(V,E)</m>
+	  where <m>V</m> is a set and <m>E\subseteq V\times V</m>. An
+	  element of <m>V</m> is called
+      a <term>vertex</term> or a <term>node</term>
+	and an element
+	    of <m>E</m> is called an <term>edge</term>.</p>
+	</definition>
+      </p>
     
-  <p>Given a relation <m>R</m> on a set <m>A</m>, a <term>directed
-      graph</term> is a figure that illustrates <m>R</m>. Elements
+      <p>Given a relation <m>R</m> on a set <m>A</m>, the
+      pair <m>G=(A,R)</m> is a digraph. In a drawing, 
+      elements
     of <m>A</m> are depicted as dots, and <m>(a,a')</m> in <m>R</m> is
     depicted by a segment of a line or an arc that starts at <m>a</m>,
     ends at <m>a'</m>, and has an arrow pointing from <m>a</m>
       to <m>a'</m>. 
   </p>
 
-  <p>The following is a <alert>correction</alert>
+  <p>The following is an alternative 
     to Definition
       4.4.1 on p.84 of <xref ref="chapterzero"/>.
 	</p>
@@ -53,31 +64,32 @@ The following definitions clarify and expand the definitions given in
     <definition>
       <p>A <term>(simple) graph</term> is a pair <m>G=(V,E)</m>,
       where <m>V</m> is a set and <m>E</m> is a set of subsets
-      of <m>V</m>, where every element of <m>E</m> has two elements. An
-      element of <m>V</m> is called a <term>vertex</term> and an element
-      of <m>E</m> is called an <term>edge</term>. The
-      set <m>V</m> is called the <term>set of vertices</term> of the
-      graph <m>G</m>, and the set <m>E</m> is called the <term>set of
-	  edges</term> of <m>G</m>. </p>
+      of <m>V</m>, where every element of <m>E</m> contains exactly two
+	elements of <m>V</m>. An element of <m>V</m> is called
+      a <term>vertex</term> or a <term>node</term>
+	and an element
+	of <m>E</m> is called an <term>edge</term>.
+	  </p>
     </definition>
+    </p>
 
-    One can also define graphs that allow loops, that is, edges that
-    connect a vertex to itself. Further generalizations of graphs allow
-    multiple edges that connect the same pair of vertices. In this
-    course, the term <q>graph</q> will always refer to a simple graph,
-    as defined above. <fn>The
-      definition of graph given in <xref ref="chapterzero"/> uses the
-      word <q>pair</q> in the definition of an edge. Unfortunately, this
-    introduces ambiguity as to whether loops are allowed as edges. In mathematics, the
-      word <q>pair</q> usually denotes an <em>ordered</em>
-      list <m>(x,y)</m>. By default, it is allowable that the
-      objects <m>x</m> and <m>y</m> may be equal. We avoid this ambiguity
-      by not using the word <q>pair</q> in our definition of graph.
-    </fn>
+    <p>
+    <alert>Note on terminology:</alert> The plural of <q>vertex</q>
+    is <q>vertices</q>.
+    </p>
 
+
+  <p><alert>Note on an important and almost hidden assumption in
+  <xref ref="chapterzero"/>.</alert> In general, graphs and digraphs may
+  be finite or infinite. In Remark 1 on p.84, Schumacher says that all
+  graphs in this section are assumed to be finite. Without this
+  assumption, some of the theorems are false.
   </p>
 
+  
+  
 </section>
 
 
 </chapter>
+
