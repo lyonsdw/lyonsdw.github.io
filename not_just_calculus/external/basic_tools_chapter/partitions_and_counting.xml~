@@ -27,13 +27,23 @@ Enumeration and Partitions
     <term>infinite</term><idx><h>set</h><h>infinite set</h></idx>.
   </p>
 
-  <exercise><p>
+  <exercise xml:id="enumerationdefexer"><p>
     Show that enumerations of a finite set with more than one element
     are not unique. Find three different enumerations of the
     set <m>X=\{a,b,c\}</m>. How may enumerations of <m>X</m>
     are there in all?
     </p>
   </exercise>
+
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="enumerationdefexer"/></title>
+  <p>
+    There are six enumerations. As lists of
+    values <m>(f(1),f(2),f(3))</m>, they are
+    <me>(a,b,c), (a,c,b), (b,a,c), (b,c,a), (c,a,b), (c,b,a).</me>
+  </p>
+</aside>
+  
 </subsection>
 
 <subsection>
@@ -86,19 +96,35 @@ Enumeration and Partitions
 	the sum of all the numbers in <m>A</m>, and the product of all the numbers in <m>A</m>, respectively.
 	</p>
 
-  <exercise>
+  <exercise xml:id="indexedstuffexer">
     <p>
       <ol>
-	<li>Write <me>[0,1)\cap [1/2,1/3) \cap \cdots \cap [1/17,1/18)</me> using indexed
+	<li>Write <me>[0,3/2)\cap [1/2,4/3) \cap [2/3,5/4) \cap \cdots \cap [19/20,22/21)</me> using indexed
 	  intersection notation. </li>
 	<li>Write <me>1+(1-1/2) + (1-3/4) + \cdots + (1-255/256)</me> using
-	  indexed summation notation. Write </li>
+	  indexed summation notation.</li>
 	<li>Write
-	  <me>1\cdot 4\cdot 7\cdot \cdots \cdot 104</me> using indexed product notation.
+	  <me>1\cdot 4\cdot 7\cdot \cdots \cdot 103</me> using indexed product notation.
 	</li>
 </ol>
     </p>
   </exercise>
+
+  <aside component="instructor">
+  <title>Instructor solution for <xref ref="indexedstuffexer"/></title>
+  <p>
+      <ol>
+	<li> <m>\bigcap_{k=1}^{20} \left[ \frac{k-1}{k},\frac{k+2}{k+1}\right) </m>
+	</li>
+	<li><m>\sum_{k=0}^8 \left(1-\frac{2^n-1}{2^n}\right) = \sum_{k=0}^8 \frac{1}{2^n}</m>
+	</li>
+	<li><m>\prod_{k=0}^{34}(3k+1)</m>
+	</li>
+</ol>
+    
+  </p>
+</aside>
+
   
 </subsection>
 
@@ -175,6 +201,29 @@ Enumeration and Partitions
   </statement>
     </exercise>
 
+<aside component="instructor">
+  <title>Instructor solution for <xref ref="partitionfromfunexer"/></title>
+  <p>
+	  <ol>
+	    <li>Let <m>s_0\in S</m> and let <m>t_0=f(s_0)</m>. By definition,
+	      we have <m>s_0\in f^{-1}(t_0)</m>. It follows that  <m>\bigcup_{t\in T}f^{-1}(t) = S</m>.
+	    </li>
+	    <li>Suppose that <m>t,t'\in T</m> with <m>t\neq
+	      t'</m>. Suppose on the contrary that <m>f^{-1}(t)\cap
+		f^{-1}(t')\neq \emptyset</m>, say, there is an
+	      element <m>s</m> in the intersection. Then we
+	      have <m>f(s)=t</m> and also <m>f(s)=t'</m>, but this is
+	      impossible. We conclude that the intersection is empty.
+	      </li>
+	    <li>No. It is possible that some preimage sets are
+	      empty. This is the reason for the
+	      specification <q><m>t\in f(S)</m></q> in the expression
+	      for <m>\mathcal{U}</m> in the statement of <xref ref="preimagespartitionprop"/>.
+	    </li>
+</ol>
+
+  </p>
+</aside>
 
 
 <proposition><title>Counting elements in a set using partitions</title>
