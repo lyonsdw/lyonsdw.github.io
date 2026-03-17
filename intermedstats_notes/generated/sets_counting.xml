@@ -462,24 +462,28 @@ proofs might use induction.
 
 <exercises><title>Sets and Counting Exercises</title>
 
-  <exercise><title>Factoring sums over Cartesian products</title>
+  <exercise xml:id="factorsumovercartprodexer"><title>Factoring sums over Cartesian products</title>
     <p>  Let <m>A,B</m>
       be finite sets of real numbers. Show that
       <me>\sum_{(a,b)\in A\times B} ab = \left(\sum_{a\in A}a\right)\left( \sum_{b\in B} b\right).
       </me>
       Show how both sides of this equation look if <m>A=\{u,v\}</m>
-      and <m>B=\{r,s,t\}</m>.
+      and <m>B=\{r,s,t\}</m>. Show how both sides of this equation look
+      if <m>A=\{a_1,a_2,\ldots,a_m\}</m> and <m>B=\{b_1,b_2,\ldots,b_n\}</m>.
     </p>
   </exercise>
 
-\begin{enumerate}
-\item Suppose that $A=\{a_1,a_2,a_3\}$ and $B=\{b_1,b_2\}$. Show that
-  $$ \sum_{i,j} a_ib_j = \sum_i a_i \sum_j b_j.
-  $$
-\item Explain why the previous example generalizes to the formula
-$$ \sum_{(a,b)\in A\times B} ab = \left(\sum_{a\in A}a\right)\left( \sum_{b\in B} b\right)
-  $$
-  without using ordering subscript labels for the elements of $A,B$
+  <aside component="instructor">
+  <title>Instructor comment for Sets and Counting exercises <xref ref="factorsumovercartprodexer"/></title>
+  <p>
+    <md>
+      <mrow>ur+us+ut +vr+vs+vt\amp = (u+v)(r+s+t)</mrow>
+      <mrow>\sum_{i,j}a_ib_j\amp = \left(\sum_i a_i\right)\left(\sum_j b_j\right)</mrow>      
+    </md>
+
+  </p>
+</aside>
+
 
   
   <exercise xml:id="setscountingexerrossandwright"><p>Work the <q>Sets and Counting</q>
