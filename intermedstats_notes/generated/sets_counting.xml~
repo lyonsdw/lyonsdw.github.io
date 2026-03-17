@@ -403,7 +403,7 @@ proofs might use induction.
 	<li>      Give an example of a function <m>\N\to\N</m> that is
     neither one-to-one nor onto, and that is not a constant
 	  function.</li>
-	<li>Let <m>S</m> be the set of all sequences in <m>\{0,1\}</m>.
+	<li xml:id="diagargexer">Let <m>S</m> be the set of all sequences in <m>\{0,1\}</m>.
 	  Suppose that <m>f\colon \N\to S</m> is one-to-one and
 	  onto. Define an element <m>s</m> of <m>S</m> by 
 	  <me>s(n)=\begin{cases} 0 \amp \text{ if } (f(n))(n)=1\\
@@ -412,7 +412,25 @@ proofs might use induction.
 	  Is it possible that <m>s</m> is in the image of <m>f</m>? What
 	  do you conclude about <m>S</m>?
 	</li>
-</ol>
+      </ol>
+      <hint><alert>Hint for the last part (<xref ref="diagargexer"/>).</alert>
+	<p>Make grid-format layout to help see what is going on.
+	<me>
+	  \begin{array}{rl}
+	  f(1) \amp = \amp i_{11}i_{12}i_{13}\cdots\\
+	  f(2) \amp = \amp i_{21}i_{22}i_{23}\cdots\\
+	  f(3) \amp = \amp i_{31}i_{32}i_{33}\cdots\\
+	  \amp \vdots \amp \\
+	  \end{array}
+	</me>
+	In the notation in this layout, the doubly-indexed
+	value <m>i_{k\ell}</m> is equal to <m>(f(k))(\ell)</m>.
+	This means that <m>(f(n))(n)=i_{nn}</m>. Now think about
+	how <m>s</m> looks. Is it possible that <m>s</m> could
+	equal <m>f(n)</m> for some <m>n</m>? What consequence does this
+	imply about our assumption that <m>f</m> is onto?
+	</p>
+      </hint>
     </p>
   </exercise>
 

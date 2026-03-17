@@ -234,7 +234,20 @@ Sampling I
   properties of expected value and variance to the first two
     properties.</p>
 
-  <p>For <xref ref="esampvar"/>, we have the following.</p>
+  <p>For <xref ref="esampvar"/>, we have the following. We use the fact
+    that <m>\covar(X_j,X_k)=0</m> for <m>j\neq k</m>, which implies that <m>E(X_jX_k)=E(X_j)E(X_k)=\mu^2</m>.
+    <md>
+      <mrow>\overline{X}^2 \amp = \frac{1}{n^2} \left( \sum_k X_k^2 +
+	\sum_{j\neq k}X_jX_k \right)</mrow>
+      <mrow>E(\overline{X}^2) \amp = \frac{1}{n^2} \left( nE(X^2) +
+	n(n-1)\mu^2 \right)</mrow>
+      <mrow>\amp = \frac{E(X^2)+(n-1)\mu}{n}</mrow>
+      <mrow>X_k\overline{X} \amp = \frac{1}{n}\left(X_k^2 + \sum_{j\neq
+	k}X_jX_k \right)</mrow>
+      <mrow>E(X_k\overline{X}) \amp = \frac{1}{n}\left(E(X^2) + (n-1)\mu^2\right)</mrow>      
+    </md>
+    Now use the above identities to get <me>E(s^2) = E(X^2)-\mu^2.</me>
+  </p>
   
 </aside>
 
