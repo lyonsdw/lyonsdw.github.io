@@ -82,6 +82,10 @@ Note 1/2/2026: this exercise is open-ended for now.
   </p>
 </aside>
 
+  <p><alert>Note: From this point forward, all random variables will be
+  assumed to be quantitative.</alert>
+  </p>
+  
   
   <definition>
 <p>    Let <m>X</m> be discrete random variable.
@@ -101,7 +105,8 @@ Note 1/2/2026: this exercise is open-ended for now.
 Note 1/2/2026: this exercise is open-ended for now. 
   </p>
 </aside>
-    
+
+  
   <proposition xml:id="distribfunproperties">
     <title>Properties of distribution functions</title>
     <p>Let <m>X</m> be a discrete random variable. The distribution
@@ -119,17 +124,18 @@ Note 1/2/2026: this exercise is open-ended for now.
     </p>
   </proposition>
 
-  <exercise xml:id="distfnpropexer"><p>Prove the properties in
-  <xref ref="distribfunproperties"/>. Illustrate how the properties
+  <exercise xml:id="distfnpropexer"><p>Prove property 1 in
+  <xref ref="distribfunproperties"/>. Prove properties 2 and 3 for the
+  special case of a random variable whose domain is a finite probability
+  space. Illustrate how all 3 properties
   look in the examples you made up in the Checkpoints above.</p>
   </exercise>
 
   <aside component="instructor">
   <title>Instructor solution for <xref ref="distfnpropexer"/></title>
   <p>
-   Note 1/3/20206: This exercise is probably too hard as stated, but
-   would be reasonable for the special case of a finite probability space. Proof
-   of property 2 needs at least a hint, probably separate set of
+   2/2026 Note for future development of this Checkpoint: proof
+   of property 2 for the general case needs at least a hint, probably separate set of
    structured, guided exercises. 
   </p>
   <p>Lemma for Properties 2 and 3: Let
@@ -240,15 +246,16 @@ Note 1/2/2026: this exercise is open-ended for now.
 
   <p><alert>Box plots.</alert> A <em>box plot</em> (or a <em>box and
     whiskers</em> plot) is a visual representation of some basic
-    features of a random variable. One dimension of the box (it can be
-    horizontal width or the vertical height, let's say it is the
-    horizontal width) is arbitrary; the other dimension (the vertical
-    height, in this description) is equal to the interquartile range. A
-    vertical scale is drawn on one side or the other of the box. A
-    horizontal line from one vertical side of the box to the other is
-    drawn at the height of the median. Vertical extensions
-    (the <q>whiskers</q>) from the top and bottom of the box extend to
-    the maximum and minimum values of the random variable.
+    features of a random variable that has only a finite number of
+    values. One dimension of the box (it can be horizontal width or the
+    vertical height, let's say it is the horizontal width) is arbitrary;
+    the other dimension (the vertical height, in this description) is
+    equal to the interquartile range. A vertical scale is drawn on one
+    side or the other of the box. A horizontal line from one vertical
+    side of the box to the other is drawn at the height of the
+    median. Vertical extensions (the <q>whiskers</q>) from the top and
+    bottom of the box extend to the maximum and minimum values of the
+    random variable.
     </p>
 
   <exercise xml:id="boxplotsegexer">
