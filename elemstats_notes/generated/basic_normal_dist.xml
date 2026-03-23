@@ -118,16 +118,17 @@ percent. These practices are exceptions to the usual roundoff advice
         value of <m>X=(.52)(6.7)+72.3\approx 75.8</m>. Next, we find
         a <m>z</m> value that has 35th percentile rank. Let's call that
         value <m>-B</m> (so that <m>-B</m> is to the left of average,
-        and <m>+B</m> is to the right of average). Starting with 
+        and <m>+B</m> is to the right of average). 
+	Start with the observation that
 	<md><mrow>100\% \amp = (\text{area to the left of }-B)</mrow>
 	  <mrow>\amp + (\text{area
 	    between }-B \text{ and }B)</mrow>
-	  <mrow>\amp + (\text{area to the right of }B)</mrow>
+	  <mrow>\amp + (\text{area to the right of }B).</mrow>
 	</md>
 	By mirror symmetry, we have
-	<me>(\text{area to the left of }-B) = (\text{area to the right
-	  of }B).</me> It follows that both sides of this equation
-	  are <m>35\%</m>, so we conclude that <m>(\text{area between
+<me>35\%=(\text{area to the left of }-B) = (\text{area to the right
+  of }B).</me>
+	  Putting these together, we conclude that <m>(\text{area between
 	  }-B \text{ and }B)= 100 - 2(35)=30\%</m>. From the normal
 	  table, we get <m>-B\approx -.385</m>. This converts to
 	  an <m>X</m> value of <m>X=(-.385)(6.7)+72.3\approx 69.7</m>.
