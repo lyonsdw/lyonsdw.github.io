@@ -439,12 +439,14 @@ Next consider
       </li>
       <li>The probability density function for <m>H</m> is
 	<me>H'(x) = \frac{d}{dx} (1-q^x) = \ln q q^x = \lambda
-	  e^{-lambda x}.</me> Using integration by parts, we get the
+	  e^{-\lambda x}.</me> Using integration by parts, we get the
 	mean and the variance for <m>H</m>.
 	<md>
 	  <mrow>E(H)\amp =\int_0^{\infty} \lambda x e^{-\lambda x}\;dx =
 	    1/\lambda</mrow>
-	  <mrow>E(H)\amp =\int_0^{\infty} \lambda x^2 e^{-\lambda x}\;dx = 1/\lambda^2</mrow>	  
+	  <mrow>E(H^2)\amp =\int_0^{\infty} \lambda x^2 e^{-\lambda x}\;dx
+	    = 2/\lambda^2</mrow>
+	  <mrow>\var(H)\amp =1/\lambda^2</mrow>
 	</md>
 	<m></m>
       </li>
@@ -457,8 +459,12 @@ Next consider
 	(for <m>0\lt q\lt 1</m>),
 	we see that the sum <m>1 + 2q + 3q^2+\cdots</m> is the Taylor
 	series for <m>\frac{d}{dq}(1-q)^{-1}=(1-q)^{-2}</m>. From this
-	we get the sum for <m>E(G)</m> is <m>E(G)=p/(1-q)^2=1/p</m>.
+	we get the sum for <m>E(G)</m> is <m>E(G)=p/(1-q)^2=1/p</m>. The
+	variance for the geometric distribution is <m>(1-p)/p^2 =
+	q/p^2</m> (<xref ref="rice_math_stats"/>). I haven't worked this
+	out myself (3/2026).
   </p>
+  
 </aside>
 
 
