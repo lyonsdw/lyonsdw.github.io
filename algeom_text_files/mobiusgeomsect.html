@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.13.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -425,7 +425,7 @@ GL(2,\C)\to \M\)</span> given by</div>
 \end{equation}
 </div>
 <div class="para">is a group homomorphism. The kernel of <span class="process-math">\({\mathcal T}\)</span> is the group of nonzero scalar matrices, that is,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="mobiusgeomsect-3-8-4">
 \begin{equation*}
 \ker{\mathcal T}=\left\{\left[
 \begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
@@ -433,7 +433,7 @@ k\neq 0\right\}\text{.}
 \end{equation*}
 </div>
 <div class="para">The quotient group <span class="process-math">\(GL(2,\C)/\ker{\mathcal T}\)</span> is called the <dfn class="terminology">projective linear group</dfn> <span class="process-math">\(PGL(2,\C)\text{.}\)</span> Thus we have a group isomorphism</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="mobiusgeomsect-3-8-8">
 \begin{equation*}
 PGL(2,\C)\approx \M\text{.}
 \end{equation*}
@@ -444,7 +444,7 @@ PGL(2,\C)\approx \M\text{.}
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="mobiusgpaspgl2exer-1-1">
 <div class="para">Show that the map <span class="process-math">\({\mathcal T}\)</span> is a group homomorphism. Show that the kernel of <span class="process-math">\({\mathcal T}\)</span> is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="mobiusgpaspgl2exer-1-1-3">
 \begin{equation*}
 \ker{\mathcal T}=\left\{\left[
 \begin{array}{cc}k\amp 0\\ 0\amp k\end{array}\right],
@@ -577,7 +577,7 @@ Tz=\frac{z-z_2}{z-z_3}\frac{z_1-z_3}{z_1-z_2}\tag{3.2.3}
 </h4>
 <div class="para logical" id="crossratioinvariant-2-1">
 <div class="para">Let <span class="process-math">\(z_1,z_2,z_3\)</span> be distinct points in <span class="process-math">\(\extC\text{,}\)</span> let <span class="process-math">\(z_0\in \extC\text{,}\)</span> and let <span class="process-math">\(T\)</span> be any Möbius transformation. Then we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="crossratioinvariant-2-1-5">
 \begin{equation*}
 (z_0,z_1,z_2,z_3)= (Tz_0,Tz_1,Tz_2,Tz_3).
 \end{equation*}
@@ -668,7 +668,7 @@ z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\tag{3.2.5}
 </h4>
 <div class="para logical" id="symmptinvariantprop-1-1">
 <div class="para">Let <span class="process-math">\(C\)</span> be a cline and let <span class="process-math">\(S\)</span> be a Möbius transformation. If <span class="process-math">\(z,z'\)</span> are a pair of points that are symmetric with respect to <span class="process-math">\(C\text{,}\)</span> then <span class="process-math">\(Sz,Sz'\)</span> are symmetric with respect to the cline <span class="process-math">\(S(C)\text{.}\)</span> That is, we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="symmptinvariantprop-1-1-7">
 \begin{equation*}
 (Sz)^{\ast S(C)} = S(z^{\ast C}).
 \end{equation*}
@@ -677,7 +677,7 @@ z^{\ast C}= (T^{-1}\circ \conj \circ T)(z)\tag{3.2.5}
 </div>
 <div class="autopermalink" data-description="Proposition 3.2.26"><a href="#symmptinvariantprop" title="Copy heading and permalink for Proposition 3.2.26" aria-label="Copy heading and permalink for Proposition 3.2.26">🔗</a></div></article><details id="symmptinvariantprop-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="symmptinvariantprop-2-1">
 <div class="para">Let <span class="process-math">\(z_1,z_2,z_3\)</span> be three points on <span class="process-math">\(C\text{,}\)</span> so that <span class="process-math">\(Sz_1,Sz_2,Sz_3\)</span> are three points on <span class="process-math">\(S(C)\text{.}\)</span> Let <span class="process-math">\(T=(\cdot,z_1,z_2,z_3)\)</span> and let <span class="process-math">\(U=(\cdot,Sz_1,Sz_2,Sz_3)\text{.}\)</span> By invariance of the cross ratio, we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="symmptinvariantprop-2-1-7">
 \begin{equation*}
 (U\circ S)z=Tz\text{.}
 \end{equation*}
@@ -871,7 +871,7 @@ z \amp \to cz+d\tag{3.2.8}\\
 <div class="solutions"><details id="mobinvrealisclineexer-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para logical" id="mobinvrealisclineexer-2-1">
 <div class="para">Equation for the circle:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="mobinvrealisclineexer-2-1-1">
 \begin{equation*}
 \left| z-\left(\frac{a^\ast d-bc^\ast}{ac^\ast -a^\ast
 c}\right)\right|^2 = \left|\frac{ad-bc}{ac^\ast -a^\ast
@@ -895,7 +895,7 @@ c}\right|^2
 </div>
 <ol class="lower-roman" id="symmetricpointexer-2-1-1-1-2">
 <li id="symmetricpointexer-2-1-1-1-2-1">
-<div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-1">Square both sides of <span class="process-math">\(|z-a|=r\)</span> and solve for <span class="process-math">\(z^\ast\)</span> to get<div class="displaymath process-math">
+<div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-1">Square both sides of <span class="process-math">\(|z-a|=r\)</span> and solve for <span class="process-math">\(z^\ast\)</span> to get<div class="displaymath process-math" id="symmetricpointexer-2-1-1-1-2-1-3">
 \begin{equation*}
 z^\ast = \frac{r^2}{z-a}+a^\ast\text{.}
 \end{equation*}
@@ -925,7 +925,7 @@ T\left(\frac{r^2}{(z-a)^\ast}+a\right).
 <div class="autopermalink" data-description="Item 3.2.8.5.a.iii"><a href="#symmetricpointexer-2-1-1-1-2-3" title="Copy heading and permalink for Item 3.2.8.5.a.iii" aria-label="Copy heading and permalink for Item 3.2.8.5.a.iii">🔗</a></div>
 </li>
 <li id="symmetricpointexer-2-1-1-1-2-4">
-<div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-4">Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="complex_plane_section.html#lineeqn" class="xref" data-knowl="./knowl/xref/lineeqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1.2">(1.1.2)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lineeqn.html">
+<div class="para" id="p-derived-symmetricpointexer-2-1-1-1-2-4">Now suppose that <span class="process-math">\(C\)</span> is a line, say, with equation <span class="process-math">\(\im(az+b)=0\)</span> (see <a href="complex_plane_section.html#lineeqn" class="xref" data-knowl="./knowl/xref/lineeqn.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.1.2">(1.1.2)</a>). This is the same as <span class="process-math">\(az+b=(az+b)^\ast\text{.}\)</span> Solve to get<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lineeqn.html" id="symmetricpointexer-2-1-1-1-2-4-5">
 \begin{equation*}
 z^\ast = \frac{az+b-b^\ast}{a^\ast}.
 \end{equation*}
@@ -1006,7 +1006,7 @@ a^\ast + b^\ast - b}{a}\text{,}\)</span> and that indeed this does not depend on
 <div class="autopermalink" data-description="Exercise 3.2.8.8"><a href="#degneratenormalformexer" title="Copy heading and permalink for Exercise 3.2.8.8" aria-label="Copy heading and permalink for Exercise 3.2.8.8">🔗</a></div></article><article class="exercise exercise-like" id="apolloniuscircexer"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para logical" id="apolloniuscircexer-1-1">
 <div class="para">Show that a (generalized) circle of Apollonius (a Steiner circle of the second kind) is characterized as the set of points of the form</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="apolloniuscircexer-1-1-1">
 \begin{equation*}
 C=\left\{P\in \C\colon \frac{d(P,A)}{d(P,B)}=k\right\} 
 \end{equation*}

@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.13.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -364,7 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="elliptic_geometry_section-2-2">
 <div class="para">We will work with three models for elliptic geometry: one based on quaternions, one based on rotations of the sphere, and another that is a subgeometry of Möbius geometry. Using the natural identification <span class="process-math">\(xi+yj+zk\leftrightarrow (x,y,z)\)</span> of the pure quaternions <span class="process-math">\(\R^3_\Quat\)</span> with <span class="process-math">\(\R^3\text{,}\)</span> we will write <span class="process-math">\(S_\Quat^2\)</span> to denote the set of unit pure quaternions, that is,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="elliptic_geometry_section-2-2-5">
 \begin{equation*}
 S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}.
 \end{equation*}
@@ -383,7 +383,7 @@ S^2_\Quat=\{xi+yj+zk\in \Quat\colon x^2+y^2+z^2=1\}.
 <div class="autopermalink" data-description="Checkpoint 3.4.1"><a href="#unitquatisgpexer" title="Copy heading and permalink for Checkpoint 3.4.1" aria-label="Copy heading and permalink for Checkpoint 3.4.1">🔗</a></div></article></details><div class="para logical" id="elliptic_geometry_section-3-4">
 <div class="para">Recall that the map <span class="process-math">\(M\colon \Quat \to
 {\mathcal M}_{\Quat}\)</span> sends <span class="process-math">\(r=a+bi+cj+dk\)</span> to the matrix</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="elliptic_geometry_section-3-4-3">
 \begin{equation*}
 \left[\begin{array}{cc} a+bi \amp c+di\\ -c+di \amp
 a-bi\end{array}\right]\text{.}
@@ -398,7 +398,7 @@ a^\ast\end{array}\right]\colon a,b\in \C,
 \end{equation}
 </div>
 <div class="para"> called the <em class="emphasis">special unitary</em> group. Restricting the domain of <span class="process-math">\(M\)</span> to <span class="process-math">\(U(\Quat)\)</span> and restricting the codomain of <span class="process-math">\(M\)</span> to <span class="process-math">\(M(U(\Quat))=SU(2)\)</span> is an isomorphism of groups</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="elliptic_geometry_section-3-4-15">
 \begin{equation*}
 U(\Quat)\approx SU(2).
 \end{equation*}
@@ -426,7 +426,7 @@ U(\Quat)\approx SU(2).
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="unitquatactionons2exer-1-1">
 <div class="para">Show that the map <span class="process-math">\(U(\Quat)\to
 \Perm(S^2_\Quat)\)</span> given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="unitquatactionons2exer-1-1-2">
 \begin{equation*}
 r \to \left[ v\to rvr^\ast \right]
 \end{equation*}
@@ -445,14 +445,14 @@ r \to \left[ v\to rvr^\ast \right]
 </div>
 <div class="para logical" id="rotgp-5">
 <div class="para">We will write <span class="process-math">\(\Rot(S^2)\)</span> to denote the set</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html" id="rotgp-5-2">
 \begin{equation*}
 \Rot(S^2)=\{R_{{v},\theta}\colon
 {v}\in\R^3,|{v}|=1,\theta\in\R\}
 \end{equation*}
 </div>
 <div class="para">of all rotations. To see why the set <span class="process-math">\(\Rot(S^2)\)</span> is a group<details class="ptx-footnote" aria-live="polite" id="rotgp-5-4"><summary class="ptx-footnote__number" title="Footnote 3.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="rotgp-5-4">For the purpose of a self-contained exposition based on elementary geometry, using only complex and quaternion algebra, we do not utilize the fact that <span class="process-math">\(\Rot(S^2)\)</span> is the group <span class="process-math">\(SO(3)\)</span> of orthogonal transformations of <span class="process-math">\(\R^3\)</span> with determinant 1.</div></details> under the operation of composition, consider the map <span class="process-math">\(U(\Quat)\to \Rot(S^2)\)</span> given by <span class="process-math">\(r\to R_r\)</span> established by <a href="quaternionsection.html#quatrotprop" class="xref" data-knowl="./knowl/xref/quatrotprop.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 1.2.9: Quaternions and rotations of \R^3_\Quat">Proposition 1.2.9</a>. The fact that <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> (see <a href="quaternionsection.html#quatrotcompinvexer" class="xref" data-knowl="./knowl/xref/quatrotcompinvexer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.2.6.2">Exercise 1.2.6.2</a>) implies that the composition of two rotations is a rotation. The remaining group properties are straightforward. Once we have proved that <span class="process-math">\(\Rot(S^2)\)</span> is a group, the same equation <span class="process-math">\(R_r\circ R_s = R_{rs}\)</span> shows that the map <span class="process-math">\(r\to R_r\)</span> is a homomorphism of groups <span class="process-math">\(U(\Quat)\to \Rot(S^2)\text{.}\)</span> The kernel of this homomorphism is <span class="process-math">\(\{\pm 1\}\text{.}\)</span> This establishes an isomorphism</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/quatrotprop.html ./knowl/xref/quatrotcompinvexer.html" id="rotgp-5-15">
 \begin{equation*}
 U(\Quat)/\{\pm 1\} \approx \Rot(S^2).
 \end{equation*}
@@ -495,7 +495,7 @@ R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\tag{3.4.2}
 </h4>
 <div class="para logical" id="rotgenprop-2-1">
 <div class="para">The set</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="rotgenprop-2-1-1">
 \begin{equation*}
 \{R_{Z,\theta}\colon \theta\in
 \R\}\cup \{R_{X,\pi/2}\}
@@ -506,26 +506,26 @@ R_{Y,\theta}= R_{X,\pi/2}^{-1}\circ R_{Z,\theta}\circ R_{X,\pi/2}\tag{3.4.2}
 </div>
 <div class="autopermalink" data-description="Proposition 3.4.9: Generators for \Rot(S^2)"><a href="#rotgenprop" title="Copy heading and permalink for Proposition 3.4.9: Generators for \Rot(S^2)" aria-label="Copy heading and permalink for Proposition 3.4.9: Generators for \Rot(S^2)">🔗</a></div></article><details id="rotgenprop-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="rotgenprop-3-1">
 <div class="para">Consider a model of the sphere printed with a map of the world (i.e., a geographic globe) in such a way that the north pole is on top of the sphere and Greenwich, England (at zero degrees longitude) is in the <span class="process-math">\(x,z\)</span>-plane. The sphere in the upper left of <a href="elliptic_geometry_section.html#rotation_decomposition_fig" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.10">Figure 3.4.10</a> depicts this “start” position of the north pole <span class="process-math">\(N\text{,}\)</span> Greenwich <span class="process-math">\(G\text{,}\)</span> and the great circle <span class="process-math">\(C\)</span> that is the intersection of the sphere with the <span class="process-math">\(x,z\)</span>-plane (<span class="process-math">\(C\)</span> is shown in red in all four spheres for reference). Now let <span class="process-math">\(R\)</span> be an arbitrary rotation. The sphere in the upper right of <a href="elliptic_geometry_section.html#rotation_decomposition_fig" class="xref" data-knowl="./knowl/xref/rotation_decomposition_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.10">Figure 3.4.10</a> shows how <span class="process-math">\(\)</span> <span class="process-math">\(N\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(C\)</span> are transformed by <span class="process-math">\(R\text{.}\)</span> The rest of the diagram shows how we can write <span class="process-math">\(R^{-1}\)</span> as a composition of rotations by “putting the north pole back on top” and “putting zero degrees back in place”, as follows. From the upper right in the diagram, we “put the north pole back” by first performing a rotation <span class="process-math">\(R_{Z,\theta_1}\)</span> about the <span class="process-math">\(z\)</span>-axis that brings the north pole into the <span class="process-math">\(x,z\)</span>-plane. Next, we perform the rotation <span class="process-math">\(R_{Y,\theta_2}\)</span> about the <span class="process-math">\(y\)</span>-axis (use the Lemma) to bring the north pole back to the top. Finally, we perform a rotation <span class="process-math">\(R_{Z,\theta_3}\)</span> to bring Greenwich back home in the <span class="process-math">\(x,z\)</span>-plane.  Reading clockwise from the upper left of the diagram, the sequence of transformations</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html" id="rotgenprop-3-1-27">
 \begin{equation*}
 R,R_{Z,\theta_1},R_{Y,\theta_2},R_{Z,\theta_3}
 \end{equation*}
 </div>
 <div class="para">takes the north pole <span class="process-math">\(N\)</span> through the sequence</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html" id="rotgenprop-3-1-29">
 \begin{equation*}
 N\to R(N)\to N' \to N''=N\to N\text{.}
 \end{equation*}
 </div>
 <div class="para">Meanwhile, <span class="process-math">\(G\)</span> traces the path</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html" id="rotgenprop-3-1-31">
 \begin{equation*}
 G\to R(G)\to
 G'\to G''\to G 
 \end{equation*}
 </div>
 <div class="para">while the great circle <span class="process-math">\(C\)</span> is transformed in the sequence</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rotation_decomposition_fig.html ./knowl/xref/rotation_decomposition_fig.html" id="rotgenprop-3-1-33">
 \begin{equation*}
 C\to R(C) \to C' \to C''\to C.
 \end{equation*}
@@ -541,7 +541,7 @@ C\to R(C) \to C' \to C''\to C.
 <div class="para" id="ellipticsubgpssubsec-2"><div class="autopermalink" data-description="Paragraph"><a href="#ellipticsubgpssubsec-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 <div class="para logical" id="ellipticsubgpssubsec-3">
 <div class="para">Let</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ellipticsubgpssubsec-3-1">
 \begin{equation*}
 \S=\{s\circ R\circ s^{-1} \;\;\colon \;\;R\in
 \Rot(S^2)\}
@@ -549,7 +549,7 @@ C\to R(C) \to C' \to C''\to C.
 </div>
 <div class="para"> denote the group of transformations of <span class="process-math">\(\extC\)</span> that are conjugate to rotations of <span class="process-math">\(S^2\)</span> via the stereographic projection <span class="process-math">\(s\text{.}\)</span> The group <span class="process-math">\(\S\)</span> is called the <dfn class="terminology">elliptic group</dfn>. It is easy to check that the map <span class="process-math">\(\Rot(S^2)\to
 \S\)</span> given by <span class="process-math">\(R\to s\circ R\circ s^{-1}\)</span> is an isomorphism of groups, so we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ellipticsubgpssubsec-3-12">
 \begin{equation*}
 \S\approx \Rot(S^2).
 \end{equation*}
@@ -643,7 +643,7 @@ R\)</span> is conformal at <span class="process-math">\(P\text{.}\)</span><div c
 <div class="para logical" id="elliptic_geometry_section-8-2">
 <div class="para">The distance between points <span class="process-math">\(P,Q\)</span> on <span class="process-math">\(S^2\)</span> is the length of the arc of a great circle that connects them. Because the sphere has radius 1, the arc length is the same as the radian measure of the angle <span class="process-math">\(\angle
 POQ\text{,}\)</span> where <span class="process-math">\(O\)</span> is the origin. From vector calculus, we have the following dot product formula.</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="elliptic_geometry_section-8-2-5">
 \begin{equation*}
 (\overrightarrow{OP})\cdot (\overrightarrow{OQ})=|\overrightarrow{OP}||\overrightarrow{OQ}|\cos(\angle
 POQ)
@@ -777,7 +777,7 @@ C}_{AC},{\mathcal C}_{BC}\)</span> denote the great circles that extend the side
 <div class="autopermalink" data-description="Item 3.4.7.4.b"><a href="#elliptic_triangle_area_exer-2-1-5-2" title="Copy heading and permalink for Item 3.4.7.4.b" aria-label="Copy heading and permalink for Item 3.4.7.4.b">🔗</a></div>
 </li>
 <li id="elliptic_triangle_area_exer-2-1-5-3">
-<div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-3">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="elliptic_geometry_section.html#elliptic_triangle_area_fig" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_triangle_area_fig.html">
+<div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-3">Let <span class="process-math">\(R\)</span> denote the interior of the region shown in the figure on the right in <a href="elliptic_geometry_section.html#elliptic_triangle_area_fig" class="xref" data-knowl="./knowl/xref/elliptic_triangle_area_fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.4.26">Figure 3.4.26</a>. Explain why the area of <span class="process-math">\(R\)</span> is<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/elliptic_triangle_area_fig.html" id="elliptic_triangle_area_exer-2-1-5-3-4">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 ABC).
@@ -786,7 +786,7 @@ ABC).
 <div class="autopermalink" data-description="Item 3.4.7.4.c"><a href="#elliptic_triangle_area_exer-2-1-5-3" title="Copy heading and permalink for Item 3.4.7.4.c" aria-label="Copy heading and permalink for Item 3.4.7.4.c">🔗</a></div>
 </li>
 <li id="elliptic_triangle_area_exer-2-1-5-4">
-<div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-4">Let <span class="process-math">\(R'\)</span> denote the exterior of the region <span class="process-math">\(R\text{,}\)</span> that is, <span class="process-math">\(R'=\extC\setminus R\text{.}\)</span> Explain why the area of <span class="process-math">\(R'\)</span> is<div class="displaymath process-math">
+<div class="para" id="p-derived-elliptic_triangle_area_exer-2-1-5-4">Let <span class="process-math">\(R'\)</span> denote the exterior of the region <span class="process-math">\(R\text{,}\)</span> that is, <span class="process-math">\(R'=\extC\setminus R\text{.}\)</span> Explain why the area of <span class="process-math">\(R'\)</span> is<div class="displaymath process-math" id="elliptic_triangle_area_exer-2-1-5-4-5">
 \begin{equation*}
 2\angle A + 2\angle B + 2\angle C - 2\text{ Area}(\triangle
 A'B'C').

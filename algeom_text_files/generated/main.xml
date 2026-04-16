@@ -2,6 +2,15 @@
 <!--<mathbook>-->
 <pretext>
   <docinfo>
+
+    <!-- experiment 2/20/2026 -->
+    <format>
+  <document-class>book</document-class>
+  <parameters>
+    <parameter name="document-options">twoside,openright</parameter>
+  </parameters>
+</format>
+
     <latex-image-preamble>
       \usepackage{pgfplots}               % loads tikz package
               \usepackage{smartdiagram}           % for a circular diagram
@@ -109,6 +118,7 @@
      -->
 
 <!-- Chapters of the text, Front and Back Matter -->
+
 
     <xi:include href="front_matter/front_matter.xml"/>
     <xi:include href="basics_chapter/basics.xml"/>
