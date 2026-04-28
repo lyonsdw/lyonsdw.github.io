@@ -286,7 +286,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.2",
   "title": "Schroeder-Bernstein Theorem",
-  "body": "Schroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   For each , form a sequence to the right and to the left of .   Observe that theses sequences may or may not terminate on the left.  Observe that each of these sequences is one of two types: (i) terminates on the left with an element (that is, is not in the image of ); or (ii) does not have the property that defines type (i).  Define by if lies in a sequence of type (i), and if lies in a sequence of type (ii). Now show is well-defined and is a bijection.     Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.   "
+  "body": "Schroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   For each , form a sequence to the right and to the left of .   Observe that these sequences may or may not terminate on the left.  Observe that each of these sequences is one of two types: (i) terminates on the left with an element (that is, is not in the image of ); or (ii) does not have the property that defines type (i).  Define by if lies in a sequence of type (i), and if lies in a sequence of type (ii). Now show is well-defined and is a bijection.     Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.   "
 },
 {
   "id": "cardinality_section-3-2",
