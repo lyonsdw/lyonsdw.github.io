@@ -38,30 +38,148 @@ one-to-one maps, then <m>A\sim B</m>.
 
   <p><alert>Proof outline.</alert>
     <ol>
-      <li>For each <m>a\in A</m>, form a sequence to the right and to the left of
-  <m>a</m>.
-<me>\cdots \to g^{-1}(f^{-1}(g^{-1}(a))) \to f^{-1}(g^{-1}(a)) \to g^{-1}(a) \to a \to f(a) \to g(f(a)) \to f(g(f(a))) \to \cdots
-</me>
+      <li>Notation: Because <m>g</m>
+	is one-to-one, but not necessarily onto,
+	the preimage set <m>g^{-1}(\{b\})</m> of the one-element set <m>\{b\}\subseteq B</m>
+	is either empty, or contains
+      exactly one element. We will adopt a slight abuse of notation and write <m>g^{-1}(b)</m>
+      to denote either the empty set, or the single element of 
+	<m>g^{-1}(\{b\})</m>, respectively. (That is, we will
+	write <m>g^{-1}(b_0)=a_0</m> to mean
+	that <m>g^{-1}(\{b_0\})=\{a_0\}</m>.)  We will use the same
+	convention for <m>f^{-1}(a)</m> for <m>a\in A</m>.
       </li>
-      <li>Observe that these sequences may or may not terminate on the left.
+      <li>For each <m>a\in A</m>, let <m>\Ances(a)</m>
+	denote the
+	sequence
+	<me>a,g^{-1}(a),f^{-1}(g^{-1}(a)),g^{-1}(f^{-1}(g^{-1}(a))),\ldots .</me>
+	<!--
+	    <me>\cdots \to g^{-1}(f^{-1}(g^{-1}(a))) \to f^{-1}(g^{-1}(a)) \to g^{-1}(a) \to a \to f(a) \to g(f(a)) \to f(g(f(a))) \to \cdots
+    </me>
+	-->
       </li>
-      <li>Observe that each of these sequences is one of two types: (i) terminates on the left with an
-  element <m>y\in B</m> (that is, <m>y</m> is not in the image of <m>f</m>); or (ii)
-  does not have the property that defines type (i).
+      <li>Each entry of <m>\Ances(a)</m> is either an element
+	of <m>A</m>, and element of <m>B</m>, or is the empty set. If
+	any entry of <m>\Ances(a)</m> is the empty set, then every entry
+	past that point is also the empty set. If <m>\Ances(a)</m> has
+	an entry that is the empty set, then we will
+	write <m>\Term(a)</m> to denote the last entry (that is, the
+	entry furthest to the right) in <m>\Ances(a)</m> that is not the
+	empty set. If no entry in <m>\Ances(a)</m> is the empty set, we
+	will say that <m>\Term(a)</m> does not exist.
       </li>
-      <li>Define <m>h\colon A\to B</m> by <m>h(a)=g^{-1}(a)</m>
-	if <m>a</m> lies in a sequence of type (i), and <m>h(a) =
-	f(a)</m> if <m>a</m> lies in a sequence of type (ii). Now show
-	<m>h</m> is well-defined and is a bijection.
+      <li>Let <m>h\colon A\to B</m> by
+	<me>h(a) = \begin{cases}
+	  g^{-1}(a) \amp \text{if } \Term(a)\in B\\
+	  f(a) \amp \text{otherwise}.
+	\end{cases}</me>
+      </li>
+      <li>Now show <m>h</m> is a bijection.
       </li>
     </ol>
     
   </p>
 
-    <exercise>
-    <p>Complete the proof of the Schroeder-Bernstein Theorem following
-    the outline given above.</p>
+
+  <exercise xml:id="SBbasicegexer">
+    <p>Using the notation above, give examples of <m>A,B,f,g,a</m> such that
+      <ol>
+	<li><m>\Term(a)\in B</m>
+	</li>
+	<li><m>\Term(a)\in A</m>
+	</li>
+	<li><m>\Term(a)</m> does not exist.</li>
+      </ol>
+    </p>
   </exercise>
+
+  <aside component="instructor">
+    <title>Instructor solution for <xref ref="SBbasicegexer"/></title>
+    <p>
+      <ol>
+	<li>Let <m>A=\N_A</m>, <m>B=\N_B</m> (that is <m>A,B</m> are
+	  distinguishable copies of <m>\N</m>)
+	  and let <m>f,g</m> both be the right
+	  shift <m>n\to n+1</m>. Then <m>\Term(2_A)=1_B</m>.
+	</li>
+	<li>Ditto above. <m>\Term(3_A)=\Term(1_A)=1_A</m>.
+	</li>
+	<li>Let <m>A=B=\{\ast\}</m> and let <m>f,g</m> both be the
+	identity function. 
+	</li>
+      </ol>
+      
+    </p>
+    </aside>
+  
+  
+  <exercise xml:id="SBnontrivialegexer">
+    <p>Let <m>A=[0,1]</m>, <m>B=(0,1)</m>, and let <m>f\colon A\to B</m>
+      and <m>g\colon B\to A</m> both be given by the formula <m>x\to
+	\frac{2x+1}{4}</m>. Using the notation above, find the following.
+      <ol>
+	<li><m>\Ances(0)</m></li>
+	<li><m>\Ances(5/16)</m></li>
+	<li><m>h(0)</m></li>
+	<li><m>h(5/16)</m></li>		
+      </ol>
+    </p>
+  </exercise>
+
+  <aside component="instructor">
+    <title>Instructor solution for <xref ref="SBnontrivialegexer"/></title>
+    <p>
+      <ol>
+	<li><m>\Ances(0)=(0,\emptyset,\emptyset,\emptyset,\ldots)</m></li>
+	<li><m>\Ances(5/16)=(5/16,1/8,\emptyset,\emptyset,\ldots)</m></li>
+	<li><m>h(0)=f(0)=1/4</m></li>
+	<li><m>h(5/16)=g^{-1}(5/16)=1/8</m></li>		
+      </ol>
+      Note 4/2026: let's add more parts to this exercise. For example, find the set
+      of all the elements of <m>A</m> whose terminator is in <m>B</m>.
+    </p>
+    </aside>
+
+
+  
+    <exercise xml:id="SBproofexer">
+    <p>Complete the proof of the Schroeder-Bernstein Theorem following
+      the outline given above. Address each of the following questions.
+      <ol>
+	<li>In step 1, why is
+	  writing <m>g^{-1}(b)</m> called <q>abuse of notation</q>?</li>
+	<li>Justify the claim made in the first two sentences of step 3.</li>
+	<li>Suppose that <m>\Term(a)\in B</m>. Explain why it must be
+	  that <m>g^{-1}(a)</m> is not the empty set. Say why this is
+	  needed for step 4.
+	</li>
+	<li>Complete step 5.</li>
+      </ol>
+    </p>
+    </exercise>
+
+  <aside component="instructor">
+    <title>Instructor solution for <xref ref="SBproofexer"/></title>
+    <p>
+      <ol>
+	<li>The issue is that the functions <m>f^{-1},g^{-1}</m> may or
+	  may not exist. In NJC, we allow writing <m>f^{-1}(t_0)</m> to
+	  denote <m>f^{-1}(\{t_0\})</m>, but this is taken to denote a
+	  subset of the domain, not a single element of the domain. The
+	  notational abuse given in this proof goes one step further.
+	</li>
+	<li>(explain)</li>
+	<li>The first element of the sequence <m>\Ances(a)</m> is
+	  in <m>a\in A</m>. If <m>\Term(a)\in B</m>, then there are at
+	  least two entries in <m>\Ances(a)</m> that are not the empty
+	  set. This guarantees that <m>g^{-1}(a)</m> exists. We need
+	  this in order to define <m>h</m>.
+	</li>
+	<li>(explain, show <m>h</m> is one-to-one and onto)</li>	
+      </ol>
+    </p>
+    </aside>
+    
   
   </section>
 

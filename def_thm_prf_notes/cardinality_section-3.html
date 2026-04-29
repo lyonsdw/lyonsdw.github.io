@@ -130,7 +130,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="cardinality_section-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="cardinality_section.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\sgn}{sgn}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\Term}{Terminator}            
+\DeclareMathOperator{\Ances}{Ancestors}      
+\DeclareMathOperator{\sgn}{sgn}
       \DeclareMathOperator{\Inn}{Inn}
       \DeclareMathOperator{\lcm}{lcm}            
 \DeclareMathOperator{\Aut}{Aut}      
@@ -155,6 +157,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Proj}{\mathbb{P}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
 \newcommand{\B}{\mathbb{B}} 
 
 
@@ -240,35 +243,113 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para"><em class="alert">Proof outline.</em></div>
 <ol class="decimal" id="cardinality_section-3-3-2">
 <li id="cardinality_section-3-3-2-1">
-<div class="para" id="p-derived-cardinality_section-3-3-2-1">For each <span class="process-math">\(a\in A\text{,}\)</span> form a sequence to the right and to the left of <span class="process-math">\(a\text{.}\)</span><div class="displaymath process-math" id="cardinality_section-3-3-2-1-3">
-\begin{equation*}
-\cdots \to g^{-1}(f^{-1}(g^{-1}(a))) \to f^{-1}(g^{-1}(a)) \to g^{-1}(a) \to a \to f(a) \to g(f(a)) \to f(g(f(a))) \to \cdots
-\end{equation*}
-</div>
+<div class="para" id="p-derived-cardinality_section-3-3-2-1">Notation: Because <span class="process-math">\(g\)</span> is one-to-one, but not necessarily onto, the preimage set <span class="process-math">\(g^{-1}(\{b\})\)</span> of the one-element set <span class="process-math">\(\{b\}\subseteq B\)</span> is either empty, or contains exactly one element. We will adopt a slight abuse of notation and write <span class="process-math">\(g^{-1}(b)\)</span> to denote either the empty set, or the single element of <span class="process-math">\(g^{-1}(\{b\})\text{,}\)</span> respectively. (That is, we will write <span class="process-math">\(g^{-1}(b_0)=a_0\)</span> to mean that <span class="process-math">\(g^{-1}(\{b_0\})=\{a_0\}\text{.}\)</span>)  We will use the same convention for <span class="process-math">\(f^{-1}(a)\)</span> for <span class="process-math">\(a\in A\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Item 1"><a href="#cardinality_section-3-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="cardinality_section-3-3-2-2">
-<div class="para" id="p-derived-cardinality_section-3-3-2-2">Observe that these sequences may or may not terminate on the left.</div>
+<div class="para" id="p-derived-cardinality_section-3-3-2-2">For each <span class="process-math">\(a\in A\text{,}\)</span> let <span class="process-math">\(\Ances(a)\)</span> denote the sequence<div class="displaymath process-math" id="cardinality_section-3-3-2-2-3">
+\begin{equation*}
+a,g^{-1}(a),f^{-1}(g^{-1}(a)),g^{-1}(f^{-1}(g^{-1}(a))),\ldots .
+\end{equation*}
+</div>
+</div>
 <div class="autopermalink" data-description="Item 2"><a href="#cardinality_section-3-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="cardinality_section-3-3-2-3">
-<div class="para" id="p-derived-cardinality_section-3-3-2-3">Observe that each of these sequences is one of two types: (i) terminates on the left with an element <span class="process-math">\(y\in B\)</span> (that is, <span class="process-math">\(y\)</span> is not in the image of <span class="process-math">\(f\)</span>); or (ii) does not have the property that defines type (i).</div>
+<div class="para" id="p-derived-cardinality_section-3-3-2-3">Each entry of <span class="process-math">\(\Ances(a)\)</span> is either an element of <span class="process-math">\(A\text{,}\)</span> and element of <span class="process-math">\(B\text{,}\)</span> or is the empty set. If any entry of <span class="process-math">\(\Ances(a)\)</span> is the empty set, then every entry past that point is also the empty set. If <span class="process-math">\(\Ances(a)\)</span> has an entry that is the empty set, then we will write <span class="process-math">\(\Term(a)\)</span> to denote the last entry (that is, the entry furthest to the right) in <span class="process-math">\(\Ances(a)\)</span> that is not the empty set. If no entry in <span class="process-math">\(\Ances(a)\)</span> is the empty set, we will say that <span class="process-math">\(\Term(a)\)</span> does not exist.</div>
 <div class="autopermalink" data-description="Item 3"><a href="#cardinality_section-3-3-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="cardinality_section-3-3-2-4">
-<div class="para" id="p-derived-cardinality_section-3-3-2-4">Define <span class="process-math">\(h\colon A\to B\)</span> by <span class="process-math">\(h(a)=g^{-1}(a)\)</span> if <span class="process-math">\(a\)</span> lies in a sequence of type (i), and <span class="process-math">\(h(a) =
-f(a)\)</span> if <span class="process-math">\(a\)</span> lies in a sequence of type (ii). Now show <span class="process-math">\(h\)</span> is well-defined and is a bijection.</div>
+<div class="para" id="p-derived-cardinality_section-3-3-2-4">Let <span class="process-math">\(h\colon A\to B\)</span> by<div class="displaymath process-math" id="cardinality_section-3-3-2-4-2">
+\begin{equation*}
+h(a) = \begin{cases}
+g^{-1}(a) \amp \text{if } \Term(a)\in B\\
+f(a) \amp \text{otherwise}.
+\end{cases}
+\end{equation*}
+</div>
+</div>
 <div class="autopermalink" data-description="Item 4"><a href="#cardinality_section-3-3-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="cardinality_section-3-3-2-5">
+<div class="para" id="p-derived-cardinality_section-3-3-2-5">Now show <span class="process-math">\(h\)</span> is a bijection.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#cardinality_section-3-3-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#cardinality_section-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="cardinality_section-3-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="SBbasicegexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="cardinality_section-3-4-1">Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality_section-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="SBbasicegexer-1">
+<div class="para">Using the notation above, give examples of <span class="process-math">\(A,B,f,g,a\)</span> such that</div>
+<ol class="decimal" id="SBbasicegexer-1-2">
+<li id="SBbasicegexer-1-2-1">
+<div class="para" id="p-derived-SBbasicegexer-1-2-1"><span class="process-math">\(\displaystyle \Term(a)\in B\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.2.1"><a href="#SBbasicegexer-1-2-1" title="Copy heading and permalink for Item 7.2.2.1" aria-label="Copy heading and permalink for Item 7.2.2.1">🔗</a></div>
+</li>
+<li id="SBbasicegexer-1-2-2">
+<div class="para" id="p-derived-SBbasicegexer-1-2-2"><span class="process-math">\(\displaystyle \Term(a)\in A\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.2.2"><a href="#SBbasicegexer-1-2-2" title="Copy heading and permalink for Item 7.2.2.2" aria-label="Copy heading and permalink for Item 7.2.2.2">🔗</a></div>
+</li>
+<li id="SBbasicegexer-1-2-3">
+<div class="para" id="p-derived-SBbasicegexer-1-2-3">
+<span class="process-math">\(\Term(a)\)</span> does not exist.</div>
+<div class="autopermalink" data-description="Item 7.2.2.3"><a href="#SBbasicegexer-1-2-3" title="Copy heading and permalink for Item 7.2.2.3" aria-label="Copy heading and permalink for Item 7.2.2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#SBbasicegexer-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 7.2.2"><a href="#cardinality_section-3-4" title="Copy heading and permalink for Checkpoint 7.2.2" aria-label="Copy heading and permalink for Checkpoint 7.2.2">🔗</a></div></article></details><div class="autopermalink" data-description="Section 7.2: Schroeder-Bernstein Theorem"><a href="#cardinality_section-3" title="Copy heading and permalink for Section 7.2: Schroeder-Bernstein Theorem" aria-label="Copy heading and permalink for Section 7.2: Schroeder-Bernstein Theorem">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Checkpoint 7.2.2"><a href="#SBbasicegexer" title="Copy heading and permalink for Checkpoint 7.2.2" aria-label="Copy heading and permalink for Checkpoint 7.2.2">🔗</a></div></article></details><details id="SBnontrivialegexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="SBnontrivialegexer-1">
+<div class="para">Let <span class="process-math">\(A=[0,1]\text{,}\)</span> <span class="process-math">\(B=(0,1)\text{,}\)</span> and let <span class="process-math">\(f\colon A\to B\)</span> and <span class="process-math">\(g\colon B\to A\)</span> both be given by the formula <span class="process-math">\(x\to
+\frac{2x+1}{4}\text{.}\)</span> Using the notation above, find the following.</div>
+<ol class="decimal" id="SBnontrivialegexer-1-6">
+<li id="SBnontrivialegexer-1-6-1">
+<div class="para" id="p-derived-SBnontrivialegexer-1-6-1"><span class="process-math">\(\displaystyle \Ances(0)\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.3.1"><a href="#SBnontrivialegexer-1-6-1" title="Copy heading and permalink for Item 7.2.3.1" aria-label="Copy heading and permalink for Item 7.2.3.1">🔗</a></div>
+</li>
+<li id="SBnontrivialegexer-1-6-2">
+<div class="para" id="p-derived-SBnontrivialegexer-1-6-2"><span class="process-math">\(\displaystyle \Ances(5/16)\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.3.2"><a href="#SBnontrivialegexer-1-6-2" title="Copy heading and permalink for Item 7.2.3.2" aria-label="Copy heading and permalink for Item 7.2.3.2">🔗</a></div>
+</li>
+<li id="SBnontrivialegexer-1-6-3">
+<div class="para" id="p-derived-SBnontrivialegexer-1-6-3"><span class="process-math">\(\displaystyle h(0)\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.3.3"><a href="#SBnontrivialegexer-1-6-3" title="Copy heading and permalink for Item 7.2.3.3" aria-label="Copy heading and permalink for Item 7.2.3.3">🔗</a></div>
+</li>
+<li id="SBnontrivialegexer-1-6-4">
+<div class="para" id="p-derived-SBnontrivialegexer-1-6-4"><span class="process-math">\(\displaystyle h(5/16)\)</span></div>
+<div class="autopermalink" data-description="Item 7.2.3.4"><a href="#SBnontrivialegexer-1-6-4" title="Copy heading and permalink for Item 7.2.3.4" aria-label="Copy heading and permalink for Item 7.2.3.4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#SBnontrivialegexer-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 7.2.3"><a href="#SBnontrivialegexer" title="Copy heading and permalink for Checkpoint 7.2.3" aria-label="Copy heading and permalink for Checkpoint 7.2.3">🔗</a></div></article></details><details id="SBproofexer" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="SBproofexer-1">
+<div class="para">Complete the proof of the Schroeder-Bernstein Theorem following the outline given above. Address each of the following questions.</div>
+<ol class="decimal" id="SBproofexer-1-1">
+<li id="SBproofexer-1-1-1">
+<div class="para" id="p-derived-SBproofexer-1-1-1">In step 1, why is writing <span class="process-math">\(g^{-1}(b)\)</span> called “abuse of notation”?</div>
+<div class="autopermalink" data-description="Item 7.2.4.1"><a href="#SBproofexer-1-1-1" title="Copy heading and permalink for Item 7.2.4.1" aria-label="Copy heading and permalink for Item 7.2.4.1">🔗</a></div>
+</li>
+<li id="SBproofexer-1-1-2">
+<div class="para" id="p-derived-SBproofexer-1-1-2">Justify the claim made in the first two sentences of step 3.</div>
+<div class="autopermalink" data-description="Item 7.2.4.2"><a href="#SBproofexer-1-1-2" title="Copy heading and permalink for Item 7.2.4.2" aria-label="Copy heading and permalink for Item 7.2.4.2">🔗</a></div>
+</li>
+<li id="SBproofexer-1-1-3">
+<div class="para" id="p-derived-SBproofexer-1-1-3">Suppose that <span class="process-math">\(\Term(a)\in B\text{.}\)</span> Explain why it must be that <span class="process-math">\(g^{-1}(a)\)</span> is not the empty set. Say why this is needed for step 4.</div>
+<div class="autopermalink" data-description="Item 7.2.4.3"><a href="#SBproofexer-1-1-3" title="Copy heading and permalink for Item 7.2.4.3" aria-label="Copy heading and permalink for Item 7.2.4.3">🔗</a></div>
+</li>
+<li id="SBproofexer-1-1-4">
+<div class="para" id="p-derived-SBproofexer-1-1-4">Complete step 5.</div>
+<div class="autopermalink" data-description="Item 7.2.4.4"><a href="#SBproofexer-1-1-4" title="Copy heading and permalink for Item 7.2.4.4" aria-label="Copy heading and permalink for Item 7.2.4.4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#SBproofexer-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 7.2.4"><a href="#SBproofexer" title="Copy heading and permalink for Checkpoint 7.2.4" aria-label="Copy heading and permalink for Checkpoint 7.2.4">🔗</a></div></article></details><div class="autopermalink" data-description="Section 7.2: Schroeder-Bernstein Theorem"><a href="#cardinality_section-3" title="Copy heading and permalink for Section 7.2: Schroeder-Bernstein Theorem" aria-label="Copy heading and permalink for Section 7.2: Schroeder-Bernstein Theorem">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="cardinality_section-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

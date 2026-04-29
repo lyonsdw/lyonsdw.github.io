@@ -286,7 +286,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.2",
   "title": "Schroeder-Bernstein Theorem",
-  "body": "Schroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   For each , form a sequence to the right and to the left of .   Observe that these sequences may or may not terminate on the left.  Observe that each of these sequences is one of two types: (i) terminates on the left with an element (that is, is not in the image of ); or (ii) does not have the property that defines type (i).  Define by if lies in a sequence of type (i), and if lies in a sequence of type (ii). Now show is well-defined and is a bijection.     Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.   "
+  "body": "Schroeder-Bernstein Theorem  (Schroeder-Bernstein)  If and are one-to-one maps, then .   Proof outline.   Notation: Because is one-to-one, but not necessarily onto, the preimage set of the one-element set is either empty, or contains exactly one element. We will adopt a slight abuse of notation and write to denote either the empty set, or the single element of , respectively. (That is, we will write to mean that .) We will use the same convention for for .  For each , let denote the sequence    Each entry of is either an element of , and element of , or is the empty set. If any entry of is the empty set, then every entry past that point is also the empty set. If has an entry that is the empty set, then we will write to denote the last entry (that is, the entry furthest to the right) in that is not the empty set. If no entry in is the empty set, we will say that does not exist.  Let by   Now show is a bijection.     Using the notation above, give examples of such that      does not exist.      Let , , and let and both be given by the formula . Using the notation above, find the following.          Complete the proof of the Schroeder-Bernstein Theorem following the outline given above. Address each of the following questions.  In step 1, why is writing called abuse of notation ?  Justify the claim made in the first two sentences of step 3.  Suppose that . Explain why it must be that is not the empty set. Say why this is needed for step 4.  Complete step 5.     "
 },
 {
   "id": "cardinality_section-3-2",
@@ -298,13 +298,31 @@ var ptx_lunr_docs = [
   "body": "(Schroeder-Bernstein)  If and are one-to-one maps, then .  "
 },
 {
-  "id": "cardinality_section-3-4",
+  "id": "SBbasicegexer",
   "level": "2",
-  "url": "cardinality_section-3.html#cardinality_section-3-4",
+  "url": "cardinality_section-3.html#SBbasicegexer",
   "type": "Checkpoint",
   "number": "7.2.2",
   "title": "",
-  "body": " Complete the proof of the Schroeder-Bernstein Theorem following the outline given above.  "
+  "body": " Using the notation above, give examples of such that      does not exist.    "
+},
+{
+  "id": "SBnontrivialegexer",
+  "level": "2",
+  "url": "cardinality_section-3.html#SBnontrivialegexer",
+  "type": "Checkpoint",
+  "number": "7.2.3",
+  "title": "",
+  "body": " Let , , and let and both be given by the formula . Using the notation above, find the following.        "
+},
+{
+  "id": "SBproofexer",
+  "level": "2",
+  "url": "cardinality_section-3.html#SBproofexer",
+  "type": "Checkpoint",
+  "number": "7.2.4",
+  "title": "",
+  "body": " Complete the proof of the Schroeder-Bernstein Theorem following the outline given above. Address each of the following questions.  In step 1, why is writing called abuse of notation ?  Justify the claim made in the first two sentences of step 3.  Suppose that . Explain why it must be that is not the empty set. Say why this is needed for step 4.  Complete step 5.    "
 },
 {
   "id": "backmatter-1",
